@@ -1,0 +1,668 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ik wil iets kopen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ik wil iets verkopen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Wat is dit voor winkel?
+  "0003":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Wat wil je verkopen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Wat dacht je van "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "? Wil je\ndat nog steeds aan me verkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Bedankt!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Klaar met kopen!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Begrepen. "
+      - control:
+          kind: pause
+          length: short
+      - text: Begrepen.
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bedankt, kerel!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "O, jammer."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Wat verkoop je zoal?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Wil je nog iets verkopen?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Wil je meer verkopen?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Wat nog?
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Hoeveel wil je er verkopen, goro?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Dus je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " verkopen, goro? Ik\ngeef je er "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - control:
+          kind: reset_colour
+      - text: " voor, goed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Sorry, daar kan ik niets mee."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Ik ga niet de kleding kopen die je\naanhebt."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Wil je er maar één verkopen? O, nou, die\nzijn "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "per stuk waard, goro."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Je wilt ze allemaal aan me kwijt? Het zijn\ner "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", dus ik je er "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "voor\ngeven, goro."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: ""
+    contents:
+      - text: "Dat? Daar wil ik "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Jammer.
+  near00:
+    attributes: Npc_goron004
+    contents:
+      - text: Kom binnen.
+  talk00:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je hebt de eer je in pantserwinkel\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Het Stenen Wasbordje
+      - control:
+          kind: reset_colour
+      - text: " te bevinden!\nKan ik je ergens mee van dienst zijn?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk01:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Jij maakt het laat vandaag.
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Het Stenen Wasbordje
+      - control:
+          kind: reset_colour
+      - text: " is 24 uur per dag\ngeopend."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk02:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Kom gerust nog eens terug!
+  talk06:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Zoals je kunt zien, is dit een\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pantserwinkel
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk07:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Nog iets anders?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk09:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Grappig eigenlijk, wij dragen normaal\nniets. Maar we zijn "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "vuurbestendige\npantsers"
+      - control:
+          kind: reset_colour
+      - text: " gaan verkopen voor toeristen.\nIk kan je vooral de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: anti-vuurlaarzen
+      - control:
+          kind: reset_colour
+      - text: "\naanraden."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Die maken we met de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: juwelen
+      - control:
+          kind: reset_colour
+      - text: " die we hier\nopgraven! Best "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: hittebestendig
+      - control:
+          kind: reset_colour
+      - text: ". Je steekt\ner iedereen de ogen mee uit! "
+  talk10:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: Hé!
+      - control:
+          kind: pause
+          length: short
+      - text: " We zijn compleet uitverkocht!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " We\nwachten op nieuwe voorraad van Rohan."
+  talk11:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Bedankt!
+  talk12:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Dank je!
+  talk13:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: Hé!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je kunt hier beter niet al te\nlichtzinnig over doen."
+  talk14:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Met wat je nu draagt... kun je het beter\nuit je hoofd laten verder te gaan dan\nGoron-stad.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Niet dat je op die andere plekken mag\nkomen als je geen Goron bent."
+  talk15:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Zo aan je uitrusting te zien ben je zelfs\nklaar voor de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Berg des Doods
+      - control:
+          kind: reset_colour
+      - text: ". Alleen blijf\nje daar als toerist beter weg."
+  talk16:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Maar je bent aardig vuurbestendig! Je\nkunt zo de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Berg des Doods
+      - control:
+          kind: reset_colour
+      - text: " op of waar je\nmaar naartoe zou willen."
+  talk17:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: Hé!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Met die kleren kun je niet de deur\nuit! Als je niet snel betere uitrusting\naantrekt, sterf je nog van de hitte!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk18:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Gesnapt, ik zal het snel kopen!"
+  talk20:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Bedankt voor je bezoek. Als je bij ons\nuitrusting koopt, blijf je zelfs koel op\nhetere plekken dan Goron-stad."
+  talk21:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 1
+      - text: Schiet op en koop nieuwe uitrusting!
+  talk22:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 42
+      - text: "Je kunt wel 'tot ziens' zeggen, maar je\nmoet je nog steeds omkleden!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Schiet op\nen doe er iets aan!"
+  talk23:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Heb je verder echt niets nodig? Ik zie je\nliever niet in brand vliegen!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk24:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 1
+      - text: "Hé! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Als je niet uitkijkt, verbrand je nog!\n"
+      - control:
+          kind: pause
+          length: short
+      - text: Doe snel dat ding aan!

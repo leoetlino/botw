@@ -1,0 +1,741 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: I want to sell.
+  "0001":
+    attributes: ""
+    contents:
+      - text: What is this place?
+  "0002":
+    attributes: ""
+    contents:
+      - text: Good-bye.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Yes.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: "I'm buying."
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "I'll take 'em all!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: All of them.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Do you want to sell something?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "I'll give you "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: " for that, OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks! Is there anything else you want\nto sell?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "I want to buy things from you, Mr. Hero!\nWill you sell me more?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "I'll take good care of the things I bought\nfrom you, Mr. Hero!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Come on. Sell me some stuff!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Oh, you changed your mind?\nThat's OK."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "It doesn't have to be a mushroom, you\nknow. I'll buy anything."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "I'll buy anything of yours, Mr. Hero!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Oooh! Whatcha got? Whatcha got?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "*sniff sniff*\nYou smell nice, Mr. Hero!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: How many will you sell me?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "I'll buy "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them for "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nIs that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "I can't buy that from you."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Would you mind unequipping that first?
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "I can offer "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Is that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "All of them? OK!\nIt'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees "
+      - control:
+          kind: reset_colour
+      - text: "for "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "OK. I'll buy "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them for\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 6
+      - text: "That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Is that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 6
+      - text: How many do you want?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "It'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: " for "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of those.\nDoes that work?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oh, you changed your mind?"
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "You don't have enough rupees!\nI can't just give them away for free,\nyou know..."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 6
+      - text: "It looks like your pouch is full to\nbursting...\n\nIf you can't carry them on your head or\ngrow them on your back, you'll just have\nto make space in your inventory."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ", please!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Npc_kokiri004_Near000:
+    attributes: Npc_kokiri004
+    contents:
+      - text: "Mushrooms, mushrooms!"
+  Npc_kokiri004_Near020:
+    attributes: Npc_kokiri004
+    contents:
+      - text: I need more mushrooms...
+  Npc_kokiri004_Sell000:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "The Great Deku Tree told us you'd\nbe coming, Mr. Hero!\n\nI thought you might be hungry..."
+      - control:
+          kind: pause
+          length: short
+      - text: "so I\nwent out and gathered a bunch of forest\nmushrooms for you!\nIf you have something you want to sell,\njust let me know, OK?"
+  Npc_kokiri004_Sell010:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Thanks!
+  Npc_kokiri004_Sell010b:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Thanks for buying my mushrooms,\nMr. Hero!"
+  Npc_kokiri004_Sell010c:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "I'm glad I thought to go pick mushrooms!"
+  Npc_kokiri004_Sell010d:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Eat your fill, OK?"
+  Npc_kokiri004_Sell020:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Thanks for buying my mushrooms!
+      - control:
+          kind: pause
+          length: long
+      - text: "\nI'll go pick some more.\n\nThe Great Deku Tree said you'd show up,\nMr. Hero!\n\nI thought you might be hungry..."
+      - control:
+          kind: pause
+          length: short
+      - text: "so I\nwent out and gathered a bunch of forest\nmushrooms for you!\nAnd just let me know if you want to sell\nany of your stuff, OK?"
+  Npc_kokiri004_Sell030:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Thanks for buying my mushrooms!\nI'll go pick some more."
+  Npc_kokiri004_Talk000:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Huh? "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nYou're here, you're here!\nI've been waiting for you!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "The Great Deku Tree was right!\nHe said you would come, Mr. Hero.\n\nI thought you might be hungry..."
+      - control:
+          kind: pause
+          length: short
+      - text: "so I\nwent out and gathered a bunch of forest\nmushrooms for you!"
+  Npc_kokiri004_Talk010:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Welcome to the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Spore Store
+      - control:
+          kind: reset_colour
+      - text: "!\nMy shrooms are delicious, "
+      - control:
+          kind: pause
+          length: short
+      - text: "suspicious,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nbut never malicious!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Look around! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Buy something!\nOr would you rather sell something?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri004_Talk020:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Welcome to "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Spore Store
+      - control:
+          kind: reset_colour
+      - text: "! The sun\nhas set, but my mushrooms are still\nas lively as ever.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Look around! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Buy something!\nOr would you rather sell something?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri004_Talk030:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 18
+      - text: "I had no idea you liked mushrooms so\nmuch, Mr. Hero...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "I'll have to go out to forage for more\nmushrooms!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "I'd love to buy something from you.\nIs there anything you want to sell?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri004_Talk040:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bring anything you don't need to me!\nIt doesn't even have to be a mushroom!"
+  Npc_kokiri004_Talk050:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "That's right! "
+      - control:
+          kind: pause
+          length: short
+      - text: "There are mushrooms out\nthere that glow in the dark.\nYou should remember that!"
+  Npc_kokiri004_Talk060:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Thanks
+      - control:
+          kind: pause
+          length: short
+      - text: " for buying so many mushrooms!"
+  Npc_kokiri004_Talk070:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 4
+      - text: "We're technically inside the\nGreat Deku Tree's stomach, you know.\nTry not to think too hard about it.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "We all decided to open shops in\npreparation for your visit, so the Great\nDeku Tree let us set up shop here.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "But you're a lot bigger than us, so it\nprobably feels a little cramped for you.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Anyway, take your time and enjoy\nshopping!"

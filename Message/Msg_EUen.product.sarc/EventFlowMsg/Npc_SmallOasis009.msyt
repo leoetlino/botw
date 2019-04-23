@@ -1,0 +1,539 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: I have things to sell!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Good-bye.
+  "0005":
+    attributes: ""
+    contents:
+      - text: Then...buy my stuff!
+  "5500":
+    attributes: ""
+    contents:
+      - text: OK.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "I'll take 'em all!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: All of them.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: So what do you want to sell me?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Hmm... I could give you "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: "."
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Sarqso! Is that all?
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thank...you... Hehe, that's how they\nsay it where you're from, right?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Sarqso. Good, good."
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Nice, nice. Sarqso."
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Oh, yeah, no need to rush..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "I'll buy anything!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "If there's anything you want to sell,\ndon't hesitate to talk to me!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "I'll buy as much as you've got!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "That can't be all, right? Sold, sold!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: How many do you want to sell me?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "All right, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them? That comes to...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees "
+      - control:
+          kind: reset_colour
+      - text: altogether.
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "What even is that?\nI'm sorry... I have a policy forbidding\nbuying things I don't understand."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "What, you want me to take that\nright off of you? Take it off yourself\nbefore selling it to me!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: One?
+      - control:
+          kind: pause
+          length: short
+      - text: " That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "So then, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them...\nYou'd agree that "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: " is a fair\nprice, yes?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: That
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "will be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: No need to make any hasty decisions.
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: All this stuff is fresh!
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Those clothes suit you.
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Good...day...\n\n\nHeh, that's how you say it where you're\nfrom, isn't it?\n\nHere, we say \"sav'aaq.\""
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Come back anytime!
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "My little sister runs a butcher shop over\nin "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo Town
+      - control:
+          kind: reset_colour
+      - text: ".\n\nShe's traveled all over, so she knows\nyour language pretty well. You should\nstop by and...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "Oh, of course. You're a voe, so you\nwon't even be able to get past the front\ngates..."
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Oh, sure thing."
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "And now I'm all sold out...\nGuess I'll have to go hunting again."
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Thanks...boss...\n\n\nHehe, that's how they say it where\nyou're from, right?"
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "You want to know if I've seen a\nsuspicious-looking male merchant?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Suspicious, huh..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nHmmmm..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "Ahh, I dunno. It's hard to say. I spend all\nmy time right here, and I don't know how\nI'd tell if someone was a merchant...\nAnyway, there are Hylian merchants here,\ntoo. Why don't you go ask one of them?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "My kid sister runs a butcher shop over in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo Town
+      - control:
+          kind: reset_colour
+      - text: ".\n\nShe's traveled all over, so she knows\nyour language pretty well.\n\nShe's pretty cute too, so if you stop by\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo Town
+      - control:
+          kind: reset_colour
+      - text: ", you should say hello to\nher, at least."
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Good...evening...\n\n\nHeh, that's how you say it where you're\nfrom, isn't it?\n\nHere, we say \"sav'saaba.\""
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "You're getting in the way."
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Good...morning...\n\n\nHeh, that's how you say it where you're\nfrom, isn't it?\n\nHere, we say \"sav'otta.\""
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Well...come...\n\n\nDid I get that right? Isn't that how you\nsay it where you're from?\n\nHere, we say \"vasaaq.\""
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Sarqso! Eat it and regain your strength!
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Thank...you! Sarqso!
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: I need to go hunting...
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Thank...you...for...shopping...\n\n\nThat's how they say it where you're\nfrom, right?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

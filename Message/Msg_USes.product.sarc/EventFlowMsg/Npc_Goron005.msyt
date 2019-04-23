@@ -1,0 +1,745 @@
+---
+group_count: 47
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Comprar
+  "0001":
+    attributes: ""
+    contents:
+      - text: Vender
+  "0002":
+    attributes: ""
+    contents:
+      - text: ¿Qué es este sitio?
+  "0003":
+    attributes: ""
+    contents:
+      - text: Hasta luego
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sí
+  "5501":
+    attributes: ""
+    contents:
+      - text: "No"
+  "5503":
+    attributes: ""
+    contents:
+      - text: Olvídalo...
+  "5508":
+    attributes: ""
+    contents:
+      - text: Lo vendo todo
+  Attention00:
+    attributes: Npc_Goron005
+    contents:
+      - text: ¡No te subas ahí!
+  Attention01:
+    attributes: Npc_Goron005
+    contents:
+      - text: ¿Qué haces?
+  Attention02:
+    attributes: Npc_Goron005
+    contents:
+      - text: ¡Aaah!
+  Attention03:
+    attributes: Npc_Goron005
+    contents:
+      - text: ¡Ni se te ocurra subirte!
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 6
+      - text: "¿Qué me vendes, camarada?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Bueno, ¿"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: entonces?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Gracias, camarada!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: ¡Gracias!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Bien, camarada!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Un gran trato, ¿eh?"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: "Qué pena, camarada."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: ¿Algo más?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "¡Me gusta comprar, camarada!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Enséñame qué tienes por ahí.
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Te compraré cualquier cosa, camarada."
+  Com_Talk_11:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Gracias, camarada!"
+  Com_Talk_11b:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Ja! ¡Ya no me quedan más, camarada!"
+  Com_Talk_11c:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Esa era la última unidad...\nMe surtiré de más para cuando vuelvas."
+  Com_Talk_11d:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Qué delicia, camarada!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: ¿Y qué cantidad va a ser?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Serían "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " por "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unidades.\n¿Te suena bien, camarada?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "No me interesan esas cosas,\ncamarada."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Si quieres venderme tu ropa, ¡por\nlo menos quítatela antes, camarada!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "¿Te parece bien si te doy "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ",\ncamarada?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Bien, camarada. Por "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " puedo darte\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Son "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". ¿Qué me dices?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Pues si quieres "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", ¡tendrás\nque darme "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Vaya, pues tú te lo pierdes..."
+  near00:
+    attributes: Npc_Goron005
+    contents:
+      - text: ¡Al rico bistec!
+  talk00:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Buenos días, camarada!"
+  talk01:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¿Cómo va eso, camarada?"
+  talk02:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Muy buenas tardes, camarada!"
+  talk03:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Eh, camarada!"
+  talk04:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: ¿Querías algo?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk05:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "¡Chimeneas! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Hace mucho tiempo\ndesde la última vez que tuve un\nviajero como cliente."
+  talk07:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "¡Vuelve cuando quieras, camarada!"
+  talk13:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¿No ves la carne y las brasas?\n¡Estás en un asador goron,\nnada más y nada menos!\nNormalmente los goron solo comemos\nrocas, pero vendemos estas cosas a\nlos turistas... ¡cuando aparecen!"
+  talk14:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: ¡¿Otra vez?!
+  talk15:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Cuanto más comas, más músculo\ndesarrollarás. ¡Ese es el secreto\nde los goron!"
+  talk16:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: ¡Eh!
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡Oye!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " ¿Qué haces?"
+  talk17:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Camarada...
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿por qué no te bajas de ahí?"
+  talk18:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "No me hagas esto, camarada..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¡Baja de ahí!"
+  talk19:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Buf...
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Nunca te dijeron que eso\nes de malísima educación?"
+  talk20:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Buf...
+      - control:
+          kind: pause
+          length: short
+      - text: " Si quieres que te haga caso,\nbaja inmediatamente de ahí."
+  talk21:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "En Ciudad Goron hace tanto calor que\nse puede freír un bistec en el suelo."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "En cuanto los turistas se dieron cuenta,\nnadie volvió a venir por aquí. Normal,\nestas temperaturas son algo peligrosas.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "No solemos ver a muchos forasteros\npor aquí, así que ¡cuantas más\ncosas compres, mejor, camarada!"
+  talk22:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Te agradezco mucho que te gastes\nlas rupias aquí, camarada."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Sobre todo teniendo en cuenta que, con\nestas temperaturas, podrías cocinar tú\nmismo la carne si la compraras cruda.\nSi ves algo que te guste, ¡nada más\nagárralo de la parrilla!"
+  talk23:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Claro, camarada."
+      - control:
+          kind: pause
+          length: short
+      - text: " Si quieres que te\nexplique algo, para eso estoy."
+  talk24:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "¡Bienvenido a "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: La fogata de Gorata
+      - control:
+          kind: reset_colour
+      - text: ",\nel famosísimo asador goron!\nLo cocinamos todo a la piedra."
+  talk25:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: ¿Necesitas alguna cosa más?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk26:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: A todo esto...
+      - control:
+          kind: pause
+          length: short
+      - text: " Ya no se ve ningún\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: proyectil de lava
+      - control:
+          kind: reset_colour
+      - text: " por aquí."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: ¡Qué alivio!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Me estropeaban toda\nla mercancía, los condenados."

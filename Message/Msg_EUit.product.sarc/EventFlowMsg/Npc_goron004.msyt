@@ -1,0 +1,844 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Voglio comprare.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Voglio vendere.
+  "0002":
+    attributes: ""
+    contents:
+      - text: "Cos'è questo posto?"
+  "0003":
+    attributes: ""
+    contents:
+      - text: Arrivederci!
+  "5500":
+    attributes: ""
+    contents:
+      - text: Va bene.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Lascio stare.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Che cosa vuoi vendermi?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Grazie, "
+      - control:
+          kind: pause
+          length: short
+      - text: roccia!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Compravendita "
+      - control:
+          kind: pause
+          length: short
+      - text: chiusa!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ricevuto. "
+      - control:
+          kind: pause
+          length: short
+      - text: Tutto chiaro.
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Grazie "
+      - control:
+          kind: pause
+          length: short
+      - text: a sassi.
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ah, peccato!"
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Cosa vuoi vendere?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Vuoi vendere altro?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Vuoi vendere altro?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "C'è altro?"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Qualche "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nQuante unità?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità\ndi "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " per un\ntotale di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Va bene, roccia?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Purtroppo non trattiamo quest'articolo."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Compro solo vestiti che non hai indosso!
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Solo "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "Per quest'articolo facciamo "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ".\nVa bene, roccia?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Vuoi vendere tutto, eh? "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità\ndi "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "per\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", d'accordo, roccia?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "? Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ah, che peccato!"
+  near00:
+    attributes: Npc_goron004
+    contents:
+      - text: Benvenuto!
+  talk00:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Benvenuto nella nostra bottega di articoli\nper la difesa "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Tutti fusti
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Come posso\nesserti utile?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk01:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Stai in giro fino a tardi, eh?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tutti fusti "
+      - control:
+          kind: reset_colour
+      - text: è aperto 24 ore su 24!
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk02:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Torna ancora!
+  talk06:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Come puoi vedere, in questo negozio\nvendiamo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: articoli per la difesa
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk07:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ti serve qualcos'altro?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk09:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Buffo... Di solito noi non indossiamo\nniente, "
+      - control:
+          kind: pause
+          length: short
+      - text: "ma per i turisti ho iniziato a\nvendere "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: attrezzatura resistente al fuoco
+      - control:
+          kind: reset_colour
+      - text: ".\nConsiglio le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 6
+                  - 6
+                  - 1
+      - text: scarperoccia ignifughe
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nFatte con "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "gemme "
+      - control:
+          kind: reset_colour
+      - text: "estratte proprio \nda questo terreno!\nPossiedono un'elevata "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "resistenza alle\nfiamme"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Prova ad indossarle e vedrai che\nti invidieranno tutti i viandanti di Hyrule!"
+  talk10:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "Oh! "
+      - control:
+          kind: pause
+          length: short
+      - text: Abbiamo esaurito tutto!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Presto\ndovremo di nuovo rifornirci dal\nvecchio Brohan."
+  talk11:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Grazie, roccia!"
+  talk12:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Grazie!
+  talk13:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Ehi, roccia! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Non è il momento giusto\nper rilassarsi!"
+  talk14:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "A vedere come sei vestito adesso...\n\n\nTi consiglierei di non andare in posti più\ncaldi della città dei Goron.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ad ogni modo, l'accesso a posti del\ngenere è proibito a chiunque non\nappartenga al popolo Goron."
+  talk15:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "A giudicare da come sei vestito, direi che\npotresti anche andare sul "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Monte Morte
+      - control:
+          kind: reset_colour
+      - text: ".\nMa non è certo un posto per turisti!"
+  talk16:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Comunque hai preso delle ottime\nprecauzioni per il caldo.\n\nIn questo modo "
+      - control:
+          kind: pause
+          length: short
+      - text: "puoi anche andare sul\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Monte Morte "
+      - control:
+          kind: reset_colour
+      - text: o ovunque tu voglia!
+  talk17:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Ciao, roccia! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Guarda che non puoi\nmica andartene in giro vestito così!\n\nSe non ti equipaggi come si deve\nqui nella mia bottega, là fuori morirai\ndal caldo!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk18:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Va bene.\nPotresti avere qualcosa di interessante."
+  talk20:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Grazie per aver scelto noi.\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "È un piacere fare affari con te!\n\nSe ti equipaggi bene nella mia bottega,\npotrai andare anche in posti più caldi\ndella città dei Goron senza sudare!"
+  talk21:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 1
+      - text: "Sbrigati a comprare qualcosa nella mia\nbottega!"
+  talk22:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 42
+      - text: "Puoi anche andartene, ma prima cambiati\ni vestiti! "
+      - control:
+          kind: pause
+          length: short
+      - text: Là fuori si brucia!
+  talk23:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Non è il momento di parlare, roccia..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk24:
+    attributes: Npc_goron004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 1
+      - text: "Ti conviene ascoltarmi, roccia...\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "Presto, mettiti quel coso!"

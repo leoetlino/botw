@@ -1,0 +1,753 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ich will verkaufen!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "0003":
+    attributes: ""
+    contents:
+      - text: Gekauft!
+  "0004":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Geht klar!
+  "5501":
+    attributes: ""
+    contents:
+      - text: "Nein, das wird nichts."
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kauf ich!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Doch nicht.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Gib mir gleich alles!
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles!
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: "Zeig mir einfach, was du hast."
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFür "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: reset_colour
+      - control:
+          kind: set_colour
+          colour: red
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "kommen\nwir ins Geschäft."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Sarq-sarq.
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 23
+      - text: Ausgezeichnete Waren sind das!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSarq-sarq!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Heh-heh.
+      - control:
+          kind: pause
+          length: short
+      - text: " Sarq-sarq!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Sarq-sarq. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Da hast du ja einige hübsche\nSachen für mich."
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Was soll's sein?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nKomm schon, beeil dich..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Also... Gibt es sonst noch etwas,\ndas du mir verkaufen möchtest?"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Sonst nichts?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Jetzt ist die Gelegenheit.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nVerkaufe mir, so viel du magst!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Ich kaufe dir alles ab, was ich irgendwie\ngebrauchen kann!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNehm ich gerne. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wie viel davon\nwillst du denn loswerden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Alles in allem kämen wir dann auf eine\nSumme von "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubinen"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ", wenn mich\nnicht alles täuscht."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: Das... kann ich dir nicht abkaufen.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Was du gerade am Leib trägst,\nkannst du behalten..."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Dafür bekommst du dann auch nur\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ". Einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Da bist du bei mir an der richtigen\nAdresse. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wärst du mit "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubinen"
+      - control:
+          kind: reset_colour
+      - text: "\nzufrieden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: PlacedItemName
+      - control:
+          kind: reset_colour
+      - text: " kostet nur\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ". Greifst du zu?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Oh, du hast dich anders entschieden?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNa, macht nichts."
+  Near001:
+    attributes: Npc_oasis043
+    contents:
+      - text: Vasaaq!
+  Near002:
+    attributes: Npc_oasis043
+    contents:
+      - text: Mysteriöse Pilze!
+  Talk_01:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 28
+      - text: Savaaq!
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wieder ein heißer Tag heute, nicht wahr?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Wenn du etwas Geld hast, sieh dir doch\nauch einmal meine Pilze an."
+  Talk_03:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 23
+      - text: "Ganz im Vertrauen – ihren perfekten Teint\nhaben die Gerudo in Wirklichkeit diesen\nPilzen zu verdanken.\nEs wäre doch Verschwendung, nach\nGerudo-Stadt zu kommen und nicht ein\npaar Pilze mitzunehmen!"
+  Talk_04:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Der Titan hat sich beruhigt, also kommt\nhoffentlich wieder Leben in die Stadt.\nIch mache mich besser an die Arbeit!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_05:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 27
+      - text: Savotta!
+  Talk_06:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Sarq-sarq!
+  Talk_07:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 23
+      - text: "Für so eine zierliche Vaai hast du aber\neinen großen Appetit..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Macht nichts – Pilze sind gesund, also\nkannst du so viele von ihnen essen,\nwie du magst!"
+  Talk_09:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: Was denn?
+      - control:
+          kind: pause
+          length: short
+      - text: " Brauchst du noch etwas?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_10:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 27
+      - text: Savotta!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nDu bist ja ziemlich energiegeladen,\ndafür, dass es noch so früh am Tag ist!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_11:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 29
+      - text: "Sav'saaba!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Jetzt ist es angenehm kühl, oder?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nPilze verkaufen sich abends sowieso\nbesser.\nNimm dir Zeit und sieh dir mein\nSortiment an!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: Greif zu –
+      - control:
+          kind: pause
+          length: short
+      - text: " mysteriöse Pilze, die nur\nvon gutaussehenden Leuten\ngesehen werden können!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ah, du bist's."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Du hast doch all meine Pilze gekauft.\nTja, und jetzt habe ich halt keine mehr."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Was bleibt mir jetzt schon noch, als zu\nversuchen, die Leute hinters Licht zu\nführen?!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_13:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 23
+      - text: Ganz im Vertrauen...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nPilze sind in Wirklichkeit die größten\nLebewesen der Welt."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Pilze sind so mysteriös...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "So mysteriös, dass ich sie nicht wirklich verstehe..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk_14:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 23
+      - text: "Ich habe bald wieder Nachschub an\nPilzen. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wenn du also etwas Geld\nausgeben möchtest, komm bald wieder."
+  Talk_15:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Sarq-sarq!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDamit du groß und stark wirst!"
+  Talk_16:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Sarq-sarq!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wenn du kochen möchtest, kannst du\nden Gemeinschaftstopf dort nehmen."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHier ist jede Vaai willkommen!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Na gut, hier gibt es natürlich ausschließ-\nlich Vaai. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Aber du weißt schon, was ich\nmeine."
+  Talk_17:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 28
+      - text: Savaaq!
+  Talk_18:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 29
+      - text: "Sav'saaba!"
+  Talk_19:
+    attributes: Npc_oasis043
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 30
+      - text: Vasaaq!

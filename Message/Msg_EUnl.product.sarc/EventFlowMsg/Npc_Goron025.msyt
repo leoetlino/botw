@@ -1,0 +1,1028 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Hoe gaat het?
+  "0001":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Weet ik niet.
+  "0005":
+    attributes: ""
+    contents:
+      - text: Wie ben jij?
+  "0006":
+    attributes: ""
+    contents:
+      - text: "Die 'son' op het eind."
+  "0007":
+    attributes: ""
+    contents:
+      - text: Sterk?
+  "0009":
+    attributes: ""
+    contents:
+      - text: Laten we praten.
+  "0010":
+    attributes: ""
+    contents:
+      - text: Wat is deze plek?
+  "0011":
+    attributes: ""
+    contents:
+      - text: Hoe is Tarrey?
+  "0012":
+    attributes: ""
+    contents:
+      - text: Ik kom iets verkopen.
+  "0013":
+    attributes: ""
+    contents:
+      - text: Waar is Greyson?
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kopen.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Natuurlijk! Wat wil je verkopen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Daar geef ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Bedankt!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Wil je nog iets anders\nverkopen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Dank je! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Wil je nog iets verkopen?
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Bedankt! "
+      - control:
+          kind: pause
+          length: short
+      - text: Wil je nog iets verkopen?
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Oké! Dank je! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Verder nog iets?
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: Begrepen!
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Ik koop alles!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Neem maar rustig de tijd!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Ik koop alles wat je kwijt wilt.
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Laat maar zien wat je wilt verkopen!
+  Com_Talk_11:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Tot snel, goro!"
+  Com_Talk_11b:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Heel erg bedankt!
+  Com_Talk_11c:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Oké! Dank je!
+  Com_Talk_11d:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Dank je!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Hoeveel wil je er verkopen? Wil je ze\nallemaal kwijt?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " verkopen? Wat denk je van\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Dat wil ik niet. Sorry!
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Als je me de kleren wilt verkopen die je\naanhebt, zul je ze eerst uit moeten\ntrekken!"
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Hoeveel wil je er? Gelijk alles maar?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Eentje? Oké. Dan krijg je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "\nvan me."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "Je wilt ze allemaal? Dat is dan\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "voor "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " stuks."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Je wilt alles aan me verkopen? Hoeveel\nzijn het er?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " O, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " stuks, goro? Wat\ndenk je van "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Dit wordt 'm? Dat is dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - text: Hoeveel wil je er?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " hebben. Dat kost bij elkaar\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - text: Geen probleem!
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Hm?
+      - control:
+          kind: pause
+          length: short
+      - text: " Heb je niet genoeg rupees?"
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Hm?
+      - control:
+          kind: pause
+          length: short
+      - text: " Volgens mij heb je geen ruimte\nmeer."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Kom maar terug als je je spullen\nweer op orde hebt."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Eentje? Dat is dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_Goron025
+    contents:
+      - text: Jahoe!
+  near01:
+    attributes: Npc_Goron025
+    contents:
+      - text: "..."
+  near03:
+    attributes: Npc_Goron025
+    contents:
+      - text: Welkom.
+  near06:
+    attributes: Npc_Goron025
+    contents:
+      - text: Ah!
+  talk00:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hé, hé!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk01:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Waarom loopt mijn grote broer, Greyson,\naltijd te klagen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk02:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: Maar waarom?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Waarom verbergen\nvolwassenen altijd de waarheid?"
+  talk03:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Maar waarom?
+      - control:
+          kind: pause
+          length: short
+      - text: " Waarom weet je het niet?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je bent een volwassen kerel, dus ik wil\ndat je eerlijk tegen me bent, goro!"
+  talk04:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Tot ziens!
+  talk05:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hm?
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk06:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Oké! Klinkt goed. Waar wil je over\npraten?"
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 10
+                - 0
+                - 11
+                - 0
+                - 13
+                - 0
+                - 1
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk10:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Zit er iets op mijn gezicht of zo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk11:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ikke?
+      - control:
+          kind: pause
+          length: short
+      - text: " Pelison!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk12:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Yep!
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk13:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ja, ik ben sterk!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "Maar mijn broer, Greyson, is nog sterker!"
+  talk14:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Mijn broer zou ergens in de buurt\nmoeten zijn. O, en hij is veel gelukkiger\ndan toen hij in de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Zuidmijn
+      - control:
+          kind: reset_colour
+      - text: " werkte!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Hij wordt hier enorm bewonderd omdat\nhij\nzo snel rotsen kan verplaatsen."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Daar\nwordt hij erg blij van."
+  talk15:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Mijn broer is hier vast ergens in de buurt\nrotsen aan het breken. Hij is gelukkiger\ndan toen hij in de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Zuidmijn
+      - control:
+          kind: reset_colour
+      - text: " werkte."
+  talk16:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Wil je over iets anders praten?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 10
+                - 0
+                - 11
+                - 0
+                - 13
+                - 0
+                - 1
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk20:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Hallo, vriend van mijn broer, Greyson!"
+  talk21:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Tijdens het breken van de rotsen kwamen\nwe erachter dat ze vol "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: erts
+      - control:
+          kind: reset_colour
+      - text: " zitten! Dus\ndat verkoop ik nu!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Ik vermoed dat er hier zo veel erts is te\nvinden omdat we in de buurt van de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Berg des Doods "
+      - control:
+          kind: reset_colour
+      - text: "zijn.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Hoe dan ook, dit komt vers uit de\nrotsen. Koop zoveel je kunt!"
+  talk22:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Heb je iets nodig?
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 9
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk23:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Wat leuk dat je er bent!
+  talk25:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Het is zo koud.\nMaar misschien is het gewoon dat het in\nGoron-stad veel te heet is."
+  talk26:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Tot de volgende keer!
+  talk28:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "We hebben "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: mineralen
+      - control:
+          kind: reset_colour
+      - text: " gevonden in de\nrotsen die mijn broer heeft gebroken,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\ndus ben ik ze gaan verkopen!\nZe vliegen als warme broodjes over de\ntoonbank!"
+  talk29:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Bedankt, goro! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Ik zal er zeker meer\nmaken."
+  talk30:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Hoera! Verkocht! Nu zijn ze allemaal op!
+  talk31:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Die zijn helaas uitverkocht! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Ik zal mijn\nbroer zeggen dat hij er meer moet\nopgraven!"
+  talk32:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Bedankt, goro! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Maar ik heb er helaas\ngeen op voorraad..."
+  talk33:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: "Hé, kom daar vanaf!"
+  talk34:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: Schiet op en kom eraf!
+  talk35:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: Kom van de toonbank af!
+  talk36:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: "Kom naar beneden! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Gedraag je een\nbeetje!"

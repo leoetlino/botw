@@ -1,0 +1,164 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_Idling: 10
+      Demo_Join: 11
+      Demo_OpenGetDemo: 12
+      Demo_PlayASForDemo: 13
+      Demo_PlayASForTimeline: 14
+      Demo_ResetBoneCtrl: 15
+      Demo_SendSignal: 16
+      Demo_SetGetFlag: 17
+      Demo_TrigNullASPlay: 18
+      Demo_UpdateDataByGetDemo: 19
+      Demo_VisibleOff: 20
+      Demo_XLinkEventCreate: 21
+      Demo_XLinkEventFade: 22
+      Demo_XLinkEventKill: 23
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 EnemyFortressMgrTag, GroupName: ''}
+            ChildIdx: !obj {会話: 2, 待機: 9}
+            SInst: !obj {CheckInterval: 30, ChangePer: 100.0}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: より多い, ClassName: !str32 RandomSelectTwoAction, GroupName: 会話}
+            ChildIdx: !obj {行動Ａ: 3, 行動Ｂ: 8}
+            SInst: !obj {TransitionRateToA: 75, CorrectRateToA: 0, CorrectRateToB: 10}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 会話, ClassName: !str32 RegistedActorNumTwoSelect, GroupName: Root}
+            ChildIdx: !obj {より多い: 1, 以下: 4}
+            SInst: !obj {Num: 1}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 EnemyFortressChat, GroupName: 会話}
+            ChildIdx: !obj {会話: 5, 向き直り: 7, 呼びかけ: 6}
+            SInst: !obj {NextPer: 80.0}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 以下, ClassName: !str32 EnemyFortressSimpleAction, GroupName: 会話}
+            SInst: !obj
+              NoRequestTime: 50
+              WaitFrame: 400
+              WaitFrameRand: 0
+              IsChangeable: false
+              EndState: 0
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 会話, ClassName: !str32 EnemyFortressChatSpeak, GroupName: 会話}
+            SInst: !obj {TryNum: 3, TimeOut: 4000}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 呼びかけ, ClassName: !str32 EnemyFortressChatCall, GroupName: 会話}
+            SInst: !obj {TryNum: 3, TimeOut: 1200}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 向き直り, ClassName: !str32 EnemyFortressChatTurn, GroupName: 会話}
+            SInst: !obj {TryNum: 3}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 EnemyFortressSimpleAction, GroupName: 会話}
+            SInst: !obj
+              NoRequestTime: 50
+              WaitFrame: 400
+              WaitFrameRand: 0
+              IsChangeable: false
+              EndState: 0
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

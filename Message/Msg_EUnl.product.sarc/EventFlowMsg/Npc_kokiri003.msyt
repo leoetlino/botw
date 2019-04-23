@@ -1,0 +1,807 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ik wil iets verkopen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Wat bied je aan?
+  "0002":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kopen.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Wil je iets verkopen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "Daar geef ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Heel erg bedankt! Wil je nog iets anders\nverkopen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Wil je nog meer aan me verkopen?
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: Ik wil meer spullen van meneer de held!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Ik ben zo blij dat ik spullen van meneer\nde held kan kopen!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "O, ben je van gedachten veranderd? Oké."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Ik koop alles wat je maar hebt.
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Heb je spullen van buiten het bos?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Wat wil je verkopen?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Hm, hm..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Dus dit heeft meneer de held\nallemaal bij zich!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: Hoeveel wil je er verkopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " kwijt? Dat is in totaal\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "O, sorry, hier kan ik helemaal niets mee."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Kun je dat alsjeblieft eerst uittrekken\nvoor je het probeert te verkopen?"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Je wilt er maar eentje kwijt? Nou, dan\ngeef ik je er "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: voor. Oké?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Je wilt ze allemaal? Het zijn er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", dus\ndat kost je bij elkaar "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Hoeveel wil je er kwijt, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "? Ik koop ze\nallemaal van je voor "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - control:
+          kind: reset_colour
+      - text: "Dat is dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - control:
+          kind: reset_colour
+      - text: Hoeveel wil je er?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "Voor "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " daarvan wil ik "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "O, ben je van gedachten veranderd? Oké."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Je hebt niet genoeg rupees...
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Je hebt al veel te veel spullen bij je. Dit\npast er niet meer bij!"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Alleen die ene maar? Dat kost je\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Npc_kokiri003_Near000:
+    attributes: Npc_kokiri003
+    contents:
+      - text: Dat zijn nuttige spullen!
+  Npc_kokiri003_Near020:
+    attributes: Npc_kokiri003
+    contents:
+      - text: Mijn winkel is leeg...
+  Npc_kokiri003_Sell000:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik hoorde dat je onderweg was, meneer\nde held, dus heb ik de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Van Alles En Nog Wat "
+      - control:
+          kind: reset_colour
+      - text: "geopend!\nAls je iets wilt verkopen, ben je hier aan\nhet goede adres!"
+  Npc_kokiri003_Sell010:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: Bedankt!
+  Npc_kokiri003_Sell010b:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Ik ben zo blij dat ik een selectie\nvoorwerpen heb verzameld!"
+  Npc_kokiri003_Sell010c:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Bedankt!
+  Npc_kokiri003_Sell010d:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: Ik heb meneer de held geholpen!
+  Npc_kokiri003_Sell020:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Jeeeeee! Bedankt voor je bezoek!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik hoorde dat meneer de held op weg\nwas, dus heb ik een winkel,\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Van Alles En Nog Wat
+      - control:
+          kind: reset_colour
+      - text: ", geopend!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Als je iets wilt verkopen, koop ik het\ngraag van je!"
+  Npc_kokiri003_Sell030:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bedankt voor je bezoek, meneer de held!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik zal zorgen dat ik volgende keer weer\nnieuwe spullen te verkopen heb."
+  Npc_kokiri003_Talk000:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Zozo, kijk eens wie we hier hebben!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHallo, meneer de held, en welkom bij\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Van Alles En Nog Wat
+      - control:
+          kind: reset_colour
+      - text: "!\nIk verkoop hier van alles, zoals dingen\ndie ik in het bos vind. Maar ook dingen\ndie ik niet in het bos vind.\nKies maar wat je wilt hebben! Of..."
+      - control:
+          kind: pause
+          length: short
+      - text: " ben je\nhier om iets te verkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk010:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Welkom bij "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Van Alles En Nog Wat
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nKies maar wat je hebben wilt! Of... wilde\nje liever iets verkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk020:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Goedenavond,"
+      - control:
+          kind: pause
+          length: short
+      - text: " meneer de held. Wil je\niets verkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk030:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Het spijt me...
+      - control:
+          kind: pause
+          length: short
+      - text: " Alles is uitverkocht..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nMaar als je iets wilt verkopen, dan koop\nik het van je!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk040:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Als je iets niet nodig hebt, breng het dan\nnaar mij. Dingen van buiten dit woud..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik\nwil iets zien wat ik nog nooit heb gezien."
+  Npc_kokiri003_Talk050:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 18
+      - text: Meneer de held!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wees voorzichtig als je\n's nachts door het bos wandelt. Het stikt\ner dan namelijk van de monsters."
+  Npc_kokiri003_Talk060:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 25
+      - text: Heel erg bedankt!
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik zal zorgen dat ik\nvolgende keer weer van alles op voorraad\nheb."
+  Npc_kokiri003_Talk070:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Ik verzamel pijlen en eten voor je. Ik\nweet zeker dat je daar iets mee kunt,\nmeneer de held!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: elektropijl
+      - control:
+          kind: reset_colour
+      - text: " gebruikt als het\nregent, is het effect extra schokkend!\nProbeer het maar eens!"

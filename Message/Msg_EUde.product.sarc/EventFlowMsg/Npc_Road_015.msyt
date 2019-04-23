@@ -1,0 +1,1487 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ich will was kaufen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ich will verkaufen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ist gut.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Kannst du vergessen.
+  "5502":
+    attributes: ""
+    contents:
+      - text: "Ja, das passt."
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Ach, doch nicht."
+  "5507":
+    attributes: ""
+    contents:
+      - text: "Ach, ich nehm alles!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkaufen.
+  Atacked00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 32
+      - text: "Der Esel... "
+      - control:
+          kind: pause
+          length: long
+      - text: Kann er noch grade laufen?
+  Atacked01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "In solchen Momenten hilft nur eines:"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nganz, ganz still halten."
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Was möchtest du denn verkaufen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nDafür gibt's "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ", mehr nicht!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: War mir ein Vergnügen.
+      - control:
+          kind: pause
+          length: short
+      - text: " Noch was?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Danke!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Danke, sag ich, danke!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Na bitte, geht doch!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Tja, Pech gehabt."
+  Com_Talk_05:
+    attributes: Npc_Road_015
+    contents:
+      - text: "Ich kaufe alles, aber nur zu meinen\nPreisen!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Eigentlich wirst du bei mir alles los...
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Wir wär's, wenn du mir was verkaufst?"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Deine Waren zu meinen Preisen!
+  Com_Talk_06:
+    attributes: Npc_Road_015
+    contents:
+      - text: Wofür kann ich dich begeistern?
+  Com_Talk_07:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Tut mir echt leid... "
+      - control:
+          kind: pause
+          length: short
+      - text: Das ist alles alle.
+  Com_Talk_08:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Kannst gerne wiederkommen, wenn du\ngenug "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "Rubine "
+      - control:
+          kind: reset_colour
+      - text: hast.
+  Com_Talk_09:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Deine Tasche ist voll.
+      - control:
+          kind: pause
+          length: short
+      - text: " Mit 'nem Esel wär\ndir das nicht passiert!"
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: " also?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Fein, danke!"
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Danke dir!
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Na dann, danke!"
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Dir sei gedankt!
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Bei mir gibt's Fisch und Obst aus\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: long
+      - text: " Lass dir ruhig Zeit!"
+  Com_Talk_13:
+    attributes: ""
+    contents:
+      - text: "Aha, "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFür so was finde ich immer noch ein\nPlätzchen auf meinem Esel..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: ""
+    contents:
+      - text: "Schön, schön... "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "-mal also..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nTja,"
+      - control:
+          kind: pause
+          length: short
+      - text: " da würd ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "für\ngeben."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Nö... Das würde dir nicht mal der Esel\nabnehmen."
+  Com_Talk_16:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Musst schon erst mal die Sachen\nablegen, die du mir verkaufen willst!"
+  Com_Talk_20:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Das einzig Gute an dem Wetter ist, dass\nich meine Spezialwaren raushole!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHier, meine feine "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: Maxi-Muschel
+      - control:
+          kind: reset_colour
+      - text: "!"
+  Com_Talk_30:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " mal "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", das\nmacht dann "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ".\nSind wir im Geschäft?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nUnd denk dran, je mehr du kaufst, umso\nweniger muss der Esel schleppen!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - text: Bleibt es dabei?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGut, macht dann genau "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Du hast das Herz am rechten Fleck!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch mache dir auch einen guten Preis:"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Gleich alles auf einmal? "
+      - control:
+          kind: pause
+          length: long
+      - text: "Na, dann schau\nich mal, was ich dir dafür bieten kann..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nWie wäre es mit "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubinen"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Das war alles, was ich hatte."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich danke\ndir für das gute Geschäft!"
+  Com_Talk_37:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Für heute ist alles ausverkauft.
+      - control:
+          kind: pause
+          length: short
+      - text: " Nur noch\nStaub in den Packtaschen."
+      - control:
+          kind: pause
+          length: short
+      - text: " Aber willst du\nmeine Liste fürs nächste Mal sehen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: ""
+    contents:
+      - text: Das reicht dir schon?
+      - control:
+          kind: pause
+          length: short
+      - text: " Tja, dann krieg ich\nauch nur "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Failed00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 18
+      - text: "Uiuiui... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Ich dachte wirklich, mein Ende\nwär gekommen!"
+  Failed01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 44
+      - text: "Aua aua... "
+      - control:
+          kind: pause
+          length: long
+      - text: Das tat richtig weh!
+  GoodBye00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Bis dann.
+  Guardian00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "Bei "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Wächtern "
+      - control:
+          kind: reset_colour
+      - text: "kenn ich nur eine\nStrategie! "
+      - control:
+          kind: pause
+          length: long
+      - text: Abhauen!
+  MSG_Firo_00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Kommt rüber, Leute!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Nur bei mir gibt's\ndas Beste vom Besten, das "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "\nzu bieten hat!\nAber nur für Hylianer!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Monster können\nmir gestohlen bleiben!"
+  MSG_Firo_00_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Kommt rüber, Leute!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Nur bei mir gibt's\ndas Beste vom Besten, das "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "\nzu bieten hat!"
+  MSG_Firo_01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich bring meine "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedter "
+      - control:
+          kind: reset_colour
+      - text: "Waren\nüberall unter die Leute und darum kenn\nich mich auch überall aus!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nOder hättest du etwa gewusst, dass\nda drüben im Westen der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Finras-Wald
+      - control:
+          kind: reset_colour
+      - text: "\nund daneben der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Hylia-See "
+      - control:
+          kind: reset_colour
+      - text: ist?
+  MSG_Firo_01_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Drüben im Westen ist der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Hylia-See
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " und\ndirekt daneben der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Finras-Wald
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Die Info\nwar gratis, aber jetzt mal zum Geschäft!"
+  MSG_Firo_02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Du weißt ja, dass meine Waren alle aus\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: " kommen, oder?"
+      - control:
+          kind: pause
+          length: long
+      - text: " Da ist die\nWelt nämlich noch in Ordnung!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Wenn ich an unser schönes traditionelles\nSchatztruhen-Spiel denke, packt mich\nsogar ein klein wenig das Heimweh..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Aber genug geredet, kommen wir zum\nGeschäft!"
+  MSG_Firo_02_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: " ist ein schönes Fleckchen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dort wird noch immer das traditionelle\nSchatztruhen-Spiel gespielt, ach ja..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Aber genug geschwatzt!
+  MSG_Firo_03:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Nicht so zurückhaltend, wirf einen\nBlick auf das Beste vom Besten aus\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Frischfisch und Früchte aus dem\nsüdlichsten Süden!"
+  MSG_Firo_03_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Frischfisch und Früchte aus dem\nsüdlichsten Süden!"
+  MSG_Firo_04:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "In "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedt "
+      - control:
+          kind: reset_colour
+      - text: "gibt's nicht nur die Waren,\ndie du bei mir kaufen kannst, sondern\nauch das beste Spiel aller Zeiten!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Das heißt Schatztruhen-Spiel und wer's\nnicht kennt, hat echt was verpasst!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Aber genug gequasselt...
+  MSG_Firo_04_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Das Schatztruhen-Spiel in "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "\nist das beste Spiel aller Zeiten!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Wer's\nnicht kennt, hat echt was verpasst."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Aber genug gequasselt...
+  Near00:
+    attributes: Npc_Road_015
+    contents:
+      - text: Frischfisch aus Angelstedt!
+  Near01:
+    attributes: Npc_Road_015
+    contents:
+      - text: Garantiert grätenfrei!
+  Near02:
+    attributes: Npc_Road_015
+    contents:
+      - text: Guter Fisch riecht nicht!
+  Near03:
+    attributes: Npc_Road_015
+    contents:
+      - text: Angelstedter Früchte!
+  Near04:
+    attributes: Npc_Road_015
+    contents:
+      - text: Mein Fisch wird nass...
+  Rest_00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Fisch und Obst aus "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedt "
+      - control:
+          kind: reset_colour
+      - text: "ist das\nBeste vom Besten,"
+      - control:
+          kind: pause
+          length: short
+      - text: " da können selbst der\nEsel und ich nicht Nein sagen!"
+  Rest_01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich dachte, heut wird's schön..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Na ja,\nmeine armen Knochen können auch mal\n'ne Pause gebrauchen..."
+  Rest_02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "Mir macht der Regen ja gar nichts aus,\naber der Esel hier ist bei dem Wetter zu\nnichts zu gebrauchen!"
+  RetMSG_Firo_00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Ich komm ja richtig viel rum, wenn ich\ndas Beste vom Besten aus "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedt "
+      - control:
+          kind: reset_colour
+      - text: "an\nden Mann bringe...\nUnd glaub mir,"
+      - control:
+          kind: pause
+          length: short
+      - text: " zwischen hier und dem\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall der Hochebene "
+      - control:
+          kind: reset_colour
+      - text: "gibt's so viele\nMonster"
+      - control:
+          kind: pause
+          length: short
+      - text: ", da rennt selbst der Esel Galopp!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Aber kommen wir zu was anderem...
+  RetMSG_Firo_00_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Zwischen hier und dem "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall der\nHochebene "
+      - control:
+          kind: reset_colour
+      - text: "gibt's so viele Monster,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nda rennt selbst der Esel Galopp!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Da staunst du, was?"
+      - control:
+          kind: pause
+          length: long
+      - text: " Jetzt aber genug\ngestaunt, kommen wir zum Geschäft!"
+  RetMSG_Firo_01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich bin ja ständig unterwegs und\nverkaufe das Beste vom Besten, was\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedt "
+      - control:
+          kind: reset_colour
+      - text: "zu bieten hat.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: "In den "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Wäldern von Phirone
+      - control:
+          kind: reset_colour
+      - text: " hab ich mich\ntrotzdem mal verlaufen..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ich sag dir,"
+      - control:
+          kind: pause
+          length: short
+      - text: " da\nfing sogar der Esel an zu heulen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Na ja, genug davon..."
+  RetMSG_Firo_01_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: "In den "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Wäldern von Phirone
+      - control:
+          kind: reset_colour
+      - text: " hab ich mich\nmal so übel verlaufen..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ich sag dir,"
+      - control:
+          kind: pause
+          length: short
+      - text: " da\nfing sogar der Esel an zu heulen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Na ja, genug davon..."
+  RetMSG_Firo_02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Das gab's noch nie, das gibt's nur heute!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAuch wenn ihr vom "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall am See "
+      - control:
+          kind: reset_colour
+      - text: "seid,\nkommt ran, ihr Leute!\nDer frischste Fisch und die südlichsten\nFrüchte,"
+      - control:
+          kind: pause
+          length: short
+      - text: " das Beste vom Besten aus\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "!"
+  RetMSG_Firo_02_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Der frischste Fisch und die südlichsten\nFrüchte,"
+      - control:
+          kind: pause
+          length: short
+      - text: " das Beste vom Besten aus\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Angelstedt
+      - control:
+          kind: reset_colour
+      - text: "!"
+  RetMSG_Firo_03:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Der Esel hat sich die Mühe gemacht und\ndie besten Früchte und Fische aus\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedt "
+      - control:
+          kind: reset_colour
+      - text: "hergeschleppt!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Aber das ist noch nicht alles!
+      - control:
+          kind: pause
+          length: short
+      - text: " Meine\nTaschen sind voller Rubine, die nur allzu\ngern ihren Besitzer wechseln würden!"
+  RetMSG_Firo_03_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: Was wäre ich nur ohne meinen Esel...
+  RetMSG_Firo_04:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "In "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Angelstedt "
+      - control:
+          kind: reset_colour
+      - text: "hab ich frischen Fisch und\nObst aufgeladen und mein Glück im\nSchatztruhen-Spiel versucht!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Jetzt zieh ich zum "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Stall der Hochebene
+      - control:
+          kind: reset_colour
+      - text: ", \ndamit die Leute dort auch was vom\nBesten vom Besten abbekommen..."
+  RetMSG_Firo_04_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Alles erledigt, und das Schatztruhen-\nSpiel war eine nette Ablenkung."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich\nwerde mich dann wohl mal aufmachen."
+  SavedLv1_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: "Du hast mich gerettet! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Und den Esel\nnoch dazu!"
+  SavedLv1_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Und du? "
+      - control:
+          kind: pause
+          length: short
+      - text: Hast du was abgekriegt?
+  SavedLv2_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: "Puh,"
+      - control:
+          kind: pause
+          length: short
+      - text: " das war knapp!"
+  SavedLv2_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: Das war Rettung in letzter Sekunde!
+  SavedLv3_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 19
+      - text: Geht es dir gut?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nBist du auch nicht verletzt?"
+  SavedLv3_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Du hast's echt drauf!"
+  Talk01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Los geht's! "
+      - control:
+          kind: pause
+          length: long
+      - text: "Der Esel ist vollgepackt\nmit allem, was dein Herz begehrt!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nWomit kann ich dir dienen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Gibt doch bestimmt noch was, womit ich\ndir behilflich sein kann, oder?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Thanks00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Dies lasse ich dir als Dankeschön da.

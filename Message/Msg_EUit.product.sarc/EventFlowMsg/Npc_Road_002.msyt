@@ -1,0 +1,1723 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Vorrei comprare.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Preferisco vendere.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Arrivederci.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sì.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Compro.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Lascia stare.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Compro tutto.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  Atacked00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "Grrr... "
+      - control:
+          kind: pause
+          length: short
+      - text: mostri!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFatevi sotto!"
+  Atacked01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: Stupidi mostri...
+      - control:
+          kind: pause
+          length: short
+      - text: " Attaccatemi pure,\nse avete fegato!"
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Che cos'hai?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Vuoi vendermi\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nFa "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "... Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Grazie!\nVuoi vendermi qualcos'altro?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Grazie! Mi stai dando una bella mano!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Grazie!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "C'è dell'altro?"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Che peccato...
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Compro tutto!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Fammi vedere se hai qualcosa\nda vendere!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Vuoi vendermi qualcosa?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Fammi dare un'occhiata!"
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: Cosa vuoi?
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Spiacente, non ne ho più."
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Non hai abbastanza rupie. Guarda che\na me non piacciono i perditempo."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Hai la borsa piena. Vendi o getta via\nqualcosa e fai un po' di spazio."
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - text: "Vuoi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nHo capito bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Quando cerchi della carne, vieni\nda Vongo..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Tienilo a mente!"
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Grazie.
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Se vuoi della carne, fammelo sapere!"
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Grazie, amico!"
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 8
+                  - 0
+      - text: "Carne XL "
+      - control:
+          kind: reset_colour
+      - text: "e "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 7
+                  - 0
+      - text: pollame XL
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nTi va di gustare qualcosa?"
+  Com_Talk_13:
+    attributes: ""
+    contents:
+      - text: "Mi vendi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nQuante unità?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "... Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Non posso comprare una roba\ndel genere."
+      - control:
+          kind: pause
+          length: short
+      - text: " Spiacente..."
+  Com_Talk_16:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Dovresti toglierti i vestiti prima di\nvenderli."
+      - control:
+          kind: pause
+          length: short
+      - text: " Sai com'è, non mi serve \nquello che c'è dentro."
+  Com_Talk_20:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Avventurarsi con questo tempaccio?\nNotevole! È in giorni come questi che mi\nviene da vender un po' di "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 8
+                  - 0
+      - text: carne XXL!
+  Com_Talk_30:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "! Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: ""
+    contents:
+      - text: "Vuoi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nQuanti pezzi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - text: "Un'unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "! Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Se vuoi\nche ti venda l'intera scorta di "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità,\ndevi darmi "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". D'accordo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nè tutto quello che hai? Posso offrirti\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Ecco, è tutto quello che avevo."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nGrazie per aver acquistato così tanto!"
+  Com_Talk_37:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Mi spiace, ma oggi le scorte sono\nesaurite."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Vuoi dare un'occhiata agli\narticoli che avrò in assortimento?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: ""
+    contents:
+      - text: "Un'unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "! Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Failed00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Sei troppo lento! "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nStavo per rimetterci la pelle, sai?!"
+  Failed01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Urgh...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nChe esperienza terribile!"
+  GoodBye00:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Ci vediamo.
+      - control:
+          kind: pause
+          length: short
+      - text: " E buona fortuna!"
+  Guardian00:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 22
+      - text: "Ehi, scappa!\nSta arrivando un "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: guardiano
+      - control:
+          kind: reset_colour
+      - text: "!"
+  MSG_Futa_00:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: Eh?
+      - control:
+          kind: pause
+          length: short
+      - text: " Che c'è?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nCome mai quella faccia?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Sei hai fame e cerchi qualcuno che\ndivida un po' del suo cibo con te,\nstai parlando con la persona giusta!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Dopotutto il mio commercio si basa\nsulla carne!"
+  MSG_Futa_00_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Hai fame?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Stai parlando con la persona\ngiusta! Io vendo carne!"
+  MSG_Futa_01:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: Eh?
+      - control:
+          kind: pause
+          length: short
+      - text: " Cosa c'è?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSenti odore di carne fresca?\nBeh, hai indovinato!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Mi chiamo Vongo. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Mi occupo di carne.\nTi meriti proprio un consiglio su come\npreparare i piatti a base di carne."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "L'importante è farla sfrigolare!\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Inoltre, se ce l'hai..."
+      - control:
+          kind: pause
+          length: short
+      - text: " prova ad aggiungere\nun po' di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 7
+                  - 0
+      - text: "salgemma "
+      - control:
+          kind: reset_colour
+      - text: "e sarà doppiamente\nsucculenta!"
+  MSG_Futa_01_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Il segreto per cucinare la carne\nè grigliarla a puntino!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Se si aggiunge\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 7
+                  - 0
+      - text: salgemma
+      - control:
+          kind: reset_colour
+      - text: ", poi, è ancora più buona!\nLa mia carne va a ruba."
+  MSG_Futa_02:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: Che ti prende?
+      - control:
+          kind: pause
+          length: short
+      - text: " Ti sei perso?\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Il "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "villaggio Calbarico "
+      - control:
+          kind: reset_colour
+      - text: si trova più a nord.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nInvece lo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: stallaggio dei Gemelli
+      - control:
+          kind: reset_colour
+      - text: " è proprio\nqui vicino.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Vado sempre a vendere la carne allo\nstallaggio,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma se vuoi possiamo fare\naffari anche qui."
+  MSG_Futa_02_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Il "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Calbarico
+      - control:
+          kind: reset_colour
+      - text: " è a nord di qui."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nMa se cerchi della carne, puoi trattare\ncon me."
+  MSG_Futa_03:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Cosa c'è?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Vuoi qualcuno con cui\nparlare?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "L'unico argomento che mi interessa\nè la carne.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Più che altro, il commercio di carne..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSe a te va bene, perché non facciamo\naffari?"
+  MSG_Futa_03_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "A proposito di carne, io ne vendo un po'."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSe vuoi comprarne, possiamo fare affari."
+  MSG_Futa_04:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Mh? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Decido io dove dormire. Non sono\naffari tuoi.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Mi piacerebbe sdraiarmi su un bel letto\ncomodo, ma non ho abbastanza per\nalloggiare in uno stallaggio."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Ti andrebbe di aiutarmi comprando\nun po' della mia carne?"
+  MSG_Futa_04_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Ehi amico,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ti interessa un po' della\ncarne che vendo?"
+  Near00:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Spalla di manzo...
+  Near01:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Cartilagine...
+  Near02:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Spalla di manzo... fegato...
+  Near03:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Lombata...
+  Near04:
+    attributes: Npc_Road_002
+    contents:
+      - text: Piove...
+  Rest_00:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: Mh?
+      - control:
+          kind: pause
+          length: short
+      - text: " Chi, io?"
+      - control:
+          kind: pause
+          length: long
+      - text: " Ho bisogno di riposare\nle mie stanche membra.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ovviamente solo il corpo ha bisogno\ndi riposo."
+      - control:
+          kind: pause
+          length: short
+      - text: " Gli affari, invece, non si\nfermano mai.\nIo vendo... "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - control:
+          kind: pause
+          length: short
+      - text: carne!
+  Rest_01:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Quando il tempo è brutto, la cosa\nmigliore da fare è rilassarsi."
+      - control:
+          kind: pause
+          length: short
+      - text: " Almeno\nè quello che faccio io.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ovviamente solo il corpo ha bisogno\ndi riposo. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Gli affari, invece, non si\nfermano mai.\nIo vendo... "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - control:
+          kind: pause
+          length: short
+      - text: carne!
+  Rest_02:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 18
+      - text: Aaaargh!
+      - control:
+          kind: pause
+          length: short
+      - text: " Piove!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDevo stare al riparo per un po'.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ma anche al riparo,"
+      - control:
+          kind: pause
+          length: short
+      - text: " gli affari non\nsi fermano mai.\n\nIo vendo... "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - control:
+          kind: pause
+          length: short
+      - text: carne!
+  RetMSG_Futa_00:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Cosa c'è?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Perché hai quello sguardo?\nTi faccio pena, forse?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: So essere a mio agio
+      - control:
+          kind: pause
+          length: short
+      - text: " anche in un posto\ndeserto come questo. Se davvero provi\npietà per me, allora compra la mia carne!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "... Te la venderò a un prezzo stracciato."
+  RetMSG_Futa_00_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Se hai un minimo di compassione per me,\ncompra un po' della mia carne!"
+  RetMSG_Futa_01:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Cosa c'è? "
+      - control:
+          kind: pause
+          length: short
+      - text: Che faccia...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHai mica fame?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Non puoi andare all'avventura a stomaco\nvuoto."
+      - control:
+          kind: pause
+          length: long
+      - text: " Arrostisci un po' di carne e\nritroverai le forze...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Dammi un attimo e te ne venderò\nun po'!"
+  RetMSG_Futa_01_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 6
+      - text: "Cos'è, non hai fame?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ti vendo\nun po' di carne."
+  RetMSG_Futa_02:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Eh? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Cosa c'è? "
+      - control:
+          kind: pause
+          length: short
+      - text: " Che faccia..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nVuoi un po' più di sale?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Sei proprio fortunato, allora!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nVendo sia "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 7
+                  - 0
+      - text: "salgemma che carne.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Perché non li provi insieme?
+  RetMSG_Futa_02_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Dieta povera di sodio? Niente paura, ti\nvendo io del "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 7
+                  - 0
+      - text: salgemma.
+      - control:
+          kind: pause
+          length: longer
+      - text: " E già che ci\nsiamo, che ne dici di un po' di carne?"
+  RetMSG_Futa_03:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Mh? Che c'è?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSei stanco di camminare?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Lo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "stallaggio dei Gemelli "
+      - control:
+          kind: reset_colour
+      - text: è vicinissimo.
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Se ti mancano le forze, dovresti proprio\nmangiare un po' di carne!\nSai chi la vende?\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Proprio io!
+  RetMSG_Futa_03_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Lo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: stallaggio dei Gemelli
+      - control:
+          kind: reset_colour
+      - text: " è proprio\nlaggiù."
+      - control:
+          kind: pause
+          length: short
+      - text: " Se sei a corto di energia, ti\nposso vendere della carne."
+  RetMSG_Futa_04:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Mh? "
+      - control:
+          kind: pause
+          length: long
+      - text: "Vuoi comprare un po' di carne?\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Stavo per tornare al mio rifugio per\ndormire,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma gli affari sono affari.\n\nInoltre, se vendo selvaggina e pollame,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\npotrò mangiare pesce e verdura."
+  RetMSG_Futa_04_1:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Me ne sto tornando all'accampamento,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nma se vuoi comprare qualcosa, hai la\nprecedenza su tutto!"
+  SavedLv1_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 18
+      - text: "Fiuuu,"
+      - control:
+          kind: pause
+          length: short
+      - text: " stavo per essere divorato!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nPeggio per loro, comunque... La\nmia carne ha un saporaccio!"
+  SavedLv1_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 18
+      - text: "Fiuuu! "
+      - control:
+          kind: pause
+          length: long
+      - text: "\nChe rischio..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Chi me l'ha fatto fare..."
+  SavedLv2_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: Diamine!
+      - control:
+          kind: pause
+          length: long
+      - text: "\nCredevo che sarei diventato\nlo spuntino dei mostri!"
+  SavedLv2_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "Accidenti! "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDevono essere stati attirati\ndalla carne che vendo!"
+  SavedLv3_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 18
+      - text: Povero me...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nStavo per diventare io stesso\nun bocconcino succulento!"
+  SavedLv3_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 18
+      - text: Fiuuu...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nPer fortuna la mia carne\nè sana e salva."
+  Talk01:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Tutta la mia carne è di prima scelta!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nQualsiasi pezzo tu scelga, vai sul sicuro!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_Road_002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: E per il resto?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNon fare complimenti!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Thanks00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Grazie per avermi salvato.
+      - control:
+          kind: pause
+          length: longer
+      - text: " Accetta\nquesta ricompensa."

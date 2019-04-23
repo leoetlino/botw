@@ -1,0 +1,773 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: ¿Qué tipo de piezas?
+  "0001":
+    attributes: ""
+    contents:
+      - text: ¿Me compras algo?
+  "0002":
+    attributes: ""
+    contents:
+      - text: Adiós
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sí
+  "5501":
+    attributes: ""
+    contents:
+      - text: "No"
+  "5503":
+    attributes: ""
+    contents:
+      - text: Dejémoslo así
+  "5508":
+    attributes: ""
+    contents:
+      - text: Las vendo todas
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: "Llevar la alforja bien organizada es\nde buena educación entre las vai."
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Así que eso es lo que quieres, ¿eh?\n¿Te parece bien "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Sahku, sahku! Pero no irás a soltarme\nun \"sawooru\" ya de sopetón, ¿verdad?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Qué cosa tan bonita. ¡Me alegro!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Sahku, sahku."
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Un magnífico artículo, sin duda.\nSahku, sahku."
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Qué pena. No se ven artículos de esta\ncalidad todos los días, pero tú decides."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Aun así, la indecisión no es tu única\ncualidad. Sabes bien cómo mantener\na los voe a raya."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¿Tienes alguna cosa más?\nY cuanto más bonita sea, mejor..."
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¿No te parece curioso? Lo que para ti\nno tiene mucha utilidad, a mí me viene\nde perlas."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Enséñame todo lo que quieras, con tal\nde que sean cosas bonitas."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: ¿Cuántas unidades serán?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Si estamos hablando de "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "\nunidades, vendrían a ser\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿de acuerdo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Lo siento, pero eso no te lo puedo\ncomprar."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Oye, ¿pretendes desvestirte aquí mismo?\nNo es el comportamiento propio de una\nvai refinada."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: ¿Solo una unidad?
+      - control:
+          kind: pause
+          length: short
+      - text: " En ese caso,\n¿qué te parecen "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupias"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "¿Todas? Eso son "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unidades, ¿no?\nEntonces te daré "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ",\n¿te parece?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Serán "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿de acuerdo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Tómate tu tiempo, no es una decisión\nque deba tomarse a la ligera."
+  Talk001:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Gracias a ti, la vida ha vuelto a\nla normalidad en la ciudadela."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Te lo agradezco mucho. Cuenta con\nprecios especiales por mi parte."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Si hay alguna "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pieza de artesanía
+      - control:
+          kind: reset_colour
+      - text: " que\nte guste, elígela."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk002:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Desde que se reabrió la tienda, Karah\nse pasa el día fabricando más piezas."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "¡Sahku, sahku!"
+  Talk006:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je, je, sahku, sahku."
+  Talk007:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Las joyas poseen cada una un cierto\npoder en su interior, del que se puede\nbeneficiar quien las porta."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Por ejemplo, el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: rubí
+      - control:
+          kind: reset_colour
+      - text: " otorga resistencia\nfrente al frío; el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: zafiro
+      - control:
+          kind: reset_colour
+      - text: ", resistencia\ncontra el calor.\nYo empleo esos poderes para fabricar\ndiversos artículos como "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: diademas
+      - control:
+          kind: reset_colour
+      - text: "\ny "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pendientes
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "El único inconveniente es que los\nmateriales necesarios no son fáciles\nde obtener."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Por eso, ofrezco mis piezas de artesanía\na cambio de esos materiales."
+  Talk008:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hará falta un poco más de tiempo, pero\nte garantizo una satisfacción total."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Además, todas las piezas de artesanía\nque tengo aquí son unisex."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Te servirán igualmente como regalo\npara un voe."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk009:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "¡Siempre a tu servicio!\nNo lo dudes si tienes algo que vender."
+  Talk012:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Con la cantidad de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: pedernal
+      - control:
+          kind: reset_colour
+      - text: " que tengo\nahora, no me faltará el trabajo."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Avísame si te interesa alguna\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pieza de artesanía
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk013:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Las vai irradian aún más belleza\ncuando se ponen algo bonito."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Si encuentras alguna "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pieza de artesanía
+      - control:
+          kind: reset_colour
+      - text: "\nque te interese especialmente, avísame."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk014:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Las joyas y las vai sienten una\natracción mutua."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Cuando una determinada "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "pieza de\nartesanía"
+      - control:
+          kind: reset_colour
+      - text: " cautiva tu atención, eso\nsignifica que está destinada a ser tuya.\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Si sientes algo especial por alguna,\navísame sin dudar."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk015:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Desde que se reabrió la tienda, Karah\nanda como loca fabricando más piezas."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "¡Sahku, sahku!"
+  Talk016:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Je, je, espero que las piedras preciosas\nte protejan."
+  Talk017:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Sahku, sahku! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Hay que decir que esa\npieza combina a la perfección con\ntu imagen."
+  Talk018:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je, je, "
+      - control:
+          kind: pause
+          length: short
+      - text: "ojalá la joya te conceda\nsu protección."
+  Talk019:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Con la bestia divina ya apaciguada,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nel centro de la ciudadela ha recuperado\nsu bullicio habitual.\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "A propósito... sé perfectamente que\ntú has tenido bastante que ver en\nese asunto.\nSolo que no te gusta alardear de tus\nlogros. Yo debería aprender de ese\ncarácter reservado tuyo.\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: En fin...
+      - control:
+          kind: pause
+          length: longer
+      - text: " ¿Puedo hacer algo por la\nheroína salvadora de la tribu gerudo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk020:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Yo, en tu lugar, me haría construir una\nestatua de bronce, en honor a la heroína\nque salvó la Ciudadela Gerudo.\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Je, je, con un montón de piedras\npreciosas incrustadas,"
+      - control:
+          kind: pause
+          length: short
+      - text: " por supuesto."
+  Talk021:
+    attributes: Npc_oasis001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: Wasaaq.

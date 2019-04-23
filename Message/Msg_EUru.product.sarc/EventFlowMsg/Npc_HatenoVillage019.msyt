@@ -1,0 +1,802 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Почему в углу?
+  "0001":
+    attributes: ""
+    contents:
+      - text: Я кое-что продаю
+  "0002":
+    attributes: ""
+    contents:
+      - text: Что это за место?
+  "0003":
+    attributes: ""
+    contents:
+      - text: Пока
+  "0004":
+    attributes: ""
+    contents:
+      - text: Беру!
+  "5500":
+    attributes: ""
+    contents:
+      - text: Идет!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5502":
+    attributes: ""
+    contents:
+      - text: Беру!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5508":
+    attributes: ""
+    contents:
+      - text: Продаю все
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: Показывай!
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Спасибо!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Прекрасно!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Замечательно!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: С тобой приятно иметь дело!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: "Хорошо, поняла."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: С радостью взгляну на еще что-нибудь.
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Предложи что-нибудь еще.
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Может, что-то еще покажешь?"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Есть еще что-нибудь?
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: Что хочешь купить?
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Этого больше нет.
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: "Кажется, у тебя не хватает денег."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "Кажется, у тебя сумка полная."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nТы это просто не унесешь."
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Точно берешь?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Премного благодарна!
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Спасибо большое!
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Всегда к твоим услугам!
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Надеюсь, тебе понравится!"
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Выбирай что угодно!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСколько продаешь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Значит, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " штуку"
+            - " штук"
+            - " штуки"
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nКак насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Я не могу это купить.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Если продаешь вещь,\nхотя бы сними ее с себя."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Куплю за "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Все — значит "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " штуку"
+            - " штук"
+            - " штуки"
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nМогу предложить "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Это обойдется тебе в "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: ""
+    contents:
+      - text: Поняла.
+      - control:
+          kind: pause
+          length: short
+      - text: " Надеюсь, ты\nпередумаешь обратно..."
+  near00:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - text: Добро пожаловать!
+  talk00:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "В магазине "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: «Венто-Эст»
+      - control:
+          kind: reset_colour
+      - text: "\nесть и одежда, и доспехи!"
+  talk01:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Добро пожаловать!
+      - control:
+          kind: pause
+          length: short
+      - text: " Магазин\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: «Венто-Эст»
+      - control:
+          kind: reset_colour
+      - text: " к твоим услугам\nдаже в такое время!"
+  talk02:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Приходи еще!
+  talk03:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Чем еще могу помочь?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 0
+                - 50
+                - 78
+                - 112
+                - 99
+                - 95
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 86
+                - 105
+                - 108
+                - 108
+                - 97
+                - 103
+                - 101
+                - 48
+                - 49
+                - 57
+                - 95
+                - 69
+                - 116
+                - 116
+                - 111
+                - 2
+                - 56
+                - 78
+                - 112
+                - 99
+                - 95
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 86
+                - 105
+                - 108
+                - 108
+                - 97
+                - 103
+                - 101
+                - 48
+                - 49
+                - 57
+                - 95
+                - 75
+                - 111
+                - 107
+                - 111
+                - 116
+                - 116
+                - 101
+                - 3
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk05:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - text: "Это "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: магазин одежды
+      - control:
+          kind: reset_colour
+      - text: ", но у меня\nи доспехи есть! Выбирай что угодно!"
+  talk06:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Секундочку!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Спасибо, что подождал!"
+  talk07:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Что ты продаешь?
+  talk10:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Большое тебе спасибо!
+  talk11:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Благодарю!
+  talk12:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Большое спасибо!
+  talk13:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Извини, можно тебя\nкое о чем попросить?"
+  talk14:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты не мог бы потушить "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: синий огонь
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nНе надо отпугивать покупателей."
+  talk15:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Чем могу помочь?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 0
+                - 50
+                - 78
+                - 112
+                - 99
+                - 95
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 86
+                - 105
+                - 108
+                - 108
+                - 97
+                - 103
+                - 101
+                - 48
+                - 49
+                - 57
+                - 95
+                - 69
+                - 116
+                - 116
+                - 111
+                - 2
+                - 56
+                - 78
+                - 112
+                - 99
+                - 95
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 86
+                - 105
+                - 108
+                - 108
+                - 97
+                - 103
+                - 101
+                - 48
+                - 49
+                - 57
+                - 95
+                - 75
+                - 111
+                - 107
+                - 111
+                - 116
+                - 116
+                - 101
+                - 3
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk16:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Добро пожаловать!
+  talk17:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: А-а!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Почему я в углу стою?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nРазве меня плохо видно?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Прошу прощения, но\nэто мое рабочее место!"
+  talk20:
+    attributes: Npc_HatenoVillage019
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "В "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: «Венто-Эст»
+      - control:
+          kind: reset_colour
+      - text: " рады даже тем,\nкто остался без одежды!"

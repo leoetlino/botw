@@ -1,0 +1,55 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects: {}
+  lists:
+    AddReses: !list
+      objects:
+        AddRes_0: !obj {Anim: !str64 Animal_Pigeon_Animation, RetargetModel: !str64 Skeleton}
+        AddRes_1: !obj {Anim: !str64 Animal_Egret_Animation}
+      lists: {}
+    ASDefines: !list
+      objects:
+        ASDefine_0: !obj {Name: !str64 BeforeFly, Filename: !str64 Animal_Heron_A_BeforeFly}
+        ASDefine_1: !obj {Name: !str64 Damage, Filename: !str64 Animal_FlyableBird_Default_Dead}
+        ASDefine_2: !obj {Name: !str64 Dead, Filename: !str64 Animal_FlyableBird_Default_Dead}
+        ASDefine_3: !obj {Name: !str64 Dead_Air, Filename: !str64 Animal_Heron_A_Dead_Air}
+        ASDefine_4: !obj {Name: !str64 Dead_Air_End, Filename: !str64 Dummy}
+        ASDefine_5: !obj {Name: !str64 Electric, Filename: !str64 Animal_Pigeon_A_Electric}
+        ASDefine_6: !obj {Name: !str64 Fly, Filename: !str64 Animal_Heron_A_Fly}
+        ASDefine_7: !obj {Name: !str64 LocationWait, Filename: !str64 Animal_Heron_A_Wait}
+        ASDefine_8: !obj {Name: !str64 TakeOff, Filename: !str64 Animal_Heron_A_TakeOff}
+        ASDefine_9: !obj {Name: !str64 Wait, Filename: !str64 Animal_Heron_A_Wait}
+        ASDefine_10: !obj {Name: !str64 Walk, Filename: !str64 Animal_Heron_A_Walk}
+      lists: {}
+    CFDefines: !list
+      objects: {}
+      lists:
+        CFDefine_0: !list
+          objects:
+            CFPre: !obj {Name: !str32 LocationWait}
+            CFExcepts: !obj {Name_0: !str32 BeforeFly, Name_1: !str32 Electric}
+          lists:
+            CFPosts: !list
+              objects:
+                CFPost_0: !obj {Name: !str32 '', Frame: 10.0, StartFrameRate: -1.0}
+              lists: {}
+        CFDefine_1: !list
+          objects:
+            CFPre: !obj {Name: !str32 Wait}
+            CFExcepts: !obj {Name_0: !str32 BeforeFly, Name_1: !str32 Dead, Name_2: !str32 Electric}
+          lists:
+            CFPosts: !list
+              objects:
+                CFPost_0: !obj {Name: !str32 '', Frame: 10.0, StartFrameRate: -1.0}
+              lists: {}
+        CFDefine_2: !list
+          objects:
+            CFPre: !obj {Name: !str32 Walk}
+            CFExcepts: !obj {Name_0: !str32 Dead, Name_1: !str32 Electric}
+          lists:
+            CFPosts: !list
+              objects:
+                CFPost_0: !obj {Name: !str32 '', Frame: 10.0, StartFrameRate: -1.0}
+              lists: {}

@@ -1,0 +1,1020 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 66
+      Demo_Idling: 67
+      Demo_Join: 68
+      Demo_OpenGetDemo: 69
+      Demo_PlayASForDemo: 70
+      Demo_PlayASForTimeline: 71
+      Demo_Reset: 72
+      Demo_ResetBoneCtrl: 73
+      Demo_SendSignal: 74
+      Demo_SetGetFlag: 75
+      Demo_TrigNullASPlay: 76
+      Demo_VisibleOff: 77
+      Demo_XLinkEventCreate: 78
+      Demo_XLinkEventFade: 79
+      Demo_XLinkEventKill: 80
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 58, 持ち運びボックス内: 44, 通常: 17}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ビタロック, ClassName: !str32 SwarmStopTimerEscape, GroupName: リアクション}
+            ChildIdx: !obj {上昇: 48, 逃走: 59, 集合: 45}
+            SInst: !obj
+              StopActorName: Enemy_Keese
+              Time: 300
+              RiseHeight: 20.0
+              RiseDist: 80.0
+              EndDist: 100.0
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: プレイヤー発見, ClassName: !str32 FlyingEnemyFindPlayer, GroupName: 通常}
+            ChildIdx: !obj
+              ナビメッシュ無し: 21
+              不意討ち: 61
+              威嚇: 4
+              威嚇帰還: 5
+              戦闘: 13
+              気づき: 27
+              速攻: 53
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 3}
+            SInst: !obj
+              SurpriseAttackPer: 0
+              SurpriseAttackRange: -1.0
+              AttackRange: 10.0
+              AttackVMin: -100.0
+              AttackVMax: 100.0
+              SwiftAttackVMin: -4.0
+              SwiftAttackVMax: 4.0
+              WeaponIdx: -1
+              LostTimer: 30
+              SurpriseAttackTime: 180
+              SurpriseAttackTimeRand: 60
+              RerouteTimeMin: 60
+              RerouteTimeMax: 120
+              RestreintTime: -1
+              RetTiredFromTime: 7
+              RestreintTiredDist: 40.0
+              ForceFirstAttackDist: 0.0
+              RetForceFirstAttackDist: 0.0
+              PathTooLongDist: 200.0
+              NoSearchFromTiredDist: 0.0
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 SwarmReaction, GroupName: 通常}
+            ChildIdx: !obj
+              ケミカルダメージ: 20
+              ビタロック: 1
+              死亡: 10
+              消滅: 47
+              矢ダメージ: 64
+              範囲ダメージ: 60
+              通常ダメージ: 55
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 威嚇, ClassName: !str32 AddSwarmMove, GroupName: プレイヤー発見}
+            ChildIdx: !obj {移動: 22}
+            SInst: !obj
+              SubSpeed: 0.4
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IsEndBySensor: false
+              AnimName: Fly
+              IgnoreSensorTime: 0
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: 威嚇帰還, ClassName: !str32 SeqTwoAction, GroupName: プレイヤー発見}
+            ChildIdx: !obj {先行動: 51, 後行動: 7}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 Fork2AI, GroupName: 後行動}
+            ChildIdx: !obj {子０: 39, 子１: 41}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 CircleMovePos, GroupName: 威嚇帰還}
+            ChildIdx: !obj {移動: 24, 近づき: 32, 遠ざかり: 25}
+            SInst: !obj {Radius: 20.0, RadiusMargin: 0.1, Speed: 0.4, Direction: 0}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: 戦闘攻撃}
+            ChildIdx: !obj {子０: 9, 子１: 42}
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SetTargetPosForFlyThroughMove,
+              GroupName: 後行動}
+            ChildIdx: !obj {移動: 6, 通過移動: 54}
+            SInst: !obj {TargetPosFixDist: 4.0, ThroughDist: 8.0}
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 SwarmEscapeDie, GroupName: リアクション}
+            ChildIdx: !obj {上昇: 48, 逃走: 59, 集合: 45}
+            SInst: !obj {Time: 300, RiseHeight: 20.0, RiseDist: 80.0, EndDist: 100.0}
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: 死亡生成, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 12, 後行動: 36}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SwarmEscapeDie, GroupName: 死亡生成}
+            ChildIdx: !obj {上昇: 48, 逃走: 59, 集合: 45}
+            SInst: !obj {Time: 300, RiseHeight: 20.0, RiseDist: 80.0, EndDist: 100.0}
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: 戦闘, ClassName: !str32 SwarmBattle, GroupName: プレイヤー発見}
+            ChildIdx: !obj {上昇失敗: 49, 急上昇: 30, 戦闘攻撃: 14, 戦闘準備: 15}
+            SInst: !obj {FailedRiseHeight: 5.0, RiseFailedMoveDist: 1.0, AttackIntervalIntensity: 1.0}
+          lists: {}
+        AI_14: !list
+          objects:
+            Def: !obj {Name: 戦闘攻撃, ClassName: !str32 SeqTwoAction, GroupName: 戦闘}
+            ChildIdx: !obj {先行動: 52, 後行動: 8}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_15: !list
+          objects:
+            Def: !obj {Name: 戦闘準備, ClassName: !str32 SwarmRangeKeepCircleMove, GroupName: 戦闘}
+            ChildIdx: !obj {移動: 23}
+            SInst: !obj {BaseDist: 18.0, OutDist: 10.0, Speed: 0.4, UpdateCircleMoveDistance: 5.0}
+          lists: {}
+        AI_16: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 KeeseSwarmRoam, GroupName: 通常}
+            ChildIdx: !obj {移動: 24, 近づき: 32, 遠ざかり: 25}
+            SInst: !obj {Radius: 20.0, RadiusMargin: 0.1, Speed: 0.4, Direction: 0}
+          lists: {}
+        AI_17: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 SwarmRoot, GroupName: BaseAI}
+            ChildIdx: !obj
+              リアクション: 3
+              呼ばれ: 35
+              奈落: 19
+              所持: 46
+              死亡生成: 11
+              水中: 50
+              落下: 65
+              近接湧出: 33
+              通常: 18
+              騎乗: 29
+            BehaviorIdx: !obj {1721623982: 0, 295359800: 4}
+            SInst: !obj
+              ASName: Fly
+              InWaterDepth: -1.0
+              OutOfWaterOffset: 0.1
+              SpreadDist: 8.0
+              SmallSpreadDist: 3.0
+              FortressTag: EnemyFortressMgr
+              FallHeight: -1.0
+              IgnoreHell: false
+          lists: {}
+        AI_18: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 KeeseSwarmNormal, GroupName: 通常_0}
+            ChildIdx: !obj
+              プレイヤー発見: 2
+              不審者発見: 62
+              不調仲間発見: 63
+              待機: 16
+              怒り: 57
+              攻撃反応: 37
+              気配気づき: 28
+              脅威感知: 31
+              行動中仲間発見: 38
+              見失い: 34
+              諦め: 56
+              音気づき: 26
+            SInst: !obj
+              WeaponIdx: 0
+              TerritoryArea: 100.0
+              NpcTerritoryArea: 0.0
+              NoPlayerTerritoryArea: 30.0
+              SpreadDist: 8.0
+              EnlargeAwnRatio: 2.5
+              NoticeTerrorLevel: 0.0
+              SpeadDist2: 0.0
+              HomePosRadius: 1.0
+              SoundLostTimer: 200
+              NoActionReactTimeMin: 30
+              NoActionReactTimeMax: 45
+              IsMindDoubtTarget: true
+              FortressTag: EnemyFortressMgr
+              SubsTerritoryArea: 20.0
+              LostExtinguishFireDist: 5.0
+              ShortRangeTerritoryArea: 30.0
+              CloseRangeTerritoryArea: 12.0
+              PressBreakObject: 3.0
+              TerritoryHeight: -1.0
+          lists: {}
+        AI_19: !list
+          objects:
+            Def: !obj {Name: 奈落, ClassName: !str32 Fork2AI, GroupName: 通常}
+            ChildIdx: !obj {子０: 40, 子１: 43}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: ケミカルダメージ, ClassName: !str32 SwarmChemicalDamaged, GroupName: リアクション}
+            SInst: !obj
+              ResetChemicalTimer: 60.0
+              IsResetAllObject: true
+              DeadSubActorMax: 5
+              RiseSpeedMin: 0.1
+              IgnoreHitGroundTime: 5
+              Time: 30
+              SubAccRateMin: 0.1
+              SubAccRateMax: 0.6
+              Speed: 0.4
+              IsCreateDeadActor: true
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: ナビメッシュ無し, ClassName: !str32 DummyAction, GroupName: プレイヤー発見}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 LevelFlyRiseLookingTarget, GroupName: 威嚇}
+            SInst: !obj
+              Height: 1.0
+              Speed: 0.4
+              RotSpeed: 0.523599
+              PosReduceRatio: 0.5
+              RotRatio: 0.2
+              ASName: Fly
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 SwarmFlyAttack, GroupName: 戦闘準備}
+            SInst: !obj
+              FailTimeInClosePos: 30
+              ApplyMaterialAnimDist: 9999.0
+              ApplyMaterialAnimNumPerFrame: 7
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 10
+              MaterialAnimName: Keese_Normal_Eye
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 0.0
+              HorizontalFinRadius: 0.0
+              TargetHeightOffset: 5.0
+              RotRatio: 0.1
+              VerticalFinLength: 0.0
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 SwarmLevelFlyMove, GroupName: 待機}
+            SInst: !obj
+              SubAccRateMin: 1.0
+              SubAccRateMax: 1.0
+              IgnoreSensorTime: 5
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 0.0
+              VerticalFinLength: 0.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 遠ざかり, ClassName: !str32 SwarmLevelFlyMove, GroupName: 待機}
+            SInst: !obj
+              SubAccRateMin: 1.0
+              SubAccRateMax: 1.0
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 0.0
+              VerticalFinLength: 0.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 音気づき, ClassName: !str32 SwarmLevelFlyMove, GroupName: 通常}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              VerticalFinLength: 2.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 気づき, ClassName: !str32 SwarmFlyMove, GroupName: プレイヤー発見}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 10.0
+              TargetHeightOffset: 0.0
+              RotRatio: 0.1
+              VerticalFinLength: 10.0
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 気配気づき, ClassName: !str32 SwarmLevelFlyMove, GroupName: 通常}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              VerticalFinLength: 2.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 騎乗, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 急上昇, ClassName: !str32 SwarmFlyAttack, GroupName: 戦闘}
+            SInst: !obj
+              FailTimeInClosePos: 30
+              ApplyMaterialAnimDist: 10.0
+              ApplyMaterialAnimNumPerFrame: 7
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 10
+              MaterialAnimName: Keese_Normal_Eye
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              TargetHeightOffset: 0.0
+              RotRatio: 0.1
+              VerticalFinLength: 1.0
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 脅威感知, ClassName: !str32 SwarmLevelFlyMove, GroupName: 通常}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 20.0
+              VerticalFinLength: 20.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 近づき, ClassName: !str32 SwarmLevelFlyMove, GroupName: 待機}
+            SInst: !obj
+              SubAccRateMin: 1.0
+              SubAccRateMax: 1.0
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 1.0
+              VerticalFinLength: 5.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 近接湧出, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 見失い, ClassName: !str32 Hover, GroupName: 通常}
+            SInst: !obj
+              ASName: Fly
+              Time: 1
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: 呼ばれ, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 FadeoutDelete, GroupName: 死亡生成}
+            SInst: !obj {FadeoutTime: 0, DeleteType: 0}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: 攻撃反応, ClassName: !str32 SwarmLevelFlyMove, GroupName: 通常}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 20.0
+              VerticalFinLength: 20.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: 行動中仲間発見, ClassName: !str32 SwarmLevelFlyMove, GroupName: 通常}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              VerticalFinLength: 2.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SwarmFlyMove, GroupName: 移動}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 0.523599
+              HorizontalFinRadius: 2.0
+              TargetHeightOffset: 0.5
+              RotRatio: 0.1
+              VerticalFinLength: 2.0
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Vanish, GroupName: 奈落}
+            SInst: !obj
+              DieType: 0
+              NoDrop: true
+              ASName: ''
+              Time: 0
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkSetSwarmMaterialAnimByDist,
+              GroupName: 移動}
+            SInst: !obj
+              ApplyMaterialAnimNumPerFrame: 7
+              ApplyMaterialAnimDist: 10.0
+              MaterialAnimName: Keese_Normal_Eye
+              MaterialAnimFrame: 1.0
+              SetState: 0
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkSwarmAttack, GroupName: 後行動}
+            SInst: !obj {IsAttackOnce: true, AttackIntensity: 0}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 Delete, GroupName: 奈落}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 集合, ClassName: !str32 SwarmFlyMove, GroupName: 死亡}
+            SInst: !obj
+              SubAccRateMin: 0.1
+              SubAccRateMax: 0.3
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 8.0
+              TargetHeightOffset: 0.0
+              RotRatio: 0.1
+              VerticalFinLength: 1.0
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 SwarmDamaged, GroupName: リアクション}
+            SInst: !obj
+              DeadSubActorMax: 10
+              RiseSpeedMin: 0.1
+              IgnoreHitGroundTime: 5
+              Time: 30
+              SubAccRateMin: 0.1
+              SubAccRateMax: 1.0
+              Speed: 0.4
+              IsCreateDeadActor: false
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 上昇, ClassName: !str32 SwarmFlyMove, GroupName: 死亡}
+            SInst: !obj
+              SubAccRateMin: 0.1
+              SubAccRateMax: 0.3
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 10.0
+              TargetHeightOffset: 0.0
+              RotRatio: 0.1
+              VerticalFinLength: 10.0
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 上昇失敗, ClassName: !str32 SwarmFlyAttack, GroupName: 戦闘}
+            SInst: !obj
+              FailTimeInClosePos: 30
+              ApplyMaterialAnimDist: 9999.0
+              ApplyMaterialAnimNumPerFrame: 50
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 10
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              TargetHeightOffset: 0.0
+              RotRatio: 0.1
+              VerticalFinLength: 1.0
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 水中, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SwarmLevelFlyMove, GroupName: 威嚇帰還}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              VerticalFinLength: 2.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 LevelFlyRiseLookingTarget, GroupName: 戦闘攻撃}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              Height: 8.0
+              Speed: 0.4
+              RotSpeed: 0.174533
+              PosReduceRatio: 0.9
+              RotRatio: 0.2
+              ASName: Fly
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 速攻, ClassName: !str32 SwarmFlyAttack, GroupName: プレイヤー発見}
+            SInst: !obj
+              FailTimeInClosePos: 30
+              ApplyMaterialAnimDist: 10.0
+              ApplyMaterialAnimNumPerFrame: 7
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: Keese_Normal_Eye
+              MaterialAnimFrame: 1.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 0.523599
+              HorizontalFinRadius: 5.0
+              TargetHeightOffset: 1.0
+              RotRatio: 0.1
+              VerticalFinLength: 2.0
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 通過移動, ClassName: !str32 SwarmFlyMove, GroupName: 後行動}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: Keese_Normal_Eye
+              MaterialAnimFrame: 1.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 0.523599
+              HorizontalFinRadius: 2.0
+              TargetHeightOffset: 1.0
+              RotRatio: 0.1
+              VerticalFinLength: 2.0
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 通常ダメージ, ClassName: !str32 SwarmDamaged, GroupName: リアクション}
+            SInst: !obj
+              DeadSubActorMax: 3
+              RiseSpeedMin: 0.1
+              IgnoreHitGroundTime: 5
+              Time: 30
+              SubAccRateMin: 0.1
+              SubAccRateMax: 0.6
+              Speed: 0.4
+              IsCreateDeadActor: true
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: 諦め, ClassName: !str32 SwarmLevelFlyMove, GroupName: 通常}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: Keese_Normal_Eye
+              MaterialAnimFrame: 0.0
+              XZSpeed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 5.0
+              VerticalFinLength: 3.0
+              TargetHeightOffset: 2.2
+              RotRatio: 0.1
+              RiseSpeed: 0.0666667
+              DownSpeed: 0.133333
+              IsOverRise: false
+              CheckStopSpeed: 0.0
+              IsSlowDownNearGoal: true
+              VibrateMemoryStep: 3.0
+              VibrateCheckFrame: 6.0
+              VibrateStopCheck: 0.2
+              FlyHeightMin: -1.0
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: 怒り, ClassName: !str32 Hover, GroupName: 通常}
+            SInst: !obj
+              ASName: Fly
+              Time: 1
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 SwarmFlyMove, GroupName: 死亡}
+            SInst: !obj
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 3.14159
+              HorizontalFinRadius: 1.0
+              TargetHeightOffset: 0.0
+              RotRatio: 0.1
+              VerticalFinLength: 1.0
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 範囲ダメージ, ClassName: !str32 SwarmAreaDamaged, GroupName: リアクション}
+            SInst: !obj
+              DeadSubActorMax: 10
+              RiseSpeedMin: 0.1
+              IgnoreHitGroundTime: 10
+              Time: 15
+              SubAccRateMin: 0.5
+              SubAccRateMax: 1.0
+              Speed: 0.4
+              IsCreateDeadActor: true
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 不意討ち, ClassName: !str32 SwarmFlyAttack, GroupName: プレイヤー発見}
+            SInst: !obj
+              FailTimeInClosePos: 30
+              ApplyMaterialAnimDist: 9999.0
+              ApplyMaterialAnimNumPerFrame: 50
+              SubAccRateMin: 0.3
+              SubAccRateMax: 0.8
+              IgnoreSensorTime: 0
+              MaterialAnimName: ''
+              MaterialAnimFrame: 0.0
+              Speed: 0.4
+              RotSpd: 0.523599
+              FinRotate: 0.523599
+              HorizontalFinRadius: 5.0
+              TargetHeightOffset: 1.0
+              RotRatio: 0.1
+              VerticalFinLength: 2.0
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 不審者発見, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 不調仲間発見, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 矢ダメージ, ClassName: !str32 SwarmDamaged, GroupName: リアクション}
+            SInst: !obj
+              DeadSubActorMax: 1
+              RiseSpeedMin: 0.1
+              IgnoreHitGroundTime: 5
+              Time: 30
+              SubAccRateMin: 0.1
+              SubAccRateMax: 1.0
+              Speed: 0.4
+              IsCreateDeadActor: true
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 12.0
+              Level: 3
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: true
+              IsGuardianLayer: false
+              IsImpulseLayer: false
+              IsFireLayer: false
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: false
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 BattleTensionUp}
+            SInst: !obj {EnemyLevel: 0, ReduceTime: 15}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 SwarmPatternHoldHomePos}
+            SInst: !obj
+              RotateType: 2
+              IsAutoMove: true
+              Speed: 0.5
+              AccRateMin: 0.3
+              AccRateMax: 0.8
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 OffOcculutionCulling}
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetIgnoreHorseDamage}
+            SInst: !obj {Timing: 4}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

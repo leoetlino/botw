@@ -1,0 +1,457 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_DragonFirstEncounter: 18
+      Demo_GetItem: 19
+      Demo_Idling: 20
+      Demo_Join: 21
+      Demo_OpenGetDemo: 22
+      Demo_PlayASForDemo: 23
+      Demo_PlayASForTimeline: 24
+      Demo_ReleaseGrudge: 25
+      Demo_ResetBoneCtrl: 26
+      Demo_SendSignal: 27
+      Demo_SetGetFlag: 28
+      Demo_TrigNullASPlay: 29
+      Demo_UpdateDataByGetDemo: 30
+      Demo_VisibleOff: 31
+      Demo_WaitRunel: 32
+      Demo_XLinkEventCreate: 33
+      Demo_XLinkEventFade: 34
+      Demo_XLinkEventKill: 35
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 DragonIceRoot, GroupName: ''}
+            ChildIdx: !obj
+              ラネール山頂からの帰還予備動作: 5
+              ラネール山頂から移動開始: 6
+              ラネール山頂から空へ: 1
+              ラネール山頂へ帰還: 7
+              ラネール山頂待機: 2
+              レールに向かう: 3
+              停止: 16
+              停止点移動: 17
+              帰還: 4
+              移動: 8
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0}
+            SInst: !obj
+              GrudgeEventRail_Start: Runel_Dragon_Rail_1
+              GrudgeEventRail_pre1st: Runel_Dragon_Rail_Start
+              GrudgeEventRail_1st: Runel_Dragon_Rail_1
+              GrudgeEventRail_pre2nd: Runel_Dragon_Rail_To_Sanbonsugi
+              GrudgeEventRail_2nd: '[sanbonsugi]Runel_Dragon_Rail_1'
+              GrudgeEventRail_pre3rd: Runel_Dragon_Rail_To_Ground
+              GrudgeEventRail_3rd: Runel_Dragon_Rail_2
+              GrudgeEventRail_preEnd: Runel_Dragon_Rail_Return_Pre
+              GrudgeEventRail_End: Runel_Dragon_Rail_Return
+              GrudgeEventRail_ReturnToSky: Runel_Dragon_Rail_ReturnToSky
+              GrudgeEventRail_pre1stSpeed: 1.0
+              GrudgeEventRail_1stSpeed: 1.0
+              GrudgeEventRail_pre2ndSpeed: 2.0
+              GrudgeEventRail_2ndSpeed: 2.0
+              GrudgeEventRail_pre3rdSpeed: 2.0
+              GrudgeEventRail_3rdSpeed: 2.0
+              GrudgeEventRail_preEndSpeed: 2.0
+              GrudgeEventRail_EndSpeed: 3.0
+              GrudgeEventRail_ReturnSpeed: 4.5
+              GrudgeBulletRate: 10.0
+              GrudgeBulletMaxNum: 40
+              GrudgeBulletMinInterval: 15
+              GrudgeBulletActorName: DragonGrudgeBall
+              GrudgeSmokeTime: 450
+              OnRailDistance: 5.0
+              FarDistance: 100.0
+              Speed: 0.462963
+              CommonTableName: 体（氷）
+              TsunoTableName: 角（氷）
+              TsumeTableName: 爪（氷）
+              KibaTableName: 牙（氷）
+              IsEmitChemical: true
+              ChemicalBulletActor: DragonIceBall
+              ChemicalBulletArea: 200.0
+              ChemicalBulletRate: 5
+              ChemicalBulletNum: 20
+              ChemicalWindArea: 200.0
+              ChemicalWindPower: 15.0
+              ChemicalWindLimitHeight: 1000.0
+              UpdraftPower: 15.0
+              UpdraftTime: 200.0
+              UpdraftInterval: 500
+              UpdraftBoost: 1.5
+              ReturnTime: 9000
+              BodyHitDamage: 10
+              BodyHitPower: 100
+              BodyHitImpact: 200
+              BodyHitShieldDamage: 30
+              InitBackRailDistance: -1500.0
+              DefaultMaterialAnmName: Color_Ice
+              HornAnmName: Horn_Ice
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ラネール山頂から空へ, ClassName: !str32 DragonReturn, GroupName: Root}
+            ChildIdx: !obj {移動: 9, 高高度飛行: 13}
+            SInst: !obj
+              Speed: 1.48148
+              RotateRate: 0.04
+              ChangeMoveHeight: 65535.0
+              FinishHeight: 1700.0
+              Angle: 1.13446
+              AvoidStartDistance: -1.0
+              ReturnStartFrame: 0.0
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: ラネール山頂待機, ClassName: !str32 DragonIceWaitRunel, GroupName: Root}
+            ChildIdx: !obj {怨念待機: 12, 正常待機: 15}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: レールに向かう, ClassName: !str32 DragonTurn, GroupName: Root}
+            ChildIdx: !obj {移動: 10}
+            SInst: !obj {Speed: 0.740741, AvoidStartDistance: 300.0}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 帰還, ClassName: !str32 DragonReturn, GroupName: Root}
+            ChildIdx: !obj {移動: 11, 高高度飛行: 14}
+            SInst: !obj
+              Speed: 0.740741
+              RotateRate: 0.005
+              ChangeMoveHeight: 65535.0
+              FinishHeight: 1500.0
+              Angle: 0.872665
+              AvoidStartDistance: 300.0
+              ReturnStartFrame: 70.0
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: ラネール山頂からの帰還予備動作, ClassName: !str32 DragonFixPlacement,
+              GroupName: Root}
+            SInst: !obj
+              Rotate: !vec3 [0.0, 1.5708, 0.0]
+              Position: !vec3 [3914.0, 591.0, 1337.0]
+              BlendStartFrame: 350
+              BlendStartRate: 0.0
+              BlendTime: 80.0
+              HeadFixedModeTime: 20
+              RailAdjustModeTime: 200
+              CameraVibStartFrame: 200
+              CameraVibLoop: 20
+              CameraVibPower: 0.6
+              CameraVibRange: 130.0
+              ASName: Fly_Start_Runel
+              IsIgnoreSame: true
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: ラネール山頂から移動開始, ClassName: !str32 DragonFixPlacement, GroupName: Root}
+            SInst: !obj
+              Rotate: !vec3 [0.0, 0.0, 0.0]
+              Position: !vec3 [3907.0, 597.0, 1322.0]
+              BlendStartFrame: 700
+              BlendStartRate: 0.0
+              BlendTime: 140.0
+              HeadFixedModeTime: 1
+              RailAdjustModeTime: 120
+              CameraVibStartFrame: 182
+              CameraVibLoop: 30
+              CameraVibPower: 0.8
+              CameraVibRange: 130.0
+              ASName: Fly_Start_Runel
+              IsIgnoreSame: false
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: ラネール山頂へ帰還, ClassName: !str32 DragonFixPlacement, GroupName: Root}
+            SInst: !obj
+              Rotate: !vec3 [0.0, 0.0, 0.0]
+              Position: !vec3 [3910.78, 574.689, 1328.3]
+              BlendStartFrame: -1
+              BlendStartRate: 0.0
+              BlendTime: 1.0
+              HeadFixedModeTime: 0
+              RailAdjustModeTime: -1
+              CameraVibStartFrame: -1
+              CameraVibLoop: 0
+              CameraVibPower: 0.0
+              CameraVibRange: 0.0
+              ASName: Release_Grudge
+              IsIgnoreSame: false
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 DragonMoveTo, GroupName: Root}
+            SInst: !obj
+              RollMax: 0.436332
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Wait
+              RestoreUp: 0.001
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.0
+              FixAngle: 1.0472
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 DragonMoveTo, GroupName: ラネール山頂からの帰還}
+            SInst: !obj
+              RollMax: 0.523599
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Fly_Away
+              RestoreUp: 0.01
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.0
+              FixAngle: 1.0472
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 DragonMoveTo, GroupName: レールに向かう}
+            SInst: !obj
+              RollMax: 0.349066
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Wait
+              RestoreUp: 0.001
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.0
+              FixAngle: 1.0472
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 DragonMoveTo, GroupName: 帰還}
+            SInst: !obj
+              RollMax: 0.436332
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Fly_Start
+              RestoreUp: 0.001
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.05
+              FixAngle: 1.0472
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 怨念待機, ClassName: !str32 DragonFixPlacement, GroupName: ラネール山頂待機}
+            SInst: !obj
+              Rotate: !vec3 [0.0, 0.0, 0.0]
+              Position: !vec3 [3907.0, 597.0, 1322.0]
+              BlendStartFrame: -1
+              BlendStartRate: 0.0
+              BlendTime: 1.0
+              HeadFixedModeTime: -1
+              RailAdjustModeTime: -1
+              CameraVibStartFrame: -1
+              CameraVibLoop: 0
+              CameraVibPower: 0.0
+              CameraVibRange: 0.0
+              ASName: Wait_Runel
+              IsIgnoreSame: true
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 高高度飛行, ClassName: !str32 DragonMoveTo, GroupName: ラネール山頂からの帰還}
+            SInst: !obj
+              RollMax: 0.523599
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Fly_Away
+              RestoreUp: 0.01
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.0
+              FixAngle: 1.0472
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 高高度飛行, ClassName: !str32 DragonMoveTo, GroupName: 帰還}
+            SInst: !obj
+              RollMax: 0.436332
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Fly_Away
+              RestoreUp: 0.001
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.05
+              FixAngle: 1.0472
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 正常待機, ClassName: !str32 DragonFixPlacement, GroupName: ラネール山頂待機}
+            SInst: !obj
+              Rotate: !vec3 [0.0, 1.5708, 0.0]
+              Position: !vec3 [3914.0, 591.0, 1337.0]
+              BlendStartFrame: -1
+              BlendStartRate: 0.0
+              BlendTime: 1.0
+              HeadFixedModeTime: -1
+              RailAdjustModeTime: -1
+              CameraVibStartFrame: -1
+              CameraVibLoop: 0
+              CameraVibPower: 0.0
+              CameraVibRange: 0.0
+              ASName: Wait_Runel
+              IsIgnoreSame: true
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 停止, ClassName: !str32 NullASPlay, GroupName: Root}
+            SInst: !obj {ASName: Wait, IsIgnoreSame: false, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 停止点移動, ClassName: !str32 DragonMoveTo, GroupName: Root}
+            SInst: !obj
+              RollMax: 0.436332
+              RollSpeed: 0.05
+              RollMaxSpeed: 0.0174533
+              RollAmount: 100.0
+              ASName: Wait
+              RestoreUp: 0.001
+              BackAdjustAngle: -0.0174533
+              BackAdjustRestoreUp: 0.0
+              FixAngle: 1.0472
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_DragonFirstEncounter, ClassName: !str32 FirstRunelGrudgeDemo,
+              GroupName: ''}
+            SInst: !obj {Position: !vec3 [3907.0, 597.0, 1322.0], Rotate: !vec3 [
+                0.0, 0.0, 0.0], AnimeDrivenSettings: 1}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 FirstRunelGrudgeDemo,
+              GroupName: ''}
+            SInst: !obj {Position: !vec3 [3907.0, 597.0, 1322.0], Rotate: !vec3 [
+                0.0, 0.0, 0.0], AnimeDrivenSettings: 1}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_ReleaseGrudge, ClassName: !str32 DragonReleaseGrudgeForDemo,
+              GroupName: ''}
+            SInst: !obj
+              ReleaseTime: 363
+              HeadTransSmoothStartFrame: 380
+              HeadTransSmoothEndFrame: 455
+              HeadTransSmoothRate: 0.3
+              HeadTransSmoothSklRootRate: 0.95
+              Position: !vec3 [3910.78, 574.689, 1328.3]
+              Rotate: !vec3 [0.0, 0.0, 0.0]
+              AnimeDrivenSettings: 1
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: Demo_WaitRunel, ClassName: !str32 DragonPlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {Position: !vec3 [3914.0, 591.0, 1337.0], Rotate: !vec3 [
+                0.0, 1.5708, 0.0], AnimeDrivenSettings: 1}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 CreateBgm}
+            SInst: !obj {BgmName: cDragon}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 RumbleController}
+            SInst: !obj {ReduceDist: 100.0}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

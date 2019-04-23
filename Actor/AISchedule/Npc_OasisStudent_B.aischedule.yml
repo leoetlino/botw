@@ -1,0 +1,57 @@
+DefaultTimeline:
+  Nodes:
+  - {AIName: Action2, CanBeAwaken: 'True', Emotion: Normal, EndTime: 9, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: DoAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 0, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Meeting, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 3, WaitTalkTurn: 2}
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 23, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Act_SitChair_ReadBook, MeetingReactionType: 6,
+    MoveEquipment: Invisible, MoveGreetingType: DoAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 9, WaitAnchorASName: Act_SitChair_ReadBook, WaitAnchorRainASName: Wait,
+    WaitEquipment: Hold, WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot,
+    WaitPosture: 3, WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0,
+    WaitRainTalkTurn: 3, WaitReactionType: 6, WaitTalkTurn: 1}
+  - {AIName: Action2, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: DoAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 0, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 23, WaitAnchorASName: Meeting, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 3, WaitTalkTurn: 2}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+  - EvflEntry: NearActorsTalk
+    EvflEntryNear: ''
+    EvflEntryTalk: NearActorsTalk
+    IsPauseOtherActors: true
+    IsPauseOtherActorsNear: false
+    IsPauseOtherActorsTalk: true
+    Parameters:
+      Actors:
+      - {Action: Action1, Actor: Npc_OasisTeacher}
+      - {Action: '', Actor: Npc_OasisStudent_C}
+      - {Action: '', Actor: Npc_OasisStudent_A}
+    Trigger: NearActors
+  - EvflEntry: Near
+    IsPauseOtherActors: false
+    Parameters: {Distance: 5.0, FrontOnly: false}
+    Trigger: Near
+DisplayDistanceMode: None

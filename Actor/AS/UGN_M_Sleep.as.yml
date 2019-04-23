@@ -1,0 +1,145 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    CommonParams: !obj {RandomRateMin: 0.9, RandomRateMax: 1.1, UseIK: false}
+  lists:
+    Elements: !list
+      objects: {}
+      lists:
+        Element0: !list
+          objects:
+            Parameters: !obj {TypeIndex: 47, JudgeOnce: true}
+            Children: !obj
+              Child0: 1
+              Child1: 1
+              Child2: 2
+              Child3: 2
+              Child4: 2
+              Child5: 7
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj
+                      Value0: !str64 Sleep_GetupSt
+                      Value1: !str64 Rest
+                      Value2: !str64 Wait
+                      Value3: !str64 Move_End
+                      Value4: !str64 Turn
+                      Value5: !str64 default
+                  lists: {}
+        Element1: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Common_Sleep, Morph: 25.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 7, Frame: 0.0, Value: Face_C_Sleep}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 20, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Equipment}
+                    Event1: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Disable}
+                  lists: {}
+        Element2: !list
+          objects:
+            Parameters: !obj {TypeIndex: 61, SequenceLoop: false}
+            Children: !obj {Child0: 3, Child1: 4, Child2: 5, Child3: 6}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FloatArray: !list
+                  objects:
+                    FloatArray0: !obj {Value0: 1.0, Value1: 1.0, Value2: 1.0, Value3: 1.0}
+                  lists: {}
+        Element3: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Common_Rest_St}
+          lists: {}
+        Element4: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Common_Rest}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {AnmLoop: 1}
+                  lists: {}
+        Element5: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Common_Sleep, Morph: 25.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {EndFrame: 20.0, Rate: 0.1, AnmLoop: 1, Connect: 1}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 7, Frame: 3.0, Value: Face_C_Sleep}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 20, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Equipment}
+                    Event1: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Disable}
+                  lists: {}
+        Element6: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Common_Sleep}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {Connect: 1}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 7, Frame: 0.0, Value: Face_C_Sleep}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 20, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Equipment}
+                    Event1: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Disable}
+                  lists: {}
+        Element7: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Common_Sleep}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {Connect: 1}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 7, Frame: 0.0, Value: Face_C_Sleep}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 20, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Equipment}
+                    Event1: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 Disable}
+                  lists: {}

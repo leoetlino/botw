@@ -1,0 +1,38 @@
+ConditionalTimelines:
+- Condition: Water_Relic_Finished
+  Nodes:
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 2,
+    MoveTalkTurn: 1, MoveToAnchorASName: '', MoveToAnchorRainASName: '', RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: 0,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Act_Metal_Engraving, WaitAnchorRainASName: Rest,
+    WaitEquipment: Hold, WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot,
+    WaitPosture: 2, WaitRainEquipment: Invisible, WaitRainPosture: 2, WaitRainReactionType: 3,
+    WaitRainTalkTurn: 1, WaitReactionType: 2, WaitTalkTurn: 1}
+  TriggerEvents:
+  - {EvflEntry: Water_Relic_Finished_Talk, IsPauseOtherActors: true, Trigger: Talk}
+  - EvflEntry: Water_Relic_Finished_Near
+    IsPauseOtherActors: false
+    Parameters: {Distance: 10.0, FrontOnly: false}
+    Trigger: Near
+DefaultTimeline:
+  Nodes:
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 2,
+    MoveTalkTurn: 1, MoveToAnchorASName: '', MoveToAnchorRainASName: '', RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: 0,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Act_Metal_Engraving, WaitAnchorRainASName: Rest,
+    WaitEquipment: Hold, WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot,
+    WaitPosture: 2, WaitRainEquipment: Invisible, WaitRainPosture: 2, WaitRainReactionType: 3,
+    WaitRainTalkTurn: 1, WaitReactionType: 2, WaitTalkTurn: 1}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+DisplayDistanceMode: None

@@ -1,0 +1,3080 @@
+---
+group_count: 83
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Органы на моны...
+  "0002":
+    attributes: ""
+    contents:
+      - text: Хочу потратить моны
+  "0003":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "0005":
+    attributes: ""
+    contents:
+      - text: Вообще-то люблю
+  "0006":
+    attributes: ""
+    contents:
+      - text: Идет!
+  "0007":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "0008":
+    attributes: ""
+    contents:
+      - text: Ты кто?
+  "0009":
+    attributes: ""
+    contents:
+      - text: Пока
+  "0010":
+    attributes: ""
+    contents:
+      - text: Люблю!
+  "0011":
+    attributes: ""
+    contents:
+      - text: Терпеть не могу
+  "0012":
+    attributes: ""
+    contents:
+      - text: Очень люблю
+  "0013":
+    attributes: ""
+    contents:
+      - text: "Ну так, слегка"
+  "0014":
+    attributes: ""
+    contents:
+      - text: Совсем немного
+  "0015":
+    attributes: ""
+    contents:
+      - text: Капельку
+  "0016":
+    attributes: ""
+    contents:
+      - text: Давай!
+  "0018":
+    attributes: ""
+    contents:
+      - text: Поговорим о монстрах
+  "0019":
+    attributes: ""
+    contents:
+      - text: Осыпной гигант
+  "0020":
+    attributes: ""
+    contents:
+      - text: Лесной великан
+  "0021":
+    attributes: ""
+    contents:
+      - text: Песчаная зверюга
+  "0023":
+    attributes: ""
+    contents:
+      - text: Что такое «моны»?
+  "0024":
+    attributes: ""
+    contents:
+      - text: Какие еще органы?
+  "0025":
+    attributes: ""
+    contents:
+      - text: Я лучше пойду
+  "0026":
+    attributes: ""
+    contents:
+      - text: Монстр... что?
+  "0027":
+    attributes: ""
+    contents:
+      - text: Все что есть!
+  "0028":
+    attributes: ""
+    contents:
+      - text: Беру все!
+  talk00:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ну что, давай обменяем\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органы монстров
+      - control:
+          kind: reset_colour
+      - text: " на "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: моны
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 23
+            - 24
+            - 25
+          selected_index: 1
+          cancel_index: 3
+          unknown: 10
+  talk01:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Приветствую и добро\nпожаловать в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: МонстрТорг
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk02:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Приходи, если будут "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органы монстров
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk03:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Принес что-нибудь новенькое?
+  talk04:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Так, посмотрим..."
+  talk05:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Вот и хорошо!
+  talk06:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: А ты уже забыл?
+      - control:
+          kind: pause
+          length: short
+      - text: " Ничего, я повторю..."
+  talk07:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Моны
+      - control:
+          kind: reset_colour
+      - text: " — это такие "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: деньги
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Я сам\nих придумал, поэтому они в ходу\nтолько в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: моем магазине
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ты приносишь мне "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "органы монстров "
+      - control:
+          kind: reset_colour
+      - text: "—\nя начисляю тебе "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: моны
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А потом ты покупаешь на "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: моны
+      - control:
+          kind: reset_colour
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: монстровещи
+      - control:
+          kind: reset_colour
+      - text: ", изготовленные\nмной же."
+  talk09:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Ну ладно.
+      - control:
+          kind: pause
+          length: short
+      - text: " Жаль, конечно..."
+  talk10:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Бокоблин?"
+      - control:
+          kind: pause
+          length: longer
+  talk100:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Осыпной гигант, также\nизвестный как "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбник
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Такие зарываются в землю\nи притворяются грудой глыб."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nОчень крепкие ребята."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Согласно справочникам, всего\nих должно быть "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: сорок
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk101:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Сейчас на твоем счету\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: DefeatedGolemNum
+      - control:
+          kind: reset_colour
+      - text: " из 40 "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбников
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk102:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 4
+      - text: Нюх-нюх...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хм, на твоем счету пока ни одного\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбника
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Я дам тебе совет..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Эти громилы ужасно крепкие,\nпоэтому идти на таран бесполезно."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Присмотрись к ним: одна из их глыб\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "отличается по цвету "
+      - control:
+          kind: reset_colour
+      - text: "от остальных —\nвот по ней и бей."
+  talk103:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ты же победил всех "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбников
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "От тебя исходит такой аромат, будто\nты самый настоящий "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбник
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk104:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Это доказательство, что ты победил\nвсех осыпных гигантов..."
+      - control:
+          kind: pause
+          length: short
+      - text: " ну то есть\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбников
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk105:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Ты настоящая гроза осыпных гигантов!
+  talk106:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Интересно, как они такими\nбольшими вырастают?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Ну ладно!
+      - control:
+          kind: pause
+          length: short
+      - text: " Спасибо за помощь!"
+  talk107:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хм, значит, есть четыре вида\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хиноксов
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Интересно, у них\nразные рационы?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Что-то я проголодался!
+  talk12:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: До встречи...
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: ночью
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk13:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Может, тебе еще что-нибудь нужно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk14:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Органы монстров
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Они вываливаются\nиз побежденных монстров: всякие там\nрога и зубы..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Цвет и размер значения не имеют.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nГлавное, чтобы это действительно\nбыли органы монстров."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Чем реже орган, тем больше\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: монов
+      - control:
+          kind: reset_colour
+      - text: " я тебе за него начислю."
+  talk15:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, но ведь у тебя нет\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органов монстров
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk16:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, но ведь у тебя нет\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органов монстров
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk17:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Приветствую!
+      - control:
+          kind: pause
+          length: short
+      - text: " Чем могу служить?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 0
+            - 18
+            - 9
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk17B:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Приветствую!
+      - control:
+          kind: pause
+          length: short
+      - text: " Чем могу служить?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 0
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk18:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Приходи, когда найдешь."
+      - control:
+          kind: pause
+          length: short
+      - text: " Они\nвываливаются из побежденных\nмонстров."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: До встречи...
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: ночью
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk19:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Что хочешь обменять на "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: моны
+      - control:
+          kind: reset_colour
+      - text: "?"
+  talk20:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Чем еще могу помочь?
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 0
+            - 18
+            - 9
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk200:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Лесной великан, также\nизвестный как "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хинокс
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Эти одноглазые здоровяки\nобитают в лесах по всему миру."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Согласно справочникам, всего\nих должно быть "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: сорок
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk201:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Сейчас на твоем счету\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: DefeatedForestGiantNum
+      - control:
+          kind: reset_colour
+      - text: " из 40 "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хиноксов
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk202:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 4
+      - text: Нюх-нюх...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хм, на твоем счету пока ни одного\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хинокса
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Я дам тебе совет..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Эти здоровяки иногда прячут\nнайденное "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "оружие "
+      - control:
+          kind: reset_colour
+      - text: "в своих "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: ожерельях
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если тебе вдруг нечем сражаться,\nпопробуй добраться до "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: ожерелья
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk203:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ты же победил всех "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хиноксов
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "От тебя исходит такой аромат, будто\nты самый настоящий "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хинокс
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk204:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Это доказательство, что ты победил\nвсех лесных великанов..."
+      - control:
+          kind: pause
+          length: short
+      - text: " ну то есть\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хиноксов
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk205:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Ты настоящая гроза лесных великанов!
+  talk20B:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Чем еще могу помочь?
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 0
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk21:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Сейчас у тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: CurrentMamo
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мон"
+            - " монов"
+            - " мона"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЧто возьмешь?"
+  talk22:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Это монстром даже не пахнет.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ беру только "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органы монстров
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk23:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: Сколько штук?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 27
+            - 3
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk24:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "Всего "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мона"
+            - " монов"
+            - " монов"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk25:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: Жаль.
+  talk26:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Благодарю!
+      - control:
+          kind: pause
+          length: short
+      - text: " Я запишу\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "моны "
+      - control:
+          kind: reset_colour
+      - text: на твой счет!
+  talk27:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ну ладно.
+  talk28:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Извини, этого нет, но\nя потом еще сделаю."
+  talk29:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Извини, но у тебя не хватает "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: монов
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk30:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Извини, но это в твою "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: сумку
+      - control:
+          kind: reset_colour
+      - text: "\nпросто не поместится."
+  talk300:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Песчаная зверюга, также\nизвестная как "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: молдора
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Такие обитают в далекой пустыне.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСогласно справочникам, их должно\nбыть всего "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: четыре
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk301:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Сейчас на твоем счету\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: DefeatedSandwormNum
+      - control:
+          kind: reset_colour
+      - text: " из 4 "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: молдор
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk302:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 4
+      - text: Нюх-нюх...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хм, на твоем счету пока ни одной\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: молдоры
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Я дам тебе совет."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Эти зверюги
+      - control:
+          kind: set_colour
+          colour: red
+      - text: " не переносят громких\nзвуков"
+      - control:
+          kind: reset_colour
+      - text: ": оглушай их, чтобы запутать."
+  talk303:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ты же победил всех "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: молдор
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "От тебя исходит такой аромат, будто\nты самая настоящая "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: молдора
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk304:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Это доказательство, что ты победил\nвсех песчаных зверюг..."
+      - control:
+          kind: pause
+          length: short
+      - text: " ну то есть\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: молдор
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk305:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Ты настоящая гроза песчаных зверюг!
+  talk31:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мона"
+            - " монов"
+            - " монов"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk32:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Это обойдется тебе\nвсего в "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мон"
+            - " монов"
+            - " мона"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk33:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Это мой шедевр!
+      - control:
+          kind: pause
+          length: short
+      - text: " Как\nнасчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мона"
+            - " монов"
+            - " монов"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk34:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Отличный выбор!
+      - control:
+          kind: pause
+          length: short
+      - text: " Как\nнасчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мона"
+            - " монов"
+            - " монов"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk35:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: Спасибо за покупку!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nМожет, еще что-нибудь?"
+  talk37:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Ух ты!
+      - control:
+          kind: pause
+          length: short
+      - text: " Моя любимая тема!"
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Я могу рассказать тебе столько\nвсего интересного!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ты даже не\nпредставляешь!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Редко выпадает такая возможность...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nДавай поговорим о "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: самых больших
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Вот тебе на выбор: "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: осыпной гигант
+      - control:
+          kind: reset_colour
+      - text: ",\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "лесной великан "
+      - control:
+          kind: reset_colour
+      - text: "и "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: песчаная зверюга
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 19
+            - 20
+            - 21
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk38:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ура!
+      - control:
+          kind: pause
+          length: short
+      - text: " О ком хочешь поговорить?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 19
+            - 20
+            - 21
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk39:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Видишь ли, я страшно люблю\nизучать монстров."
+      - control:
+          kind: pause
+          length: short
+      - text: " Даже свой\nмагазин открыл — "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: МонстрТорг
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Думаю вот, куда пойти."
+      - control:
+          kind: pause
+          length: short
+      - text: " Где еще\nможно поизучать монстров?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "В "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Какарико
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Или лучше в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Хатено
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nХотя "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: деревня рито
+      - control:
+          kind: reset_colour
+      - text: " и "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: владения зора
+      - control:
+          kind: reset_colour
+      - text: "\nтоже ничего..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Можно и в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: город герудо
+      - control:
+          kind: reset_colour
+      - text: " сходить,\nи даже в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Лурелин
+      - control:
+          kind: reset_colour
+      - text: ", хотя они далеко."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Аккальское озеро "
+      - control:
+          kind: reset_colour
+      - text: поближе будет.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Эх!
+      - control:
+          kind: pause
+          length: short
+      - text: " Столько вариантов —\nголова кругом!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Ладно, пойду куда глаза глядят."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nУвидимся "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: ночью
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " где-нибудь!"
+  talk40:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - control:
+          kind: text_size
+          percent: 125
+      - text: А-а-а-а-а!
+      - control:
+          kind: text_size
+          percent: 100
+  talk41:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Извини, но "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "МонстрТорг "
+      - control:
+          kind: reset_colour
+      - text: "пока\nзакрыт."
+      - control:
+          kind: pause
+          length: short
+      - text: " Приходи в другой раз."
+  talk43:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Ну так что, ты монстров любишь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 11
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk44:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Скажи, ты монстров любишь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 10
+            - 11
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk45:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Говорить нам с тобой\nне о чем, получается..."
+  talk46:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: О!
+      - control:
+          kind: pause
+          length: short
+      - text: " Хо-хо!"
+      - control:
+          kind: pause
+          length: short
+      - text: " А насколько ты их любишь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 13
+            - 14
+            - 15
+          selected_index: 0
+          cancel_index: 4
+          unknown: 10
+  talk47:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: text_size
+          percent: 125
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: А я их просто обожаю!
+      - control:
+          kind: text_size
+          percent: 100
+  talk48:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Прости.
+      - control:
+          kind: pause
+          length: short
+      - text: " Со мной иногда бывает."
+  talk49:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ах, где же мои манеры!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nВот, возьми визитку."
+  talk50:
+    attributes: NPC_GodVoice
+    contents:
+      - text: "- Покупаю "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органы монстров
+      - control:
+          kind: reset_colour
+      - text: " - \n          - Лучшие цены! -\n     - МонстрТорг, Килтон -"
+  talk53:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Тьфу ты!
+      - control:
+          kind: pause
+          length: short
+      - text: " Обычный "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: хайлиец
+      - control:
+          kind: reset_colour
+      - text: ", а я тут..."
+      - control:
+          kind: single_choice
+          label: 8
+  talk54:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты, наверное, пришел сюда, потому\nчто узнал про мой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: МонстрТорг
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: single_choice
+          label: 26
+  talk57:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Прочитал?
+      - control:
+          kind: pause
+          length: short
+      - text: " Теперь верни,\nпожалуйста — она у меня\nодна."
+  talk59:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Как время-то летит...
+      - control:
+          kind: pause
+          length: short
+      - text: " Мне пора\nсворачивать лавочку."
+      - control:
+          kind: pause
+          length: short
+      - text: " Увидимся\nдругой "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: ночью
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk60:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Я давно за ними охочусь, но уж\nбольно они здоровые."
+      - control:
+          kind: pause
+          length: short
+      - text: " Слушай,\nа может, ты этим займешься?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Победи их "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "всех "
+      - control:
+          kind: reset_colour
+      - text: и возвращайся!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ты наверняка ими пропахнешь, а мне\nдля изучения больше ничего не нужно,\nибо нюх у меня отменный."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Я на тебя рассчитываю!
+  talk61:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Нюх-нюх...
+      - control:
+          kind: pause
+          length: short
+      - text: " Хм, узнаю\nэтот запах."
+      - control:
+          kind: pause
+          length: short
+      - text: " Так-так..."
+  talk62:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Удачной охоты!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ на тебя рассчитываю."
+  talk63:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Нюх-нюх...
+      - control:
+          kind: pause
+          length: short
+      - text: " Хм, узнаю этот запах."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ого!
+  talk64:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Большое тебе спасибо за помощь\nв исследованиях."
+      - control:
+          kind: pause
+          length: short
+      - text: " Держи, это тебе."
+  talk65:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Всегда носи это с собой...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Чтобы не забывать о том,\nчто заслужил мою похвалу!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Я знаю, как нелегко поднять руку\nна безобидного монстра, но наука\nтребует жертв."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Еще раз поздравляю.
+  talk66:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Да, я знаю..."
+  talk67:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Кстати, я раньше не знал, что бывают\nпламенные и морозные "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: глыбники
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Спасибо за интересную информацию!
+  talk68:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСколько нужно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 28
+            - 3
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk69:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "Значит, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это обойдется\nтебе в "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мон"
+            - " монов"
+            - " мона"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk70:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "Это обойдется тебе в "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мон"
+            - " монов"
+            - " мона"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk71:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мона"
+            - " монов"
+            - " монов"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk72:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "У тебя сейчас "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: CurrentMamo
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мон"
+            - " монов"
+            - " мона"
+      - control:
+          kind: reset_colour
+      - text: ".\nИзвини, не хватает."
+  talk73:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Кто я?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Меня зовут "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Килтон
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk74:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 18
+      - text: "Ну да, ну да."
+      - control:
+          kind: pause
+          length: short
+      - text: " За что их любить,\nкогда они так кусаются."
+  talk75:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 18
+      - text: Могу тебя понять.
+      - control:
+          kind: pause
+          length: short
+      - text: " Какая тут любовь,\nкогда дубиной по голове прилетает."
+  talk76:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Кстати, я постоянно придумываю\nновые "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: монстровещи
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Так что приходи время от времени,\nчтобы взглянуть на новый товар."
+  talk77:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Я сделал новую "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: монстровещь
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nОна называется..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 125
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Пружинный молот!
+      - control:
+          kind: reset_colour
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "Мелких монстров этот молот\nразбрасывает просто на ура!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "С ним тебе даже не придется\nтратить на них время."
+  talk78:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Я наконец сделал новую\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: монстровещь
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 125
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Голова заврофоса
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "С заврофосами проблем не оберешься:\nвечно нападают в самый неподходящий\nмомент."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "И обойти их не всегда получается:\nслишком уж хорошо маскируются."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Но если наденешь голову заврофоса,\nони подумают, что ты свой, и не будут\nнападать."
+  talk79:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Я сделал еще одну "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: монстровещь
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 125
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Голова левра
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: Левры — это полулюди-полукони.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nОчень свирепые и опасные монстры,\nкоторые владеют мощным оружием."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если б я был вынужден превратиться\nв монстра, то непременно выбрал бы\nлевра."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Кстати, я ходил к леврам, чтобы сделать\nэскизы этой монстровещи — так они меня\nчуть не пришибли!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Это был лучший момент моей жизни!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "В общем, если наденешь голову\nлевра, они будут принимать тебя\nза своего."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Очень рекомендую!
+  talk80:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Кто молодец?
+      - control:
+          kind: pause
+          length: short
+      - text: " Я молодец!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Я создал\nцелый комплект "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: монстровещей
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если подумать, я просто\nмонстр..."
+      - control:
+          kind: pause
+          length: long
+      - text: " в этом деле!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Представляю твоему вниманию\nвеликолепнейшее..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 125
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Снаряжение тьмы
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Надев эти вещи, ты практически\nпревратишься в монстра!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ты про\nкосплей слышал?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кстати, в этом костюме ты еще\nи бегать быстрее будешь..."
+      - control:
+          kind: pause
+          length: short
+      - text: " но\nтолько по ночам."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Сам не знаю, как так вышло..."
+      - control:
+          kind: text_size
+          percent: 100
+  talk81:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Благодарю.
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: МонстрТорг
+      - control:
+          kind: reset_colour
+      - text: "\nк твоим услугам!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 0
+            - 18
+            - 9
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk81B:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Благодарю.
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: МонстрТорг
+      - control:
+          kind: reset_colour
+      - text: "\nк твоим услугам!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 0
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk82:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Магазин
+      - control:
+          kind: reset_colour
+      - text: " открыт, можно\nторговать."
+      - control:
+          kind: pause
+          length: short
+      - text: " Хотя погоди..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ты ведь еще не знаешь, как\nустроен "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: МонстрТорг
+      - control:
+          kind: reset_colour
+      - text: ", верно?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Все просто: сначала тебе нужно\nобменять "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: органы монстров
+      - control:
+          kind: reset_colour
+      - text: " на "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: моны
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 23
+            - 24
+            - 25
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk83:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Та-да-да-да-а-ам!
+  talk84:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Левр?"
+      - control:
+          kind: pause
+          length: longer
+  talk85:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Заврофос?"
+      - control:
+          kind: pause
+          length: longer
+  talk86:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Чучу?"
+      - control:
+          kind: pause
+          length: longer
+  talk87:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Моблин?"
+      - control:
+          kind: pause
+          length: longer
+  talk88:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Хинокс?"
+      - control:
+          kind: pause
+          length: longer
+  talk89:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Молдора?"
+      - control:
+          kind: pause
+          length: longer
+  talk90:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Что за запах?
+      - control:
+          kind: pause
+          length: short
+      - text: " Каменный глыбник?"
+      - control:
+          kind: pause
+          length: longer
+  talk91:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Уверен?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это\nобойдется тебе в "
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мон"
+            - " монов"
+            - " мона"
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk92:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 6
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nКак насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " мона"
+            - " монов"
+            - " монов"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk93:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 4
+      - text: Спасибо за покупку!
+      - control:
+          kind: pause
+          length: short
+      - text: " Я еще сделаю."
+  talk94:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Товар у меня закончился.
+      - control:
+          kind: pause
+          length: short
+      - text: " Может,\nхотя бы на цены взглянешь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk95:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 18
+      - text: Опять ты...
+      - control:
+          kind: pause
+          length: short
+      - text: " Напугал."
+  talk96:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 21
+      - text: А-а-а!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Это ты!"
+  talk97:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 42
+      - text: Я чувствую на себе злобный взгляд...
+      - control:
+          kind: pause
+          length: longer
+  talk98:
+    attributes: Npc_MamonoShop
+    contents:
+      - text: "Страшный получился костюм — мне\nнравится."
+      - control:
+          kind: pause
+          length: short
+      - text: " Им можно напугать даже\nдаже самого отважного вояку."
+  talk99:
+    attributes: Npc_MamonoShop
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Нюх-нюх!
+      - control:
+          kind: pause
+          length: short
+      - text: " Какой замечательный\nаромат!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Кажется, кое-кто плотно\nпообщался с монстрами!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Я даже немного завидую...
+      - control:
+          kind: pause
+          length: short
+      - text: " Ну ладно."

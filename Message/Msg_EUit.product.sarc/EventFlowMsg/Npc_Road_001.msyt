@@ -1,0 +1,1531 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Comprerei qualcosa.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Preferisco vendere.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Arrivederci.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sì.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Compro.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Lascia stare.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Compro tutto.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  Atacked00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 14
+      - text: Maledizione.
+      - control:
+          kind: pause
+          length: long
+      - text: " Una guardia come me non\npuò permettersi di tirare le cuoia adesso."
+  Atacked01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 14
+      - text: Accidenti a quei mostri!
+      - control:
+          kind: pause
+          length: short
+      - text: " Come osano\nsottovalutarmi?!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Magari dall'aspetto non\nsi direbbe, ma sono una brava guardia."
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Perché non mi mostri quello che hai,\ntanto per cominciare?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Vuoi vendermi\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nFa "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "... Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Grazie!
+      - control:
+          kind: pause
+          length: long
+      - text: "\nVuoi vendermi qualcos'altro?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Va bene, grazie!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Grazie!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Grazie!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Oh...
+      - control:
+          kind: pause
+          length: long
+      - text: " d'accordo."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Compro qualsiasi cosa da te!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Compro di tutto, sai?"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Vuoi provare a vendere qualcosa?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "C'è niente che vuoi vendere?"
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: "C'è qualcosa che ti interessa?"
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Mi dispiace, non ne ho più."
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Non hai abbastanza rupie.
+      - control:
+          kind: pause
+          length: short
+      - text: " Smettila di\nguardare e basta, per cortesia."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Hai la borsa piena.
+      - control:
+          kind: pause
+          length: short
+      - text: " Fai un po' di spazio\nvendendo o gettando via qualcosa."
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - text: "Vuoi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Preparati a dovere e non avrai nulla da\ntemere!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hai fatto proprio un ottimo\nacquisto."
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Fanne buon uso!
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: So che ne farai buon uso!
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Hai un talento naturale per gli acquisti.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nQuella roba ti tornerà utile, vedrai."
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Mi dispiace, ho solo frecce."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ma più\nne hai, meglio è, dico bene?"
+  Com_Talk_13:
+    attributes: ""
+    contents:
+      - text: "Mi vendi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nQuante unità?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Mmm... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Non posso comprare roba simile,\nmi dispiace..."
+  Com_Talk_16:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Togliti i vestiti di dosso prima di\nmetterli in vendita!"
+  Com_Talk_20:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "È incredibile che tu sia in giro con\nquesto tempaccio."
+      - control:
+          kind: pause
+          length: short
+      - text: " Visto che sei qui,\naumenterò le frecce da venderti!"
+  Com_Talk_30:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "? Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: ""
+    contents:
+      - text: "Vuoi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nQuanti pezzi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "? Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSe vuoi l'intera scorta di "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità,\nte la vendo per "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nè tutto quello che hai? Posso offrirti\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: E con ciò ho finito le scorte!
+      - control:
+          kind: pause
+          length: long
+      - text: " Grazie dei\ntuoi acquisti!"
+  Com_Talk_37:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Non ho più frecce da vendere per oggi.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nVuoi vedere quali ho intenzione di\nordinare di nuovo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: ""
+    contents:
+      - text: "Solo "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "? Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Failed00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Sarò solo una semplice guardia,"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nma nessuno sarebbe uscito a\nuscirne da solo..."
+  Failed01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Oooh... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Da solo è impossibile tenere a\nbada tutti quei mostri!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Avrei voluto averti\nal mio fianco durante la lotta..."
+  GoodBye00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "D'accordo! "
+      - control:
+          kind: pause
+          length: short
+      - text: Ci vediamo!
+  Guardian00:
+    attributes: Npc_Road_027
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 22
+      - text: "Presto! Scappa! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Sta arrivando un\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: guardiano
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Non abbiamo alcuna\npossibilità di spuntarla contro di lui!"
+  MSG_Bado_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Chi, io?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Vuoi sapere cosa sto facendo?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSono di ronda e tengo d'occhio\ni tipi sospetti!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nQuesta zona sud-ovest della piana\ndi Hyrule pullula di mostri."
+      - control:
+          kind: pause
+          length: long
+      - text: " Massima\ncautela, mi raccomando!"
+  MSG_Bado_00_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Sono di ronda e tengo d'occhio i tipi\nsospetti."
+      - control:
+          kind: pause
+          length: long
+      - text: " Questa zona pullula di mostri,\nmeglio stare in guardia!"
+  MSG_Bado_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Tanto, tanto tempo fa, questo luogo\naveva un'arena,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma adesso è infestato\ndai mostri!\nBeh, suppongo che si possa ancora\nchiamare arena..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Un'arena dove uomini\ne mostri si affrontano!"
+  MSG_Bado_01_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Tanto, tanto tempo fa, da queste parti\nsorgeva un'arena,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma ora c'è solo un\nmucchio di rovine infestate dai mostri!"
+  MSG_Bado_02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Ehi, tu..."
+      - control:
+          kind: pause
+          length: long
+      - text: " hai mai sentito parlare\ndi "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\nA quanto dicono, appare sul monte\nSatori, a nord-ovest di qui..."
+      - control:
+          kind: pause
+          length: long
+      - text: " ma chi o\ncosa sarà mai questo "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: ", esattamente?"
+  MSG_Bado_02_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Hai mai sentito parlare di "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nA quanto dicono, appare sul monte\nSatori, a nord-ovest di qui."
+  MSG_Bado_03:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Pare che la zona a nord dello stallaggio\nsia relativamente sicura,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma non è un\nbuon motivo per saltare la ronda!"
+  MSG_Bado_03_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Dicono che sia una zona abbastanza\ntranquilla, ma io la ronda la faccio lo\nstesso!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Che guardia sarei sennò?"
+  MSG_Bado_04:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Ho sentito che qualcosa o qualcuno\nchiamato "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: " sia sul monte Satori, che\nsi trova di fronte alle colline di Hyrule...\nDi solito non ci sono molti animali nei\ndintorni, però..."
+      - control:
+          kind: pause
+          length: long
+      - text: " quando appare "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: ",\nsi riuniscono in gran numero.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Ma che creatura sarà mai
+      - control:
+          kind: pause
+          length: short
+      - text: " questo\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: "?!"
+  MSG_Bado_04_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Di solito non ci sono molti animali nei\ndintorni del monte Satori, che si trova\npiù avanti...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ma quando appare "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Lord
+      - control:
+          kind: reset_colour
+      - text: ", si riuniscono\nin gran numero."
+  Near00:
+    attributes: Npc_Road_001
+    contents:
+      - text: Sono di ronda adesso...
+  Near01:
+    attributes: Npc_Road_001
+    contents:
+      - text: Per la sicurezza di tutti...
+  Near02:
+    attributes: Npc_Road_001
+    contents:
+      - text: Il sole tramonterà presto...
+  Near03:
+    attributes: Npc_Road_001
+    contents:
+      - text: Ronda notturna...
+  Near04:
+    attributes: Npc_Road_001
+    contents:
+      - text: Sta piovendo!
+  Rest_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Non sei una guardia come me, vero?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nPerò, anche se sei un viandante, direi\nche ci somigliamo molto, io e te."
+  Rest_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "La pioggia ostruisce la visuale e distoglie\nl'attenzione."
+      - control:
+          kind: pause
+          length: long
+      - text: " È pericoloso andarsene in\ngiro, se non hai familiarità con il luogo!"
+  Rest_02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "La pioggia ostruisce la visuale e distoglie\nl'attenzione."
+      - control:
+          kind: pause
+          length: long
+      - text: " Perché non ti metti al\nriparo anche tu, qui?"
+  RetMSG_Bado_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Ehi! "
+      - control:
+          kind: pause
+          length: short
+      - text: È pericoloso andare da soli!
+      - control:
+          kind: pause
+          length: long
+      - text: "\nLa strada che conduce al deserto\nè infestata da mostri molto potenti.\nSe vuoi andarci lo stesso, assicurati\ndi avere con te qualche arma"
+      - control:
+          kind: pause
+          length: short
+      - text: " per\nproteggerti."
+  RetMSG_Bado_00_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Il sentiero che conduce al deserto è\npieno di mostri molto potenti."
+      - control:
+          kind: pause
+          length: long
+      - text: " Se proprio\ndevi andare, proteggiti a dovere."
+  RetMSG_Bado_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: Oltre quelle montagne rocciose a est
+      - control:
+          kind: pause
+          length: short
+      - text: "\nsi trova l'antica "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: arena
+      - control:
+          kind: reset_colour
+      - text: "...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ora non è altro che un terrificante\nmucchio di rovine colme di mostri."
+      - control:
+          kind: pause
+          length: long
+      - text: " Solo i\nbanditi a caccia di armi osano avvicinarsi."
+  RetMSG_Bado_01_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "L'antica "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: arena
+      - control:
+          kind: reset_colour
+      - text: " dall'altro lato di queste\nmontagne rocciose a est è solo un\ncumulo di macerie infestate dai mostri."
+  RetMSG_Bado_02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Puoi vedere le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "rovine del castello di\nHyrule"
+      - control:
+          kind: reset_colour
+      - text: " dalla rupe di fronte allo\nstallaggio, sai?\nDicono che lì giacciano delle armi\nleggendarie. E ce ne sono anche\nin abbondanza..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nMa dammi retta..."
+      - control:
+          kind: pause
+          length: long
+      - text: " è troppo pericoloso.\nLascia perdere finché sei in tempo!"
+  RetMSG_Bado_02_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Dicono che le armi leggendarie giacciano\nnelle "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: rovine del castello di Hyrule
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " ma\navventurarsi lì è troppo pericoloso!"
+  RetMSG_Bado_03:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Non credi che i mostri siano aumentati\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "da quando sono apparse quelle torri\ndurante il terremoto?\nSe vuoi continuare a viaggiare, sarà\nmeglio preparare armi e strumenti"
+      - control:
+          kind: pause
+          length: short
+      - text: " in\nmodo da poterti difendere!"
+  RetMSG_Bado_03_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Se vuoi continuare a viaggiare, farai\nmeglio a preparare armi e strumenti"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nin modo da poterti difendere!"
+  RetMSG_Bado_04:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Vuoi andare al "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: borgo dei Rito
+      - control:
+          kind: reset_colour
+      - text: ", giusto?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nAllora ti basta seguire il sentiero a nord!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDirigiti alla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: frontiera di Colbacco
+      - control:
+          kind: reset_colour
+      - text: "!\nMa se non vuoi imbatterti in qualche\nguardiano,"
+      - control:
+          kind: pause
+          length: short
+      - text: " faresti meglio a prendere\nla deviazione a est!"
+  RetMSG_Bado_04_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Se vuoi andare al "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: borgo dei Rito
+      - control:
+          kind: reset_colour
+      - text: ",\nsegui la strada a nord!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Se tagli dalla\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: frontiera di Colbacco
+      - control:
+          kind: reset_colour
+      - text: " fai prima!\nPerò potresti trovarci anche qualche\nguardiano,"
+      - control:
+          kind: pause
+          length: short
+      - text: " per cui forse è meglio\nse fai una deviazione a est!"
+  SavedLv1_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Te la cavi piuttosto bene!
+      - control:
+          kind: pause
+          length: long
+      - text: " Ma non sei\ncerto alla mia altezza..."
+  SavedLv1_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Stavo solo aspettando per vedere come\nsi mettevano le cose,"
+      - control:
+          kind: pause
+          length: long
+      - text: " ma devo ammettere\nche te la sei cavata piuttosto bene!"
+  SavedLv2_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: C-
+      - control:
+          kind: pause
+          length: short
+      - text: "Che resti un segreto tra noi, mi\nraccomando."
+      - control:
+          kind: pause
+          length: long
+      - text: " Dopotutto, sono una\nguardia..."
+  SavedLv2_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: N-
+      - control:
+          kind: pause
+          length: short
+      - text: "Non credere che i mostri mi\nincutano timore, eh!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Dopotutto,\nsono una guardia..."
+  SavedLv3_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 21
+      - text: I-
+      - control:
+          kind: pause
+          length: short
+      - text: "Insomma, sì..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Sono una guardia in\ntutto e per tutto!"
+      - control:
+          kind: pause
+          length: short
+      - text: " La prossima volta sarò\nio a salvare te!"
+  SavedLv3_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Io...
+      - control:
+          kind: pause
+          length: short
+      - text: " a volte avrei bisogno di una\nguardia..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Lo so che anch'io lo sono..."
+  Talk01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "A proposito, "
+      - control:
+          kind: pause
+          length: short
+      - text: "ultimamente sono stato un\npo' in giro a vendere oggetti utili per\nandare all'avventura."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nA fare solo la guardia non riesco a far\nquadrare i conti..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk01_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Non si è mai troppo prudenti.
+      - control:
+          kind: pause
+          length: long
+      - text: " Se ti serve\nqualcosa per le tue avventure, sono\nl'uomo che fa al caso tuo!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Allora sei a posto?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Thanks00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Beh...
+      - control:
+          kind: pause
+          length: short
+      - text: " Prendi almeno questo come\nsegno della mia gratitudine."

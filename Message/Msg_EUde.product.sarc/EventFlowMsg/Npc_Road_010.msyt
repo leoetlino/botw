@@ -1,0 +1,1383 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Einkaufen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Verkaufen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "5500":
+    attributes: ""
+    contents:
+      - text: "Ja, weil du's bist."
+  "5501":
+    attributes: ""
+    contents:
+      - text: "Nein, dann nicht..."
+  "5502":
+    attributes: ""
+    contents:
+      - text: "Klar, warum nicht!"
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Ach, nein..."
+  "5507":
+    attributes: ""
+    contents:
+      - text: Dann kaufe ich alles!
+  "5508":
+    attributes: ""
+    contents:
+      - text: Nimm ruhig alles!
+  Atacked00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "Ich warte hier einfach, bis die Monster\nverschwunden sind..."
+  Atacked01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: Eigentlich würde ich lieber hierbleiben...
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Was möchtest du denn loswerden?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ist das "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nWusst ich's doch! Dafür bekommst du\naber nur "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: ", einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Sehr gutes Geschäft!
+      - control:
+          kind: pause
+          length: short
+      - text: " Noch etwas?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Lieb von dir!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Siehst du, geht doch!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Da hat's sich doch gelohnt, bis hierher\nzu laufen!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Tja, das musst du selber wissen!"
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Ich kaufe alles!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Überlass das Kaufen mir!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Verkaufe, was immer du möchtest!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Ich nehme dir alles ab, solange du dich\nnicht über die Preise beschwerst!"
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: Was hättest du denn gerne?
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Tut mir leid!
+      - control:
+          kind: pause
+          length: short
+      - text: " Gerade ausverkauft..."
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Du hast nicht genug Rubine dabei...
+      - control:
+          kind: pause
+          length: short
+      - text: " \nTut mir echt leid, aber beim Bezahlen\nmach ich auch bei dir keine Ausnahme!"
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Das kannst du doch gar nicht tragen!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nDa musst du wohl vorher was verkaufen\noder ganz einfach wegschmeißen..."
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: "?\nDas willst du also kaufen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Ich danke!
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Danke.
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Ich danke dir...
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Ich bedanke mich!
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Wenn du Reis suchst, solltest du bei mir\ngenau richtig sein!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Sieh dir mein\nAngebot in aller Ruhe an!"
+  Com_Talk_13:
+    attributes: ""
+    contents:
+      - text: Wie viel davon kannst du erübrigen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: ""
+    contents:
+      - text: Mal sehen...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDafür könnte ich dir allerhöchstens \n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine "
+      - control:
+          kind: reset_colour
+      - text: "geben. "
+      - control:
+          kind: pause
+          length: short
+      - text: Reicht das?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Nee, daran verbrenn ich mir nicht die\nFinger..."
+  Com_Talk_16:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Zieh's aus, damit ich's dir abkaufen\nkann!"
+  Com_Talk_20:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Weil bei dem Wetter nicht viel los ist,\nbiete ich heute dieses "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 3
+                  - 4
+                  - 4
+                  - 0
+      - text: Goronengewürz
+      - control:
+          kind: reset_colour
+      - text: "\nan."
+      - control:
+          kind: pause
+          length: long
+      - text: " Bei Kälte ganz besonders nützlich..."
+  Com_Talk_30:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " mal "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " ergibt\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Kannst du dir das auch\nwirklich leisten?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " ist dein\nBegehr?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Sieh mal, mein Vorrat ist\ngut damit gefüllt!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDafür gebe ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: ".\nIn Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "mal "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nDas ist ja mein ganzer Vorrat!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Willst du\nwirklich die "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: " berappen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "mal "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "...\nDafür kriegst du "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: ", aber\ndein Vorrat ist dann alle."
+      - control:
+          kind: pause
+          length: short
+      - text: " Einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Eine Sorge weniger...
+      - control:
+          kind: pause
+          length: short
+      - text: " Danke, dass du\nso viel davon gekauft hast!"
+  Com_Talk_37:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Ich habe alles komplett verkauft...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nHast du trotzdem kurz Zeit, einen Blick\nauf mein zukünftiges Angebot zu werfen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ", soso..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - Rubin
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "muss ich dir dafür\nabknöpfen."
+      - control:
+          kind: pause
+          length: short
+      - text: " Einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Failed00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Meine Beine wollten einfach nicht mehr\nweiter..."
+  Failed01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Ich mache mir große Sorgen um meine\nWaren..."
+  GoodBye00:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Na dann, viel Glück auf deiner Reise!"
+  Guardian00:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 22
+      - text: "Wir müssen vor dem "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Wächter "
+      - control:
+          kind: reset_colour
+      - text: "fliehen,\nschnell!"
+  MSG_Kyu_00:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Du bist also auch auf Reisen?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nWohin geht's denn bei dir?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ich ziehe ganz gemütlich vom\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Stall von Maritta
+      - control:
+          kind: reset_colour
+      - text: " zum\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Stall des Schneelands
+      - control:
+          kind: reset_colour
+      - text: "..."
+  MSG_Kyu_00_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Nach dem "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Stall von Maritta
+      - control:
+          kind: reset_colour
+      - text: " geht's\ngeradewegs zum "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Stall des Schneelands
+      - control:
+          kind: reset_colour
+      - text: "."
+  MSG_Kyu_01:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Weiß nicht, ob du das weißt, aber..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDie Gewitter in dieser Gegend sind echt\nnicht von schlechten Eltern!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Falls dir mal jemand den Rat gibt, bei so\neinem Unwetter alles Metall abzulegen,\ndann kannst du ruhig darauf hören!"
+  MSG_Kyu_01_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Vermutlich ist es nicht nur Aberglaube,\ndass man bei Gewitter alle metallische\nAusrüstung ablegen sollte..."
+  MSG_Kyu_02:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Mein Esel hat sich 'ne Auszeit verdient!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAuch mir werden ein paar Tage Ruhe im\nStall ganz bestimmt nicht schaden..."
+  MSG_Kyu_02_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Wenn so ein Esel nicht mehr kann, dann\nkann er nicht mehr..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Kein Problem, wir\nmachen hier einfach paar Tage Pause!"
+  MSG_Kyu_03:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hat mit meinem Geschäftsfeld rein gar\nnichts zu tun, aber es heißt, im Schloss\nHyrule gäbe es jede Menge Schätze...\nWie gesagt, ich bin Händlerin,"
+      - control:
+          kind: pause
+          length: short
+      - text: " aber\nvielleicht weiß ja ein Abenteurer wie du\nmit so einem Gerücht was anzufangen!"
+  MSG_Kyu_03_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Geht mich eigentlich überhaupt nichts\nan,"
+      - control:
+          kind: pause
+          length: short
+      - text: " aber in Schloss Hyrule soll es wohl\nnoch ein paar Schätze geben..."
+  MSG_Kyu_04:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 42
+      - text: Brrrrr...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 1
+      - text: "Was? "
+      - control:
+          kind: pause
+          length: long
+      - text: "Ich hab doch keine Angst, "
+      - control:
+          kind: pause
+          length: short
+      - text: "ich\nfriere nur!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ist auch kein Wunder..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: pause
+          length: short
+      - text: "Auf dem Weg vom "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall von Maritta "
+      - control:
+          kind: reset_colour
+      - text: "zum\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Stall des Schneelands
+      - control:
+          kind: reset_colour
+      - text: " musst du immer\nmit so 'nem Temperatursturz rechnen!"
+  MSG_Kyu_04_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "„Ganz schön frisch heute“ wäre noch\nuntertrieben, oder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Jedes Mal das Gleiche...
+      - control:
+          kind: pause
+          length: long
+      - text: " Auf dem Weg\nvom "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall von Maritta "
+      - control:
+          kind: reset_colour
+      - text: "zum "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall des\nSchneelands"
+      - control:
+          kind: reset_colour
+      - text: " wird's hundekalt!"
+  Near00:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Ene-mene-Esel... ♪
+  Near01:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Esel-hei-ho... ♪
+  Near02:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Esel-la-la-la-la-la ♪
+  Near03:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Esel-dum-di-dum... ♪
+  Near04:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Regentropfen... ♪
+  Rest_00:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich reise mit meinem Esel umher und\nhandle mit Weizen und Reis,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mancherorts\nauch Zerealien genannt!"
+  Rest_01:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Der Regen ist kein Freund der reisenden\nHändler..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Andererseits gibt er auch \nAnlass, endlich mal Pause zu machen!"
+  Rest_02:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Regen stört mich gar nicht so sehr...\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "Aber die Blitze sind lebensgefährlich, be-\nsonders, wenn du was Metallenes trägst!"
+  RetMSG_Kyu_00:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Wenn's dich in den Westen zieht – also\nnoch weiter westlich als die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tabanta-\nBrücke"
+      - control:
+          kind: reset_colour
+      - text: " –  dann sieh dich bloß vor.\nDa drüben lauern uralte Kriegsgeräte,\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: fliegende Wächter
+      - control:
+          kind: reset_colour
+      - text: ", auf nichtsahnende\nReisende!"
+  RetMSG_Kyu_00_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Den "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: fliegenden Wächtern
+      - control:
+          kind: reset_colour
+      - text: " im Westen\nder "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Tabanta-Brücke
+      - control:
+          kind: reset_colour
+      - text: " gehst du besser\naus dem Weg..."
+  RetMSG_Kyu_01:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Wenn du die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tabanta-Brücke "
+      - control:
+          kind: reset_colour
+      - text: "überquerst,\nkann's passieren, dass du ganz plötzlich\neine Stimme aus der Tiefe vernimmst...\nAngeblich hat dort irgendein Gorone mal\ndas Gleichgewicht verloren und ist direkt\nin die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Kukudja-Schlucht "
+      - control:
+          kind: reset_colour
+      - text: "geplumpst.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Ich an seiner Stelle würde als Geist auch\njedem einen Schreck einjagen, der sich\nauf diese unselige Brücke wagt!"
+  RetMSG_Kyu_01_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Nimm dich auf der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tabanta-Brücke "
+      - control:
+          kind: reset_colour
+      - text: "bloß\nvor der gruseligen Stimme aus der Tiefe\nin Acht!\nAngeblich gehört sie einem Goronen,\nder irgendwann mal in die\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Kukudja-Schlucht "
+      - control:
+          kind: reset_colour
+      - text: gestürzt ist.
+  RetMSG_Kyu_02:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Sag mal, du trägst nicht zufällig eine\ndieser wertvollen Metallrüstungen,"
+      - control:
+          kind: pause
+          length: short
+      - text: " oder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Hi hi, ach was!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Versteh mich bitte nicht\nfalsch!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Es geht nur darum, dass hier\nGewitter an der Tagesordnung sind...\nWenn du am Himmel ein Grummeln hörst,\npackst du nämlich am besten alles aus\nMetall weg!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Das habe ich gemeint!"
+  RetMSG_Kyu_02_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Wenn der Himmel grummelt, packst du\nam besten alles aus Metall weg."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nRüstung, Schwert, einfach alles!"
+  RetMSG_Kyu_03:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 26
+      - text: "Hyrule, du Stadt so leer... ♪ "
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSchätze finden ist dort nicht schwer... ♪"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Das Lied hab ich von einem Reisenden,\nder das echt die ganze Zeit vor sich hin\ngeträllert hat!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Was für ein Ohrwurm..."
+  RetMSG_Kyu_03_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 26
+      - text: "Hyrule, du Stadt so leer... ♪ "
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSchätze finden ist dort nicht schwer... ♪"
+  RetMSG_Kyu_04:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Vom "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Stall der Tabanta-Brücke "
+      - control:
+          kind: reset_colour
+      - text: "bis hierher\nhat dieser Esel einen ganzen Berg von\nWeizen und Reis geschleppt...\nDu glaubst gar nicht, wie der sich freut,\nwenn ich das ganze Zeug endlich an den\nMann gebracht hab!"
+  RetMSG_Kyu_04_1:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Der Esel ist vollgepackt mit Weizen und\nReis."
+      - control:
+          kind: pause
+          length: short
+      - text: " Wär ihm bestimmt ganz recht, wenn\nich was von dem Zeug loswerde..."
+  SavedLv1_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: Du hast mich gerettet.
+  SavedLv1_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: Vielen Dank.
+  SavedLv2_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: "Du hast mich gerettet. Ich weiß gar\nnicht, was ich sagen soll..."
+  SavedLv2_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: Dank dir bin ich wieder in Sicherheit...
+  SavedLv3_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Du bist echt stark.
+  SavedLv3_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: "Du hast mich gerettet. Ich weiß gar\nnicht, was ich sagen soll..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Bitte, lass\ndich durch mich nicht aufhalten!"
+  Talk01:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ist dir etwa die Wegzehrung\nausgegangen?"
+      - control:
+          kind: pause
+          length: long
+      - text: " Kein Problem, ich\nkann deinen Proviant auffüllen!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_Road_010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Darf's noch etwas sein?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Thanks00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Hier...
+      - control:
+          kind: pause
+          length: short
+      - text: " Eine kleine Anerkennung für deine\nHilfe."

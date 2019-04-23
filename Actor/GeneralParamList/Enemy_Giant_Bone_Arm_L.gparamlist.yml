@@ -1,0 +1,46 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    Attack: !obj
+      Power: 16
+      Impulse: 0
+      ImpulseLarge: 0
+      Range: 0.0
+      GuardBreakPower: 0
+      SpHitActor: ''
+      SpHitTag: ''
+      SpHitRatio: 2.0
+      SpWeakHitActor: ''
+      PowerForPlayer: -1
+    Liftable: !obj
+      LiftType: !str32 0
+      ThrownMass: 1000
+      ThrownRotSpd: !vec3 [-300.0, 300.0, -300.0]
+      LiftPosOffset: !vec3 [-3.0, 0.0, 0.2]
+      LiftRotOffset: !vec3 [0.0, 85.0, 0.0]
+      LiftRotFrame: 10
+      AddLiftRotOffsetList: ''
+      ChaseLiftRotOffset: true
+      LiftCenterOffset: !vec3 [3.5, 0.0, 0.0]
+      PutPosOffset: !vec3 [0.0, 0.0, 0.5]
+      PutRotOffset: !vec3 [0.0, 0.0, 0.0]
+      PutRotFrame: 10
+      AddPutRotOffsetList: ''
+      IsUpdateOffsetEachFrame: false
+      IsUse2MassConstraintMode: true
+      IsSetChemicalParent: true
+      DisableFreezeLift: false
+      DisableBurnLift: false
+      ThrowReactionLevel: 2
+    Item: !obj
+      PlayerUseItem: false
+      SellingPrice: -1
+      BuyingPrice: -1
+      CreatingPrice: -1
+      StainColor: -1
+      SaleRevivalCount: -1
+      UseIconActorName: !str64 
+    Bullet: !obj {NoHitParent: true, IsLimitCount: false}
+  lists: {}

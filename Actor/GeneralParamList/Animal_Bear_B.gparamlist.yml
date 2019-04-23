@@ -1,0 +1,128 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    System: !obj {SameGroupActorName: !str64 '', IsGetItemSelf: false}
+    General: !obj
+      Speed: 1.0
+      Life: 500
+      IsLifeInfinite: false
+      ElectricalDischarge: 1.0
+      IsBurnOutBorn: false
+      BurnOutBornName: !str64 
+      IsBurnOutBornIdent: false
+      ChangeDropTableName: ''
+    Enemy: !obj
+      Rank: 1
+      Power: 0
+      DropLife: 100
+      DyingLife: 20
+      LostDist: 100.0
+      LostHeightMax: 30.0
+      LostHeightMin: -30.0
+      LostRayLength: -1.0
+      LODLostDist: 40.0
+      LODLostHeightMax: 30.0
+      LODLostHeightMin: -30.0
+      IntelligenceLevel: 0.0
+      EmotionalLevel: 0.0
+      HeroismLevel: 0.0
+      PartActorName: ''
+      IsMindFriend: true
+      StatusChangeFlag: ''
+      ChangeLife: -1.0
+    EnemyRace: !obj
+      EquipableWeapon: ''
+      IsFitGroundByAnimalUnit: true
+      IsUpdateSupportNormalInAir: false
+      BowAttackRangeRatio: 1.0
+      WeaponScaleSmallSword: 1.0
+      WeaponTransOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleLargeSword: 1.0
+      WeaponTransOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleSpear: 1.0
+      WeaponTransOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleBow: 1.0
+      WeaponTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleShield: 1.0
+      WeaponTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      IsUseTargetTag: false
+      TargetActorType: Player
+      EscapeAttackedActorType: ''
+      ReactionBalloon: false
+      SmallRagdollTime: 8
+      SmallRagdollRecoverTime: 15
+      SmallLargeRagdollTime: 60
+      SmallLargeRagdollRecoverTime: 20
+    AttackInterval: !obj
+      ShortAttackTimeMin: 500
+      ShortAttackTimeMax: 600
+      MiddleAttackTimeMin: 900
+      MiddleAttackTimeMax: 1000
+      LongAttackTimeMin: 1200
+      LongAttackTimeMax: 1300
+    Attack: !obj
+      Power: 32
+      Impulse: 400
+      ImpulseLarge: 600
+      Range: 0.0
+      GuardBreakPower: 0
+      SpHitActor: ''
+      SpHitTag: ''
+      SpHitRatio: 2.0
+      SpWeakHitActor: ''
+      PowerForPlayer: -1
+    Prey: !obj
+      EatActorFindRadius: 50.0
+      EatActorFindRotDegree: 135.0
+      WaitTimeForStartEat: 35.0
+      IsEnableGroupEscape: true
+      AimEscapeOffsetRate: 0.75
+    AnimalFollowOffset: !obj {EatLocalOffset: !vec3 [0.0, 0.0, 1.5]}
+    ExtendedEntity: !obj {IsUsePivotAdjustRange: true, PivotAdjustRange: 1.0}
+    BindActor: !obj {BindActorName: Horse_Link_Mane_Grabbed_Bear, IsKeepSleep: true}
+    EatTarget: !obj
+      FavoriteEatActorNames: ''
+      FavoriteEatActorTags: ''
+      EatActorNames: Item_Fruit_K,Item_Fruit_L
+      EatActorNames2: ''
+      EatActorNames3: ''
+      EatActorTags: CookMeat,CookFish,CookFruit
+    AnimalUnit: !obj
+      SpeedActorName: !str32 Animal_Boar_A
+      BasePlayRate: 1.0
+      GearMaxNum: 2
+      IsSetWaitASAtGear0: false
+      StressFramesMin: 900.0
+      StressFramesMax: 1800.0
+      SteeringOutputKp: 2.8
+      SteeringOutputKi: 0.04
+      SteeringOutputKd: 0.01
+      SteeringOutputIClamp: 0.6
+      SteeringOutputIReduceRatio: 0.4
+      SteeringOutputDLerpRatio: 0.2
+      SteeringOutputAvoidanceLerpRatio: 0.08
+      SteeringOutputIIRLerpRatio: 0.36
+      OverrideSteeringOutputKp: 1.35
+      OverrideSteeringOutputKi: 0.1
+      OverrideSteeringOutputKd: 0.05
+    HorseUnit: !obj {RiddenAnimalType: 10, CalmDownNum: 10, RideonAboveASHeight: 1.0,
+      RideonAboveASRadius: 1.0}
+    PictureBook: !obj {LiveSpot1: -1, LiveSpot2: -1, SpecialDrop: -1}
+  lists: {}

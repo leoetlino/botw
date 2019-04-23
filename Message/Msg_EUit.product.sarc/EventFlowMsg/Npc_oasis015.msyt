@@ -1,0 +1,933 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0007":
+    attributes: ""
+    contents:
+      - text: Va bene così.
+  "0008":
+    attributes: ""
+    contents:
+      - text: "Un'altra tinta?"
+  "0009":
+    attributes: ""
+    contents:
+      - text: Ti vendo qualcosa.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sì.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Ho cambiato idea.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  Com_Talk_00:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Quale prodotto?
+  Com_Talk_01:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "? Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Sarq sarq!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nQualcos'altro?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Non fare complimenti!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: Compro volentieri tutto quello che vuoi!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: Sarq sarq!
+  Com_Talk_04:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Capisco capisco, non c'è problema..."
+  Com_Talk_05:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Beh, hai qualcos'altro da vendermi?"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Sarq sarq!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Sempre disponibile a fare affari con te!\nSarq sarq!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Non avevo mai visto articoli così\nbelli! Sarq sarq!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nQuante unità?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità\ndi "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " in tutto. Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Mi spiace, ma non trattiamo questo\ntipo di merce."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Mi spiace, ma non posso comprare\nquello che stai indossando."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: reset_colour
+      - text: "...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNe hai "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "... Ti offro "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ".\nAffare fatto?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: " "
+  Com_Talk_60:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nQuest'articolo costa "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!\nVa bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Quando si fanno compere, capita anche\ndi dover fare delle scelte difficili!"
+  Npc_oasis015_003:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Oggi fa freschetto, eh?\nNelle sere come questa, viene voglia\ndi riscaldarsi con un bicchierino al bar!"
+  Npc_oasis015_004:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "È bello avere clienti fidate come te,\nsarq sarq!\n\nQuel "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: top femminile
+      - control:
+          kind: reset_colour
+      - text: " ti sta proprio\nbene! Perché non lo prendi anche\nin un'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: altra tinta
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_006:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Non lo sai?\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Le vay alla moda cambiano sempre\nil colore dei vestiti!\n\nAlla bottega "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tinte d'Oriente"
+      - control:
+          kind: reset_colour
+      - text: " del\nvillaggio Finterra puoi far tingere\ni tuoi abiti.\nÈ un po' lontano da qui, perciò noi\nci andiamo raramente."
+  Npc_oasis015_007:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Certo che oggi fa un caldo...\n\n\nCon questo tempo non c'è niente\ndi meglio che bere qualcosa di fresco\nal bar."
+  Npc_oasis015_008:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Volentieri!
+  Npc_oasis015_009:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Posso fare qualcos'altro per te?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_010:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Posso fare qualcos'altro per te?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_011:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 25
+            - 205
+      - text: Savotta!
+  Npc_oasis015_012:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 26
+            - 205
+      - text: Savaaq!
+  Npc_oasis015_013:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 27
+            - 205
+      - text: "Sav'saaba!\n"
+  Npc_oasis015_014:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Quel top ti sta proprio a pennello!\nTi consiglio di provare lo stesso\nmodello in un'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: altra tinta
+      - control:
+          kind: reset_colour
+      - text: "!"
+  Npc_oasis015_015:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: "L'ultima moda è avere tanti capi dello\nstesso modello ma di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: colori diversi
+      - control:
+          kind: reset_colour
+      - text: "!\n\nVuoi comprare un altro "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: top femminile
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_016:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Non ho più "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: abiti femminili
+      - control:
+          kind: reset_colour
+      - text: ", li ho venduti\ntutti.\n\nSe hai già un guardaroba completo,\ndovresti provare gli stessi modelli in\nun "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: colore diverso
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_017:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Quel cucciolone di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Naboris "
+      - control:
+          kind: reset_colour
+      - text: "si è\ncalmato finalmente! Che sarà successo?\n\nComunque mi dovrò dare un gran da fare\nper gestire tutti i clienti che arriveranno.\n\nChe ne dici anche tu di un altro\nabito in una "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tinta differente
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_018:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Quel cucciolone di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Naboris "
+      - control:
+          kind: reset_colour
+      - text: "si è\ncalmato finalmente! Che sarà successo?\n\nComunque mi dovrò dare un gran da fare\nper gestire tutti i clienti che arriveranno.\nDovrò procurarmi degli abiti nuovi.\nL'ideale sarebbe poter vendere\nuno stesso modello in "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tinte differenti
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_019:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: Vasaaq!
+  Npc_oasis015_Near01:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: Da questa parte!
+  Talk_01:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Sarq sarq!
+  Talk_02:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ti consiglio di provare gli altri capi\ndella stessa serie!"
+  Talk_07:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "L'ultima moda tra le vay è comprare\nlo stesso tipo di abito in tinte diverse!"
+  Talk_08:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Puoi sempre cambiare il colore come\npreferisci, quindi non fa male possedere\npiù capi dello stesso modello!"
+  Talk_09:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Mi dispiace, ma non si può passare da lì.\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: I membri del club possono accedere dal retro...
+      - control:
+          kind: text_size
+          percent: 100
+  Talk_10:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Spero di far di nuovo affari con te\nal più presto!"

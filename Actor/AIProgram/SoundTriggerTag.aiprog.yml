@@ -1,0 +1,47 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj {Demo_ResetBoneCtrl: 3, Demo_SoundTrigger: 4, Demo_SoundTriggerFade: 5}
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 SoundTriggerTag, GroupName: ''}
+            ChildIdx: !obj {再生: 1, 待機: 2}
+            SInst: !obj {Always: false}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 再生, ClassName: !str32 SoundTrigger, GroupName: Root_0}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: Root_0}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: Demo_SoundTrigger, ClassName: !str32 SoundTrigger, GroupName: ''}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: Demo_SoundTriggerFade, ClassName: !str32 SoundTriggerFadeAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

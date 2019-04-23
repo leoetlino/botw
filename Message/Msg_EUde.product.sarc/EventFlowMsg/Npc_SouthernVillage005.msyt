@@ -1,0 +1,818 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ich will kaufen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ich will verkaufen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Nichts.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Einverstanden.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Lieber doch nicht.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Einverstanden!
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Halt, doch nicht."
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kaufen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkaufen.
+  Com_Talk_00:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Was möchtest du denn loswerden?
+  Com_Talk_01:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHmmm..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Dafür kann ich dir\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: " anbieten."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Vielen Dank!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHast du sonst noch was zu verkaufen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Danke!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWenn du noch mehr hast, sag Bescheid!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Sehr schön!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch kauf auch gern noch mehr an!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Vielen Dank!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHast du sonst noch etwas für mich?"
+  Com_Talk_04:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Tja, da hab ich Pech."
+  Com_Talk_05:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Ich kaufe alles gerne an!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Ich kaufe alles an!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Wenn du etwas loswerden willst, nur zu!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Wir kaufen so gut wie alles!
+  Com_Talk_10:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: "?\nDas möchtest du kaufen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Firma dankt!
+  Com_Talk_11b:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Immer wieder gern!
+  Com_Talk_11c:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Dein Vertrauen ehrt mich!
+  Com_Talk_11d:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Vielen, vielen Dank!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "? "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGerne, gerne, immer her damit..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " würde ich dir für "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "\nabkaufen. Einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Das kann ich leider nicht annehmen...
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Während du es noch anhast, kann ich es\ndir nicht abkaufen..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Zieh's erst mal aus,\ndann sehen wir weiter!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Das war's schon? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Gut, dafür bekommst\ndu "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "Jawohl, gerne! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Für alles zusammen\nwürde ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: " berechnen."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Sehr gerne! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Für die ganze Ladung\nwürde ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: " zahlen."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nDas macht "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDavon habe ich reichlich auf Lager."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nBitte greif zu!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Insgesamt komme ich da auf\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ". Einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: Du willst nicht mehr?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGut, dann nicht."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: Du hast nicht genug Rubine...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDann ein andermal!"
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: Du bist aber voll bepackt!
+      - control:
+          kind: pause
+          length: short
+      - text: " Gar kein Platz\nmehr in deiner Tasche!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Räum erst mal\nauf und komm dann wieder!"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Das war's schon? "
+      - control:
+          kind: pause
+          length: short
+      - text: Wie du meinst...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDafür bekomme ich "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near00:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - text: Preiswert und ganz frisch!
+  Near01:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - text: Das geht aber nicht!
+  talk00:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, willkommen!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nEin neues Gesicht!"
+  talk01:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Komm mal wieder vorbei!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDu weißt, wo du mich findest!"
+  talk02:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Immer gern!
+  talk03:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Hier gibt's so frische Fische, die zucken\nnoch!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Sieh dich um!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk04:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Wenn du etwas kaufen möchtest, stell\ndich einfach vor den Korb und bediene\ndich!"
+  talk05:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: Brauchst du noch mehr davon?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nBald kommt eine neue Lieferung!"
+  talk07:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, willkommen!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSchön, dass du trotz des Regens deinen\nWeg zu mir gefunden hast!"
+  talk08:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, willkommen!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich hab grade heute\nMorgen neue Ware reinbekommen!"
+  talk09:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, willkommen!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAn so einem heißen Tag sollte man\nFisch essen!"
+  talk10:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, willkommen!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Holst du dir etwas fürs\nAbendessen?"
+  talk11:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, willkommen!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nKleiner Nachtimbiss gefällig?"
+  talk12:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Tut mir leid,"
+      - control:
+          kind: pause
+          length: short
+      - text: " für heute ist alles aus!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ankaufen kann ich aber natürlich,\nwenn du was loswerden willst."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

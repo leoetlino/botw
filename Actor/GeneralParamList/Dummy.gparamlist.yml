@@ -1,0 +1,1366 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    System: !obj {SameGroupActorName: !str64 '', IsGetItemSelf: false}
+    General: !obj
+      Speed: 1.0
+      Life: 100
+      IsLifeInfinite: false
+      ElectricalDischarge: 1.0
+      IsBurnOutBorn: false
+      BurnOutBornName: !str64 
+      IsBurnOutBornIdent: false
+      ChangeDropTableName: ''
+    Enemy: !obj
+      Rank: 0
+      Power: 0
+      DropLife: 100
+      DyingLife: 20
+      LostDist: 100.0
+      LostHeightMax: 30.0
+      LostHeightMin: -30.0
+      LostRayLength: -1.0
+      LODLostDist: 40.0
+      LODLostHeightMax: 30.0
+      LODLostHeightMin: -30.0
+      IntelligenceLevel: 0.0
+      EmotionalLevel: 0.0
+      HeroismLevel: 0.0
+      PartActorName: ''
+      IsMindFriend: true
+      StatusChangeFlag: ''
+      ChangeLife: -1.0
+    EnemyLevel: !obj
+      IsAvoidDanger: false
+      IsGuardArrow: false
+      IsHideArrowAttack: false
+      IsSwiftAttack: false
+      IsBackSwiftAttack: false
+      IsCounterAttack: false
+      IsEscapeBomb: false
+      IsKickBomb: false
+      IsShootBomb: false
+      IsThrowWeapon: false
+      GuardPer: 0
+      IsJustGuard: false
+    EnemyRace: !obj
+      EquipableWeapon: ''
+      IsFitGroundByAnimalUnit: true
+      IsUpdateSupportNormalInAir: false
+      BowAttackRangeRatio: 1.0
+      WeaponScaleSmallSword: 1.0
+      WeaponTransOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleLargeSword: 1.0
+      WeaponTransOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleSpear: 1.0
+      WeaponTransOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleBow: 1.0
+      WeaponTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponScaleShield: 1.0
+      WeaponTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      WeaponRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      WeaponHoldRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      IsUseTargetTag: false
+      TargetActorType: Player
+      EscapeAttackedActorType: ''
+      ReactionBalloon: false
+      SmallRagdollTime: 8
+      SmallRagdollRecoverTime: 15
+      SmallLargeRagdollTime: 60
+      SmallLargeRagdollRecoverTime: 20
+    AttackInterval: !obj
+      ShortAttackTimeMin: 10
+      ShortAttackTimeMax: 30
+      MiddleAttackTimeMin: 40
+      MiddleAttackTimeMax: 60
+      LongAttackTimeMin: 80
+      LongAttackTimeMax: 110
+    EnemyShown: !obj {IsHappy: false, IsCasebyCase: false, IsSit: false, IsNoise: false}
+    BindBone: !obj {BoneName: !str32 '', BoneOffset: !vec3 [0.0, 0.0, 0.0], BoneRotate: !vec3 [
+        0.0, 0.0, 0.0]}
+    Attack: !obj
+      Power: 0
+      Impulse: 0
+      ImpulseLarge: 0
+      Range: 0.0
+      GuardBreakPower: 0
+      SpHitActor: ''
+      SpHitTag: ''
+      SpHitRatio: 2.0
+      SpWeakHitActor: ''
+      PowerForPlayer: -1
+    WeaponCommon: !obj
+      PlayerEqScale: 1.0
+      EnemyEqScale: 1.0
+      GuardPower: 0
+      Rank: 0
+      IsHammer: false
+      IsWeakBreaker: false
+      IsBoomerang: false
+      IsBlunt: false
+      IsLuckyWeapon: false
+      IsPikohan: false
+      IsThrowingWeapon: true
+      IsThrowingBreakWeapon: true
+      ThrowRange: 20.0
+      DreadActor: ''
+      ThroughActor: ''
+      NPCWeaponType: ''
+      IsNotOnTerrorHold: false
+      IsAsOffUnEquiped: false
+      ChemicalEnergyMax: 0
+      ChemicalEnergyAmountUsed: 0
+      ChemicalEnergyRecoverRate: 0.0
+      ChemicalEnergyRecoverInterval: 60
+      StickDamage: 0
+      ShootBeam: ''
+      DropFromPorchRot: !vec3 [0.0, 0.0, 0.0]
+      SharpWeaponPer: 10.0
+      SharpWeaponAddAtkMin: 0
+      SharpWeaponAddAtkMax: 0
+      SharpWeaponAddLifeMin: 0
+      SharpWeaponAddLifeMax: 0
+      SharpWeaponAddCrit: false
+      SharpWeaponAddGuardMin: 0
+      SharpWeaponAddGuardMax: 0
+      PoweredSharpAddAtkMin: 0
+      PoweredSharpAddAtkMax: 0
+      PoweredSharpAddLifeMin: 0
+      PoweredSharpAddLifeMax: 0
+      PoweredSharpWeaponAddGuardMin: 0
+      PoweredSharpWeaponAddGuardMax: 0
+      PoweredSharpAddThrowMin: 1.0
+      PoweredSharpAddThrowMax: 1.0
+      PoweredSharpAddSpreadFire: false
+      PoweredSharpAddZoomRapid: false
+      PoweredSharpAddRapidFireMin: 1.0
+      PoweredSharpAddRapidFireMax: 1.0
+      PoweredSharpAddSurfMaster: false
+    WeaponThrow: !obj {ThrowSpeed: 1.0, ThrowRotSpeed: 50.0, ThrowDist: 5.0, ThrowRigidBodyBaseAxis: !vec3 [
+        0.0, 0.0, 1.0]}
+    Sandworm: !obj
+      SandWidth: 0.0
+      SandLength: 0.0
+      SandHeight: 0.0
+      SandCombSpan: 0.0
+      SandCombHeight: 0.0
+      SnakeModelOffsetZ: 0.0
+      SnakeBaseNode: ''
+      SnakeNode1: ''
+      SnakeNode2: ''
+      SnakeNode3: ''
+      SnakeNode4: ''
+      SnakeNode5: ''
+      SnakeNode6: ''
+      SnakeNode7: ''
+      SnakeNode8: ''
+      SnakeNode9: ''
+      SnakeNode10: ''
+      SnakeNode11: ''
+      SnakeNode12: ''
+      SnakeNodeRotOffset: !vec3 [0.0, 0.0, 0.0]
+      SnakeNodeChaseInterval: 0.0
+      ShowLifeGageDist: 150.0
+      ShowLifeGageOffset: 10.0
+    SmallSword: !obj
+      PodName: !str32 
+      PlayerHoldTransOffset: !vec3 [0.125, -0.025, -0.075]
+      PlayerHoldRotOffset: !vec3 [16.0, -60.0, -18.0]
+      PlayerEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      PlayerEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      RideHorsePlayerHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      RideHorsePlayerHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      AffectTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldTransAddOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldRotAddOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      WeaponSubType: !str32 
+    Rod: !obj
+      MagicName: !str32 
+      ChargeMagicNum: 4
+      ChargeMagicInterval: 5
+      MagicPower: 0
+      MagicSpeed: 0.0
+      MagicSpeedByThrow: 0.0
+      MagicGravity: 0.5
+      MagicRadius: 1.0
+      ScaleTime: 1
+      MagicRange: 1.0
+      MagicSpeedByEnemy: 0.0
+      MagicGravityByEnemy: 0.5
+      MagicRadiusByEnemy: 1.0
+      ScaleTimeByEnemy: 1
+      MagicRangeByEnemy: 1.0
+    LargeSword: !obj
+      PodName: !str32 
+      PlayerHoldTransOffset: !vec3 [0.17, -0.025, -0.1]
+      PlayerHoldRotOffset: !vec3 [16.0, -60.0, -18.0]
+      PlayerEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      PlayerEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      RideHorsePlayerHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      RideHorsePlayerHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      AffectTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldTransAddOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldRotAddOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      WeaponSubType: !str32 
+    Spear: !obj
+      PodName: !str32 
+      PlayerHoldTransOffset: !vec3 [-0.9, -0.02, 0.52]
+      PlayerHoldRotOffset: !vec3 [0.0, -120.0, -180.0]
+      PlayerEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      PlayerEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      RideHorsePlayerHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      RideHorsePlayerHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      AffectTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      GrabPlayerHoldTransOffset: !vec3 [-0.87, -0.17, -0.34]
+      GrabPlayerHoldRotOffset: !vec3 [-60.0, -20.0, -90.0]
+      GrabAffectTransOffsetShield: !vec3 [0.0, -0.03, 0.0]
+      GrabAffectRotOffsetShield: !vec3 [-5.0, 0.0, 0.0]
+      SquatPlayerHoldTransAddOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldRotAddOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      WeaponSubType: !str32 
+    Shield: !obj
+      PlayerHoldTransOffset: !vec3 [-0.1, -0.01, 0.2]
+      PlayerHoldRotOffset: !vec3 [8.0, 120.0, 5.0]
+      PlayerEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      PlayerEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldTransAddOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldRotAddOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      RideBreakRatio: 1.0
+      MirrorLevel: 0
+      WeaponSubType: !str32 
+      SurfingFriction: 1.0
+    Bow: !obj
+      QuiverName: !str32 
+      ArrowName: !str32 
+      IsGuardPierce: false
+      ExtraDamageRatio: 1.0
+      BaseAttackPowerRatio: 1.0
+      IsLeadShot: false
+      LeadShotNum: 0
+      LeadShotAng: 45.0
+      LeadShotInterval: 0
+      IsRapidFire: false
+      RapidFireNum: 0
+      RapidFireInterval: 0
+      IsLongRange: false
+      ArrowFirstSpeed: 4.5
+      ArrowAcceleration: -0.1
+      ArrowStabilitySpeed: 3.0
+      ArrowFallAcceleration: -0.2
+      ArrowFallStabilitySpeed: 1.0
+      ArrowGravity: -9.8
+      PlayerHoldTransOffset: !vec3 [-0.2, -0.01, 0.0]
+      PlayerHoldRotOffset: !vec3 [12.0, -60.0, -22.0]
+      PlayerEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      PlayerEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldTransAddOffset: !vec3 [0.0, 0.0, 0.0]
+      SquatPlayerHoldRotAddOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      EnemyEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      StandEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      ArrowChargeRate: 1.0
+      ArrowReloadRate: 1.0
+      WeaponSubType: !str32 
+    WeaponOption: !obj
+      PlayerHoldTransOffset: !vec3 [-0.02, -0.01, 0.12]
+      PlayerHoldRotOffset: !vec3 [-8.0, -5.0, 75.0]
+      NPCHoldTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCHoldRotOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      NPCEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+    MasterSword: !obj
+      IsMasterSword: false
+      TrueFormAttackPower: -1
+      TrueFormMagicPower: -1
+      TrueFormBreakRatio: 0.5
+      SearchEvilDist: -1.0
+      RecoverTime: 30
+      SleepActorName: !str64 
+      TrueFormActorName: !str64 
+    GuardianMiniWeapon: !obj
+      BindMyNodeName: !str32 
+      VisibleMatNameR: ''
+      VisibleMatNameL: ''
+      VisibleMatNameB: ''
+      VisibleOffMatName: Mt_Arm
+    Player: !obj
+      BombReloadTime1: 0.0
+      BombReloadTime2: 0.0
+      StopTimerReloadTime: 0.0
+      StopTimerBlowAngle: 0.0
+      StopTimerBlowSpeedLimit: 0.0
+      StopTimerImpluseMaxCountSmallSword: 16
+      StopTimerImpluseMaxCountLargeSword: 8
+      StopTimerImpluseMaxCountSpear: 20
+      StopTimerCancelDeleteWaitTime: 0.0
+      StopTimerLongTime: 0.0
+      StopTimerMiddleTime: 0.0
+      StopTimerShortTime: 0.0
+      EnergyTiredValue: 0.0
+      EnergyBowSlow: 0.0
+      EnergyPush: 0.0
+      EnergyCharge: 0.0
+      EnergyAutoRecover: 0.0
+      EnergyAutoRecoverInAir: 0.0
+      EnergyAutoRecoverInvalidTime1: 0.0
+      EnergyAutoRecoverInvalidTime2: 0.0
+      ColdTempDamageAdd: 0.0
+      HotTempDamageAdd: 0.0
+      TempDamage: 0.0
+      TempEnergyDecDiamAdd: 0.0
+      TempEnergyDecDegAdd: 0.0
+      VelDiamSand: 0.0
+      VelDiamTired: 0.0
+      StickDiamTired: 0.0
+      AutoRecoverNum: 0.0
+      AutoRecoverIntervalMin: 0.0
+      AutoRecoverIntervalMax: 0.0
+      AutoRecoverInvalidTime: 0.0
+      BowSubjectContTime: 0.0
+      LNGStickScale: 0.0
+      LATStickScale: 0.0
+      LNGGyroScale: 0.0
+      LATGyroScale: 0.0
+      BowSlowShootNum: 0
+      BowSlowRateDiam: 1.0
+      BowSlowMaxTime: 0.0
+      DiveBowSlowMaxTime: 0.0
+      BowSlowInvalidTime: 0.0
+      BowSlowInvalidHeight: 0.0
+      BowSlowInvalidHeightOnShield: 0.0
+      BowSlowInvalidHeightWeaponChange: 0.0
+      GuardJustForceSlowTime: 0.0
+      MoveMaxDecRateByWater: 0.0
+      MoveIgnoreWaterHeight: 0.0
+      MoveDecRateByBog: 0.0
+      MoveDecRateMaxHeight: 0.0
+      MaxForce: 0.0
+      MinForce: 0.0
+      AddForce: 0.0
+      SnowBallAddForce: 0.0
+      LogPushF: 0.0
+      RockPushF: 0.0
+      RockPushSpeed: 0.0
+      WaistAngleUpperMax: 0.0
+      WaistAngleLowerMax: 0.0
+      WaistAngleSideMax: 0.0
+      NoSquatWaterHeight: 0.0
+      InvalidReloadTime: 0.0
+      WeaponThrowSpeedY: 0.0
+      WeaponThrowSpeedF: 0.0
+      WeaponThrowSpeedFSquat: 0.0
+      DashUpEnableAngle: 0.0
+      ShockTime: 0.0
+      IceInvalidTime: 0.0
+      MaxSpeedInAir: 0.0
+      TurnEnableSpeed: 0.0
+      TurnEnableStickSub: 0.0
+      TurnEnableDirSub: 0.0
+      ShortDashImpulse: 0
+      ShortDashDamage: 0
+      SwordTerrorScope: 0.0
+      ArrowTerrorScope: 0.0
+      TorchTerrorScope: 0.0
+      TorchTerrorOffsetY: 0.0
+      TorchTerrorOffsetZ: 0.0
+      DashNoise: 0.0
+      WhistleNoise: 0.0
+      ClimbEnableAngle: 0.0
+      ClimbEnableSpeedMinAngle: 0.0
+      ClimbEnableSpeedMaxAngle: 0.0
+      SlipEnableSpeed: 0.0
+      SlipSpeedAddMin: 0.0
+      SlipSpeedAddMax: 0.0
+      SlipSpeedAddDiamByRain: 0.0
+      MagnetAim2DPosOffsetY: 0.0
+      LookPosOffsetXZ: 0.0
+      LookPosOffsetY: 0.0
+      LookPosOffsetYSquat: 0.0
+      LookPosOffsetYSwim: 0.0
+      LookPosOffsetYHorse: 0.0
+      LookEnableAngle: 0.0
+      HitSlowTimeS: 0.0
+      HitSlowTimeM: 0.0
+      HitSlowTimeL: 0.0
+      HitSlowRate: 0.0
+      HitStopTimeS: 0.0
+      HitStopTimeL: 0.0
+      HitStopRate: 0.0
+      AtnPosInterPolationRate: 0.0
+      AtnPosInterPolationMin: 0.0
+      AtnPosInterPolationMax: 0.0
+      PredictDiffAngleMax: 0.0
+      DashToRunStickValueDec: 0.0
+      WindSupportReuseTime: 0.0
+      FireSupportReuseTime: 0.0
+      ElectricSupportReuseTime: 0.0
+      WaterSupportReuseTime: 0.0
+      WindSupportTimerRate: 0.0
+      FireSupportTimerRate: 0.0
+      ElectricSupportTimerRate: 0.0
+      WaterSupportTimerRate: 0.0
+      ChemicalInvalidTime: 0.0
+      AutoDashUpTime: 0.0
+      AutoDashUpAngle: 0.0
+      ClimbRestartHeight: 0.0
+      ClimbRestartTime: 0.0
+      PushNoticeLookTime: 0.0
+      EnergyUseSmall: 0.0
+      EnergyUseLarge: 0.0
+      NoEnergyDashInterval: 0.0
+      GuardableAngle: 0.0
+      StickMaxInStore: 0.0
+      LookContinueTime: 0.0
+      PostureContinueTime: 0.0
+      ItemUseModelAlpha: 0.0
+      LadderCheckSide: 0.0
+      LadderCheckDist: 0.0
+      NoDeathDamageBase: 0
+      NoDeathDamageAdd: 0
+      ArmorCompSwimEnergyRate: 0.0
+      ArmorCompRegistElecFrame: 0.0
+      ArmorCompNightSpeedRate: 0.0
+      ArmorCompClimbJumpEnergyRate: 0.0
+      ArmorCompPlusDropRate: 0.0
+      ArmorCompWeaponBrakeRate: 0.0
+      ArmorCompSwordBeamAttackRate: 0.0
+      ArmorCompAncientAttackRate: 1.0
+      ArmorCompBoneAttackRate: 1.0
+      ArmorCompTerrorLevel: 0.0
+      ArmorCompTerrorRadius: 0.0
+      ArmorCompNakedSwimSpeedRate: 0.0
+      ArmorCompNakedSwimAnimeRate: 0.0
+      ArmorCompNakedSwimEnergyRate: 0.0
+      ArmorAncientAttackRate: 1.0
+      SupportWindNum: 0
+      SupportElectricNum: 0
+      SupportElectricEnergy: 0.0
+      SupportFireNum: 0
+      SupportWaterLifeAdd: 0
+      SupportWaterEnergyAdd: 0.0
+      StickRInputFrame: 0.0
+      DiffAngleFromLookVec: 0.0
+      LookPosOffset: 0.0
+      LookFixAngle: 0.0
+      LookContinueTimeToCamera: 0.0
+      CutKnockBackNoCrrDist: 0.0
+      WaitUnsteadyApplyVel: 0.0
+      CurseAddWeight: 0.0
+      RoofCrashVel: 0.0
+      CutJumpInvalidTime: 0.0
+      WaterDepthInGrudge: 0.0
+      LargeHorseLegBendAngY: 0.0
+      LargeHorseLegBendAngX: 0.0
+      LargeHorseLegBendFrame: 0.0
+      NoMaskPauseWaterHeight: 0.0
+      LookAtThreshold: 0.0
+    Camera: !obj
+      DefaultConnectScaleAfterEvent: 1.0
+      LatConnectRateAfterEvent: 1.5
+      LngConnectRateAfterEvent: 0.75
+      DistConnectRateAfterEvent: 3.0
+      FovyConnectRateAfterEvent: 0.0
+      ConnectAfterEventMin: 30.0
+      ConnectAfterEventMax: 1000.0
+      RoofGradientNearHighWeight: 0.0
+      RoofGradientFarHighWeight: 0.0
+      RoofGradientNearLowWeight: 0.0
+      RoofGradientFarLowWeight: 0.0
+    Grab: !obj
+      Slot0Node: !str32 
+      Slot1Node: !str32 
+      Slot2Node: !str32 
+      Slot3Node: !str32 
+      Slot4Node: !str32 
+      Slot5Node: !str32 
+      Slot0PodNode: !str32 
+      Slot1PodNode: !str32 
+      Slot2PodNode: !str32 
+      Slot3PodNode: !str32 
+      Slot4PodNode: !str32 
+      Slot5PodNode: !str32 
+    Armor: !obj
+      StarNum: 0
+      DefenceAddLevel: 0
+      WindScaleMesh: !str32 
+      WindScale: 0.0
+      NextRankName: !str64 
+      AffectTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      AffectRotOffsetShield: !vec3 [0.0, 0.0, 0.0]
+    ArmorEffect: !obj
+      EffectType: !str32 None
+      EffectLevel: 0
+      AncientPowUp: false
+      EnableClimbWaterfall: false
+      EnableSpinAttack: false
+    ArmorHead: !obj {EarRotate: !vec3 [0.0, 0.0, 0.0], MantleType: 0, MaskType: !str32 ''}
+    ArmorUpper: !obj
+      IsDispOffPorch: false
+      ShiekerStoneTransOffset: !vec3 [0.0, 0.0, 0.0]
+      ShiekerStoneRotOffset: !vec3 [0.0, 0.0, 0.0]
+      DisableSelfMantle: false
+      UseMantleType: 0
+    ShiekerStone: !obj
+      NodeNameWithWaist: !str32 Pod_C
+      TransOffsetWithWaist: !vec3 [0.125, 0.0, -0.017]
+      RotOffsetWithWaist: !vec3 [2.0, 184.0, -3.0]
+      NodeNameWithHand: !str32 Weapon_L
+      TransOffsetWithHand: !vec3 [0.0, 0.0, 0.0]
+      RotOffsetWithHand: !vec3 [180.0, 180.0, 0.0]
+    SeriesArmor: !obj {SeriesType: !str32 '', EnableCompBonus: false}
+    Liftable: !obj
+      LiftType: !str32 
+      ThrownMass: 10
+      ThrownRotSpd: !vec3 [0.0, 0.0, 0.0]
+      LiftPosOffset: !vec3 [0.0, 0.0, 0.0]
+      LiftRotOffset: !vec3 [0.0, 0.0, 0.0]
+      LiftRotFrame: 10
+      AddLiftRotOffsetList: ''
+      ChaseLiftRotOffset: false
+      LiftCenterOffset: !vec3 [0.0, 0.0, 0.0]
+      PutPosOffset: !vec3 [0.0, 0.0, 0.5]
+      PutRotOffset: !vec3 [0.0, 0.0, 0.0]
+      PutRotFrame: 10
+      AddPutRotOffsetList: ''
+      IsUpdateOffsetEachFrame: false
+      IsUse2MassConstraintMode: true
+      IsSetChemicalParent: true
+      DisableFreezeLift: false
+      DisableBurnLift: false
+      ThrowReactionLevel: -1
+    Item: !obj
+      PlayerUseItem: false
+      SellingPrice: -1
+      BuyingPrice: -1
+      CreatingPrice: -1
+      StainColor: -1
+      SaleRevivalCount: -1
+      UseIconActorName: !str64 
+    Rupee: !obj {RupeeValue: 1}
+    Arrow: !obj
+      ArrowNum: 0
+      DeleteTime: 0
+      DeleteTimeWithChemical: 0
+      EnemyShootNumForDelete: 0
+      ArrowDeletePer: 0
+      ExtraDamage: 0
+    Bullet: !obj {NoHitParent: true, IsLimitCount: false}
+    CureItem: !obj {HitPointRecover: 0, EffectType: !str32 None, EffectLevel: 0, EffectiveTime: 0}
+    CookSpice: !obj
+      BoostHitPointRecover: 0
+      BoostEffectiveTime: 0
+      BoostSuccessRate: 0
+      BoostMaxHeartLevel: 0
+      BoostStaminaLevel: 0
+    LumberjackTree: !obj
+      ImpulseThreshold: 100.0
+      IsValid: false
+      StumpName: !str64 
+      TrunkName: !str64 
+      WeaponWoodName: !str64 
+      BranchName: !str64 
+    Npc: !obj
+      IsReactNakedPlayer: false
+      UseAutoLabel: true
+      IsOffPodFromWeapon: false
+      IsRunRainWhenGoToSleep: true
+      IsWalkUnderShelterFromRain: true
+      IsSlowWalkOnSandAndSnow: false
+      IsAlwaysCounterPlayerAttack: false
+      IsNotTurnDetect: false
+      IsNotEscapeFromTerror: false
+      TolerantTime: 20
+      TolerantCount: 10
+      CounterRate: 30
+      ChangeSearchModeFlagName: !str32 
+      OnFlagWhenDelete: !str32 
+      OffFlagWhenDelete: !str32 
+    NpcEquipment: !obj
+      IsSetWeaponTypeWhenEquip: false
+      EquipName1: !str64 
+      Scale1: 1.0
+      HoldTransOffset1: !vec3 [0.0, 0.0, 0.0]
+      HoldRotOffset1: !vec3 [0.0, 0.0, 0.0]
+      EquipTransOffset1: !vec3 [0.0, 0.0, 0.0]
+      EquipRotOffset1: !vec3 [0.0, 0.0, 0.0]
+      EquipName2: !str64 
+      Scale2: 1.0
+      HoldTransOffset2: !vec3 [0.0, 0.0, 0.0]
+      HoldRotOffset2: !vec3 [0.0, 0.0, 0.0]
+      EquipTransOffset2: !vec3 [0.0, 0.0, 0.0]
+      EquipRotOffset2: !vec3 [0.0, 0.0, 0.0]
+      EquipName3: !str64 
+      Scale3: 1.0
+      HoldTransOffset3: !vec3 [0.0, 0.0, 0.0]
+      HoldRotOffset3: !vec3 [0.0, 0.0, 0.0]
+      EquipTransOffset3: !vec3 [0.0, 0.0, 0.0]
+      EquipRotOffset3: !vec3 [0.0, 0.0, 0.0]
+      EquipName4: !str64 
+      Scale4: 1.0
+      HoldTransOffset4: !vec3 [0.0, 0.0, 0.0]
+      HoldRotOffset4: !vec3 [0.0, 0.0, 0.0]
+      EquipTransOffset4: !vec3 [0.0, 0.0, 0.0]
+      EquipRotOffset4: !vec3 [0.0, 0.0, 0.0]
+    Zora: !obj
+      InWaterDepth: 0.5
+      FloatDepth: 1.35
+      FloatRadius: 0.02
+      FloatCycleTime: 60.0
+      ChangeDepthSpeed: 0.066
+    Traveler: !obj
+      AppearGameDataName: !str64 
+      DeleteGameDataName: !str64 
+      RouteType: !str32 
+      RideHorseName: !str64 
+      IsLeadHorse: false
+      HorseGearLevel: -1
+      RoutePoint0Name: !str32 
+      RoutePoint0to1EntryPoint: !str256 
+      RoutePoint0to1WaitFrame: 0.0
+      RoutePoint0to1Schedule: !str32 
+      RoutePoint0to1MoveAS: !str32 
+      RoutePoint0to1WaitAS: !str32 
+      RoutePoint1to0EntryPoint: !str256 
+      RoutePoint1to0WaitFrame: 0.0
+      RoutePoint1to0Schedule: !str32 
+      RoutePoint1to0MoveAS: !str32 
+      RoutePoint1to0WaitAS: !str32 
+      RoutePoint1Name: !str32 
+      RoutePoint1to2EntryPoint: !str256 
+      RoutePoint1to2WaitFrame: 0.0
+      RoutePoint1to2Schedule: !str32 
+      RoutePoint1to2MoveAS: !str32 
+      RoutePoint1to2WaitAS: !str32 
+      RoutePoint2to1EntryPoint: !str256 
+      RoutePoint2to1WaitFrame: 0.0
+      RoutePoint2to1Schedule: !str32 
+      RoutePoint2to1MoveAS: !str32 
+      RoutePoint2to1WaitAS: !str32 
+      RoutePoint2Name: !str32 
+      RoutePoint2to3EntryPoint: !str256 
+      RoutePoint2to3WaitFrame: 0.0
+      RoutePoint2to3Schedule: !str32 
+      RoutePoint2to3MoveAS: !str32 
+      RoutePoint2to3WaitAS: !str32 
+      RoutePoint3to2EntryPoint: !str256 
+      RoutePoint3to2WaitFrame: 0.0
+      RoutePoint3to2Schedule: !str32 
+      RoutePoint3to2MoveAS: !str32 
+      RoutePoint3to2WaitAS: !str32 
+      RoutePoint3Name: !str32 
+      RoutePoint3to4EntryPoint: !str256 
+      RoutePoint3to4WaitFrame: 0.0
+      RoutePoint3to4Schedule: !str32 
+      RoutePoint3to4MoveAS: !str32 
+      RoutePoint3to4WaitAS: !str32 
+      RoutePoint4to3EntryPoint: !str256 
+      RoutePoint4to3WaitFrame: 0.0
+      RoutePoint4to3Schedule: !str32 
+      RoutePoint4to3MoveAS: !str32 
+      RoutePoint4to3WaitAS: !str32 
+      RoutePoint4Name: !str32 
+      RoutePoint4to5EntryPoint: !str256 
+      RoutePoint4to5WaitFrame: 0.0
+      RoutePoint4to5Schedule: !str32 
+      RoutePoint4to5MoveAS: !str32 
+      RoutePoint4to5WaitAS: !str32 
+      RoutePoint5to4EntryPoint: !str256 
+      RoutePoint5to4WaitFrame: 0.0
+      RoutePoint5to4Schedule: !str32 
+      RoutePoint5to4MoveAS: !str32 
+      RoutePoint5to4WaitAS: !str32 
+      RoutePoint5Name: !str32 
+      RoutePoint5to6EntryPoint: !str256 
+      RoutePoint5to6WaitFrame: 0.0
+      RoutePoint5to6Schedule: !str32 
+      RoutePoint5to6MoveAS: !str32 
+      RoutePoint5to6WaitAS: !str32 
+      RoutePoint6to5EntryPoint: !str256 
+      RoutePoint6to5WaitFrame: 0.0
+      RoutePoint6to5Schedule: !str32 
+      RoutePoint6to5MoveAS: !str32 
+      RoutePoint6to5WaitAS: !str32 
+      RoutePoint6Name: !str32 
+      RoutePoint6to7EntryPoint: !str256 
+      RoutePoint6to7WaitFrame: 0.0
+      RoutePoint6to7Schedule: !str32 
+      RoutePoint6to7MoveAS: !str32 
+      RoutePoint6to7WaitAS: !str32 
+      RoutePoint7to6EntryPoint: !str256 
+      RoutePoint7to6WaitFrame: 0.0
+      RoutePoint7to6Schedule: !str32 
+      RoutePoint7to6MoveAS: !str32 
+      RoutePoint7to6WaitAS: !str32 
+      RoutePoint7Name: !str32 
+      RoutePoint7to8EntryPoint: !str256 
+      RoutePoint7to8WaitFrame: 0.0
+      RoutePoint7to8Schedule: !str32 
+      RoutePoint7to8MoveAS: !str32 
+      RoutePoint7to8WaitAS: !str32 
+      RoutePoint8to7EntryPoint: !str256 
+      RoutePoint8to7WaitFrame: 0.0
+      RoutePoint8to7Schedule: !str32 
+      RoutePoint8to7MoveAS: !str32 
+      RoutePoint8to7WaitAS: !str32 
+      RoutePoint8Name: !str32 
+      RoutePoint8to9EntryPoint: !str256 
+      RoutePoint8to9WaitFrame: 0.0
+      RoutePoint8to9Schedule: !str32 
+      RoutePoint8to9MoveAS: !str32 
+      RoutePoint8to9WaitAS: !str32 
+      RoutePoint9to8EntryPoint: !str256 
+      RoutePoint9to8WaitFrame: 0.0
+      RoutePoint9to8Schedule: !str32 
+      RoutePoint9to8MoveAS: !str32 
+      RoutePoint9to8WaitAS: !str32 
+      RoutePoint9Name: !str32 
+      RoutePoint9to10EntryPoint: !str256 
+      RoutePoint9to10WaitFrame: 0.0
+      RoutePoint9to10Schedule: !str32 
+      RoutePoint9to10MoveAS: !str32 
+      RoutePoint9to10WaitAS: !str32 
+      RoutePoint10to9EntryPoint: !str256 
+      RoutePoint10to9WaitFrame: 0.0
+      RoutePoint10to9Schedule: !str32 
+      RoutePoint10to9MoveAS: !str32 
+      RoutePoint10to9WaitAS: !str32 
+      RoutePoint10Name: !str32 
+      RoutePoint10to11EntryPoint: !str256 
+      RoutePoint10to11WaitFrame: 0.0
+      RoutePoint10to11Schedule: !str32 
+      RoutePoint10to11MoveAS: !str32 
+      RoutePoint10to11WaitAS: !str32 
+      RoutePoint11to10EntryPoint: !str256 
+      RoutePoint11to10WaitFrame: 0.0
+      RoutePoint11to10Schedule: !str32 
+      RoutePoint11to10MoveAS: !str32 
+      RoutePoint11to10WaitAS: !str32 
+      RoutePoint11Name: !str32 
+      RoutePoint11to12EntryPoint: !str256 
+      RoutePoint11to12WaitFrame: 0.0
+      RoutePoint11to12Schedule: !str32 
+      RoutePoint11to12MoveAS: !str32 
+      RoutePoint11to12WaitAS: !str32 
+      RoutePoint12to11EntryPoint: !str256 
+      RoutePoint12to11WaitFrame: 0.0
+      RoutePoint12to11Schedule: !str32 
+      RoutePoint12to11MoveAS: !str32 
+      RoutePoint12to11WaitAS: !str32 
+      RoutePoint12Name: !str32 
+      RoutePoint12to13EntryPoint: !str256 
+      RoutePoint12to13WaitFrame: 0.0
+      RoutePoint12to13Schedule: !str32 
+      RoutePoint12to13MoveAS: !str32 
+      RoutePoint12to13WaitAS: !str32 
+      RoutePoint13to12EntryPoint: !str256 
+      RoutePoint13to12WaitFrame: 0.0
+      RoutePoint13to12Schedule: !str32 
+      RoutePoint13to12MoveAS: !str32 
+      RoutePoint13to12WaitAS: !str32 
+      RoutePoint13Name: !str32 
+      RoutePoint13to14EntryPoint: !str256 
+      RoutePoint13to14WaitFrame: 0.0
+      RoutePoint13to14Schedule: !str32 
+      RoutePoint13to14MoveAS: !str32 
+      RoutePoint13to14WaitAS: !str32 
+      RoutePoint14to13EntryPoint: !str256 
+      RoutePoint14to13WaitFrame: 0.0
+      RoutePoint14to13Schedule: !str32 
+      RoutePoint14to13MoveAS: !str32 
+      RoutePoint14to13WaitAS: !str32 
+      RoutePoint14Name: !str32 
+      RoutePoint14to15EntryPoint: !str256 
+      RoutePoint14to15WaitFrame: 0.0
+      RoutePoint14to15Schedule: !str32 
+      RoutePoint14to15MoveAS: !str32 
+      RoutePoint14to15WaitAS: !str32 
+      RoutePoint15to14EntryPoint: !str256 
+      RoutePoint15to14WaitFrame: 0.0
+      RoutePoint15to14Schedule: !str32 
+      RoutePoint15to14MoveAS: !str32 
+      RoutePoint15to14WaitAS: !str32 
+      RoutePoint15Name: !str32 
+      RoutePoint15to16EntryPoint: !str256 
+      RoutePoint15to16WaitFrame: 0.0
+      RoutePoint15to16Schedule: !str32 
+      RoutePoint15to16MoveAS: !str32 
+      RoutePoint15to16WaitAS: !str32 
+      RoutePoint16to15EntryPoint: !str256 
+      RoutePoint16to15WaitFrame: 0.0
+      RoutePoint16to15Schedule: !str32 
+      RoutePoint16to15MoveAS: !str32 
+      RoutePoint16to15WaitAS: !str32 
+      RoutePoint16Name: !str32 
+      RoutePoint16to17EntryPoint: !str256 
+      RoutePoint16to17WaitFrame: 0.0
+      RoutePoint16to17Schedule: !str32 
+      RoutePoint16to17MoveAS: !str32 
+      RoutePoint16to17WaitAS: !str32 
+      RoutePoint17to16EntryPoint: !str256 
+      RoutePoint17to16WaitFrame: 0.0
+      RoutePoint17to16Schedule: !str32 
+      RoutePoint17to16MoveAS: !str32 
+      RoutePoint17to16WaitAS: !str32 
+      RoutePoint17Name: !str32 
+      RoutePoint17to18EntryPoint: !str256 
+      RoutePoint17to18WaitFrame: 0.0
+      RoutePoint17to18Schedule: !str32 
+      RoutePoint17to18MoveAS: !str32 
+      RoutePoint17to18WaitAS: !str32 
+      RoutePoint18to17EntryPoint: !str256 
+      RoutePoint18to17WaitFrame: 0.0
+      RoutePoint18to17Schedule: !str32 
+      RoutePoint18to17MoveAS: !str32 
+      RoutePoint18to17WaitAS: !str32 
+      RoutePoint18Name: !str32 
+      RoutePoint18to19EntryPoint: !str256 
+      RoutePoint18to19WaitFrame: 0.0
+      RoutePoint18to19Schedule: !str32 
+      RoutePoint18to19MoveAS: !str32 
+      RoutePoint18to19WaitAS: !str32 
+      RoutePoint19to18EntryPoint: !str256 
+      RoutePoint19to18WaitFrame: 0.0
+      RoutePoint19to18Schedule: !str32 
+      RoutePoint19to18MoveAS: !str32 
+      RoutePoint19to18WaitAS: !str32 
+      RoutePoint19Name: !str32 
+      RoutePoint19to20EntryPoint: !str256 
+      RoutePoint19to20WaitFrame: 0.0
+      RoutePoint19to20Schedule: !str32 
+      RoutePoint19to20MoveAS: !str32 
+      RoutePoint19to20WaitAS: !str32 
+      RoutePoint20to19EntryPoint: !str256 
+      RoutePoint20to19WaitFrame: 0.0
+      RoutePoint20to19Schedule: !str32 
+      RoutePoint20to19MoveAS: !str32 
+      RoutePoint20to19WaitAS: !str32 
+      RoutePoint20Name: !str32 
+      RoutePoint20to21EntryPoint: !str256 
+      RoutePoint20to21WaitFrame: 0.0
+      RoutePoint20to21Schedule: !str32 
+      RoutePoint20to21MoveAS: !str32 
+      RoutePoint20to21WaitAS: !str32 
+      RoutePoint21to20EntryPoint: !str256 
+      RoutePoint21to20WaitFrame: 0.0
+      RoutePoint21to20Schedule: !str32 
+      RoutePoint21to20MoveAS: !str32 
+      RoutePoint21to20WaitAS: !str32 
+      RoutePoint21Name: !str32 
+      RoutePoint21to22EntryPoint: !str256 
+      RoutePoint21to22WaitFrame: 0.0
+      RoutePoint21to22Schedule: !str32 
+      RoutePoint21to22MoveAS: !str32 
+      RoutePoint21to22WaitAS: !str32 
+      RoutePoint22to21EntryPoint: !str256 
+      RoutePoint22to21WaitFrame: 0.0
+      RoutePoint22to21Schedule: !str32 
+      RoutePoint22to21MoveAS: !str32 
+      RoutePoint22to21WaitAS: !str32 
+      RoutePoint22Name: !str32 
+      RoutePoint22to23EntryPoint: !str256 
+      RoutePoint22to23WaitFrame: 0.0
+      RoutePoint22to23Schedule: !str32 
+      RoutePoint22to23MoveAS: !str32 
+      RoutePoint22to23WaitAS: !str32 
+      RoutePoint23to22EntryPoint: !str256 
+      RoutePoint23to22WaitFrame: 0.0
+      RoutePoint23to22Schedule: !str32 
+      RoutePoint23to22MoveAS: !str32 
+      RoutePoint23to22WaitAS: !str32 
+      RoutePoint23Name: !str32 
+      RoutePoint23to24EntryPoint: !str256 
+      RoutePoint23to24WaitFrame: 0.0
+      RoutePoint23to24Schedule: !str32 
+      RoutePoint23to24MoveAS: !str32 
+      RoutePoint23to24WaitAS: !str32 
+      RoutePoint24to23EntryPoint: !str256 
+      RoutePoint24to23WaitFrame: 0.0
+      RoutePoint24to23Schedule: !str32 
+      RoutePoint24to23MoveAS: !str32 
+      RoutePoint24to23WaitAS: !str32 
+      RoutePoint24Name: !str32 
+      RoutePoint24to25EntryPoint: !str256 
+      RoutePoint24to25WaitFrame: 0.0
+      RoutePoint24to25Schedule: !str32 
+      RoutePoint24to25MoveAS: !str32 
+      RoutePoint24to25WaitAS: !str32 
+      RoutePoint25to24EntryPoint: !str256 
+      RoutePoint25to24WaitFrame: 0.0
+      RoutePoint25to24Schedule: !str32 
+      RoutePoint25to24MoveAS: !str32 
+      RoutePoint25to24WaitAS: !str32 
+      RoutePoint25Name: !str32 
+      RoutePoint25to26EntryPoint: !str256 
+      RoutePoint25to26WaitFrame: 0.0
+      RoutePoint25to26Schedule: !str32 
+      RoutePoint25to26MoveAS: !str32 
+      RoutePoint25to26WaitAS: !str32 
+      RoutePoint26to25EntryPoint: !str256 
+      RoutePoint26to25WaitFrame: 0.0
+      RoutePoint26to25Schedule: !str32 
+      RoutePoint26to25MoveAS: !str32 
+      RoutePoint26to25WaitAS: !str32 
+      RoutePoint26Name: !str32 
+      RoutePoint26to27EntryPoint: !str256 
+      RoutePoint26to27WaitFrame: 0.0
+      RoutePoint26to27Schedule: !str32 
+      RoutePoint26to27MoveAS: !str32 
+      RoutePoint26to27WaitAS: !str32 
+      RoutePoint27to26EntryPoint: !str256 
+      RoutePoint27to26WaitFrame: 0.0
+      RoutePoint27to26Schedule: !str32 
+      RoutePoint27to26MoveAS: !str32 
+      RoutePoint27to26WaitAS: !str32 
+      RoutePoint27Name: !str32 
+      RoutePoint27to28EntryPoint: !str256 
+      RoutePoint27to28WaitFrame: 0.0
+      RoutePoint27to28Schedule: !str32 
+      RoutePoint27to28MoveAS: !str32 
+      RoutePoint27to28WaitAS: !str32 
+      RoutePoint28to27EntryPoint: !str256 
+      RoutePoint28to27WaitFrame: 0.0
+      RoutePoint28to27Schedule: !str32 
+      RoutePoint28to27MoveAS: !str32 
+      RoutePoint28to27WaitAS: !str32 
+      RoutePoint28Name: !str32 
+      RoutePoint28to29EntryPoint: !str256 
+      RoutePoint28to29WaitFrame: 0.0
+      RoutePoint28to29Schedule: !str32 
+      RoutePoint28to29MoveAS: !str32 
+      RoutePoint28to29WaitAS: !str32 
+      RoutePoint29to28EntryPoint: !str256 
+      RoutePoint29to28WaitFrame: 0.0
+      RoutePoint29to28Schedule: !str32 
+      RoutePoint29to28MoveAS: !str32 
+      RoutePoint29to28WaitAS: !str32 
+      RoutePoint29Name: !str32 
+    Prey: !obj
+      EatActorFindRadius: -1.0
+      EatActorFindRotDegree: 135.0
+      WaitTimeForStartEat: 150.0
+      IsEnableGroupEscape: true
+      AimEscapeOffsetRate: 1.0
+    AnimalFollowOffset: !obj {EatLocalOffset: !vec3 [0.0, 0.0, 0.0]}
+    ExtendedEntity: !obj {IsUsePivotAdjustRange: false, PivotAdjustRange: 1.0}
+    BindActor: !obj {BindActorName: '', IsKeepSleep: false}
+    EatTarget: !obj
+      FavoriteEatActorNames: ''
+      FavoriteEatActorTags: ''
+      EatActorNames: ''
+      EatActorNames2: ''
+      EatActorNames3: ''
+      EatActorTags: ''
+    AnimalUnit: !obj
+      SpeedActorName: !str32 
+      BasePlayRate: 1.0
+      GearMaxNum: 4
+      IsSetWaitASAtGear0: true
+      StressFramesMin: 0.0
+      StressFramesMax: 0.0
+      SteeringOutputKp: 0.6
+      SteeringOutputKi: 0.15
+      SteeringOutputKd: 0.002
+      SteeringOutputIClamp: 1.0
+      SteeringOutputIReduceRatio: 0.0
+      SteeringOutputDLerpRatio: 0.2
+      SteeringOutputAvoidanceLerpRatio: 0.08
+      SteeringOutputIIRLerpRatio: 0.4
+      OverrideSteeringOutputKp: -1.0
+      OverrideSteeringOutputKi: -1.0
+      OverrideSteeringOutputKd: -1.0
+    Insect: !obj {FireResistanceLevel: 0}
+    Fish: !obj
+      RestoreSpeedRate: 0.3
+      RestoreSpeedRateAdd: -0.05
+      LimitAngle: 60.0
+      LimitAngleAdd: 10.0
+      PrevSpeedRate: 0.3
+    Rope: !obj
+      IsAllowCutting: true
+      IsSetupKeyframed: false
+      BoneEffectiveLength: 0.1
+      IsInterpolateEdge: true
+      IsDeformable: true
+      IsOneBoneOneShape: false
+      SplineOffsetRateA: 0.0
+      SplineOffsetRateB: 0.0
+      SplineOffsetRateC: 0.0
+      MtxEndPosOffsetLength: 0.0
+    Horse: !obj
+      IsDecoy: false
+      HasMane: true
+      ASVariation: !str32 Normal
+      Nature: 0
+      AttackPowerMultiplierGear2: 0.0
+      AttackPowerMultiplierGear3: 0.0
+      AttackPowerMultiplierGearTop: 6.0
+      RunnableFramesAtGearTop: 180.0
+      GearTopInterval: 240.0
+      GearTopChargeNum: 3
+      EatActorNames: ''
+      EatActorNamesForExtraCharge: ''
+    HorseUnit: !obj {RiddenAnimalType: 0, CalmDownNum: 10, RideonAboveASHeight: 1.0,
+      RideonAboveASRadius: 1.0}
+    HorseObject: !obj {HideHorseMane: false, IsHorseClothDisable: false}
+    HorseRider: !obj
+      RootNode: !str32 
+      SpineNode: !str32 
+      RotBaseNode: !str32 
+      RotAxis: !vec3 [0.0, 1.0, 0.0]
+      RotLimit: 0.0
+      WeaponTransOffsetSmallSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponTransOffsetLargeSword: !vec3 [0.0, 0.0, 0.0]
+      WeaponTransOffsetSpear: !vec3 [0.0, 0.0, 0.0]
+      WeaponTransOffsetBow: !vec3 [0.0, 0.0, 0.0]
+      WeaponTransOffsetShield: !vec3 [0.0, 0.0, 0.0]
+      LeftFootNode: !str32 
+      LeftFootRotAxis: !vec3 [0.0, 0.0, 0.0]
+      RightFootNode: !str32 
+      RightFootRotAxis: !vec3 [0.0, 0.0, 0.0]
+      FootRotRatio: 0.4
+      FootRetRotRatio: 0.8
+      FootRotAngleForKuma: 0.0
+    HorseCreator: !obj {HorseNames: '', LeaderHorseNames: ''}
+    GiantArmorSlot: !obj
+      Slot0Node: !str32 
+      Slot0RigidBody: !str32 
+      Slot0DefaultActorName: ''
+      Slot1Node: !str32 
+      Slot1RigidBody: !str32 
+      Slot1DefaultActorName: ''
+      Slot2Node: !str32 
+      Slot2RigidBody: !str32 
+      Slot2DefaultActorName: ''
+      Slot3Node: !str32 
+      Slot3RigidBody: !str32 
+      Slot3DefaultActorName: ''
+    GiantArmor: !obj {DamageScale: 0.0, RotOffset: !vec3 [0.0, 0.0, 0.0]}
+    Guardian: !obj
+      GuardianModelType: 0
+      GuardianControllerType: 0
+      HeadLimitMax: 90.0
+      HeadLimitMin: -90.0
+      SightLimitMax: 90.0
+      SightLimitMin: -90.0
+      MaxSpeed: 25.0
+      CannonBoneName: Eye
+      RapidFireDistance: 10.0
+    MonsterShop: !obj {BuyMamo: 0, SellMamo: 0}
+    Swarm: !obj {SwarmSubActorNum: 50, SwarmPattern: 0, DeadActorName: ''}
+    GelEnemy: !obj
+      MoveBoneName: !str32 Body_Move
+      BodyRadius: 1.0
+      ClothBoneNumForEyeCalc: 12
+      BodyRootBoneName: !str32 Skl_Root
+      LeftEyeBoneName: !str32 
+      RightEyeBoneName: !str32 
+      EyeSpaceHalf: 0.0
+      EyeDir: !vec3 [0.75, 1.0, 1.0]
+      EyeOffset: !vec3 [0.0, 0.0, 0.0]
+      EyeUpMoveRate: 0.2
+      EyeDownMoveRate: 0.05
+      IsAverageEyePos: true
+      EyeDelayAccRate: 0.6
+      EyeYMoveTheta: 1.0
+      EyeYMoveFrequency: 0.033
+    Nest: !obj {CreateActor: ''}
+    Wizzrobe: !obj
+      MagicWeatherType: 0
+      MagicFallActorName: ''
+      MagicFallIgniteRotSpd: 0.0
+      MagicFallOffsetY: 6.0
+      MagicFallCenterOffsetXZ: 5.0
+      MagicFallRandRadius: 12.0
+      MagicFallIntervalMax: 20.0
+      MagicFallIntervalMin: 15.0
+      SummonActorName: ''
+    StalEnemy: !obj {HeadActorName: '', LeftArmActorName: ''}
+    GuardianMini: !obj
+      ColorType: 0
+      BodyMatName: ''
+      GuardJustActor: ''
+      BeamName: ''
+      LineBeamName: ''
+      FinalBeamName: ''
+    ClothReaction: !obj
+      AtkCollidableName: !str32 Collidable_Attack
+      AtkCollidableBoneName: !str32 Attack
+      AtkCollidableSpeed: 6.0
+      AtkCollidableActiveTime: 0.5
+      AtkCollidableResetPos: !vec3 [0.0, 0.0, 2.0]
+      GroundCollidableName: !str32 Collidable_Ground_1
+      GroundCollidableBoneName: !str32 Ground_1
+      GroundCollidableOffset: 0.05
+      UseGroundCollidableResetPos: false
+      GroundCollidableResetPos: !vec3 [0.0, -1.0, 0.0]
+      GroundCollidableMoveSpeed: 300.0
+      WallCollidableName: !str32 
+      WallCollidableBoneName: !str32 
+      WallCollidableOffset: 0.05
+      PlayerCollidableName: ''
+      PlayerCollidableBoneName: ''
+    Global: !obj
+      EnemyLifeGageDist: 60.0
+      EnemyNoSkitDist: 0.0
+      EnemyWeaponPickAllowDist: 5.0
+      EnemyWeaponPickForbidTime: 30
+      EnemyAnimalNoDamageDist: 70.0
+      EnemyNearCraeteIDDelay: 30.0
+      EnemyForceTiredLODCount: 60
+      EnemyForceTiredNoSightLODCount: 240
+      EnemyForceWarpReturnLODCount: 240
+      SilentAttackAng: 0.0
+      SilentAttackRatio: 2.0
+      BlownOffPlayerAtkDelay: 30
+      JustAvoidAcceptWpRangeSS: 1.6
+      JustAvoidAcceptWpRangeLS: 1.8
+      JustAvoidAcceptWpRangeSP: 5.0
+      ForceNoticeEnemyCount: 3
+      ForceNoticeEnemyDist: 50.0
+      WeaponRickeyLife: 3
+      WeaponDropRotSpd: 30.0
+      ShieldRideBaseFrame: 60
+      ShieldRideHitBaseDamage: 1
+      ShieldDamageratio: 0.2
+      ShieldSurfMasterFrictionRatio: 0.2
+      LoudNoiseRadius: 80.0
+      Impulse2DamageRatio: 0.004
+      IceMeltSpeedOnContactFire: 2.0
+      CriticalAttackRatio: 4.0
+      BooerangAttackRatio: 1.5
+      HitImpulseClampMax: 20.0
+      DropItemVelXZFromBomb: 0.4
+      DropItemVelYFromBomb: 0.05
+      DropItemVelRandomFromBomb: 0.1
+      DropItemAngVelFromBomb: 5.0
+      DropItemAngVelRandomFromBomb: 0.5
+      DropItemVelXZSmall: 0.075
+      DropItemVelYSmall: 0.05
+      DropItemVelRandomSmall: 0.1
+      DropItemAngVelSmall: 5.0
+      DropItemAngVelRandomSmall: 0.5
+      DropItemVelXZLarge: 0.2
+      DropItemVelYLarge: 0.05
+      DropItemVelRandomLarge: 0.1
+      DropItemAngVelLarge: 5.0
+      DropItemAngVelRandomLarge: 0.5
+      DropItemVelXZRupeeRabbit: 0.25
+      DropItemVelYRupeeRabbit: 0.1
+      DropItemVelRandomRupeeRabbit: 0.05
+      DropItemVelXZItemRupeeOnly: 0.1
+      DropItemVelYItemRupeeOnly: 0.1
+      DropItemVelRandomItemRupeeOnly: 0.05
+      DropItemInvincibleTime: 30.0
+      TreeWeaponEquipTransOffset: !vec3 [0.0, 0.0, 0.0]
+      TreeWeaponEquipRotOffset: !vec3 [0.0, 0.0, 0.0]
+      WetRatioToDie: 0.5
+      EnvWetRatioToDie: 0.95
+      NPCTurnAngleDiff: 30.0
+      NPCWaitFrameAfterEvent: 60
+      NPCIgnorePlayerTime: 10.0
+      NPCCancelIgnorePlayerTime: 1800.0
+      NPCOpenDoorDistance: 5.0
+      NPCWalkRateOnSandAndSnow: 0.8
+      NPCDownVerticallyAngle: 20.0
+      GerudoQueenSafetyAreaRadius: 12.0
+      CreateFairyLimitCount: 10
+      TerrorRegistSpeed: 190.0
+      TerrorUnregistSpeed: 60.0
+      TerrorRegistTimer: 30
+      TerrorRadiusOffset: 1.5
+      SpeedTerrorLevel: 2
+      SpeedTerrorLevelHuge: 4
+      SpeedTerrorLevelCheckRadius: 3.0
+      AtDirTypeAffectRatio: 1.0
+      RainyAwnHearingLevel: 0.7
+      HorseBindOffsetYOfMaleUMii: 0.0
+      HorseBindOffsetYOfFemaleUMii: 0.0
+      HorseFamiliarityIncreasePerFrame: !vec3 [0.0, 0.0, 0.0]
+      HorseFamiliarityIncreaseSootheAtFirstRun: !vec3 [0.3, 0.08, 0.06]
+      HorseFamiliarityIncreaseSootheAfterRun: !vec3 [0.3, 0.08, 0.06]
+      HorseFamiliarityIncreaseSootheAfterGearTop: !vec3 [0.3, 0.08, 0.06]
+      HorseFamiliarityIncreaseSootheAfterJump: !vec3 [0.3, 0.08, 0.06]
+      HorseFamiliarityIncreaseSootheWhileResisting: !vec3 [0.3, 0.08, 0.06]
+      HorseFamiliarityIncreaseEat: !vec3 [0.7, 0.2, 0.1]
+      HorseAlertProbability: !vec3 [0.001, 0.003, 0.001]
+      HorseAlertFramesMin: !vec3 [120.0, 120.0, 120.0]
+      HorseAlertFramesMax: !vec3 [240.0, 240.0, 240.0]
+      HorseExtraChargeNum: 3
+      PlayerGrabThrowDiffRate: 0.2
+    Beam: !obj {BeamLevel: 511}
+    AutoGen: !obj {SetName: '', KeyActorName: '', SetRadius: 0.0}
+    ChemicalType: !obj {ChemicalType: !str32 Normal, EmitChemicalActor: ''}
+    Golem: !obj
+      UpperArmRActor: ''
+      LowerArmRActor: ''
+      UpperArmLActor: ''
+      LowerArmLActor: ''
+      DefaultWeakPointActor: ''
+      IsDefaultChemicalOn: false
+    HorseTargetedInfo: !obj {HorseMoveRadius: -1.0, HorseAvoidOffset: -1.0, IsCircularMoveAlways: false}
+    WolfLink: !obj
+      NeckSpeedWait: 0.025
+      NeckRateWait: 0.7
+      NeckSpeedShiekSensor: 0.1
+      NeckRateShiekSensor: 0.45
+      NeckSpeedFollow: 0.4
+      NeckRateFollow: 0.45
+      NeckSpeedBattle: 0.3
+      NeckRateBattle: 0.45
+      NeckSpeedHeal: 0.0
+      NeckRateHeal: 0.1
+      BattleRange: 30.0
+      HealRange: 30.0
+      HuntRange: 30.0
+      HowlRange: 60.0
+      MaxHeightAttackable: 1.6
+      MaxHeightHealable: 1.5
+      NavMeshSearchRadius: 6.0
+      CanReachPlayerNavMeshSearchRadius: 2.0
+      SubmergedDepth: 1.0
+      UtilityLifeToHunt: 0.3
+      UtilityDangerDistMin: 5.0
+      UtilityDangerDistMax: 20.0
+      UtilityConstant: 0.1
+      ChainAttackChargeMin: 7.0
+      ChainAttackChargeMax: 10.0
+      LookAtCooldownWait: 150.0
+      LookAtCooldownWaitRand: 60.0
+      LookAtCounterWait: 10.0
+      LookAtCounterWaitRand: 40.0
+      LookAtCooldownRun: 150.0
+      LookAtCooldownRunRand: 60.0
+      LookAtCounterRun: 10.0
+      LookAtCounterRunRand: 40.0
+      AttackCounterLength: 30.0
+      AttackCounterRand: 30.0
+      HowlCooldownCounterLength: 1600.0
+      HowlCooldownCounterRand: 600.0
+      HealCooldownCounterLength: 0.0
+      HealCooldownCounterRand: 0.0
+      FailPathCooldownCounterLength: 120.0
+      FailPathCooldownCounterRand: 0.0
+      RetargetCooldownCounterLength: 30.0
+      RetargetCooldownCounterRand: 0.0
+      AfterTargetDeathCounterLength: 30.0
+      AfterTargetDeathCounterRand: 30.0
+      LostTargetCounterLength: 25.0
+      LostTargetCounterRand: 0.0
+      InvinceableCounterLength: 90.0
+      InvinceableCounterRand: 30.0
+      CallDelayMinLength: 10.0
+      CallOverrideCounterLength: 900.0
+      GiveUpShiekSensorLength: 300.0
+      RetryShiekSensorLength: 900.0
+      BattleWallHitLength: 10.0
+      FollowRetryLength: 30.0
+      PowerUpFoodLength: 3600.0
+      SafePosFailCounter: 3600.0
+      RestrictedTargetTimeNormal: 300.0
+      RestrictedTargetTimeSpecial: 500.0
+      PowerUpFoodAttackMod: 5
+      PowerUpFoodChainAttackCharge: 25.0
+      VSStalfosCritChance: 10
+      AttackBase: 10.0
+      AttackHeartMod: 0.5
+      DefenseBase: 3.0
+      DefenseHeartMod: 0.5
+    Event: !obj
+      VisibleOffActor1: ''
+      VisibleOffActor2: ''
+      VisibleOffActor3: ''
+      VisibleOffActor4: ''
+      VisibleOffActor5: ''
+      VisibleOffActor6: ''
+      VisibleOffActor7: ''
+      VisibleOffActor8: ''
+    GolemIK: !obj
+      FootRayCheckDist: 3.0
+      FootDownRatio: 0.2
+      FootUpRatio: 0.1
+      KneeExtendL: 0.5
+      KneeShrinkL: 0.5
+      FootExtendL: 0.5
+      FootShrinkL: 0.5
+      KneeExtendR: 0.5
+      KneeShrinkR: 0.5
+      FootExtendR: 0.5
+      FootShrinkR: 0.5
+      ArmRayCheckDist: 3.0
+      ArmDownRatio: 0.05
+      ArmUpRatio: 0.05
+      ElbowExtendL: 0.5
+      ElbowShrinkL: 0.5
+      WristExtendL: 0.5
+      WristShrinkL: 0.5
+      ElbowExtendR: 0.5
+      ElbowShrinkR: 0.5
+      WristExtendR: 0.5
+      WristShrinkR: 0.5
+      WaistRotateRatio: 0.5
+      WaistMorphRatio: 0.2
+      WaistResetMorphRatio: 0.1
+    PictureBook: !obj {LiveSpot1: -1, LiveSpot2: -1, SpecialDrop: -1}
+    AirWall: !obj {Layer: !str32 AirWall}
+  lists: {}

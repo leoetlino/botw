@@ -1,0 +1,717 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: ¿Cómo has...?
+  "0001":
+    attributes: ""
+    contents:
+      - text: ¿Te teletransportas?
+  "0002":
+    attributes: ""
+    contents:
+      - text: No es eso
+  "0003":
+    attributes: ""
+    contents:
+      - text: Pues sí
+  "0004":
+    attributes: ""
+    contents:
+      - text: ¿Cómo sabes tanto?
+  "0005":
+    attributes: ""
+    contents:
+      - text: ¡Entendido!
+  "1002":
+    attributes: ""
+    contents:
+      - text: Necesito ayuda
+  "1003":
+    attributes: ""
+    contents:
+      - text: Adiós
+  "1004":
+    attributes: ""
+    contents:
+      - text: Todo controlado
+  Clear1_00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Me gusta que demuestres confianza,\npero hasta ahora solo has completado\nun santuario."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Clear2_00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Así me gusta.
+      - control:
+          kind: pause
+          length: long
+      - text: " ¿Y dices que ya\nhas completado dos santuarios?\n¡Buen trabajo!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Clear3_00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Así que ya has completado tres\nsantuarios..."
+      - control:
+          kind: pause
+          length: long
+      - text: " ¡Te felicito!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: ¿Y qué hay del último?
+      - control:
+          kind: pause
+          length: long
+      - text: " ¿Te está\ncostando localizarlo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Ya era hora. Pensaba que eras\nmás rápido, joven."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  FirstTalk01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 8
+            - 205
+      - text: "Jo, jo, jo."
+      - control:
+          kind: pause
+          length: long
+      - text: " A mi edad tengo\nmuchos trucos bajo la manga."
+  FirstTalk02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Jo, jo, jo. Por favor..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "No necesito teletransportarme para\nser más rápido que tú."
+  FirstTalk03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Pensaba que ya no vendrías. ¿Acaso\nte has olvidado de cómo funciona\nel teletransporte?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  FirstTalk05:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "Abre el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: mapa
+      - control:
+          kind: reset_colour
+      - text: " de la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: piedra sheikah
+      - control:
+          kind: reset_colour
+      - text: "\ny elige el icono azul de una torre\no un santuario.\nSi ya has estado en ese lugar, podrás\nteletransportarte allí en un segundo."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¡No lo olvides!"
+  FirstTalk06:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Te he estado observando durante\ntu búsqueda de los santuarios."
+  FirstTalk07:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "Encontrar lo que buscas es mucho más\nfácil si te subes a un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: lugar elevado
+      - control:
+          kind: reset_colour
+      - text: ",\n¿recuerdas?\nAquí donde nos encontramos, por\nejemplo, es el sitio perfecto para\nlocalizar los santuarios."
+  FirstTalk08:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Bien, será mejor que nos centremos\nen lo que verdaderamente importa."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: "Te he citado aquí porque es el sitio\nperfecto para localizar el resto de\nsantuarios."
+  FirstTalk09:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Dime,"
+      - control:
+          kind: pause
+          length: long
+      - text: " "
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "¿has estado empleando\nel "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: catalejo
+      - control:
+          kind: reset_colour
+      - text: " de la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: piedra sheikah
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Desde aquí se pueden avistar todos\nlos santuarios."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Si los marcas con las runas, te resultará\nmás sencillo encontrarlos."
+  FirstTalk10:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "¿Sabías que la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: piedra sheikah
+      - control:
+          kind: reset_colour
+      - text: " dispone\nde un "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: catalejo
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Te permite marcar lugares\ncon runas de colores."
+  FirstTalk11:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Verás que las runas aparecerán\nen el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: mapa
+      - control:
+          kind: reset_colour
+      - text: ", lo cual es muy útil para\nlocalizar lugares rápidamente."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk12:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Jo, jo, jo."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "La edad otorga sabiduría,"
+      - control:
+          kind: pause
+          length: long
+      - text: " pero\nno tienes por qué creerme."
+  FirstTalk13:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Con los años se aprende de todo,\ncomo ya he dicho."
+      - control:
+          kind: pause
+          length: long
+      - text: " Que me creas\no no es cosa tuya."
+  FirstTalk14:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Si ya has terminado con las preguntas,\n¿por qué no echas un vistazo alrededor?"
+  GoodBye01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 8
+            - 205
+      - text: "Jo, jo, jo."
+      - control:
+          kind: pause
+          length: long
+      - text: " Si quieres mi "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: paravela
+      - control:
+          kind: reset_colour
+      - text: ",\ntendrás que ganártela."
+  GoodBye02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Jo, jo, jo."
+      - control:
+          kind: pause
+          length: long
+      - text: " Encuentra dos más\ny te daré mi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: paravela.
+  GoodBye03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Jo, jo, jo."
+      - control:
+          kind: pause
+          length: long
+      - text: " Solo te falta uno para\nconseguir mi maravillosa "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: paravela.
+  Kotsu00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "Creo que conozco un pequeño truco\nque puede serte útil para avanzar..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Si abres la pantalla de pausa, podrás ver\ntodas las acciones que has aprendido\nhasta el momento."
+  Kotsu01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Utiliza el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: catalejo
+      - control:
+          kind: reset_colour
+      - text: " de la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: piedra sheikah
+      - control:
+          kind: reset_colour
+      - text: "\npara localizar los santuarios."
+  Kotsu02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 11
+            - 205
+      - text: ¿Cuántas veces tendré que repetirlo?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nUsa la pantalla de pausa para consultar\nlas acciones que has aprendido."
+  NakedPlayer:
+    attributes: ""
+    contents:
+      - text: Vas a coger frío...
+  Near00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Jo, jo, jo."
+  Near01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Solo uno más.
+  Near02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Te faltan dos.
+  Near03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Te faltan tres.
+  Talk00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: ¿Has encontrado alguno?
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: Oye...
+      - control:
+          kind: pause
+          length: long
+      - text: " Para la mayoría, ir desnudo por\nel mundo es un poco raro, pero no\nsoy nadie para juzgar."
+  Talk02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Pronto anochecerá.
+  Talk03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Por la noche hay mucha calma\nen esta meseta."
+  Talk05:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿Cómo progresa la búsqueda?
+      - control:
+          kind: choice
+          choice_labels:
+            - 1004
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk06:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¿Y cómo avanza la búsqueda\nde los santuarios?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1004
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: ¡¿Qué haces?!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: ¿Qué es eso?
+  TerrorExplosion:
+    attributes: ""
+    contents:
+      - text: ¡Uaaah!
+  TerrorFire:
+    attributes: ""
+    contents:
+      - text: ¡Quema!
+  TerrorImpulse:
+    attributes: ""
+    contents:
+      - text: ¡Aaagh!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: ¡Basta!

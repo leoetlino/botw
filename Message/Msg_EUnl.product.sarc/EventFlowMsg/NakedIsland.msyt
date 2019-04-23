@@ -1,0 +1,60 @@
+---
+group_count: 7
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Opgeven.
+  "0001":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Doorgaan.
+  talk00:
+    attributes: EventSystemActor
+    contents:
+      - text: "Aan degene die het eiland bezoekt: Er\nstaat je een beproeving te wachten."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Tot nu toe heb je altijd vertrouwd op\ndiverse gereedschappen, en ze verward\nmet je eigen kracht. \nLeg die gereedschappen nu neer en\nvoltooi deze proef."
+  talk01:
+    attributes: EventSystemActor
+    contents:
+      - text: "Je hebt de proef voltooid. Ik zal je nu je\ngereedschappen teruggeven."
+  talk02:
+    attributes: NPC_GodVoice
+    contents:
+      - text: Geef je het op?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk03:
+    attributes: EventSystemActor
+    contents:
+      - text: "Dus je wilt stoppen met de proef? Dan\nzal ik je de gereedschappen teruggeven."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Kom gerust nog eens terug om het eiland\nte bezoeken."
+  talk04:
+    attributes: EventSystemActor
+    contents:
+      - text: "Waar ga je naartoe? Als je wilt doorgaan\nmet de proef, moet je terugkeren naar\nhet eiland."
+  talk05:
+    attributes: EventSystemActor
+    contents:
+      - text: "Offer de juwelen op de drie altaren op dit\neiland om de proef te voltooien en je\ngereedschappen terug te krijgen."
+  talk06:
+    attributes: EventSystemActor
+    contents:
+      - text: Wees welkom in de tempel.

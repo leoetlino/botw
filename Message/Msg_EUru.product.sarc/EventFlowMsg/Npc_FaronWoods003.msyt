@@ -1,0 +1,127 @@
+---
+group_count: 7
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Есть!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Нет
+  near00:
+    attributes: Npc_FaronWoods003
+    contents:
+      - text: Опять дождь...
+  near01:
+    attributes: Npc_FaronWoods003
+    contents:
+      - text: Страшно...
+  talk00:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Слушай, парень, у тебя есть "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: карта
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk01:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Так ты без карты путешествуешь?!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nНельзя же так!"
+  talk02:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "А у тебя на карте отмечены "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "горы\nБлизнецы"
+      - control:
+          kind: reset_colour
+      - text: ", которые к северу отсюда?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "По легенде, когда-то это была одна\nгора, но король драконов расколол\nее надвое, чтобы проложить путь."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Некоторые утверждают, что его\nотражение можно увидеть в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "озере\nФлория"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А может, это не легенда,\nа было на самом деле?"
+  talk03:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Гром — это страшно...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Парень, а ты знаешь, что гром гремит,\nкогда гневается великий дракон?"
+      - control:
+          kind: pause
+          length: short
+      - text: " По\nкрайней мере, многие в это верят."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А может, и нет никакого дракона..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ вот его никогда не видел."

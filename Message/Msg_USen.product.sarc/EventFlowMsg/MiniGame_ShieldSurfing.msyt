@@ -1,0 +1,2435 @@
+---
+group_count: 73
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Yes!
+  "0001":
+    attributes: ""
+    contents:
+      - text: No!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Yes!
+  "0003":
+    attributes: ""
+    contents:
+      - text: "I'm fine."
+  "0004":
+    attributes: ""
+    contents:
+      - text: Never mind!
+  "0005":
+    attributes: ""
+    contents:
+      - text: "That's OK."
+  "0006":
+    attributes: ""
+    contents:
+      - text: "I'm through for now."
+  "0007":
+    attributes: ""
+    contents:
+      - text: Nothing!
+  "0008":
+    attributes: ""
+    contents:
+      - text: I still want out!
+  "0009":
+    attributes: ""
+    contents:
+      - text: "Well, in that case..."
+  "0010":
+    attributes: ""
+    contents:
+      - text: Do your worst!
+  "0011":
+    attributes: ""
+    contents:
+      - text: "I'll just take it easy..."
+  "0012":
+    attributes: ""
+    contents:
+      - text: Shield surfing is life!
+  "0013":
+    attributes: ""
+    contents:
+      - text: "*shrug*"
+  "0014":
+    attributes: ""
+    contents:
+      - text: The advanced course.
+  "0015":
+    attributes: ""
+    contents:
+      - text: The beginner course.
+  "0016":
+    attributes: ""
+    contents:
+      - text: Neither of them!
+  "0018":
+    attributes: ""
+    contents:
+      - text: Sorry...
+  "0019":
+    attributes: ""
+    contents:
+      - text: Does that happen?
+  AboutCourse_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Straight down from here, you'll see a\nbig bridge."
+      - control:
+          kind: pause
+          length: long
+      - text: " Why don't you start by\nsurfing your way there?\nIt's a pretty no-frills course, but it'll\nhelp me get a bead on where you're at\nwith your technique."
+  AboutGame_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Wow, you seem serious about this."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNot very surfer-like, but OK."
+      - control:
+          kind: pause
+          length: short
+      - text: " I'll boil\nit down for you.\nShield surfing is all about how fast you\ncan make it to the bottom of the hill."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Quick check—you do know how to surf,\nright?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Just hold out your shield, and\nthen hop onto it in mid-jump.\nFor this course, I don't care if you stay\non your shield or not. "
+      - control:
+          kind: pause
+          length: short
+      - text: "You can go so fast\nthat you start to fly for all I care."
+  AskAboutShieldSurfing_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Hmmm. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Let's put the test aside for now\nand just ask you straight out..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1056964608
+      - text: "What does "
+      - control:
+          kind: text_size
+          percent: 125
+      - text: "shield surfing "
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "really mean\nto you?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 13
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  AskCourse_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "That's my boy. "
+      - control:
+          kind: pause
+          length: long
+      - text: "Which slope were you\nthinking for today?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 15
+            - 14
+            - 16
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  AskPurpose_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "You hiked all this way to meet the best\nthere ever was at shield surfing, right?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskPurpose_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "So what brings you out here today? "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWanna show me the results of all that\ntraining I'm sure you've been doing?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskRetry_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "So want to hit the slope again?\nIt'll be another "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: " for the\ncourse fee."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskRetry_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: So wanna hit the slope one more time?
+      - control:
+          kind: choice
+          choice_labels:
+            - 15
+            - 14
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  AskRupee_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "How does... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Hmmm... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Is "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "\na session OK with you?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskRupee_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: The same charge as usual applies.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nYou have that "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: " for the course\nfee, right?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskTraining_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Knew it! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Too bad for you that I'm retired,\nhuh?"
+      - control:
+          kind: pause
+          length: long
+      - text: " It's been years since anyone knew\nme as the Duchess of Downhill.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "But if you don't mind a few pointers from\na has-been, I'd be happy to critique\nyour technique."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  CautionBigDoor_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "Oh, one more thing! "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "Watch where you\nsurf"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "If you go the wrong way, you're bound\nto slam into this "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: giant stone door
+      - control:
+          kind: reset_colour
+      - text: ". Take\nmy word for it...that thing hurts."
+  ChangeBeginnerToExpert_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Now let's see you hang on the advanced\nslope."
+      - control:
+          kind: pause
+          length: long
+      - text: " It's longer than the beginner\ncourse, but stick with it!\nThe upside for the advanced course?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFinish it, and I'll give you a nice shield."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHow nice all depends on your time!"
+  ChangeBeginnerToExpert_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Now let's see you hang on the advanced\nslope."
+      - control:
+          kind: pause
+          length: long
+      - text: " It's longer than the beginner\ncourse, but stick with it!\nYou already won all the shields, so how\nabout I give you rupees instead?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nThe faster you finish, the more you get!"
+  ChangeExpertToBeginner_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Fine with me. Let's see how you handle\nthe beginner course."
+      - control:
+          kind: pause
+          length: long
+      - text: " I'm very curious to\nsee if you can improve your old time."
+  Check_Money00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Of course, you still have to pay the\ninstructor's fee, even on the advanced\ncourse. Still "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: ", if you wondered."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 15
+            - 16
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Check_Money02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Of course, I'll still need that course fee\nof "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  EntranceExplain_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "What I suggest is starting simple with\na basic course,"
+      - control:
+          kind: pause
+          length: short
+      - text: " so we can take a look at\nyour downhill fundamentals."
+  EntranceTalk_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Huh... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Welcome to the middle of\nnowhere."
+      - control:
+          kind: pause
+          length: short
+      - text: " Population: us."
+  EntranceTalk_Beginner_Default:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Hey...wait a second...
+  EntranceTalk_Beginner_Default_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "I'll watch you surf. "
+      - control:
+          kind: pause
+          length: long
+      - text: "If you don't mind a\nlittle attention from a former pro, that is."
+  EntranceTalk_Beginner_Default_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Not for free, though. There's a "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "20-rupee\nfee "
+      - control:
+          kind: reset_colour
+      - text: for every try.
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  EntranceTalk_Beginner_Default_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "I will need you to cough up "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "\nas a course fee."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  EntranceTalk_Beginner_SP:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "If you're carrying THAT shield, then...\nWhoa. This is big!"
+  EntranceTalk_Expert_Default:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Hey there. Everything going OK?\n"
+      - control:
+          kind: pause
+          length: long
+      - text: "What, me? Psh, like anything\never gets me down!"
+  EntranceTalk_Expert_SP:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "You're practically a pro yourself these\ndays. "
+      - control:
+          kind: pause
+          length: long
+      - text: "You won't forget who taught you\neverything you know, right?"
+  EntranceTalk_No_Shield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 1
+      - control:
+          kind: animation
+          name: Notice_00
+      - text: "...Huh?"
+      - control:
+          kind: pause
+          length: long
+      - text: " You don't have a shield!\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Self-sufficiency is the foundation of\nshield surfing."
+      - control:
+          kind: pause
+          length: long
+      - text: " Go find a shield and\ncome back!"
+  Exit_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Sure, take a breather."
+      - control:
+          kind: pause
+          length: short
+      - text: " Your journey to\ndominating the slopes has just started!"
+  Exit_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "You must be cold. I'll see you back to the\ncabin."
+      - control:
+          kind: pause
+          length: short
+      - text: " You can warm up a bit there\nbefore you go."
+  Exit_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Thanks for stopping by.
+      - control:
+          kind: pause
+          length: short
+      - text: " I look forward\nto seeing you beat your record the next\ntime we meet."
+  ExplainExpertCourseToBeginner_Expert_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Getting stranded on a long course is no\nfun at all. Make sure you keep your goal\nin the back of your mind, OK?"
+  ExplainExpertCourseToBeginner_Expert_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "First, "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: go straight
+      - control:
+          kind: reset_colour
+      - text: " under the same bridge\nthat was your goal for the beginners'\ncourse."
+  ExplainExpertCourseToBeginner_Expert_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Once you're through there, make a\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "sharp turn "
+      - control:
+          kind: reset_colour
+      - text: "before going down a "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "long\nstraightaway"
+      - control:
+          kind: reset_colour
+      - text: ".\nYou should be able to see a pair of "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "big\nflags "
+      - control:
+          kind: reset_colour
+      - text: "marking the finish line. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Head for\nthose and you can't go wrong.\nIf you do manage to veer too far off\ncourse, I'll just drag you back here."
+  Failed_00_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "I've seen slowpokes before, but you're\nsomething else!"
+      - control:
+          kind: pause
+          length: short
+      - text: " That's the end of the\nrun. Come on back!"
+  Failed_00_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "You still have some room to improve,\nbut who doesn't?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Stick with it, and I\nthink you can cut your time in half."
+  Failed_00_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "One helpful thing is thinking about your\nmoves in advance. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Don't get so caught\nup in the run that you forget your goal."
+  Failed_01_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Huh? How'd I lose track of him?! "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nThat's not good... I better find him\nbefore it's too late!"
+  Failed_01_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "What in the world... Where did you think\nyou were going?"
+      - control:
+          kind: pause
+          length: short
+      - text: " You coulda gotten\nstranded out there!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  Failed_01_02_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 18
+      - text: "Don't apologize, just...don't do it to\nbegin with. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Anyway, at least you're not\nhurt. You had me worried!"
+  Failed_01_02_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 18
+      - control:
+          kind: pause
+          length: short
+      - text: "...Yes? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Obviously? "
+      - control:
+          kind: pause
+          length: long
+      - text: "It's cold. There's\nsnow. Yeah, it happens. It's gonna\nhappen to US if we don't get moving."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Sheesh...
+  Failed_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: You seem off your game today...
+      - control:
+          kind: pause
+          length: long
+      - text: " Well,\neveryone needs a break sometimes."
+  GoalBeginnerCourse_BadTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nHonestly, I think you can do better."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "It might feel like you're only making\ntiny gains, but they add up. "
+      - control:
+          kind: pause
+          length: short
+      - text: Keep at it!
+  GoalBeginnerCourse_GoodTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSee? I knew you had it in you. "
+      - control:
+          kind: pause
+          length: short
+      - text: "That's\nwhy I let you move up to the real course.\nA showing like this was a matter of when,\nnot if."
+  Goal_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: Aaaand time!
+      - control:
+          kind: pause
+          length: short
+      - text: " I'll wait right\nhere for you to come back!"
+  Goal_BadTime_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 18
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDon't take this the wrong way, but you\nhave some serious practicing to do.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "You can't move on to the trickier slopes\nuntil you've learned to keep your mind\non what's in front of you now."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nWhat seems like a smooth stretch can\nbe bumpier than it looks!"
+  Goal_BadTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nLet's face it. You need to get serious."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Remember, "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "your shield doesn't take\ndamage"
+      - control:
+          kind: reset_colour
+      - text: " on snow or sand, so surf those\ndunes all you want for practice."
+  Goal_BadTime_Expert_Present:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Take this shield and keep practicing\nwith it."
+  Goal_BadTime_Expert_Present1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Well...
+      - control:
+          kind: pause
+          length: short
+      - text: "you made it to the goal. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Everyone\nhas to start somewhere. "
+      - control:
+          kind: pause
+          length: long
+      - text: "Take this,\nand don't give up, OK?"
+  Goal_BadTime_Expert_dame:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nIs it me, or have you gotten worse?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Maybe you should hit the beginner\nslopes a few more times to bone up on\nthe fundamentals."
+  Goal_BadTime_Expert_dame1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 25
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "... "
+      - control:
+          kind: pause
+          length: long
+      - text: "I guess\nyou're getting the hang of it by now."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "This is about the time I knew the whole\nsurfing thing might be going somewhere."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nI hope you have as much fun as I did!"
+  Goal_BadTime_Expert_rupi:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: Did you...
+      - control:
+          kind: pause
+          length: short
+      - text: pick up a shield along the way?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nI could swear there was room in your\npack when you left...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "It's fine."
+      - control:
+          kind: pause
+          length: short
+      - text: " It's fine. "
+      - control:
+          kind: pause
+          length: short
+      - text: "I'll just hold on to it\nuntil the next time you surf with some\nfree space in your gear."
+  Goal_BadTime_Expert_rupi_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: Whoops!
+      - control:
+          kind: pause
+          length: short
+      - text: " This is the same shield I gave\nyou last time, huh?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Uh...how about some rupees as a\nconsolation prize?"
+  Goal_BadTime_Expert_rupi_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: Wow—
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "?! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Are you for\nreal?! "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "You're better than I ever was..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nYou could be a pro if you wanted!"
+  Goal_BadTime_Expert_rupi_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nThat's on par with my best time!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "You should be proud. "
+      - control:
+          kind: pause
+          length: short
+      - text: "The only other\nones on that level are Rito, and they\ntend to cheat by flying."
+  Goal_BadTime_Expert_rupi_04:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDecent enough."
+      - control:
+          kind: pause
+          length: short
+      - text: " You might be playing it\ntoo safe, though.\nYou want to really build up speed before\nyou hit the turns."
+  Goal_BadTime_Expert_rupi_05:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nLet's face it. You need to get serious."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Remember, "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "your shield doesn't take\ndamage"
+      - control:
+          kind: reset_colour
+      - text: " on snow or sand, so surf those\ndunes all you want for practice."
+  Goal_CommonTime_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nPretty average time, all told. I'm not too\nkeen on letting you move on, but...\nWell, I'll make it your call. You comfy\nwhere you are, or do you want to push\nahead anyway?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 10
+            - 11
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Goal_CommonTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDecent enough."
+      - control:
+          kind: pause
+          length: short
+      - text: " Could be faster, though.\n\nYou want to really build up speed before\nyou hit the turns."
+  Goal_CommonTime_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: " That's\npretty fast, as these things go!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Stay focused, believe in yourself, and\nyou'll be setting new records like it's\nnothing!"
+  Goal_CommonTime_Expert2:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: " That's not\ntoo far off my own record."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: That takes some serious skills!
+      - control:
+          kind: pause
+          length: long
+      - text: " I'll admit,\nyou've impressed me."
+  Goal_CommonTime_Expert_Present:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Take this shield and use it the next time\nyou hit the slopes."
+  Goal_CommonTime_Expert_Present1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "I'm giving you this but only so you can\nuse it to learn to do better. "
+      - control:
+          kind: pause
+          length: short
+      - text: "I wanna see\nyou give it all you got next time."
+  Goal_GoodTime_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nGreat run! I'm definitely seeing some\ntalent in you.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "I'd like to see what you can do on a\nharder slope now. "
+      - control:
+          kind: pause
+          length: short
+      - text: "You can consider the\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "advanced course "
+      - control:
+          kind: reset_colour
+      - text: "open for business!\nMake me proud, OK?"
+  Goal_GoodTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nThat's on par with my best time!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "You should be proud. "
+      - control:
+          kind: pause
+          length: short
+      - text: "The only other\nones on that level are Rito, and they\ntend to cheat by "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: flying
+      - control:
+          kind: reset_colour
+      - text: ".\nI'm out of things to teach you."
+  Goal_GoodTime_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 21
+      - text: "You clocked in at "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: pause
+          length: long
+      - text: " That's...\nThat's better than I've ever done...\nYou beat my record.\nWhat are you still paying me instruction\nfees for? "
+      - control:
+          kind: pause
+          length: short
+      - text: "There's nothing else I can\nteach you. "
+      - control:
+          kind: pause
+          length: long
+      - text: "Well done, champ."
+  Goal_GoodTime_Expert_Present:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Consider this a graduation gift. It's all\nyours, champ!"
+  Goal_GoodTime_Expert_Present1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "A shiny new record deserves a shiny new\nshield. Here y'go!"
+  Goal_GoodTime_Expert_Present2:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Nice time! That deserves a prize.
+  Goal_WonderfulTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: Wow—
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: ":"
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: "."
+      - control:
+          kind: variable
+          variable_kind: 19
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: " You're no\nslouch! "
+      - control:
+          kind: pause
+          length: long
+      - text: "Keep that up, and you could\neasily go pro someday."
+  HintNextStep_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "If I dig the way you surf, I'll let you\nadvance to the next step. But we can\ngo down that hill when we get to it."
+  IfAnswerFact_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Uh...are you pulling my leg?
+      - control:
+          kind: pause
+          length: long
+      - text: " Though..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nThese days I'd probably answer the\nsame way.\nShield surfing is how we express a\npassion that we can't put into words."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSurfing is its own meaning.\nFunny,"
+      - control:
+          kind: pause
+          length: short
+      - text: " I started out thinking I'd teach\nyou a few tricks, but I ended up learning\nsomething pretty important.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "I think you'll be just fine on the\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: advanced course
+      - control:
+          kind: reset_colour
+      - text: ". "
+      - control:
+          kind: pause
+          length: long
+      - text: "But don't make me\nregret that decision, OK?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Haha..."
+  IfAnswerRetry_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Good. "
+      - control:
+          kind: pause
+          length: long
+      - text: "Knowing your limits is important\nwhen it comes to a hobby that involves\nscreaming down the side of a mountain.\nYou know, you've got a good head on\nyour shoulders. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Let's keep it there."
+  IfAnswerSurface_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Life? "
+      - control:
+          kind: pause
+          length: short
+      - text: "It's your whole life? That's your\nanswer?"
+      - control:
+          kind: pause
+          length: long
+      - text: " *sigh*"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Slipping, "
+      - control:
+          kind: pause
+          frames: 4
+      - text: "crashing, "
+      - control:
+          kind: pause
+          frames: 4
+      - text: "and falling over\ncliffs is no kind of a life for anybody."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nTrust me—I know.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "If that's how you see things, you're in no\nshape to advance yet."
+      - control:
+          kind: pause
+          length: long
+      - text: " Sorry, but I'll have\nto ask you to "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: do the basic course again
+      - control:
+          kind: reset_colour
+      - text: "."
+  IfSelectBeginnerCourse_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Oh, really? "
+      - control:
+          kind: pause
+          length: long
+      - text: "Yeah, sometimes it's good to\nreview the fundamentals."
+  IfSelectExpertCourse_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Sure. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Let's see just how far your practice\nhas gotten you."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Once you clear the advanced course,\nyou can earn special shields for beating\ncertain times. How's that for incentive?"
+  IfSelectExpertCourse_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Sure. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Let's see just how far your practice\nhas gotten you."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Once you clear the advanced course,\nyou can earn special shields for beating\ncertain times. How's that for incentive?\nExcept..."
+      - control:
+          kind: pause
+          frames: 20
+      - text: "it looks like you have all the\nshields you can carry."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ditch one or I\ncan't give you your proper reward!"
+  Initial_GlassShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "A royal guard's shield... "
+      - control:
+          kind: pause
+          length: long
+      - text: "*yawn*"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nThose flimsy pieces of garbage are\nworthless to serious surfers."
+  Initial_GlassShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "A royal guard's shield... "
+      - control:
+          kind: pause
+          length: long
+      - text: "*yawn*"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nThose flimsy pieces of garbage are\nworthless to serious surfers."
+  Initial_GoldenShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "That's a Gerudo shield! The Gerudo\nare famous for it!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Wow, they put actual\nthought into making it surfable."
+  Initial_GoldenShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "That's a Gerudo shield! The Gerudo\nare famous for it!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Wow, they put actual\nthought into making it surfable."
+  Initial_MoonlightShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh..."
+      - control:
+          kind: pause
+          length: long
+      - text: "* Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "That's a radiant shield! You wouldn't\nbelieve how rare those things are!"
+      - control:
+          kind: pause
+          length: short
+      - text: " You\npractically never see them anymore..."
+  Initial_MoonlightShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "That's a radiant shield! You wouldn't\nbelieve how elusive those things are!"
+      - control:
+          kind: pause
+          length: short
+      - text: " You\npractically never see them anymore..."
+  Initial_RoyalShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Oooh, a royal shield! "
+      - control:
+          kind: pause
+          length: short
+      - text: "I have one hanging\nup in my cabin too."
+      - control:
+          kind: pause
+          length: short
+      - text: " It's hands down the\nbest design for surfing I've ever seen!"
+  Initial_RoyalShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Oooh, a royal shield! "
+      - control:
+          kind: pause
+          length: short
+      - text: "I have one hanging\nup in my cabin too."
+      - control:
+          kind: pause
+          length: short
+      - text: " It's hands down the\nbest design for surfing I've ever seen!"
+  Initial_SpikeShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "It's a steel Lizal shield! "
+      - control:
+          kind: pause
+          length: short
+      - text: "That spike is\nworth major style points for when you\nwant to look hard-core on the slope!"
+  Initial_SpikeShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "It's a steel Lizal shield! "
+      - control:
+          kind: pause
+          length: short
+      - text: "That spike is\nworth major style points for when you\nwant to look hard-core on the slope!"
+  Initial_SunShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: A Daybreaker!
+      - control:
+          kind: pause
+          length: short
+      - text: " Am I dreaming?!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nI've wanted that shield so bad that I've\nseen it in my dreams..."
+  Initial_SunShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "*sigh...*"
+      - control:
+          kind: pause
+          length: long
+      - text: " Hey... "
+      - control:
+          kind: pause
+          frames: 50
+      - text: "What's that on\nyour back?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: A Daybreaker!
+      - control:
+          kind: pause
+          length: short
+      - text: " Am I dreaming?!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nI've wanted that shield so bad that I've\nseen it in my dreams..."
+  LetsStart_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Then let's get straight to the slopes."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFollow me!"
+  LetsStart_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Do you need a rundown on how this\nworks?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  LetsStart_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Oh, so you already know what you're in\nfor. "
+      - control:
+          kind: pause
+          length: long
+      - text: "Suits me. I hate having to explain to\ncasuals anyway."
+  LetsStart_04:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: I wanna see you shred out there.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nYou ready?"
+      - control:
+          kind: pause
+          length: long
+      - text: " On your mark..."
+  NG_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 6
+      - text: Really? Are...are you sure?
+      - control:
+          kind: pause
+          length: short
+      - text: " I-it's not\nlike I was expecting visitors today."
+  NoPlay_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "Right... "
+      - control:
+          kind: pause
+          length: short
+      - text: "I used to be a big deal back in\nmy day, but the world moves on fast."
+  NotHadEnoughRupee:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 19
+      - text: "Looks like you're too broke to afford the\ninstructor's fee."
+      - control:
+          kind: pause
+          length: short
+      - text: " Come back when you\ncan scrape together "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "."
+  Pouch_Check00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hey, look who made some room in their\npack! "
+      - control:
+          kind: pause
+          length: short
+      - text: "I got that shield I promised you\nright here."
+  Pouch_Check01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "I wish I could give you that prize shield\nfor the advance course I was holding\nfor you..."
+      - control:
+          kind: pause
+          length: long
+  Pouch_Check02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "Buuuut you still haven't made any room\nfor it in your pack. "
+      - control:
+          kind: pause
+          length: long
+      - text: "So I'll keep holding\non to it for the next time you stop by!"
+  Pouch_Check03:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "C'mon, let's head back to the cabin."
+  Pouch_Check04:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "When you find some room in your pack,\nlet me know!"
+  Pouch_Check05:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "I want to see you shred on that shield\nI gave you..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Show me what you got!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 15
+            - 14
+            - 16
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  RefusePay_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: "Wow, OK."
+      - control:
+          kind: pause
+          length: short
+      - text: " If you want to pass up the\nchance to get tips from a former pro,\nhey, I won't stop you."
+  Stop_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "What's up?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Stop_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Uh... "
+      - control:
+          kind: pause
+          length: short
+      - text: "You know I'm not giving your\nrupees back, right?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Stop_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: "Feels like a waste to me, but all right."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJust promise me you'll come back\nsometime and show me what you've got!"
+  Stop_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Great! Now get back out there, and show\nme what you've got!"
+  TalkForPay_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 25
+      - text: Smart choice.
+      - control:
+          kind: pause
+          length: short
+      - text: " I always say, if you're not\nwilling to put your money where your\nmouth is, how serious are you really?"
+  TellRupee_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Such enthusiasm! "
+      - control:
+          kind: pause
+          length: short
+      - text: "I haven't seen anyone\nwith passion like that since...well, me!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "But I'm not just any surfer-come-lately.\nI was the BEST. "
+      - control:
+          kind: pause
+          length: long
+      - text: "And that means my\nadvice isn't free."
+  suremi_fire_shield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "Hey! "
+      - control:
+          kind: pause
+          length: short
+      - text: "What's the big idea?! "
+      - control:
+          kind: pause
+          length: short
+      - text: Cut that out!

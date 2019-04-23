@@ -1,0 +1,848 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: I wanna sell.
+  "0001":
+    attributes: ""
+    contents:
+      - text: "Not really, no."
+  "0002":
+    attributes: ""
+    contents:
+      - text: Show me the goods.
+  "0003":
+    attributes: ""
+    contents:
+      - text: "No, but thanks."
+  "0004":
+    attributes: ""
+    contents:
+      - text: I wanna buy.
+  "0005":
+    attributes: ""
+    contents:
+      - text: I wanna sell.
+  "0006":
+    attributes: ""
+    contents:
+      - text: Good-bye.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Yes.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Deal!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "I'll take 'em all!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: "All of 'em."
+  Axe00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Hey there.
+      - control:
+          kind: pause
+          length: short
+      - text: " Where are ya plannin' on\ngoin' with my axe?"
+  Axe01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "It's OK. You can have it."
+      - control:
+          kind: pause
+          length: short
+      - text: " Sorry for\nhollerin' at ya like that.\n\nIt's just the times we live in..."
+      - control:
+          kind: pause
+          length: short
+      - text: " No one's\ngonna get mad if ya pick up somethin'\nthat's just lyin' around.\nIf somethin' is important to someone,\nthey wouldn't let it outta their sight."
+  Axe02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "By the way...\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "I'm a traveling merchant. Name's Giro."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNice to meet ya!\n\nI venture into the forest to get my wares.\nOh, but I also buy them from travelers\nlike you.\nSo..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Do ya happen to have anything rare\nyou'd be interested in sellin'?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Great! Let's see what ya got..."
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "How does "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees "
+      - control:
+          kind: reset_colour
+      - text: sound?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Great! Thanks!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Ah, that's a big help. Thanks so much!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Thanks!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: OK! Until next time.
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Oh, right."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "I'll buy just about anything."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Take your time.
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "OK! If you need someone to buy your\nstuff from you, just leave it to me!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: What do you wanna sell?
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: Is there anything you want?
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Sorry, I'm all out of that."
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "You don't have enough rupees..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSorry, I can't lower the price."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Your pouch is full.
+      - control:
+          kind: pause
+          length: short
+      - text: " Why not make\nsome space and come back?"
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - text: "You wanna buy that, eh?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Thanks so much!
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Great! Thank you!
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Great! Thanks so much!
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Thanks!
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "I'm proud of my wares. All of 'em.\nPlease, take a look!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: So...how many do you wanna sell?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: That would come to...
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nThat work?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Ah, I'm afraid I can't buy that."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "You need to take that clothing off first\nif you wanna sell it."
+  Com_Talk_20:
+    attributes: ""
+    contents:
+      - text: Adventuring even in weather like this?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWell, I suppose you can't just wait your\nwhole life for a nice day, can ya?\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Lemme express my respect for your\ndetermination by showin' ya my\nselection of very special wares!"
+  Com_Talk_30:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: That would come to...
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nThat work?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "How many are ya thinkin'?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Just one?
+      - control:
+          kind: pause
+          length: short
+      - text: " All right, how about\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "All of 'em, eh?"
+      - control:
+          kind: pause
+          length: short
+      - text: " That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nThat OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "All of 'em? OK, I can offer ya\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Sound good?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "OK, that's the last of 'em! Thanks for\nbuyin' so much!"
+  Com_Talk_37:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Thanks to you, I'm all outta things\nto sell!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Care to take a look at the\ngoods I'm scheduled to receive?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Just one?
+      - control:
+          kind: pause
+          length: short
+      - text: " All right, that'll be\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Hey! You a traveler?
+      - control:
+          kind: pause
+          length: short
+      - text: " Grab a spot by\nthe fire, if you'd like. \n\nI'm a traveling merchant. Name's Giro. "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNice to meet ya!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Crazy times we live in, eh?"
+      - control:
+          kind: pause
+          length: short
+      - text: " I go into the\nforest all on my own to get my wares...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "But there are far safer ways to get 'em."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSuch as buyin' from travelers like you!\n\nSo..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Do ya happen to have anything rare\nyou'd be interested in sellin'?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk00_Rain:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Hey! You in a rush to get somewhere? "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nThis rain'll soak ya to the bone.\n\nI'm a traveling merchant. Name's Giro. "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNice to meet ya!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Crazy times we live in, eh?"
+      - control:
+          kind: pause
+          length: short
+      - text: " I go into the\nforest all on my own to get my wares...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "But there are far safer ways to get 'em."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSuch as buyin' from travelers like you!\n\nSo..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Do ya happen to have anything rare\nyou'd be interested in sellin'?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Well, OK. That's fine."
+      - control:
+          kind: pause
+          length: short
+      - text: " Is there anything\nI can do for ya?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Now it's my turn. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wanna buy somethin'?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  GoodBye00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "OK, got it."
+      - control:
+          kind: pause
+          length: short
+      - text: " Thanks for spendin' some of\nyour precious time on the road with me...\n\nEven the areas near civilization are full\nof monsters these days. Just strollin'\nthrough the woods can be dangerous.\nYou be careful, ya hear!"
+  GoodBye01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: OK. See ya next time.
+  Near00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Who's there?"
+  Near01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: "Oh, hey!"
+  Near02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - text: Zzz...
+  Talk00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Ah! It's you."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Need anything else?
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Look at you! A real early bird!
+  Talk03:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Hey! We meet again.
+  Talk04:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "You sure are workin' hard, stayin' up late\nlike this."
+  Talk05:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Guess I'll take it easy 'til the rain stops."
+  Talk06:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "I'm as afraid of lightning as I am of\nmonsters... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Please don't strike me..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nPlease don't strike me..."
+  Talk07:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 34
+      - text: "Oh. Hey. *YAWN* "
+      - control:
+          kind: pause
+          length: short
+      - text: What we got here?
+  Talk08:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: What do you wanna do?
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8

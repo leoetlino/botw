@@ -1,0 +1,1315 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Я кое-что продаю
+  "0001":
+    attributes: ""
+    contents:
+      - text: Какое обещание?
+  "0002":
+    attributes: ""
+    contents:
+      - text: До свидания
+  "0005":
+    attributes: ""
+    contents:
+      - text: Да
+  "0006":
+    attributes: ""
+    contents:
+      - text: Нет
+  "5500":
+    attributes: ""
+    contents:
+      - text: Идет!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5502":
+    attributes: ""
+    contents:
+      - text: Беру!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5507":
+    attributes: ""
+    contents:
+      - text: Беру все
+  "5508":
+    attributes: ""
+    contents:
+      - text: Продаю все
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Что продаешь? Показывай скорее!
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nКак насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Спасибо!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Благодарю!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 23
+            - 205
+      - text: Хороший товар!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Мне это сразу приглянулось!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Передумал? Жаль.
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Может, что-нибудь еще предложишь?"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Предложи еще что-нибудь.
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Покажи что-нибудь еще.
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Давай еще что-нибудь.
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Я бы сделала скидку, да сама еле\nконцы с концами свожу."
+      - control:
+          kind: pause
+          length: short
+      - text: " Так что\nкупишь потом, когда деньги будут."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Парень, у тебя и так стрел много."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПриходи, когда место освободится."
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Товар у меня отличный!\nНе спеши, выбирай что нужно."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nА сколько?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " штука"
+            - " штук"
+            - " штуки"
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Выходит "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Нет, это я купить не могу."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Если хочешь продать мне вещь,\nсначала сними ее с себя!"
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nСколько нужно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " С тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Все?
+      - control:
+          kind: pause
+          length: short
+      - text: " За "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " штуку"
+            - " штук"
+            - " штуки"
+      - text: " я могу\nпредложить тебе "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nС тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСколько нужно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Значит, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это обойдется\nтебе в "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: Передумал?
+      - control:
+          kind: pause
+          length: short
+      - text: " Жаль..."
+  Com_Talk_54:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Я бы сделала скидку, да сама еле\nконцы с концами свожу."
+      - control:
+          kind: pause
+          length: short
+      - text: " Так что\nкупишь потом, когда деньги будут."
+  Com_Talk_55:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Парень, у тебя и так стрел много."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПриходи, когда место освободится."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "С тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near00:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Добро пожаловать!
+  Near01:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Я еще закажу!
+  Near02:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Погода испортилась...
+  Talk01:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Нечасто ко мне заходят!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Нынешняя молодежь совсем не\nинтересуется стрельбой из лука."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Рада, что хоть ты пришел!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nВыбирай что угодно."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Ты лучник, да?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Нынешняя молодежь совсем не\nинтересуется стрельбой из лука."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Рада, что хоть ты пришел!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nМой магазин к твоим услугам."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если нет денег, я могу купить у тебя\nчто-нибудь — ты только скажи!"
+  Talk05:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Хорошо быть молодым, да?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Можно\nгулять даже в такое время."
+      - control:
+          kind: pause
+          length: short
+      - text: " Чем могу\nпомочь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk08:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Если хочешь что-нибудь купить,\nпросто подойди и возьми, хорошо?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nИли у тебя вопрос?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk10:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Спасибо!
+  Talk11:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ах, какой молодец! Я для\nтебя еще стрел закажу!"
+  Talk13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Прости! Как видишь, товар кончился."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Но я всегда могу купить\nу тебя что-нибудь."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk19:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 25
+      - text: "Ты, наверное, хорошо владеешь\nлуком, раз за стрелами зашел."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Когда-то мой муж был лучшим\nлучником шиика..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Потом увлекся\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "кокко "
+      - control:
+          kind: reset_colour
+      - text: — и вся жизнь под откос...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ох, извини. Просто ты мне чем-то\nего напоминаешь, а я от него ушла."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Не обращай внимания!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nБолтаю тут всякое!"
+  Talk21:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "Уходишь, значит?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Тогда\nя дам тебе совет..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ночью легче найти всякие травы\nда грибы, но и монстров больше."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nБудь осторожен."
+  Talk23:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Порадовал ты меня, парень."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ даже по мужу заскучала..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nна секундочку."
+  Talk24:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Ой, ты уже уходишь?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Ну пока не ушел дам тебе совет...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если хочешь быстро разбогатеть,\nпродавай "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: драгоценные камни
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " За\nних хорошо платят!"
+  Talk25:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Я все видела!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Ты такой молодец!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "У меня чуть сердце из\nгруди не выскочило!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Мой муж тоже хорошо луком владеет.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Правда, я от него ушла..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ах, это чувство в груди..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Я словно помолодела!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Спасибо, что порадовал!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПозволь тебя отблагодарить."
+  Talk26:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Эх, если бы только муж не был так одержим\nсвоими "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: кокко
+      - control:
+          kind: reset_colour
+      - text: " и вновь взял в руки лук..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk28:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Не забывай про свое обещание!
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk29:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 14
+      - text: Уже забыл?!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты обещал зажечь "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "светильники\nу статуи богини"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Раз уж взялся,\nтак сделай."
+  Talk30:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Ах, душа поет!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Как в молодости!"
+  Talk31:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: С луком ты управляешься прекрасно!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЛюбо-дорого посмотреть!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ой, чего это я болтаю!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nТы что-то хотел?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk32:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ах да, чего это я..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ты что-то хотел?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk34:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Ты хороший покупатель!
+  Talk35:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Благодарю!
+  Talk36:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Всегда к твоим услугам!
+  Talk37:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Я все видела!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Знаешь, мне ведь нет дела до\nтех светильников у статуи."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я просто хотела посмотреть,\nкак ты стреляешь."
+      - control:
+          kind: pause
+          length: short
+      - text: " Не могла же\nя об этом прямо попросить..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Мой муж тоже хорошо обращался\nс луком."
+      - control:
+          kind: pause
+          length: short
+      - text: " Мы с ним расстались..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nНу да ладно..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Я словно помолодела!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Спасибо, что порадовал!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПозволь тебя отблагодарить."
+  Talk38:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Всегда к твоим услугам.
+      - control:
+          kind: pause
+          length: short
+      - text: " Кстати,\nне забудь про свое обещание."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk39:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Поздно-то как...
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

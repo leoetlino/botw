@@ -1,0 +1,927 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ich will verkaufen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Was bietest du an?
+  "0002":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Einverstanden.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Lieber doch nicht.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kaufen!
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Moment, doch nicht..."
+  "5507":
+    attributes: ""
+    contents:
+      - text: "Alles, bitte!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkaufen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Was möchtest du verkaufen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDafür gebe ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ".\nIn Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Vielen Dank! Möchtest du noch etwas\nverkaufen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Möchtest du mir noch mehr Sachen\nverkaufen?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "Verkauf mir noch was, werter Held!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Es ist eine große Ehre, dem Helden\nseine Schätze abzukaufen!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Ah, doch nicht? Zu schade..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Ich kaufe alles!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Hast du was von außerhalb des Waldes?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Na, was verkaufst du mir?"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Hm-hm... "
+      - control:
+          kind: pause
+          length: long
+      - text: "So sieht es also in der Tasche\ndes Helden aus..."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " also?\n"
+      - control:
+          kind: pause
+          length: short
+      - text: Und wie viel davon?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Das macht dann "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: "\ninsgesamt, in Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Damit kann ich hier nichts anfangen.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Kannst du das bitte erst ablegen, bevor\ndu es mir verkaufst?"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Mehr nicht? "
+      - control:
+          kind: pause
+          length: short
+      - text: Na gut...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDafür geb ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Aber gerne doch! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Das macht dann\ninsgesamt "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Gleich alles auf einmal? "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Dafür könnte ich\ndir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: " anbieten."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDas macht dann "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: ",\nin Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " also?\nUnd wie viel davon darf es sein?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Das macht dann "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: ",\nin Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Doch nicht?
+      - control:
+          kind: pause
+          length: short
+      - text: " Schade..."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Du hast nicht genug Rubine.
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Das kannst du nicht mehr tragen.\nÜberanstrenge dich nicht!"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Nur das?
+      - control:
+          kind: pause
+          length: short
+      - text: " ..."
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Npc_kokiri003_Near000:
+    attributes: Npc_kokiri003
+    contents:
+      - text: Waldrat vom Waldschrat!
+  Npc_kokiri003_Near020:
+    attributes: Npc_kokiri003
+    contents:
+      - text: Alles ausverkauft...
+  Npc_kokiri003_Sell000:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ich habe gehört, dass du kommst, werter\nHeld, also habe ich gleich meinen Laden\nfür "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Waldrat
+      - control:
+          kind: reset_colour
+      - text: " aufgemacht!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wenn du etwas verkaufen möchtest,\nkaufe ich es dir gern ab!"
+  Npc_kokiri003_Sell010:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: Vielen Dank!
+  Npc_kokiri003_Sell010b:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Die ganzen Sachen zu sammeln zahlt\nsich aus!"
+  Npc_kokiri003_Sell010c:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Danke!
+  Npc_kokiri003_Sell010d:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "„Und so kam es, dass der Held bei\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Waldrat
+      - control:
+          kind: reset_colour
+      - text: " einkaufte...“"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDas erzähle ich noch meinen Enkeln!"
+  Npc_kokiri003_Sell020:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Vielen Dank für deinen Einkauf!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ich habe gehört, dass du kommst, werter\nHeld, also habe ich gleich meinen Laden\nfür "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Waldrat
+      - control:
+          kind: reset_colour
+      - text: " aufgemacht!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Wenn du etwas verkaufen möchtest,\nkaufe ich es dir gern ab!"
+  Npc_kokiri003_Sell030:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Es war mir eine Ehre!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich werde mich bemühen, mein Angebot\nwieder etwas aufzufüllen."
+  Npc_kokiri003_Talk000:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Sieh an, sieh an! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Herzlich willkommen,\nwerter Held, in meinem kleinen, aber\nfeinen Laden für "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Waldrat
+      - control:
+          kind: reset_colour
+      - text: "!\nIch verkaufe hier Dinge, die ich im Wald\nfinde, und Dinge, die ich nicht im Wald\nfinde!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Sieh dich um, such dir was aus!\nOder..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Möchtest du lieber etwas\nverkaufen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk010:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Willkommen im bestsortierten Lädchen\nfür "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Waldrat
+      - control:
+          kind: reset_colour
+      - text: " weit und breit!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Such dir was aus!
+      - control:
+          kind: pause
+          length: long
+      - text: " Oder möchtest du\nlieber was verkaufen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk020:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Guten Abend, werter Held.\nMöchtest du was verkaufen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk030:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Tut mir leid...
+      - control:
+          kind: pause
+          length: short
+      - text: " Alles ausverkauft!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nAber wenn du etwas verkaufen\nmöchtest..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri003_Talk040:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bei mir kannst du alles loswerden, was\ndu nicht mehr brauchst."
+      - control:
+          kind: pause
+          length: short
+      - text: " Alles!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ich kauf dir sogar den Torf unter deinen\nSohlen ab, solange er nur nicht aus\ndiesem Wald stammt!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ich will Dinge sehen, die es in diesem\nWald nicht gibt! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Dinge, die ich noch nie\ngesehen habe!"
+  Npc_kokiri003_Talk050:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 18
+      - text: "Werter Held! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Sei bitte vorsichtig, wenn\ndu nachts im Wald bist, denn da treiben\nsich dann üble Monster herum..."
+  Npc_kokiri003_Talk060:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 25
+      - text: Vielen Dank.
+      - control:
+          kind: pause
+          length: long
+      - text: " Ich werde mich bemühen,\nmein Angebot wieder etwas aufzufüllen."
+  Npc_kokiri003_Talk070:
+    attributes: Npc_kokiri003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Ich sammle Nahrung und Pfeile für dich.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch bin sicher, die werden dir nützlich\nsein, werter Held!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Übrigens, wenn du einen "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: Elektropfeil
+      - control:
+          kind: reset_colour
+      - text: " bei\nRegen einsetzt, britzelt er noch schöner."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nMeine Empfehlung!"

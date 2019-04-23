@@ -1,0 +1,72 @@
+---
+group_count: 7
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Me rindo
+  "0001":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Quiero seguir
+  talk00:
+    attributes: EventSystemActor
+    contents:
+      - text: "Viajero que habéis acudido a la isla:\nos propongo una prueba."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hasta este instante, habíais confiado\nen numerosos utensilios, creyendo\nque vuestro poder residía en ellos.\nDeshaceos de todo, empezad desde\ncero y enfrentaos a la prueba que\nos ofrezco."
+  talk01:
+    attributes: EventSystemActor
+    contents:
+      - text: "Habéis demostrado vuestra valía\nal superar la prueba."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Cumpliré con mi palabra y os devolveré\nvuestros utensilios."
+  talk02:
+    attributes: NPC_GodVoice
+    contents:
+      - text: ¿Quieres abandonar la prueba?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk03:
+    attributes: EventSystemActor
+    contents:
+      - text: "¿Habéis decidido abandonar\nla prueba antes de completarla?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Os devolveré vuestros utensilios,\nmas espero volver a veros en la isla."
+  talk04:
+    attributes: EventSystemActor
+    contents:
+      - text: "¿Adónde vais? Si deseáis continuar con\nla prueba, deberíais volver a la isla."
+  talk05:
+    attributes: EventSystemActor
+    contents:
+      - text: "Ofreced los orbes en los tres altares\nque encontraréis en la isla."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Solo así daré por superada la prueba\ny os devolveré vuestros utensilios."
+  talk06:
+    attributes: EventSystemActor
+    contents:
+      - text: "Adelante, acceded al santuario."

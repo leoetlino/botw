@@ -1,0 +1,857 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ik wil iets verkopen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Wat is deze plek?
+  "0002":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kopen.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Wil je iets verkopen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "Daar geef ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "voor, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Bedankt! Wil je nog iets anders\nverkopen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Ik koop graag van je, meneer de held!\nWil je me nog iets verkopen?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Ik zal goed voor de spullen zorgen die ik\nvan je heb gekocht, meneer de held!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Verkoop me alles wat je kwijt wilt!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "O, je bent van gedachten veranderd?\nOok goed."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Het hoeft geen paddenstoel te zijn, hoor.\nIk koop alles."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Ik koop alles van je, meneer de held!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Wat is dat? Wat heb je daar?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Hmmm... Dat ruikt naar jou, meneer de\nheld!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: Hoeveel wil je er kwijt?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Ik koop er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " van je en geef je er\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "voor, goed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Dat kan ik niet van je kopen.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Kun je dat eerst even uittrekken?
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Is die ene alles wat je kwijt wilt? Oké\ndan. Ik geef je er "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Allemaal? Ik heb er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", maar voor\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: mag jij ze hebben.
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Allemaal? Ik wil er best "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " van je\nkopen! Hoe klinkt "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 6
+      - control:
+          kind: reset_colour
+      - text: "Dat kost je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", goed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 6
+      - control:
+          kind: reset_colour
+      - text: Hoeveel wil je er?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "? Ik vind "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " een\nmooie prijs, wat jij?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "O, je bent van gedachten veranderd?\nOok goed."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "Je hebt niet genoeg rupees... Ik kan ze\nniet zomaar gratis weggeven, hoor..."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 6
+      - text: "Zo te zien heb je helemaal geen ruimte\nmeer."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je ze niet op je hoofd of rug kunt\nlaten groeien, zul je eerst weer ruimte\nmoeten maken."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Voor die ene wil ik "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", goed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Npc_kokiri004_Near000:
+    attributes: Npc_kokiri004
+    contents:
+      - text: "Zwammen, zwammen..."
+  Npc_kokiri004_Near020:
+    attributes: Npc_kokiri004
+    contents:
+      - text: Ik ga er meer plukken.
+  Npc_kokiri004_Sell000:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "De Deku-boom zei al dat je eraan zou\nkomen, meneer de held."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik dacht dat je misschien trek zou\nhebben..."
+      - control:
+          kind: pause
+          length: short
+      - text: " dus ik ben het bos ingegaan\nom paddenstoelen te verzamelen!\nAls je iets wilt verkopen, kom je maar\nmet mij praten, oké?"
+  Npc_kokiri004_Sell010:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Bedankt!
+  Npc_kokiri004_Sell010b:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik ben blij dat je iets hebt gekocht,\nmeneer de held!"
+  Npc_kokiri004_Sell010c:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik ben blij dat ik paddenstoelen ben gaan\nverzamelen!"
+  Npc_kokiri004_Sell010d:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Eet je buikje maar rond, oké?"
+  Npc_kokiri004_Sell020:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bedankt voor het kopen van mijn\npaddenstoelen!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik zal er nog meer gaan\nplukken."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "De Deku-boom zei al dat je eraan zou\nkomen, meneer de held."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik dacht dat je misschien trek zou\nhebben..."
+      - control:
+          kind: pause
+          length: short
+      - text: " dus ik ben het bos ingegaan\nom paddenstoelen te verzamelen!\nAls je iets wilt verkopen, kom je maar\nmet mij praten, oké?"
+  Npc_kokiri004_Sell030:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Bedankt voor het kopen van mijn\npaddenstoelen!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik zal er nog meer gaan\nverzamelen!"
+  Npc_kokiri004_Talk000:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Huh?
+      - control:
+          kind: pause
+          length: short
+      - text: " Oeh! Oeh! Oeh! Ik was op je aan\nhet wachten!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "De Deku-boom zei al dat je eraan zou\nkomen, meneer de held."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik dacht dat je misschien trek zou\nhebben..."
+      - control:
+          kind: pause
+          length: short
+      - text: " dus ik ben het bos ingegaan\nom paddenstoelen te verzamelen!"
+  Npc_kokiri004_Talk010:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Dit is de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Zwammenzaak
+      - control:
+          kind: reset_colour
+      - text: "! Mijn\npaddenstoelen zijn verrukkelijk,"
+      - control:
+          kind: pause
+          length: short
+      - text: " soms\nietwat twijfelachtig,"
+      - control:
+          kind: pause
+          length: short
+      - text: " en handgeplukt!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Kijk rond!
+      - control:
+          kind: pause
+          length: short
+      - text: " Koop iets! Of wilde je juist iets\nverkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri004_Talk020:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Dit is de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Zwammenzaak
+      - control:
+          kind: reset_colour
+      - text: "! De zon is\nonder, maar het gaat nog steeds\nuitstekend met de paddenstoelen!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Kijk rond!
+      - control:
+          kind: pause
+          length: short
+      - text: " Koop iets!\nOf wilde je juist iets verkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri004_Talk030:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 18
+      - text: "Ik wist niet dat je zo dol was op\npaddenstoelen, meneer de held..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Ik zal er meer gaan plukken in het bos.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik kan ondertussen nog wel dingen\nkopen die jij kwijt wilt. Heb je iets voor\nme?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_kokiri004_Talk040:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Breng wat je kwijt wilt naar mij! Het hoeft\nniet eens een paddenstoel te zijn!"
+  Npc_kokiri004_Talk050:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Inderdaad! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Er zijn paddenstoelen die\noplichten in het donker. Onthoud dat\ngoed!"
+  Npc_kokiri004_Talk060:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bedankt dat je zo veel paddenstoelen\nhebt gekocht!"
+  Npc_kokiri004_Talk070:
+    attributes: Npc_kokiri004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 4
+      - text: "We bevinden ons in de buik van de\nDeku-boom. Lekker knus, vind je niet?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "We hebben speciaal voor jou winkeltjes\ngeopend, meneer de held. En we hebben\nsamen de boel versierd!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Maar jij bent veel groter dan wij, dus\nvoor jou is het misschien een beetje te\nkrap hierbinnen...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Nou ja, neem de tijd en geniet van ons\naanbod!"

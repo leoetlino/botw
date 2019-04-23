@@ -1,0 +1,415 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 45
+      Demo_Idling: 46
+      Demo_Join: 47
+      Demo_OpenGetDemo: 48
+      Demo_PickUpItem: 49
+      Demo_PlayASForDemo: 50
+      Demo_PlayASForTimeline: 51
+      Demo_Reset: 52
+      Demo_ResetBoneCtrl: 53
+      Demo_SendSignal: 54
+      Demo_SetGetFlag: 55
+      Demo_TrigNullASPlay: 56
+      Demo_UpdateDataByGetDemo: 57
+      Demo_VisibleOff: 58
+      Demo_XLinkEventCreate: 59
+      Demo_XLinkEventFade: 60
+      Demo_XLinkEventKill: 61
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 38, 持ち運びボックス内: 26, 通常: 8}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ダウン, ClassName: !str32 GuardianDown, GroupName: 通常}
+            ChildIdx: !obj {ダウン中: 13, 起き上がり: 20}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 EnemyDefaultReaction, GroupName: 通常}
+            ChildIdx: !obj
+              ふっとび: 14
+              ガード: 9
+              ガードブレイク: 10
+              ショック: 12
+              ジャストガード: 11
+              凍結: 39
+              大落下: 34
+              小ダメージ: 28
+              崩れ落ち: 41
+              弾かれ: 35
+              死亡: 25
+              炎上: 17
+              痺れ: 44
+              突風: 40
+              落下: 42
+              超ショック: 36
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0}
+            SInst: !obj {JustGuardTimesMin: 3, JustGuardTimesMax: 5, SmallDamageCancelTimes: 0,
+              InComboSmallDamageNoCancel: false}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 仮死, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 29, 後行動: 21}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 起動, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 30, 後行動: 22}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: 見失い, ClassName: !str32 GuardianTargetLost, GroupName: 通常}
+            ChildIdx: !obj {周囲を見る: 27, 移動: 16, 音反応: 18}
+            BehaviorIdx: !obj {1721623982: 0, 295359800: 1}
+            SInst: !obj {MoveRange: 25.0, BackOffset: 7.5, AirThreshold: 0.2, LostCountMax: 1}
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: 視覚反応, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 31, 後行動: 23}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 32, 後行動: 24}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 GuardianRoot, GroupName: Root}
+            ChildIdx: !obj
+              ダウン: 1
+              マグネ: 15
+              リアクション: 2
+              仮死: 3
+              待機: 7
+              落雷スタン: 43
+              見失い: 5
+              視覚反応: 6
+              起動: 4
+              追跡: 37
+              退避: 33
+              音反応: 19
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: ガード, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: ガードブレイク, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: ジャストガード, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: ダウン中, ClassName: !str32 WaitTimer, GroupName: ダウン}
+            SInst: !obj {WaitFrame: 120}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: ふっとび, ClassName: !str32 WaitTimer, GroupName: リアクション}
+            SInst: !obj {WaitFrame: 135}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: マグネ, ClassName: !str32 DummyAction, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 0, 295359800: 1}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GuardianSearch, GroupName: 移動}
+            SInst: !obj {Lost: true, WaitFrame: 180}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 炎上, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 音反応, ClassName: !str32 WaitTimer, GroupName: 音反応}
+            SInst: !obj {WaitFrame: 240}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 音反応, ClassName: !str32 WaitTimer, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {WaitFrame: 180}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 起き上がり, ClassName: !str32 WaitTimer, GroupName: ダウン}
+            SInst: !obj {WaitFrame: 60}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 DummyAction, GroupName: 仮死}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 SetLinkTagBasic, GroupName: 起動}
+            SInst: !obj {IsOn: true}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 WaitTimer, GroupName: 視覚反応}
+            SInst: !obj {WaitFrame: 30}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 GuardianSearch, GroupName: 待機}
+            SInst: !obj {Lost: false, WaitFrame: 120}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 WaitTimer, GroupName: 選択}
+            SInst: !obj {WaitFrame: 150}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: 周囲を見る, ClassName: !str32 GuardianSearch, GroupName: 見失い}
+            SInst: !obj {Lost: true, WaitFrame: 180}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: 小ダメージ, ClassName: !str32 WaitTimer, GroupName: リアクション}
+            SInst: !obj {WaitFrame: 30}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 NullASPlay, GroupName: 仮死}
+            SInst: !obj {ASName: ShutDown, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 NullASPlay, GroupName: 起動}
+            SInst: !obj {ASName: MaterialBootUp, IsIgnoreSame: true, TargetIdx: 2,
+              SeqBankIdx: 0}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 WaitTimer, GroupName: 視覚反応}
+            SInst: !obj {WaitFrame: 10}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 WaitTimer, GroupName: 待機}
+            SInst: !obj {WaitFrame: 120}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 退避, ClassName: !str32 TimeredASPlay, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0}
+            SInst: !obj
+              ASName: WaitStay
+              Time: 300
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 大落下, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 弾かれ, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 超ショック, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 追跡, ClassName: !str32 DummyAction, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 0, 295359800: 1}
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 TimeredASPlay, GroupName: リアクション}
+            SInst: !obj
+              ASName: Wait
+              Time: 5
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 突風, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 崩れ落ち, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 落雷スタン, ClassName: !str32 TimeredASPlay, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0}
+            SInst: !obj
+              ASName: WaitStay
+              Time: 300
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 痺れ, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: Demo_PickUpItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 50.0
+              Level: 5
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: false
+              IsGuardianLayer: true
+              IsImpulseLayer: false
+              IsFireLayer: false
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: false
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 ForceDispLifeGage}
+            SInst: !obj {IsOnlyPlayer: true}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

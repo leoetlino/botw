@@ -1,0 +1,601 @@
+---
+group_count: 17
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "Ich mach's!"
+  "0001":
+    attributes: ""
+    contents:
+      - text: Nichts für mich.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Ich laufe!
+  "0003":
+    attributes: ""
+    contents:
+      - text: Ich helfe!
+  "0013":
+    attributes: ""
+    contents:
+      - text: In Ordnung.
+  "0014":
+    attributes: ""
+    contents:
+      - text: "Ich versuch's erneut!"
+  "0015":
+    attributes: ""
+    contents:
+      - text: Ich gebe auf.
+  "0016":
+    attributes: ""
+    contents:
+      - text: Ich lass es sein.
+  "0017":
+    attributes: ""
+    contents:
+      - text: Ich mach weiter!
+  "0018":
+    attributes: ""
+    contents:
+      - text: Ich geb auf.
+  NewText_00:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Oh? Du hilfst jetzt Ante?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Na ja, solange mir irgendjemand\ndas Eis bringt, bin ich zufrieden.\nAlso..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Hast du Eis für mich?"
+  NewText_01:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Tut mir leid, dass die Arbeit immer an\ndir hängenbleibt..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Könntest du das Eis hier ablegen?
+  NewText_02:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Kein Problem, aber irgendwie muss ich\nmeine Unkosten bestreiten."
+      - control:
+          kind: pause
+          length: short
+      - text: " Neues Eis\nkostet "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50 Rubine
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " In Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 18
+            - 17
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  NewText_09:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_01
+      - text: Oh! Du kommst gerade recht!
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich muss\ndich um einen Gefallen bitten. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Könntest\ndu Furosa noch einmal Eis liefern?\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "Ich würde es ja selbst tun, aber..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Mit\nden ganzen Monstern hier in letzter Zeit\nwill ich den Eiskeller nicht allein lassen.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: animation
+          name: Greeting_00
+      - text: "Für das Eis müsstest du allerdings\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50 Rubine
+      - control:
+          kind: reset_colour
+      - text: " zahlen..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Aber wenn du es bei Furosa ablieferst,\ngibt sie dir das ausgelegte Geld."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je nachdem, wie groß der Eisblock\nnoch ist, wenn du bei ihr ankommst,\nlegt sie vielleicht noch was drauf!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  NewText_10:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_01
+      - text: Oh! Willst du Furosa das Eis ausliefern?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Dann müsste ich allerdings
+      - control:
+          kind: set_colour
+          colour: red
+      - text: " 50 Rubine"
+      - control:
+          kind: reset_colour
+      - text: "\nvon dir verlangen..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  NewText_26:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Du hast nur "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_minute
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Minute
+            - Minuten
+            - Minute
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: set_colour
+          colour: red
+      - text: " "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_s
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Sekunde
+            - Sekunden
+            - Sekunde
+      - control:
+          kind: reset_colour
+      - text: "\nund "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_m
+      - text: " Hundertstel"
+      - control:
+          kind: reset_colour
+      - text: " gebraucht? \nNicht schlecht!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hier hast du das Geld für das Eis und\ndazu deinen Lohn."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Na, da hat Ante ja eine gute Aushilfe\ngefunden."
+  NewText_40:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Du hast nur "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_minute
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Minute
+            - Minuten
+            - Minute
+      - control:
+          kind: reset_colour
+      - text: ", "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_s
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Sekunde
+            - Sekunden
+            - Sekunde
+      - control:
+          kind: reset_colour
+      - text: "\nund "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_m
+      - text: " Hundertstel "
+      - control:
+          kind: reset_colour
+      - text: "gebraucht, um das\nEis auszuliefern?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Das übertrifft ja all meine Erwartungen!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nBesser geht's nicht!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hier, das Geld für das Eis, dein Lohn und\nnoch ein Bonus dazu!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "In dir hat Ante ja wirklich eine fähige\nAushilfe gefunden!"
+  NewText_41:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Was ist denn?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSolltest du dich nicht etwas beeilen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 14
+            - 15
+          selected_index: 0
+          cancel_index: 3
+          unknown: 8
+  NewText_43:
+    attributes: NPC_GodVoice
+    contents:
+      - text: Das Eis ist geschmolzen.
+      - control:
+          kind: auto_advance
+          frames: 150
+  NewText_44:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Wunderbar! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Den Eifer lob ich mir!\nDein Ziel ist das gleiche wie zuvor..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Auf dem Weg nach "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Gerudo-Stadt "
+      - control:
+          kind: reset_colour
+      - text: "findest\ndu eine Ansammlung von Ruinen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Furosa sollte sich an dem Ende der\nRuinen befinden, das der Stadt am\nnächsten liegt."
+  NewText_45:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Ease_01
+      - text: "Na gut, wer nicht will, der hat schon."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Aber denk dran...
+      - control:
+          kind: pause
+          length: short
+      - text: " Bei uns herrscht immer\nPersonalmangel, daher ist uns jede Hilfe\nwillkommen."
+  NewText_46:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hast du keine "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50 Rubine
+      - control:
+          kind: reset_colour
+      - text: " dabei?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDann klappt das leider nicht mit\nuns beiden."
+  NewText_47:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Du hast ja gar nicht genug Rubine dabei!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nMöchtest du es für diesmal sein lassen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 17
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  NewText_48:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: Nächstes Mal dann wieder!
+  NewText_49:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - text: "He! Du kommst zu weit vom Weg ab!\nKomm zurück zu mir!"
+  NewText_50:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 6
+      - text: "Du nimmst einen Auftrag an und läufst\ndann einfach davon?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Herrje...
+      - control:
+          kind: pause
+          length: long
+      - text: " Zum Glück habe ich auf den\n50 Rubinen bestanden."
+  Talk_000:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 2
+      - text: "Es wäre wunderbar, wenn du mir noch\neinmal mit dem Eis aushelfen könntest..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDarf ich dich noch einmal darum bitten?\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Für kühle Getränke braucht man eine\nMenge Eis, weißt du."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wenn du das Eis von Ante in Empfang\nnimmst, müsstest du mir die "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50 Rubine
+      - control:
+          kind: reset_colour
+      - text: "\nvorstrecken."
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_001:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Vielen Dank.
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich gehe nicht weg, also\nbring das Eis einfach hierher."
+  Talk_002:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Verstehe... "
+      - control:
+          kind: pause
+          length: short
+      - text: Wie schade.
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nWenn du doch noch einmal aushelfen\nmöchtest, sprich mit Ante."
+  Talk_003:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 2
+      - text: "Es wäre wunderbar, wenn du mir noch\neinmal mit dem Eis aushelfen könntest..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAber um diese Zeit dürfte Ante schlafen.\nNa ja, ich hoffe, du hilfst mir ein\nandermal wieder!"

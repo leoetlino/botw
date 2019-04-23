@@ -1,0 +1,2434 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_Abyss: 76
+      Demo_AnimFlowForMapTower: 77
+      Demo_BustUpFront: 78
+      Demo_CameraAnim: 79
+      Demo_CameraAnimFlow: 80
+      Demo_CameraAnimFlowAbs: 81
+      Demo_ConnectTypeSpecify: 82
+      Demo_ElevatorDown: 83
+      Demo_ElevatorUpEnd: 84
+      Demo_ElevatorUpStart: 85
+      Demo_FocusDistSetting: 86
+      Demo_GameCamera: 9
+      Demo_GameOver: 87
+      Demo_Idling: 88
+      Demo_Join: 89
+      Demo_KokkoAngry: 90
+      Demo_Look: 91
+      Demo_LookDirect: 92
+      Demo_LookStone: 10
+      Demo_MapDownload: 93
+      Demo_MiddleFront: 94
+      Demo_MovePosFlow: 95
+      Demo_MultiTalk: 96
+      Demo_OverwriteFar: 97
+      Demo_OverwriteNear: 98
+      Demo_PermitGfxNear: 99
+      Demo_PlayASForDemo: 100
+      Demo_PlayASForTimeline: 101
+      Demo_PlayerHideOff: 102
+      Demo_PlayerHideOn: 103
+      Demo_PolarCoordPlayerRelative: 104
+      Demo_ReserveConnectTime: 105
+      Demo_ResetBoneCtrl: 106
+      Demo_ReturnSavePoint_1: 11
+      Demo_SavePoint1: 107
+      Demo_SetGetFlag: 108
+      Demo_Talk: 12
+      Demo_TalkInWater: 13
+      Demo_TebaRescueEnd: 109
+      Demo_TebaRescueStart: 110
+      Demo_Turn: 111
+      Demo_VisibleOff: 112
+      Demo_Warp: 113
+      Demo_WarpStart: 114
+      Demo_XLinkEventCreate: 115
+      Demo_XLinkEventFade: 116
+      Demo_XLinkEventKill: 117
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 CameraGameRoot, GroupName: ''}
+            ChildIdx: !obj
+              イベント用_会話: 1
+              イベント用_会話水中用: 2
+              イベント用_看板: 3
+              イベント用_記録したカメラに戻る: 4
+              ルートAI: 6
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: イベント用_会話, ClassName: !str32 CameraEventTalkAI, GroupName: Root}
+            ChildIdx: !obj {オート: 26, マニュアル: 48}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: -0.3}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: イベント用_会話水中用, ClassName: !str32 CameraEventTalkAI, GroupName: Root}
+            ChildIdx: !obj {オート: 27, マニュアル: 49}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: 0.0}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: イベント用_看板, ClassName: !str32 CameraEventTalkAI, GroupName: Root}
+            ChildIdx: !obj {オート: 28, マニュアル: 50}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: 0.0}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: イベント用_記録したカメラに戻る, ClassName: !str32 CameraEventReturnSavePoint,
+              GroupName: Root}
+            ChildIdx: !obj {エラー: 25, デフォルト: 40, 会話: 7}
+            SInst: !obj {SavePoint: 0}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: ツールカメラ, ClassName: !str32 CameraTool, GroupName: Switching}
+            ChildIdx: !obj
+              DefaultIndoorNormal: 14
+              DefaultLockOn: 15
+              DefaultNormal: 16
+              DefaultNormalSubject: 17
+              DefaultWall: 18
+              DungeonMove: 19
+              DungeonNormal: 20
+              InHouseNormal: 21
+              LostWoodsNormal: 22
+              MapTowerNormal_031a: 23
+              デフォルト弓カメラ: 41
+              デフォルト弓屈みカメラ: 42
+              デフォルト弓注目カメラ: 43
+              マップ塔弓カメラ: 45
+              マップ塔弓屈みカメラ: 46
+              マップ塔弓注目カメラ: 47
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: ルートAI, ClassName: !str32 CameraRoot, GroupName: Root}
+            ChildIdx: !obj
+              アイテムカメラ: 24
+              カメラアプリカメラ: 30
+              カメラアプリ自撮りカメラ: 31
+              ゴーレム掴まりカメラ: 32
+              スナザラシカメラ: 33
+              ゾーラプリンスアイテムカメラ: 34
+              ゾーラプリンスカメラ: 35
+              ゾーラプリンス弓カメラ: 36
+              ゾーラプリンス注目カメラ: 38
+              ゾーラプリンス滝登りカメラ: 37
+              ゾーラプリンス長距離射程弓カメラ: 39
+              ツールカメラ: 5
+              マグネキャッチカメラ: 44
+              不完全体ガノン壁注目カメラ: 75
+              中型敵用注目カメラ: 62
+              奈落カメラ: 63
+              巨大敵用ロックオンカメラ: 57
+              弓カメラ: 8
+              水の神獣咆哮カメラ: 60
+              泳ぎカメラ: 53
+              泳ぎ注目カメラ: 54
+              滝登りカメラ: 61
+              現状維持カメラ: 58
+              盾サーフィンカメラ: 59
+              遺物戦用スナザラシカメラ: 52
+              馬ガーディアン注目カメラ: 64
+              馬ロデオカメラ: 65
+              馬弓カメラ: 66
+              馬弓注目カメラ: 68
+              馬弓注目魔獣ガノンカメラ: 69
+              馬弓空注目カメラ: 67
+              馬望遠鏡カメラ: 74
+              馬注目カメラ: 71
+              馬空注目カメラ: 70
+              馬通常カメラ: 73
+              馬長距離射程弓カメラ: 72
+            SInst: !obj {sideOffsetBowCus: 0.36, guardianDist: 25.0, guardianAngle: 2.0944}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 会話, ClassName: !str32 CameraEventTalkAIRet, GroupName: イベント用_記録したカメラに戻る}
+            ChildIdx: !obj {オート: 29, マニュアル: 51}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: -0.3}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 弓カメラ, ClassName: !str32 CameraBow, GroupName: AI}
+            ChildIdx: !obj {弓ズームカメラ: 55, 弓注目魔獣ガノンカメラ: 56}
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: Demo_GameCamera, ClassName: !str32 CameraRoot, GroupName: ''}
+            ChildIdx: !obj
+              アイテムカメラ: 24
+              カメラアプリカメラ: 30
+              カメラアプリ自撮りカメラ: 31
+              ゴーレム掴まりカメラ: 32
+              スナザラシカメラ: 33
+              ゾーラプリンスアイテムカメラ: 34
+              ゾーラプリンスカメラ: 35
+              ゾーラプリンス弓カメラ: 36
+              ゾーラプリンス注目カメラ: 38
+              ゾーラプリンス滝登りカメラ: 37
+              ゾーラプリンス長距離射程弓カメラ: 39
+              ツールカメラ: 5
+              マグネキャッチカメラ: 44
+              不完全体ガノン壁注目カメラ: 75
+              中型敵用注目カメラ: 62
+              奈落カメラ: 63
+              巨大敵用ロックオンカメラ: 57
+              弓カメラ: 8
+              水の神獣咆哮カメラ: 60
+              泳ぎカメラ: 53
+              泳ぎ注目カメラ: 54
+              滝登りカメラ: 61
+              現状維持カメラ: 58
+              盾サーフィンカメラ: 59
+              遺物戦用スナザラシカメラ: 52
+              馬ガーディアン注目カメラ: 64
+              馬ロデオカメラ: 65
+              馬弓カメラ: 66
+              馬弓注目カメラ: 68
+              馬弓注目魔獣ガノンカメラ: 69
+              馬弓空注目カメラ: 67
+              馬望遠鏡カメラ: 74
+              馬注目カメラ: 71
+              馬空注目カメラ: 70
+              馬通常カメラ: 73
+              馬長距離射程弓カメラ: 72
+            SInst: !obj {sideOffsetBowCus: 0.36, guardianDist: 25.0, guardianAngle: 2.0944}
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: Demo_LookStone, ClassName: !str32 CameraEventTalkAI,
+              GroupName: ''}
+            ChildIdx: !obj {オート: 28, マニュアル: 50}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: 0.0}
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: Demo_ReturnSavePoint_1, ClassName: !str32 CameraEventReturnSavePoint,
+              GroupName: ''}
+            ChildIdx: !obj {エラー: 25, デフォルト: 40, 会話: 7}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj {SavePoint: 0}
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: Demo_Talk, ClassName: !str32 CameraEventTalkAI, GroupName: ''}
+            ChildIdx: !obj {オート: 26, マニュアル: 48}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: -0.3}
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: Demo_TalkInWater, ClassName: !str32 CameraEventTalkAI,
+              GroupName: ''}
+            ChildIdx: !obj {オート: 27, マニュアル: 49}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {HeightOffset: 0.0}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: DefaultIndoorNormal, ClassName: !str32 CameraChase, GroupName: Switching}
+            BehaviorIdx: !obj {1721623982: 5}
+            SInst: !obj
+              latMin: -68.0
+              LatLimitMin: -68.0
+              latMax: 80.0
+              LatLimitMax: 80.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 5.0
+              lngCus: 0.04
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.3
+              lngStickScale: 1.3
+              radiusMin: 3.0
+              radiusMax: 3.0
+              RadiusMinWidth: 0.1
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 1.0
+              RadiusMaxWeight: 1.0
+              radius: 3.0
+              atMoveOffset: 0.0
+              OffsetYMin: 0.0
+              OffsetYMax: 0.0
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.6
+              AtHCusMax: 1.0
+              atVCusMin: 0.4
+              atVCusMax: 1.0
+              Fovy: 0.959931
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: false
+              ProcMode: 0
+              controlMode: 1
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: DefaultLockOn, ClassName: !str32 CameraLockOn, GroupName: Switching}
+            SInst: !obj
+              distMin: 1.0
+              distMax: 10.0
+              atCus: 0.6
+              atOffsetVNear: -0.15
+              atOffsetVFar: 0.25
+              atOffsetCus: 0.9
+              latVDiffEffect: 1.0
+              latOffsetNear: 0.0
+              latOffsetFar: 20.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.6
+              lngNear: 50.0
+              lngFar: 5.0
+              lngMax: 180.0
+              lngCus: 0.5
+              radiusNear: 5.3
+              radiusFar: 7.3
+              radiusCus: 0.6
+              fovyNear: 0.872665
+              fovyFar: 0.872665
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: DefaultNormal, ClassName: !str32 CameraChase, GroupName: Switching}
+            SInst: !obj
+              latMin: -85.0
+              LatLimitMin: -85.0
+              latMax: 89.0
+              LatLimitMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 0.0
+              lngCus: 0.1
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 1.2
+              radiusMax: 12.0
+              RadiusMinWidth: 0.3
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 2.0
+              RadiusMaxWeight: 1.0
+              radius: 5.3
+              atMoveOffset: 0.5
+              OffsetYMin: 0.3
+              OffsetYMax: 0.3
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.6
+              AtHCusMax: 1.0
+              atVCusMin: 0.4
+              atVCusMax: 1.0
+              Fovy: 0.872665
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 3.0
+              BgCheckToAt: false
+              ProcMode: 0
+              controlMode: 1
+              keepManual: true
+              BowFlag: false
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: DefaultNormalSubject, ClassName: !str32 CameraAiming,
+              GroupName: Switching}
+            BehaviorIdx: !obj {1721623982: 6}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 60.0
+              LatOffset: -7.0
+              latStickScale: 0.5
+              lngStickScale: 0.5
+              latGyroScale: 0.4
+              lngGyroScale: 0.4
+              radiusMin: 0.1
+              radiusMax: 0.1
+              radiusMinLat: -50.0
+              radiusMaxLat: 60.0
+              radiusCus: 0.9
+              sideOffset: 0.0
+              worldBaseOffset: !vec3 [0.0, 0.0, 0.0]
+              OffsetZ: 0.0
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.9
+              fovy: 10.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 0.5
+              Near: 2.0
+              BowFlag: false
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: DefaultWall, ClassName: !str32 CameraTail, GroupName: Switching}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 70.0
+              Radius: 9.0
+              RadiusDolly: 13.0
+              OffsetYMin: -2.5
+              OffsetYMax: 2.5
+              Fovy: 0.872665
+              dstAngle: 60.0
+              PanSpeedParam: 1.5
+              StartInterpolateParam: 2.75
+              ResetInterpolateParam: 2.5
+              TargetSpeedMax: 0.0740741
+              BowFlag: false
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: DungeonMove, ClassName: !str32 CameraChase, GroupName: Switching}
+            SInst: !obj
+              latMin: -45.0
+              LatLimitMin: -45.0
+              latMax: 60.0
+              LatLimitMax: 60.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: -5.0
+              lngCus: 0.125
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 2.0
+              radiusMax: 2.0
+              RadiusMinWidth: 0.1
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 1.0
+              RadiusMaxWeight: 1.0
+              radius: 2.0
+              atMoveOffset: 0.0
+              OffsetYMin: 0.0
+              OffsetYMax: 0.0
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.1
+              AtHCusMax: 0.9
+              atVCusMin: 0.1
+              atVCusMax: 0.9
+              Fovy: 0.872665
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: true
+              ProcMode: 0
+              controlMode: 1
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: DungeonNormal, ClassName: !str32 CameraChase, GroupName: Switching}
+            SInst: !obj
+              latMin: -68.0
+              LatLimitMin: -68.0
+              latMax: 80.0
+              LatLimitMax: 80.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 5.0
+              lngCus: 0.04
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 2.3
+              radiusMax: 2.3
+              RadiusMinWidth: 0.1
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 1.0
+              RadiusMaxWeight: 1.0
+              radius: 2.3
+              atMoveOffset: 0.0
+              OffsetYMin: -0.2
+              OffsetYMax: -0.2
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.1
+              AtHCusMax: 0.9
+              atVCusMin: 0.1
+              atVCusMax: 0.9
+              Fovy: 0.785398
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: true
+              ProcMode: 0
+              controlMode: 0
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: InHouseNormal, ClassName: !str32 CameraChase, GroupName: Switching}
+            BehaviorIdx: !obj {1721623982: 5}
+            SInst: !obj
+              latMin: -68.0
+              LatLimitMin: -68.0
+              latMax: 80.0
+              LatLimitMax: 80.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 30.0
+              lngCus: 0.04
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 3.0
+              radiusMax: 3.0
+              RadiusMinWidth: 0.1
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 1.0
+              RadiusMaxWeight: 1.0
+              radius: 3.0
+              atMoveOffset: 0.0
+              OffsetYMin: 0.0
+              OffsetYMax: 0.0
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.1
+              AtHCusMax: 0.9
+              atVCusMin: 0.1
+              atVCusMax: 0.9
+              Fovy: 0.872665
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: false
+              ProcMode: 0
+              controlMode: 1
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: LostWoodsNormal, ClassName: !str32 CameraChase, GroupName: Switching}
+            SInst: !obj
+              latMin: -68.0
+              LatLimitMin: -68.0
+              latMax: 80.0
+              LatLimitMax: 80.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 22.5
+              lngCus: 0.04
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 6.0
+              radiusMax: 6.0
+              RadiusMinWidth: 0.1
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 1.0
+              RadiusMaxWeight: 1.0
+              radius: 6.0
+              atMoveOffset: 0.0
+              OffsetYMin: 0.0
+              OffsetYMax: 0.0
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.1
+              AtHCusMax: 0.9
+              atVCusMin: 0.1
+              atVCusMax: 0.9
+              Fovy: 0.872665
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: false
+              ProcMode: 0
+              controlMode: 1
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: MapTowerNormal_031a, ClassName: !str32 CameraChase, GroupName: Switching}
+            SInst: !obj
+              latMin: -50.0
+              LatLimitMin: -50.0
+              latMax: 89.0
+              LatLimitMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 5.0
+              lngCus: 0.6
+              lngCusSpeedEffect: 0.2
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 1.5
+              radiusMax: 12.0
+              RadiusMinWidth: 0.1
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 1.0
+              RadiusMaxWeight: 1.0
+              radius: 5.3
+              atMoveOffset: 0.5
+              OffsetYMin: 0.15
+              OffsetYMax: 0.15
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.6
+              AtHCusMax: 0.9
+              atVCusMin: 0.4
+              atVCusMax: 0.9
+              Fovy: 0.872665
+              Connect: 1.5
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: false
+              ProcMode: 1
+              controlMode: 1
+              keepManual: true
+              BowFlag: false
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: アイテムカメラ, ClassName: !str32 CameraAiming2, GroupName: ルートAI}
+            SInst: !obj
+              LatMin: -70.0
+              LatMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              LatStickScale: 1.5
+              LngStickScale: 0.8
+              LatGyroScale: 1.4
+              LngGyroScale: 1.65
+              RadiusMin: 1.5
+              RadiusMax: 12.0
+              RadiusMinWidth: 0.3
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 2.0
+              RadiusMaxWeight: 1.0
+              SideOffset: 0.4
+              OffsetYMin: 0.7
+              OffsetYMax: 0.8
+              OffsetYMinWidth: 0.15
+              OffsetYMaxWidth: 0.15
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              Fovy: 0.872665
+              Gyro: 2
+              Connect: 2.0
+              BowFlag: false
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: エラー, ClassName: !str32 EventDummyAction, GroupName: イベント用_記録したカメラに戻る}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: オート, ClassName: !str32 CameraEventTalk, GroupName: イベント用_会話}
+            SInst: !obj
+              DistanceMin: 0.5
+              DistanceMax: 3.5
+              RadiusNear: 4.0
+              RadiusFar: 5.0
+              LngNear: 45.0
+              LngFar: 10.0
+              LngRandom: 10.0
+              LatNear: 10.0
+              LatFar: 15.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              ElevationAngleEffect: 0.0
+              SpeakerSwitching: true
+              HideCheck: true
+              LeftOnly: false
+              RightOnly: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: オート, ClassName: !str32 CameraEventTalk, GroupName: イベント用_会話水中用}
+            SInst: !obj
+              DistanceMin: 0.5
+              DistanceMax: 3.5
+              RadiusNear: 4.0
+              RadiusFar: 5.0
+              LngNear: 45.0
+              LngFar: 10.0
+              LngRandom: 10.0
+              LatNear: 5.0
+              LatFar: 10.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              ElevationAngleEffect: 0.0
+              SpeakerSwitching: true
+              HideCheck: true
+              LeftOnly: false
+              RightOnly: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: オート, ClassName: !str32 CameraEventTalk, GroupName: イベント用_看板}
+            SInst: !obj
+              DistanceMin: 0.5
+              DistanceMax: 3.0
+              RadiusNear: 5.0
+              RadiusFar: 5.0
+              LngNear: 25.0
+              LngFar: 20.0
+              LngRandom: 2.0
+              LatNear: 0.0
+              LatFar: 10.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              ElevationAngleEffect: 0.0
+              SpeakerSwitching: true
+              HideCheck: true
+              LeftOnly: false
+              RightOnly: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: オート, ClassName: !str32 CameraEventTalk, GroupName: 会話}
+            SInst: !obj
+              DistanceMin: 0.5
+              DistanceMax: 3.5
+              RadiusNear: 4.0
+              RadiusFar: 5.0
+              LngNear: 45.0
+              LngFar: 10.0
+              LngRandom: 10.0
+              LatNear: 0.0
+              LatFar: 10.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              ElevationAngleEffect: 0.0
+              SpeakerSwitching: true
+              HideCheck: true
+              LeftOnly: false
+              RightOnly: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: カメラアプリカメラ, ClassName: !str32 CameraFinder, GroupName: Root}
+            BehaviorIdx: !obj {1721623982: 7}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 75.0
+              LatOffset: -7.0
+              radius: 0.1
+              offsetY: 0.0
+              offsetZ: 0.0
+              atCus: 0.6
+              fovyMin: 0.261799
+              fovyMax: 0.872665
+              fovyCus: 0.6
+              GyroScaleWithFovyMin: 0.7
+              GyroScaleWithFovyMax: 1.2
+              BowFlag: false
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: カメラアプリ自撮りカメラ, ClassName: !str32 CameraFinder, GroupName: Root}
+            BehaviorIdx: !obj {1721623982: 0, 295359800: 1}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 75.0
+              LatOffset: 0.0
+              radius: 3.65
+              offsetY: -0.1
+              offsetZ: 0.0
+              atCus: 0.6
+              fovyMin: 0.20944
+              fovyMax: 0.872665
+              fovyCus: 0.6
+              GyroScaleWithFovyMin: 0.5
+              GyroScaleWithFovyMax: 0.8
+              BowFlag: false
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: ゴーレム掴まりカメラ, ClassName: !str32 CameraClimbObj, GroupName: ルートAI}
+            SInst: !obj
+              Lat: 0.0
+              LatMin: -5.0
+              LatMax: 55.0
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              Radius: 13.0
+              OffsetY: 0.0
+              Fovy: 0.872665
+              BowFlag: false
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: スナザラシカメラ, ClassName: !str32 CameraWakeboard, GroupName: ルートAI}
+            SInst: !obj
+              LatMin: -85.0
+              LatLimitMin: -50.0
+              LatMax: 89.0
+              LatLimitMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              Lat: 5.0
+              LngCus: 1.0
+              LngCusSpeedEffect: 0.2
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              RadiusMin: 8.5
+              RadiusMax: 12.0
+              RadiusMinWidth: 0.3
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 2.0
+              RadiusMaxWeight: 1.0
+              Radius: 10.0
+              OffsetYBase: 1.0
+              OffsetYMin: 0.5
+              OffsetYMax: 0.5
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              OffsetZ: 1.5
+              SideOffset: 2.0
+              SideOffsetCus: 0.05
+              AtHCusNormal: 0.6
+              AtHCusSpurt: 0.15
+              AtVCusMin: 0.4
+              AtVCusMax: 1.0
+              FovyNormal: 0.959931
+              FovySpurt: 1.13446
+              FovyCusAccel: 0.2
+              FovyCusDecel: 0.05
+              AutoModeConnect: 2.0
+              BowFlag: false
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: ゾーラプリンスアイテムカメラ, ClassName: !str32 CameraAiming2, GroupName: ルートAI}
+            SInst: !obj
+              LatMin: -70.0
+              LatMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              LatStickScale: 1.5
+              LngStickScale: 0.8
+              LatGyroScale: 1.4
+              LngGyroScale: 1.65
+              RadiusMin: 1.5
+              RadiusMax: 12.0
+              RadiusMinWidth: 0.3
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 2.0
+              RadiusMaxWeight: 1.0
+              SideOffset: 0.4
+              OffsetYMin: 3.3
+              OffsetYMax: 3.3
+              OffsetYMinWidth: 0.15
+              OffsetYMaxWidth: 0.15
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              Fovy: 0.872665
+              Gyro: 2
+              Connect: 2.0
+              BowFlag: false
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: ゾーラプリンスカメラ, ClassName: !str32 CameraChase, GroupName: ルートAI}
+            SInst: !obj
+              latMin: -55.0
+              LatLimitMin: -55.0
+              latMax: 35.0
+              LatLimitMax: 35.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 15.0
+              lngCus: 0.1
+              lngCusSpeedEffect: 0.05
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 3.8
+              radiusMax: 10.0
+              RadiusMinWidth: 0.26
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 3.6
+              RadiusMaxWeight: 2.2
+              radius: 7.0
+              atMoveOffset: 0.0
+              OffsetYMin: 1.05
+              OffsetYMax: 1.35
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.6
+              AtHCusMax: 0.9
+              atVCusMin: 0.4
+              atVCusMax: 0.9
+              Fovy: 0.872665
+              Connect: 2.0
+              ConnectItem: 3.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: true
+              ProcMode: 0
+              controlMode: 1
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: ゾーラプリンス弓カメラ, ClassName: !str32 CameraAiming, GroupName: ルートAI}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 70.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 0.7
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 2.0
+              radiusMax: 5.5
+              radiusMinLat: -45.0
+              radiusMaxLat: 0.0
+              radiusCus: 0.9
+              sideOffset: 0.0
+              worldBaseOffset: !vec3 [0.0, 3.2, 0.0]
+              OffsetZ: 0.0
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.3
+              fovy: 35.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 2.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: ゾーラプリンス滝登りカメラ, ClassName: !str32 CameraWaterfallClimb,
+              GroupName: ルートAI}
+            SInst: !obj
+              Lat: 30.0
+              Lng: 75.0
+              Radius: 6.0
+              HeightAllowance: 5.0
+              ManualHeightMin: -10.0
+              ManualHeightMax: 21.0
+              OffsetY: 0.0
+              Fovy: 0.872665
+              BowFlag: false
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: ゾーラプリンス注目カメラ, ClassName: !str32 CameraLockOn, GroupName: ルートAI}
+            SInst: !obj
+              distMin: 1.0
+              distMax: 25.0
+              atCus: 0.2
+              atOffsetVNear: 0.0
+              atOffsetVFar: 0.0
+              atOffsetCus: 1.0
+              latVDiffEffect: 0.5
+              latOffsetNear: 10.0
+              latOffsetFar: 5.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.2
+              lngNear: 30.0
+              lngFar: 30.0
+              lngMax: 30.0
+              lngCus: 0.15
+              radiusNear: 4.0
+              radiusFar: 8.0
+              radiusCus: 0.2
+              fovyNear: 0.959931
+              fovyFar: 0.959931
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: ゾーラプリンス長距離射程弓カメラ, ClassName: !str32 CameraAiming, GroupName: ルートAI}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 60.0
+              LatOffset: -6.0
+              latStickScale: 0.6
+              lngStickScale: 0.42
+              latGyroScale: 0.5
+              lngGyroScale: 0.75
+              radiusMin: 0.1
+              radiusMax: 0.1
+              radiusMinLat: -45.0
+              radiusMaxLat: 15.0
+              radiusCus: 0.6
+              sideOffset: 0.35
+              worldBaseOffset: !vec3 [0.0, 3.0, 0.0]
+              OffsetZ: 0.1
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.9
+              fovy: 20.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.5
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: デフォルト, ClassName: !str32 CameraEventMovePos, GroupName: イベント用_記録したカメラに戻る}
+            SInst: !obj
+              TargetActor1: -1
+              ActorName1: default
+              UniqueName1: ''
+              TargetActor2: -1
+              ActorName2: default
+              UniqueName2: ''
+              AtAppendMode: 1
+              PosAppendMode: 1
+              FovyAppendMode: 1
+              BaseMode: 1
+              MotionMode: 0
+              Pattern1AtX: 0.0
+              Pattern1AtY: 0.0
+              Pattern1AtZ: 0.0
+              Pattern1PosX: 0.0
+              Pattern1PosY: 0.0
+              Pattern1PosZ: 0.0
+              Pattern1Fovy: 0.0
+              Pattern1Use: false
+              Accept1FrameDelay: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: デフォルト弓カメラ, ClassName: !str32 CameraAiming, GroupName: Switching}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 70.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 0.7
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 2.0
+              radiusMax: 5.5
+              radiusMinLat: -45.0
+              radiusMaxLat: 0.0
+              radiusCus: 0.9
+              sideOffset: 0.35
+              worldBaseOffset: !vec3 [0.0, 0.4, 0.0]
+              OffsetZ: 0.0
+              OffsetZMin: -0.3
+              OffsetZMax: 0.6
+              atCus: 0.3
+              fovy: 30.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: デフォルト弓屈みカメラ, ClassName: !str32 CameraAiming, GroupName: ツールカメラ}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 70.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 0.7
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 2.0
+              radiusMax: 5.5
+              radiusMinLat: -45.0
+              radiusMaxLat: 0.0
+              radiusCus: 0.9
+              sideOffset: 0.35
+              worldBaseOffset: !vec3 [0.0, 0.65, 0.0]
+              OffsetZ: 0.0
+              OffsetZMin: -0.3
+              OffsetZMax: 0.6
+              atCus: 0.3
+              fovy: 30.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: デフォルト弓注目カメラ, ClassName: !str32 CameraLockOnAimingAt,
+              GroupName: Switching}
+            SInst: !obj
+              LatMin: -68.0
+              LatMax: 60.0
+              InputRangeNearDist: 0.0
+              LatInputRange: 30.0
+              LngInputRange: 26.0
+              InputRangeFarDist: 15.0
+              LatInputRangeFar: 7.0
+              LngInputRangeFar: 5.0
+              Radius: 5.3
+              OffsetX: 0.35
+              OffsetY: 0.4
+              Fovy: 0.523599
+              Gyro: 2
+              BowFlag: true
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: マグネキャッチカメラ, ClassName: !str32 CameraMagneCatch, GroupName: Root}
+            SInst: !obj
+              distMin: 1.0
+              distMax: 10.0
+              atCus: 0.15
+              atOffsetVNear: 0.0
+              atOffsetVFar: 0.0
+              atOffsetCus: 0.9
+              latVDiffEffect: 0.0
+              latOffsetNear: 20.0
+              latOffsetFar: 20.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.02
+              lngNear: 5.0
+              lngFar: 5.0
+              lngMax: 180.0
+              lngCus: 0.5
+              radiusNear: 5.3
+              radiusFar: 7.3
+              radiusCus: 0.6
+              fovyNear: 0.872665
+              fovyFar: 0.872665
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: マップ塔弓カメラ, ClassName: !str32 CameraAiming, GroupName: Switching}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 70.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 0.7
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 0.08
+              radiusMax: 0.08
+              radiusMinLat: -45.0
+              radiusMaxLat: 0.0
+              radiusCus: 0.9
+              sideOffset: 0.35
+              worldBaseOffset: !vec3 [0.0, 0.2, 0.0]
+              OffsetZ: 1.0
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.3
+              fovy: 30.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: マップ塔弓屈みカメラ, ClassName: !str32 CameraAiming, GroupName: ツールカメラ}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              latMin: -70.0
+              latMax: 70.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 0.7
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 0.08
+              radiusMax: 0.08
+              radiusMinLat: -45.0
+              radiusMaxLat: 0.0
+              radiusCus: 0.9
+              sideOffset: 0.35
+              worldBaseOffset: !vec3 [0.0, 0.2, 0.0]
+              OffsetZ: 1.0
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.3
+              fovy: 30.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: マップ塔弓注目カメラ, ClassName: !str32 CameraLockOnAimingAt, GroupName: Switching}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              LatMin: -68.0
+              LatMax: 60.0
+              InputRangeNearDist: 0.0
+              LatInputRange: 12.0
+              LngInputRange: 12.0
+              InputRangeFarDist: 20.0
+              LatInputRangeFar: 12.0
+              LngInputRangeFar: 12.0
+              Radius: 0.1
+              OffsetX: 0.35
+              OffsetY: 0.0
+              Fovy: 0.523599
+              Gyro: 2
+              BowFlag: true
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: マニュアル, ClassName: !str32 CameraEventTalkManualCtrl, GroupName: イベント用_会話}
+            SInst: !obj
+              LatMin: -40.0
+              LatMax: 60.0
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              DistanceMin: 0.5
+              DistanceMax: 3.5
+              RadiusNear: 4.0
+              RadiusFar: 5.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              Connect: 0.6
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: マニュアル, ClassName: !str32 CameraEventTalkManualCtrl, GroupName: イベント用_会話水中用}
+            SInst: !obj
+              LatMin: -40.0
+              LatMax: 60.0
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              DistanceMin: 0.5
+              DistanceMax: 3.5
+              RadiusNear: 4.0
+              RadiusFar: 5.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              Connect: 0.6
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: マニュアル, ClassName: !str32 CameraEventTalkManualCtrl, GroupName: イベント用_看板}
+            SInst: !obj
+              LatMin: -40.0
+              LatMax: 60.0
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              DistanceMin: 0.5
+              DistanceMax: 3.0
+              RadiusNear: 5.0
+              RadiusFar: 5.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              Connect: 0.6
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: マニュアル, ClassName: !str32 CameraEventTalkManualCtrlRet,
+              GroupName: 会話}
+            SInst: !obj
+              LatMin: -40.0
+              LatMax: 60.0
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              DistanceMin: 0.5
+              DistanceMax: 3.5
+              RadiusNear: 4.0
+              RadiusFar: 5.0
+              FovyNear: 0.698132
+              FovyFar: 0.698132
+              Connect: 1.0
+              SavePoint: 0
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 遺物戦用スナザラシカメラ, ClassName: !str32 CameraWakeboard, GroupName: ルートAI}
+            SInst: !obj
+              LatMin: -85.0
+              LatLimitMin: -50.0
+              LatMax: 89.0
+              LatLimitMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              Lat: 5.0
+              LngCus: 1.0
+              LngCusSpeedEffect: 0.2
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              RadiusMin: 8.5
+              RadiusMax: 12.0
+              RadiusMinWidth: 0.3
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 2.0
+              RadiusMaxWeight: 1.0
+              Radius: 10.0
+              OffsetYBase: 1.0
+              OffsetYMin: 0.5
+              OffsetYMax: 0.5
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              OffsetZ: 1.5
+              SideOffset: 2.0
+              SideOffsetCus: 0.05
+              AtHCusNormal: 0.6
+              AtHCusSpurt: 0.15
+              AtVCusMin: 0.4
+              AtVCusMax: 1.0
+              FovyNormal: 0.959931
+              FovySpurt: 1.13446
+              FovyCusAccel: 0.2
+              FovyCusDecel: 0.05
+              AutoModeConnect: 2.0
+              BowFlag: false
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 泳ぎカメラ, ClassName: !str32 CameraChase, GroupName: Root_0}
+            SInst: !obj
+              latMin: -45.0
+              LatLimitMin: -45.0
+              latMax: 65.0
+              LatLimitMax: 65.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              lat: 20.6
+              lngCus: 0.04
+              lngCusSpeedEffect: 0.05
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              radiusMin: 0.8
+              radiusMax: 5.5
+              RadiusMinWidth: 0.26
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 3.6
+              RadiusMaxWeight: 2.2
+              radius: 3.37
+              atMoveOffset: 0.0
+              OffsetYMin: 0.25
+              OffsetYMax: 0.55
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              AtHCusMin: 0.6
+              AtHCusMax: 0.9
+              atVCusMin: 0.4
+              atVCusMax: 0.9
+              Fovy: 0.872665
+              Connect: 1.0
+              ConnectItem: 1.0
+              ConnectIndoor: 1.0
+              BgCheckToAt: false
+              ProcMode: 0
+              controlMode: 1
+              keepManual: false
+              BowFlag: false
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 泳ぎ注目カメラ, ClassName: !str32 CameraLockOn, GroupName: ルートAI}
+            SInst: !obj
+              distMin: 1.0
+              distMax: 10.0
+              atCus: 0.6
+              atOffsetVNear: -0.15
+              atOffsetVFar: 0.25
+              atOffsetCus: 0.9
+              latVDiffEffect: 0.0
+              latOffsetNear: 5.0
+              latOffsetFar: 20.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.6
+              lngNear: 50.0
+              lngFar: 5.0
+              lngMax: 180.0
+              lngCus: 0.5
+              radiusNear: 3.0
+              radiusFar: 7.3
+              radiusCus: 0.6
+              fovyNear: 0.872665
+              fovyFar: 0.872665
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 弓ズームカメラ, ClassName: !str32 CameraAiming, GroupName: 弓カメラ}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 60.0
+              LatOffset: -6.0
+              latStickScale: 0.6
+              lngStickScale: 0.42
+              latGyroScale: 0.5
+              lngGyroScale: 0.75
+              radiusMin: 0.1
+              radiusMax: 0.1
+              radiusMinLat: -45.0
+              radiusMaxLat: 15.0
+              radiusCus: 0.6
+              sideOffset: 0.35
+              worldBaseOffset: !vec3 [0.0, 0.0, 0.0]
+              OffsetZ: 0.1
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.9
+              fovy: 20.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.5
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 弓注目魔獣ガノンカメラ, ClassName: !str32 CameraLockOnAimingAt,
+              GroupName: 弓カメラ}
+            SInst: !obj
+              LatMin: -68.0
+              LatMax: 60.0
+              InputRangeNearDist: 0.0
+              LatInputRange: 25.0
+              LngInputRange: 45.0
+              InputRangeFarDist: 20.0
+              LatInputRangeFar: 25.0
+              LngInputRangeFar: 45.0
+              Radius: 5.3
+              OffsetX: 0.35
+              OffsetY: 0.0
+              Fovy: 0.523599
+              Gyro: 2
+              BowFlag: true
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 巨大敵用ロックオンカメラ, ClassName: !str32 CameraLockOn, GroupName: Root}
+            SInst: !obj
+              distMin: 1.0
+              distMax: 10.0
+              atCus: 0.6
+              atOffsetVNear: 0.0
+              atOffsetVFar: 0.0
+              atOffsetCus: 0.9
+              latVDiffEffect: 0.6
+              latOffsetNear: 5.0
+              latOffsetFar: 5.0
+              latMin: -5.0
+              latMax: 80.0
+              latCus: 0.6
+              lngNear: 20.0
+              lngFar: 5.0
+              lngMax: 180.0
+              lngCus: 0.5
+              radiusNear: 10.0
+              radiusFar: 15.0
+              radiusCus: 0.6
+              fovyNear: 0.872665
+              fovyFar: 0.872665
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 現状維持カメラ, ClassName: !str32 CameraKeep, GroupName: ルートAI}
+            SInst: !obj {BowFlag: false}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 盾サーフィンカメラ, ClassName: !str32 CameraShieldSurfing, GroupName: ルートAI}
+            SInst: !obj
+              LatMin: -85.0
+              LatLimitMin: -85.0
+              LatMax: 89.0
+              LatLimitMax: 89.0
+              LatMinWidth: 0.1
+              LatMaxWidth: 0.1
+              LatMinWeight: 1.0
+              LatMaxWeight: 1.0
+              Lat: 5.0
+              LngCus: 0.15
+              LngCusSpeedEffect: 0.2
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              RadiusMin: 3.0
+              RadiusMax: 8.0
+              RadiusMinWidth: 0.3
+              RadiusMaxWidth: 0.1
+              RadiusMinWeight: 2.0
+              RadiusMaxWeight: 1.0
+              Radius: 4.0
+              OffsetYMin: 0.25
+              OffsetYMax: 0.25
+              OffsetYMinWidth: 0.1
+              OffsetYMaxWidth: 0.1
+              OffsetYMinWeight: 1.0
+              OffsetYMaxWeight: 1.0
+              SideOffset: 1.8
+              SideOffsetCus: 0.8
+              SideOffsetRateCus: 0.015
+              AtHCus: 0.6
+              AtVCusMin: 0.4
+              AtVCusMax: 1.0
+              Fovy: 0.872665
+              AutoModeConnect: 3.0
+              BowFlag: false
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: 水の神獣咆哮カメラ, ClassName: !str32 CameraWaterRemainsHowling,
+              GroupName: ルートAI}
+            SInst: !obj
+              Radius: 140.0
+              RadiusFromPlayer: 15.0
+              AtY: 33.0
+              AtOffsetZ: 10.0
+              WaterAvoid4At: 15.0
+              WaterAvoid4CameraPos: 2.5
+              Fovy: 0.872665
+              Connect: 1.0
+              BowFlag: false
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: 滝登りカメラ, ClassName: !str32 CameraWaterfallClimb, GroupName: ルートAI}
+            SInst: !obj
+              Lat: 30.0
+              Lng: 67.0
+              Radius: 3.5
+              HeightAllowance: 5.0
+              ManualHeightMin: -15.0
+              ManualHeightMax: 10.0
+              OffsetY: 0.3
+              Fovy: 0.872665
+              BowFlag: false
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: 中型敵用注目カメラ, ClassName: !str32 CameraLockOn, GroupName: ルートAI}
+            SInst: !obj
+              distMin: 5.0
+              distMax: 10.0
+              atCus: 0.6
+              atOffsetVNear: 0.5
+              atOffsetVFar: 0.25
+              atOffsetCus: 0.9
+              latVDiffEffect: 1.0
+              latOffsetNear: -5.0
+              latOffsetFar: 5.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.6
+              lngNear: 20.0
+              lngFar: 5.0
+              lngMax: 180.0
+              lngCus: 0.5
+              radiusNear: 5.5
+              radiusFar: 7.0
+              radiusCus: 0.6
+              fovyNear: 0.872665
+              fovyFar: 0.872665
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: 奈落カメラ, ClassName: !str32 CameraAbyss, GroupName: ルートAI}
+            SInst: !obj {RadiusMin: 1.0, Fovy: 1.13446, BowFlag: false}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: 馬ガーディアン注目カメラ, ClassName: !str32 CameraHorse, GroupName: Root}
+            SInst: !obj
+              latSlow: 5.0
+              latFast: 0.0
+              latCus: 0.02
+              latMin: -68.0
+              latMax: 80.0
+              lngCusSlow: 1.0
+              lngCusFast: 1.0
+              LngCusParallel: 0.1
+              LngCusVertical: 0.0
+              radiusSlow: 4.5
+              radiusFast: 5.5
+              radiusCus: 0.05
+              sideOffsetSlow: 0.2
+              sideOffsetFast: 1.2
+              sideOffsetCus: 0.12
+              OffsetYMin: 2.0
+              OffsetYMax: 2.0
+              atHCus: 0.5
+              atVCus: 0.1
+              AtHCusSlow: 0.5
+              AtHCusFast: 0.5
+              AtVCusSlow: 0.1
+              AtVCusFast: 1.0
+              fovySlow: 0.959931
+              fovyFast: 1.16937
+              fovyCus: 0.05
+              startCus: 0.1
+              speedMin: 0.0740741
+              speedMax: 0.555556
+              HandlingRateCoefficient: 0.5
+              HandlingRateReturnSpeed: 0.01
+              BowFlag: false
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: 馬ロデオカメラ, ClassName: !str32 CameraHorse, GroupName: Root}
+            SInst: !obj
+              latSlow: 5.0
+              latFast: 0.0
+              latCus: 0.02
+              latMin: -68.0
+              latMax: 80.0
+              lngCusSlow: 0.1
+              lngCusFast: 0.1
+              LngCusParallel: 0.1
+              LngCusVertical: 0.0
+              radiusSlow: 4.5
+              radiusFast: 5.5
+              radiusCus: 0.05
+              sideOffsetSlow: 0.05
+              sideOffsetFast: 0.18
+              sideOffsetCus: 0.25
+              OffsetYMin: 2.0
+              OffsetYMax: 2.0
+              atHCus: 0.5
+              atVCus: 0.1
+              AtHCusSlow: 0.5
+              AtHCusFast: 0.5
+              AtVCusSlow: 0.1
+              AtVCusFast: 1.0
+              fovySlow: 0.959931
+              fovyFast: 1.16937
+              fovyCus: 0.05
+              startCus: 0.1
+              speedMin: 0.0740741
+              speedMax: 0.555556
+              HandlingRateCoefficient: 0.5
+              HandlingRateReturnSpeed: 0.01
+              BowFlag: false
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: 馬弓カメラ, ClassName: !str32 CameraAiming, GroupName: Root_0}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 60.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 5.0
+              radiusMax: 5.0
+              radiusMinLat: -45.0
+              radiusMaxLat: 15.0
+              radiusCus: 0.9
+              sideOffset: 0.0
+              worldBaseOffset: !vec3 [0.0, 3.5, 0.0]
+              OffsetZ: 0.0
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.9
+              fovy: 50.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: 馬弓空注目カメラ, ClassName: !str32 CameraRevolve, GroupName: Root}
+            SInst: !obj
+              latTarget: 5.0
+              latCus: 0.9
+              isKeepLat: false
+              lngTarget: 0.0
+              lngCus: 0.9
+              isKeepLng: false
+              radiusMin: 5.0
+              radiusMax: 5.0
+              radiusCus: 0.9
+              sideOffset: 2.2
+              sideOffsetCus: 0.9
+              worldBaseOffset: !vec3 [0.0, 3.0, 0.0]
+              playerBaseOffset: !vec3 [0.0, 0.0, 0.0]
+              atHCus: 0.9
+              atHCusSword: 0.9
+              atVCus: 0.9
+              fovy: 50.0
+              fovyCus: 0.9
+              startCus: 0.1
+              BowFlag: true
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: 馬弓注目カメラ, ClassName: !str32 CameraLockOnAimingAt, GroupName: Root}
+            SInst: !obj
+              LatMin: -68.0
+              LatMax: 60.0
+              InputRangeNearDist: 0.0
+              LatInputRange: 24.0
+              LngInputRange: 12.0
+              InputRangeFarDist: 20.0
+              LatInputRangeFar: 24.0
+              LngInputRangeFar: 12.0
+              Radius: 5.0
+              OffsetX: 0.0
+              OffsetY: 3.5
+              Fovy: 0.872665
+              Gyro: 2
+              BowFlag: true
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: 馬弓注目魔獣ガノンカメラ, ClassName: !str32 CameraLockOnAimingAt,
+              GroupName: Root}
+            SInst: !obj
+              LatMin: -68.0
+              LatMax: 60.0
+              InputRangeNearDist: 0.0
+              LatInputRange: 35.0
+              LngInputRange: 50.0
+              InputRangeFarDist: 20.0
+              LatInputRangeFar: 35.0
+              LngInputRangeFar: 50.0
+              Radius: 5.0
+              OffsetX: 2.0
+              OffsetY: 3.0
+              Fovy: 0.872665
+              Gyro: 2
+              BowFlag: true
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: 馬空注目カメラ, ClassName: !str32 CameraHorseLockOnEmpty, GroupName: Root_0}
+            SInst: !obj
+              latSlow: 15.0
+              latFast: 10.0
+              latControlRangeUp: 30.0
+              latControlRangeDown: 5.0
+              latCus: 0.02
+              lngControlRange: 10.26
+              lngCus: 0.3
+              radiusSlow: 4.5
+              radiusFast: 5.5
+              radiusCus: 0.05
+              worldBaseOffset: !vec3 [0.0, 2.0, 0.0]
+              playerBaseOffset: !vec3 [0.0, 0.0, 0.0]
+              atHCus: 0.5
+              atVCus: 0.1
+              fovySlow: 0.959931
+              fovyFast: 1.16937
+              fovyCus: 0.05
+              startCus: 0.4
+              speedMin: 0.0740741
+              speedMax: 0.555556
+              BowFlag: false
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: 馬注目カメラ, ClassName: !str32 CameraLockOn, GroupName: Root_0}
+            SInst: !obj
+              distMin: 1.0
+              distMax: 25.0
+              atCus: 0.2
+              atOffsetVNear: 0.0
+              atOffsetVFar: 0.0
+              atOffsetCus: 1.0
+              latVDiffEffect: 0.5
+              latOffsetNear: 10.0
+              latOffsetFar: 5.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.2
+              lngNear: 30.0
+              lngFar: 30.0
+              lngMax: 30.0
+              lngCus: 0.15
+              radiusNear: 4.0
+              radiusFar: 8.0
+              radiusCus: 0.2
+              fovyNear: 0.959931
+              fovyFar: 0.959931
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: 馬長距離射程弓カメラ, ClassName: !str32 CameraAiming, GroupName: Root}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 60.0
+              LatOffset: 0.0
+              latStickScale: 1.0
+              lngStickScale: 1.0
+              latGyroScale: 1.0
+              lngGyroScale: 1.5
+              radiusMin: 0.1
+              radiusMax: 0.1
+              radiusMinLat: -45.0
+              radiusMaxLat: 15.0
+              radiusCus: 0.9
+              sideOffset: 0.0
+              worldBaseOffset: !vec3 [0.0, 0.4, 0.0]
+              OffsetZ: 0.8
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.9
+              fovy: 20.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 1.0
+              Near: -1.0
+              BowFlag: true
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: 馬通常カメラ, ClassName: !str32 CameraHorse, GroupName: Root_0}
+            SInst: !obj
+              latSlow: 5.0
+              latFast: 15.0
+              latCus: 0.02
+              latMin: -40.0
+              latMax: 60.0
+              lngCusSlow: 1.0
+              lngCusFast: 1.0
+              LngCusParallel: 0.2
+              LngCusVertical: 1.0
+              radiusSlow: 4.5
+              radiusFast: 5.5
+              radiusCus: 0.05
+              sideOffsetSlow: 0.3
+              sideOffsetFast: 1.3
+              sideOffsetCus: 0.12
+              OffsetYMin: 1.6
+              OffsetYMax: 3.2
+              atHCus: 0.5
+              atVCus: 0.1
+              AtHCusSlow: 0.5
+              AtHCusFast: 0.5
+              AtVCusSlow: 0.1
+              AtVCusFast: 1.0
+              fovySlow: 0.959931
+              fovyFast: 1.16937
+              fovyCus: 0.05
+              startCus: 0.1
+              speedMin: 0.0740741
+              speedMax: 0.601852
+              HandlingRateCoefficient: 4.0
+              HandlingRateReturnSpeed: 0.02
+              BowFlag: false
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: 馬望遠鏡カメラ, ClassName: !str32 CameraAiming, GroupName: ルートAI}
+            BehaviorIdx: !obj {1721623982: 6}
+            SInst: !obj
+              latMin: -50.0
+              latMax: 60.0
+              LatOffset: -12.0
+              latStickScale: 0.5
+              lngStickScale: 0.5
+              latGyroScale: 0.4
+              lngGyroScale: 0.4
+              radiusMin: 0.05
+              radiusMax: 0.05
+              radiusMinLat: -50.0
+              radiusMaxLat: 60.0
+              radiusCus: 0.9
+              sideOffset: 0.0
+              worldBaseOffset: !vec3 [0.0, 0.55, 0.0]
+              OffsetZ: 0.4
+              OffsetZMin: 0.0
+              OffsetZMax: 0.0
+              atCus: 0.9
+              fovy: 10.0
+              gyro: 2
+              ConnectType: 0
+              Connect: 0.5
+              Near: -1.0
+              BowFlag: false
+          lists: {}
+        Action_61: !list
+          objects:
+            Def: !obj {Name: 不完全体ガノン壁注目カメラ, ClassName: !str32 CameraLockOn, GroupName: ルートAI}
+            SInst: !obj
+              distMin: 5.0
+              distMax: 30.0
+              atCus: 0.6
+              atOffsetVNear: -0.15
+              atOffsetVFar: 0.25
+              atOffsetCus: 0.9
+              latVDiffEffect: 1.0
+              latOffsetNear: 3.0
+              latOffsetFar: 3.0
+              latMin: -68.0
+              latMax: 80.0
+              latCus: 0.6
+              lngNear: 20.0
+              lngFar: 5.0
+              lngMax: 180.0
+              lngCus: 0.5
+              radiusNear: 8.0
+              radiusFar: 20.0
+              radiusCus: 0.6
+              fovyNear: 0.872665
+              fovyFar: 0.872665
+              fovyCus: 0.1
+              BowFlag: false
+          lists: {}
+        Action_62: !list
+          objects:
+            Def: !obj {Name: Demo_Abyss, ClassName: !str32 CameraAbyss, GroupName: ''}
+            SInst: !obj {RadiusMin: 1.0, Fovy: 1.13446, BowFlag: false}
+          lists: {}
+        Action_63: !list
+          objects:
+            Def: !obj {Name: Demo_AnimFlowForMapTower, ClassName: !str32 CameraEventAnimFlowForMapTower,
+              GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_64: !list
+          objects:
+            Def: !obj {Name: Demo_BustUpFront, ClassName: !str32 CameraEventMove,
+              GroupName: ''}
+            SInst: !obj
+              Radius: 1.2
+              Fovy: 0.872665
+              TargetActor: 0
+              FrontBoneName: Head
+              FrontBoneAxis: 1
+              FrontBoneAxisReverse: false
+              ReviseModeRunning: 1
+              ReviseModeEnd: 1
+              CollisionInterpolateSkip: true
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_65: !list
+          objects:
+            Def: !obj {Name: Demo_CameraAnim, ClassName: !str32 CameraEventAnim, GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_66: !list
+          objects:
+            Def: !obj {Name: Demo_CameraAnimFlow, ClassName: !str32 CameraEventAnimFlow,
+              GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_67: !list
+          objects:
+            Def: !obj {Name: Demo_CameraAnimFlowAbs, ClassName: !str32 CameraEventAnimFlowAbs,
+              GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_68: !list
+          objects:
+            Def: !obj {Name: Demo_ConnectTypeSpecify, ClassName: !str32 CameraEventConnectTypeSpecify,
+              GroupName: ''}
+          lists: {}
+        Action_69: !list
+          objects:
+            Def: !obj {Name: Demo_ElevatorDown, ClassName: !str32 CameraEventMove,
+              GroupName: ''}
+            SInst: !obj
+              Radius: 9.0
+              Fovy: 0.698132
+              TargetActor: 1
+              FrontBoneName: ''
+              FrontBoneAxis: 2
+              FrontBoneAxisReverse: false
+              ReviseModeRunning: 1
+              ReviseModeEnd: 1
+              CollisionInterpolateSkip: true
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_70: !list
+          objects:
+            Def: !obj {Name: Demo_ElevatorUpEnd, ClassName: !str32 CameraEventMovePos,
+              GroupName: ''}
+            SInst: !obj
+              TargetActor1: 0
+              ActorName1: default
+              UniqueName1: default
+              TargetActor2: -1
+              ActorName2: default
+              UniqueName2: default
+              AtAppendMode: 0
+              PosAppendMode: 0
+              FovyAppendMode: 0
+              BaseMode: 0
+              MotionMode: 0
+              Pattern1AtX: 0.0
+              Pattern1AtY: 8.0
+              Pattern1AtZ: 0.0
+              Pattern1PosX: 0.0
+              Pattern1PosY: 1.0
+              Pattern1PosZ: 0.0
+              Pattern1Fovy: 0.0
+              Pattern1Use: true
+              Accept1FrameDelay: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_71: !list
+          objects:
+            Def: !obj {Name: Demo_ElevatorUpStart, ClassName: !str32 CameraEventMovePos,
+              GroupName: ''}
+            SInst: !obj
+              TargetActor1: 0
+              ActorName1: default
+              UniqueName1: default
+              TargetActor2: -1
+              ActorName2: default
+              UniqueName2: default
+              AtAppendMode: 2
+              PosAppendMode: 2
+              FovyAppendMode: 0
+              BaseMode: 0
+              MotionMode: 0
+              Pattern1AtX: 0.0
+              Pattern1AtY: 0.6
+              Pattern1AtZ: -1.0
+              Pattern1PosX: 0.0
+              Pattern1PosY: 2.1
+              Pattern1PosZ: 6.0
+              Pattern1Fovy: 0.0
+              Pattern1Use: true
+              Accept1FrameDelay: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_72: !list
+          objects:
+            Def: !obj {Name: Demo_FocusDistSetting, ClassName: !str32 CameraEventFocusDistSetting,
+              GroupName: ''}
+          lists: {}
+        Action_73: !list
+          objects:
+            Def: !obj {Name: Demo_GameOver, ClassName: !str32 CameraEventGameOver,
+              GroupName: ''}
+            SInst: !obj
+              Lat: 60.0
+              Radius: 10.0
+              OffsetY: 0.0
+              Fovy: 0.872665
+              Count: 90.0
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_74: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 CameraEventIdling, GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_75: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_76: !list
+          objects:
+            Def: !obj {Name: Demo_KokkoAngry, ClassName: !str32 CameraEventMove, GroupName: ''}
+            SInst: !obj
+              Radius: 3.0
+              Fovy: 0.872665
+              TargetActor: 1
+              FrontBoneName: ''
+              FrontBoneAxis: 0
+              FrontBoneAxisReverse: false
+              ReviseModeRunning: 0
+              ReviseModeEnd: 2
+              CollisionInterpolateSkip: true
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_77: !list
+          objects:
+            Def: !obj {Name: Demo_Look, ClassName: !str32 CameraEventLook, GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_78: !list
+          objects:
+            Def: !obj {Name: Demo_LookDirect, ClassName: !str32 CameraEventLookDirect,
+              GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_79: !list
+          objects:
+            Def: !obj {Name: Demo_MapDownload, ClassName: !str32 CameraEventTalk,
+              GroupName: ''}
+            SInst: !obj
+              DistanceMin: 0.5
+              DistanceMax: 5.5
+              RadiusNear: 3.0
+              RadiusFar: 5.0
+              LngNear: 45.0
+              LngFar: 10.0
+              LngRandom: 10.0
+              LatNear: 0.0
+              LatFar: 10.0
+              FovyNear: 0.698132
+              FovyFar: 0.349066
+              ElevationAngleEffect: 0.75
+              SpeakerSwitching: true
+              HideCheck: true
+              LeftOnly: false
+              RightOnly: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_80: !list
+          objects:
+            Def: !obj {Name: Demo_MiddleFront, ClassName: !str32 CameraEventMove,
+              GroupName: ''}
+            SInst: !obj
+              Radius: 2.0
+              Fovy: 0.872665
+              TargetActor: 0
+              FrontBoneName: Head
+              FrontBoneAxis: 1
+              FrontBoneAxisReverse: false
+              ReviseModeRunning: 1
+              ReviseModeEnd: 1
+              CollisionInterpolateSkip: true
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_81: !list
+          objects:
+            Def: !obj {Name: Demo_MovePosFlow, ClassName: !str32 CameraEventMovePosFlow,
+              GroupName: ''}
+            SInst: !obj {BaseMode: 0, Pattern1Use: true, NotifyDemoCamera2Sound: 1,
+              BowFlag: false}
+          lists: {}
+        Action_82: !list
+          objects:
+            Def: !obj {Name: Demo_MultiTalk, ClassName: !str32 CameraEventMultiTalk,
+              GroupName: ''}
+            SInst: !obj
+              LatMin: -40.0
+              LatMax: 60.0
+              LatStickScale: 1.0
+              LngStickScale: 1.0
+              RadiusOffset: 4.0
+              Connect: 0.6
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_83: !list
+          objects:
+            Def: !obj {Name: Demo_OverwriteFar, ClassName: !str32 CameraEventOverwriteFar,
+              GroupName: ''}
+          lists: {}
+        Action_84: !list
+          objects:
+            Def: !obj {Name: Demo_OverwriteNear, ClassName: !str32 CameraEventOverwriteNear,
+              GroupName: ''}
+          lists: {}
+        Action_85: !list
+          objects:
+            Def: !obj {Name: Demo_PermitGfxNear, ClassName: !str32 CameraEventPermitGfxNear,
+              GroupName: ''}
+          lists: {}
+        Action_86: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_87: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_88: !list
+          objects:
+            Def: !obj {Name: Demo_PlayerHideOff, ClassName: !str32 CameraEventPlayerHideOff,
+              GroupName: ''}
+          lists: {}
+        Action_89: !list
+          objects:
+            Def: !obj {Name: Demo_PlayerHideOn, ClassName: !str32 CameraEventPlayerHideOn,
+              GroupName: ''}
+          lists: {}
+        Action_90: !list
+          objects:
+            Def: !obj {Name: Demo_PolarCoordPlayerRelative, ClassName: !str32 CameraEventPolarCoordPlayerRel,
+              GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_91: !list
+          objects:
+            Def: !obj {Name: Demo_ReserveConnectTime, ClassName: !str32 CameraEventReserveConnectTime,
+              GroupName: ''}
+          lists: {}
+        Action_92: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_93: !list
+          objects:
+            Def: !obj {Name: Demo_SavePoint1, ClassName: !str32 CameraEventSavePoint,
+              GroupName: ''}
+            SInst: !obj {SavePoint: 0, BowFlag: false}
+          lists: {}
+        Action_94: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_95: !list
+          objects:
+            Def: !obj {Name: Demo_TebaRescueEnd, ClassName: !str32 CameraEventMove,
+              GroupName: ''}
+            SInst: !obj
+              Radius: 10.0
+              Fovy: 0.872665
+              TargetActor: 1
+              FrontBoneName: ''
+              FrontBoneAxis: 0
+              FrontBoneAxisReverse: false
+              ReviseModeRunning: 1
+              ReviseModeEnd: 1
+              CollisionInterpolateSkip: true
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_96: !list
+          objects:
+            Def: !obj {Name: Demo_TebaRescueStart, ClassName: !str32 CameraEventGameOver,
+              GroupName: ''}
+            SInst: !obj
+              Lat: 60.0
+              Radius: 10.0
+              OffsetY: 0.0
+              Fovy: 0.872665
+              Count: 45.0
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_97: !list
+          objects:
+            Def: !obj {Name: Demo_Turn, ClassName: !str32 CameraEventTurn, GroupName: ''}
+            SInst: !obj {NotifyDemoCamera2Sound: 1, BowFlag: false}
+          lists: {}
+        Action_98: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_99: !list
+          objects:
+            Def: !obj {Name: Demo_Warp, ClassName: !str32 CameraEventMovePos, GroupName: ''}
+            SInst: !obj
+              TargetActor1: 1
+              ActorName1: default
+              UniqueName1: default
+              TargetActor2: -1
+              ActorName2: default
+              UniqueName2: default
+              AtAppendMode: 0
+              PosAppendMode: 0
+              FovyAppendMode: 0
+              BaseMode: 0
+              MotionMode: 0
+              Pattern1AtX: 0.0
+              Pattern1AtY: 4.0
+              Pattern1AtZ: 0.0
+              Pattern1PosX: 0.0
+              Pattern1PosY: 0.0
+              Pattern1PosZ: 0.0
+              Pattern1Fovy: 0.349066
+              Pattern1Use: true
+              Accept1FrameDelay: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_100: !list
+          objects:
+            Def: !obj {Name: Demo_WarpStart, ClassName: !str32 CameraEventMovePos,
+              GroupName: ''}
+            SInst: !obj
+              TargetActor1: 1
+              ActorName1: default
+              UniqueName1: default
+              TargetActor2: -1
+              ActorName2: default
+              UniqueName2: default
+              AtAppendMode: 2
+              PosAppendMode: 2
+              FovyAppendMode: 1
+              BaseMode: 0
+              MotionMode: 0
+              Pattern1AtX: 0.0
+              Pattern1AtY: 0.8
+              Pattern1AtZ: 0.0
+              Pattern1PosX: 3.0
+              Pattern1PosY: 3.0
+              Pattern1PosZ: 4.2
+              Pattern1Fovy: 0.610865
+              Pattern1Use: true
+              Accept1FrameDelay: false
+              NotifyDemoCamera2Sound: 1
+              BowFlag: false
+          lists: {}
+        Action_101: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_102: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_103: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 EmitInterest}
+            SInst: !obj {Level: 2, IsTargetNPC: true}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 CameraNotify2Sound}
+            SInst: !obj {CameraStateNotify2Sound: 3}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 CameraNotify2Sound}
+            SInst: !obj {CameraStateNotify2Sound: 0}
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 SoundStateLoad}
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 CameraTalkFlag}
+          lists: {}
+        Behavior_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 CameraIndoorFlag}
+          lists: {}
+        Behavior_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 CameraNotify2Sound}
+            SInst: !obj {CameraStateNotify2Sound: 1}
+          lists: {}
+        Behavior_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 CameraNotify2Sound}
+            SInst: !obj {CameraStateNotify2Sound: 2}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

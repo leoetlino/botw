@@ -1,0 +1,586 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ik wil iets verkopen!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Tot ziens!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Koop mijn spullen!
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Nee, laat maar."
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Wat wil je aan me verkopen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Daar geef ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Sarqsarq! Was dat het?
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Dank... je... Dat is wat ze zeggen waar\njij vandaan komt, toch?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Sarqsarq. Prima!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Perfect. Sarqsarq!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Je hoeft je niet te haasten, hoor."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Ik koop alles!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Aarzel niet om voorbij te komen als je\niets wilt verkopen!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Ik koop zoveel als je hebt!
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Is dat alles? Dat kan niet waar zijn!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Hoeveel wil je er aan me verkopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dus je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " aan me verkopen?\nDat levert je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " op."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Wat... is dat? Sorry, maar... ik koop geen\ndingen waarvan ik niet eens weet wat het\nis."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Moet ik je uit je kleding schudden, dan?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSorry, maar ik ben niet geïnteresseerd in\neen mager scharminkel als jij."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je verkoopt er maar eentje? Daar geef ik\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor. Is dat oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je wilt ze allemaal verkopen? Voor "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "\nstuks kan ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " geven."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Dat wordt dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Denk rustig na voor je beslist.
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: Dit is vers van de jacht.
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Die kleren staan je goed!
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Goedemiddag... Zo zeg jij dat normaal\ngesproken, toch?\nWij Gerudo's zeggen dan 'savaaq'."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Kom nog eens terug.
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Mijn zusje heeft een slagerij in het\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-fort
+      - control:
+          kind: reset_colour
+      - text: ". Ze heeft veel gereisd, dus\nze kent jouw taal best goed.\nZe is ook nog eens heel schattig, dus ga\nmaar eens langs als je toevallig in het\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-fort
+      - control:
+          kind: reset_colour
+      - text: " bent.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "Niet dat je er naar binnen mag, want je\nbent natuurlijk wel een jongen..."
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "O, natuurlijk. Laat maar zien wat je wilt\nverkopen."
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "De zaken gaan zo goed dat ik weer op\njacht zal moeten."
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bedankt, baas..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Zo zeggen ze dat in jouw taal, toch?"
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Je wilt weten of ik een verdachte\nverkoper heb gezien?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Verdacht... "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Verdacht... "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Verdacht...\nHmmm..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "Eh, ik weet het niet. Moeilijk te zeggen.\nIk ben eigenlijk altijd hier, en ik denk dat\nik een verkoper niet eens zou herkennen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Er zijn hier ook Hyliaanse verkopers.\nMisschien kunnen zij je meer vertellen..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Mijn zusje heeft een slagerij in het\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-fort
+      - control:
+          kind: reset_colour
+      - text: ". Ze heeft veel gereisd, dus\nze kent jouw taal best goed.\nZe is ook nog eens heel schattig, dus ga\nmaar eens langs als je toevallig in het\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-fort
+      - control:
+          kind: reset_colour
+      - text: " bent."
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Goedenavond... Zo zeg jij dat normaal\ngesproken, toch?\nWij Gerudo's zeggen dan 'sav'saaba'."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: Je staat in de weg!
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Goedemorgen... Zo zeg jij dat normaal\ngesproken, toch?\nWij Gerudo's zeggen dan 'savotta'."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Welkom... Zo zeg jij dat normaal\ngesproken, toch?\nWij Gerudo's zeggen dan 'vasaaq'."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Sarqsarq! Als je dit eet, kom je weer op\nkrachten!"
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Dank je! Sarqsarq!
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Ik moet gaan jagen...
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bedankt... Zo zeg jij dat normaal\ngesproken, toch?\nWij Gerudo's zeggen dan 'sarqsarq.'"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

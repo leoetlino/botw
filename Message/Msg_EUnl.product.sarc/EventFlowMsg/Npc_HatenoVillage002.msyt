@@ -1,0 +1,783 @@
+---
+group_count: 43
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ik kom iets kopen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Ik kom iets verkopen.
+  "0003":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "0004":
+    attributes: ""
+    contents:
+      - text: Wie ben jij?
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Ik koop het.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar...
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: Fijn!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wat wil je verkopen?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Wil je dat echt kwijt? Oké, ik geef je er\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Bedankt!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Wil je verder nog iets\nverkopen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Prima! "
+      - control:
+          kind: pause
+          length: longer
+      - text: En was dat het?
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Geen probleem! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "En wil je nog iets anders\nverkopen?"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Prima! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Was dat alles?
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "O... "
+      - control:
+          kind: pause
+          length: short
+      - text: Dat is jammer.
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Ik koop alles wat je maar hebt!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Neem de tijd! Haastige spoed is zelden\ngoed!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Als je dingen wilt verkopen, ben ik altijd\ngeïnteresseerd!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Verkoop me zoveel je wilt!
+  Com_Talk_11:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Bedankt!
+  Com_Talk_11b:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Heel erg bedankt!
+  Com_Talk_11c:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Hopelijk tot snel!
+  Com_Talk_11d:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Oké!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 23
+            - 205
+      - text: "Hoeveel wil je er daarvan aan me\nverkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " verkopen? Dat wordt dan\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Het spijt me,"
+      - control:
+          kind: pause
+          length: short
+      - text: " maar dat kan ik niet van je\nkopen."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Als je me die kleren wilt verkopen, zul je\nze eerst uit moeten trekken."
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Ah! Iemand met oog voor kwaliteit!\nHoeveel wil je er?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Voor eentje kan ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "\ngeven, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "Je wilt ze allemaal? Goed, het zijn er\n"
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", dus dat kost je dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Allemaal? Het zijn er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", toch? Even\nrekenen, hoor..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Wat dacht je van\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Dat gaat je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "kosten, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - control:
+          kind: reset_colour
+      - text: "Hoeveel stuks, zei je?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - text: "Dus je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "? Dat kost je\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "O, je bent van gedachten veranderd?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nJammer."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "O! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Maar als je niet genoeg rupees hebt,\ngaat de koop niet door."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Hm? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Je hebt geen ruimte voor nieuwe\naankopen."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Als er iets is dat je niet meer\nnodig hebt, koop ik het graag van je!"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Hier wil je er één van, toch? Dat kost je\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - text: Welkom!
+  near01:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - text: Dat...
+  near02:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - text: En dit...
+  near03:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - text: ♪
+  talk00:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedemorgen!
+  talk01:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hallo!
+  talk02:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hallo! Je hebt hard gewerkt vandaag,\nnietwaar?"
+  talk07:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Tot ziens!
+  talk08:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "Jij weet hoe je efficiënt inkopen moet\ndoen!"
+  talk09:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Heb je er daar nog meer van nodig? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Ik\nzal een extra bestelling doen, speciaal\nvoor jou!"
+  talk10:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: Je hebt veel gekocht.
+      - control:
+          kind: pause
+          length: short
+      - text: " Dat is goed voor\nmijn zaak!"
+  talk11:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "Zeg,"
+      - control:
+          kind: pause
+          length: short
+      - text: " het gaat best goed met jou, of niet?"
+  talk13:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Heb je nog iets anders nodig?
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+            - 4
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk14:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dan leg je het maar terug waar je het\nhebt gevonden."
+  talk15:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "O! "
+      - control:
+          kind: pause
+          length: short
+      - text: Een klant!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Sorry, ik stond met mijn rug\nnaar je toegekeerd."
+  talk16:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goed!
+  talk17:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Kan ik je helpen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+            - 4
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk18:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Ik?
+  talk19:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Ik heet Pruce.
+      - control:
+          kind: pause
+          length: short
+      - text: " De "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Oostenwind "
+      - control:
+          kind: reset_colour
+      - text: "is mijn\nwinkel."
+  talk20:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik heb een vrouw, dochter en zoon."
+      - control:
+          kind: pause
+          length: longer
+      - text: " We\nzijn eigenlijk een heel normaal gezin."
+  talk21:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Iedereen hier in Hateno is ontzettend\naardig, dus spreek ons gerust aan als je\nzin hebt in een praatje."
+  talk23:
+    attributes: Npc_HatenoVillage002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Als je iets wilt kopen, kun je er gewoon\nvoor gaan staan en het selecteren."

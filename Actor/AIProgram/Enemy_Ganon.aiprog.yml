@@ -1,0 +1,1414 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_ActivateGuardian: 144
+      Demo_BarrierOnDemo: 145
+      Demo_GanonBoneControlOn: 125
+      Demo_GetItem: 126
+      Demo_Idling: 127
+      Demo_Join: 128
+      Demo_MoveToFloor: 42
+      Demo_MoveToWall: 146
+      Demo_OpenGetDemo: 129
+      Demo_PlayASForDemo: 130
+      Demo_PlayASForTimeline: 131
+      Demo_RecoverDown: 147
+      Demo_Reset: 132
+      Demo_ResetBoneCtrl: 133
+      Demo_SendSignal: 134
+      Demo_SetGetFlag: 135
+      Demo_TrigNullASPlay: 136
+      Demo_UpdateDataByGetDemo: 137
+      Demo_VisibleOff: 138
+      Demo_WarpPos: 139
+      Demo_WarpToAnchor: 140
+      Demo_XLinkEventCreate: 141
+      Demo_XLinkEventFade: 142
+      Demo_XLinkEventKill: 143
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 LastBossRoot, GroupName: ''}
+            ChildIdx: !obj {リアクション: 6, 特殊リアクション: 36, 通常: 34}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 6, 2291369090: 7, 4287935508: 8}
+            SInst: !obj
+              ForceRecoverHitMax: 8
+              ForceRecoverDamageMax: 200
+              AddForceRecoverHitNum: 0
+              AddForceRecoverDamage: 20
+              AuraDemoName: Demo717_0
+              AuraEntryName: Demo717_0
+              AuraWallEntry: Demo717_0_OnWall
+              AuraHPRate: 0.5
+              AuraDemoDownEntry: Demo717_0_Down
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 GanonShockRoot, GroupName: リアクション_0}
+            ChildIdx: !obj {ショック: 48, 瀕死時復帰: 114}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {IsDoRecoverAction: false, IsGuardJust: true}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 SeqTwoAction, GroupName: 特殊リアクション}
+            ChildIdx: !obj {先行動: 88, 後行動: 57}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: デモ待ち大ダメージ, ClassName: !str32 SeqTwoAction, GroupName: リアクション}
+            ChildIdx: !obj {先行動: 89, 後行動: 58}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 5}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: ビーム攻撃, ClassName: !str32 GanonBeamOnWall, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {弾発射: 104, 準備: 16, 終了: 73}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj
+              ArrowNum: 2
+              ArrowName: GanonBeam
+              AtMinDamage: 12
+              AttackPower: 120
+              AttackPowerForPlayer: 40
+              ReflectOffset: !vec3 [0.0, 1.0, 0.0]
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+              PartsName: Beam_OnWall
+              IsPrepreNextArrow: true
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: ビーム攻撃, ClassName: !str32 GanonBeamOnFloor, GroupName: 近接攻撃}
+            ChildIdx: !obj {弾発射: 105, 準備: 17, 終了: 73}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              WalkAS: Walk
+              TurnAS: Turn_Attack_Eye
+              TurnStartAng: 0.349066
+              KeepMinDist: 15.0
+              TurnRate: 0.08
+              ArrowNum: 2
+              ArrowName: GanonBeam
+              AtMinDamage: 12
+              AttackPower: 120
+              AttackPowerForPlayer: 40
+              ReflectOffset: !vec3 [0.0, 4.0, 0.0]
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+              PartsName: Beam
+              IsPrepreNextArrow: true
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 GanonReaction, GroupName: Root}
+            ChildIdx: !obj
+              ふっとび: 50
+              ガード: 44
+              ガードブレイク: 45
+              ショック: 1
+              ジャストガード: 46
+              デモ待ち大ダメージ: 3
+              凍結: 109
+              大落下: 99
+              小ダメージ: 20
+              崩れ落ち: 119
+              弾かれ: 100
+              死亡: 14
+              炎上: 54
+              痺れ: 124
+              突風: 113
+              落下: 121
+              超ショック: 33
+            SInst: !obj {JustGuardTimesMin: 3, JustGuardTimesMax: 5, SmallDamageCancelTimes: 0,
+              InComboSmallDamageNoCancel: true}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GanonApproachOnWallRoot, GroupName: 壁}
+            ChildIdx: !obj {移動: 52}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj
+              ApproachTime: 150.0
+              MinDist: 18.0
+              MaxDist: 19.0
+              FinDist: 20.0
+              IsInterpolateYUp: false
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 遠距離攻撃, ClassName: !str32 GanonBeamOnFloor, GroupName: 床}
+            ChildIdx: !obj {弾発射: 105, 準備: 17, 終了: 73}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 3}
+            SInst: !obj
+              WalkAS: Walk
+              TurnAS: Turn_Attack_Eye
+              TurnStartAng: 0.349066
+              KeepMinDist: 15.0
+              TurnRate: 0.08
+              ArrowNum: 2
+              ArrowName: GanonBeam
+              AtMinDamage: 12
+              AttackPower: 120
+              AttackPowerForPlayer: 40
+              ReflectOffset: !vec3 [0.0, 4.0, 0.0]
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+              PartsName: Beam
+              IsPrepreNextArrow: true
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: 遠距離攻撃, ClassName: !str32 GanonFarAttackRootOnWall, GroupName: 壁}
+            ChildIdx: !obj
+              ビーム攻撃: 4
+              ラリー球: 51
+              弓矢攻撃: 11
+              槍投げ: 28
+              氷柱: 38
+              火球: 10
+              疾風弾: 15
+              竜巻: 41
+              落雷: 123
+              落雷後待機: 40
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {PillarMax: 18}
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: 火球, ClassName: !str32 GanonThrowActorRoot, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {弾消え待ち: 101, 所持: 80, 投げる: 110, 生成待ち: 84}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              ThrowActorName: GanonFlameBall
+              AttackDamage: 40
+              AtMinDamage: 8
+              RegisterPartsName: FireBall
+              IsThrowQuick: true
+              IsWaitBulletDelete: true
+              IsSetSystemGroupHandler: false
+              IsSendDeleteMessageAtLeave: false
+              AddAtackPower: 0
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: 弓矢攻撃, ClassName: !str32 LastBossShootNormalArrowRoot,
+              GroupName: 遠距離攻撃}
+            ChildIdx: !obj {弾発射: 106, 準備: 76, 終了: 74}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj
+              ArrowNum: 6
+              ArrowName: GanonNormalArrow
+              AtMinDamage: 8
+              AttackPower: 36
+              AttackPowerForPlayer: 40
+              ReflectOffset: !vec3 [0.0, 1.0, 0.0]
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+              PartsName: NormalArrow
+              IsPrepreNextArrow: false
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: 近接攻撃, ClassName: !str32 GanonNearAttackOnFloorRoot, GroupName: 床}
+            ChildIdx: !obj
+              ビーム攻撃: 5
+              大剣攻撃: 32
+              大剣横攻撃: 31
+              小剣攻撃: 21
+              槍攻撃: 95
+              衝撃波: 23
+            SInst: !obj {NearDist: 13.0}
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: 後半, ClassName: !str32 GanonBattleRoot, GroupName: 発見}
+            ChildIdx: !obj
+              ジャストガード後攻撃: 47
+              初回ガーディアン活性化: 77
+              初回ガーディアン活性化移動: 78
+              初回バリア: 79
+              初回バリア移動: 19
+              壁: 39
+              床: 22
+              状態遷移: 24
+            SInst: !obj {BarrierHPRate: 0.5}
+          lists: {}
+        AI_14: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 SeqThreeAction, GroupName: 選択}
+            ChildIdx: !obj {中行動: 108, 先行動: 90, 後行動: 59}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_15: !list
+          objects:
+            Def: !obj {Name: 疾風弾, ClassName: !str32 LastBossShootGaleArrowRoot, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {弾発射: 107, 準備: 18, 終了: 75}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              ArrowNum: 1
+              ArrowName: GaleArrow
+              AtMinDamage: 8
+              AttackPower: 40
+              AttackPowerForPlayer: 40
+              ReflectOffset: !vec3 [0.0, 1.0, 0.0]
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+              PartsName: GaleArrow
+              IsPrepreNextArrow: true
+          lists: {}
+        AI_16: !list
+          objects:
+            Def: !obj {Name: 準備, ClassName: !str32 SeqTwoAction, GroupName: ビーム攻撃}
+            ChildIdx: !obj {先行動: 92, 後行動: 61}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_17: !list
+          objects:
+            Def: !obj {Name: 準備, ClassName: !str32 SeqTwoAction, GroupName: ビーム攻撃_0}
+            ChildIdx: !obj {先行動: 91, 後行動: 60}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_18: !list
+          objects:
+            Def: !obj {Name: 準備, ClassName: !str32 Fork2AI, GroupName: 疾風弾}
+            ChildIdx: !obj {子０: 68, 子１: 71}
+          lists: {}
+        AI_19: !list
+          objects:
+            Def: !obj {Name: 初回バリア移動, ClassName: !str32 GanonDemoMoveSeqTwoAction,
+              GroupName: 後半}
+            ChildIdx: !obj {先行動: 93, 後行動: 62}
+          lists: {}
+        AI_20: !list
+          objects:
+            Def: !obj {Name: 小ダメージ, ClassName: !str32 SiteBossSmallDamageRoot, GroupName: リアクション_0}
+            ChildIdx: !obj {大ダメージ: 98, 小ダメージ: 83}
+          lists: {}
+        AI_21: !list
+          objects:
+            Def: !obj {Name: 小剣攻撃, ClassName: !str32 GanonWeaponAttackOnFloor, GroupName: 近接攻撃}
+            ChildIdx: !obj {接近: 25, 攻撃: 64}
+            SInst: !obj {WeaponIdx: 0, CloseDist: 10.0}
+          lists: {}
+        AI_22: !list
+          objects:
+            Def: !obj {Name: 床, ClassName: !str32 GanonBattleOnFloorRoot, GroupName: 後半}
+            ChildIdx: !obj {待機: 29, 近接攻撃: 12, 遠距離攻撃: 8}
+            SInst: !obj {FarAttackDist: 30.0}
+          lists: {}
+        AI_23: !list
+          objects:
+            Def: !obj {Name: 衝撃波, ClassName: !str32 Fork2AI, GroupName: 近接攻撃}
+            ChildIdx: !obj {子０: 67, 子１: 70}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1, 2291369090: 5}
+          lists: {}
+        AI_24: !list
+          objects:
+            Def: !obj {Name: 状態遷移, ClassName: !str32 GanonStateChangeRoot, GroupName: 後半}
+            ChildIdx: !obj {壁に向かう: 117, 壁張り付き: 118}
+            BehaviorIdx: !obj {1721623982: 1}
+          lists: {}
+        AI_25: !list
+          objects:
+            Def: !obj {Name: 接近, ClassName: !str32 GanonApproachOnFloorRoot, GroupName: 小剣攻撃}
+            ChildIdx: !obj {移動: 53}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj
+              FinDist: 16.0
+              ApproachTime: 600.0
+              FinFarDist: 100.0
+              MoveFrontRate: 0.35
+              MoveFrontLRRate: 0.15
+              MoveBackLRRate: 0.05
+              CloseDist: 10.0
+              ForbitAngMin: 0.174533
+              ForbitAngMax: 1.39626
+              CheckPosAng0: 0.0
+              CheckPosAng1: 1.39626
+              CheckPosAng2: -1.39626
+              CheckPosAng3: 2.79253
+              CheckPosAng4: -2.79253
+          lists: {}
+        AI_26: !list
+          objects:
+            Def: !obj {Name: 接近, ClassName: !str32 GanonApproachOnFloorRoot, GroupName: 大剣攻撃}
+            ChildIdx: !obj {移動: 53}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj
+              FinDist: 20.0
+              ApproachTime: 600.0
+              FinFarDist: 100.0
+              MoveFrontRate: 0.35
+              MoveFrontLRRate: 0.15
+              MoveBackLRRate: 0.05
+              CloseDist: 10.0
+              ForbitAngMin: 0.174533
+              ForbitAngMax: 1.39626
+              CheckPosAng0: 0.0
+              CheckPosAng1: 1.39626
+              CheckPosAng2: -1.39626
+              CheckPosAng3: 2.79253
+              CheckPosAng4: -2.79253
+          lists: {}
+        AI_27: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 GanonThrowMultiActorRoot, GroupName: 氷柱}
+            ChildIdx: !obj {弾消え待ち: 102, 所持: 81, 投げる: 111, 生成待ち: 86}
+            SInst: !obj
+              PartsName1: IceSplinter1
+              PartsName2: IceSplinter2
+              PartsName3: IceSplinter3
+              PartsName4: IceSplinter4
+              PartsName5: IceSplinter5
+              PartsName6: IceSplinter6
+              PartsName7: IceSplinter7
+              PartsName8: IceSplinter8
+              ThrowActorName: GanonIceBullet
+              AttackDamage: 40
+              AtMinDamage: 8
+              RegisterPartsName: IceSplinter
+              IsThrowQuick: true
+              IsWaitBulletDelete: true
+              IsSetSystemGroupHandler: false
+              IsSendDeleteMessageAtLeave: true
+              AddAtackPower: 0
+          lists: {}
+        AI_28: !list
+          objects:
+            Def: !obj {Name: 槍投げ, ClassName: !str32 SiteBossSpearThrow, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {投げる: 35, 生成待ち: 85}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj {AttackPower: 40, AtMnDamage: 8, AddAttackPower: 0, ThrowActorName: GanonSpearForThrowing}
+          lists: {}
+        AI_29: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 ViewWaitEndWhenAimed, GroupName: 床}
+            ChildIdx: !obj {回転: 55, 待機: 96}
+            SInst: !obj
+              BoneName: Head
+              AimedAngle: 0.349066
+              BowRange: 2.0
+              EndTime: 5
+              Time: 30
+              TimeRand: 30
+              TurnStartAngle: 0.261799
+              CheckOnce: false
+          lists: {}
+        AI_30: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 ViewWaitEndWhenAimed, GroupName: 壁}
+            ChildIdx: !obj {回転: 56, 待機: 97}
+            SInst: !obj
+              BoneName: Head
+              AimedAngle: 0.349066
+              BowRange: 5.0
+              EndTime: 5
+              Time: 90
+              TimeRand: 30
+              TurnStartAngle: 3.14159
+              CheckOnce: true
+          lists: {}
+        AI_31: !list
+          objects:
+            Def: !obj {Name: 大剣横攻撃, ClassName: !str32 GanonWeaponAttackOnFloor, GroupName: 近接攻撃}
+            ChildIdx: !obj {接近: 26, 攻撃: 65}
+            SInst: !obj {WeaponIdx: 0, CloseDist: 16.0}
+          lists: {}
+        AI_32: !list
+          objects:
+            Def: !obj {Name: 大剣攻撃, ClassName: !str32 GanonWeaponAttackOnFloor, GroupName: 近接攻撃}
+            ChildIdx: !obj {接近: 26, 攻撃: 66}
+            SInst: !obj {WeaponIdx: 0, CloseDist: 16.0}
+          lists: {}
+        AI_33: !list
+          objects:
+            Def: !obj {Name: 超ショック, ClassName: !str32 GanonShockRoot, GroupName: リアクション}
+            ChildIdx: !obj {ショック: 49, 瀕死時復帰: 115}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {IsDoRecoverAction: false, IsGuardJust: true}
+          lists: {}
+        AI_34: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 GanonNormalRoot, GroupName: BaseAI}
+            ChildIdx: !obj {未発見: 120, 発見: 37}
+          lists: {}
+        AI_35: !list
+          objects:
+            Def: !obj {Name: 投げる, ClassName: !str32 Fork2AI, GroupName: 槍投げ}
+            ChildIdx: !obj {子０: 69, 子１: 72}
+          lists: {}
+        AI_36: !list
+          objects:
+            Def: !obj {Name: 特殊リアクション, ClassName: !str32 GanonShockRoot, GroupName: Root}
+            ChildIdx: !obj {ショック: 2, 瀕死時復帰: 116}
+            BehaviorIdx: !obj {1721623982: 5}
+            SInst: !obj {IsDoRecoverAction: true, IsGuardJust: false}
+          lists: {}
+        AI_37: !list
+          objects:
+            Def: !obj {Name: 発見, ClassName: !str32 GanonRecognizeRoot, GroupName: 通常}
+            ChildIdx: !obj {前半: 94, 後半: 13}
+          lists: {}
+        AI_38: !list
+          objects:
+            Def: !obj {Name: 氷柱, ClassName: !str32 SeqTwoAction, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {先行動: 27, 後行動: 63}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_39: !list
+          objects:
+            Def: !obj {Name: 壁, ClassName: !str32 GanonBattleOnWallRoot, GroupName: 後半}
+            ChildIdx: !obj
+              ガーディアン活性化: 43
+              待機: 30
+              移動: 7
+              落下攻撃: 122
+              遠距離攻撃: 9
+            SInst: !obj {GuardianActivateHP: 0.5}
+          lists: {}
+        AI_40: !list
+          objects:
+            Def: !obj {Name: 落雷後待機, ClassName: !str32 ViewWaitEndWhenAimed, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {回転: 56, 待機: 97}
+            SInst: !obj
+              BoneName: Head
+              AimedAngle: 0.349066
+              BowRange: 5.0
+              EndTime: 5
+              Time: 90
+              TimeRand: 30
+              TurnStartAngle: 3.14159
+              CheckOnce: true
+          lists: {}
+        AI_41: !list
+          objects:
+            Def: !obj {Name: 竜巻, ClassName: !str32 GanonThrowMultiActorRoot, GroupName: 遠距離攻撃}
+            ChildIdx: !obj {弾消え待ち: 103, 所持: 82, 投げる: 112, 生成待ち: 87}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              PartsName1: Tornado1
+              PartsName2: ''
+              PartsName3: ''
+              PartsName4: ''
+              PartsName5: ''
+              PartsName6: ''
+              PartsName7: ''
+              PartsName8: ''
+              ThrowActorName: GanonTornado
+              AttackDamage: 40
+              AtMinDamage: 8
+              RegisterPartsName: Tornado0
+              IsThrowQuick: true
+              IsWaitBulletDelete: false
+              IsSetSystemGroupHandler: true
+              IsSendDeleteMessageAtLeave: false
+              AddAtackPower: 0
+          lists: {}
+        AI_42: !list
+          objects:
+            Def: !obj {Name: Demo_MoveToFloor, ClassName: !str32 GanonDemoMoveSeqTwoAction,
+              GroupName: ''}
+            ChildIdx: !obj {先行動: 93, 後行動: 62}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: ガーディアン活性化, ClassName: !str32 DummyAction, GroupName: 壁}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: ガード, ClassName: !str32 DummyAction, GroupName: リアクション_0}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: ガードブレイク, ClassName: !str32 DummyAction, GroupName: リアクション_0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: ジャストガード, ClassName: !str32 LastBossJustGuard, GroupName: リアクション_0}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: ジャストガード後攻撃, ClassName: !str32 DummyAction, GroupName: 後半}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 Shock, GroupName: ショック}
+            SInst: !obj
+              HitImpactForce: 0.2
+              VelReduce: 0.8
+              KnockBackTime: 10
+              WeaponIdx: -1
+              WeaponDropSpeedXZ: 0.3
+              WeaponDropSpeedY: 0.5
+              ASName: Miss
+              ASSlot: 0
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 Shock, GroupName: 超ショック}
+            SInst: !obj
+              HitImpactForce: 0.2
+              VelReduce: 0.8
+              KnockBackTime: 10
+              WeaponIdx: -1
+              WeaponDropSpeedXZ: 0.3
+              WeaponDropSpeedY: 0.5
+              ASName: Miss
+              ASSlot: 0
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: ふっとび, ClassName: !str32 DummyAction, GroupName: リアクション_0}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: ラリー球, ClassName: !str32 DummyAction, GroupName: 遠距離攻撃}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GanonMove, GroupName: 移動}
+            SInst: !obj
+              MoveSpeed: 0.633333
+              MoveAccel: 0.05
+              ASName: Walk_Back
+              IsUpEqualGravity: true
+              AvoidMoveSpeed: 0.63
+              AvoidMoveAccel: 0.05
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GanonMove, GroupName: 接近}
+            SInst: !obj
+              MoveSpeed: 0.4
+              MoveAccel: 0.04
+              ASName: Walk
+              IsUpEqualGravity: false
+              AvoidMoveSpeed: 0.25
+              AvoidMoveAccel: 0.08
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 炎上, ClassName: !str32 DummyAction, GroupName: リアクション_0}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 TurnWithAS, GroupName: 待機}
+            SInst: !obj
+              ASName: Turn
+              RotSpd: 0.0785398
+              FinRotate: 0.0174533
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.08
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 GanonTurnOnWall, GroupName: 待機_0}
+            SInst: !obj
+              RotSpd: 0.0
+              FinRotate: 0.0174533
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: false
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 GanonStunRecover, GroupName: ショック}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 StopASPlay, GroupName: デモ待ち大ダメージ}
+            SInst: !obj {ASName: Wait, IsIgnoreSame: true, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 StopASPlay, GroupName: 死亡}
+            SInst: !obj {ASName: Die_Loop, IsIgnoreSame: true, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 WaitTimer, GroupName: 準備}
+            SInst: !obj {WaitFrame: 10}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 WaitTimer, GroupName: 準備_0}
+            SInst: !obj {WaitFrame: 10}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 GanonFallAttack, GroupName: 初回バリア移動}
+            SInst: !obj {IsEmitShockWave: false}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 氷柱}
+            SInst: !obj {ASName: Attack_Chemical_Ice_Up_End, IsIgnoreSame: false,
+              PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: 攻撃, ClassName: !str32 GanonWeaponNearAttack, GroupName: 小剣攻撃}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              ASName: Attack_Sword
+              JustAvoidSideDist: 16.0
+              JustAvoidBackDist: 12.0
+              JustAvoidAngle: 0.959931
+              WeaponIdx: 0
+              AttackPower: 40
+              AtkMinPower: 8
+              AtAttr: 1
+              IsGuardPierce: false
+              IsGuardBreak: true
+              AttackCancelDist: 17.0
+              AttackCancelAng: 1.5708
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: 攻撃, ClassName: !str32 GanonAttackWithEmitChemical, GroupName: 大剣横攻撃}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              EmitActorName: GanonSeaOfFlame
+              EmitNum: 7
+              EmitOffsetFromParent: 6.0
+              EmitIntervalDist: 0.6
+              EmitIntervalRotate: 0.314159
+              EmitScale: 1.0
+              EmitMaxScale: 1.0
+              ScaleTime: 1.0
+              EmitInterval: 1
+              EmitStartFrame: 3.0
+              EmitAngleFromParent: -0.436332
+              EmitActorSpeed: !vec3 [0.0, 0.0, 0.6]
+              EmitActorSpeedRotate: 0.0
+              EmitAttackPower: 8
+              EmitMinDamage: 8
+              EmitBaseBoneName: Spine_3
+              EmitBoneRotateOffset: !vec3 [0.0, 0.785398, 0.0]
+              EmitPartsName: LswordSide
+              ChildCreateLimit: 3
+              CallSEKeyAtAtOn: LswordSideAttackSwing_FlameSea
+              ASName: Attack_Lsword_Side
+              JustAvoidSideDist: 3.0
+              JustAvoidBackDist: 25.0
+              JustAvoidAngle: 0.959931
+              WeaponIdx: 0
+              AttackPower: 40
+              AtkMinPower: 8
+              AtAttr: 1
+              IsGuardPierce: false
+              IsGuardBreak: true
+              AttackCancelDist: 12.0
+              AttackCancelAng: 0.785398
+              BattleNodeOffsetLR: 0.0
+              BattleNodeOffsetUD: 0.0
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 攻撃, ClassName: !str32 GanonAttackWithEmitChemical, GroupName: 大剣攻撃}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 1}
+            SInst: !obj
+              EmitActorName: GanonPillarOfFlame
+              EmitNum: 8
+              EmitOffsetFromParent: 0.0
+              EmitIntervalDist: 2.2
+              EmitIntervalRotate: 0.0
+              EmitScale: 2.0
+              EmitMaxScale: 2.0
+              ScaleTime: 1.0
+              EmitInterval: 4
+              EmitStartFrame: 5.0
+              EmitAngleFromParent: 0.0
+              EmitActorSpeed: !vec3 [0.0, 0.0, 0.0]
+              EmitActorSpeedRotate: 0.0
+              EmitAttackPower: 8
+              EmitMinDamage: 8
+              EmitBaseBoneName: Wrist_R
+              EmitBoneRotateOffset: !vec3 [0.0, -1.5708, 0.0]
+              EmitPartsName: Lsword
+              ChildCreateLimit: 1
+              CallSEKeyAtAtOn: LswordAttackImpact_FlamePile
+              ASName: Attack_Lsword
+              JustAvoidSideDist: 18.0
+              JustAvoidBackDist: 12.0
+              JustAvoidAngle: 0.959931
+              WeaponIdx: 0
+              AttackPower: 40
+              AtkMinPower: 8
+              AtAttr: 1
+              IsGuardPierce: false
+              IsGuardBreak: true
+              AttackCancelDist: 12.0
+              AttackCancelAng: 0.785398
+              BattleNodeOffsetLR: 0.0523599
+              BattleNodeOffsetUD: 0.0
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkASTrgEmitShockWavePos, GroupName: 攻撃}
+            SInst: !obj
+              OffsetPos: !vec3 [0.0, 0.0, 2.0]
+              ShockWaveActorName: EnemyGanonShockWave
+              ShockWavePartsKey: ShockWave
+              Power: 40
+              MaxScale: 15.0
+              ScaleTime: 5.0
+              AttackIntensity: 2
+              IsGuardPierce: false
+              IsForceGuardBreak: true
+              IsIniviciblePierce: false
+              EmitIntervalTime: -1
+              IsHeavy: false
+              AtMinDamage: 8
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkTimer, GroupName: 準備}
+            SInst: !obj {WaitFrame: 115, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkTurnASHold, GroupName: 投げる}
+            SInst: !obj
+              IsUpdateTarget: true
+              RotSpd: 0.15708
+              FinRotate: 0.0174533
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsFollowGround: false
+              IsRotEndFinish: true
+              IsFinishForceStopRot: false
+              IsChangeable: true
+              IsUpFollow: false
+              RotAccRatio: 0.16
+              RotAccMaxSpeedRatio: 0.1
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkASPlay, GroupName: 攻撃}
+            SInst: !obj
+              ASName: Attack_Wave
+              EndState: 1
+              ChangeableTiming: 0
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkASPlay, GroupName: 準備}
+            SInst: !obj
+              ASName: Attack_Chemical_Wind_Up
+              EndState: 0
+              ChangeableTiming: 0
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 SiteBossThrowParts, GroupName: 投げる}
+            SInst: !obj
+              IgniteOffset: !vec3 [0.0, 0.0, 0.0]
+              IgniteSpeed: 1.0
+              IgniteRotate: !vec3 [1.91986, 0.0, 2.0944]
+              IgniteRotSpeed: !vec3 [0.0, 0.0, 0.0]
+              DirMinAngle: !vec3 [-1.5708, -1.5708, -1.5708]
+              DirMaxAngle: !vec3 [1.5708, 1.5708, 1.5708]
+              MaxNoiseDist: 0.0
+              OffsetHeight: 1.0
+              BaseNode: Weapon_BL
+              PartsName: Spear
+              ASName: Attack_Spear_Up
+              IsCalcNextPos: true
+              IsCheckPlayerAround: false
+              PredictionFrame: 5.0
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 終了, ClassName: !str32 WaitTimer, GroupName: ビーム攻撃}
+            SInst: !obj {WaitFrame: 0}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 終了, ClassName: !str32 OnetimeStopASPlay, GroupName: 弓矢攻撃}
+            SInst: !obj {ASName: Attack_Bow_End, IsIgnoreSame: false, PosReduceRatio: 0.95,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 終了, ClassName: !str32 WaitTimer, GroupName: 疾風弾}
+            SInst: !obj {WaitFrame: 0}
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 準備, ClassName: !str32 OnetimeStopASPlay, GroupName: 弓矢攻撃}
+            SInst: !obj {ASName: Attack_Bow_Start, IsIgnoreSame: false, PosReduceRatio: 0.95,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 初回ガーディアン活性化, ClassName: !str32 DummyAction, GroupName: 後半}
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 初回ガーディアン活性化移動, ClassName: !str32 DummyAction, GroupName: 後半}
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: 初回バリア, ClassName: !str32 GanonBarrierOn, GroupName: 後半}
+            SInst: !obj {ASName: Power_Demo}
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: 火球}
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: 氷柱}
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: 竜巻}
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 小ダメージ, ClassName: !str32 GanonSmallDamage, GroupName: 小ダメージ}
+            SInst: !obj
+              UpAS: SmallDamage_Up
+              AS: SmallDamage
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.12
+              HitImpactForceLargeSwordL: 0.16
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 生成待ち, ClassName: !str32 DummyAction, GroupName: 火球}
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 生成待ち, ClassName: !str32 DummyAction, GroupName: 槍投げ}
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 生成待ち, ClassName: !str32 DummyAction, GroupName: 氷柱}
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 生成待ち, ClassName: !str32 DummyAction, GroupName: 竜巻}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 LastBossStun, GroupName: ショック}
+            SInst: !obj {StunTime: 180.0, AddStunTime: 0.0, ShockWaveDownTime: 60.0}
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 AnmDamage, GroupName: デモ待ち大ダメージ}
+            SInst: !obj
+              AS: Damage_Big
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.12
+              HitImpactForceLargeSwordL: 0.16
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SetLinkTagBasic, GroupName: 死亡}
+            SInst: !obj {IsOn: true}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 GuardianAimBeamWithAS, GroupName: 準備}
+            SInst: !obj
+              ASName: Attack_Eye_Start
+              IsChangeable: true
+              TargetOffset: 0.0
+              TargetOffsetY: 0.8
+              FluctuationRange: 0.5
+              FluctuationTime: 80.0
+              FluctuationSpan: 12.0
+              NodeName: Wrist_ML
+              NodeOffset: !vec3 [4.8, 0.0, 0.0]
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 GuardianAimBeamWithAS, GroupName: 準備_0}
+            SInst: !obj
+              ASName: Attack_Eye_Start_Up
+              IsChangeable: true
+              TargetOffset: 0.0
+              TargetOffsetY: 0.8
+              FluctuationRange: 0.5
+              FluctuationTime: 80.0
+              FluctuationSpan: 12.0
+              NodeName: Wrist_ML
+              NodeOffset: !vec3 [4.8, 0.0, 0.0]
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 DummyAction, GroupName: 初回バリア移動}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: 前半, ClassName: !str32 DummyAction, GroupName: 発見}
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: 槍攻撃, ClassName: !str32 DummyAction, GroupName: 近接攻撃}
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Wait, GroupName: 待機}
+            SInst: !obj {Time: 15, TimeRand: 0, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 TimeredASPlay, GroupName: 待機_0}
+            SInst: !obj
+              ASName: Wait_Back
+              Time: 90
+              TimeRand: 30
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: 大ダメージ, ClassName: !str32 GanonSmallDamage, GroupName: 小ダメージ}
+            SInst: !obj
+              UpAS: SmallDamage_Up
+              AS: Damage_Big
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.12
+              HitImpactForceLargeSwordL: 0.16
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: 大落下, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: 弾かれ, ClassName: !str32 Rebound, GroupName: リアクション_0}
+            SInst: !obj {PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: 弾消え待ち, ClassName: !str32 TimeredASPlay, GroupName: 火球}
+            SInst: !obj
+              ASName: Wait_Back
+              Time: 1
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: 弾消え待ち, ClassName: !str32 StopASPlay, GroupName: 氷柱}
+            SInst: !obj {ASName: Attack_Chemical_Ice_Up_Loop, IsIgnoreSame: true,
+              PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: 弾消え待ち, ClassName: !str32 DummyAction, GroupName: 竜巻}
+          lists: {}
+        Action_61: !list
+          objects:
+            Def: !obj {Name: 弾発射, ClassName: !str32 GanonBeamIgnite, GroupName: ビーム攻撃}
+            SInst: !obj
+              IgniteOffset: !vec3 [4.8, 0.0, 0.0]
+              IgniteSpeed: 5.0
+              IgniteRotate: !vec3 [0.0, 0.0, 0.0]
+              IgniteRotSpeed: !vec3 [0.0, 0.0, 0.0]
+              OffsetHeight: 1.0
+              BaseNode: Wrist_ML
+              IsConnectChild: true
+              DirMinAngle: !vec3 [-1.91986, -3.14159, 0.0]
+              DirMaxAngle: !vec3 [1.91986, 3.14159, 0.0]
+              ASName: Attack_Eye_End_Up
+              IsIgnoreSame: false
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_62: !list
+          objects:
+            Def: !obj {Name: 弾発射, ClassName: !str32 GanonBeamIgnite, GroupName: ビーム攻撃_0}
+            SInst: !obj
+              IgniteOffset: !vec3 [4.8, 0.0, 0.0]
+              IgniteSpeed: 5.0
+              IgniteRotate: !vec3 [0.0, 0.0, 0.0]
+              IgniteRotSpeed: !vec3 [0.0, 0.0, 0.0]
+              OffsetHeight: 1.3
+              BaseNode: Wrist_ML
+              IsConnectChild: true
+              DirMinAngle: !vec3 [-0.174533, -0.523599, 0.0]
+              DirMaxAngle: !vec3 [0.698132, 0.523599, 0.0]
+              ASName: Attack_Eye_End
+              IsIgnoreSame: false
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_63: !list
+          objects:
+            Def: !obj {Name: 弾発射, ClassName: !str32 SiteBossShootNormalArrow, GroupName: 弓矢攻撃}
+            SInst: !obj
+              InitSpeed: 1.0
+              BaseNode: Wrist_ML
+              IgniteOffset: !vec3 [4.0, 0.0, 0.0]
+              IgniteRotate: !vec3 [0.0, 1.5708, 0.0]
+              TargetOffsetY: 1.0
+              ASName: Attack_Bow_Loop
+              IsConnectChild: true
+              IsCheckASEvent: false
+              IsTurnToTarget: false
+              DirMinAngle: !vec3 [-1.5708, -0.349066, 0.0]
+              DirMaxAngle: !vec3 [1.5708, 0.349066, 0.0]
+          lists: {}
+        Action_64: !list
+          objects:
+            Def: !obj {Name: 弾発射, ClassName: !str32 SiteBossShootNormalArrow, GroupName: 疾風弾}
+            SInst: !obj
+              InitSpeed: 5.0
+              BaseNode: Wrist_ML
+              IgniteOffset: !vec3 [4.0, 0.0, 0.0]
+              IgniteRotate: !vec3 [0.0, 1.5708, 0.0]
+              TargetOffsetY: 1.0
+              ASName: Attack_Chemical_Wind_Up_End
+              IsConnectChild: false
+              IsCheckASEvent: true
+              IsTurnToTarget: false
+              DirMinAngle: !vec3 [-1.5708, -0.174533, 0.0]
+              DirMaxAngle: !vec3 [1.5708, 0.174533, 0.0]
+          lists: {}
+        Action_65: !list
+          objects:
+            Def: !obj {Name: 中行動, ClassName: !str32 DieAnm, GroupName: 死亡}
+            SInst: !obj {ASName: Die, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_66: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 DummyAction, GroupName: リアクション_0}
+          lists: {}
+        Action_67: !list
+          objects:
+            Def: !obj {Name: 投げる, ClassName: !str32 GanonThrowFireBall, GroupName: 火球}
+            SInst: !obj {InitVelocity: 0.266667, FireBallScale: 0.5, BallAppearOffset: 2.0,
+              ASName: Attack_Chemical_Fire_Up}
+          lists: {}
+        Action_68: !list
+          objects:
+            Def: !obj {Name: 投げる, ClassName: !str32 GanonThrowMultiIce, GroupName: 氷柱}
+            SInst: !obj
+              ThrowNumAtSameTiming: 2
+              InitVelocity: 0.266667
+              FireBallScale: 1.0
+              BallAppearOffset: 2.0
+              ASName: Attack_Chemical_Ice_Up
+          lists: {}
+        Action_69: !list
+          objects:
+            Def: !obj {Name: 投げる, ClassName: !str32 GanonThrowMultiTornado, GroupName: 竜巻}
+            SInst: !obj
+              AppearOffset1: !vec3 [-4.0, -10.0, -5.0]
+              InitVelocity: 0.1
+              AppearOffset: !vec3 [4.0, -10.0, -5.0]
+              ASName: Attack_Chemical_Tornado_Up
+              CreateHeight: 191.0
+          lists: {}
+        Action_70: !list
+          objects:
+            Def: !obj {Name: 突風, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_71: !list
+          objects:
+            Def: !obj {Name: 瀕死時復帰, ClassName: !str32 DummyAction, GroupName: ショック}
+          lists: {}
+        Action_72: !list
+          objects:
+            Def: !obj {Name: 瀕死時復帰, ClassName: !str32 DummyAction, GroupName: 超ショック}
+          lists: {}
+        Action_73: !list
+          objects:
+            Def: !obj {Name: 瀕死時復帰, ClassName: !str32 GanonBarrierOn, GroupName: 特殊リアクション}
+            SInst: !obj {ASName: Power}
+          lists: {}
+        Action_74: !list
+          objects:
+            Def: !obj {Name: 壁に向かう, ClassName: !str32 GanonMove, GroupName: 状態遷移_0}
+            SInst: !obj
+              MoveSpeed: 0.4
+              MoveAccel: 0.05
+              ASName: Walk
+              IsUpEqualGravity: false
+              AvoidMoveSpeed: 0.5
+              AvoidMoveAccel: 0.1
+          lists: {}
+        Action_75: !list
+          objects:
+            Def: !obj {Name: 壁張り付き, ClassName: !str32 GanonChangeState, GroupName: 状態遷移_0}
+          lists: {}
+        Action_76: !list
+          objects:
+            Def: !obj {Name: 崩れ落ち, ClassName: !str32 SmallDamage, GroupName: リアクション}
+            SInst: !obj
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.12
+              HitImpactForceLargeSwordL: 0.16
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_77: !list
+          objects:
+            Def: !obj {Name: 未発見, ClassName: !str32 Wait, GroupName: 通常}
+            SInst: !obj {Time: 10, TimeRand: 30, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_78: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_79: !list
+          objects:
+            Def: !obj {Name: 落下攻撃, ClassName: !str32 GanonFallAttack, GroupName: 壁}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {IsEmitShockWave: true}
+          lists: {}
+        Action_80: !list
+          objects:
+            Def: !obj {Name: 落雷, ClassName: !str32 GanonChemicalPillarAttack, GroupName: 遠距離攻撃}
+            SInst: !obj
+              CreateActorName: GanonThunder
+              ASName: Attack_Chemical_Thunder
+              AttackPower: 120
+              AtMinPower: 8
+              PillarOffset: 1.0
+              AttackPowerForPlayer: 40
+              PillarNum: 18
+              PillarInterval: 6
+              AppearPosDist: 6.0
+              AppearPosHeight: 4.0
+              IgnitionInterval: 12.0
+              PileScale: 1.0
+              WaitASName: Wait_Back
+              CreatePileASName: ''
+          lists: {}
+        Action_81: !list
+          objects:
+            Def: !obj {Name: 痺れ, ClassName: !str32 DummyAction, GroupName: リアクション_0}
+          lists: {}
+        Action_82: !list
+          objects:
+            Def: !obj {Name: Demo_GanonBoneControlOn, ClassName: !str32 GanonBoneControl,
+              GroupName: ''}
+          lists: {}
+        Action_83: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_84: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 ASPlaySimpleAnmDriven,
+              GroupName: ''}
+            SInst: !obj {ASName: Wait_For_DemoEnd, IsIgnoreSame: false, IsChangeable: false,
+              ResetTransBoneOnLeave: true}
+          lists: {}
+        Action_85: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_86: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_87: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_88: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_89: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_90: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_91: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_92: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_93: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_94: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_95: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_96: !list
+          objects:
+            Def: !obj {Name: Demo_WarpPos, ClassName: !str32 WarpToPos, GroupName: ''}
+          lists: {}
+        Action_97: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToAnchor, ClassName: !str32 WarpToStaticAnchor,
+              GroupName: ''}
+          lists: {}
+        Action_98: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_99: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_100: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+        Action_101: !list
+          objects:
+            Def: !obj {Name: Demo_ActivateGuardian, ClassName: !str32 DummyAction,
+              GroupName: ''}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        Action_102: !list
+          objects:
+            Def: !obj {Name: Demo_BarrierOnDemo, ClassName: !str32 GanonBarrierOn,
+              GroupName: ''}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {ASName: Power_Demo}
+          lists: {}
+        Action_103: !list
+          objects:
+            Def: !obj {Name: Demo_MoveToWall, ClassName: !str32 DummyAction, GroupName: ''}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        Action_104: !list
+          objects:
+            Def: !obj {Name: Demo_RecoverDown, ClassName: !str32 GanonStunRecover,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetAllNoDamageDCCallback}
+            SInst: !obj {Timing: 4}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetIgnoreMultiDamageDCCallback}
+            SInst: !obj
+              EnableCritical: false
+              EnableSmallHit: false
+              EnableMiddleHit: false
+              EnableLargeHit: false
+              EnableBlowOff: true
+              EnableGust: false
+              Timing: 0
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetIgnoreSmallHitDCCallBack}
+            SInst: !obj {IsAffectPopPool: false, Timing: 4}
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 RagdollSmallDamageIdxChanger}
+            SInst: !obj {KeyName: attack_dynamic, IsChinkCheck: true}
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 RumbleController}
+            SInst: !obj {ReduceDist: 20.0}
+          lists: {}
+        Behavior_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 DisableBoneController}
+          lists: {}
+        Behavior_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 CreateBgm}
+            SInst: !obj {BgmName: cGanon}
+          lists: {}
+        Behavior_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 EnemyGanonBgmStop}
+          lists: {}
+        Behavior_8: !list
+          objects:
+            Def: !obj {ClassName: !str32 EmitGanonHalfLifeDamageSe}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

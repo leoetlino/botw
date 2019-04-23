@@ -1,0 +1,813 @@
+---
+group_count: 29
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Залез!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Клад ищу
+  "0002":
+    attributes: ""
+    contents:
+      - text: "Да, хочу."
+  "0003":
+    attributes: ""
+    contents:
+      - text: Даже не знаю
+  "0005":
+    attributes: ""
+    contents:
+      - text: Да!
+  "0006":
+    attributes: ""
+    contents:
+      - text: Единый с ветром?
+  "0007":
+    attributes: ""
+    contents:
+      - text: Не знаю...
+  "0008":
+    attributes: ""
+    contents:
+      - text: Годится!
+  "0009":
+    attributes: ""
+    contents:
+      - text: Деньги на ветер...
+  "0010":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "0011":
+    attributes: ""
+    contents:
+      - text: Ни в чем
+  "0012":
+    attributes: ""
+    contents:
+      - text: Точно
+  "0013":
+    attributes: ""
+    contents:
+      - text: Тогда полечу
+  "0014":
+    attributes: ""
+    contents:
+      - text: "Нет, не ко-ко-чу"
+  Again:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Слышишь, как ветер поет?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nХочешь попробовать еще раз?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 14
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskMoney_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Рад, что тебя это заинтересовало."
+  AskMoney_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "За "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 рупий
+      - control:
+          kind: reset_colour
+      - text: " я все подготовлю."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nГодится?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Exit_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Ты кудахчешь как "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: кокко
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЭто полет так на тебя повлиял?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ладно, я все уберу."
+      - control:
+          kind: pause
+          length: short
+      - text: " До встречи!"
+  Explain_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 16
+      - text: "Иногда ветер быстр, иногда нет,\nно он всегда свободен!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Чтобы стать единым с ветром,\nнужно научиться чувствовать\nего и довериться ему."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "В моем курсе обучения нужно\nпролетать сквозь "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: кольца
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nОщущения незабываемые."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Хочешь попробовать?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Initial:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Здравствуй.
+      - control:
+          kind: pause
+          length: short
+      - text: " Какими ветрами\nтебя сюда занесло?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  Initial_00_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Правда?
+      - control:
+          kind: pause
+          length: short
+      - text: " Тяжело, наверное, было."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Ты любишь высоту?
+      - control:
+          kind: pause
+          length: short
+      - text: " Я очень люблю!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А еще я люблю слушать ветер.
+  Initial_01_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Тогда ты зря стараешься...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nТут кроме вон тех развалин\nничего нет."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хочешь знать, зачем я здесь?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nИщу свободу..."
+      - control:
+          kind: pause
+          length: short
+      - text: " вроде как."
+  Initial_02:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хочу быть свободным, непривязанным\nни к чему."
+      - control:
+          kind: pause
+          length: short
+      - text: " Свободным и беззаботным..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nкак ветер."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Вот сижу тут, слушаю ветер."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nИ от этого чувствую себя\nчуточку свободнее."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А ты не хочешь стать единым\nс ветром?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Initial_05:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Думаю, мы можем стать друзьями."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ с хайлийцами дружбы еще не водил."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Какое у тебя интересное устройство.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nОно заменяет тебе крылья?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Не хочешь испробовать его в моем\nкурсе "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: «Единый с ветром»
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Initial_06:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Эй! Хочешь пройти мой курс\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: «Единый с ветром»
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Initial_End:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Понятно...
+      - control:
+          kind: pause
+          length: short
+      - text: " Наверное, мы просто очень\nразные."
+      - control:
+          kind: pause
+          length: short
+      - text: " Извини, но нам тогда лучше\nзакончить этот разговор."
+  Land:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Сейчас я тебя подберу!
+  Near00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - text: Ветер прекрасен...
+  Near01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - text: Дождь ветру не помеха!
+  NoEnoughMoney_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Денег у тебя маловато...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nИзвини, скидку не могу сделать."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Может, сегодня просто послушаем\nвместе ветер?"
+      - control:
+          kind: pause
+          length: short
+      - text: " А когда денег\nдобудешь, приходи еще раз."
+  Rain_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Летать в дождь непросто...\nНо все равно — удачи!"
+  ReadyStart_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Я мигом.
+      - control:
+          kind: pause
+          length: short
+      - text: " Никуда не уходи."
+  ReadyStart_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Извини, что заставил тебя ждать."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nВсе готово — лети, когда захочешь."
+  ReadyStart_02:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - text: "Когда приземлишься, я тебя подберу."
+  Result_00_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: "Хм, ты пролетел через..."
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ParasailRide_PassedTargetNumTemp
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " кольцо"
+            - " колец"
+            - " кольца"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПохоже, я переоценил твои\nспособности."
+  Result_00_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Как говорится, рожденный ползать..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nВ общем, потренироваться бы тебе."
+  Result_01_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: Так-так...
+      - control:
+          kind: pause
+          length: short
+      - text: " Ты пролетел через\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ParasailRide_PassedTargetNumTemp
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " кольцо"
+            - " колец"
+            - " кольца"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Неплохо, но сказать,\nчто ты един с ветром, я пока не могу."
+  Result_01_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Но ничего.
+      - control:
+          kind: pause
+          length: short
+      - text: " Вот, возьми."
+  Result_02_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Потрясающе! "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ParasailRide_PassedTargetNumTemp
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " кольцо"
+            - " колец"
+            - " кольца"
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nДаже рито такое не под силу!"
+  Result_02_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ты стал единым с ветром!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПрошу, прими это."
+  Result_03_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ParasailRide_PassedTargetNumTemp
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Неплохо!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Полет тебе\nявно не в новинку."
+  Result_03_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Вот, возьми."
+  Result_04_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Поверить не могу! "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ParasailRide_PassedTargetNumTemp
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Ты уверен,\nчто ты хайлиец, а не рито?"
+  Result_04_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Спасибо тебе, я вижу такое\nмастерство впервые."
+      - control:
+          kind: pause
+          length: short
+      - text: " Вот, возьми."
+  Suggest_Bay:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Советую начать вон с той трассы.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nНа ней не нужно спешить."
+  Suggest_End:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Выбирай любую трассу.
+      - control:
+          kind: pause
+          length: short
+      - text: " Ветер любит\nсвободу и с уважением отнесется\nк любому твоему выбору!"
+  Suggest_Peninsula:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Советую начать вот с этой трассы.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЭто так здорово — нестись\nна крыльях ветра!"
+  Talk_00:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 6
+      - text: Хм?
+      - control:
+          kind: pause
+          length: short
+      - text: " В чем дело?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 10
+            - 11
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_01:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "Деньги "
+      - control:
+          kind: reset_colour
+      - text: я тебе не верну...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nТочно не полетишь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 13
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Эх!
+      - control:
+          kind: pause
+          length: short
+      - text: " Жаль, что всю твою решимость\nкак ветром сдуло."
+      - control:
+          kind: pause
+          length: short
+      - text: " Я разочарован."
+  Talk_03:
+    attributes: Npc_FarthestIsland002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Хорошо.
+      - control:
+          kind: pause
+          length: short
+      - text: " Как будешь готов, начинай."

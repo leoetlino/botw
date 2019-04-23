@@ -1,0 +1,905 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0008":
+    attributes: ""
+    contents:
+      - text: Arrivederci.
+  "0011":
+    attributes: ""
+    contents:
+      - text: Vorrei vendere.
+  "0012":
+    attributes: ""
+    contents:
+      - text: Collezione Clari?
+  "1000":
+    attributes: ""
+    contents:
+      - text: Compro!
+  "1001":
+    attributes: ""
+    contents:
+      - text: Lasciamo perdere.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sì!
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Lascio perdere.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  ClerkAsk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: PlacedItemName
+      - control:
+          kind: reset_colour
+      - text: "? Che ne\ndici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - rupia
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Cosa vuoi vendermi?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Per "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: "\nti do "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "Evviva! È proprio un bell'acquisto!"
+      - control:
+          kind: pause
+          length: longer
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Evviva! Proprio ciò che desideravo!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Che fortuna!\nEra da un po' che speravo di fare\nquesto acquisto!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Non pensavo che sarei riuscita a mettere\nle mani su qualcosa del genere, grazie!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Peccato, ero interessata..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Io compro tutto quello che si può\ncomprare, non farti problemi!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Mi piace fare acquisti!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Se hai qualcosa che non ti serve\npiù, prova a venderlo a me!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "C'è qualcos'altro di cui vuoi disfarti?"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nE quante unità vendi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Allora "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nper "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "... Vediamo..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nIn tutto fanno "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", che ne dici?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "No... cose del genere non mi servono.\nHai altro?"
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Dici sul serio? "
+      - control:
+          kind: pause
+          length: long
+      - text: "Ma se ce l'hai addosso!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGuarda, ti ringrazio, ma no."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFa "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Affare fatto?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Tutte le unità di\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: " che hai?\nPosso offrirti "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Ti va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: " rupie"
+      - control:
+          kind: reset_colour
+      - text: "?\nUn vero affare, no?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oh, che peccato..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nNon ti piace?"
+  FirstTalk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Benvenuto alla boutique Meleganza!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nVendiamo solo vestiti esclusivi\nscelti da noi appositamente per\nla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: collezione Clari
+      - control:
+          kind: reset_colour
+      - text: "!\nIn particolare ti consiglio\nil "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: completo furtivo
+      - control:
+          kind: reset_colour
+      - text: "!\n\nInoltre, se hai qualcosa che non ti\nserve più, puoi provare a vendermelo."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  FirstTalk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Benvenuto alla boutique Meleganza!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nEhi, senti un po'..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Appena sei entrato\ncosì praticamente nudo, ho subito\npensato che fossi un pazzo...\nQui vendiamo solo vestiti esclusivi\nscelti da noi appositamente per\nla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: collezione Clari
+      - control:
+          kind: reset_colour
+      - text: "!\nMagari anche uno come te, che ha\nrinunciato completamente a coprirsi,\npotrebbe cambiare idea...\nIn particolare ti consiglio\nil nostro "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: completo furtivo
+      - control:
+          kind: reset_colour
+      - text: "!\n\nInoltre, se hai qualcosa che non ti\nserve più, puoi provare a vendermelo."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Near00:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Vuoi dei vestiti?
+  Near01:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: "Capi all'ultima moda!"
+  Near02:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Buonasera!
+  Talk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Torna quando vuoi!
+  Talk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Tutti i capi della "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "collezione Clari "
+      - control:
+          kind: reset_colour
+      - text: "sono\nspeciali! Guardati intorno con calma."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk06:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Fermi tutti!\nAbbiamo venduto tutta la merce!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Quindi, questo vuol dire che...\nnon devo lavorare più!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Mi sa che me ne vado in vacanza!\nAssieme a Lasli e alla nonna!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk07:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "La "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: collezione Clari
+      - control:
+          kind: reset_colour
+      - text: " si chiama così perché\nè curata espressamente da me, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Clari
+      - control:
+          kind: reset_colour
+      - text: "!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Tutti i capi che vedi sono selezionati\nda me, quindi ti puoi fidare.\n\nOgni indumento presenta delle speciali\ncaratteristiche, pertanto ti consiglio\ndi osservarli bene tutti, uno ad uno!"
+  Talk08:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Grazie! Secondo me stai benissimo!
+  Talk14:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Allora, desideri altro?\nChiedi pure!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk17:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Grazie! Fidati, hai fatto davvero\nun ottimo acquisto!"
+  Talk19:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Quando potrò andare in vacanza cosa farò?\nForse un viaggio! Magari al laghetto degli\ninnamorati..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk20:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Torna pure quando hai qualcosa che non\nti serve. Darò volentieri un'occhiata!"
+  Talk24:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Hai visto che qualità? È un articolo\nspeciale della boutique Meleganza.\n\nQuando lo indossi, i tuoi passi sono\nsilenziosissimi, quindi è molto utile\nper la caccia, per esempio.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Purtroppo non ti ripara molto dagli attacchi...
+      - control:
+          kind: text_size
+          percent: 100
+  Talk25:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Benvenuto alla boutique Meleganza!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nSe posso consigliarti, abbiamo uno\nsplendido "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: completo furtivo
+      - control:
+          kind: reset_colour
+      - text: "!\n\nQuando lo indossi, i tuoi passi sono\nsilenziosissimi, quindi è molto utile\nper la caccia, per esempio.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Purtroppo non ti ripara molto dagli attacchi...
+      - control:
+          kind: text_size
+          percent: 100
+  Talk26:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Grazie! Non ti preoccupare, ne\nordinerò ancora!"
+  Talk27:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Grazie! Mi raccomando, prenditene\ncura!"
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Smettila!

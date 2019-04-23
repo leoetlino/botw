@@ -1,0 +1,313 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_CancelGet: 23
+      Demo_EnableModelDraw: 24
+      Demo_GetItem: 25
+      Demo_Idling: 26
+      Demo_Join: 27
+      Demo_OpenGetDemo: 28
+      Demo_PlayASForDemo: 29
+      Demo_PlayASForTimeline: 30
+      Demo_ResetBoneCtrl: 31
+      Demo_SendCatchWeaponMsgToPlayer: 32
+      Demo_SendSignal: 33
+      Demo_SetGetFlag: 34
+      Demo_SuccessGet: 35
+      Demo_TrigNullASPlay: 36
+      Demo_UpdateDataByGetDemo: 37
+      Demo_VisibleOff: 38
+      Demo_WarpToPos: 39
+      Demo_XLinkEventCreate: 40
+      Demo_XLinkEventFade: 41
+      Demo_XLinkEventKill: 42
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 20, 持ち運びボックス内: 14, 通常: 3}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 失敗, ClassName: !str32 CommonPickedItem, GroupName: 抱持あり}
+            ChildIdx: !obj {サブボタン: 11, メインボタン: 12, 消滅: 17, 通常: 4}
+            SInst: !obj {CanGetOnBurning: true, GetAttKeyName: Catch, IsControlNoticeDo: true}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 Lifted, GroupName: 持ち上げ可}
+            ChildIdx: !obj {待機: 19, 所持: 16, 投擲: 21, 設置: 18}
+            SInst: !obj {IsGetItem: true}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 ItemRoot, GroupName: BaseAI}
+            ChildIdx: !obj {通常: 6}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj {AtHitImpulseRate: 1.0}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 SimpleLiftable, GroupName: Root_0}
+            ChildIdx: !obj {所持: 2, 投擲生成: 22, 通常: 5}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 ForSaleOrNot, GroupName: 持ち上げ可}
+            ChildIdx: !obj {オフ: 9, オン: 10}
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 InitFromInCarryBoxSelect, GroupName: 通常}
+            ChildIdx: !obj {抱持あり: 7, 抱持なし: 8}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {IsResetInCarryBoxFlag: true}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 抱持あり, ClassName: !str32 BalloonPlantNormal, GroupName: 通常}
+            ChildIdx: !obj {失敗: 1, 寄生する: 13, 準備待機: 15}
+            SInst: !obj {RopeActorName: Rope_OctarockBalloon, RopeLength: 0.5}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 抱持なし, ClassName: !str32 CommonPickedItem, GroupName: 通常}
+            ChildIdx: !obj {サブボタン: 11, メインボタン: 12, 消滅: 17, 通常: 4}
+            SInst: !obj {CanGetOnBurning: true, GetAttKeyName: Catch, IsControlNoticeDo: true}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: オフ, ClassName: !str32 DummyAction, GroupName: 平常か売買}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: オン, ClassName: !str32 RemoveSensor, GroupName: 平常か売買}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {AddSensorOnLeave: false}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: サブボタン, ClassName: !str32 GetItemGet, GroupName: Root_0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: メインボタン, ClassName: !str32 GetItemIntoBag, GroupName: Root_0}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 寄生する, ClassName: !str32 OctarockBalloon, GroupName: 抱持あり}
+            SInst: !obj
+              StartASName: Big
+              SignASName: ExplosionSign
+              TargetScale: 1.9
+              StartSignTimer: 390.0
+              ConnectReleaseTimer: 1.0
+              ClampWindForceScale: 40.0
+              ReduceVel: 0.95
+              UpLimitSpeed: 0.1
+              MaxAccel: 0.1
+              MassScale: 0.538
+              IsChaseInitHeight: false
+              HeightLimit: 1100.0
+              BreakTimer: -1.0
+              WindAccScale: 0.05
+              WindSpdScale: 1.0
+              StayAccScale: 1.1
+              ReturnToOriginalPos: false
+              ReturnStrengthFactor: 0.1
+              RemainsHeightLimit: 190.0
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 InCarryBox, GroupName: Root}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 準備待機, ClassName: !str32 ForkTimer, GroupName: 抱持あり}
+            SInst: !obj {WaitFrame: 60, WaitFrameRand: 0, IsChangeable: true, EndState: 1}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 CarriedNoHit, GroupName: 所持}
+            SInst: !obj
+              IsCreateItem: false
+              IsRecoverCharCtrlAxis: true
+              IsUseConstraint: true
+              FailDistance: 0.0
+              IsOnBaseLink: true
+              BindType: 0
+              IsChangeable: false
+              HoldOnXLinkKey: HoldOn
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 DummyAction, GroupName: Root_0}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 設置, ClassName: !str32 PutFromParent, GroupName: 所持}
+            SInst: !obj {Timer: 3, HoldOffXLinkKey: HoldOff}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: 所持}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 投擲, ClassName: !str32 Thrown, GroupName: 所持}
+            SInst: !obj
+              AS: 'Null'
+              RotSpd: !vec3 [0.0, 0.0, 0.0]
+              ReactionLevel: -1
+              IsForceOnly: false
+              IsOnImpact: true
+              ThrownKey: ''
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 投擲生成, ClassName: !str32 IgnitedThrown, GroupName: 持ち上げ可}
+            SInst: !obj
+              AS: ''
+              IsScaling: true
+              IsFinishedByOneHit: false
+              IsFadeIn: false
+              IsAbleGuard: true
+              IsForceOnly: true
+              ReactionLevel: -1
+              DamageScale: 1.0
+              FinishWaterDepth: -1.0
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_CancelGet, ClassName: !str32 EventCancelGet, GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_EnableModelDraw, ClassName: !str32 EventEnableModelDraw,
+              GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_SendCatchWeaponMsgToPlayer, ClassName: !str32 EventSendCatchWeaponMsgToPlayer,
+              GroupName: ''}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: Demo_SuccessGet, ClassName: !str32 EventSuccessGet, GroupName: ''}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToPos, ClassName: !str32 WarpToPos, GroupName: ''}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 SubAS}
+            SInst: !obj
+              EnterASName: Small
+              LeaveASName: ''
+              IsIgnoreSame: true
+              SeqBankIdx: 0
+              TargetIdx: 0
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 NpcClerkCheck}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 SpeedEmitInterest}
+            SInst: !obj {IsTargetNPC: true, Level: 1, Speed: 0.03}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

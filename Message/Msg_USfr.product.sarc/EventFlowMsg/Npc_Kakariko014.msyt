@@ -1,0 +1,1210 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Que conseillez-vous?
+  "0001":
+    attributes: ""
+    contents:
+      - text: Je veux cuisiner!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Au revoir!
+  "0006":
+    attributes: ""
+    contents:
+      - text: Je viens vendre!
+  "5500":
+    attributes: ""
+    contents:
+      - text: "D'accord."
+  "5501":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5502":
+    attributes: ""
+    contents:
+      - text: "J'achète."
+  "5503":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5504":
+    attributes: ""
+    contents:
+      - text: "J'ai besoin d'un truc."
+  "5505":
+    attributes: ""
+    contents:
+      - text: Achète-moi un truc!
+  "5506":
+    attributes: ""
+    contents:
+      - text: Au revoir.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "J'achète tout le stock."
+  "5508":
+    attributes: ""
+    contents:
+      - text: Je vends tout le stock.
+  Com_Talk_00:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Qu'est-ce que tu as à vendre?"
+  Com_Talk_01:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nJe t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Quelle chance d'avoir mis la main sur\nune telle merveille... Il faut absolument\nque je montre ça à mon mari!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 11
+      - text: "Je n'aurais jamais imaginé posséder\nun jour une telle merveille! Ça me fait\npresque de la peine de t'en priver..."
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "C'est absolument charmant!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Tu peux compter, je paye toujours\nrubis sur l'ongle! Une petite rentrée\nd'argent, ça fait toujours plaisir."
+  Com_Talk_04:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Prends ton temps, pas la peine\nde te presser!"
+      - control:
+          kind: pause
+          length: short
+  Com_Talk_05:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Autre chose? Oh, fais ton choix\ntranquillement."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Si tu as autre chose à me vendre,\nn'hésite pas à me le montrer!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "C'est tout? Tu es bien sûr?"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Je ne veux surtout pas te bousculer.\nPrends tout ton temps."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nEt tu voudrais en vendre combien?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Tu m'en vends "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "? Je peux te\ndonner "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: " en échange."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 16
+      - text: "Je suis désolée, je ne fais pas commerce\nde ce genre d'article dans ma boutique..."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 16
+      - text: "Quand on veut vendre quelque chose,\non prend soin de la retirer avant,\njeune homme!"
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nalors?"
+      - control:
+          kind: pause
+          length: long
+      - text: " \nOn part là-dessus?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nJe t'en aurais bien acheté plusieurs...\nÇa te va si je t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Eh, ben! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Le client est roi, alors..."
+      - control:
+          kind: pause
+          length: short
+      - text: " il y en\na "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", ce qui nous fait un total de\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ", s'il te plaît!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "D'accord..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Bien, on en a "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", ce qui\nte rapportera..."
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nÇa fera "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nOu plusieurs, peut-être?\nCombien tu en veux?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ça fait "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: " pour les "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ".\nÇa te va?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Prends tout ton temps pour réfléchir.
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Je suis désolée, mais si je commence à\ndonner la marchandise, ça risque de ne\npas plaire à mon mari!"
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 6
+      - text: "On dirait que ta sacoche est pleine à\ncraquer! Fais un petit peu de place\navant d'acheter.\nD'ailleurs, tu as peut-être des choses\nque tu pourrais me vendre?"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "...\nVoilà qui nous fait "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near00:
+    attributes: Npc_Kakariko014
+    contents:
+      - text: Bienvenue!
+  Near01:
+    attributes: Npc_Kakariko014
+    contents:
+      - text: Merveilleux!
+  Near03:
+    attributes: Npc_Kakariko014
+    contents:
+      - text: Tout à fait.
+  Talk04:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Merci!\n\n\nHé! Puisque t'es là, fais donc un tour\ndans ma boutique pour voir si quelque\nchose d'autre pourrait t'intéresser!"
+  Talk05:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Oh, ça alors..."
+      - control:
+          kind: pause
+          length: long
+      - text: " On dirait bien qu'il\nne m'en reste plus..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\nMais, c'est très bien, ça!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Merci à toi\nde faire marcher le commerce!"
+      - control:
+          kind: pause
+          length: longer
+  Talk06:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Haha, tout est vendu!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nC'est mon mari qui va être content."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nC'est vraiment merveilleux..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Mais...
+      - control:
+          kind: pause
+          length: short
+      - text: " il va falloir que mon mari\ns'occupe de refaire les stocks, si on\nne veut pas fermer boutique!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 6
+            - 2
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk08:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Alors, comme ça, tu es un voyageur..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nBienvenue au village de Cocorico."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nLa Déesse protège toute cette zone."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nC'est pourquoi nos bêtes et nos\ncultures sont si remarquables!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\nJe n'ai que des produits de qualité\nqui apportent un petit quelque chose\nde spécial à toutes les recettes."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Vas-y, sers-toi! À moins que tu ne\nsois venu pour autre chose?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 6
+            - 2
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk09:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: "Bonjour, mon garçon."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nTu as besoin de quelque chose?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 6
+            - 2
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk12:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, bienvenue."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Ah là là...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nQu'est-ce que je vais bien pouvoir\nfaire de mon mari...?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Les étalages sont vides, et il ne\ns'en rend même pas compte!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "C'est bien simple, mon mari n'a d'yeux\nque pour moi, il n'y a rien d'autre\nqui l'intéresse!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Ce qui est plutôt mignon, quand j'y pense..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Oh... excuse-moi!\n\n\nJe peux faire quelque chose pour toi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 6
+            - 2
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk13:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Oh, bienvenue.\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Ah là là...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nMon mari n'a d'yeux que pour moi,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nil n'y a rien d'autre qui l'intéresse!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Ne fais pas attention à lui.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSers-toi sur les étalages!\n\nOu peut-être que je peux faire\nquelque chose pour toi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 6
+            - 2
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk14:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Ce que je pourrais te conseiller?
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nMais absolument tout, voyons!\nTous mes produits sont délicieux!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Le mieux du mieux, bien sûr, c'est la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: carotte tempo
+      - control:
+          kind: reset_colour
+      - text: ".\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "C'est la spécialité du village, et la fierté\nde mon mari!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "À vrai dire, nous avons un autre produit\nréputé par ici,"
+      - control:
+          kind: pause
+          length: short
+      - text: " la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: citrouille armo
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Malheureusement, mon mari s'entend\ntrès mal avec le cultivateur de citrouilles."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Alors, si tu en veux, tu vas devoir aller\nen chercher directement au "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "potager\nde Tiron"
+      - control:
+          kind: reset_colour
+      - text: "."
+  Talk15:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Pour cuisiner un plat, il suffit de mettre\nles ingrédients dans un "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "récipient\nde cuisson"
+      - control:
+          kind: reset_colour
+      - text: "...\nTu peux utiliser le mien, si tu veux!\nIl est juste dehors."
+  Talk16:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Repasse quand tu veux!
+  Talk17:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Je peux faire autre chose pour toi?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 6
+            - 2
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk18:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Je n'ai pas souvent l'occasion\nde sortir du village, tu sais!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "C'est toujours un plaisir de découvrir\nce que les gens ont ramassé au cours\nde leurs voyages."
+  Talk19:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Ce que je pourrais te conseiller?
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nMais absolument tout, voyons!\nTous mes produits sont délicieux!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Le mieux du mieux, bien sûr, c'est la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: carotte tempo
+      - control:
+          kind: reset_colour
+      - text: ".\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "C'est la spécialité du village, et la fierté\nde mon mari!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "On n'en a plus pour le moment, mais\nla prochaine récolte ne devrait plus\ntarder, alors repasse bientôt!"
+  Talk20:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Tous nos articles sont frais et produits\ndans la région. Tu peux être sûr qu'ils\nsont savoureux!"
+  Talk21:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "On ne peut pas faire plus frais que ça!\nEt plus c'est frais, meilleur c'est!"
+  Talk22:
+    attributes: Npc_Kakariko014
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Merci beaucoup! Mon mari va être\nbien content."

@@ -1,0 +1,185 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 10
+      Demo_Idling: 11
+      Demo_Join: 12
+      Demo_OpenGetDemo: 13
+      Demo_PlayASForDemo: 14
+      Demo_PlayASForTimeline: 15
+      Demo_ResetBoneCtrl: 16
+      Demo_SendSignal: 17
+      Demo_SetGetFlag: 18
+      Demo_TrigNullASPlay: 19
+      Demo_UpdateDataByGetDemo: 20
+      Demo_VisibleOff: 21
+      Demo_XLinkEventCreate: 22
+      Demo_XLinkEventFade: 23
+      Demo_XLinkEventKill: 24
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 Fork4AI, GroupName: ''}
+            ChildIdx: !obj {子０: 5, 子１: 7, 子２: 1, 子３: 9}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 SeqTwoAction, GroupName: 移動量指定}
+            ChildIdx: !obj {先行動: 2, 後行動: 3}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: 移動量指定}
+            ChildIdx: !obj {子０: 4, 子１: 6, 子２: 8}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 ReuseActorDelete, GroupName: 移動量指定}
+            SInst: !obj {IsCheckCreateParent: false, IsCheckBulletAttacker: false,
+              IsCheckBulletHolder: true}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 LynelBreathMove, GroupName: 移動}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkAddCalcScaleMapUnit, GroupName: 死亡遷移設定}
+            SInst: !obj
+              StartRate: 0.2
+              AddRate: 0.1
+              MinAddScaleRate: 0.001
+              IsChangeable: true
+              EndState: 2
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkMoveDistanceCheckByMapUnit,
+              GroupName: 移動}
+            SInst: !obj {IsCheckOnlyXZ: false, IsChangeable: true, EndState: 0}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkNoWeaponAttackAllTime, GroupName: 攻撃設定}
+            SInst: !obj
+              AtDirString: ''
+              IsImpulseLarge: false
+              AtkBodyName1: AtkBody
+              AtkBodyName2: ''
+              AtkBodyName3: ''
+              AttackType: 2
+              ChmName1: ''
+              AttackPowerScale: 1.0
+              IsUseAttackParam: false
+              AttackIntensity: 2
+              IsGuardPierce: false
+              IsForceGuardBreak: true
+              IsIniviciblePierce: false
+              IsHeavy: false
+              IsHammer: false
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkTimer, GroupName: 移動}
+            SInst: !obj {WaitFrame: 900, WaitFrameRand: 0, IsChangeable: true, EndState: 0}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 子３, ClassName: !str32 ForkCapsuleWindFollow, GroupName: Root}
+            SInst: !obj {Radius: 1.0, Speed: 50.0, Length: 1.0, Dir: !vec3 [0.0, 1.0,
+                0.3]}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetChemicalOffensive}
+            SInst: !obj {IsSetOn: true, IsOnOffensive: true}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

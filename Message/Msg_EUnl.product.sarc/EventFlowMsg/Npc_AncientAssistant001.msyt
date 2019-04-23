@@ -1,0 +1,3066 @@
+---
+group_count: 83
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: Foto toevoegen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Linken?
+  "0003":
+    attributes: ""
+    contents:
+      - text: Hoofd?
+  "0004":
+    attributes: ""
+    contents:
+      - text: Bedankt.
+  "0005":
+    attributes: ""
+    contents:
+      - text: Wat doe je daar?
+  "0006":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "0007":
+    attributes: ""
+    contents:
+      - text: Hoe ken je mij?
+  "0008":
+    attributes: ""
+    contents:
+      - text: "Foto's?"
+  "0009":
+    attributes: ""
+    contents:
+      - text: "Nee, dat ben ik niet."
+  "0010":
+    attributes: ""
+    contents:
+      - text: Sheikah-steen?
+  "0011":
+    attributes: ""
+    contents:
+      - text: Wat is deze plek?
+  "0012":
+    attributes: ""
+    contents:
+      - text: Eenvoudig?
+  "0013":
+    attributes: ""
+    contents:
+      - text: "Ja, hoor."
+  "0014":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "0015":
+    attributes: ""
+    contents:
+      - text: Nog niet.
+  "0016":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "0017":
+    attributes: ""
+    contents:
+      - text: Niet nodig.
+  "0018":
+    attributes: ""
+    contents:
+      - text: Heb ik nodig.
+  "0019":
+    attributes: ""
+    contents:
+      - text: Heb ik niet nodig.
+  "0020":
+    attributes: ""
+    contents:
+      - text: Graag.
+  "0021":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kopen.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Toch maar niet.
+  "5504":
+    attributes: ""
+    contents:
+      - text: Iets kopen.
+  "5505":
+    attributes: ""
+    contents:
+      - text: Iets verkopen.
+  "5506":
+    attributes: ""
+    contents:
+      - text: Stoppen.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  Com_Talk_00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Dit zijn de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's"
+      - control:
+          kind: reset_colour
+      - text: " die je kunt\ntoevoegen."
+  Com_Talk_06:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Welke wil je kopen?
+  Com_Talk_10:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Je wilt dit kopen, toch? Dat is dan\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Heel erg bedankt.
+  Com_Talk_30:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Dus je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "? Dat is dan\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Hoeveel wil je er hebben?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_34:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Je wilt ze allemaal? Ik heb er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", dus\ndat gaat je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: kosten.
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: Aiaiai!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: Een afstandsbom?!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Hou op!
+  near00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Hmmm...
+  talk00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik durf te wedden dat je nog nooit zoveel\nboeken hebt gezien..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hier hebben we alle literatuur over oude\nbeschavingen verzameld..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik zou je niet kunnen vertellen hoeveel\nboeken hier staan..."
+  talk01:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "O, pardon!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik vergeet helemaal mezelf\nvoor te stellen!"
+  talk02:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Je hebt Impa dus ontmoet.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Nou, laten we dan maar eens kijken naar\ndie "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik zal proberen om de\nbasisfuncties te herstellen...\nMaar..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik moet je iets vertellen... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Heel\nveel eigenlijk..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Bijvoorbeeld over het onderzoek dat\nwe hier doen, en de resultaten van dat\nonderzoek...\nEn daarna geef ik je een rondleiding door\nhet Hateno-instituut..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "..."
+  talk03:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Ik heet Symin.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Jij bent... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Link, toch?"
+      - control:
+          kind: single_choice
+          label: 7
+  talk04:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Impa heeft me alles verteld.
+  talk05:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Aha. Het spijt me dat ik meteen ter zake\nkom, maar..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Zou je je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopedie "
+      - control:
+          kind: reset_colour
+      - text: "kunnen openen\nvia de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: kaart
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Selecteer vervolgens de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " van de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " en stel je sensor erop af."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Nu zal de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: " zoeken naar\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk06:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Het is alsof de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: "\nherinneringen aan het verleden heeft\nopgerakeld."
+  talk07:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Purah
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Mevrouw het hoofd
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Kijk eens,\ndit is... een echte "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: single_choice
+          label: 3
+  talk08:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 12
+      - text: O...
+      - control:
+          kind: pause
+          length: short
+      - text: " Pardon, ik heb het "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: hoofd
+      - control:
+          kind: reset_colour
+      - text: " van ons\ninstituut nog niet voorgesteld."
+  talk09:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Begrepen. "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Ik zal ze gebruiken voor ons\navondeten..."
+  talk10:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Daar is het "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: hoofd
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Purah is het "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "hoofd "
+      - control:
+          kind: reset_colour
+      - text: "van het\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Hateno-instituut "
+      - control:
+          kind: reset_colour
+      - text: "en expert op gebied van\nklassieke geschiedenis..."
+  talk100:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Het spijt me, maar het lijkt erop dat je\nniet genoeg rupees hebt..."
+  talk101:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Tot mijn grote spijt moet ik vaststellen\ndat je niet over voldoende financiële\nmiddelen beschikt..."
+  talk102:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Sorry, maar je hebt niet genoeg geld..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nAlleen de eerste keer was gratis..."
+  talk103:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Het lijkt erop dat je niet kapitaalkrachtig\ngenoeg bent. Ik hoop dat je begrijpt dat\nons budget beperkt is."
+  talk104:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: De vrouw op die foto...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Is dat..."
+  talk11:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Als onderzoeker aanbid ik Purah en ben\nik erg blij dat ik haar assistent mag zijn."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Maar...
+      - control:
+          kind: pause
+          length: short
+      - text: " ik moet je wel iets vertellen,\nLink."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Het "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: hoofd
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " ziet er namelijk uit als een\njong meisje, maar..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Nee, "
+      - control:
+          kind: pause
+          length: short
+      - text: "het is niet aan mij om je dit te\nvertellen..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Het spijt me,"
+      - control:
+          kind: pause
+          length: short
+      - text: " maar je kunt haar daar\nbeter zelf naar vragen."
+  talk12:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedemorgen.
+  talk13:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hallo.
+  talk14:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedenavond.
+  talk15:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ja?
+  talk16:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Oké, dan..."
+  talk17:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "De "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: " is een veelzijdig\napparaat dat is gemaakt door onze\nvoorouders om vrede te brengen...\nDe "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: krachten
+      - control:
+          kind: reset_colour
+      - text: " van de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: " zijn\nook ontwikkeld door de Sheikah's."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Ik ben blij dat jij, Link, nu in het bezit\nbent van dit apparaat!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als het in handen zou vallen van een\nkwaadaardig persoon... Ik durf er niet\neens aan te denken."
+  talk18:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Hoe kan ik je helpen?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 5
+                - 50
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 77
+                - 105
+                - 110
+                - 105
+                - 95
+                - 67
+                - 97
+                - 109
+                - 101
+                - 114
+                - 97
+                - 66
+                - 111
+                - 121
+                - 95
+                - 67
+                - 104
+                - 97
+                - 116
+                - 10
+                - 0
+                - 11
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk19:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Heb je verder nog iets nodig?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 5
+                - 50
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 77
+                - 105
+                - 110
+                - 105
+                - 95
+                - 67
+                - 97
+                - 109
+                - 101
+                - 114
+                - 97
+                - 66
+                - 111
+                - 121
+                - 95
+                - 67
+                - 104
+                - 97
+                - 116
+                - 10
+                - 0
+                - 11
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk20:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dus dat is zo'n beetje alles wat de\nkrachten betreft... "
+      - control:
+          kind: pause
+          length: short
+      - text: Maar...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Hmm..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm?
+      - control:
+          kind: pause
+          length: short
+      - text: " Vreemd..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Het lijkt erop dat je de\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: basiskrachten
+      - control:
+          kind: reset_colour
+      - text: " niet hebt..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Er moet een verklaring zijn voor het feit\ndat ze ontbreken."
+  talk21:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Dit instituut is voor...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Hier proberen\nSheikah-wetenschappers de technologie\nuit de oudheid te analyseren.\nHet doel is om het mysterie van de\nTitanen en tempels te ontrafelen, zowel\ngeopolitiek als bouwkundig.\nHopelijk kunnen we dan uiteindelijk zelf\nal deze technologieën gebruiken,\nnamaken en zelfs verbeteren...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: O!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Excuus,"
+      - control:
+          kind: pause
+          length: short
+      - text: " was dat een beetje te\ningewikkeld?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Nou ja, om het kort samen te vatten..."
+  talk22:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Hier onderzoeken we...
+  talk23:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Manieren om "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Ganon "
+      - control:
+          kind: reset_colour
+      - text: "effectief te verslaan\nzonder dat hij steeds maar terugkeert..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "En hoe we de technologie van onze\nvoorouders kunnen blijven gebruiken en\nverbeteren."
+  talk24:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "We weten dat als een jongeman\nverschijnt met de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: ", we hem\nmoeten helpen.\nNadat hij uit zijn "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: resurrectieslaap
+      - control:
+          kind: reset_colour
+      - text: "\nontwaakt, is hij de enige hoop van\nHyrule! Die jongeman heet Link.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: O!
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik vergeet bijna iets belangrijks te\nvertellen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Niet aan jou, Link,"
+      - control:
+          kind: pause
+          length: short
+      - text: " maar..."
+  talk25:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je kunt de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-zuil "
+      - control:
+          kind: reset_colour
+      - text: "gebruiken om de\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: krachten
+      - control:
+          kind: reset_colour
+      - text: " opnieuw te activeren,"
+      - control:
+          kind: pause
+          length: short
+      - text: " maar..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Daarvoor heb je eerst toestemming nodig\nvan "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "Impa "
+      - control:
+          kind: reset_colour
+      - text: in Kakariko...
+  talk26:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik zou graag de "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: basiskrachten
+      - control:
+          kind: reset_colour
+      - text: " op je\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: " willen zetten, maar..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Daarvoor moet je eerst toestemming\nkrijgen van "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Impa
+      - control:
+          kind: reset_colour
+      - text: ", de hoogste autoriteit\nvan ons volk.\nZe woont ten westen van hier, in\nKakariko, dus daar moet je heen voor\nhaar toestemming."
+  talk27:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je vindt een gedetailleerde\ngebruiksaanwijzing in het "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: boek
+      - control:
+          kind: reset_colour
+      - text: " op de\ntafel daar... Lees het maar eens..."
+  talk28:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "O ja, "
+      - control:
+          kind: pause
+          length: short
+      - text: "Je vindt een gedetailleerde\ngebruiksaanwijzing voor de\nSheikah-sensor+ in dat "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: boek
+      - control:
+          kind: reset_colour
+      - text: " daar.\nDat kun je maar beter even lezen."
+  talk29:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 11
+      - text: Dankjewel.
+  talk30:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Je hebt eindelijk de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: ". Je\nhebt er geen idee van hoe handig die wel\nniet is!\nVolgens oude teksten kun je ermee naar\ndingen zoeken waar je een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " van hebt\ngenomen.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ik kan het maar beperkt uitleggen, dus..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nkun je het beter zelf proberen!"
+  talk31:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Als je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: " wilt vinden,\nneem dan een foto van die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Registreer de foto vervolgens in je\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: " zodat de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: "\nze kan detecteren!"
+  talk32:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Ah, je hebt de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: "\nmeegebracht."
+  talk33:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: En?
+      - control:
+          kind: pause
+          length: short
+      - text: " Werkt de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: " en de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopedie "
+      - control:
+          kind: reset_colour
+      - text: een beetje?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Als je weer naar
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: " "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - text: Tempels
+      - control:
+          kind: reset_colour
+      - text: " wilt zoeken,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nkies je op de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: kaart
+      - control:
+          kind: reset_colour
+      - text: " '"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor
+      - control:
+          kind: reset_colour
+      - text: "',\ngevolgd door '"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - text: Tempels
+      - control:
+          kind: reset_colour
+      - text: "'.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 19
+      - text: O ja...
+      - control:
+          kind: pause
+          length: short
+      - text: " ik herinner me net dat ik nog\nergens met je over wilde praten..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Nou ja, kom maar langs als je tijd hebt\nvoor een praatje."
+  talk34:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Eens kijken...
+  talk35:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm...
+      - control:
+          kind: pause
+          length: short
+      - text: " Het lijkt erop dat je de\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: drie
+      - control:
+          kind: reset_colour
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "hittezwammen "
+      - control:
+          kind: reset_colour
+      - text: niet hebt...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Zal ik je de sensorfunctie nog eens\nuitleggen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 17
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk36:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Ah, je hebt een foto genomen van de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Mooi!"
+  talk37:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Mag ik dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "drie "
+      - control:
+          kind: reset_colour
+      - text: "van je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 14
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk38:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Alsjeblieft, een beloning voor jou..."
+  talk39:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "O, jammer..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Laat maar horen als je van gedachten\nverandert."
+  talk40:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Ik begrijp het.
+  talk41:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_00
+      - text: "Vanaf de volgende keer kost het geld om\nde "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-zuil
+      - control:
+          kind: reset_colour
+      - text: " te gebruiken. We moeten\nimmers ergens geld aan verdienen!"
+  talk42:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Sorry dat ik je liet wachten, Link."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je bent hier om je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-steen "
+      - control:
+          kind: reset_colour
+      - text: "te laten\nrepareren, toch?"
+      - control:
+          kind: single_choice
+          label: 5
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik ben Symin. Ik werk hier in het\nHateno-instituut als onderzoeksassistent\nvan Purah.\nAls je iets wilt weten, kun je het me altijd\nvragen."
+  talk43:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hmm... "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Link
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik moet je nog iets\nvertellen dat je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "als muziek in de oren zal\nklinken"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik kan het aantal voorwerpen waar je\ngelijktijdig naar kunt zoeken direct\nvergroten met de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk44:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Normaal mogen mensen mijn lieve\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-zuil "
+      - control:
+          kind: reset_colour
+      - text: "niet zomaar gratis\ngebruiken, maar...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik wil weleens weten wat er gebeurt,\ndus..."
+      - control:
+          kind: pause
+          length: short
+      - text: " mag je hem de eerste keer gratis\ngebruiken.♪"
+  talk45:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Zo lijkt het tenminste...
+      - control:
+          kind: pause
+          length: short
+      - text: " Dus wil je even...\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "met je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: "...?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk46:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Goed, dan..."
+  talk47:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Link...
+      - control:
+          kind: pause
+          length: short
+      - text: " kun je bij wijze van experiment je\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: " even in de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-zuil
+      - control:
+          kind: reset_colour
+      - text: "\nplaatsen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk48:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 19
+      - text: "Hm? "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Ik wilde je drie harttruffels geven,\nmaar je hebt geen ruimte meer. Heb je ze\nnodig?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk49:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik vind het niet erg om geld te\nverdienen!♪"
+  talk50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goed dan.
+      - control:
+          kind: pause
+          length: longer
+      - text: " Aan de slag..."
+  talk51:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: animation
+          name: CustomGreeting
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Klikkie!
+  talk52:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Wauw!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wauw..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Dit is..."
+  talk53:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Verkoop dan je harttruffels of zo, dan\nheb je weer ruimte."
+  talk54:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "O, eh..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Je mag best een beetje verrast\nzijn, hoor!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Hoe dan ook, ik zal het je\nuitleggen.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Tijdens mijn onderzoek kwam ik erachter\ndat er nog "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "foto's "
+      - control:
+          kind: reset_colour
+      - text: "van vroeger op de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-zuil "
+      - control:
+          kind: reset_colour
+      - text: "staan!\nJe kunt die "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "foto's "
+      - control:
+          kind: reset_colour
+      - text: "toevoegen aan je\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Daarna kun je met de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: "\nheel eenvoudig zoeken naar wat er op de\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "foto's"
+      - control:
+          kind: reset_colour
+      - text: " is afgebeeld."
+      - control:
+          kind: single_choice
+          label: 12
+  talk55:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Natuurlijk... Maar zo te zien heb je nog\nplek in de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk56:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Kennelijk...
+  talk57:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Laten we de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-zuil
+      - control:
+          kind: reset_colour
+      - text: " dan maar snel\ninschakelen..."
+  talk58:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "De "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "hittezwammen "
+      - control:
+          kind: reset_colour
+      - text: "groeien achter\nhet instituut."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Maak er een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " van en kom terug als\nje klaar bent."
+  talk59:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Je bent best wel een vervelend\nmannetje, hè?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Kom eerst naar beneden.\nDaarna kunnen we praten!"
+  talk60:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Hoge plekken zijn gevaarlijk, hoor!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Kun\nje naar beneden komen?"
+  talk61:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Het lijkt erop dat de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " die is gemaakt\nmet de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-zuil "
+      - control:
+          kind: reset_colour
+      - text: "is verplaatst naar de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Dat kan per foto maar één keer, dus zorg\nervoor dat je hem "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: niet overschrijft
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk62:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Is dat goed?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk63:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Nu je toch net een foto van een\nhittezwam hebt gemaakt..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Zou je me "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: drie
+      - control:
+          kind: reset_colour
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: " kunnen\nbrengen?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je kunt "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: set_colour
+          colour: red
+      - text: hittezwammen
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "vinden in het\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Retsam-woud
+      - control:
+          kind: reset_colour
+      - text: ", geloof ik... Gebruik\nje "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: " maar!"
+  talk64:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Link!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Het lijkt erop dat je alle "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Foto's"
+      - control:
+          kind: reset_colour
+      - text: " hebt\nverzameld!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Geweldig!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Dan is de verzameling nu\ncompleet!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Dat is geloof ik wel een cadeautje waard,\nmaar helaas heeft het instituut maar een\nbeperkt budget...\n"
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm...
+      - control:
+          kind: pause
+          length: short
+      - text: " Dat ding misschien..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "Alsjeblieft! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Ik hoop dat je er iets aan\nhebt!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Het zat in dit boek.
+      - control:
+          kind: pause
+          length: short
+      - text: " Als ik het meeneem,\nkrijg ik toch alleen maar problemen..."
+  talk65:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dus... "
+      - control:
+          kind: pause
+          length: short
+      - text: "gebruik de camera voor de rest,"
+      - control:
+          kind: pause
+          length: short
+      - text: " of"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: reset_colour
+      - text: "\ngebruik de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-zuil
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk66:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Als je er maar voor betaalt, mag je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's"
+      - control:
+          kind: reset_colour
+      - text: "\ntoevoegen wanneer je maar wilt."
+  talk67:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "O,"
+      - control:
+          kind: pause
+          length: short
+      - text: " en dat vraag je me nu?! "
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Ik ben helemaal niet bijzonder, hoor.\nMaar als je het echt wilt weten..."
+  talk68:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik ben Symin. Ik wilde altijd al\nonderzoeker worden en ik had de mazzel\ndat ik hier aan de slag kon als assistent.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Het enige minpunt is dat ik zoveel tijd in\nmijn onderzoek steek, dat ik geen tijd\nheb om een vriendin te vinden..."
+  talk69:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Wat is dat nou voor excuus!
+  talk70:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Ha, ik probeer het gewoon niet hard\ngenoeg, denk ik..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Haha..."
+  talk71:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Nog zo'n excuus!"
+  talk72:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Open daarna je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: ", registreer\nde "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " van de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: " en..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "...je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: " zoekt naar\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: " in je omgeving."
+  talk73:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Als je de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: " per ongeluk\nhebt opgeraapt, leg hem dan ergens neer\nen maak er een foto van."
+  talk74:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Heb je al een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " gemaakt van de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 15
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk75:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Laat mij eens even kijken...
+  talk76:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Oké, open nu je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: " en\nregistreer de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foto
+      - control:
+          kind: reset_colour
+      - text: " van de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Nu kan je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-sensor+ "
+      - control:
+          kind: reset_colour
+      - text: "zoeken naar\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwammen
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk77:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ga eerst een foto maken met je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: camera
+      - control:
+          kind: reset_colour
+      - text: "\nvan de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: achter het gebouw
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk78:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ik zie hier geen "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto "
+      - control:
+          kind: reset_colour
+      - text: "van de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: hittezwam
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk79:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Is dat... "
+      - control:
+          kind: pause
+          length: short
+      - text: Dat ding op je heup...?!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Is dat\neen Sheikah..."
+  talk80:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: animation
+          name: SurpriseS_01
+      - text: "Geen twijfel mogelijk. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Dat is een echte\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: ", toch?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Ik moet eerlijk bekennen dat ik er nog\nnooit een in het echt heb gezien."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je me zou kunnen vertellen welke\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "krachten "
+      - control:
+          kind: reset_colour
+      - text: "hij bezit, dan zou ik je erg\ndankbaar zijn."
+  talk81:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Stasis
+      - control:
+          kind: reset_colour
+      - text: "... "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Aha...
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: pause
+          length: longer
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Magnesis
+      - control:
+          kind: reset_colour
+      - text: "... "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Ja, ja... Ga door..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "De "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "afstandsbom "
+      - control:
+          kind: reset_colour
+      - text: "en "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Cryonis
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: En wat nog meer? Verder nog iets?
+      - control:
+          kind: text_size
+          percent: 100
+  talk82:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Met dit pakket kun je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_SelectPictureBookVacancy
+      - control:
+          kind: reset_colour
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's"
+      - control:
+          kind: reset_colour
+      - text: " aan de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: " toevoegen."
+  talk83:
+    attributes: NPC_DRCVoice
+    contents:
+      - control:
+          kind: animation
+          name: Activate
+      - text: De encyclopedie is bijgewerkt.
+  talk84:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Link, het is indrukwekkend dat je alle\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's"
+      - control:
+          kind: reset_colour
+      - text: " hebt verzameld!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik heb verder niks meer dat ik je kan\ngeven. Maar kom gerust nog een keertje\nop bezoek, als je wilt."
+  talk85:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Huh?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik dacht dat ik nog een foto kon\ntoevoegen, "
+      - control:
+          kind: pause
+          length: short
+      - text: "maar dat gaat momenteel\nniet."
+  talk86:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Ik vraag me af of de andere functies nog\nsteeds zijn verborgen..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Hoe kunnen we\nze tevoorschijn toveren?"
+  talk87:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hmm...
+      - control:
+          kind: pause
+          length: short
+      - text: " Volgens mijn onderzoek zou je\nnog meer foto's moeten kunnen\ntoevoegen..."
+  talk88:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Wat heb je nodig?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 2
+                - 0
+                - 8
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk89:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Eenvoudig? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Maar, Link..."
+  talk90:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor
+      - control:
+          kind: reset_colour
+      - text: " is verbeterd en heet\nnu "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 6
+      - text: "Je kunt nu "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: linken
+      - control:
+          kind: reset_colour
+      - text: " naar een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto "
+      - control:
+          kind: reset_colour
+      - text: "die in je\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopedie "
+      - control:
+          kind: reset_colour
+      - text: "is opgeslagen, zodat je\nkunt zoeken naar wat er is afgebeeld.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je moet de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's "
+      - control:
+          kind: reset_colour
+      - text: "die zijn opgeslagen in\ndeze "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Sheikah-zuil "
+      - control:
+          kind: reset_colour
+      - text: "regelmatig toevoegen\naan je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: ".\nHierdoor kun je makkelijker zoeken naar\nde dingen die je nodig hebt waardoor je\nreis ook een stuk aangenamer wordt."
+  talk91:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Zal ik het nog eens uitleggen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 17
+            - 20
+          selected_index: 1
+          cancel_index: 2
+          unknown: 6
+  talk92:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Plaats je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-steen
+      - control:
+          kind: reset_colour
+      - text: " op de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-zuil
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk93:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Heb je verder nog iets nodig?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 2
+                - 0
+                - 8
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk94:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Foto's"
+      - control:
+          kind: reset_colour
+      - text: " die je maakt met de camera,\nworden opgeslagen in het "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: fotoalbum
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "En als je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's"
+      - control:
+          kind: reset_colour
+      - text: " maakt van levende\nwezens, monsters, materialen, wapens\nof schatten...\n...dan worden ze automatisch\ntoegevoegd aan de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Met je "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sheikah-sensor+
+      - control:
+          kind: reset_colour
+      - text: " kun je zoeken\nnaar alles wat is toegevoegd aan je\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopedie
+      - control:
+          kind: reset_colour
+      - text: "...\nMaak dus zo veel mogelijk foto's, want\ndie kunnen je helpen tijdens je avontuur!"
+  talk95:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Je kunt geen "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foto's "
+      - control:
+          kind: reset_colour
+      - text: "meer toevoegen,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nmaar je kunt ze wel bekijken. Wil je dat?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 21
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk96:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Sorry, maar ik kan niet meer foto's van\ndat type toevoegen."
+  talk97:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Je hebt al alle foto's van dat type..."
+  talk98:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Er zijn niet meer foto's van dat type."
+  talk99:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Helaas bevat de Sheikah-zuil niet meer\nfoto's van dat type..."

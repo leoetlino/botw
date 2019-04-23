@@ -1,0 +1,960 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0002":
+    attributes: ""
+    contents:
+      - text: Je veux me changer.
+  "0003":
+    attributes: ""
+    contents:
+      - text: Je veux acheter.
+  "0004":
+    attributes: ""
+    contents:
+      - text: Le voile.
+  "0005":
+    attributes: ""
+    contents:
+      - text: Le corsage.
+  "0006":
+    attributes: ""
+    contents:
+      - text: Le sarouel.
+  "0007":
+    attributes: ""
+    contents:
+      - text: Oui.
+  "0008":
+    attributes: ""
+    contents:
+      - text: Non.
+  "0009":
+    attributes: ""
+    contents:
+      - text: Rien du tout.
+  "0010":
+    attributes: ""
+    contents:
+      - text: "S'il te plaît."
+  "0011":
+    attributes: ""
+    contents:
+      - text: "Non, merci."
+  "5500":
+    attributes: ""
+    contents:
+      - text: Oui.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Non.
+  "5503":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5508":
+    attributes: ""
+    contents:
+      - text: Tout vendre.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Que veux-tu que je t'achète?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nJe t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ".\nQu'en dis-tu?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: "Hihi... J'espère t'avoir aidé..."
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: "Merci. En Gerudo, ça se dit « saksak ».\nRetiens bien ça."
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "C'est un bel article, merci."
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Hihi...
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 21
+            - 205
+      - text: "Hihi... Tu es si adorable quand\ntu hésites..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Tu as besoin d'autre chose?"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Autre chose?\nNe sois pas timide..."
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Si tu as quelque chose à vendre,\nn'hésite surtout pas à me le dire."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Tu as déjà fini? Je suis prête\nà t'acheter ce que tu veux."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nc'est bien ça? Combien?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je veux bien te donner "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "\npour les "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ". Ça te semble correct?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Oh, je ne veux pas de ça."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Il faut d'abord que tu enlèves ça, voyons.\nTu veux peut-être que je t'aide?"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJe t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ". Ça te va?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Très bien... Je t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ".\nÇa te va?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near_00:
+    attributes: Npc_SmallOasis008
+    contents:
+      - text: Il fait chaud...
+  Near_01:
+    attributes: Npc_SmallOasis008
+    contents:
+      - text: Il fait froid...
+  Near_02:
+    attributes: Npc_SmallOasis008
+    contents:
+      - text: Magnifique...
+  Near_03:
+    attributes: Npc_SmallOasis008
+    contents:
+      - text: "Elle s'est déplacée..."
+  Near_04:
+    attributes: Npc_SmallOasis008
+    contents:
+      - text: Elle ne bouge plus?
+  Npc_SmallOasis008_001:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Tu sais, je me disais que je pourrais faire\naffaire avec ces marchands Hyliens qui\nont l'air de ne pas en mener large.\nMais je n'arrive pas à détacher mes\nyeux de la créature divine..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Va savoir\npourquoi."
+  Npc_SmallOasis008_006:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oh, c'est encore toi...!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Alors, comme ça,\ntu es revenu me voir?"
+      - control:
+          kind: pause
+          length: longer
+  Npc_SmallOasis008_007:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Hihi...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je savais que tu reviendrais..."
+  talk00:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Mais cette tenue...\n\n\nQuel dommage! Alors que tu as tout ce\nqu'il faut pour te déguiser en femme!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bon, tu veux que je t'aide à nouveau\nà changer de vêtements?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk01:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hmm... Décidément... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Tu es vraiment\nmignon comme un cœur!"
+      - control:
+          kind: pause
+          length: longer
+  talk02:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Oh, dommage..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Cette tenue t'allait si bien... Vraiment!"
+      - control:
+          kind: pause
+          length: longer
+  talk03:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Cela dit, à propos de tes vêtements..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nIls te vont vraiment très bien!\nHihi..."
+      - control:
+          kind: pause
+          length: longer
+  talk04:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Tu veux te changer? Ou tu préfères\nm'acheter des vêtements?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk05:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: Hmm... Attends un peu.
+  talk06:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 6
+      - text: "Petit coquin. C'est déjà fait..."
+  talk07:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 13
+      - text: "Tu as perdu quelque chose?\nVilain garçon!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Bon, ce n'est pas\ngrave... Que veux-tu m'acheter?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+            - 9
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk08:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Tu comptais m'acheter des vêtements\navec si peu de rubis?\n\nAlors, comme ça, on essaye d'embobiner\nles gentilles dames?"
+      - control:
+          kind: pause
+          length: longer
+  talk09:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je te vends le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: voile de damoiselle
+      - control:
+          kind: reset_colour
+      - text: "\npour "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 200 rubis
+      - control:
+          kind: reset_colour
+      - text: ". Ça t'intéresse?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk10:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je te vends le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: corsage de damoiselle
+      - control:
+          kind: reset_colour
+      - text: "\npour "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 200 rubis
+      - control:
+          kind: reset_colour
+      - text: ". Ça t'intéresse?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk11:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je te vends le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: sarouel de damoiselle
+      - control:
+          kind: reset_colour
+      - text: "\npour "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 200 rubis
+      - control:
+          kind: reset_colour
+      - text: ". Ça t'intéresse?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk12:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Hihi... Prends-en soin.\n\n\nTu veux autre chose?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+            - 9
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk13:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 6
+      - text: "Oh, tu as changé d'avis?\n\n\nTu ne veux rien m'acheter d'autre?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+            - 9
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk14:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Hihi... C'est bon?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nReviens quand tu veux!"
+  talk15:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Hihi... Tu es adorable quand tu rougis.\n\n\nEn tout cas, je ne bouge pas d'ici, alors\nsi tu veux te déguiser en femme, viens\nme voir.\nJe pourrais même t'aider à te changer\nper"
+      - control:
+          kind: pause
+          length: short
+      - text: son
+      - control:
+          kind: pause
+          length: short
+      - text: nel
+      - control:
+          kind: pause
+          length: short
+      - text: le
+      - control:
+          kind: pause
+          length: short
+      - text: ment
+      - control:
+          kind: pause
+          length: short
+      - text: ", mon grand..."
+      - control:
+          kind: pause
+          length: longer
+  talk16:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Ta sacoche...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Elle est remplie à ras bord."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHihi..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Quel garçon désordonné...\n\nJe peux t'aider à t'alléger si tu veux...\nTu aimerais ça?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk17:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 13
+      - text: Oh...
+      - control:
+          kind: pause
+          length: short
+      - text: " dommage..."
+  talk18:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 8
+      - text: "Si je pouvais, je te dévorerais tout cru!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hihi... "
+      - control:
+          kind: pause
+          length: short
+      - text: "je rigole mon cœur!\n\n\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "Bon... je ne bouge pas d'ici, alors si tu\nas besoin de moi, n'hésite surtout pas!"
+  talk19:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 7
+      - control:
+          kind: text_size
+          percent: 125
+      - text: "Je vais te donner une bonne\nleçon, tu vas voir!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: Hihi! Je plaisante.
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Si tu as besoin d'argent, je peux\npeut-être t'acheter quelque chose...\nÇa te dit?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk20:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 8
+      - text: "J'aurais presque envie de te croquer!"
+  talk21:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 8
+      - text: Je te mangerais bien tout cru!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hihi, je plaisante... Savook!"
+  talk22:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 7
+      - control:
+          kind: text_size
+          percent: 125
+      - text: "Fais gaffe à toi, vaurien!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: Hihi! Je plaisante!
+  talk23:
+    attributes: Npc_SmallOasis008
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Hihi... C'est bon?\n\n\nJ'espère que j'ai pu t'aider... Reviens\nquand tu veux."

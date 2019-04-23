@@ -1,0 +1,936 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0008":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "0011":
+    attributes: ""
+    contents:
+      - text: Ich möchte verkaufen.
+  "0012":
+    attributes: ""
+    contents:
+      - text: Clako?
+  "1000":
+    attributes: ""
+    contents:
+      - text: Gekauft!
+  "1001":
+    attributes: ""
+    contents:
+      - text: "Hm, doch nicht."
+  "5500":
+    attributes: ""
+    contents:
+      - text: Klingt gut!
+  "5501":
+    attributes: ""
+    contents:
+      - text: "Hab's mir überlegt."
+  "5503":
+    attributes: ""
+    contents:
+      - text: Doch nicht...
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkaufen.
+  ClerkAsk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: PlacedItemName
+      - control:
+          kind: reset_colour
+      - text: " kostet\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nGünstig, was?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Was möchtest du denn loswerden?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDafür kann ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "\ngeben..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "Danke! Da hab ich etwas Schönes\nbekommen!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Jippie! Genau so etwas habe ich schon\nlänger gesucht!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Was für ein Glück!\nGenau das fehlte mir noch in der\nSammlung!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Ich hätte gar nicht gedacht, dass du so\netwas Tolles bei dir hast!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Verständlich. Aber schade – ich hätte\nmich schon darüber gefreut..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich kaufe dir alles ab! Sag einfach\nBescheid, was du loswerden willst!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Ich kaufe dir alles ab, und wenn ich\npleite dabei gehe!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Wo du schon mal dabei bist, solltest du\ngleich alles verkaufen, was du nicht mehr\nbrauchst!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Sonst noch etwas?\nIch kaufe dir so gut wie alles ab!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oh, "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSehr gerne."
+      - control:
+          kind: pause
+          length: short
+      - text: " Wie viel davon möchtest\ndu denn loswerden? "
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Lass mich überlegen, der Einzelpreis\nmal "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Dann bekommst du...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ", richtig?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Hm... Tut mir leid, aber damit kann\nich nicht viel anfangen..."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Du machst Witze!
+      - control:
+          kind: pause
+          length: short
+      - text: " Das hast du doch\ngerade an!"
+      - control:
+          kind: pause
+          length: long
+      - text: " ...Ach so, verstehe schon."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNetter Versuch."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Mehr nicht?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDas würde dich dann "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "\nkosten. "
+      - control:
+          kind: pause
+          length: short
+      - text: Einverstanden?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Alles?
+      - control:
+          kind: pause
+          length: long
+      - text: " Na, wenn du meinst... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Dafür\nwürde ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: " geben!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Gute Wahl! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Dies ist unser Modell\n„"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "“ zum\neinmaligen Preis von "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubinen"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Oh...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Also, ich hätte bei dem\nPreis ja sofort zugeschlagen."
+  FirstTalk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Willkommen in der Boutique\n„Zwei Früchtchen“!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wir verkaufen hier Mode der Marke\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Clako
+      - control:
+          kind: reset_colour
+      - text: ". Wer modisch aktuell sein will,\nkommt um unser Sortiment nicht herum! "
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Besonders der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: Ninja-Anzug
+      - control:
+          kind: reset_colour
+      - text: " dort ist der\nRenner der Saison!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wir kaufen auch Gebrauchtes an, also\nsag einfach Bescheid, wie ich dir helfen\nkann!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  FirstTalk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Willkommen in der Boutique\n„Zwei Früchtchen“!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Im ersten Moment dachte ich, du wärst\nein Exhibitionist,"
+      - control:
+          kind: pause
+          length: short
+      - text: " halb nackt wie du bist..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Bei uns gibt es nur ganz exklusive\nStücke der Marke "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Clako
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Selbst anspruchsvolle Kunden, die lieber\nnackt als schlecht gekleidet herumlaufen,\nfinden bei uns genau das Richtige!\nBesonders der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: Ninja-Anzug
+      - control:
+          kind: reset_colour
+      - text: " dort ist der\nRenner der Saison!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wir kaufen auch Gebrauchtes an, also\nsag einfach Bescheid, wie ich dir helfen\nkann!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Near00:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Kleider machen Leute!
+  Near01:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Die neuste Mode!
+  Near02:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Guten Abend!
+  Talk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Du bist hier immer willkommen!
+  Talk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Sieh dich nur in Ruhe um! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Mit unseren\nmodischen Sonderanfertigungen der\nMarke "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Clako "
+      - control:
+          kind: reset_colour
+      - text: bist du stets im Trend!
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk06:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Oh... Ich merke gerade, dass du mir\nden kompletten Laden leergekauft hast!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Andererseits heißt das wohl, dass ich\njetzt nicht mehr arbeiten muss...?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Vielleicht unternehme ich zusammen mit\nHimba und der Großmutter eine Reise!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk07:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Clako
+      - control:
+          kind: reset_colour
+      - text: " steht natürlich für "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Clari-Kollektion
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Ich stehe voll und ganz hinter jedem\neinzelnen meiner Meisterstücke..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Jedes davon hat ganz besondere\nEigenschaften."
+      - control:
+          kind: pause
+          length: short
+      - text: " Am besten, du siehst\nsie dir alle einmal an!"
+  Talk08:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Besten Dank!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDas steht dir sicher hervorragend!"
+  Talk14:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Gibt es sonst noch was?\nDu kannst mich alles fragen!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk17:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Danke!
+      - control:
+          kind: pause
+          length: short
+      - text: " Und Glückwunsch \nzur neuen Errungenschaft!"
+  Talk19:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Wo soll ich nur hin, solange der Laden\ngeschlossen ist... Vielleicht suche ich\nden berühmten Liebesteich?"
+      - control:
+          kind: text_size
+          percent: 100
+  Talk20:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Hier bei uns im Dorf kommt man nur\nschwer an Sachen aus der großen,\nweiten Welt...\nAlso denk bitte an mich, falls du je\nwieder was zu verkaufen hast!"
+  Talk24:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Nicht schlecht, was? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Das ist ein\nexklusives Gewand der Boutique\n„Zwei Früchtchen“.\nDamit kannst du dich absolut lautlos\nfortbewegen."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ein Muss für jeden, der\nregelmäßig jagen geht!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "...Dafür ist die Schutzwirkung nicht\nbesonders hoch. Klitzekleiner Nachteil."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk25:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Willkommen in der Boutique\n„Zwei Früchtchen“!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: Ninja-Anzug
+      - control:
+          kind: reset_colour
+      - text: " dort ist der\nRenner der Saison!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Damit kannst du dich absolut lautlos\nfortbewegen."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ein Muss für jeden, der\nregelmäßig jagen geht!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "...Dafür ist die Schutzwirkung nicht\nbesonders hoch. Klitzekleiner Nachteil."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk26:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Danke!
+      - control:
+          kind: pause
+          length: short
+      - text: " Schon ganz bald werde ich\nweitere umwerfende Mode im Sortiment\nhaben – verlass dich drauf!"
+  Talk27:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Danke!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWenn du das Material richtig pflegst,\nwirst du lang Freude daran haben!"
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Hör auf!

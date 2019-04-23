@@ -1,0 +1,42 @@
+ConditionalTimelines:
+- Condition: Npc_Assassin_FirstEncounter
+  Nodes:
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'True', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 2,
+    MoveTalkTurn: 2, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Crouch, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 2}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+  - EvflEntry: PopUp
+    IsPauseOtherActors: false
+    Parameters: {Distance: 10.0, FrontOnly: false}
+    Trigger: Near
+DefaultTimeline:
+  Nodes:
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Pleasure, EndTime: 24, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 0, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: Turn, ReactionToApproachDist: 10, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Act_Call_Hello,
+    ReturnActionRainTimeAfterTalk: -1, ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: 60,
+    SleepOnBed: 'True', StartTime: 0, WaitAnchorASName: Wait, WaitAnchorRainASName: Wait,
+    WaitEquipment: Invisible, WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot,
+    WaitPosture: 0, WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0,
+    WaitRainTalkTurn: 3, WaitReactionType: 0, WaitTalkTurn: 0}
+  TriggerEvents:
+  - EvflEntry: Near
+    IsPauseOtherActors: true
+    Parameters: {Distance: 4.0, FrontOnly: false}
+    Trigger: Near
+  - {EvflEntry: Near, IsPauseOtherActors: true, Trigger: Talk}
+DisplayDistanceMode: None

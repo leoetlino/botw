@@ -1,0 +1,78 @@
+---
+group_count: 7
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: NPC_GodVoice
+    contents:
+      - text: "Да, я сдаюсь..."
+  "0001":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Хочу!
+  talk00:
+    attributes: EventSystemActor
+    contents:
+      - text: "О ступивший на этот остров,\nя подвергну тебя испытанию."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "До сих пор ты полагался на\nснаряжение, которому не было\nчисла."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Но какова твоя истинная сила?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Чтобы выяснить это, ты должен\nпройти испытание, без доспехов\nи оружия."
+  talk01:
+    attributes: EventSystemActor
+    contents:
+      - text: "Тебе удалось пройти испытание.\nКак и обещала, я верну тебе все\nтвое снаряжение."
+  talk02:
+    attributes: NPC_GodVoice
+    contents:
+      - text: Ты не хочешь продолжать испытание?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk03:
+    attributes: EventSystemActor
+    contents:
+      - text: "Значит, сдаешься? Тогда я верну\nтебе все твое снаряжение."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если передумаешь, снова\nпосети этот остров."
+  talk04:
+    attributes: EventSystemActor
+    contents:
+      - text: "Куда же ты? Если хочешь продолжать\nиспытание, вернись на остров."
+  talk05:
+    attributes: EventSystemActor
+    contents:
+      - text: "На этом острове есть три алтаря.\nПринеси на них древние сферы."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Тогда я признаю, что ты прошел\nиспытание, и верну тебе все твое\nснаряжение."
+  talk06:
+    attributes: EventSystemActor
+    contents:
+      - text: Войди в святилище.

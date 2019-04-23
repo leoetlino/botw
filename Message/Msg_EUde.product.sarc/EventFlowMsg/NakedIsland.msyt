@@ -1,0 +1,72 @@
+---
+group_count: 7
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Vorerst aufgeben
+  "0001":
+    attributes: NPC_GodVoice
+    contents:
+      - text: Fortfahren
+  talk00:
+    attributes: EventSystemActor
+    contents:
+      - text: "Wer auf dieser Insel weilt,\nbekommt eine Prüfung zugeteilt."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Werkzeuge waren bislang deine Kraft.\nHast du je ohne eine Prüfung geschafft?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Leg ab dein Werkzeug! Stelle dich hier\nder Prüfung mit der Kraft, die ruht in dir."
+  talk01:
+    attributes: EventSystemActor
+    contents:
+      - text: "Der Sieg ist dir hold mit allem Glück.\nDu erhältst dein Werkzeug nun zurück."
+  talk02:
+    attributes: NPC_GodVoice
+    contents:
+      - text: Möchtest du mit der Prüfung fortfahren?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk03:
+    attributes: EventSystemActor
+    contents:
+      - text: "Du gibst die Prüfung vorerst auf?\nDann werde ich dir deine Werkzeuge\nzurückgeben.\nBesuche diese Insel erneut, wenn du\ndeine Meinung änderst."
+  talk04:
+    attributes: EventSystemActor
+    contents:
+      - text: Wohin gehst du?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Kehre zur Insel zurück, wenn du mit\nder Prüfung fortfahren möchtest."
+  talk05:
+    attributes: EventSystemActor
+    contents:
+      - text: "Um diese Prüfung zu bezwingen, sollst\ndu drei Altären Juwelen darbringen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Bist du siegreich, so findet hier\ndein Werkzeug den Weg zurück zu dir."
+  talk06:
+    attributes: EventSystemActor
+    contents:
+      - text: "Wohlan, Reisender, so soll es sein.\nKomm näher und betritt den Schrein."

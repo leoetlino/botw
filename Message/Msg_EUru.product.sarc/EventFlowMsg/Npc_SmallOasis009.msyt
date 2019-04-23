@@ -1,0 +1,691 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Я кое-что продаю
+  "0001":
+    attributes: ""
+    contents:
+      - text: Пока
+  "0005":
+    attributes: ""
+    contents:
+      - text: Я кое-что продаю
+  "5500":
+    attributes: ""
+    contents:
+      - text: Идет!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Я подумаю...
+  "5503":
+    attributes: ""
+    contents:
+      - text: Я подумаю...
+  "5507":
+    attributes: ""
+    contents:
+      - text: Беру все
+  "5508":
+    attributes: ""
+    contents:
+      - text: Продаю все
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Показывай, что у тебя есть."
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Куплю за "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Саак-саак.
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Са-па-си-бо! Так говорят\nв твоих краях?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Саак-саак. Очень хорошо.
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Замечательно. Саак-саак!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Ладно, подумай."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "Может, что-то еще покажешь?"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Покажешь еще что-нибудь?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Я могу хоть все купить.
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "А может, у тебя еще что-нибудь есть?"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nА сколько?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Значит, "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " штуку"
+            - " штук"
+            - " штуки"
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nКуплю за "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: Что это?
+      - control:
+          kind: pause
+          length: short
+      - text: " Я не покупаю\nто, в чем не разбираюсь."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Хочешь, чтобы я сама с тебя это\nсняла?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Извини, но ты не в моем\nвкусе."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Могу предложить "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Как\nнасчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Это стоит "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Как хочешь.
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: Все свежее!
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Тебе идет этот наряд!
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: До-брый день!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кажется, так приветствуют\nв твоих краях."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А мы говорим просто «саваак».
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Приходи еще.
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Моя сестра продает\nмясо в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: городе герудо
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Она много путешествовала\nи хорошо знает твой язык."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А еще она очень милая.
+      - control:
+          kind: pause
+          length: short
+      - text: " Если будешь\nв городе, обязательно с ней поболтай."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "А, ты же воой — тебя\nв город не пустят..."
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Интересно.
+      - control:
+          kind: pause
+          length: short
+      - text: " Что именно?"
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Удачный у меня сегодня день.
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Бла-го-да-рю по-кор-но!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кажется, так говорят в твоих краях."
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Видела ли я кого-нибудь\nподозрительного?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Хм, вроде бы нет."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "Но я ведь тут все время сижу,\nтак что ты зря меня спрашиваешь."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Лучше спроси хайлийских торговцев:\nможет, они кого-нибудь видели."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Моя сестра продает\nмясо в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: городе герудо
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Она много путешествовала\nи хорошо знает твой язык."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А еще она очень милая.
+      - control:
+          kind: pause
+          length: short
+      - text: " Если будешь\nв городе, обязательно с ней поболтай."
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: До-брый ве-чер!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кажется, так приветствуют\nв твоих краях."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А мы говорим просто «сав'сааба»."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: Уйди!
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: До-бро-е у-тро!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кажется, так приветствуют\nв твоих краях."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А мы говорим просто «савотта».
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: До-бро по-жа-ло-вать!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кажется, так приветствуют\nв твоих краях."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А мы говорим просто «васаак».
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Саак-саак! Кушай и набирайся сил!
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Са-па-си-бо! Саак-саак!
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Товар кончился...
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: При-вет.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кажется, так говорят в твоих краях."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

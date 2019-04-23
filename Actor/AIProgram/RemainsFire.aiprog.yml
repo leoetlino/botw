@@ -1,0 +1,256 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_AnimMatrixDriven: 21
+      Demo_ForceChangeForDroneAlert: 22
+      Demo_GetItem: 23
+      Demo_Idling: 24
+      Demo_Join: 25
+      Demo_OpenGetDemo: 26
+      Demo_PlayASForDemo: 27
+      Demo_PlayASForTimeline: 28
+      Demo_ResetBoneCtrl: 29
+      Demo_SendSignal: 30
+      Demo_SetGetFlag: 31
+      Demo_TrigNullASPlay: 32
+      Demo_UpdateDataByGetDemo: 33
+      Demo_VisibleOff: 34
+      Demo_WarpToPos: 35
+      Demo_WatchCannonHit: 36
+      Demo_XLinkEventCreate: 37
+      Demo_XLinkEventFade: 38
+      Demo_XLinkEventKill: 39
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 Fork2AI, GroupName: ''}
+            ChildIdx: !obj {子０: 4, 子１: 18}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 RemainsFireBattleStepSelector,
+              GroupName: 遺物チャレンジ中}
+            ChildIdx: !obj {1st: 6, 2nd: 9, 3rd: 12, Idle: 15}
+            BehaviorIdx: !obj {1721623982: 1}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 遺物チャレンジ中, ClassName: !str32 RemainsFireBattleMove, GroupName: Root}
+            ChildIdx: !obj {待機: 5, 攻撃: 3, 移動: 1}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 攻撃, ClassName: !str32 RemainsFireBattleStepSelector,
+              GroupName: 遺物チャレンジ中}
+            ChildIdx: !obj {1st: 7, 2nd: 10, 3rd: 13, Idle: 16}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 RemainsFireRoot, GroupName: Root}
+            ChildIdx: !obj {待機: 19, 通常行動: 20, 遺物チャレンジ中: 2}
+            SInst: !obj {TargetBoneName: Root, RemainsTypeID: 2, IsAllowRotAxisX: true}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 RemainsFireBattleStepSelector,
+              GroupName: 遺物チャレンジ中}
+            ChildIdx: !obj {1st: 8, 2nd: 11, 3rd: 14, Idle: 17}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 1st, ClassName: !str32 NullASPlay, GroupName: 移動}
+            SInst: !obj {ASName: Place1_Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 1st, ClassName: !str32 RemainsFireTailAttack, GroupName: 攻撃}
+            SInst: !obj {ASKeyName: Place1_TailAttack, IsIgnoreSame: false}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 1st, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: Place1_Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 2nd, ClassName: !str32 NullASPlay, GroupName: 移動}
+            SInst: !obj {ASName: Place2_Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 2nd, ClassName: !str32 RemainsFireTailAttack, GroupName: 攻撃}
+            SInst: !obj {ASKeyName: Place2_TailAttack, IsIgnoreSame: false}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 2nd, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: Place2_Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 3rd, ClassName: !str32 NullASPlay, GroupName: 移動}
+            SInst: !obj {ASName: Place3_Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 3rd, ClassName: !str32 RemainsFireTailAttack, GroupName: 攻撃}
+            SInst: !obj {ASKeyName: Place3_TailAttack, IsIgnoreSame: false}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 3rd, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: Place3_Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: Idle, ClassName: !str32 DummyAction, GroupName: 移動}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Idle, ClassName: !str32 DummyAction, GroupName: 攻撃}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Idle, ClassName: !str32 DummyAction, GroupName: 待機}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 DungeonEntranceASPlay, GroupName: Root}
+            SInst: !obj
+              SetDgnName: RemainsFire
+              ASName: Constant
+              IsIgnoreSame: true
+              TargetIdx: 1
+              SeqBankIdx: 0
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 NullASPlay, GroupName: Root}
+            SInst: !obj {ASName: Wait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 通常行動, ClassName: !str32 NullASPlay, GroupName: 通常}
+            SInst: !obj {ASName: FieldMove, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_AnimMatrixDriven, ClassName: !str32 AnimMatrixDriven,
+              GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_ForceChangeForDroneAlert, ClassName: !str32 ForceChangeAction,
+              GroupName: ''}
+            SInst: !obj {Tree: 子０/遺物チャレンジ中/攻撃}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToPos, ClassName: !str32 WarpToPos, GroupName: ''}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: Demo_WatchCannonHit, ClassName: !str32 EventWatchCannonHit,
+              GroupName: ''}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 OnChangeXLinkCreate}
+            SInst: !obj {Key: YunBo_Hit, DoOnChangeAI: false}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 OnChangeXLinkCreate}
+            SInst: !obj {Key: HitRemainsFire, DoOnChangeAI: false}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}
