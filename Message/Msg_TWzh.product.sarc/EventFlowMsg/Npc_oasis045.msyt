@@ -1,0 +1,834 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: 請收購東西！
+  "0002":
+    attributes: ""
+    contents:
+      - text: 再見
+  "5500":
+    attributes: ""
+    contents:
+      - text: 好
+  "5501":
+    attributes: ""
+    contents:
+      - text: 不好
+  "5502":
+    attributes: ""
+    contents:
+      - text: 買
+  "5503":
+    attributes: ""
+    contents:
+      - text: 還是算了
+  "5507":
+    attributes: ""
+    contents:
+      - text: 全買了
+  "5508":
+    attributes: ""
+    contents:
+      - text: 全賣了
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 妳想賣的東西是哪個？
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "的話，\n我用"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 跟妳收購哦。
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "薩庫薩庫，\n盧比確實交到妳手上囉。"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: 薩庫薩庫！
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "薩庫薩庫，\n我家的孩子很喜歡這個，真是多謝了～"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "薩庫薩庫，\n竟然能收購到這種東西，我今天還真走運呢。"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 也好，不用急著決定。
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 沒有其他東西了嗎？
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "其他也請多多麻煩了，\n用不著客氣的～"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "妳好像還有很多東西\n是我家的孩子會喜歡的呢。"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "外頭世界的東西，再多都嫌不夠，\n不管多少我都收購哦。"
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "在這鎮上，是禁止殺價的哦。\n要是錢不夠，就賣掉礦石什麼的湊錢吧。"
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "哎呀，都沒地方放進去了，\n妳先把袋子清一清再過來吧。"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "對吧？\n妳想賣幾個呢？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "……\n總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 哦。
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "這東西我沒有辦法收購呢……\n可以請妳拿去別的地方嗎？"
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "海利亞人的習慣是把穿著的衣服拿來賣嗎？\n很抱歉，在這小鎮應該行不通哦。"
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: 要買
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 對吧？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n想要幾個呢？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要賣1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 對吧？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: 要將所有的
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 買下對吧？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個，共
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: 要將
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "全賣了對吧？\n那我就用總共"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 收購囉？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要買
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "對吧？\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要買
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "對吧？\n想要幾個呢？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "個對吧？\n總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "哎呀，不買了嗎？\n真是可惜。"
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "在這鎮上是禁止殺價的，\n要是錢不夠，就賣掉礦石什麼的湊錢吧。"
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "哎呀，妳的行李太多了啊，\n妳先賣掉或丟掉一些後再來吧。"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要買1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "對吧？\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 哦。
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near001:
+    attributes: Npc_oasis045
+    contents:
+      - text: 現在正好吃哦……
+  Near002:
+    attributes: Npc_oasis045
+    contents:
+      - text: 全都沒了啊……
+  Talk_01:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: "芭薩庫……\n\n這是跟客人妳一樣，\n既新鮮又多汁的水果哦。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: 芭薩庫……
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n沙漠很容易消耗人的體力呢，\n這種時候，最適合吃我們店的水果哦。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_03:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 我家的孩子最喜歡吃
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 水果派
+      - control:
+          kind: reset_colour
+      - text: "了，\n我偶爾會做給她吃。\n雖然水果要多少有多少，\n但"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 塔邦撻小麥
+      - control:
+          kind: reset_colour
+      - text: 、
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 蔗糖
+      - control:
+          kind: reset_colour
+      - text: ，還有
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 山羊奶油
+      - control:
+          kind: reset_colour
+      - text: "\n在這一帶實在不好取得，\n所以沒什麼機會做呢。\n客人要是手邊有材料，\n就試著做做看吧。"
+  Talk_05:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 小事一樁啊。
+  Talk_06:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: 薩庫薩庫……
+  Talk_07:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "薩庫薩庫，\n我會再進貨的！"
+  Talk_09:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "外國客人帶的東西\n即使光看，也很有意思呢。\n有機會再讓我開心一下吧。"
+  Talk_11:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: 芭薩庫……
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n這是跟我家孩子一樣，\n既新鮮又甜的水果哦。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: "聞起來很香吧～？\n現在正適合吃哦。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_13:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "聞起來還香得很對吧？\n\n因為我們賣的\n都是全熟才好吃的水果，\n所以就算水果賣完了，\n香氣也會留下來哦。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_14:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "現在吃正是時候呢，\n保證好吃哦～"
+  Talk_15:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "薩庫薩庫，\n買到了好東西呢～"
+  Talk_16:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "薩庫薩庫，\n再麻煩妳囉！"
+  Talk_17:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "哎呀，全都賣光了嗎？\n又得去進貨了呢。"
+  Talk_18:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "客人！\n妳聽說了嗎？鎮壓"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: pause
+          length: short
+      - text: 娜波力斯
+      - control:
+          kind: reset_colour
+      - text: "的事！\n據說是我們的"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 族長大人
+      - control:
+          kind: reset_colour
+      - text: "\n跟帕特麗夏大人，大顯身手解決了事件呢！\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "其實帕特麗夏大人的伙食\n都會使用我們家的水果哦。\n我還想藉這個機會，\n幫我們的水果創立品牌呢。\n「帕特麗夏大人御用的\n蓓羅雅水果店」！\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "呵呵，這名字如何？\n是不是感覺就很美味呀？\n我也得為了創立品牌\n再多加把勁呢。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

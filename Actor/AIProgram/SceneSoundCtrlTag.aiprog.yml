@@ -7,15 +7,18 @@ param_root: !list
       Demo_Ctrl: 1
       Demo_CustomDuckingStart: 2
       Demo_CustomDuckingStop: 3
-      Demo_KillAllDemoSound: 4
-      Demo_KillDucking: 5
-      Demo_NotifyTalk: 6
-      Demo_ResetBoneCtrl: 7
-      Demo_SetEndProc: 8
-      Demo_SetStartProc: 9
-      Demo_StartDucking: 10
-      Demo_StopDucking: 11
-      Demo_VisibleOff: 12
+      Demo_GroupAllowEmit: 4
+      Demo_GroupDisallowEmit: 5
+      Demo_KillAllDemoSound: 6
+      Demo_KillDucking: 7
+      Demo_NotifyTalk: 8
+      Demo_ResetBoneCtrl: 9
+      Demo_SetEndProc: 10
+      Demo_SetStartProc: 11
+      Demo_StartDucking: 12
+      Demo_StopAllDemoSound: 13
+      Demo_StopDucking: 14
+      Demo_VisibleOff: 15
   lists:
     AI: !list
       objects: {}
@@ -43,45 +46,60 @@ param_root: !list
           lists: {}
         Action_4: !list
           objects:
-            Def: !obj {Name: Demo_KillAllDemoSound, ClassName: !str32 KillAllDemoSoundAction,
+            Def: !obj {Name: Demo_GroupAllowEmit, ClassName: !str32 GroupAllowEmitAction,
               GroupName: ''}
           lists: {}
         Action_5: !list
           objects:
-            Def: !obj {Name: Demo_KillDucking, ClassName: !str32 SceneSoundKillDuckingAction,
+            Def: !obj {Name: Demo_GroupDisallowEmit, ClassName: !str32 GroupDisallowEmitAction,
               GroupName: ''}
           lists: {}
         Action_6: !list
           objects:
-            Def: !obj {Name: Demo_NotifyTalk, ClassName: !str32 SceneSoundNotifyTalkAction,
+            Def: !obj {Name: Demo_KillAllDemoSound, ClassName: !str32 KillAllDemoSoundAction,
               GroupName: ''}
           lists: {}
         Action_7: !list
           objects:
-            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+            Def: !obj {Name: Demo_KillDucking, ClassName: !str32 SceneSoundKillDuckingAction,
               GroupName: ''}
           lists: {}
         Action_8: !list
           objects:
-            Def: !obj {Name: Demo_SetEndProc, ClassName: !str32 SceneSoundSetEndProcAction,
+            Def: !obj {Name: Demo_NotifyTalk, ClassName: !str32 SceneSoundNotifyTalkAction,
               GroupName: ''}
           lists: {}
         Action_9: !list
           objects:
-            Def: !obj {Name: Demo_SetStartProc, ClassName: !str32 SceneSoundSetStartProcAction,
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
               GroupName: ''}
           lists: {}
         Action_10: !list
           objects:
-            Def: !obj {Name: Demo_StartDucking, ClassName: !str32 SceneSoundStartDuckingAction,
+            Def: !obj {Name: Demo_SetEndProc, ClassName: !str32 SceneSoundSetEndProcAction,
               GroupName: ''}
           lists: {}
         Action_11: !list
           objects:
-            Def: !obj {Name: Demo_StopDucking, ClassName: !str32 SceneSoundStopDuckingAction,
+            Def: !obj {Name: Demo_SetStartProc, ClassName: !str32 SceneSoundSetStartProcAction,
               GroupName: ''}
           lists: {}
         Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_StartDucking, ClassName: !str32 SceneSoundStartDuckingAction,
+              GroupName: ''}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_StopAllDemoSound, ClassName: !str32 StopAllDemoSoundAction,
+              GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_StopDucking, ClassName: !str32 SceneSoundStopDuckingAction,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
           objects:
             Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
           lists: {}

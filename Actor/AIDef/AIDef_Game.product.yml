@@ -75,6 +75,83 @@ AIs:
   AddViewTargetPos:
     DynamicParamChild: true
     childs: [行動]
+  AirOctaBoardBurn:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: IsFinishedByFailAction, Type: Bool}
+    - {Name: IsEndChangeable, Type: Bool}
+    - {Name: IsNoChangeable, Type: Bool}
+    childs: [先行動, 後行動]
+  AirOctaBurnReaction:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: DisconnectTime, Type: Float}
+    - {Name: DisconnectRandTime, Type: Float}
+    - {Name: SingleBurnTime, Type: Float}
+    - {Name: ChangeRandTime, Type: Float}
+    childs: [先行動, 後行動]
+  AirOctaFlyUp:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: TargetDistance, Type: Float}
+    StaticInstParams:
+    - {Name: FlyUpDuration, Type: Float}
+    childs: [終了, 開始]
+  AirOctaReaction:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: JustGuardTimesMin, Type: Int}
+    - {Name: JustGuardTimesMax, Type: Int}
+    - {Name: SmallDamageCancelTimes, Type: Int}
+    - {Name: InComboSmallDamageNoCancel, Type: Bool}
+    childs: [ふっとび, ガード, ガードブレイク, ショック, ジャストガード, 凍結, 大落下, 小ダメージ, 崩れ落ち, 弾かれ, 死亡, 炎上,
+      痺れ, 突風, 落下, 超ショック]
+  AirOctaRoot:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    childs: [子０, 子１]
+  AirOctaState:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: RopeGravityFactor, Type: Float}
+    - {Name: BalloonMassRatio, Type: Float}
+    - {Name: WindForceScale, Type: Float}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [オクタの数が減った, プレイヤが板に乗った, リアクション, 上昇, 呼ばれ, 奈落, 待機, 所持, 板切断, 板燃焼, 死亡生成, 水中,
+      滝死亡, 発見, 落下, 近接湧出, 逃げる, 通常, 騎乗]
+  AirOctaWait:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: IsSameChange, Type: Bool}
+    childs: [水上, 通常]
   AlertCreationNestOnTree:
     MapUnitInstParams:
     - {Name: InitMotionStatus, Type: Int, Value: 0}
@@ -365,6 +442,11 @@ AIs:
     - {Name: Dist, Type: Float}
     - {Name: TeraDist, Type: Float}
     childs: [湧出, 湧出準備]
+  ArmorSearchKorokRoot:
+    StaticInstParams:
+    - {Name: SearchKorokDis, Type: Float}
+    - {Name: SearchRefreshFrame, Type: Float}
+    childs: [未発見, 発見]
   AroundEnemyCheckSelect:
     DynamicParamChild: true
     StaticInstParams:
@@ -553,6 +635,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ChangeModeLifeRatio, Type: Float}
     - {Name: RockBallDamage, Type: Int}
@@ -594,6 +677,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: IronBallNum, Type: Int}
     - {Name: BattleAvoidNum, Type: Int}
@@ -623,6 +707,42 @@ AIs:
     - {Name: TiredTime, Type: Int}
     - {Name: IntervalIntensity, Type: Float}
     childs: [待機, 戦闘攻撃, 諦め, 転移]
+  AssassinMiddleAzitoDlcRoot:
+    AITreeVariables:
+    - {Name: PlayerSoundSealRefCount, Type: Int, Value: 0}
+    - {Name: SealNoPlayerAwnRequestCount, Type: Int, Value: 0}
+    MapUnitInstParams:
+    - {Name: TerritoryArea, Type: Float, Value: 0.0}
+    StaticInstParams:
+    - {Name: EntryPoint, Type: String}
+    - {Name: DemoName, Type: String}
+    - {Name: LikeItem, Type: String}
+    - {Name: TerrorIgnoreDist, Type: Float}
+    - {Name: ExplosivesSearchDist, Type: Float}
+    - {Name: ExplosivesSearchSpeed, Type: Float}
+    - {Name: ExplosivesSearchAng, Type: Float}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: TerritoryArea, Type: Float}
+    - {Name: NpcTerritoryArea, Type: Float}
+    - {Name: NoPlayerTerritoryArea, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: EnlargeAwnRatio, Type: Float}
+    - {Name: NoticeTerrorLevel, Type: Float}
+    - {Name: SpeadDist2, Type: Float}
+    - {Name: HomePosRadius, Type: Float}
+    - {Name: SoundLostTimer, Type: Int}
+    - {Name: NoActionReactTimeMin, Type: Int}
+    - {Name: NoActionReactTimeMax, Type: Int}
+    - {Name: IsMindDoubtTarget, Type: Bool}
+    - {Name: FortressTag, Type: String}
+    - {Name: SubsTerritoryArea, Type: Float}
+    - {Name: LostExtinguishFireDist, Type: Float}
+    - {Name: ShortRangeTerritoryArea, Type: Float}
+    - {Name: CloseRangeTerritoryArea, Type: Float}
+    - {Name: PressBreakObject, Type: Float}
+    - {Name: TerritoryHeight, Type: Float}
+    childs: [プレイヤー発見, 不審物排除後, 不審物発見, 不審者発見, 不調仲間発見, 危険回避, 好物発見, 待機, 怒り, 攻撃反応, 気配気づき,
+      浮遊物発見, 脅威感知, 行動中仲間発見, 見失い, 諦め, 音気づき]
   AssassinMiddleAzitoNoMemberDemo:
     StaticInstParams:
     - {Name: DelayTimeMin, Type: Int}
@@ -664,6 +784,43 @@ AIs:
     - {Name: TerritoryHeight, Type: Float}
     childs: [プレイヤー発見, 不審物排除後, 不審物発見, 不審者発見, 不調仲間発見, 危険回避, 好物発見, 待機, 怒り, 攻撃反応, 気配気づき,
       浮遊物発見, 脅威感知, 行動中仲間発見, 見失い, 諦め, 音気づき]
+  AssassinMiddleAzitoRootAccept:
+    AITreeVariables:
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: EntryPoint, Type: String}
+    - {Name: DemoName, Type: String}
+    - {Name: SheathOffset, Type: Vec3}
+    - {Name: PodModelUnitIdx, Type: Int}
+    - {Name: PodNodeName, Type: String}
+    - {Name: MagicUsePartsName, Type: String}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [リアクション, 呼ばれ, 奈落, 所持, 死亡生成, 水中, 落下, 近接湧出, 通常, 騎乗]
+  AssassinMiddleDlcGrabAdapter:
+    DynamicInstParams:
+    - {Name: TargetActor, Type: Actor}
+    childs: [行動]
   AssassinMiddleMagicAfter:
     AITreeVariables:
     - {Name: IsInterseptAttack, Type: Bool, Value: false}
@@ -689,6 +846,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: SheathOffset, Type: Vec3}
     - {Name: PodModelUnitIdx, Type: Int}
@@ -734,6 +892,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: RememberKey, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -750,6 +909,17 @@ AIs:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
     StaticInstParams:
+    - {Name: EndHeight, Type: Float}
+    - {Name: EndNear, Type: Float}
+    - {Name: ActionTime, Type: Int}
+    - {Name: NearTime, Type: Int}
+    childs: [接近後, 行動]
+  AttackGraveChaseWithSensor:
+    DynamicInstParams:
+    - {Name: TargetActor, Type: Actor}
+    StaticInstParams:
+    - {Name: RigidBodyGroupName, Type: String}
+    - {Name: RigidBodyName, Type: String}
     - {Name: EndHeight, Type: Float}
     - {Name: EndNear, Type: Float}
     - {Name: ActionTime, Type: Int}
@@ -916,6 +1086,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ASName, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -1026,6 +1197,18 @@ AIs:
     - {Name: TurnCheckDist, Type: Float}
     - {Name: TurnCheckHeight, Type: Float}
     childs: [回転, 待機, 暇つぶし, 移動, 索敵]
+  BossBattleRoomRoot:
+    StaticInstParams:
+    - {Name: TitleAngle, Type: Float}
+    - {Name: RollAngle, Type: Float}
+    - {Name: FramesRotate, Type: Float}
+    - {Name: FramesReset, Type: Float}
+    - {Name: FramesRoll, Type: Float}
+    - {Name: FramesDelayRoll, Type: Float}
+    - {Name: FramesRollKeepFirst, Type: Float}
+    - {Name: FramesRollKeepSecond, Type: Int}
+    - {Name: NumTimesRoll, Type: Int}
+    childs: ''
   BowEquiped:
     childs: [射撃, 装備]
   BowShoot:
@@ -1262,6 +1445,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: IsElementNoHit, Type: Bool}
     - {Name: IsElectricWater, Type: Bool}
@@ -1357,6 +1541,16 @@ AIs:
     - {Name: IsInvalidBreakJudge, Type: Bool}
     - {Name: DebugScale, Type: Float}
     childs: [オフ, オン]
+  ChmVolRateCheckBlankOk:
+    MapUnitInstParams:
+    - {Name: FreezeTarget, Type: Int, Value: 0}
+    - {Name: IceBreakScale, Type: Float, Value: 0.800000011920929}
+    StaticInstParams:
+    - {Name: VolTh, Type: Float}
+    - {Name: DebugDraw, Type: Bool}
+    - {Name: IsInvalidBreakJudge, Type: Bool}
+    - {Name: DebugScale, Type: Float}
+    childs: [オフ, オン]
   ChuchuDieSelect:
     childs: [ケミカル放射, 凍死, 凍特効死, 凍結砕き, 感電死, 死亡, 消滅, 溺死, 濡死, 焼死, 焼特効死, 自然死, 落下死, 被暗殺,
       被特効]
@@ -1402,6 +1596,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: SubAS, Type: String}
     - {Name: SubASSlot, Type: Int}
@@ -1519,6 +1714,10 @@ AIs:
     StaticInstParams:
     - {Name: IsCheckEachFrame, Type: Bool}
     childs: [地上, 空中]
+  CollaborationShootingStarRoot:
+    AITreeVariables:
+    - {Name: CollaboShootingStarId, Type: String, Value: default}
+    childs: [光の柱を出す, 飛んでいく]
   CommonPickedItem:
     AITreeVariables:
     - {Name: GetNumLeft, Type: Int, Value: 0}
@@ -1592,6 +1791,23 @@ AIs:
     childs: [斬り付け, 駆け寄り]
   DeadOrOtherState:
     childs: [その他, 死亡]
+  DeadlyBlowWeaponRoot:
+    MapUnitInstParams:
+    - {Name: EnemyOwnItem, Type: Bool, Value: false}
+    - {Name: Life, Type: Int, Value: -1}
+    - {Name: IsFixedPlace, Type: Bool, Value: false}
+    - {Name: IsCreateSharpWeapon, Type: Bool, Value: false}
+    - {Name: AddSpecialFlag, Type: Int, Value: 0}
+    - {Name: IsEmitLandNoise, Type: Bool, Value: false}
+    - {Name: IsWeaponCreateByRawLife, Type: Bool, Value: false}
+    - {Name: AddParam, Type: Int, Value: 0}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    StaticInstParams:
+    - {Name: BlinkFrame, Type: Float}
+    - {Name: FallOutSpeed, Type: Float}
+    - {Name: LandNoiseLevel, Type: Float}
+    childs: [Fixed配置, 刺さる, 吊るす, 投げ, 抜ける, 装備, 非装備]
   DefWanderAI:
     StaticInstParams:
     - {Name: ChangeWaitRate, Type: Float}
@@ -1612,6 +1828,41 @@ AIs:
     - {Name: InitPosByRailRatio, Type: Float}
     childs: [一時停止, 停止, 再稼働, 移動]
   DemoRootAI: {childs: ''}
+  DgnObj_DLC_CWRotDirSwitch:
+    childs: ['Off', 'On']
+  DgnObj_DLC_CW_WithEntityBody00:
+    AITreeVariables:
+    - {Name: RotationOffset, Type: Float, Value: 0.0}
+    MapUnitInstParams:
+    - {Name: RegistFromBeginning, Type: Bool, Value: false}
+    - {Name: GearRatio, Type: Float, Value: 1.0}
+    - {Name: JoinSystemGroup, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: CorrectConstraint, Type: Bool}
+    childs: [回転, 待機]
+  DgnObj_DLC_CogWheel2:
+    AITreeVariables:
+    - {Name: RotationOffset, Type: Float, Value: 0.0}
+    MapUnitInstParams:
+    - {Name: RegistFromBeginning, Type: Bool, Value: false}
+    - {Name: GearRatio, Type: Float, Value: 1.0}
+    - {Name: JoinSystemGroup, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: CorrectConstraint, Type: Bool}
+    childs: [回転, 待機]
+  DgnObj_DLC_CogWheel_Physics_Ctr:
+    StaticInstParams:
+    - {Name: StateRot, Type: Bool}
+    childs: [atk有効, 無効]
+  DgnObj_DLC_DungeonRotateTag:
+    AITreeVariables:
+    - {Name: RotationOffset, Type: Float, Value: 0.0}
+    MapUnitInstParams:
+    - {Name: RegistFromBeginning, Type: Bool, Value: false}
+    - {Name: GearRatio, Type: Float, Value: 1.0}
+    childs: [回転, 待機]
+  DgnObj_DLC_Faucet: {childs: ''}
+  DgnObj_DLC_SliderBlock: {childs: ''}
   DieSelect:
     childs: [凍結砕き, 死亡, 消滅, 溺死, 濡死, 自然死, 落下死, 被暗殺, 被特効]
   DieSelectBombPlus:
@@ -1951,6 +2202,11 @@ AIs:
     - {Name: EscapeForceEndTime, Type: Float}
     - {Name: AfterEscapeForceEndState, Type: Int}
     childs: [スクリプト用, リアクション, 上機嫌, 所持, 水中行動, 滝接触, 落下, 通常行動, 騎乗中]
+  DungeonCannonBallAutoDelete:
+    StaticInstParams:
+    - {Name: TriggerVelocity, Type: Float}
+    - {Name: TriggerVelocityKeepTime, Type: Int}
+    childs: [消滅, 通常]
   DungeonEntranceRoot:
     StaticInstParams:
     - {Name: IsCheckClear, Type: Bool}
@@ -1960,6 +2216,12 @@ AIs:
     - {Name: InitDgnMoveDis, Type: Float, Value: 0.0}
     - {Name: MoveDis, Type: Float, Value: 5.0}
     childs: [待機, 移動]
+  DungeonMoveTagCont:
+    MapUnitInstParams:
+    - {Name: MoveDis, Type: Float, Value: 5.0}
+    - {Name: ReturnDisFromCurrentPos, Type: Float, Value: 0.0}
+    - {Name: ReturnSpeedFromCurrentPos, Type: Float, Value: 0.0}
+    childs: [待機, 戻る, 移動]
   DungeonRemainsFire:
     StaticInstParams:
     - {Name: RailName, Type: String}
@@ -2060,6 +2322,17 @@ AIs:
     - {Name: GlobalNoAtkTime, Type: Int}
     - {Name: IsUpdateNoticeState, Type: Bool}
     childs: [戦闘攻撃, 戦闘準備]
+  EarthReleaseAttack:
+    DynamicParamChild: true
+    StaticInstParams:
+    - {Name: EarthReleaseActorName, Type: String}
+    - {Name: EarthReleasePartsName, Type: String}
+    - {Name: AttackPower, Type: Int}
+    - {Name: EnlargeTime, Type: Float}
+    - {Name: Range, Type: Float}
+    - {Name: Scale, Type: Float}
+    - {Name: UseAfterAction, Type: Bool}
+    childs: [先行動, 後行動]
   ElectricBall:
     MapUnitInstParams:
     - {Name: IsEnemyLiftable, Type: Bool, Value: true}
@@ -2656,6 +2929,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: InWaterDepth, Type: Float}
     - {Name: OutOfWaterOffset, Type: Float}
@@ -3032,6 +3306,11 @@ AIs:
     StaticInstParams:
     - {Name: CancelFixedScale, Type: Float}
     childs: [所持, 投擲生成, 通常]
+  FldObjDlcHeroMapRelief:
+    MapUnitInstParams:
+    - {Name: OpenFlag, Type: String, Value: ''}
+    - {Name: ClearFlag, Type: String, Value: ''}
+    childs: [オープン, クリア, クローズ]
   FldObjIvyBurnRoot: {childs: ''}
   FlyInsectRoam:
     DynamicInstParams:
@@ -3299,6 +3578,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: WeakPointNode0, Type: String}
     - {Name: WeakPointNode1, Type: String}
@@ -3398,6 +3678,12 @@ AIs:
     - {Name: DropActorName, Type: String, Value: ''}
     - {Name: IsOpenTreasureBox, Type: Bool, Value: false}
     childs: [オープン待機, クローズ待機]
+  GameDataFlagSelector:
+    MapUnitInstParams:
+    - {Name: ClearFlag, Type: String, Value: ''}
+    StaticInstParams:
+    - {Name: CheckOnEnterOnly, Type: Bool}
+    childs: ['False', 'True']
   GanonApproachOnFloorRoot:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -3697,6 +3983,24 @@ AIs:
     childs: [ゲット, 待機]
   GiantArmorAsWeakPoint:
     childs: [装備, 非装備]
+  GiantEarthReleaseAttack:
+    AITreeVariables:
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    - {Name: KeepDistFromGround, Type: Float, Value: -1.0}
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    StaticInstParams:
+    - {Name: StartHeight, Type: Float}
+    - {Name: StartDistFromTarget, Type: Float}
+    - {Name: EarthReleaseActorName, Type: String}
+    - {Name: EarthReleasePartsName, Type: String}
+    - {Name: AttackPower, Type: Int}
+    - {Name: EnlargeTime, Type: Float}
+    - {Name: Range, Type: Float}
+    - {Name: Scale, Type: Float}
+    - {Name: UseAfterAction, Type: Bool}
+    childs: [先行動, 後行動, 準備]
   GiantEscapeFromDamageWater:
     AITreeVariables:
     - {Name: GiantNavSearchControl, Type: AITreeVariablePointer}
@@ -3802,6 +4106,20 @@ AIs:
     - {Name: PathTooLongDist, Type: Float}
     - {Name: NoSearchFromTiredDist, Type: Float}
     childs: [ナビメッシュ無し, 不意討ち, 威嚇, 威嚇帰還, 戦闘, 気づき, 速攻]
+  GolemFireREnemyBattle:
+    StaticInstParams:
+    - {Name: PlayerRecoverFromFallFrames, Type: Float}
+    - {Name: AttackAngle, Type: Float}
+    - {Name: RetFrmGrdAtkTimer, Type: Int}
+    - {Name: RetFrmGrdAtkPrcTimer, Type: Int}
+    - {Name: RetFrmDmgAtkTimer, Type: Int}
+    - {Name: GlobalNoAtkTime, Type: Int}
+    - {Name: GlobalNoAtkTimeRnd, Type: Int}
+    - {Name: AttackIntervalIntensity, Type: Float}
+    - {Name: DisplayCheckRadius, Type: Float}
+    - {Name: IsUpdateNoticeState, Type: Bool}
+    - {Name: IsCheckLineReachable, Type: Bool}
+    childs: [戦闘攻撃, 戦闘準備]
   GolemNormal:
     AITreeVariables:
     - {Name: PlayerSoundSealRefCount, Type: Int, Value: 0}
@@ -3853,6 +4171,14 @@ AIs:
     - {Name: ArmRModelMatrialName, Type: String}
     - {Name: ArmLModelMatrialName, Type: String}
     childs: [両腕有, 右腕のみ, 左腕のみ, 腕なし]
+  GolemRWeakPointRoot:
+    StaticInstParams:
+    - {Name: OwnerDamage, Type: Int}
+    - {Name: IsBreakable, Type: Bool}
+    - {Name: IsSyncDamage, Type: Bool}
+    - {Name: IsShowCriticalEffect, Type: Bool}
+    - {Name: IsNoReaction, Type: Bool}
+    childs: [リアクション, 通常]
   GolemReaction:
     AITreeVariables:
     - {Name: GolemClimbedTime, Type: Float, Value: 0.0}
@@ -3898,6 +4224,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ClimbFinishTime, Type: Int}
     - {Name: StandContactHeight, Type: Float}
@@ -4175,6 +4502,35 @@ AIs:
     - {Name: AttackInterval, Type: Int}
     - {Name: TargetDistOffset, Type: Float}
     childs: [移動]
+  GuardianMiniBeamAttackNoWait:
+    StaticInstParams:
+    - {Name: HeadNodeName, Type: String}
+    - {Name: AttackInterval, Type: Int}
+    - {Name: EndShaderASFrame, Type: Int}
+    - {Name: LoopShaderASName, Type: String}
+    - {Name: EndShaderASName, Type: String}
+    - {Name: PreLaunchEffectName, Type: String}
+    - {Name: IsChangeable, Type: Bool}
+    - {Name: IsFinalBattle, Type: Bool}
+    - {Name: InDirAngle, Type: Float}
+    - {Name: FluctuationRange, Type: Float}
+    - {Name: FluctuationSpan, Type: Float}
+    - {Name: TargetOffsetY, Type: Float}
+    - {Name: NodeName, Type: String}
+    - {Name: IsValidGuide, Type: Bool}
+    - {Name: IsIgnoreSmallHit, Type: Bool}
+    - {Name: AimEffectName, Type: String}
+    - {Name: BreathName, Type: String}
+    - {Name: AttackAngle, Type: Float}
+    - {Name: AttackRatio, Type: Float}
+    - {Name: BreathSize, Type: Float}
+    - {Name: EnlargeTime, Type: Int}
+    - {Name: IsEndAfterAttack, Type: Bool}
+    - {Name: IsDeleteBreath, Type: Bool}
+    - {Name: AttackIntervalIntensity, Type: Float}
+    - {Name: GlobalNoAtkTime, Type: Int}
+    - {Name: IsUpdateNoticeState, Type: Bool}
+    childs: [ビーム準備, 戦闘攻撃, 戦闘準備]
   GuardianMiniBeamToExplosives:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
@@ -4421,6 +4777,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: NeckRotRatio, Type: Float}
     - {Name: JustGuardNumForBreak, Type: Int}
@@ -5053,6 +5410,11 @@ AIs:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
     childs: [攻撃, 攻撃準備]
+  JustAvoidFinishWait:
+    DynamicParamChild: true
+    StaticInstParams:
+    - {Name: IsUseWaitAfterMain, Type: Bool}
+    childs: [メイン, 待機]
   KakarikoKokkoTimeline:
     AITreeVariables:
     - {Name: DomesticAnimalRailName, Type: String, Value: ''}
@@ -6049,6 +6411,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: RoarFlameActorName, Type: String}
     - {Name: RoarFlamePartsKey, Type: String}
@@ -6108,14 +6471,54 @@ AIs:
     - {Name: FarDist, Type: Float}
     - {Name: WeaponIdx, Type: Int}
     childs: [近距離, 遠距離]
+  MagneShaftRoot:
+    AITreeVariables:
+    - {Name: IsTargetFixedAcceptor, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: JoinSystemGroup, Type: Bool, Value: true}
+    - {Name: RegistFromBeginning, Type: Bool, Value: false}
+    - {Name: CollideRadius, Type: Float, Value: 1.0}
+    - {Name: IgnoreObstacle, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: DefaultConnectionDistance, Type: Float}
+    - {Name: CollideRadiusFactor, Type: Float}
+    childs: [はめ込まれた, 通常]
+  MagneSliderBlockRootThunder:
+    AITreeVariables:
+    - {Name: IsTargetFixedAcceptor, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: JoinSystemGroup, Type: Bool, Value: true}
+    - {Name: RegistFromBeginning, Type: Bool, Value: false}
+    - {Name: CollideRadius, Type: Float, Value: 1.0}
+    - {Name: IgnoreObstacle, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: DefaultConnectionDistance, Type: Float}
+    - {Name: CollideRadiusFactor, Type: Float}
+    childs: [はめ込まれた, 通常]
+  MagneStickRoot:
+    AITreeVariables:
+    - {Name: IsTargetFixedAcceptor, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: JoinSystemGroup, Type: Bool, Value: true}
+    - {Name: RegistFromBeginning, Type: Bool, Value: false}
+    - {Name: CollideRadius, Type: Float, Value: 1.0}
+    - {Name: IgnoreObstacle, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: DefaultConnectionDistance, Type: Float}
+    - {Name: CollideRadiusFactor, Type: Float}
+    childs: [はめ込まれた, 通常]
   Magnetglove:
     childs: [マグネフォース発生, 所持, 消滅]
   MainFieldDungeonSelect:
-    childs: [水の遺物, 火の遺物, 電気の遺物, 風の遺物]
+    childs: [その他, 水の遺物, 火の遺物, 電気の遺物, 風の遺物]
   MasquaradeSubTargetSelect:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
     childs: [マスクだった, マスクではなかった]
+  MasterSwordBase100EnemyRoot:
+    StaticInstParams:
+    - {Name: KillAttentionWaitFrame, Type: Float}
+    childs: [アテンションなし待機, 待機, 起動]
   MasterSwordRoot:
     AITreeVariables:
     - {Name: MagicCreateUnit, Type: AITreeVariablePointer}
@@ -6380,6 +6783,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: LiftDeadTime, Type: Int}
     - {Name: UpperArmL_PartsKey, Type: String}
@@ -6457,6 +6861,26 @@ AIs:
     - {Name: PursuingAttackStartAng, Type: Float}
     - {Name: AttackIntervalIntensity, Type: Float}
     childs: [待機, 攻撃, 追撃ち攻撃]
+  MotorcycleRoot:
+    StaticInstParams:
+    - {Name: InWaterRateForDisappear, Type: Float}
+    - {Name: DistanceToPlayerForDisappear, Type: Float}
+    - {Name: CloseSaddleFramesSincePut, Type: Float}
+    - {Name: FinishCookFramesSincePut, Type: Float}
+    - {Name: AdditionalFramesForFairy, Type: Float}
+    - {Name: NoiseEnergyEmpty, Type: Float}
+    - {Name: NoiseNotRidden, Type: Float}
+    - {Name: NoiseThrottleClose, Type: Float}
+    - {Name: NoiseThrottleOpen, Type: Float}
+    - {Name: ForestFogRatioForDisappear, Type: Float}
+    childs: [NPC騎乗, プレイヤー騎乗, 出現, 敵騎乗, 消失, 転倒, 騎乗無し]
+  MoveAndFreeFallGondola:
+    MapUnitInstParams:
+    - {Name: RailMoveSpeed, Type: Float, Value: 0.10000000149011612}
+    - {Name: GondolaRailOffsetTime, Type: Float, Value: 0.0}
+    StaticInstParams:
+    - {Name: IsIgnoreNoWaitStopPoint, Type: Bool}
+    childs: [停止, 停止点移動, 移動]
   MoveAroundTarget:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -7019,6 +7443,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ItemName, Type: String}
     - {Name: ConnectRigidBodyName, Type: String}
@@ -7400,6 +7825,641 @@ AIs:
     StaticInstParams:
     - {Name: StunTime, Type: Int}
     childs: [復帰, 気絶中]
+  PriestBossActorCloneRoot:
+    AITreeVariables:
+    - {Name: EquipWeaponBufIndex, Type: Int, Value: 0}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: DisappearXLinkEventKey, Type: String}
+    childs: [シンクロモード, バナナモード, 攻撃変更の間, 通常モード]
+  PriestBossActorEnemyRoot:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: IsReactionOnDead, Type: Bool}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [フェイズ終了, フェイズ開始, リアクション, 呼ばれ, 奈落, 所持, 死亡生成, 水中, 落下, 近接湧出, 通常, 騎乗]
+  PriestBossActorGiantFouthRoot:
+    AITreeVariables:
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - Name: FacePos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: IsActive, Type: Bool, Value: true}
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    - {Name: KeepDistFromGround, Type: Float, Value: -1.0}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: StompAction, Type: Bool}
+    - {Name: StompDistance, Type: Float}
+    - {Name: StompAlwaysChange, Type: Bool}
+    - {Name: StompInAreaTimer, Type: Float}
+    - {Name: IsFreeMoving, Type: Bool}
+    - {Name: FreqIronBallAttack, Type: Float}
+    - {Name: FreqBigEarthReleaseAttack, Type: Float}
+    - {Name: FreqEyeBeamAttack, Type: Float}
+    - {Name: FreqStageRotation, Type: Float}
+    - {Name: FloatDistFromPlayer, Type: Float}
+    childs: [例外待機, 分身投げ, 地形回転, 大土遁, 待機, 歩き, 目ビーム, 踏みつけ, 転移, 鉄球投げ]
+  PriestBossActorGiantRoot:
+    AITreeVariables:
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - Name: FacePos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: IsActive, Type: Bool, Value: true}
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    - {Name: KeepDistFromGround, Type: Float, Value: -1.0}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: IsFreeMoving, Type: Bool}
+    - {Name: FreqIronBallAttack, Type: Float}
+    - {Name: FreqBigEarthReleaseAttack, Type: Float}
+    - {Name: FreqEyeBeamAttack, Type: Float}
+    - {Name: FreqStageRotation, Type: Float}
+    - {Name: FloatDistFromPlayer, Type: Float}
+    childs: [例外待機, 分身投げ, 地形回転, 大土遁, 待機, 歩き, 目ビーム, 踏みつけ, 転移, 鉄球投げ]
+  PriestBossActorNormalMode:
+    AITreeVariables:
+    - {Name: EquipWeaponBufIndex, Type: Int, Value: 0}
+    - {Name: ReturnFromBananaMode, Type: Bool, Value: false}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: FromSyncMode, Type: Bool}
+    StaticInstParams:
+    - {Name: IsManagedBtlMgr, Type: Bool}
+    - {Name: ApproachStartDistance, Type: Float}
+    - {Name: ApproachWarpRate, Type: Int}
+    - {Name: LeaveStartDistance, Type: Float}
+    - {Name: LeaveStartTime, Type: Float}
+    - {Name: WaitMinTime, Type: Float}
+    - {Name: WaitMaxTime, Type: Float}
+    - {Name: SecondHalfLifePercent, Type: Float}
+    - {Name: FramesRestrictEarthRelease, Type: Float}
+    - {Name: WarpPosDistFromPlayer, Type: Float}
+    - {Name: StageMarginRateForEarthRelease, Type: Float}
+    childs: [分身, 分身投げ着地, 土遁, 弓矢攻撃, 待機, 準備, 移動, 突進攻撃, 転移, 離れる, 頭上突き, 高速移動攻撃]
+  PriestBossActorNormalRoot:
+    AITreeVariables:
+    - {Name: EquipWeaponBufIndex, Type: Int, Value: 0}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    childs: [シンクロモード, バナナモード, 攻撃変更の間, 通常モード]
+  PriestBossActorPhaseSecondStart:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - {Name: EquipWeaponBufIndex, Type: Int, Value: 0}
+    childs: [共通]
+  PriestBossAfterImageRoot:
+    childs: [通常]
+  PriestBossAttackGrave:
+    childs: [中行動, 先行動, 後行動]
+  PriestBossBananaMode:
+    AITreeVariables:
+    - {Name: ReturnFromBananaMode, Type: Bool, Value: false}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: HealAmount, Type: Int}
+    - {Name: TimeUpFrames, Type: Float}
+    childs: [バナナ夢中, 解除]
+  PriestBossBeamExplode:
+    AITreeVariables:
+    - {Name: IsReflectThrownBullet, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: MaxDistanceChangeableBorder, Type: Int}
+    - {Name: MaxDistanceChangeableRevise, Type: Int}
+    - {Name: MaxDistance, Type: Float}
+    - {Name: IsDelete, Type: Bool}
+    childs: [後処理, 爆発, 着弾前]
+  PriestBossBlowoffDamageSelect:
+    childs: [リアクション準備, 接地ふらつき, 接地ダウン, 浮遊ふらつき, 浮遊ダウン]
+  PriestBossBlowoffReadyReaction:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    childs: ''
+  PriestBossBowEquiped:
+    childs: [射撃, 装備]
+  PriestBossCircleFormationRush:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: HomingAttackTime, Type: Float}
+    childs: [分身消す, 待機, 攻撃, 攻撃前, 攻撃後, 陣形作成_消える, 陣形作成_現れる, 陣形作成後待機]
+  PriestBossCircleFormationShoot:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: HomingAttackTime, Type: Float}
+    childs: [分身消す, 待機, 攻撃, 攻撃前, 攻撃後, 陣形作成_消える, 陣形作成_現れる, 陣形作成後待機]
+  PriestBossCloneBananaMode:
+    AITreeVariables:
+    - {Name: ReturnFromBananaMode, Type: Bool, Value: false}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: HealAmount, Type: Int}
+    - {Name: TimeUpFrames, Type: Float}
+    childs: [バナナ夢中, 解除]
+  PriestBossCloneBulletRoot:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    childs: [受信, 待機]
+  PriestBossDamageTypeSelect:
+    childs: [該当, 非該当]
+  PriestBossEyeBeamFourth:
+    AITreeVariables:
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - Name: FacePos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: AtDirType, Type: Int}
+    - {Name: AtAttr, Type: Int}
+    - {Name: AtType, Type: Int}
+    - {Name: AtShieldBreakPower, Type: Int}
+    - {Name: AtImpact, Type: Int}
+    - {Name: AtPowerReduce, Type: Int}
+    - {Name: AtPower, Type: Int}
+    - {Name: AtDamage, Type: Int}
+    - {Name: SearchEndAngle, Type: Int}
+    - {Name: IsCreateGuardEffect, Type: Bool}
+    - {Name: AtMinDamage, Type: Int}
+    - {Name: AttackPower, Type: Int}
+    - {Name: AttackPowerForPlayer, Type: Int}
+    - {Name: ReflectOffset, Type: Vec3}
+    - {Name: IsChangeable, Type: Bool}
+    - {Name: ShotOffset, Type: Vec3}
+    - {Name: ShotReviseAngleXU, Type: Int}
+    - {Name: ShotReviseAngleXD, Type: Int}
+    - {Name: ShotReviseAngleY, Type: Int}
+    childs: [チャージ, 待機, 照準, 発射, 索敵, 速攻照準]
+  PriestBossEyeBeamStandAim:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    - {Name: AimTargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: BorderDist, Type: Float}
+    - {Name: BorderHeight, Type: Float}
+    childs: [近距離, 遠距離]
+  PriestBossEyeBeamThird:
+    AITreeVariables:
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - Name: FacePos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: IsCreateGuardEffect, Type: Bool}
+    - {Name: AtMinDamage, Type: Int}
+    - {Name: AttackPower, Type: Int}
+    - {Name: AttackPowerForPlayer, Type: Int}
+    - {Name: ReflectOffset, Type: Vec3}
+    - {Name: IsChangeable, Type: Bool}
+    - {Name: ShotOffset, Type: Vec3}
+    - {Name: ShotReviseAngleXU, Type: Int}
+    - {Name: ShotReviseAngleXD, Type: Int}
+    - {Name: ShotReviseAngleY, Type: Int}
+    childs: [チャージ, 待機, 照準, 発射]
+  PriestBossFastWarpAttack:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    - {Name: OldTargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: KeepDistance, Type: Float}
+    - {Name: MoveWidth, Type: Float}
+    - {Name: IsCloseMove, Type: Bool}
+    - {Name: BaseOffsetY, Type: Float}
+    - {Name: PredictMoveFrame, Type: Float}
+    - {Name: IsPlayRunStartAS, Type: Bool}
+    childs: [スロー時移動, 移動, 移動開始]
+  PriestBossGiantDeadSelector:
+    AITreeVariables:
+    - {Name: PriestBossDownSideASPlaying, Type: Bool, Value: false}
+    childs: [ダウン状態, 立ち状態]
+  PriestBossGiantDownSeq:
+    AITreeVariables:
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: IsActive, Type: Bool, Value: true}
+    - {Name: KeepDistFromGround, Type: Float, Value: -1.0}
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: RecoverIfAlreadyDown, Type: Bool}
+    - {Name: IsUseRecover, Type: Bool}
+    - {Name: HitGroundASName, Type: String}
+    childs: [ダウン, 復帰, 空中, 落下]
+  PriestBossGiantEnemyRoot:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - {Name: PriestBossDownSideASPlaying, Type: Bool, Value: false}
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: InvalidateIronBallDamageFrame, Type: Int}
+    - {Name: IsReactionOnDead, Type: Bool}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [フェイズ終了, フェイズ開始, リアクション, 呼ばれ, 奈落, 所持, 死亡生成, 水中, 落下, 近接湧出, 通常, 騎乗]
+  PriestBossGiantReaction:
+    AITreeVariables:
+    - {Name: PriestBossUrbosasFuryEShock, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: JustGuardTimesMin, Type: Int}
+    - {Name: JustGuardTimesMax, Type: Int}
+    - {Name: SmallDamageCancelTimes, Type: Int}
+    - {Name: InComboSmallDamageNoCancel, Type: Bool}
+    childs: [ふっとび, ウルボザの怒り, ガード, ガードブレイク, ショック, ジャストガード, 凍結, 大落下, 小ダメージ, 崩れ落ち, 弾かれ,
+      死亡, 炎上, 痺れ, 突風, 落下, 超ショック]
+  PriestBossGiantStageRotRoot:
+    AITreeVariables:
+    - {Name: IsActive, Type: Bool, Value: true}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - Name: FacePos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: KeepDistFromGround, Type: Float, Value: -1.0}
+    StaticInstParams:
+    - {Name: CentralAngle, Type: Float}
+    - {Name: PercentRadiusHeight, Type: Float}
+    - {Name: IronBallHeightOffset, Type: Float}
+    - {Name: ArcPercent, Type: Float}
+    - {Name: ZOffset, Type: Float}
+    - {Name: ZOffsetIndex, Type: Float}
+    - {Name: HoldBallsCounterLength, Type: Float}
+    - {Name: BallsReleaseIntervalFrames, Type: Float}
+    childs: [ロール前, 地形をロール, 地形を戻す, 鉄球投げ]
+  PriestBossGiantStageRotate:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: SendCommand, Type: Int}
+    - {Name: SendOnThrowASEvent, Type: Bool}
+    - {Name: IsUseStartAction, Type: Bool}
+    childs: [回転終了待機, 開始]
+  PriestBossIAIAttack:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: OffsetLR, Type: Float}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: CloseDistLR, Type: Float}
+    - {Name: ClsoeDistFB, Type: Float}
+    - {Name: TiredAngle, Type: Float}
+    - {Name: IsAbleSkipNear, Type: Bool}
+    childs: [斬り付け, 駆け寄り]
+  PriestBossIronBall:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicParamChild: true
+    StaticInstParams:
+    - {Name: IronBallWaitThunderTime, Type: Int}
+    - {Name: IronBallOffsetY, Type: Float}
+    - {Name: IronBallRadius, Type: Float}
+    - {Name: IronBallAngle, Type: Float}
+    - {Name: IronSummonLeftBoneName, Type: String}
+    - {Name: IronSummonRightBoneName, Type: String}
+    - {Name: IsAfterAttack, Type: Bool}
+    - {Name: IronBallAngleOffset, Type: Float}
+    - {Name: ChangeEndAnime, Type: Int}
+    childs: [攻撃, 攻撃後, 攻撃終了, 準備完了待ち]
+  PriestBossIronBallRoot:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    MapUnitInstParams:
+    - {Name: ActorName, Type: String, Value: ''}
+    StaticInstParams:
+    - {Name: AttackPower, Type: Int}
+    - {Name: AttackPowerForPlayer, Type: Int}
+    - {Name: AtMinDamage, Type: Int}
+    - {Name: MagneLightningTime, Type: Int}
+    childs: [待機, 念受信, 落雷]
+  PriestBossIronBallStageRotate:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - {Name: IsActive, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: IronBallSummonRadius, Type: Float}
+    - {Name: IronBallSummonArchAngle, Type: Float}
+    - {Name: IronBallSummonOffsetY, Type: Float}
+    - {Name: IronBallWaitThunderTime, Type: Int}
+    - {Name: IronBallOffsetY, Type: Float}
+    - {Name: IronBallRadius, Type: Float}
+    - {Name: IronBallAngle, Type: Float}
+    - {Name: IronSummonLeftBoneName, Type: String}
+    - {Name: IronSummonRightBoneName, Type: String}
+    - {Name: IsAfterAttack, Type: Bool}
+    - {Name: IronBallAngleOffset, Type: Float}
+    - {Name: ChangeEndAnime, Type: Int}
+    childs: [攻撃, 攻撃後, 攻撃終了, 準備完了待ち]
+  PriestBossLineFormationAppear:
+    DynamicParamChild: true
+    StaticInstParams:
+    - {Name: IsFinishedByFailAction, Type: Bool}
+    - {Name: IsEndChangeable, Type: Bool}
+    - {Name: IsNoChangeable, Type: Bool}
+    childs: [先行動, 後行動]
+  PriestBossLineFormationFall:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: WarpHightOffset, Type: Float}
+    childs: [分身消す, 待機, 攻撃, 攻撃前, 攻撃後, 陣形作成_消える, 陣形作成_現れる]
+  PriestBossLineFormationRush:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    childs: [分身消す, 待機, 攻撃, 攻撃前, 攻撃後, 突進後駆け抜け, 陣形作成_消える, 陣形作成_現れる]
+  PriestBossMakeClone:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: RespawnFrame, Type: Int}
+    - {Name: BackStepDistance, Type: Float}
+    childs: [分身, 後行動, 振り向く, 転移, 離れる]
+  PriestBossMetaAIRoot:
+    AITreeVariables:
+    - {Name: MetaAILife, Type: Int, Value: 10}
+    - {Name: MetaAIMaxLife, Type: Int, Value: 10}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    MapUnitInstParams:
+    - {Name: PriestBossStartPhase, Type: Int, Value: 0}
+    - {Name: UniqueNameMessageLabel, Type: String, Value: ''}
+    StaticInstParams:
+    - {Name: Life, Type: Int}
+    - {Name: BowActorName, Type: String}
+    - {Name: ArrowActorName, Type: String}
+    - {Name: WeaponActorName, Type: String}
+    - {Name: ThunderActorName, Type: String}
+    - {Name: PlayerRecoverFromFallFrames, Type: Float}
+    childs: [段階_分身, 段階_巨大化, 段階_祭り, 段階_終了, 段階_通常]
+  PriestBossNormalMoveSelector:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: MoveTargetPos, Type: Vec3}
+    childs: [旋回, 直進]
+  PriestBossNormalQuickRecover:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: IsFromRagdoll, Type: Bool}
+    childs: [ダウンから復帰, ラグドールから復帰]
+  PriestBossNormalReaction:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - {Name: PriestBossUrbosasFuryEShock, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: IsUseQuickRecover, Type: Bool}
+    - {Name: JustGuardTimesMin, Type: Int}
+    - {Name: JustGuardTimesMax, Type: Int}
+    - {Name: SmallDamageCancelTimes, Type: Int}
+    - {Name: InComboSmallDamageNoCancel, Type: Bool}
+    childs: [ふっとび, ウルボザの怒り, ガード, ガードブレイク, クイック復帰, ショック, ジャストガード, 凍結, 大落下, 小ダメージ, 崩れ落ち,
+      弾かれ, 死亡, 炎上, 痺れ, 突風, 落下, 超ショック]
+  PriestBossPhaseFinish:
+    AITreeVariables:
+    - {Name: MetaAILife, Type: Int, Value: 10}
+    - {Name: MetaAIMaxLife, Type: Int, Value: 10}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    MapUnitInstParams:
+    - {Name: PriestBossStartPhase, Type: Int, Value: 0}
+    StaticInstParams:
+    - {Name: StartDemoDelayFrames, Type: Float}
+    - {Name: PercentLifeTransition, Type: Float}
+    - {Name: PercentLifePrevious, Type: Float}
+    childs: ''
+  PriestBossPhaseFirst:
+    AITreeVariables:
+    - {Name: MetaAILife, Type: Int, Value: 10}
+    - {Name: MetaAIMaxLife, Type: Int, Value: 10}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: PercentLifeTransition, Type: Float}
+    - {Name: PercentLifePrevious, Type: Float}
+    childs: ''
+  PriestBossPhaseFourth:
+    AITreeVariables:
+    - {Name: MetaAILife, Type: Int, Value: 10}
+    - {Name: MetaAIMaxLife, Type: Int, Value: 10}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: RespawnSpan, Type: Float}
+    - {Name: SimAtkMax, Type: Int}
+    - {Name: BowEquipMax, Type: Int}
+    - {Name: PercentLifeTransition, Type: Float}
+    - {Name: PercentLifePrevious, Type: Float}
+    childs: ''
+  PriestBossPhaseSecond:
+    AITreeVariables:
+    - {Name: MetaAILife, Type: Int, Value: 10}
+    - {Name: MetaAIMaxLife, Type: Int, Value: 10}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    MapUnitInstParams:
+    - {Name: PriestBossStartPhase, Type: Int, Value: 0}
+    StaticInstParams:
+    - {Name: ModeChangeLife, Type: Int}
+    - {Name: ModeChangeBlockTime, Type: Float}
+    - {Name: RespawnSpan, Type: Float}
+    - {Name: RespawnBaseSpace, Type: Float}
+    - {Name: RespawnBaseMoveTime, Type: Float}
+    - {Name: RespawnBaseInterval, Type: Float}
+    - {Name: SimAtkMax, Type: Int}
+    - {Name: BowEquipMax, Type: Int}
+    - {Name: SyncAtkMax, Type: Int}
+    - {Name: CircleFormRange, Type: Float}
+    - {Name: CircleFormRushWait, Type: Float}
+    - {Name: CircleFormRushInterval, Type: Float}
+    - {Name: CircleFormShootWait, Type: Float}
+    - {Name: CircleFormShootInterval, Type: Float}
+    - {Name: LineFormDistFromPlayer, Type: Float}
+    - {Name: LineFormSpace, Type: Float}
+    - {Name: LineFormRushWait, Type: Float}
+    - {Name: LineFormRushInterval, Type: Float}
+    - {Name: LineFormFallWait, Type: Float}
+    - {Name: LineFormFallInterval, Type: Float}
+    - {Name: PercentLifeTransition, Type: Float}
+    - {Name: PercentLifePrevious, Type: Float}
+    childs: ''
+  PriestBossPhaseSelector:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: IsSelectOnlyOnce, Type: Bool}
+    childs: [第一段階, 第三段階, 第二段階, 第四段階]
+  PriestBossPhaseThird:
+    AITreeVariables:
+    - {Name: MetaAILife, Type: Int, Value: 10}
+    - {Name: MetaAIMaxLife, Type: Int, Value: 10}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: BreakIronBallCount, Type: Int}
+    - {Name: PercentLifeTransition, Type: Float}
+    - {Name: PercentLifePrevious, Type: Float}
+    childs: ''
+  PriestBossShadowCloneEnemyRoot:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: IsReactionOnDead, Type: Bool}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [フェイズ終了, フェイズ開始, リアクション, 呼ばれ, 奈落, 所持, 死亡生成, 水中, 落下, 近接湧出, 通常, 騎乗]
+  PriestBossShadowCloneThrow:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: ShadowCloneOffsetY, Type: Float}
+    - {Name: ShadowCloneRadius, Type: Float}
+    - {Name: ShadowCloneLefeBoneName, Type: String}
+    - {Name: ShadowCloneRightBoneName, Type: String}
+    - {Name: ShadowCloneAngleOffset, Type: Float}
+    - {Name: PrepareTimer, Type: Float}
+    childs: [攻撃, 攻撃後, 準備完了待ち]
+  PriestBossShadowClonesReaction:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: JustGuardTimesMin, Type: Int}
+    - {Name: JustGuardTimesMax, Type: Int}
+    - {Name: SmallDamageCancelTimes, Type: Int}
+    - {Name: InComboSmallDamageNoCancel, Type: Bool}
+    childs: [ふっとび, ガード, ガードブレイク, ショック, ジャストガード, 凍結, 大落下, 小ダメージ, 崩れ落ち, 弾かれ, 死亡, 炎上,
+      痺れ, 突風, 落下, 超ショック]
+  PriestBossSlowWarpMove:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    - {Name: MoveDstPos, Type: Vec3}
+    - {Name: AfterImage0Pos, Type: Vec3}
+    - {Name: AfterImage1Pos, Type: Vec3}
+    - {Name: CurrentFrame, Type: Float}
+    StaticInstParams:
+    - {Name: AfterImage0AppearFrame, Type: Float}
+    - {Name: AfterImage1AppearFrame, Type: Float}
+    - {Name: AppearFrame, Type: Float}
+    - {Name: TurnFirst, Type: Bool}
+    childs: [回転, 移動]
+  PriestBossStageRotationSelector:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicParamChild: true
+    childs: [回転あり, 回転なし]
+  PriestBossSynchroMode:
+    AITreeVariables:
+    - {Name: EquipWeaponBufIndex, Type: Int, Value: 0}
+    - {Name: ReturnFromBananaMode, Type: Bool, Value: false}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    childs: [一列流星, 一列突進, 円陣弓, 円陣突進, 待機]
+  PriestBossWalkAttack:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: GoalDistanceTolerance, Type: Float}
+    - {Name: AngleNeedTurn, Type: Float}
+    - {Name: AtDirType, Type: Int}
+    - {Name: AtAttr, Type: Int}
+    - {Name: AtType, Type: Int}
+    - {Name: AtShieldBreakPower, Type: Int}
+    - {Name: AtImpact, Type: Int}
+    - {Name: AtPowerReduce, Type: Int}
+    - {Name: AtPower, Type: Int}
+    - {Name: AtDamage, Type: Int}
+    childs: [回転, 待機, 移動]
+  PriestBossWarpToSafePos:
+    AITreeVariables:
+    - {Name: IsActive, Type: Bool, Value: true}
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: OffsetY, Type: Float}
+    - {Name: OffsetZ, Type: Float}
+    childs: [転移]
+  PriestIronBallAttack:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: Speed, Type: Float}
+    - {Name: ShootPitchMin, Type: Float}
+    - {Name: ShootPitchMax, Type: Float}
+    - {Name: Noise, Type: Float}
+    childs: [投擲]
   PullOutTree:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
@@ -7634,7 +8694,7 @@ AIs:
     childs: [1st, 2nd, 3rd, Idle]
   RemainsFireDroneNormal:
     AITreeVariables:
-    - {Name: TargetSpeed, Type: Float, Value: 0.0}
+    - {Name: TargetSpeed, Type: Float, Value: -1.0}
     MapUnitInstParams:
     - {Name: LightLength, Type: Float, Value: 25.0}
     - {Name: LightRadius, Type: Float, Value: 8.0}
@@ -7731,6 +8791,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: RememberKey, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -8001,6 +9062,75 @@ AIs:
     - {Name: TargetActorLockOnDist, Type: Float}
     - {Name: TargetPosLockOnDist, Type: Float}
     childs: [振り向き, 攻撃, 攻撃後始末, 移動, 見失い]
+  SandwormRNormal:
+    AITreeVariables:
+    - {Name: PlayerSoundSealRefCount, Type: Int, Value: 0}
+    - {Name: SealNoPlayerAwnRequestCount, Type: Int, Value: 0}
+    MapUnitInstParams:
+    - {Name: TerritoryArea, Type: Float, Value: 0.0}
+    StaticInstParams:
+    - {Name: SealedSight, Type: Bool}
+    - {Name: SealedHearing, Type: Bool}
+    - {Name: SealedTerror, Type: Bool}
+    - {Name: SealedWorry, Type: Bool}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: TerritoryArea, Type: Float}
+    - {Name: NpcTerritoryArea, Type: Float}
+    - {Name: NoPlayerTerritoryArea, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: EnlargeAwnRatio, Type: Float}
+    - {Name: NoticeTerrorLevel, Type: Float}
+    - {Name: SpeadDist2, Type: Float}
+    - {Name: HomePosRadius, Type: Float}
+    - {Name: SoundLostTimer, Type: Int}
+    - {Name: NoActionReactTimeMin, Type: Int}
+    - {Name: NoActionReactTimeMax, Type: Int}
+    - {Name: IsMindDoubtTarget, Type: Bool}
+    - {Name: FortressTag, Type: String}
+    - {Name: SubsTerritoryArea, Type: Float}
+    - {Name: LostExtinguishFireDist, Type: Float}
+    - {Name: ShortRangeTerritoryArea, Type: Float}
+    - {Name: CloseRangeTerritoryArea, Type: Float}
+    - {Name: PressBreakObject, Type: Float}
+    - {Name: TerritoryHeight, Type: Float}
+    childs: [プレイヤー発見, 不審者発見, 不調仲間発見, 待機, 怒り, 攻撃反応, 気配気づき, 脅威感知, 行動中仲間発見, 見失い, 諦め,
+      音気づき]
+  SandwormRRoot:
+    AITreeVariables:
+    - Name: ForceSetDropPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: UniqueNameMessageLabel, Type: String, Value: ''}
+    - {Name: EquipItem5, Type: String, Value: Default}
+    - {Name: EquipItem6, Type: String, Value: Default}
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: SandOffset, Type: Float}
+    - {Name: WeakPointDamageRate, Type: Float}
+    - {Name: WeakChimicalDamageRate, Type: Float}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [リアクション, 呼ばれ, 奈落, 所持, 死亡生成, 水中, 落下, 近接湧出, 通常, 騎乗]
   SandwormReaction:
     StaticInstParams:
     - {Name: JustGuardTimesMin, Type: Int}
@@ -8036,6 +9166,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: SandOffset, Type: Float}
     - {Name: WeakPointDamageRate, Type: Float}
@@ -8100,6 +9231,13 @@ AIs:
     - {Name: IsNoHitEnd, Type: Bool}
     - {Name: CheckType, Type: Int}
     childs: [地上, 空中]
+  SeqGroundHitAssassinBoss:
+    DynamicParamChild: true
+    StaticInstParams:
+    - {Name: IsCheckChangeable, Type: Bool}
+    - {Name: IsNoHitEnd, Type: Bool}
+    - {Name: CheckType, Type: Int}
+    childs: [地上, 空中]
   SeqHiddenOctarockSearch:
     DynamicParamChild: true
     childs: [サーチ, 未発見, 発見]
@@ -8122,6 +9260,12 @@ AIs:
     childs: [先行動, 後行動]
   SeqOctarockAttack:
     DynamicParamChild: true
+    StaticInstParams:
+    - {Name: IsFinishedByFailAction, Type: Bool}
+    - {Name: IsEndChangeable, Type: Bool}
+    - {Name: IsNoChangeable, Type: Bool}
+    childs: [中行動, 先行動, 後行動]
+  SeqOctarockWigReaction:
     StaticInstParams:
     - {Name: IsFinishedByFailAction, Type: Bool}
     - {Name: IsEndChangeable, Type: Bool}
@@ -8168,6 +9312,14 @@ AIs:
     StaticInstParams:
     - {Name: ActionTime, Type: Int}
     childs: [行動]
+  SeqTimeredPlusRandomTwoAction:
+    StaticInstParams:
+    - {Name: FirstActionRandMax, Type: Int}
+    - {Name: SecondActionRandMax, Type: Int}
+    - {Name: FirstActionTime, Type: Int}
+    - {Name: SecondActionTime, Type: Int}
+    - {Name: AllActionTime, Type: Int}
+    childs: [先行動, 後行動]
   SeqTimeredTwoAction:
     DynamicParamChild: true
     StaticInstParams:
@@ -8301,6 +9453,10 @@ AIs:
     - {Name: EventFlowName, Type: String, Value: ''}
     - {Name: EventFlowEntryName, Type: String, Value: ''}
     childs: [オフ, オン]
+  SignalSendingMagneStickAcceptor:
+    MapUnitInstParams:
+    - {Name: MagneStickMaxSearchDistance, Type: Float, Value: 10.0}
+    childs: [刺さった, 抜けた]
   SignaledSpotBgmTrigger:
     MapUnitInstParams:
     - {Name: Sound, Type: String, Value: ''}
@@ -8356,6 +9512,12 @@ AIs:
   SimpleLiftable:
     MapUnitInstParams:
     - {Name: IsEnemyLiftable, Type: Bool, Value: true}
+    childs: [所持, 投擲生成, 通常]
+  SimpleLiftableDLC:
+    MapUnitInstParams:
+    - {Name: IsEnemyLiftable, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: ScaleToLiftUp, Type: Float}
     childs: [所持, 投擲生成, 通常]
   SimpleLineBeam:
     childs: [待機, 攻撃]
@@ -9199,6 +10361,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: InWaterDepth, Type: Float}
     - {Name: OutOfWaterOffset, Type: Float}
@@ -9283,6 +10446,12 @@ AIs:
     - {Name: IsUpdateNoticeState, Type: Bool}
     - {Name: IsCheckLineReachable, Type: Bool}
     childs: [戦闘攻撃, 戦闘準備]
+  StoneStickRoot:
+    StaticInstParams:
+    - {Name: FixPoint, Type: Vec3}
+    childs: [固定, 固定開始, 通常]
+  StopTimerObserver:
+    childs: [ビタロックオブジェクトあり, ビタロックオブジェクトなし]
   StraightMove:
     StaticInstParams:
     - {Name: AngleLimit, Type: Float}
@@ -9412,6 +10581,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ASName, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -9821,6 +10991,8 @@ AIs:
     - {Name: useBaseRatioTiming, Type: Int}
     - {Name: BaseTemperature, Type: Float}
     childs: [行動Ａ, 行動Ｂ]
+  TerminalEnduranceWarpRoot:
+    childs: [Off待機, On待機, 起動]
   TimeControlTagRoot:
     MapUnitInstParams:
     - {Name: StartTime, Type: Int, Value: 0}
@@ -9958,6 +11130,10 @@ AIs:
     StaticInstParams:
     - {Name: TurnStartAngle, Type: Float}
     childs: [ターン, 行動]
+  TwnObjDlcFlightTrainingTarget:
+    StaticInstParams:
+    - {Name: LimitTime, Type: Float}
+    childs: [壊れ, 待機, 復活]
   UnarmedEnemyNoiseTarget:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -9995,10 +11171,15 @@ AIs:
     - {Name: OnEnterOnly, Type: Bool}
     - {Name: ForceDeepChange, Type: Bool}
     childs: [浅瀬, 深瀬]
+  UrbosasFuryDamageSelector:
+    DynamicParamChild: true
+    childs: [ウルボザの怒り由来である, ウルボザの怒り由来でない]
   VacuumedBombDamageSelect:
     AITreeVariables:
     - {Name: VacuumedExplodingBomb, Type: AITreeVariablePointer}
     childs: [その他, 体内爆発]
+  VehicleSelector:
+    childs: [乗り物である, 乗り物ではない]
   ViewChaseSound:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -10059,6 +11240,11 @@ AIs:
     - {Name: TurnStartAngle, Type: Float}
     - {Name: CheckOnce, Type: Bool}
     childs: [回転, 待機]
+  ViewfrustumCheckTagRoot:
+    MapUnitInstParams:
+    - {Name: AllwaysOnDisFromPlayer, Type: Float, Value: -1.0}
+    - {Name: AllwaysOnCamDir, Type: Float, Value: -1.0}
+    childs: ['Off', 'On']
   WaistRotEnemyArrowAttack:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -10294,6 +11480,8 @@ AIs:
     childs: [待機]
   WindGenerator:
     childs: [待機, 風制御]
+  WindGeneratorSignal:
+    childs: [待機, 風制御]
   WithoutWeaponArrow:
     MapUnitInstParams:
     - {Name: AtMinDamage, Type: Int, Value: 1}
@@ -10412,6 +11600,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: MagicTargetIdx, Type: Int}
     - {Name: StartASName, Type: String}
@@ -10653,6 +11842,23 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: IsChangeable, Type: Bool}
     - {Name: ResetTransBoneOnLeave, Type: Bool}
+  ActivateAttackSensor:
+    MapUnitInstParams:
+    - {Name: AttackPower, Type: Int, Value: 0}
+    StaticInstParams:
+    - {Name: IsSuccessFinishCounterEnd, Type: Bool}
+    - {Name: IsChangeable, Type: Bool}
+    - {Name: UseMapUnitParamForDamage, Type: Bool}
+    - {Name: AtkSensorName, Type: String}
+    - {Name: FramesActive, Type: Float}
+    - {Name: AtDamage, Type: Int}
+    - {Name: AtPower, Type: Int}
+    - {Name: AtPowerReduce, Type: Int}
+    - {Name: AtImpact, Type: Int}
+    - {Name: AtShieldBreakPower, Type: Int}
+    - {Name: AtType, Type: Int}
+    - {Name: AtAttr, Type: Int}
+    - {Name: AtDirType, Type: Int}
   ActorInfoToGameDataFloat:
     DynamicInstParams:
     - {Name: ActorName, Type: String}
@@ -10694,6 +11900,37 @@ Actions:
     - {Name: DirectTime, Type: Int}
     - {Name: PassTime, Type: Int}
     - {Name: ActReset, Type: Bool}
+  AirOctaFloat:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: Amplitude, Type: Float}
+    - {Name: GoalDistance, Type: Float}
+    - {Name: GoalInSuccessEnd, Type: Bool}
+  AirOctaMgr:
+    MapUnitInstParams:
+    - {Name: MoveDis, Type: Float, Value: 5.0}
+    - {Name: ReactHorn, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: LeaveDistance, Type: Float}
+    - {Name: LeaveDownY, Type: Float}
+    - {Name: onGraundEscapeDist, Type: Float}
+    - {Name: PlayerLostTime, Type: Float}
+  AirOctaNoticeTurn:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: NoDoubleNoticeTime, Type: Int}
+    - {Name: AngSpd, Type: Float}
+    - {Name: ASName, Type: String}
+    - {Name: IsJumpType, Type: Bool}
+    - {Name: IsChangeable, Type: Bool}
+  AirOctaReactionKorog:
+    StaticInstParams:
+    - {Name: Speed, Type: Float}
+    - {Name: AS, Type: String}
+    - {Name: EndState, Type: Int}
+  AirOctaWoodBridge: ''
   AirWallAction:
     MapUnitInstParams:
     - {Name: Shape, Type: String, Value: Sphere}
@@ -10910,6 +12147,18 @@ Actions:
     - {Name: IsIgnoreSameAS, Type: Bool}
     - {Name: SelectNextGearType, Type: Int}
     - {Name: SelectNextGear, Type: Int}
+  AnimeDrivenTurn:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: AnimPlayRate, Type: Float}
+    - {Name: FinishAngleRange, Type: Float}
+    - {Name: RotateAngleMax, Type: Float}
+    - {Name: ASKeyName, Type: String}
+    - {Name: AllowChangeableFrame, Type: Int}
+    - {Name: IsIgnoreSameAS, Type: Bool}
+    - {Name: TargetBone, Type: String}
+    - {Name: IsAllowAnimeDrivenNoChangeAS, Type: Bool}
   AnmArmorBindAction: ''
   AnmBackMove:
     StaticInstParams:
@@ -11065,6 +12314,10 @@ Actions:
     - {Name: GyroUpDownSpeed, Type: Float}
     - {Name: GyroRotateSpeed, Type: Float}
   AppearNumDungeonClearSeal: {TriggerAction: true}
+  AppearNumHeroSeal:
+    DynamicInstParams:
+    - {Name: RelicPattern, Type: Int}
+    TriggerAction: true
   AppearNumKorokNuts: {TriggerAction: true}
   AppearNumTargets:
     DynamicInstParams:
@@ -11285,6 +12538,9 @@ Actions:
     - {Name: Size, Type: Vec3}
     - {Name: DisableInDemo, Type: Bool}
     - {Name: WindSpeed, Type: Float}
+  AscendingCurrentShieldable:
+    StaticInstParams:
+    - {Name: WindSpeed, Type: Float}
   AssassinBossIronBallAppear:
     StaticInstParams:
     - {Name: IronBallNum, Type: Int}
@@ -11314,7 +12570,14 @@ Actions:
     - {Name: AttackType, Type: Int}
     - {Name: IronBallPartsName, Type: String}
     - {Name: Level2AttackLifeRatio, Type: Float}
+  AtAndBodyOnWait:
+    StaticInstParams:
+    - {Name: BodyName, Type: String}
+    - {Name: AtkAttrType, Type: Int}
   AtOnWait:
+    StaticInstParams:
+    - {Name: AtkAttrType, Type: Int}
+  AtOnWaitNoHitRope:
     StaticInstParams:
     - {Name: AtkAttrType, Type: Int}
   Attack:
@@ -11759,6 +13022,10 @@ Actions:
     - {Name: EquipItem5, Type: String, Value: Default}
     - {Name: GiantRoamType, Type: Int, Value: 0}
     - {Name: TraverseDist, Type: Float, Value: 0.0}
+  BikeWarpEffectValueSetter:
+    DynamicInstParams:
+    - {Name: SetFrame, Type: Float}
+    - {Name: ChangeType, Type: Int}
   BindActionForManyActor:
     DynamicInstParams:
     - {Name: IsKeepParentActor, Type: Bool}
@@ -12563,6 +13830,7 @@ Actions:
     - {Name: speedMax, Type: Float}
     - {Name: HandlingRateCoefficient, Type: Float}
     - {Name: HandlingRateReturnSpeed, Type: Float}
+    - {Name: sideOffsetCusNoInput, Type: Float}
     - {Name: BowFlag, Type: Bool}
   CameraHorseLockOnEmpty:
     StaticInstParams:
@@ -12655,6 +13923,91 @@ Actions:
     - {Name: fovyNear, Type: Float}
     - {Name: fovyFar, Type: Float}
     - {Name: fovyCus, Type: Float}
+    - {Name: BowFlag, Type: Bool}
+  CameraMotorcycle:
+    StaticInstParams:
+    - {Name: SpeedMin, Type: Float}
+    - {Name: SpeedMax, Type: Float}
+    - {Name: LatitudeMin, Type: Float}
+    - {Name: LatitudeMax, Type: Float}
+    - {Name: AutoLatitudeSlow, Type: Float}
+    - {Name: AutoLatitudeFast, Type: Float}
+    - {Name: AutoLatitudeB2ICushion, Type: Float}
+    - {Name: CameraRadiusSlow, Type: Float}
+    - {Name: CameraRadiusFast, Type: Float}
+    - {Name: CameraRadiusB2ICushion, Type: Float}
+    - {Name: SideOffsetSlow, Type: Float}
+    - {Name: SideOffsetFast, Type: Float}
+    - {Name: MaxSideOffset, Type: Float}
+    - {Name: SideOffsetCushion, Type: Float}
+    - {Name: VerticalOffsetSlow, Type: Float}
+    - {Name: VerticalOffsetFast, Type: Float}
+    - {Name: VerticalOffetCushion, Type: Float}
+    - {Name: AtBaseHCushion, Type: Float}
+    - {Name: AtBaseVCushion, Type: Float}
+    - {Name: FollowingRotateCushion, Type: Float}
+    - {Name: FollowingTransCushion, Type: Float}
+    - {Name: FollowingAnglarVelCushion, Type: Float}
+    - {Name: AutoLngBaseCushion, Type: Float}
+    - {Name: AutoLngMaxRotSpeed, Type: Float}
+    - {Name: AutoLngMaxRotSpeedSpin, Type: Float}
+    - {Name: SwitchingCushionRate, Type: Float}
+    - {Name: AngularVelocityThreshold, Type: Float}
+    - {Name: CameraFollowRotCushion, Type: Float}
+    - {Name: CameraFollowPosCushionX, Type: Float}
+    - {Name: CameraFollowPosCushionZNormal, Type: Float}
+    - {Name: CameraFollowPosCushionZStart, Type: Float}
+    - {Name: CameraFollowPosCushionZWheelie, Type: Float}
+    - {Name: CFPCZCushionUp, Type: Float}
+    - {Name: CFPCZCushionDown, Type: Float}
+    - {Name: CamFollowCusChangeTimeStart, Type: Float}
+    - {Name: CamFollowCusChangeTimeWheelie, Type: Float}
+    - {Name: FovySlow, Type: Float}
+    - {Name: FovyFast, Type: Float}
+    - {Name: FovyStart, Type: Float}
+    - {Name: FovyWheelie, Type: Float}
+    - {Name: FovyBaseCushionDown, Type: Float}
+    - {Name: FovyBaseCushionUpNormal, Type: Float}
+    - {Name: FovyBaseCushionUpStart, Type: Float}
+    - {Name: FovyBaseCushionUpWheelie, Type: Float}
+    - {Name: FovyChangeTimeStart, Type: Float}
+    - {Name: FovyChangeTimeWheelie, Type: Float}
+    - {Name: IdealRotateVelScaleFactor, Type: Float}
+    - {Name: AgainstIdealRotVelCushion, Type: Float}
+    - {Name: SpeedRateCushion, Type: Float}
+    - {Name: SwitchingCushionRateLOE, Type: Float}
+    - {Name: SideOffsetByleaning, Type: Float}
+    - {Name: ThresholdAngleDiffCoeff, Type: Float}
+    - {Name: SpringBackToHardStartTime, Type: Float}
+    - {Name: SpringBackToHardCushion, Type: Float}
+    - {Name: SpringChangeToSoftStartDistance, Type: Float}
+    - {Name: SpringChangeToSoftEndDistance, Type: Float}
+    - {Name: BowFlag, Type: Bool}
+  CameraMotorcycleLockOnEmpty:
+    StaticInstParams:
+    - {Name: SpeedMax, Type: Float}
+    - {Name: SpeedMin, Type: Float}
+    - {Name: LatitudeMin, Type: Float}
+    - {Name: LatitudeMax, Type: Float}
+    - {Name: AutoLatitudeSlow, Type: Float}
+    - {Name: AutoLatitudeFast, Type: Float}
+    - {Name: AutoLatitudeB2ICushion, Type: Float}
+    - {Name: AutoLngBaseCushion, Type: Float}
+    - {Name: AutoLngMaxRotSpeed, Type: Float}
+    - {Name: CameraRadiusSlow, Type: Float}
+    - {Name: CameraRadiusFast, Type: Float}
+    - {Name: CameraRadiusB2ICushion, Type: Float}
+    - {Name: CameraFollowRotCushion, Type: Float}
+    - {Name: CameraFollowPosCushionX, Type: Float}
+    - {Name: CameraFollowPosCushionYUp, Type: Float}
+    - {Name: CameraFollowPosCushionYDown, Type: Float}
+    - {Name: CameraFollowPosCushionZ, Type: Float}
+    - {Name: FovySlow, Type: Float}
+    - {Name: FovyFast, Type: Float}
+    - {Name: FovyBaseCushion, Type: Float}
+    - {Name: AtOffsetWorld, Type: Vec3}
+    - {Name: AtOffsetLocal, Type: Vec3}
+    - {Name: SwitchingCushionRate, Type: Float}
     - {Name: BowFlag, Type: Bool}
   CameraRevolve:
     StaticInstParams:
@@ -12760,6 +14113,15 @@ Actions:
     - {Name: ResetInterpolateParam, Type: Float}
     - {Name: TargetSpeedMax, Type: Float}
     - {Name: BowFlag, Type: Bool}
+  CameraVibrate:
+    MapUnitInstParams:
+    - {Name: CameraPattern, Type: Int, Value: 1}
+    - {Name: CameraPower, Type: Float, Value: 0.5}
+    - {Name: CameraRange, Type: Float, Value: 100.0}
+    StaticInstParams:
+    - {Name: StartSoundName, Type: String}
+    - {Name: LoopSoundName, Type: String}
+    - {Name: IsSound, Type: Bool}
   CameraWakeboard:
     StaticInstParams:
     - {Name: LatMin, Type: Float}
@@ -12879,6 +14241,12 @@ Actions:
     - {Name: WeaponIdx, Type: Int}
     - {Name: RotSpd, Type: Float}
     - {Name: ASName, Type: String}
+  ChallengeChainRing:
+    MapUnitInstParams:
+    - {Name: IsFirstNode, Type: Bool, Value: false}
+    - {Name: ChainRingOrbitSpeed, Type: Float, Value: 0.25}
+    - {Name: GimmickTimeLimit, Type: Float, Value: 40.0}
+    - {Name: IsBillboard, Type: Bool, Value: true}
   ChanegToLog: ''
   ChangeChoiceNumMsgFor3DShop: {TriggerAction: true}
   ChangeEmotion:
@@ -12886,6 +14254,18 @@ Actions:
     - {Name: EmotionType, Type: String}
     - {Name: IsOnlyFace, Type: Bool}
     TriggerAction: true
+  ChangeEnvForEnduranceDungeon:
+    MapUnitInstParams:
+    - {Name: Weather, Type: Int, Value: -1}
+    - {Name: TemperatureDirectDay, Type: Float, Value: 99999.8984375}
+    - {Name: TemperatureDirectNight, Type: Float, Value: 99999.8984375}
+    - {Name: IgnitedLevel, Type: Int, Value: 0}
+    - {Name: WeatherEff, Type: Int, Value: -1}
+    - {Name: PaletteSel, Type: Int, Value: -1}
+    - {Name: TimeForSkyEnv, Type: Int, Value: 10}
+  ChangeFreeMovingForDemo:
+    DynamicInstParams:
+    - {Name: SetFreeMoving, Type: Bool}
   ChangeMiniMapScale:
     DynamicInstParams:
     - {Name: ScaleLevel, Type: Int}
@@ -12914,6 +14294,7 @@ Actions:
     DynamicInstParams:
     - {Name: EquipState, Type: String}
     TriggerAction: true
+  ChargeChemicalWeaponPower: ''
   CheckExistenceOfParticipant:
     DynamicInstParams:
     - {Name: ActorName, Type: String}
@@ -13034,6 +14415,27 @@ Actions:
   CloseClockTime: {TriggerAction: true}
   CloseItemMenu: {TriggerAction: true}
   ClosePouchAddStockNum: ''
+  CollaboShootingStarAreaTag:
+    MapUnitInstParams:
+    - {Name: collaboSSFalloutFlagName, Type: String, Value: ''}
+  CollaboShootingStarBrightTower:
+    AITreeVariables:
+    - {Name: CollaboShootingStarId, Type: String, Value: default}
+  CollaboShootingStartFlying:
+    AITreeVariables:
+    - {Name: CollaboShootingStarId, Type: String, Value: default}
+    StaticInstParams:
+    - {Name: InitialVelocityMax, Type: Float}
+    - {Name: InitialVelocityMin, Type: Float}
+    - {Name: LookSuccessRate, Type: Float}
+  CollaborationShootingStarAnchor:
+    MapUnitInstParams:
+    - {Name: CollaboShootingStarStartHour, Type: Int, Value: 0}
+    - {Name: CollaboShootingStarEndHour, Type: Int, Value: 0}
+    - {Name: collaboSSFalloutFlagName, Type: String, Value: ''}
+    - {Name: collaboSSOpenFlagName, Type: String, Value: ''}
+    - {Name: CollaboShootingStarDirection, Type: Int, Value: 0}
+    - {Name: collaboSSQuestFlag, Type: String, Value: ''}
   ControlBombEffect: ''
   ControllerRumble:
     DynamicInstParams:
@@ -13060,6 +14462,10 @@ Actions:
   CreateAndReplaceAssassin:
     DynamicInstParams:
     - {Name: Offset, Type: Vec3}
+  CreateDragonChallengeXLink:
+    DynamicInstParams:
+    - {Name: XLinkHandleIndex, Type: Int}
+    TriggerAction: true
   CreateEpona:
     StaticInstParams:
     - {Name: AreaThreshold, Type: Float}
@@ -13080,6 +14486,12 @@ Actions:
     - {Name: HorseReinsActorName, Type: String}
     - {Name: HorseSaddleActorName, Type: String}
     - {Name: HorseManeActorName, Type: String}
+  CurseRRematchCount:
+    DynamicInstParams:
+    - {Name: RematchCount, Type: Int}
+    - {Name: CurseRType, Type: Int}
+    - {Name: GameDataStringCounterName, Type: String}
+    TriggerAction: true
   CustomDuckingEndAction: {TriggerAction: true}
   CustomDuckingStartAction:
     DynamicInstParams:
@@ -13208,6 +14620,12 @@ Actions:
   DemoKokkoAngry:
     StaticInstParams:
     - {Name: WaitTime, Type: Float}
+  DemoMotorcyclePutMaterials:
+    StaticInstParams:
+    - {Name: CloseSaddleFramesSincePut, Type: Float}
+    - {Name: FinishCookFramesSincePut, Type: Float}
+    - {Name: CloseSaddleFramesSincePutFairy, Type: Float}
+    - {Name: FinishCookFramesSincePutFairy, Type: Float}
   DemoNoAnimDrivenTurn:
     DynamicInstParams:
     - {Name: ObjectId, Type: Int}
@@ -13238,6 +14656,12 @@ Actions:
   DemoSweep:
     DynamicInstParams:
     - {Name: DynScalingTime, Type: Float}
+  DemoTriggerToggleVisible:
+    DynamicInstParams:
+    - {Name: IsVisible, Type: Bool}
+    - {Name: IsXLinkHandling, Type: Bool}
+    - {Name: IsClothHandling, Type: Bool}
+    TriggerAction: true
   DemoTurnToActor:
     DynamicInstParams:
     - {Name: ActorName, Type: String}
@@ -13249,11 +14673,58 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: IsChangeable, Type: Bool}
   DemoVisibleOff: ''
+  DemoVisibleOn: {TriggerAction: true}
   DemoVoiceTrigger:
     DynamicInstParams:
     - {Name: Label, Type: String}
     - {Name: ActorInstance, Type: String}
     - {Name: IsHideCaption, Type: Bool}
+  DgnObjDLCSpurGearB01:
+    MapUnitInstParams:
+    - {Name: RotateSpeed, Type: Float, Value: 1.0}
+    - {Name: DgnRotDir, Type: Int, Value: 0}
+    StaticInstParams:
+    - {Name: IsReverse, Type: Bool}
+    - {Name: IsTwoWayGear, Type: Bool}
+    - {Name: StopCheckSpdRate, Type: Float}
+    - {Name: CheckSpdIdlingRate, Type: Float}
+  DgnObjDlcGondolaCreateTag:
+    MapUnitInstParams:
+    - {Name: IntervalTime, Type: Float, Value: 1.0}
+    - {Name: RailMoveSpeed, Type: Float, Value: 0.10000000149011612}
+    StaticInstParams:
+    - {Name: ActorName, Type: String}
+  DgnObj_DLC_CWRotDirSwitch: ''
+  DgnObj_DLC_CWRotDirSwitchOff: ''
+  DgnObj_DLC_CogWheel_ASPlay: ''
+  DgnObj_DLC_CogWheel_Reject: ''
+  DgnObj_DLC_CogWheel_Rotate:
+    AITreeVariables:
+    - {Name: RotationOffset, Type: Float, Value: 0.0}
+    DynamicInstParams:
+    - {Name: IsRegisteredFrame, Type: Bool}
+    MapUnitInstParams:
+    - {Name: GearRatio, Type: Float, Value: 1.0}
+    - {Name: IsClockWiseRotation, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: TargetAngularDisplPerSec, Type: Float}
+  DgnObj_DLC_DungeonRotate:
+    AITreeVariables:
+    - {Name: RotationOffset, Type: Float, Value: 0.0}
+    MapUnitInstParams:
+    - {Name: GearRatio, Type: Float, Value: 1.0}
+    - {Name: IsClockWiseRotation, Type: Bool, Value: true}
+    - {Name: TiltAngularSpeed, Type: Float, Value: 0.10000000149011612}
+    - {Name: InitDgnRotRad, Type: Float, Value: 0.0}
+    - {Name: InitDgnPriority, Type: Int, Value: 0}
+    - {Name: CameraPattern, Type: Int, Value: 1}
+    - {Name: CameraPower, Type: Float, Value: 0.5}
+    - {Name: CameraRange, Type: Float, Value: 100.0}
+    - {Name: RemainsPartType, Type: Int, Value: -1}
+    - {Name: VelocityControlRate, Type: Float, Value: 1.0}
+    - {Name: AngleVelocityControlAccelDeg, Type: Float, Value: 0.009999999776482582}
+    StaticInstParams:
+    - {Name: RotateAxisIndex, Type: Int}
   Die:
     AITreeVariables:
     - {Name: CRBOffsetUnit, Type: AITreeVariablePointer}
@@ -13335,8 +14806,10 @@ Actions:
     - {Name: UpDir, Type: Vec3}
     - {Name: RotSpeed, Type: Float}
     - {Name: RotMax, Type: Float}
+  DisableAutoSavePausing: {TriggerAction: true}
   DisappearDeathCounter: ''
   DisappearNumDungeonClearSeal: {TriggerAction: true}
+  DisappearNumHeroSeal: {TriggerAction: true}
   DisappearNumKorokNuts: {TriggerAction: true}
   DisappearNumTargets: {TriggerAction: true}
   DoorOpenAndClose:
@@ -13401,6 +14874,12 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: TargetIdx, Type: Int}
     - {Name: SeqBankIdx, Type: Int}
+  DragonFollow:
+    MapUnitInstParams:
+    - {Name: GimmickTimeLimit, Type: Float, Value: 40.0}
+    - {Name: IsBillboard, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: DungeonName, Type: String}
   DragonItemInCarryBox:
     AITreeVariables:
     - {Name: IsInsideObserverArea, Type: Bool, Value: false}
@@ -13512,6 +14991,26 @@ Actions:
     - {Name: CameraPattern, Type: Int, Value: 1}
     - {Name: CameraPower, Type: Float, Value: 0.5}
     - {Name: CameraRange, Type: Float, Value: 100.0}
+    StaticInstParams:
+    - {Name: Accel, Type: Float}
+  DungeonMoveAlwaysVibrateCam:
+    DynamicInstParams:
+    - {Name: DynMoveDis, Type: Float}
+    MapUnitInstParams:
+    - {Name: CameraPattern, Type: Int, Value: 1}
+    - {Name: CameraPower, Type: Float, Value: 0.5}
+    - {Name: CameraRange, Type: Float, Value: 100.0}
+    - {Name: InitDgnPriority, Type: Int, Value: 0}
+    - {Name: MoveSpeed, Type: Float, Value: 1.0}
+    StaticInstParams:
+    - {Name: IsSilentOnSuccess, Type: Bool}
+    - {Name: Accel, Type: Float}
+  DungeonMoveReset:
+    DynamicInstParams:
+    - {Name: DynMoveDis, Type: Float}
+    - {Name: DynMoveSpeed, Type: Float}
+    MapUnitInstParams:
+    - {Name: InitDgnPriority, Type: Int, Value: 0}
     StaticInstParams:
     - {Name: Accel, Type: Float}
   DungeonRotate:
@@ -13806,6 +15305,10 @@ Actions:
     StaticInstParams:
     - {Name: MessageID, Type: Int}
     - {Name: BufferNum, Type: Int}
+  EnemyChangeWeapon:
+    AITreeVariables:
+    - {Name: EquipWeaponBufIndex, Type: Int, Value: 0}
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
   EnemyFortressChatCall:
     AITreeVariables:
     - {Name: RegistedActorUnit, Type: AITreeVariablePointer}
@@ -13925,6 +15428,11 @@ Actions:
     - {Name: RotOffset, Type: Vec3}
     - {Name: TransOffset, Type: Vec3}
   EquipedChemicalWeapon:
+    DynamicInstParams:
+    - {Name: NodeName, Type: String}
+    - {Name: RotOffset, Type: Vec3}
+    - {Name: TransOffset, Type: Vec3}
+  EquipedDeadlyBlowWeapon:
     DynamicInstParams:
     - {Name: NodeName, Type: String}
     - {Name: RotOffset, Type: Vec3}
@@ -14100,6 +15608,12 @@ Actions:
     DynamicInstParams:
     - {Name: Frame, Type: Int}
     - {Name: Color, Type: Int}
+  EventChangeShadowNearAndFar:
+    DynamicInstParams:
+    - {Name: IsNearSetManual, Type: Bool}
+    - {Name: ManualNearValue, Type: Float}
+    - {Name: IsFarSetManual, Type: Bool}
+    - {Name: ManualFarValue, Type: Float}
   EventCheckAndCreateEquip:
     DynamicInstParams:
     - {Name: TargetActorName, Type: String}
@@ -14454,6 +15968,13 @@ Actions:
     - {Name: AtkType, Type: Int}
     - {Name: OffLength, Type: Float}
     - {Name: OnLength, Type: Float}
+  ExpandSensorSlowly:
+    StaticInstParams:
+    - {Name: AtkAttrType, Type: Int}
+    - {Name: AtkType, Type: Int}
+    - {Name: OffLength, Type: Float}
+    - {Name: OnLength, Type: Float}
+    - {Name: AtExpandStep, Type: Float}
   Explode:
     StaticInstParams:
     - {Name: SizeUpTime, Type: Int}
@@ -14494,6 +16015,15 @@ Actions:
     - {Name: WeaponIdx, Type: Int}
     - {Name: Gravity, Type: Float}
     - {Name: JustAvoidDist, Type: Float}
+  FallAttackWithAtAttr:
+    StaticInstParams:
+    - {Name: AtAttr, Type: Int}
+    - {Name: AtAttrNoWeapon, Type: Int}
+    - {Name: ASName, Type: String}
+    - {Name: AtkBodyName, Type: String}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: Gravity, Type: Float}
+    - {Name: JustAvoidDist, Type: Float}
   FireWood:
     MapUnitInstParams:
     - {Name: IsDrop, Type: Bool, Value: false}
@@ -14518,6 +16048,18 @@ Actions:
     - {Name: ASKey, Type: String}
     - {Name: PosReduceRatio, Type: Float}
     - {Name: AngReduceRatio, Type: Float}
+  FixedMagneSliderBlock:
+    AITreeVariables:
+    - {Name: MagneStickLength, Type: Float, Value: 1.0}
+    - {Name: IsTargetFixedAcceptor, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: GrabbedMagneReleaseTime, Type: Float, Value: 1.0}
+  FixedMagneStick:
+    AITreeVariables:
+    - {Name: MagneStickLength, Type: Float, Value: 1.0}
+    - {Name: IsTargetFixedAcceptor, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: GrabbedMagneReleaseTime, Type: Float, Value: 1.0}
   FixedOrConstraint: ''
   Flint:
     StaticInstParams:
@@ -14714,6 +16256,21 @@ Actions:
     - {Name: OnLinkTagBasic, Type: Bool}
     - {Name: IsSetNoHit, Type: Bool}
     - {Name: IsChangeableOnEnter, Type: Bool}
+  FollowIgniteToBonePos:
+    DynamicInstParams:
+    - {Name: IgniteHandle, Type: BaseProcHandle}
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: BoneName, Type: String}
+    - {Name: LocalOffSetX, Type: Float}
+    - {Name: LocalOffSetY, Type: Float}
+    - {Name: LocalOffSetZ, Type: Float}
+    - {Name: MemoryPartsName, Type: String}
+    - {Name: IsIgnitePosYZero, Type: Bool}
+    - {Name: AngSpd, Type: Float}
+    - {Name: ASName, Type: String}
+    - {Name: IsJumpType, Type: Bool}
+    - {Name: IsChangeable, Type: Bool}
   FollowIgniteToSelfPos:
     DynamicInstParams:
     - {Name: IgniteHandle, Type: BaseProcHandle}
@@ -14762,6 +16319,8 @@ Actions:
     - {Name: PinColorIdx, Type: Int}
     TriggerAction: true
   ForceMasterSwordFakeMode: {TriggerAction: true}
+  ForceOffMagneGrabbed: {TriggerAction: true}
+  ForceOpenMainScreen: {TriggerAction: true}
   ForceRagdollOffFreeze:
     AITreeVariables:
     - {Name: CRBOffsetUnit, Type: AITreeVariablePointer}
@@ -14790,6 +16349,7 @@ Actions:
     - {Name: UniqueName, Type: String}
     - {Name: AnchorName, Type: String}
     TriggerAction: true
+  ForceSystemFadeOut: ''
   ForestGiantWakeUp:
     StaticInstParams:
     - {Name: ASKeyName, Type: String}
@@ -14804,6 +16364,26 @@ Actions:
     - {Name: Timer, Type: Int}
     - {Name: IsChangeable, Type: Bool}
     - {Name: EndState, Type: Int}
+  ForkAITreeVariableMove:
+    AITreeVariables:
+    - Name: DestinationPos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - Name: FacePos
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    - {Name: TargetSpeed, Type: Float, Value: -1.0}
+    - {Name: IsArrivedAtDestination, Type: Bool, Value: false}
+    - {Name: IsActive, Type: Bool, Value: true}
+    - {Name: KeepDistFromGround, Type: Float, Value: -1.0}
+    StaticInstParams:
+    - {Name: IsChangeable, Type: Bool}
+    - {Name: IsSuccessEndOnArrive, Type: Bool}
+    - {Name: ArrivedRadius, Type: Float}
+    - {Name: TargetSpeed, Type: Float}
+    - {Name: RotSlerpRate, Type: Float}
+    - {Name: IsKeepDistFromGround, Type: Bool}
+    - {Name: KeepDistFromGround, Type: Float}
   ForkASHoldLegTurn:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -15462,6 +17042,9 @@ Actions:
     StaticInstParams:
     - {Name: ASName, Type: String}
     - {Name: TargetPartType, Type: Int}
+  ForkGravityScaleChange:
+    StaticInstParams:
+    - {Name: Scale, Type: Float}
   ForkHoldWeapon:
     StaticInstParams:
     - {Name: WeaponIdx, Type: Int}
@@ -15897,6 +17480,16 @@ Actions:
     - {Name: WaitFrameRand, Type: Int}
     - {Name: IsChangeable, Type: Bool}
     - {Name: EndState, Type: Int}
+  ForkToggleFreeMoving:
+    StaticInstParams:
+    - {Name: EnterChoice, Type: Int}
+    - {Name: LeaveChoice, Type: Int}
+  ForkTogglePriestBossFreeMoving:
+    StaticInstParams:
+    - {Name: SetFreeMoving, Type: Bool}
+  ForkToggleWeaponXLinkSleep:
+    StaticInstParams:
+    - {Name: Toggle, Type: Int}
   ForkTurnASHold:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -16864,6 +18457,14 @@ Actions:
     StaticInstParams:
     - {Name: Time, Type: Int}
     - {Name: KeepTime, Type: Int}
+  GroupAllowEmitAction:
+    DynamicInstParams:
+    - {Name: GroupName, Type: String}
+    TriggerAction: true
+  GroupDisallowEmitAction:
+    DynamicInstParams:
+    - {Name: GroupName, Type: String}
+    TriggerAction: true
   Guard:
     StaticInstParams:
     - {Name: RotSubsAngRate, Type: Float}
@@ -17165,6 +18766,12 @@ Actions:
     - {Name: OffsetRangeMinOutOfScreen, Type: Float}
     - {Name: OffsetRangeMaxOutOfScreen, Type: Float}
     - {Name: ASName, Type: String}
+  HingeMagneFixedRigid:
+    AITreeVariables:
+    - {Name: MagneStickLength, Type: Float, Value: 1.0}
+    - {Name: IsTargetFixedAcceptor, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: GrabbedMagneReleaseTime, Type: Float, Value: 1.0}
   HoldArrow:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -17687,6 +19294,12 @@ Actions:
     - {Name: ExtraOffset, Type: Vec3}
     - {Name: InWaterDepth, Type: Float}
   IceBroken: ''
+  IchigekiHeartDecrease:
+    DynamicInstParams:
+    - {Name: UseFrame, Type: Int}
+    - {Name: IsUseConstSpeed, Type: Int}
+  IchigekiHeartUiClose: {TriggerAction: true}
+  IchigekiHeartUiOpen: {TriggerAction: true}
   IdleAction:
     DynamicInstParams:
     - {Name: DisablePhysics, Type: Bool}
@@ -17788,6 +19401,10 @@ Actions:
     - {Name: Value, Type: Int}
     StaticInstParams:
     - {Name: ActorName, Type: String}
+  IncreaseNumHeroSeal:
+    DynamicInstParams:
+    - {Name: RelicPattern, Type: Int}
+    - {Name: Value, Type: Int}
   IncreaseNumKorokNuts:
     DynamicInstParams:
     - {Name: Value, Type: Int}
@@ -17996,6 +19613,10 @@ Actions:
     - {Name: CanKickArea, Type: Float}
     - {Name: RotSpeed, Type: Float}
   KillAllDemoSoundAction: {TriggerAction: true}
+  KillSelectActor:
+    DynamicInstParams:
+    - {Name: ActorName, Type: String}
+    - {Name: UniqueName, Type: String}
   KillUIScreenAction:
     DynamicInstParams:
     - {Name: ScreenName, Type: String}
@@ -18091,6 +19712,21 @@ Actions:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
     StaticInstParams:
+    - {Name: DistXZ, Type: Float}
+    - {Name: DistY, Type: Float}
+    - {Name: IsNormalizeAxisY, Type: Bool}
+    - {Name: SearchClosestPointRadius, Type: Float}
+    - {Name: WaitTime, Type: Int}
+    - {Name: TimeRand, Type: Int}
+    - {Name: IsUseChangePos, Type: Bool}
+    - {Name: EffectName, Type: String}
+    - {Name: IsLifeGageKeep, Type: Bool}
+    - {Name: IsLand, Type: Bool}
+  LandTeleportConsiderCameraDir:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: CameraDirCoeff, Type: Float}
     - {Name: DistXZ, Type: Float}
     - {Name: DistY, Type: Float}
     - {Name: IsNormalizeAxisY, Type: Bool}
@@ -18565,6 +20201,39 @@ Actions:
     - {Name: PosReduceRatio, Type: Float}
     - {Name: AngReduceRatio, Type: Float}
   MoonMove: ''
+  MotorcycleAppear:
+    StaticInstParams:
+    - {Name: HideFrames, Type: Float}
+    - {Name: ModelWarpEffectFrames, Type: Float}
+    - {Name: EndFrames, Type: Float}
+  MotorcycleDisappear:
+    DynamicInstParams:
+    - {Name: DisappearEffectName, Type: String}
+    StaticInstParams:
+    - {Name: ModelWarpEffectFrames, Type: Float}
+  MotorcycleRiddenByPlayer:
+    StaticInstParams:
+    - {Name: RideOnDelayFrames, Type: Float}
+    - {Name: FallThresholdForThrowOff, Type: Float}
+    - {Name: CrashVelocityDeltaThreshold, Type: Float}
+    - {Name: ChargeVelocityThreshold, Type: Float}
+    - {Name: DriftCutGrassRange, Type: Float}
+    - {Name: DriftCutGrassIntensity, Type: Float}
+    - {Name: CutLowTreeVelocityThreshold, Type: Float}
+    - {Name: CutLowTreeVelocitySize, Type: Float}
+    - {Name: TerrorVelocityThreshold1, Type: Float}
+    - {Name: TerrorVelocityThreshold2, Type: Float}
+    - {Name: TerrorVelocityThreshold3, Type: Float}
+    - {Name: TerrorVelocityThreshold4, Type: Float}
+    - {Name: TerrorRadius, Type: Float}
+    - {Name: TerrorOffsetDistanceSec, Type: Float}
+    - {Name: AttackChargeBoneOffset, Type: Vec3}
+    - {Name: ForbidSpinturnAngleRange, Type: Float}
+    - {Name: PermitManualWheelieAngleRange, Type: Float}
+    - {Name: CrashVelocityThreshold, Type: Float}
+  MotorcycleWait: ''
+  MotorcycleWaitForEvent: ''
+  MotorcycleWaitUntilFellOver: ''
   Move2HomePos:
     DynamicInstParams:
     - {Name: DynMoveDis, Type: Float}
@@ -18642,6 +20311,13 @@ Actions:
     - {Name: MaxHeight, Type: Float}
     - {Name: TimeScale, Type: Float}
     - {Name: IsDebugDrawTargetPos, Type: Bool}
+  MoveToTargetDir:
+    DynamicInstParams:
+    - {Name: FrontDir, Type: Vec3}
+    - {Name: DynTargetPos, Type: Vec3}
+    - {Name: DynStartPos, Type: Vec3}
+    MapUnitInstParams:
+    - {Name: RailMoveSpeed, Type: Float, Value: 0.10000000149011612}
   MoveWithAS:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -19136,10 +20812,12 @@ Actions:
     - {Name: BaseRotRatio, Type: Float}
     - {Name: FinRadius, Type: Float}
     - {Name: WeaponIdx, Type: Int}
+  NoAutoPlacementEnemyDeadlyQuest: {TriggerAction: true}
   NoCountDead:
     StaticInstParams:
     - {Name: IsFadeout, Type: Bool}
   NoDeleteCurrentActor: {TriggerAction: true}
+  NotStopXLinkWithDemoVisibleOff: ''
   Notice:
     StaticInstParams:
     - {Name: PosReduceRatio, Type: Float}
@@ -19215,6 +20893,7 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: TargetIdx, Type: Int}
     - {Name: SeqBankIdx, Type: Int}
+  ObjBoardWoodTriangle01: ''
   ObservationPointAction:
     MapUnitInstParams:
     - {Name: PointName, Type: String, Value: default}
@@ -19283,6 +20962,7 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: TargetIdx, Type: Int}
     - {Name: SeqBankIdx, Type: Int}
+  OkAutoPlacementEnemyDeadlyQuest: {TriggerAction: true}
   'On':
     StaticInstParams:
     - {Name: LinkTagType, Type: Int}
@@ -19387,9 +21067,28 @@ Actions:
     - {Name: SubMstxt, Type: String}
     StaticInstParams:
     - {Name: Mstxt, Type: String}
+  OpenDungeonSmallTitleSetLabel:
+    DynamicInstParams:
+    - {Name: SubMstxt, Type: String}
+    - {Name: LabelName, Type: String}
+    StaticInstParams:
+    - {Name: Mstxt, Type: String}
   OpenDungeonTitle:
     DynamicInstParams:
     - {Name: SubMstxt, Type: String}
+    StaticInstParams:
+    - {Name: Mstxt, Type: String}
+  OpenDungeonTitleSetLabel:
+    DynamicInstParams:
+    - {Name: SubMstxt, Type: String}
+    - {Name: LabelName, Type: String}
+    StaticInstParams:
+    - {Name: Mstxt, Type: String}
+  OpenEnduranceFloorNumber:
+    DynamicInstParams:
+    - {Name: SubMstxt, Type: String}
+    - {Name: LabelName, Type: String}
+    - {Name: GameDataIntFloorNum, Type: String}
     StaticInstParams:
     - {Name: Mstxt, Type: String}
   OpenGetDemoDialog:
@@ -19838,6 +21537,8 @@ Actions:
     - {Name: SteppingFoot, Type: String}
     - {Name: Speed, Type: String}
     TriggerAction: true
+  PlayerEquipHaveMasterSword: ''
+  PlayerEquipNearMasterSword: {TriggerAction: true}
   PlayerEventStartWait: ''
   PlayerFall:
     StaticInstParams:
@@ -20168,6 +21869,7 @@ Actions:
     - {Name: DecSpdDist, Type: Float}
     - {Name: DecStickValue, Type: Float}
     - {Name: ForceTurnDist, Type: Float}
+  PlayerReleaseMasterSowrd: {TriggerAction: true}
   PlayerRemainsBlow:
     StaticInstParams:
     - {Name: InitSpeed, Type: Float}
@@ -20497,6 +22199,174 @@ Actions:
     - {Name: IsReuseBullet, Type: Bool}
     - {Name: SeqBank, Type: Int}
     - {Name: TargetBone, Type: Int}
+  PriestBossAimBeam:
+    DynamicInstParams:
+    - {Name: AimTargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: TargetOffset, Type: Float}
+    - {Name: TargetOffsetY, Type: Float}
+    - {Name: FluctuationRange, Type: Float}
+    - {Name: FluctuationTime, Type: Float}
+    - {Name: FluctuationSpan, Type: Float}
+    - {Name: NodeName, Type: String}
+    - {Name: NodeOffset, Type: Vec3}
+    - {Name: AimMaxLength, Type: Float}
+    - {Name: AimLockFrame, Type: Int}
+    - {Name: AimOffToTarget, Type: Bool}
+  PriestBossAimBeamWithAS:
+    DynamicInstParams:
+    - {Name: AimTargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: ASName, Type: String}
+    - {Name: TargetOffset, Type: Float}
+    - {Name: TargetOffsetY, Type: Float}
+    - {Name: FluctuationRange, Type: Float}
+    - {Name: FluctuationTime, Type: Float}
+    - {Name: FluctuationSpan, Type: Float}
+    - {Name: NodeName, Type: String}
+    - {Name: NodeOffset, Type: Vec3}
+    - {Name: AimMaxLength, Type: Float}
+    - {Name: AimLockFrame, Type: Int}
+    - {Name: AimOffToTarget, Type: Bool}
+  PriestBossBeamMove:
+    MapUnitInstParams:
+    - {Name: AttackPower, Type: Int, Value: 0}
+    - {Name: AttackPowerForPlayer, Type: Int, Value: -1}
+    - Name: PosOffset
+      Type: Vec3
+      Value: [0.0, 0.0, 0.0]
+    StaticInstParams:
+    - {Name: AtMinDamage, Type: Int}
+    - {Name: ShieldDamage, Type: Int}
+    - {Name: ReflectDeccel, Type: Float}
+    - {Name: ContactWaitFrame, Type: Int}
+  PriestBossBlownOff:
+    AITreeVariables:
+    - {Name: CRBOffsetUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: AddTime, Type: Int}
+    - {Name: LifeReflexRatio, Type: Float}
+    - {Name: ImpulseRatio, Type: Float}
+    - {Name: ASName, Type: String}
+    - {Name: Time, Type: Int}
+    - {Name: PosBaseRagdollRbName, Type: String}
+    - {Name: DownBackCtrlOffset, Type: Vec3}
+    - {Name: DownFrontCtrlOffset, Type: Vec3}
+    - {Name: WeaponDropSpeedXZ, Type: Float}
+    - {Name: WeaponDropSpeedY, Type: Float}
+    - {Name: InWaterDownTime, Type: Int}
+    - {Name: IsWaitAS, Type: Bool}
+    - {Name: ForceFinishTime, Type: Int}
+    - {Name: StableASName, Type: String}
+    - {Name: IsItemDrop, Type: Bool}
+    - {Name: OnGroundDownTime, Type: Int}
+    - {Name: GetUpGroundAngle, Type: Float}
+    - {Name: ForceEndWaterDepth, Type: Float}
+    - {Name: IsCheckVibrate, Type: Bool}
+    - {Name: StartUpdateFriction, Type: Int}
+  PriestBossClonesSpawn:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: DelayFrame, Type: Int}
+    - {Name: ASName, Type: String}
+    - {Name: Offset, Type: Vec3}
+    - {Name: DurationFrame, Type: Int}
+    - {Name: DecelerationFrame, Type: Int}
+    StaticInstParams:
+    - {Name: ASNameForAITree, Type: String}
+  PriestBossClonesSpawnForDemo:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: ASName, Type: String}
+    - {Name: Offset, Type: Vec3}
+    - {Name: DurationFrame, Type: Int}
+    - {Name: DecelerationFrame, Type: Int}
+  PriestBossFastWarpMove:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    - {Name: MoveDstPos, Type: Vec3}
+    - {Name: AfterImage0Pos, Type: Vec3}
+    - {Name: AfterImage1Pos, Type: Vec3}
+    - {Name: CurrentFrame, Type: Float}
+    - {Name: IsCloseMove, Type: Bool}
+    StaticInstParams:
+    - {Name: AfterImage0AppearFrame, Type: Float}
+    - {Name: AfterImage1AppearFrame, Type: Float}
+    - {Name: AppearFrame, Type: Float}
+    - {Name: ASName, Type: String}
+  PriestBossMove:
+    DynamicInstParams:
+    - {Name: MoveTargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: ASName, Type: String}
+    - {Name: Speed, Type: Float}
+    - {Name: AccRatio, Type: Float}
+    - {Name: InitRotSpd, Type: Float}
+    - {Name: AccRotSpd, Type: Float}
+    - {Name: MaxRotSpd, Type: Float}
+    - {Name: FinRadius, Type: Float}
+    - {Name: FinRotate, Type: Float}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: FollowGround, Type: Bool}
+    - {Name: WallHitLimitTime, Type: Int}
+    - {Name: FrontCliffDistance, Type: Float}
+    - {Name: FrontCliffAngle, Type: Float}
+    - {Name: MoveAngCliffLimitTime, Type: Int}
+    - {Name: IgnoreLastCurve, Type: Bool}
+    - {Name: IgnoreDecelerationFrontCliff, Type: Bool}
+    - {Name: IgnoreMoveDirCoHit, Type: Bool}
+    - {Name: JumpUpSpeedReduceRatio, Type: Float}
+    - {Name: NotMoveLimitTime, Type: Int}
+    - {Name: NotMoveDistanceThreshold, Type: Float}
+  PriestBossShadowCloneVanish:
+    AITreeVariables:
+    - {Name: PriestBossMetaAIUnit, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: DelayFrames, Type: Float}
+  PriestBossSideMove:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: ASName, Type: String}
+    - {Name: IsIgnoreSame, Type: Bool}
+    - {Name: RotDir, Type: Int}
+    - {Name: Speed, Type: Float}
+    - {Name: RotSpd, Type: Float}
+    - {Name: FinRadius, Type: Float}
+    - {Name: FinRotate, Type: Float}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: BaseRotRatio, Type: Float}
+    - {Name: FollowGround, Type: Bool}
+    - {Name: WallHitLimitTime, Type: Int}
+    - {Name: MoveAngCliffLimitTime, Type: Int}
+    - {Name: AccRatio, Type: Float}
+    - {Name: IgnoreLastCurve, Type: Bool}
+    - {Name: IgnoreDecelerationFrontCliff, Type: Bool}
+    - {Name: IgnoreMoveDirCoHit, Type: Bool}
+    - {Name: JumpUpSpeedReduceRatio, Type: Float}
+  PriestBossSlowWarpMove:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: ASName, Type: String}
+    - {Name: Speed, Type: Float}
+    - {Name: RotSpd, Type: Float}
+    - {Name: FinRadius, Type: Float}
+    - {Name: FinRotate, Type: Float}
+    - {Name: WeaponIdx, Type: Int}
+    - {Name: BaseRotRatio, Type: Float}
+    - {Name: FollowGround, Type: Bool}
+    - {Name: WallHitLimitTime, Type: Int}
+    - {Name: MoveAngCliffLimitTime, Type: Int}
+    - {Name: AccRatio, Type: Float}
+    - {Name: IgnoreLastCurve, Type: Bool}
+    - {Name: IgnoreDecelerationFrontCliff, Type: Bool}
+    - {Name: IgnoreMoveDirCoHit, Type: Bool}
+    - {Name: JumpUpSpeedReduceRatio, Type: Float}
   Puddle: ''
   PullOut:
     DynamicInstParams:
@@ -20609,7 +22479,7 @@ Actions:
   RemainsElectricWeakPointWait: ''
   RemainsFireDroneRailMove:
     AITreeVariables:
-    - {Name: TargetSpeed, Type: Float, Value: 0.0}
+    - {Name: TargetSpeed, Type: Float, Value: -1.0}
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
     StaticInstParams:
@@ -20793,6 +22663,7 @@ Actions:
     - {Name: IsCheckCreateParent, Type: Bool}
     - {Name: IsCheckBulletAttacker, Type: Bool}
     - {Name: IsCheckBulletHolder, Type: Bool}
+  ReviveEnemies: {TriggerAction: true}
   RideHorse:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
@@ -20879,6 +22750,10 @@ Actions:
     - {Name: IgnoreDecelerationFrontCliff, Type: Bool}
     - {Name: IgnoreMoveDirCoHit, Type: Bool}
     - {Name: JumpUpSpeedReduceRatio, Type: Float}
+  SSMagneStickAcceptorAccept: ''
+  SSMagneStickAcceptorReject: ''
+  SandwichDetectionAreaTag: ''
+  SandwichDetectionAreaTagSimple: ''
   SandwormASPlay:
     StaticInstParams:
     - {Name: ASName, Type: String}
@@ -21083,6 +22958,7 @@ Actions:
     DynamicInstParams:
     - {Name: ChallengeName, Type: String}
     TriggerAction: true
+  SetChemicalWeaponPower: ''
   SetComebackPosition:
     MapUnitInstParams:
     - {Name: AngleY, Type: Float, Value: 0.0}
@@ -21108,6 +22984,9 @@ Actions:
     - {Name: IsDisplayEx, Type: Bool}
     TriggerAction: true
   SetEnableRayHit: ''
+  SetEnableWaterHit:
+    StaticInstParams:
+    - {Name: WaterHit, Type: Bool}
   SetEnterDungeonFlag: {TriggerAction: true}
   SetExtraEnergyOfPlayer:
     DynamicInstParams:
@@ -21160,6 +23039,7 @@ Actions:
     DynamicInstParams:
     - {Name: ASName, Type: String}
     TriggerAction: true
+  SetPlayerDrawingSword: {TriggerAction: true}
   SetPlayerStateToUnequipAndWait: {TriggerAction: true}
   SetQuestStepAction:
     DynamicInstParams:
@@ -22294,6 +24174,8 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: PosReduceRatio, Type: Float}
     - {Name: AngReduceRatio, Type: Float}
+  StopAllDemoSoundAction: ''
+  StopChargeChemicalWeaponPower: {TriggerAction: true}
   StopCliffTongueAttack:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -22787,6 +24669,21 @@ Actions:
     StaticInstParams:
     - {Name: DistXZ, Type: Float}
     - {Name: DistY, Type: Float}
+    - {Name: WaitTime, Type: Int}
+    - {Name: TimeRand, Type: Int}
+    - {Name: IsUseChangePos, Type: Bool}
+    - {Name: EffectName, Type: String}
+    - {Name: IsLifeGageKeep, Type: Bool}
+    - {Name: IsLand, Type: Bool}
+  TeleportForceApperPosition:
+    DynamicInstParams:
+    - {Name: AppearPosition, Type: Vec3}
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: HideEffectName, Type: String}
+    - {Name: IsArriveAtTarget, Type: Bool}
+    - {Name: ArriveAtTargetRange, Type: Float}
+    - {Name: ArriveAtTargetTimeOut, Type: Int}
     - {Name: WaitTime, Type: Int}
     - {Name: TimeRand, Type: Int}
     - {Name: IsUseChangePos, Type: Bool}
@@ -23287,6 +25184,10 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: PosReduceRatio, Type: Float}
     - {Name: AngReduceRatio, Type: Float}
+  WarpEffectValueSetter:
+    DynamicInstParams:
+    - {Name: SetFrame, Type: Float}
+    - {Name: ChangeType, Type: Int}
   WarpMyHorse:
     DynamicInstParams:
     - {Name: PositionX, Type: Float}
@@ -23326,12 +25227,19 @@ Actions:
     DynamicInstParams:
     - {Name: UniqueName, Type: String}
     - {Name: AnchorName, Type: String}
+  WarpPlayerToAnchorGimmickReset:
+    MapUnitInstParams:
+    - {Name: AnchorName, Type: String, Value: StartPos}
+    - {Name: AnchorUniqueName, Type: String, Value: default}
+    StaticInstParams:
+    - {Name: WaitFrameAfterReset, Type: Float}
   WarpPlayerToDestination:
     DynamicInstParams:
     - {Name: DestinationX, Type: Float}
     - {Name: DestinationY, Type: Float}
     - {Name: DestinationZ, Type: Float}
     - {Name: DirectionY, Type: Float}
+  WarpPlayerToReferenceAnchor: ''
   WarpToActor:
     DynamicInstParams:
     - {Name: ActorName, Type: String}
@@ -23481,6 +25389,9 @@ Actions:
     - {Name: FloatCycleTime, Type: Float}
     - {Name: ChangeDepthSpeed, Type: Float}
     - {Name: IsCheckWaterFall, Type: Bool}
+  WaterSurfaceModelOnly:
+    MapUnitInstParams:
+    - {Name: FlowSpeedFactor, Type: Float, Value: 1.0}
   WaterSurfaceMove:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -23578,6 +25489,18 @@ Actions:
     - {Name: MinMoveXZ, Type: Float}
     - {Name: GravityScale, Type: Float}
   WindControl:
+    StaticInstParams:
+    - {Name: Radius, Type: Float}
+    - {Name: MaxSpeed, Type: Float}
+    - {Name: TargetNodeName, Type: String}
+    - {Name: MaxRadSpeed, Type: Float}
+    - {Name: RadAccel, Type: Float}
+    - {Name: UseEnvTemperature, Type: Bool}
+    - {Name: Temperature, Type: Float}
+    - {Name: IsModelControlOnly, Type: Bool}
+  WindControlLength:
+    MapUnitInstParams:
+    - {Name: WindLength, Type: Float, Value: 1.0}
     StaticInstParams:
     - {Name: Radius, Type: Float}
     - {Name: MaxSpeed, Type: Float}
@@ -23709,6 +25632,10 @@ Actions:
     - {Name: ELinkKey, Type: String}
     - {Name: SLinkKey, Type: String}
     - {Name: IsTargetDemoSLinkUser, Type: Bool}
+    TriggerAction: true
+  XLinkEventEnable:
+    DynamicInstParams:
+    - {Name: IsEnable, Type: Bool}
     TriggerAction: true
   XLinkEventFadeAction:
     DynamicInstParams:
@@ -23962,6 +25889,10 @@ Behaviors:
     - {Name: ActorName, Type: String}
     - {Name: Offset, Type: Vec3}
     - {Name: IsNoSystemDelete, Type: Bool}
+  CurseGanonBGMApplyLPF:
+    CalcTiming: AIAfter
+    StaticInstParams:
+    - {Name: LPF, Type: Float}
   CutGrass:
     CalcTiming: AIAfter
     StaticInstParams:
@@ -23988,6 +25919,10 @@ Behaviors:
     StaticInstParams:
     - {Name: WeakPointIdx, Type: Int}
   DisableSkipCalcCloth: {CalcTiming: AIAfter}
+  DisableWeakPointActor:
+    CalcTiming: AIAfter
+    StaticInstParams:
+    - {Name: WeakPointKey, Type: String}
   ElevatorBaseEmitPassingSe: {CalcTiming: AIAfter}
   EmitCreateDeleteEffect:
     CalcTiming: ChangeDeleteState
@@ -24444,6 +26379,12 @@ Behaviors:
     CalcTiming: AIAfter
     StaticInstParams:
     - {Name: Impulse, Type: Float}
+  PriestBossUrbosasFuryEShock:
+    AITreeVariables:
+    - {Name: PriestBossUrbosasFuryEShock, Type: Bool, Value: false}
+    CalcTiming: AIAfter
+    StaticInstParams:
+    - {Name: ElectricShock, Type: Bool}
   RagdollSmallDamageIdxChanger:
     CalcTiming: AIAfter
     StaticInstParams:
@@ -24630,6 +26571,10 @@ Behaviors:
     - {Name: RotOffsetMax, Type: Vec3}
     - {Name: RotOffsetMin, Type: Vec3}
   SetMotionType: {CalcTiming: AIAfter, NoStop: true}
+  SetNoReactionDCCallBack:
+    CalcTiming: AIAfter
+    StaticInstParams:
+    - {Name: Timing, Type: Int}
   SetNoWeakHitReactionDCCallBack:
     CalcTiming: AIAfter
     StaticInstParams:
@@ -24954,6 +26899,7 @@ Querys:
     - {Name: IncludePorchMainMat, Type: Bool}
     - {Name: IncludePorchSubMat, Type: Bool}
   CanMarkMapPin: ''
+  Check100EnemyActiveTiming: ''
   CheckActorAction:
     DynamicInstParams:
     - {Name: ActionName, Type: String}
@@ -24971,6 +26917,7 @@ Querys:
     - {Name: PostAreaNo, Type: Int}
     StaticInstParams:
     - {Name: CheckDistFront, Type: Float}
+  CheckBalladOfHeroActiveTiming: ''
   CheckContainerItem:
     DynamicInstParams:
     - {Name: PorchItemName, Type: String}
@@ -24982,7 +26929,11 @@ Querys:
   CheckCurrentMap:
     DynamicInstParams:
     - {Name: MapName, Type: String}
+  CheckCurseRRetryEverOnce:
+    DynamicInstParams:
+    - {Name: CurseRType, Type: Int}
   CheckDeadHorseResistered: ''
+  CheckDeadlyQuestEscapeTiming: ''
   CheckDieCnt:
     DynamicInstParams:
     - {Name: ActorName, Type: String}
@@ -25076,6 +27027,7 @@ Querys:
   CheckItemShopPorchVacancy: ''
   CheckItemShopSelect: ''
   CheckItemShopSelectBuy: ''
+  CheckJustBeforeEventCancel: ''
   CheckLastDamageAttacker:
     DynamicInstParams:
     - {Name: Name, Type: String}
@@ -25083,6 +27035,7 @@ Querys:
   CheckMapArea:
     DynamicInstParams:
     - {Name: MapAreaName, Type: String}
+  CheckMasterSwordState: ''
   CheckMaterialValue: ''
   CheckMiniGameTime:
     DynamicInstParams:
@@ -25200,6 +27153,13 @@ Querys:
   ComparePlayerOriginalHeart:
     DynamicInstParams:
     - {Name: Threshold, Type: Int}
+  CountFlag4:
+    DynamicInstParams:
+    - {Name: GameDataFlagNo0, Type: String}
+    - {Name: GameDataFlagNo1, Type: String}
+    - {Name: GameDataFlagNo2, Type: String}
+    - {Name: GameDataFlagNo3, Type: String}
+    - {Name: GameDataFlagNo4, Type: String}
   DummyQuery: ''
   EnemyDieCheck: ''
   EnemyRestLifeRate:
@@ -25246,8 +27206,10 @@ Querys:
   IsArrow: {SystemQuery: true}
   IsAwakened: ''
   IsBow: {SystemQuery: true}
+  IsCurrentAocFieldStage: ''
   IsCurrentCDungeonStage: ''
   IsCurrentMainFieldDungeonStage: ''
+  IsCurrentMainFieldStage: ''
   IsEquipedDyedArmor: ''
   IsEquippedEnableDye: ''
   IsEquippedWithLowerBody: ''

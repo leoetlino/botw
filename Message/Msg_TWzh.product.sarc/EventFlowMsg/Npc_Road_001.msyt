@@ -1,0 +1,1391 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: 那我買吧
+  "0001":
+    attributes: ""
+    contents:
+      - text: 那我賣吧
+  "0002":
+    attributes: ""
+    contents:
+      - text: 再見
+  "5500":
+    attributes: ""
+    contents:
+      - text: 好
+  "5501":
+    attributes: ""
+    contents:
+      - text: 不好
+  "5502":
+    attributes: ""
+    contents:
+      - text: 買
+  "5503":
+    attributes: ""
+    contents:
+      - text: 還是算了
+  "5507":
+    attributes: ""
+    contents:
+      - text: 全買了
+  "5508":
+    attributes: ""
+    contents:
+      - text: 全賣了
+  Atacked00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 14
+      - text: 可惡！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n身為保鑣，可不能死啊！"
+  Atacked01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 14
+      - text: 可惡！
+      - control:
+          kind: pause
+          length: short
+      - text: 該死的怪物，竟敢小看我……
+      - control:
+          kind: pause
+          length: long
+      - text: "\n別看我這樣，我好歹也是個保鑣！"
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 總之讓我瞧瞧吧！
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: 要賣
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 是嗎？
+      - control:
+          kind: pause
+          length: long
+      - text: "\n差不多是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: 謝啦！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n還有其他東西想賣嗎？"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: OK～！謝啦！
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: 謝啦！
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: 謝囉！
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: 這樣啊……
+      - control:
+          kind: pause
+          length: long
+      - text: OK～
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: 任何東西我都收購！
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: 任何東西我都收購喔！
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: 想賣點什麼看看嗎？
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: 有沒有想賣的東西啊？
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: 有中意的東西嗎？
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: 抱歉啊，這個現在已經賣完了。
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: 盧比不夠喔。
+      - control:
+          kind: pause
+          length: short
+      - text: "\n你別光看不買啦！"
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: 袋子已經滿啦。
+      - control:
+          kind: pause
+          length: short
+      - text: "\n看你要賣還是要丟，總之清出空間吧。"
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - text: 要買
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: 是嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: 俗話說有備無患！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n你挑得可真好！"
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: 要好好使用啊！
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: 假如是你，肯定能善用它的！
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: 你眼光真好啊！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n這東西總有一天會派上用場的！"
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 不好意思啊，全都是箭。
+      - control:
+          kind: pause
+          length: short
+      - text: "\n不過箭這種東西就是越多越好。"
+  Com_Talk_13:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "是嗎？\n你要賣我幾個？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "，\n總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: 這東西我不能收購，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n不好意思啊……"
+  Com_Talk_16:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: 身上的衣服，先脫下來再賣我！
+  Com_Talk_20:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: 這種天氣還出來冒險，真是佩服！
+      - control:
+          kind: pause
+          length: short
+      - text: "\n機會難得，就多賣你一點箭吧！"
+  Com_Talk_30:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "，\n總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: ""
+    contents:
+      - text: 要買
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 是嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n需要幾個？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - text: 要賣1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 是嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 喔！
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: 買下所有的
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 是嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個總共是
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 全賣掉是嗎？
+      - control:
+          kind: pause
+          length: long
+      - text: "\n我總共用"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 收購，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: 這是最後的貨了。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n謝謝你買這麼多啊！"
+  Com_Talk_37:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: 今天我手上已經沒有箭了。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n要看看預定進貨的箭嗎？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: ""
+    contents:
+      - text: 只買1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 是嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Failed00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: 就算我是保鑣，只憑一個人也太勉強了！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n真希望你早點來幫我……"
+  Failed01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: 痛痛痛……
+      - control:
+          kind: pause
+          length: short
+      - text: 憑我一個人，實在無法討伐怪物！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n要是你也和我一起戰鬥就好了……"
+  GoodBye00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: OK～！
+      - control:
+          kind: pause
+          length: short
+      - text: 再會啦！
+  Guardian00:
+    attributes: Npc_Road_027
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 22
+      - text: 快逃！
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 守護者
+      - control:
+          kind: reset_colour
+      - text: 要來了！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n那可不是你能對付的對手！"
+  MSG_Bado_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: ……你說我嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: 問我在做什麼？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n我正在巡邏，看看有沒有奇怪的傢伙！"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這裡是海拉魯平原的西南方，"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n這一帶怪物很多，要多加小心啊！"
+  MSG_Bado_00_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 我正在巡邏，看看有沒有奇怪的傢伙！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n這一帶怪物很多，要多加小心啊！"
+  MSG_Bado_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: 很久以前，這附近有座競技場。
+      - control:
+          kind: pause
+          length: short
+      - text: "\n現在那裡已經淪為怪物棲息的廢墟！\n哎，就某種意義而言，"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n現在那也算是人類與怪物的競技場吧！"
+  MSG_Bado_01_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 很久以前，這附近有座競技場，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n現在那裡已淪為怪物棲息的廢墟！"
+  MSG_Bado_02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: 我問你……
+      - control:
+          kind: pause
+          length: long
+      - text: "\n你知道「"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: 」嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n聽說他會在這裡西北方的薩托利山出沒……"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n話說回來，「"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: 」到底是什麼啊？
+  MSG_Bado_02_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 你知道「
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: 」嗎？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n聽說他會在這裡西北方的薩托利山出沒喔！"
+  MSG_Bado_03:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: 大家都說驛站的北邊一帶比較安全，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n但就算這樣，也不能疏於巡邏！"
+  MSG_Bado_03_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 就算大家都說安全，也不能疏於巡邏，
+      - control:
+          kind: pause
+          length: long
+      - text: "\n這才是所謂的保鑣！"
+  MSG_Bado_04:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "聽說這前方，靠海拉魯丘陵這面的薩托利山裡，\n有所謂的「"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: "」在……\n那一帶平常幾乎沒有動物出沒……"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n但只要「"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: "」出現，動物似乎就會聚集而來。\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 不過那個叫「
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: 」的，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n到底是什麼啊！？"
+  MSG_Bado_04_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "這前方的薩托利山一帶\n平常幾乎沒有動物出沒……\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: 但只要「
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 霸主
+      - control:
+          kind: reset_colour
+      - text: 」出現，動物似乎就會聚集而來。
+  Near00:
+    attributes: Npc_Road_001
+    contents:
+      - text: 好了，巡邏巡邏……
+  Near01:
+    attributes: Npc_Road_001
+    contents:
+      - text: 保護旅行者的安全……
+  Near02:
+    attributes: Npc_Road_001
+    contents:
+      - text: 天就快要暗了……
+  Near03:
+    attributes: Npc_Road_001
+    contents:
+      - text: 夜間巡邏……
+  Near04:
+    attributes: Npc_Road_001
+    contents:
+      - text: 下雨啦！
+  Rest_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 難道說，你和我一樣都是保鑣嗎？
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n你雖是個旅行者，卻有著跟我相同的味道啊。"
+  Rest_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 雨會遮蔽視線，分散注意力。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n在不熟悉的土地上晃蕩，可是很危險的！"
+  Rest_02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 雨會遮蔽視線，分散注意力。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n你要不要也在這裡躲一下雨呢？"
+  RetMSG_Bado_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: 喂，
+      - control:
+          kind: pause
+          length: short
+      - text: 一個人落單是很危險的喔！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n沙漠一帶有許多強大的怪物。\n若你堅持要去的話，就準備好武器。"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n自己保護好自己吧。"
+  RetMSG_Bado_00_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 沙漠一帶有許多強大的怪物喔。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n若你堅持要去的話，就自己保護好自己吧。"
+  RetMSG_Bado_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: 這前方就是東之岩山了，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n它的背面有座古代的"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 競技場遺跡
+      - control:
+          kind: reset_colour
+      - text: "……\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: 但那裡如今已成了怪物盤據的可怕廢墟。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n除了想搜刮武器的盜賊外，沒人會接近。"
+  RetMSG_Bado_01_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 位於東之岩山背面的古代
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 競技場遺跡
+      - control:
+          kind: reset_colour
+      - text: "，\n如今已經成了怪物盤據的可怕廢墟。"
+  RetMSG_Bado_02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 從驛站前的山崖可以看見
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 海拉魯城堡
+      - control:
+          kind: reset_colour
+      - text: 的遺跡吧？
+      - control:
+          kind: pause
+          length: long
+      - text: "\n聽說裡頭藏著傳說級的武器，\n而且數量還不少……"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n聽好了！"
+      - control:
+          kind: pause
+          length: long
+      - text: 那裡非常危險，所以絕對不能去找喔！
+  RetMSG_Bado_02_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 據說
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 海拉魯城堡的遺跡
+      - control:
+          kind: reset_colour
+      - text: 裡藏著傳說級的武器，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n但那裡非常危險，所以絕對不能去找喔！"
+  RetMSG_Bado_03:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 自從塔伴隨著地震出現之後，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n你不覺得怪物的數量也逐漸增加了嗎？\n若想繼續旅行，就準備好武器和裝備，"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n自己保護好自己吧！"
+  RetMSG_Bado_03_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 若想繼續旅行，就準備好武器和裝備，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n自己保護好自己吧！"
+  RetMSG_Bado_04:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: 我說你，想去
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 利特村
+      - control:
+          kind: reset_colour
+      - text: 對吧？
+      - control:
+          kind: pause
+          length: long
+      - text: "\n那就順著路往北！朝"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: pause
+          length: short
+      - text: 塔邦撻邊境
+      - control:
+          kind: reset_colour
+      - text: "走！\n不過，如果你不想碰到守護者，"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n從東邊繞路或許比較明智喔！"
+  RetMSG_Bado_04_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 想去
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 利特村
+      - control:
+          kind: reset_colour
+      - text: 的話，就順著路往北！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n從"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 塔邦撻邊境
+      - control:
+          kind: reset_colour
+      - text: "過去是最近的。\n不過，那一帶有守護者出沒，"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n從東邊繞路或許比較明智喔！"
+  SavedLv1_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: 你還挺有本事的嘛。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n雖然還比不上我這樣高強的保鑣啦。"
+  SavedLv1_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: 我看了看狀況，
+      - control:
+          kind: pause
+          length: long
+      - text: "\n你還挺有本事的嘛。"
+  SavedLv2_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: 受……
+      - control:
+          kind: pause
+          length: short
+      - text: 受你幫忙的事，還請保密啊。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n再怎麼說，我好歹也是保鑣……"
+  SavedLv2_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: 我……
+      - control:
+          kind: pause
+          length: short
+      - text: 我可沒有因為怪物而畏縮！
+      - control:
+          kind: pause
+          length: long
+      - text: "\n再怎麼說，我好歹也是保鑣……"
+  SavedLv3_00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 21
+      - text: 也……
+      - control:
+          kind: pause
+          length: short
+      - text: 也就是說……
+      - control:
+          kind: pause
+          length: short
+      - text: 有命在才當得了保鑣！
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這次雖然被你所救，下次就換我救你啦！"
+  SavedLv3_01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: 我……
+      - control:
+          kind: pause
+          length: short
+      - text: 我雖然是保鑣，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n但保鑣或許也需要保鑣吧……"
+  Talk01:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: ……對了，
+      - control:
+          kind: pause
+          length: short
+      - text: 說個題外話，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n我最近在行商，兜售冒險用的裝備。"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n只當保鑣實在是養不起自己啊……"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk01_1:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: 凡事都要小心謹慎，以防萬一。
+      - control:
+          kind: pause
+          length: long
+      - text: "\n凡是冒險用的裝備，就交給我！"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: 準備齊全了嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Thanks00:
+    attributes: Npc_Road_001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: 哎……
+      - control:
+          kind: pause
+          length: short
+      - text: 還是得跟你道個謝。

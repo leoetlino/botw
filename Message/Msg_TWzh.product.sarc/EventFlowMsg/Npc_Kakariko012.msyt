@@ -1,0 +1,730 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0008":
+    attributes: ""
+    contents:
+      - text: 再見
+  "0011":
+    attributes: ""
+    contents:
+      - text: 請收購東西
+  "0012":
+    attributes: ""
+    contents:
+      - text: 珂拉精選？
+  "1000":
+    attributes: ""
+    contents:
+      - text: 買了！
+  "1001":
+    attributes: ""
+    contents:
+      - text: 算了
+  "5500":
+    attributes: ""
+    contents:
+      - text: 好
+  "5501":
+    attributes: ""
+    contents:
+      - text: 不好
+  "5503":
+    attributes: ""
+    contents:
+      - text: 還是算了
+  "5508":
+    attributes: ""
+    contents:
+      - text: 全賣了
+  ClerkAsk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: PlacedItemName
+      - control:
+          kind: reset_colour
+      - text: 是
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ！
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n很便宜吧～"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: 請問要出售什麼東西呢？
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: "的話……\n是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 是吧～
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: 我好高興！！得到好東西了！
+      - control:
+          kind: pause
+          length: longer
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: 太好了！我一直想要這個呢！
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "真幸運！\n我……一直想要這個呢！"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "沒想到會收購這麼多東西，\n讓我有點嚇到……謝謝利用！！！"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "是嗎……\n我很想要那個耶……"
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 能收的我都會盡量收購哦！
+      - control:
+          kind: pause
+          length: short
+      - text: "\n請別客氣，儘管開口吧！"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: 我會大肆收購哦～
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "就趁這個機會，\n將不要的東西全賣給本店吧！"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "請問還有其他東西嗎？\n我全都能收購哦！"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "是吧？\n要我收購多少個？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 的話……
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n那一共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "呃……不好意思。\n我對那個沒什麼興趣……"
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: 那是……你現在穿在身上的……衣服吧？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n唔……這樣本店可能無法收購哦。"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: 1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 的話……
+      - control:
+          kind: pause
+          length: short
+      - text: "\n那一共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: 要將
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "全出售是吧？\n那收購價算你……"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 的話是
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: "。\n如此優惠只能買了，你說對吧！？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 哎呀～真可惜……
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n是不受你的青睞嗎？"
+  FirstTalk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "歡迎～\n歡迎光臨傳統服飾店『忍杏亭』。"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n本店陳列的全是"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 珂拉精選
+      - control:
+          kind: reset_colour
+      - text: "的特殊服飾！\n\n尤其那邊的"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 潛行緊身服
+      - control:
+          kind: reset_colour
+      - text: "\n是本季的推薦商品！\n本店也可收購不要的物品，\n歡迎隨時前來利用哦～"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  FirstTalk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "歡迎～\n歡迎光臨傳統服飾店『忍杏亭』。"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n突然打赤膊跑進來，\n我還以為有變態上門了呢……\n本店陳列的全是"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 珂拉精選
+      - control:
+          kind: reset_colour
+      - text: "的特殊服飾！\n\n即使是像小哥這樣不修邊幅的人，\n本店的商品也能讓你大大滿足哦！\n尤其那邊的"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 潛行緊身服
+      - control:
+          kind: reset_colour
+      - text: "\n是本季的推薦商品！\n本店也可收購不要的物品，\n歡迎隨時前來利用哦～"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Near00:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: 要買衣服嗎？
+  Near01:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: 有不錯的衣服哦。
+  Near02:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: 晚安～
+  Talk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 歡迎隨時再來～
+  Talk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 本店陳列的全是
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 珂拉精選
+      - control:
+          kind: reset_colour
+      - text: "的特殊服飾！\n請慢慢看吧！"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk06:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "等等！\n我現在才發現東西全賣光了耶！"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "啊……不過這表示……\n我不用再工作……了吧？"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "呵呵……暫時就跟拉茲莉\n或奶奶去旅行吧～！"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk07:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 說到
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 珂拉精選
+      - control:
+          kind: reset_colour
+      - text: "，\n當然就是指"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 珂拉麗精選服飾
+      - control:
+          kind: reset_colour
+      - text: "啊。\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "那是我推薦的商品，\n真心誠意推薦哦！\n各類服飾各有豐富功能，\n也因為太豐富了，還請細細挑選！"
+  Talk08:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "謝謝～！\n肯定非常適合你哦～！！"
+  Talk14:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "還有其他需要嗎？\n請儘管開口！"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk17:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "謝謝～！\n你買到好東西了呢！"
+  Talk19:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "等店裡放假就出去走走吧……\n機會難得，就去找『愛之池』吧……"
+      - control:
+          kind: text_size
+          percent: 100
+  Talk20:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "在這裡就會覺得外地的東西很稀奇！\n我還想見識各種東西，歡迎隨時過來賣哦。"
+  Talk24:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "不中意嗎？\n那是忍杏亭限定販售的特殊服裝哦。\n穿上後不易發出腳步聲，\n在狩獵等活動的時候相當方便哦。\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "……不過，\n防禦力也因此弱了點啦。"
+      - control:
+          kind: text_size
+          percent: 100
+  Talk25:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "歡迎～\n歡迎光臨傳統服飾店『忍杏亭』。"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n尤其那邊的"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 潛行緊身服
+      - control:
+          kind: reset_colour
+      - text: "\n是本季的推薦商品！\n穿上後不易發出腳步聲，\n在狩獵等活動的時候相當方便哦。\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "……不過，\n防禦力也因此弱了點啦。"
+      - control:
+          kind: text_size
+          percent: 100
+  Talk26:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "謝謝～！\n我會再進貨的！"
+  Talk27:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "謝謝～！\n要珍惜地穿戴哦！"
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: 請住手！

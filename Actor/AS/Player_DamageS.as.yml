@@ -32,7 +32,7 @@ param_root: !list
         Element1: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 10, Child1: 19}
+            Children: !obj {Child0: 10, Child1: 20}
           lists:
             Extend: !list
               objects: {}
@@ -61,7 +61,7 @@ param_root: !list
         Element3: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 10, Child1: 19}
+            Children: !obj {Child0: 10, Child1: 20}
           lists:
             Extend: !list
               objects: {}
@@ -78,7 +78,7 @@ param_root: !list
         Element4: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 10, Child1: 19}
+            Children: !obj {Child0: 10, Child1: 20}
           lists:
             Extend: !list
               objects: {}
@@ -111,7 +111,7 @@ param_root: !list
         Element6: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 10, Child1: 19}
+            Children: !obj {Child0: 10, Child1: 20}
           lists:
             Extend: !list
               objects: {}
@@ -128,7 +128,7 @@ param_root: !list
         Element7: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 10, Child1: 19}
+            Children: !obj {Child0: 10, Child1: 20}
           lists:
             Extend: !list
               objects: {}
@@ -161,7 +161,7 @@ param_root: !list
         Element9: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 10, Child1: 19}
+            Children: !obj {Child0: 10, Child1: 20}
           lists:
             Extend: !list
               objects: {}
@@ -178,7 +178,7 @@ param_root: !list
         Element10: !list
           objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: true}
-            Children: !obj {Child0: 11, Child1: 18}
+            Children: !obj {Child0: 11, Child1: 19}
           lists:
             Extend: !list
               objects: {}
@@ -194,14 +194,15 @@ param_root: !list
         Element11: !list
           objects:
             Parameters: !obj {TypeIndex: 46, JudgeOnce: true}
-            Children: !obj {Child0: 12, Child1: 13}
+            Children: !obj {Child0: 12, Child1: 13, Child2: 14}
           lists:
             Extend: !list
               objects: {}
               lists:
                 StringArray: !list
                   objects:
-                    StringArray0: !obj {Value0: !str64 HorseRide, Value1: !str64 default}
+                    StringArray0: !obj {Value0: !str64 HorseRide, Value1: !str64 NonAnimalRide,
+                      Value2: !str64 default}
                   lists: {}
         Element12: !list
           objects:
@@ -228,8 +229,31 @@ param_root: !list
                   lists: {}
         Element13: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Nml_Damage_Motorcycle_Wait_St,
+              Morph: 2.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {Rate: 0.8}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 7, Frame: -2.0, Value: FaceDamageS}
+                    Event1: !obj {TypeIndex: 4, Frame: 12.0, Value: ''}
+                    Event2: !obj {TypeIndex: 7, Frame: 15.0, Value: FaceDead}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 35, StartFrame: 7.0, EndFrame: -1.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element14: !list
+          objects:
             Parameters: !obj {TypeIndex: 14, NoSync: false, JudgeOnce: true}
-            Children: !obj {Child0: 14, Child1: 15, Child2: 16, Child3: 17}
+            Children: !obj {Child0: 15, Child1: 16, Child2: 17, Child3: 18}
           lists:
             Extend: !list
               objects: {}
@@ -241,7 +265,7 @@ param_root: !list
                     Range2: !obj {Start: 0.0, End: 180.0}
                     Range3: !obj {Start: 90.0, End: 270.0}
                   lists: {}
-        Element14: !list
+        Element15: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Nml_Damage_S_L, Morph: 2.0}
           lists:
@@ -263,7 +287,7 @@ param_root: !list
                     Event0: !obj {TypeIndex: 35, StartFrame: 7.0, EndFrame: -1.0,
                       Value: !str32 ''}
                   lists: {}
-        Element15: !list
+        Element16: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Nml_Damage_S_B, Morph: 2.0}
           lists:
@@ -285,7 +309,7 @@ param_root: !list
                     Event0: !obj {TypeIndex: 35, StartFrame: 7.0, EndFrame: -1.0,
                       Value: !str32 ''}
                   lists: {}
-        Element16: !list
+        Element17: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Nml_Damage_S_R, Morph: 2.0}
           lists:
@@ -307,7 +331,7 @@ param_root: !list
                     Event0: !obj {TypeIndex: 35, StartFrame: 7.0, EndFrame: -1.0,
                       Value: !str32 ''}
                   lists: {}
-        Element17: !list
+        Element18: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Nml_Damage_S_F, Morph: 2.0}
           lists:
@@ -329,7 +353,7 @@ param_root: !list
                     Event0: !obj {TypeIndex: 35, StartFrame: 7.0, EndFrame: -1.0,
                       Value: !str32 ''}
                   lists: {}
-        Element18: !list
+        Element19: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Swim_Damage_S_N, Morph: 0.0}
           lists:
@@ -351,10 +375,10 @@ param_root: !list
                     Event0: !obj {TypeIndex: 35, StartFrame: 7.0, EndFrame: -1.0,
                       Value: !str32 ''}
                   lists: {}
-        Element19: !list
+        Element20: !list
           objects:
             Parameters: !obj {TypeIndex: 98, JudgeOnce: true}
-            Children: !obj {Child0: 20, Child1: 23, Child2: 26, Child3: 29}
+            Children: !obj {Child0: 21, Child1: 24, Child2: 27, Child3: 30}
           lists:
             Extend: !list
               objects: {}
@@ -364,10 +388,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 WeaponLargeSword, Value1: !str64 WeaponSpear,
                       Value2: !str64 WeaponBow, Value3: !str64 default}
                   lists: {}
-        Element20: !list
+        Element21: !list
           objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: false}
-            Children: !obj {Child0: 21, Child1: 22}
+            Children: !obj {Child0: 22, Child1: 23}
           lists:
             Extend: !list
               objects: {}
@@ -380,7 +404,7 @@ param_root: !list
                   objects:
                     BitIndex0: !obj {TypeIndex: 38}
                   lists: {}
-        Element21: !list
+        Element22: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Lsword_Lockon_Wait,
               Morph: 0.0}
@@ -392,7 +416,7 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element22: !list
+        Element23: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 A_Pose_Lsword_Wait_Burn,
               Morph: 0.0}
@@ -404,10 +428,10 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element23: !list
+        Element24: !list
           objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: false}
-            Children: !obj {Child0: 24, Child1: 25}
+            Children: !obj {Child0: 25, Child1: 26}
           lists:
             Extend: !list
               objects: {}
@@ -420,7 +444,7 @@ param_root: !list
                   objects:
                     BitIndex0: !obj {TypeIndex: 38}
                   lists: {}
-        Element24: !list
+        Element25: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 A_Pose_Spear_Wait, Morph: 0.0}
           lists:
@@ -431,7 +455,7 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element25: !list
+        Element26: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 A_Pose_Spear_Wait_Burn,
               Morph: 0.0}
@@ -443,10 +467,10 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element26: !list
+        Element27: !list
           objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: false}
-            Children: !obj {Child0: 27, Child1: 28}
+            Children: !obj {Child0: 28, Child1: 29}
           lists:
             Extend: !list
               objects: {}
@@ -458,17 +482,6 @@ param_root: !list
                 BitIndex: !list
                   objects:
                     BitIndex0: !obj {TypeIndex: 38}
-                  lists: {}
-        Element27: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Bow_Lockon_Wait, Morph: 0.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
         Element28: !list
           objects:
@@ -483,8 +496,19 @@ param_root: !list
                   lists: {}
         Element29: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Bow_Lockon_Wait, Morph: 0.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
+                  lists: {}
+        Element30: !list
+          objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: true}
-            Children: !obj {Child0: 30, Child1: 33}
+            Children: !obj {Child0: 31, Child1: 34}
           lists:
             Extend: !list
               objects: {}
@@ -497,10 +521,10 @@ param_root: !list
                   objects:
                     BitIndex0: !obj {TypeIndex: 30}
                   lists: {}
-        Element30: !list
+        Element31: !list
           objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: false}
-            Children: !obj {Child0: 31, Child1: 32}
+            Children: !obj {Child0: 32, Child1: 33}
           lists:
             Extend: !list
               objects: {}
@@ -513,7 +537,7 @@ param_root: !list
                   objects:
                     BitIndex0: !obj {TypeIndex: 38}
                   lists: {}
-        Element31: !list
+        Element32: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Sword_Lockon_Wait, Morph: 0.0}
           lists:
@@ -524,7 +548,7 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element32: !list
+        Element33: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 A_Pose_Sword_Lockon_Wait_Burn,
               Morph: 0.0}
@@ -536,10 +560,10 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element33: !list
+        Element34: !list
           objects:
             Parameters: !obj {TypeIndex: 7, JudgeOnce: false}
-            Children: !obj {Child0: 34, Child1: 35}
+            Children: !obj {Child0: 35, Child1: 36}
           lists:
             Extend: !list
               objects: {}
@@ -552,7 +576,7 @@ param_root: !list
                   objects:
                     BitIndex0: !obj {TypeIndex: 38}
                   lists: {}
-        Element34: !list
+        Element35: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Sword_Lockon_Wait, Morph: 0.0}
           lists:
@@ -563,7 +587,7 @@ param_root: !list
                   objects:
                     FrameCtrl0: !obj {EndFrame: 0.0, AnmLoop: 1}
                   lists: {}
-        Element35: !list
+        Element36: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 A_Pose_Sword_Wait_Burn,
               Morph: 0.0}

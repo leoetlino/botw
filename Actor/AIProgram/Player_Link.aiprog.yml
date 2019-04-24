@@ -39,52 +39,56 @@ param_root: !list
       Demo_PlayerDestinationMove: 22
       Demo_PlayerDestinationTurn: 203
       Demo_PlayerDrown: 204
-      Demo_PlayerGoStraightAhead: 205
-      Demo_PlayerGoStraightAnchor: 206
-      Demo_PlayerHide: 207
-      Demo_PlayerHorseGetOff: 208
-      Demo_PlayerHorseGetOffInDemo: 209
-      Demo_PlayerIceBlockRemove: 210
-      Demo_PlayerIceGrabReady: 211
-      Demo_PlayerMasterSwordEquip: 212
-      Demo_PlayerPullSword: 213
-      Demo_PlayerPullSwordFirstFail: 214
-      Demo_PlayerRailMove: 215
-      Demo_PlayerRestart: 216
-      Demo_PlayerSetVisibleWeapon: 217
-      Demo_PlayerShow: 218
-      Demo_PlayerTurnAndLookToObject: 219
-      Demo_PlayerTurnInner: 220
-      Demo_PlayerUnbindSheikPad: 221
-      Demo_PlayerWait: 222
-      Demo_PlayerWakeBoardEnd: 223
-      Demo_PlayerWakeBoardReady: 224
-      Demo_PlayerWarp: 225
-      Demo_PlayerZoraRide: 226
-      Demo_ReqRecreateDyeArmor: 227
-      Demo_ReserveParashawlStart: 228
-      Demo_ResetBoneCtrl: 229
-      Demo_RideHorse: 230
-      Demo_RideHorseForEvent: 231
-      Demo_SendSignal: 232
-      Demo_SetGetFlag: 233
-      Demo_SetWakeUpMtx: 234
-      Demo_StainCarryWait: 235
-      Demo_StainWait: 236
-      Demo_StopInAir: 237
-      Demo_SunazarashiRaceGoal: 238
-      Demo_Talk: 239
-      Demo_TrigNullASPlay: 240
-      Demo_TurnAndLookToObjectNow: 241
-      Demo_TurnToActor: 242
-      Demo_UnbindSheikPad: 243
-      Demo_Unequip: 244
-      Demo_UpdateDataByGetDemo: 245
-      Demo_UpdateEquip: 246
-      Demo_VisibleOff: 247
-      Demo_XLinkEventCreate: 248
-      Demo_XLinkEventFade: 249
-      Demo_XLinkEventKill: 250
+      Demo_PlayerEquipHaveMasterSword: 205
+      Demo_PlayerEquipNearMasterSword: 206
+      Demo_PlayerGoStraightAhead: 207
+      Demo_PlayerGoStraightAnchor: 208
+      Demo_PlayerHide: 209
+      Demo_PlayerHorseGetOff: 210
+      Demo_PlayerHorseGetOffInDemo: 211
+      Demo_PlayerIceBlockRemove: 212
+      Demo_PlayerIceGrabReady: 213
+      Demo_PlayerMasterSwordEquip: 214
+      Demo_PlayerPullSword: 215
+      Demo_PlayerPullSwordFirstFail: 216
+      Demo_PlayerRailMove: 217
+      Demo_PlayerReleaseMasterSword: 218
+      Demo_PlayerRestart: 219
+      Demo_PlayerSetVisibleWeapon: 220
+      Demo_PlayerShow: 221
+      Demo_PlayerTurnAndLookToObject: 222
+      Demo_PlayerTurnInner: 223
+      Demo_PlayerUnbindSheikPad: 224
+      Demo_PlayerWait: 225
+      Demo_PlayerWakeBoardEnd: 226
+      Demo_PlayerWakeBoardReady: 227
+      Demo_PlayerWarp: 228
+      Demo_PlayerZoraRide: 229
+      Demo_ReqRecreateDyeArmor: 230
+      Demo_ReserveParashawlStart: 231
+      Demo_ResetBoneCtrl: 232
+      Demo_RideHorse: 233
+      Demo_RideHorseForEvent: 234
+      Demo_SendSignal: 235
+      Demo_SetGetFlag: 236
+      Demo_SetPlayerDrawingSword: 237
+      Demo_SetWakeUpMtx: 238
+      Demo_StainCarryWait: 239
+      Demo_StainWait: 240
+      Demo_StopInAir: 241
+      Demo_SunazarashiRaceGoal: 242
+      Demo_Talk: 243
+      Demo_TrigNullASPlay: 244
+      Demo_TurnAndLookToObjectNow: 245
+      Demo_TurnToActor: 246
+      Demo_UnbindSheikPad: 247
+      Demo_Unequip: 248
+      Demo_UpdateDataByGetDemo: 249
+      Demo_UpdateEquip: 250
+      Demo_VisibleOff: 251
+      Demo_XLinkEventCreate: 252
+      Demo_XLinkEventFade: 253
+      Demo_XLinkEventKill: 254
     DemoBehaviorIdx: !obj {1721623982: 29}
   lists:
     AI: !list
@@ -1691,48 +1695,58 @@ param_root: !list
           lists: {}
         Action_182: !list
           objects:
+            Def: !obj {Name: Demo_PlayerEquipHaveMasterSword, ClassName: !str32 PlayerEquipHaveMasterSword,
+              GroupName: ''}
+          lists: {}
+        Action_183: !list
+          objects:
+            Def: !obj {Name: Demo_PlayerEquipNearMasterSword, ClassName: !str32 PlayerEquipNearMasterSword,
+              GroupName: ''}
+          lists: {}
+        Action_184: !list
+          objects:
             Def: !obj {Name: Demo_PlayerGoStraightAhead, ClassName: !str32 PlayerDestinationMove,
               GroupName: ''}
             SInst: !obj {DecSpdDist: 0.0, DecStickValue: 0.0, ForceTurnDist: 3.0}
           lists: {}
-        Action_183: !list
+        Action_185: !list
           objects:
             Def: !obj {Name: Demo_PlayerGoStraightAnchor, ClassName: !str32 PlayerAnchorMove,
               GroupName: ''}
             SInst: !obj {DecSpdDist: 0.0, DecStickValue: 0.0, ForceTurnDist: 3.0}
           lists: {}
-        Action_184: !list
+        Action_186: !list
           objects:
             Def: !obj {Name: Demo_PlayerHide, ClassName: !str32 PlayerHide, GroupName: ''}
             SInst: !obj {Hidden: true}
           lists: {}
-        Action_185: !list
+        Action_187: !list
           objects:
             Def: !obj {Name: Demo_PlayerHorseGetOff, ClassName: !str32 PlayerHorseGetOff,
               GroupName: ''}
             SInst: !obj {SideFallSpeed: 3.0}
           lists: {}
-        Action_186: !list
+        Action_188: !list
           objects:
             Def: !obj {Name: Demo_PlayerHorseGetOffInDemo, ClassName: !str32 PlayerHorseGetOffInDemo,
               GroupName: ''}
           lists: {}
-        Action_187: !list
+        Action_189: !list
           objects:
             Def: !obj {Name: Demo_PlayerIceBlockRemove, ClassName: !str32 PlayerIceBlockRemove,
               GroupName: ''}
           lists: {}
-        Action_188: !list
+        Action_190: !list
           objects:
             Def: !obj {Name: Demo_PlayerIceGrabReady, ClassName: !str32 PlayerIceGrabReady,
               GroupName: ''}
           lists: {}
-        Action_189: !list
+        Action_191: !list
           objects:
             Def: !obj {Name: Demo_PlayerMasterSwordEquip, ClassName: !str32 PlayerMasterSwordEquip,
               GroupName: ''}
           lists: {}
-        Action_190: !list
+        Action_192: !list
           objects:
             Def: !obj {Name: Demo_PlayerPullSword, ClassName: !str32 PlayerPullSword,
               GroupName: ''}
@@ -1746,179 +1760,189 @@ param_root: !list
               FirstFailureWait: 15.0
               SuccessLife: 52
           lists: {}
-        Action_191: !list
+        Action_193: !list
           objects:
             Def: !obj {Name: Demo_PlayerPullSwordFirstFail, ClassName: !str32 PlayerPullSwordFirstFail,
               GroupName: ''}
             SInst: !obj {FirstFailureWait: 15.0}
           lists: {}
-        Action_192: !list
+        Action_194: !list
           objects:
             Def: !obj {Name: Demo_PlayerRailMove, ClassName: !str32 PlayerRailMove,
               GroupName: ''}
             SInst: !obj {DecSpdDist: 0.0, DecStickValue: 0.0, ForceTurnDist: 3.0}
           lists: {}
-        Action_193: !list
+        Action_195: !list
+          objects:
+            Def: !obj {Name: Demo_PlayerReleaseMasterSword, ClassName: !str32 PlayerReleaseMasterSowrd,
+              GroupName: ''}
+          lists: {}
+        Action_196: !list
           objects:
             Def: !obj {Name: Demo_PlayerRestart, ClassName: !str32 PlayerHell, GroupName: ''}
           lists: {}
-        Action_194: !list
+        Action_197: !list
           objects:
             Def: !obj {Name: Demo_PlayerSetVisibleWeapon, ClassName: !str32 PlayerSetVisibleWeapon,
               GroupName: ''}
           lists: {}
-        Action_195: !list
+        Action_198: !list
           objects:
             Def: !obj {Name: Demo_PlayerShow, ClassName: !str32 PlayerHide, GroupName: ''}
             SInst: !obj {Hidden: false}
           lists: {}
-        Action_196: !list
+        Action_199: !list
           objects:
             Def: !obj {Name: Demo_PlayerTurnAndLookToObject, ClassName: !str32 PlayerTurnAndLookToObject,
               GroupName: ''}
           lists: {}
-        Action_197: !list
+        Action_200: !list
           objects:
             Def: !obj {Name: Demo_PlayerTurnInner, ClassName: !str32 PlayerTurnInner,
               GroupName: ''}
           lists: {}
-        Action_198: !list
+        Action_201: !list
           objects:
             Def: !obj {Name: Demo_PlayerUnbindSheikPad, ClassName: !str32 PlayerUnbindSheikPad,
               GroupName: ''}
           lists: {}
-        Action_199: !list
+        Action_202: !list
           objects:
             Def: !obj {Name: Demo_PlayerWait, ClassName: !str32 PlayerDemoWait, GroupName: ''}
           lists: {}
-        Action_200: !list
+        Action_203: !list
           objects:
             Def: !obj {Name: Demo_PlayerWakeBoardEnd, ClassName: !str32 PlayerWakeBoardEnd,
               GroupName: ''}
           lists: {}
-        Action_201: !list
+        Action_204: !list
           objects:
             Def: !obj {Name: Demo_PlayerWakeBoardReady, ClassName: !str32 PlayerWakeBoardReady,
               GroupName: ''}
           lists: {}
-        Action_202: !list
+        Action_205: !list
           objects:
             Def: !obj {Name: Demo_PlayerWarp, ClassName: !str32 PlayerWarp, GroupName: ''}
           lists: {}
-        Action_203: !list
+        Action_206: !list
           objects:
             Def: !obj {Name: Demo_PlayerZoraRide, ClassName: !str32 DemoPlayerZoraRide,
               GroupName: ''}
           lists: {}
-        Action_204: !list
+        Action_207: !list
           objects:
             Def: !obj {Name: Demo_ReqRecreateDyeArmor, ClassName: !str32 PlayerRequestRecreateDyeArmor,
               GroupName: ''}
           lists: {}
-        Action_205: !list
+        Action_208: !list
           objects:
             Def: !obj {Name: Demo_ReserveParashawlStart, ClassName: !str32 ReserveParashawlStart,
               GroupName: ''}
           lists: {}
-        Action_206: !list
+        Action_209: !list
           objects:
             Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
               GroupName: ''}
           lists: {}
-        Action_207: !list
+        Action_210: !list
           objects:
             Def: !obj {Name: Demo_RideHorse, ClassName: !str32 RideHorseAction, GroupName: ''}
           lists: {}
-        Action_208: !list
+        Action_211: !list
           objects:
             Def: !obj {Name: Demo_RideHorseForEvent, ClassName: !str32 RideHorseForEventAction,
               GroupName: ''}
           lists: {}
-        Action_209: !list
+        Action_212: !list
           objects:
             Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
               GroupName: ''}
           lists: {}
-        Action_210: !list
+        Action_213: !list
           objects:
             Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
           lists: {}
-        Action_211: !list
+        Action_214: !list
+          objects:
+            Def: !obj {Name: Demo_SetPlayerDrawingSword, ClassName: !str32 SetPlayerDrawingSword,
+              GroupName: ''}
+          lists: {}
+        Action_215: !list
           objects:
             Def: !obj {Name: Demo_SetWakeUpMtx, ClassName: !str32 PlayerSetWakeUpMtx,
               GroupName: ''}
           lists: {}
-        Action_212: !list
+        Action_216: !list
           objects:
             Def: !obj {Name: Demo_StainCarryWait, ClassName: !str32 PlayerStainCarryWait,
               GroupName: ''}
           lists: {}
-        Action_213: !list
+        Action_217: !list
           objects:
             Def: !obj {Name: Demo_StainWait, ClassName: !str32 PlayerStainWait, GroupName: ''}
           lists: {}
-        Action_214: !list
+        Action_218: !list
           objects:
             Def: !obj {Name: Demo_StopInAir, ClassName: !str32 PlayerStopInAir, GroupName: ''}
           lists: {}
-        Action_215: !list
+        Action_219: !list
           objects:
             Def: !obj {Name: Demo_SunazarashiRaceGoal, ClassName: !str32 PlayerWakeBoardGoal,
               GroupName: ''}
           lists: {}
-        Action_216: !list
+        Action_220: !list
           objects:
             Def: !obj {Name: Demo_Talk, ClassName: !str32 PlayerTalk, GroupName: ''}
           lists: {}
-        Action_217: !list
+        Action_221: !list
           objects:
             Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
               GroupName: ''}
           lists: {}
-        Action_218: !list
+        Action_222: !list
           objects:
             Def: !obj {Name: Demo_TurnAndLookToObjectNow, ClassName: !str32 PlayerTurnAndLookToObjectNow,
               GroupName: ''}
           lists: {}
-        Action_219: !list
+        Action_223: !list
           objects:
             Def: !obj {Name: Demo_TurnToActor, ClassName: !str32 DemoTurnToActor,
               GroupName: ''}
           lists: {}
-        Action_220: !list
+        Action_224: !list
           objects:
             Def: !obj {Name: Demo_UnbindSheikPad, ClassName: !str32 PlayerUnbindSheikPad,
               GroupName: ''}
           lists: {}
-        Action_221: !list
+        Action_225: !list
           objects:
             Def: !obj {Name: Demo_Unequip, ClassName: !str32 PlayerUnequip, GroupName: ''}
           lists: {}
-        Action_222: !list
+        Action_226: !list
           objects:
             Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
               GroupName: ''}
           lists: {}
-        Action_223: !list
+        Action_227: !list
           objects:
             Def: !obj {Name: Demo_UpdateEquip, ClassName: !str32 PlayerUpdateEquip,
               GroupName: ''}
           lists: {}
-        Action_224: !list
+        Action_228: !list
           objects:
             Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
           lists: {}
-        Action_225: !list
+        Action_229: !list
           objects:
             Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
               GroupName: ''}
           lists: {}
-        Action_226: !list
+        Action_230: !list
           objects:
             Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
               GroupName: ''}
           lists: {}
-        Action_227: !list
+        Action_231: !list
           objects:
             Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
               GroupName: ''}
