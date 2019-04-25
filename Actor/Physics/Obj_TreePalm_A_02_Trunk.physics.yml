@@ -1,0 +1,197 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects: {}
+  lists:
+    ParamSet: !list
+      objects:
+        1258832850: !obj
+          use_rigid_body_set_num: 3
+          use_ragdoll: false
+          use_cloth: false
+          use_support_bone: false
+          use_character_controller: false
+          use_contact_info: true
+          use_edge_rigid_body_num: 0
+          use_system_group_handler: true
+      lists:
+        RigidContactInfo: !list
+          objects:
+            3387849585: !obj {contact_point_info_num: 3, collision_info_num: 2}
+            ContactPointInfo_0: !obj {name: !str32 Body, type: !str32 Body, num: 128}
+            ContactPointInfo_1: !obj {name: !str32 Tgt, type: !str32 ObjectSensor,
+              num: 128}
+            ContactPointInfo_2: !obj {name: !str32 AttackCommon, type: !str32 AttackCommon,
+              num: 128}
+            CollisionInfo_0: !obj {name: !str32 AttackCommon, type: !str32 AttackCommon}
+            CollisionInfo_1: !obj {name: !str32 Tgt, type: !str32 ObjectSensor}
+          lists: {}
+        RigidBodySet: !list
+          objects: {}
+          lists:
+            RigidBodySet_0: !list
+              objects:
+                4288596824: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
+                  num: 1}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 Body
+                      mass: 2800.0
+                      inertia: !vec3 [16810.9, 6000.2, 16808.3]
+                      linear_damping: 0.0
+                      angular_damping: 1.0
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 3.71718
+                      toi: true
+                      center_of_mass: !vec3 [-0.008688, 3.60701, -0.018883]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.021607, 4.2, 0.006963]
+                      bounding_extents: !vec3 [0.896977, 8.4, 0.929929]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Dynamic
+                      contact_point_info: !str32 Body
+                      bone: !str64 
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityTree
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 HitAll
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: false
+                      navmesh: !str32 DYNAMIC_SILHOUETTE_AND_OBSTACLE
+                      navmesh_sub_material: !str32 
+                      link_matrix: ''
+                      magne_mass_scaling_factor: 1.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 15
+                      vertex_0: !vec3 [0.272038, 0.0, -0.434865]
+                      vertex_1: !vec3 [0.391595, 0.0, 0.292028]
+                      vertex_2: !vec3 [0.472186, 0.0, -0.101477]
+                      vertex_3: !vec3 [0.26408, 8.4, -0.02666]
+                      vertex_4: !vec3 [-0.263262, 8.4, 0.191391]
+                      vertex_5: !vec3 [-0.131197, 0.0, -0.458998]
+                      vertex_6: !vec3 [-0.009238, 0.0, 0.475628]
+                      vertex_7: !vec3 [-0.045212, 8.4, -0.335951]
+                      vertex_8: !vec3 [-0.045212, 8.4, 0.282632]
+                      vertex_9: !vec3 [0.172839, 8.4, -0.24471]
+                      vertex_10: !vec3 [0.172839, 8.4, 0.191391]
+                      vertex_11: !vec3 [-0.263262, 8.4, -0.24471]
+                      vertex_12: !vec3 [-0.376175, 0.0, 0.266553]
+                      vertex_13: !vec3 [-0.354503, 8.4, -0.02666]
+                      vertex_14: !vec3 [-0.428392, 0.0, -0.160037]
+                      material: !str32 Wood
+                      sub_material: !str32 Wood
+                      wall_code: !str32 None
+                      floor_code: !str32 NarrowPlace
+                  lists: {}
+            RigidBodySet_1: !list
+              objects:
+                4288596824: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
+                  num: 1}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 AtkEnemyBody
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 3.71718
+                      toi: true
+                      center_of_mass: !vec3 [-0.008688, 3.60701, -0.018883]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.021607, 4.2, 0.006963]
+                      bounding_extents: !vec3 [0.896977, 8.4, 0.929929]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 AttackCommon
+                      collision_info: !str32 AttackCommon
+                      bone: !str64 
+                      layer: !str32 SensorAttackCommon
+                      link_entity_set: Body
+                      link_entity_body: Body
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 15
+                      vertex_0: !vec3 [0.272038, 0.0, -0.434865]
+                      vertex_1: !vec3 [0.391595, 0.0, 0.292028]
+                      vertex_2: !vec3 [0.472186, 0.0, -0.101477]
+                      vertex_3: !vec3 [0.26408, 8.4, -0.02666]
+                      vertex_4: !vec3 [-0.263262, 8.4, 0.191391]
+                      vertex_5: !vec3 [-0.131197, 0.0, -0.458998]
+                      vertex_6: !vec3 [-0.009238, 0.0, 0.475628]
+                      vertex_7: !vec3 [-0.045212, 8.4, -0.335951]
+                      vertex_8: !vec3 [-0.045212, 8.4, 0.282632]
+                      vertex_9: !vec3 [0.172839, 8.4, -0.24471]
+                      vertex_10: !vec3 [0.172839, 8.4, 0.191391]
+                      vertex_11: !vec3 [-0.263262, 8.4, -0.24471]
+                      vertex_12: !vec3 [-0.376175, 0.0, 0.266553]
+                      vertex_13: !vec3 [-0.354503, 8.4, -0.02666]
+                      vertex_14: !vec3 [-0.428392, 0.0, -0.160037]
+                      material: !str32 Wood
+                      sub_material: !str32 Wood
+                      wall_code: !str32 None
+                      floor_code: !str32 NarrowPlace
+                  lists: {}
+            RigidBodySet_2: !list
+              objects:
+                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
+                  num: 1}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 Tgt
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 3.71718
+                      toi: true
+                      center_of_mass: !vec3 [-0.008688, 3.60701, -0.018883]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.021607, 4.2, 0.006963]
+                      bounding_extents: !vec3 [0.896977, 8.4, 0.929929]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 
+                      layer: !str32 SensorObject
+                      link_entity_set: Body
+                      link_entity_body: Body
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 15
+                      vertex_0: !vec3 [0.272038, 0.0, -0.434865]
+                      vertex_1: !vec3 [0.391595, 0.0, 0.292028]
+                      vertex_2: !vec3 [0.472186, 0.0, -0.101477]
+                      vertex_3: !vec3 [0.26408, 8.4, -0.02666]
+                      vertex_4: !vec3 [-0.263262, 8.4, 0.191391]
+                      vertex_5: !vec3 [-0.131197, 0.0, -0.458998]
+                      vertex_6: !vec3 [-0.009238, 0.0, 0.475628]
+                      vertex_7: !vec3 [-0.045212, 8.4, -0.335951]
+                      vertex_8: !vec3 [-0.045212, 8.4, 0.282632]
+                      vertex_9: !vec3 [0.172839, 8.4, -0.24471]
+                      vertex_10: !vec3 [0.172839, 8.4, 0.191391]
+                      vertex_11: !vec3 [-0.263262, 8.4, -0.24471]
+                      vertex_12: !vec3 [-0.376175, 0.0, 0.266553]
+                      vertex_13: !vec3 [-0.354503, 8.4, -0.02666]
+                      vertex_14: !vec3 [-0.428392, 0.0, -0.160037]
+                      material: !str32 Wood
+                      sub_material: !str32 Wood
+                      wall_code: !str32 None
+                      floor_code: !str32 NarrowPlace
+                  lists: {}

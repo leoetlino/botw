@@ -1,0 +1,712 @@
+Location: HopeBridge
+Name: Bottle_Mes
+NotPostNote: false
+Orderer: Npc_Zora026
+QuestDependencyFlag: Water_Relic_Finished
+QuestDependencyFlagType: bool
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - ConditionalTimelines:
+    - Condition: Bottle_Mes_Activated
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 1
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Step10_Npc_Zora026_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Step10_Npc_Zora026_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 2
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_Zora026_Talk
+        IsPauseOtherActors: false
+        Trigger: Talk
+      - EvflEntry: Ready_Npc_Zora026_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Zora026
+    UniqueName: Npc_fine
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'True'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 5
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: 0
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Rest
+        WaitAnchorRainASName: Rest
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 2
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 2
+        WaitRainReactionType: 3
+        WaitRainTalkTurn: 1
+        WaitReactionType: 3
+        WaitTalkTurn: 1
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_Bottle_Mes001_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Bottle_Mes001
+    UniqueName: Bottle_Man
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: Bottle_Mes_Activated
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 1
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Step10_Npc_Zora026_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Step10_Npc_Zora026_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Zora026
+    UniqueName: Npc_fine
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'True'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 5
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: 0
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Rest
+        WaitAnchorRainASName: Rest
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 2
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 2
+        WaitRainReactionType: 3
+        WaitRainTalkTurn: 1
+        WaitReactionType: 3
+        WaitTalkTurn: 1
+      TriggerEvents:
+      - EvflEntry: Step10_Npc_Bottle_Mes001_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Bottle_Mes001
+    UniqueName: Bottle_Man
+  AttentionOff: false
+  MessageName: Desc
+  Name: Step10
+  NextFlag: Bottle_Mes_Step10
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 1
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Step20_Npc_Zora026_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Step20_Npc_Zora026_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Zora026
+    UniqueName: Npc_fine
+  - ConditionalTimelines:
+    - Condition: Bottle_Mes_Get
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: false
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Step20_Npc_Bottle_Mes001_Bottle_Mes_Get_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'True'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 5
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: 0
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Rest
+        WaitAnchorRainASName: Rest
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 2
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 2
+        WaitRainReactionType: 3
+        WaitRainTalkTurn: 1
+        WaitReactionType: 3
+        WaitTalkTurn: 1
+      TriggerEvents:
+      - EvflEntry: Step20_Npc_Bottle_Mes001_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Bottle_Mes001
+    UniqueName: Bottle_Man
+  AttentionOff: false
+  MessageName: Desc
+  Name: Step20
+  NextFlag: Bottle_Mes_Step20
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: false
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Step30_Npc_Bottle_Mes001_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Bottle_Mes001
+    UniqueName: Bottle_Man
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 1
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Step30_Npc_Zora026_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Step30_Npc_Zora026_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Zora026
+    UniqueName: Npc_fine
+  AttentionOff: false
+  MessageName: Step30
+  Name: Step30
+  NextFlag: Bottle_Mes_Step30
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 0
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_Bottle_Mes001_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_Npc_Bottle_Mes001_NearActorsTalk
+        EvflEntryNear: ''
+        EvflEntryTalk: Finish_Npc_Bottle_Mes001_NearActorsTalk
+        IsPauseOtherActors: true
+        IsPauseOtherActorsNear: false
+        IsPauseOtherActorsTalk: true
+        Parameters:
+          Actors:
+          - Action: Action1
+            Actor: Npc_Zora126
+        Trigger: NearActors
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Bottle_Mes001
+    UniqueName: ''
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 0
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_Zora126_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_Npc_Zora126_NearActorsTalk
+        EvflEntryNear: Finish_Npc_Zora126_NearActorsNear
+        EvflEntryTalk: Finish_Npc_Zora126_NearActorsTalk
+        IsPauseOtherActors: true
+        IsPauseOtherActorsNear: false
+        IsPauseOtherActorsTalk: true
+        Parameters:
+          Actors:
+          - Action: Action2
+            Actor: Npc_Bottle_Mes001
+        Trigger: NearActors
+      - EvflEntry: Finish_Npc_Zora126_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_Zora126
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 3264.0
+      Y: 0.0
+      Z: -482.0
+    Name: Npc_Zora126
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: Bottle_Mes_Finish
+  UpdateStep: true
+Type: Mini

@@ -1,0 +1,91 @@
+Location: Hateno
+Name: HatenoMini_DevilSeal
+NotPostNote: false
+Orderer: NPC_SystemTextDemonStatue
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Ready_TwnObj_DemonStatue_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Ready_TwnObj_DemonStatue_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: TwnObj_DemonStatue_A_01
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: HatenoMini_DevilSeal_Activated
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: GiveUtsuwa_TwnObj_DemonStatue_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: GiveUtsuwa_TwnObj_DemonStatue_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: TwnObj_DemonStatue_A_01
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 3285.60009765625
+      Y: 0.0
+      Z: 2197.580078125
+    Name: TwnObj_DemonStatue_A_01
+    OffFlag: HatenoMini_DevilSeal_Finish
+  MessageName: GiveUtsuwa
+  Name: GiveUtsuwa
+  NextFlag: HatenoMini_DevilSeal_GiveUtsuwa
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Finish_TwnObj_DemonStatue_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_TwnObj_DemonStatue_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: TwnObj_DemonStatue_A_01
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 3285.60009765625
+      Y: 0.0
+      Z: 2197.580078125
+    Name: TwnObj_DemonStatue_A_01
+    OffFlag: HatenoMini_DevilSeal_Finish
+  MessageName: Finish
+  Name: Finish
+  NextFlag: HatenoMini_DevilSeal_Finish
+  UpdateStep: true
+Type: Mini

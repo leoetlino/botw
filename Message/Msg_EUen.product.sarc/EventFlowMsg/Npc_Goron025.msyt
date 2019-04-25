@@ -1,0 +1,989 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "What's up?"
+  "0001":
+    attributes: ""
+    contents:
+      - text: Good-bye.
+  "0002":
+    attributes: ""
+    contents:
+      - text: "I don't know."
+  "0005":
+    attributes: ""
+    contents:
+      - text: And you are?
+  "0006":
+    attributes: ""
+    contents:
+      - text: "Name ends in \"son.\""
+  "0007":
+    attributes: ""
+    contents:
+      - text: Are you strong?
+  "0009":
+    attributes: ""
+    contents:
+      - text: "Let's talk!"
+  "0010":
+    attributes: ""
+    contents:
+      - text: This place?
+  "0011":
+    attributes: ""
+    contents:
+      - text: Tarrey Town?
+  "0012":
+    attributes: ""
+    contents:
+      - text: I came to sell.
+  "0013":
+    attributes: ""
+    contents:
+      - text: "Where's Greyson?"
+  "5500":
+    attributes: ""
+    contents:
+      - text: OK.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Buy!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "I'll take 'em all!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: All of them.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Sure thing! What do you wanna sell?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "You wanna sell that? I could give ya...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Sound OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks, brother!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Anything else ya\nwanna sell?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks, brother! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Wanna sell more?
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks a bunch, brother! "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGot more to sell?"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Great! Thanks, brother! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Anything else?
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: Got it!
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "I'll buy anything!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Take your time!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "I'll buy whatever!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Go ahead and pick somethin' to sell."
+  Com_Talk_11:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Come back soon!
+  Com_Talk_11b:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks for your business, brother!"
+  Com_Talk_11c:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Great! Thanks, brother!"
+  Com_Talk_11d:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks, brother!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "You wanna sell me that?\nHow many?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "I can do "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nIs that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "I can't buy that... Sorry!"
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "If ya wanna sell me the clothes off your\nback, change into somethin' else first!\nIt's called common decency."
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Great! How many?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Just one?
+      - control:
+          kind: pause
+          length: short
+      - text: " Let's do "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: "\nThat OK?"
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "All of 'em?!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "All of 'em?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " I can offer you\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "You wanna buy that? That'll be\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". That OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - text: You want that?
+      - control:
+          kind: pause
+          length: short
+      - text: " How many?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - text: "That'll be a total of "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nThat OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - text: No problem!
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Hm? "
+      - control:
+          kind: pause
+          length: short
+      - text: "You don't have enough rupees..."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Hm? "
+      - control:
+          kind: pause
+          length: short
+      - text: Your pouch is full...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nCome back after you've sorted\nthat all out."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Just one? That'll be"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_Goron025
+    contents:
+      - text: Woo!
+  near01:
+    attributes: Npc_Goron025
+    contents:
+      - text: "..."
+  near03:
+    attributes: Npc_Goron025
+    contents:
+      - text: Welcome!
+  near06:
+    attributes: Npc_Goron025
+    contents:
+      - text: Ah!
+  talk00:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hey there!
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk01:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Why is my older brother, Greyson,\nalways complaining about stuff?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk02:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "Have you ever wondered why grown-ups\nare always so secretive...?"
+  talk03:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "But why? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Why don't you know?\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "If you're a grown-up,"
+      - control:
+          kind: pause
+          length: short
+      - text: " you should always\nsay the truth!"
+  talk04:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Bye-bye!
+  talk05:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hm?
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk06:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Sure! That sounds fun!\nWhat do you wanna talk about?"
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 10
+                - 0
+                - 11
+                - 0
+                - 13
+                - 0
+                - 1
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk10:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hm?
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: pause
+          length: longer
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "Is there somethin' on my face?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk11:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Me?
+      - control:
+          kind: pause
+          length: short
+      - text: " I'm Pelison!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk12:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Yep!
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk13:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "You bet I'm strong!\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "But my big bro, Greyson,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nis even stronger!"
+  talk14:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "My brother should be somewhere\naround here.\n\nHe's so much happier than he was\nat the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Southern Mine
+      - control:
+          kind: reset_colour
+      - text: "!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "He gets praised a ton for how fast\nhe can move rocks. I'm sure that\nmakes him extra happy!"
+  talk15:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "My brother should be breakin' rocks\naround there. Either that or he's\nzonin' out, heh.\nHe's so much happier than when he\nwas workin' at the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Southern Mine
+      - control:
+          kind: reset_colour
+      - text: ".\nWhen he's happy, I'm happy!"
+  talk16:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Wanna talk about somethin' else?"
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 10
+                - 0
+                - 11
+                - 0
+                - 13
+                - 0
+                - 1
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk20:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Hey! Big Bro Greyson's friend!"
+  talk21:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Once we started breakin' up the rock\nhere, we found that it's rich in "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: ore
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSo I've decided to open up shop!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "I'm not sure why we have so much\nore here, "
+      - control:
+          kind: pause
+          length: short
+      - text: "but maybe it's because\nwe're close to "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Death Mountain
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Anyway, these here are freshly mined."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nBe sure to buy a whole bunch!"
+  talk22:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Need somethin'?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 9
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk23:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Good day!
+  talk25:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "It's so cold here.\n\n\nOr maybe it's just that Goron City\nis too hot!"
+  talk26:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: See ya next time!
+  talk28:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "We started findin' "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: ore
+      - control:
+          kind: reset_colour
+      - text: " in the rocks my\nbrother was breakin', "
+      - control:
+          kind: pause
+          length: short
+      - text: "so I decided to\nopen up shop and sell 'em!\nBe sure to buy a whole bunch!"
+  talk29:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks, brother! "
+      - control:
+          kind: pause
+          length: short
+      - text: "I'll be sure to restock!"
+  talk30:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "A sale! Wahoo! "
+      - control:
+          kind: pause
+          length: long
+      - text: "Now I'm all sold out!"
+  talk31:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "I'm all sold out!"
+      - control:
+          kind: pause
+          length: long
+      - text: " I'll have to ask my big\nbro to go and dig up some more!"
+  talk32:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thanks, brother! "
+      - control:
+          kind: pause
+          length: short
+      - text: "I'm all out now...\nI'll have to stock up again."
+  talk33:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: "Hey, don't do that!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Get down from there!"
+  talk34:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: Hurry up and get down!
+  talk35:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: "Please stop climbin' on things!"
+  talk36:
+    attributes: Npc_Goron025
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 0
+      - text: "Get DOWN! "
+      - control:
+          kind: pause
+          length: short
+      - text: "That's so rude!"

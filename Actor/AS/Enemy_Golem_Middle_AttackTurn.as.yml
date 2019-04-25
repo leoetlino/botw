@@ -1,0 +1,60 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects: {}
+  lists:
+    Elements: !list
+      objects: {}
+      lists:
+        Element0: !list
+          objects:
+            Parameters: !obj {TypeIndex: 15, NoSync: false, JudgeOnce: true}
+            Children: !obj {Child0: 1, Child1: 2}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 180.0}
+                    Range1: !obj {Start: 180.0, End: 360.0}
+                  lists: {}
+        Element1: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Attack_Turn_L, Morph: 20.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 0, Frame: 11.0, Value: EnemyAttackSmall}
+                    Event1: !obj {TypeIndex: 0, Frame: 29.0, Value: EnemyAttackSmall}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 3, StartFrame: 11.0, EndFrame: 14.0,
+                      Value: !str32 ',AtkArmR'}
+                    Event1: !obj {TypeIndex: 3, StartFrame: 29.0, EndFrame: 35.0,
+                      Value: !str32 ',AtkArmL'}
+                  lists: {}
+        Element2: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Attack_Turn_R, Morph: 20.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 0, Frame: 11.0, Value: EnemyAttackSmall}
+                    Event1: !obj {TypeIndex: 0, Frame: 30.0, Value: EnemyAttackSmall}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 3, StartFrame: 11.0, EndFrame: 14.0,
+                      Value: !str32 ',AtkArmL'}
+                    Event1: !obj {TypeIndex: 3, StartFrame: 30.0, EndFrame: 35.0,
+                      Value: !str32 ',AtkArmR'}
+                  lists: {}

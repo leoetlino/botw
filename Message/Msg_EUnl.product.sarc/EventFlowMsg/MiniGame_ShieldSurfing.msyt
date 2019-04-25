@@ -1,0 +1,2343 @@
+---
+group_count: 73
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ja!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Nee!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Alsjeblieft!
+  "0003":
+    attributes: ""
+    contents:
+      - text: "Nee, dank je."
+  "0004":
+    attributes: ""
+    contents:
+      - text: Laat maar!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Niet nodig.
+  "0006":
+    attributes: ""
+    contents:
+      - text: Ik wil stoppen!
+  "0007":
+    attributes: ""
+    contents:
+      - text: Doorgaan!
+  "0008":
+    attributes: ""
+    contents:
+      - text: Ik wil echt stoppen!
+  "0009":
+    attributes: ""
+    contents:
+      - text: Ik ga zeker door!
+  "0010":
+    attributes: ""
+    contents:
+      - text: Hoger niveau!
+  "0011":
+    attributes: ""
+    contents:
+      - text: Liever niet.
+  "0012":
+    attributes: ""
+    contents:
+      - text: Het is een levensstijl!
+  "0013":
+    attributes: ""
+    contents:
+      - text: Geen idee!
+  "0014":
+    attributes: ""
+    contents:
+      - text: Geavanceerde baan.
+  "0015":
+    attributes: ""
+    contents:
+      - text: Beginnersbaan.
+  "0016":
+    attributes: ""
+    contents:
+      - text: Ik wil stoppen!
+  "0018":
+    attributes: ""
+    contents:
+      - text: Sorry...
+  "0019":
+    attributes: ""
+    contents:
+      - text: Echt waar?
+  AboutCourse_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Als je recht naar beneden gaat, kom je\nbij een grote brug."
+      - control:
+          kind: pause
+          length: long
+      - text: " Probeer om te\nbeginnen eens daarnaartoe te surfen.\nHet is een heel eenvoudige baan, maar\ndaardoor kan ik wel zien hoe goed je het\nonder de knie hebt."
+  AboutGame_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "O, dus jij bent het serieuze type? Dat\nhad ik niet verwacht."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik zal het je\nuitleggen.\nDe bedoeling is dat je zo snel mogelijk\nnaar beneden surft en de beste tijd\nneerzet.\nJe weet hoe je moet schildsurfen, toch?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Terwijl je je schild vasthoudt, moet je\nspringen en halverwege de sprong op\nje schild gaan staan.\nHet maakt me verder niet uit of je de hele\ntijd op je schild staat of niet... Voor mijn\npart vlieg je een stuk!"
+  AskAboutShieldSurfing_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Goed... "
+      - control:
+          kind: pause
+          length: short
+      - text: "In plaats van een test heb ik een\nsimpele vraag voor je om te zien hoe\ngemotiveerd je bent!\n"
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1056964608
+      - text: Wat betekent schildsurfen voor je?
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 13
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  AskCourse_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Zo mag ik het horen. Je bent een\nvoorbeeldige leerling."
+      - control:
+          kind: pause
+          length: long
+      - text: " Welke baan wil je\nproberen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 15
+            - 14
+            - 16
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  AskPurpose_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Je bent hierheen gekomen om mij, een\nvoormalig professioneel schildsurfer, te\nontmoeten, toch?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskPurpose_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Wat wil je doen vandaag? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wil je me\nlaten zien of je dagelijkse training al\nvruchten heeft afgeworpen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskRetry_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Dus... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wil je nog een keer naar beneden\nsurfen? Je moet dan natuurlijk wel nog\nhet lesgeld van "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: " betalen."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskRetry_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Dus, wil je me nog eens laten zien wat je\nkunt?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 15
+            - 14
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  AskRupee_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Eens kijken... Wat denk je van "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "\nper keer?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskRupee_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Je weet hoe het werkt.
+      - control:
+          kind: pause
+          length: short
+      - text: " Het lesgeld\nbedraagt nog altijd "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  AskTraining_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Ik wist het! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Maar mijn schild hangt helaas\nal aan de wilgen. Vroeger noemde men\nme ook wel de 'sneeuwkoningin'.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Als je wilt, kun je me gerust laten zien\nwat je in huis hebt, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  CautionBigDoor_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "O, en dan nog iets! "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "Ga niet de verkeerde\nkant op"
+      - control:
+          kind: reset_colour
+      - text: ", zelfs niet per ongeluk!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Er staat ergens een "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: enorme stenen deur
+      - control:
+          kind: reset_colour
+      - text: ",\nen als je van de baan raakt, kun je\nertegenaan botsen en je bezeren."
+  ChangeBeginnerToExpert_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Laten we eens kijken hoe je het er op de\ngeavanceerde baan vanaf brengt."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Het is een langere baan, maar ik weet\nzeker dat dat voor jou geen probleem is!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je de geavanceerde baan voltooit,\ngeef ik je een bijzonder schild. Hoe\nbijzonder het is, hangt af van je tijd!"
+  ChangeBeginnerToExpert_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Laten we eens kijken hoe je het er op de\ngeavanceerde baan vanaf brengt."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Het is een langere baan, dus doe je best!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik heb je alle schilden al gegeven, dus\ndeze keer geef ik je een aantal rupees op\nbasis van je tijd."
+  ChangeExpertToBeginner_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 25
+      - text: "Oké, laat maar eens zien hoe je het doet\nop de beginnersbaan. Ik ben benieuwd of\nje de basistechnieken nog beheerst."
+  Check_Money00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je moet natuurlijk wel nog steeds het\nlesgeld betalen, zelfs voor de\ngeavanceerde baan! "
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 Rupees
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 15
+            - 16
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Check_Money02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je bent me natuurlijk nog steeds het\nlesgeld van 20 rupees verschuldigd."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  EntranceExplain_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Laten we met een eenvoudige baan\nbeginnen, zodat we je surftechniek onder\nde loep kunnen nemen..."
+  EntranceTalk_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "O, wat doe jij hier in de bergen?"
+  EntranceTalk_Beginner_Default:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Aha! Betekent dat...
+  EntranceTalk_Beginner_Default_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Ik zal eens kijken hoe je surft.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je het tenminste niet erg vindt om te\nworden bekeken door een voormalige\nprofessional!"
+  EntranceTalk_Beginner_Default_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Dat kost je trouwens wel iedere keer\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  EntranceTalk_Beginner_Default_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dus,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ik wil graag "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: " als lesgeld."
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  EntranceTalk_Beginner_SP:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Wauw! Je schild... Dat is niet voor\niedereen weggelegd!"
+  EntranceTalk_Expert_Default:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "O, jij bent het. Hoe gaat het ermee?"
+      - control:
+          kind: pause
+          length: long
+      - text: " Met\nmij gaat het goed, zoals altijd!"
+  EntranceTalk_Expert_SP:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Je hebt het ver geschopt...
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik ben best\nwel een beetje trots."
+  EntranceTalk_No_Shield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 1
+      - control:
+          kind: animation
+          name: Notice_00
+      - text: Huh?
+      - control:
+          kind: pause
+          length: long
+      - text: " Je hebt helemaal geen schild!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Zelfvoorzienendheid is een van de\ngrondbeginselen van schildsurfen, dus\nga zelf maar op zoek naar een schild!"
+  Exit_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Dat is voorlopig wel weer genoeg.
+      - control:
+          kind: pause
+          length: short
+      - text: " Je\nhebt je eerste stappen als schildsurfer\ngezet!"
+  Exit_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Je zult het wel koud hebben. Kom maar\nnaar de hut."
+      - control:
+          kind: pause
+          length: short
+      - text: " Daar kun je een beetje\nopwarmen voordat je gaat."
+  Exit_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Oké, tot ziens."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik ben benieuwd naar je\nvoortgang de volgende keer dat we\nelkaar zien."
+  ExplainExpertCourseToBeginner_Expert_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Het is nooit goed als je op een lange\nbaan de weg kwijtraakt. Onthoud dus\naltijd waar het doel is, oké?"
+  ExplainExpertCourseToBeginner_Expert_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Je moet eerst in een "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: rechte lijn
+      - control:
+          kind: reset_colour
+      - text: " onder de\nbrug door gaan die het doel was van de\nmakkelijkere baan."
+  ExplainExpertCourseToBeginner_Expert_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Vervolgens moet je een "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: scherpe bocht
+      - control:
+          kind: reset_colour
+      - text: "\nmaken en "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: een heel stuk rechtdoor
+      - control:
+          kind: reset_colour
+      - text: " gaan."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Er staan twee "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: grote vlaggen
+      - control:
+          kind: reset_colour
+      - text: " aan het eind\nvan de geavanceerde baan, dus daar\nmoet je naartoe gaan."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je te ver van de baan raakt, moet ik\nje helaas terugfluiten!"
+  Failed_00_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Je hoeft niet de allersnelste te zijn, maar\ndit is wel het andere uiterste."
+      - control:
+          kind: pause
+          length: short
+      - text: " Dat was\nhet dan! Kom maar terug!"
+  Failed_00_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Geef niet op... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Er is nog ruimte voor\nverbetering! Als je je best doet, zul je\nsteeds sneller worden!"
+  Failed_00_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Misschien moet je voordat je begint even\nnadenken over waar je naartoe wilt."
+  Failed_01_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: Huh? Waar is hij gebleven?!
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik kan hem\nmaar beter snel gaan zoeken!"
+  Failed_01_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Hé, waar denk je naartoe te gaan?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Straks\nverdwaal je nog..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  Failed_01_02_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 18
+      - text: "In plaats van je verontschuldigingen aan\nte bieden, kun je dat beter gewoon niet\nmeer doen.\nMaar ik ben blij dat je ongedeerd bent."
+  Failed_01_02_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 18
+      - text: Wil je dat ik hier bevries?
+      - control:
+          kind: pause
+          length: short
+      - text: " Het is al koud\ngenoeg op deze berg. Zo is het wel weer\nmooi geweest..."
+  Failed_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Je lijkt moe te zijn vandaag...
+      - control:
+          kind: pause
+          length: long
+      - text: " Soms moet\nje gewoon even een pauze nemen..."
+  GoalBeginnerCourse_BadTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "Dat kan beter. Het kost veel tijd, maar\nstapje voor stapje zul je steeds beter\nworden. Geef niet op!"
+  GoalBeginnerCourse_GoodTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - text: "Ik wist dat je het in je had. Daarom heb\nik je toegelaten tot de geavanceerde\nbaan.\nIk had eigenlijk ook wel een beetje\nverwacht dat je zo'n tijd zou neerzetten."
+  Goal_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: "Oké, stop!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Kom maar terug, zodat we het\neven over je prestaties kunnen hebben."
+  Goal_BadTime_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 18
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je kunt zo te zien nog wel een beetje\noefening gebruiken.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Als je verder wilt komen, moet je je ogen\nopenhouden op de baan!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wat in eerste instantie plat lijkt, kan in\nwerkelijkheid best hobbelig zijn!"
+  Goal_BadTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is nog niet helemaal wat het zijn\nmoet..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: schild slijt niet
+      - control:
+          kind: reset_colour
+      - text: " als je over sneeuw of\nzand surft, dus je kunt zo veel oefenen\nals je wilt."
+  Goal_BadTime_Expert_Present:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Gebruik dit schild en oefen een beetje.
+  Goal_BadTime_Expert_Present1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Je hebt het doel bereikt... Hier is een\nbeloning voor je!"
+  Goal_BadTime_Expert_dame:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je bent weleens beter geweest, toch?\nMisschien moet je eerst weer een beetje\noefenen op de makkelijkere baan!"
+  Goal_BadTime_Expert_dame1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 25
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Je bent geen groentje meer.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik haalde een vergelijkbare tijd toen ik\nnet de smaak te pakken begon te krijgen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik hoop dat jij het ook nog steeds leuk\nvindt!"
+  Goal_BadTime_Expert_rupi:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Heb je onderweg een schild opgeraapt?\nDaarnet had je nog plek..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Ik wilde je dit schild geven, maar ik zal\nhet voor je bewaren tot je weer plek\nervoor hebt."
+  Goal_BadTime_Expert_rupi_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "O, nee!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Dit schild heb ik je de vorige keer\nal gegeven."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Maar maak je geen zorgen, ik geef je wel\neen andere beloning!"
+  Goal_BadTime_Expert_rupi_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Wauw! "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Je surftechniek is geweldig! Je bent nog\nbeter dan ik... Heb je al eens overwogen\nom professional te worden?"
+  Goal_BadTime_Expert_rupi_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is ongeveer net zo snel als ik. Je mag\ntrots zijn op jezelf. Alleen de Rito's zijn\nnog sneller, maar die "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: vliegen
+      - control:
+          kind: reset_colour
+      - text: " tussendoor."
+  Goal_BadTime_Expert_rupi_04:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is best middelmatig. Misschien moet\nje een beetje agressiever zijn..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Probeer zo snel mogelijk door bochten te\ngaan."
+  Goal_BadTime_Expert_rupi_05:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is nog niet helemaal wat het zijn\nmoet..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: schild slijt niet
+      - control:
+          kind: reset_colour
+      - text: " als je over sneeuw of\nzand surft, dus je kunt zo veel oefenen\nals je wilt."
+  Goal_CommonTime_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is best wel middelmatig. Ik twijfel of\nik je wel moet laten doorgaan naar een\nhoger niveau..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Maar ik zal die beslissing aan jou\noverlaten..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 10
+            - 11
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Goal_CommonTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is best middelmatig. Misschien moet\nje een beetje agressiever zijn..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Probeer zo snel mogelijk door bochten te\ngaan."
+  Goal_CommonTime_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is best snel. Als je in jezelf blijft\ngeloven, kom je er wel!"
+  Goal_CommonTime_Expert2:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat komt al aardig in de buurt van mijn\nbeste tijd. Je bent best goed. Ik ben\nonder de indruk!"
+  Goal_CommonTime_Expert_Present:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Gebruik de volgende keer dit schild. Ik\nschenk het je."
+  Goal_CommonTime_Expert_Present1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Ik geef je dit alleen maar in de hoop dat\nje het de volgende keer beter doet. Doe\nje best!"
+  Goal_GoodTime_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat was niet slecht. Je schijnt er talent\nvoor te hebben."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik weet zeker dat je ook op de volgende\nbaan een goede tijd zult neerzetten. Ik\nkijk er nu al naar uit!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Dat betekent dat ik je toegang geef tot\nde "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: geavanceerde baan
+      - control:
+          kind: reset_colour
+      - text: ". Stel me niet\nteleur, oké?"
+  Goal_GoodTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is ongeveer net zo snel als ik. Je mag\ntrots zijn op jezelf. Alleen de Rito's zijn\nnog sneller, maar die "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: vliegen
+      - control:
+          kind: reset_colour
+      - text: " tussendoor."
+  Goal_GoodTime_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 21
+      - text: "Je tijd is "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Je bent sneller dan ik... Ik heb verloren...\nIk kan je niets meer leren. Ga zo door en\nword de allerbeste!"
+  Goal_GoodTime_Expert_Present:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Hier is een beloning voor alle voortgang\ndie je hebt geboekt. Alsjeblieft!"
+  Goal_GoodTime_Expert_Present1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Hier is een beloning voor die geweldige\ntijd. Alsjeblieft!"
+  Goal_GoodTime_Expert_Present2:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Hier is een beloning. Alsjeblieft!
+  Goal_WonderfulTime_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Wauw! "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMinute
+      - text: " min, "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultSecond
+      - text: " s en "
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_ShieldSurfing_ResultMilliSecond
+      - text: " cs"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Je surftechniek is geweldig! Je bent nog\nbeter dan ik... Heb je al eens overwogen\nom professional te worden?"
+  HintNextStep_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Als je naar mijn inzicht voldoende\nvoortgang maakt, kunnen we het eens op\neen hoger niveau proberen."
+  IfAnswerFact_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Hé, "
+      - control:
+          kind: pause
+          length: short
+      - text: "is dat een grap, of zo? Nou ja, "
+      - control:
+          kind: pause
+          length: short
+      - text: "ik\nbegrijp wat je wilt zeggen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "We zijn zo gepassioneerd omdat het ons\niets biedt dat niet met woorden valt te\nbeschrijven, toch?\nIk had nooit gedacht dat jij, de leerling,\nmij iets zou kunnen leren."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik denk dat je wel klaar bent voor het\nvolgende niveau. Je bent geslaagd."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Je kunt nu gebruikmaken van de\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: geavanceerde baan
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik verwacht heel\nveel van je, dus stel me niet teleur!"
+  IfAnswerRetry_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Zo moet dat! "
+      - control:
+          kind: pause
+          length: long
+      - text: "Regelmatig oefenen is de\nsleutel tot succes!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Soms ben je best wel serieus... Dat\nbevalt me wel."
+  IfAnswerSurface_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Aha... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Een levensstijl, dus..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Zo te horen\nheb je er nogal een oppervlakkige kijk\nop.\nUitglijden, "
+      - control:
+          kind: pause
+          frames: 4
+      - text: "vallen, "
+      - control:
+          kind: pause
+          frames: 4
+      - text: botsen...
+      - control:
+          kind: pause
+          length: short
+      - text: " Zo'n leven\nwens je zelfs je ergste vijand niet toe."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Met zo'n instelling kan ik je helaas niet\nlaten doorgaan. Je zult het "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: nog een keer
+      - control:
+          kind: reset_colour
+      - text: "\nmoeten proberen."
+  IfSelectBeginnerCourse_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "O, heb je daar genoeg aan? Nou ja, het\nkan vast geen kwaad om weer eens\nbij het begin te beginnen."
+  IfSelectExpertCourse_Expert:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Begrepen. Laten we eens kijken of je\ndagelijkse training iets heeft opgeleverd."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nLaat maar eens zien wat je kunt!\nAls je de geavanceerde baan voltooit\nbinnen een bepaalde tijd, geef ik je een\nschild als beloning."
+  IfSelectExpertCourse_Expert1:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Begrepen. Laten we eens kijken of je\ndagelijkse training iets heeft opgeleverd."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nLaat maar eens zien wat je kunt!\nAls je de geavanceerde baan voltooit\nbinnen een bepaalde tijd, geef ik je een\nschild als beloning.\nEh... Je hebt geen plek meer voor nog\neen schild. Maak ruimte vrij, zodat ik\nje een schild als beloning kan geven."
+  Initial_GlassShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is een Sheikah-schild... Zulke\nbreekbare schilden zijn waardeloos..."
+  Initial_GlassShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is een sheikah-schild... Zulke\nbreekbare schilden zijn waardeloos..."
+  Initial_GoldenShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is een gouden schild, een stukje\nvakwerk van de Gerudo's!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Daar kun je\nprima op surfen!"
+  Initial_GoldenShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is een gouden schild, een stukje\nvakwerk van de Gerudo's!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Daar kun je\nprima op surfen!"
+  Initial_MoonlightShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is het zeer zeldzame dageraadschild!\nDaar zie je er niet veel van!"
+  Initial_MoonlightShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is het fantastische dageraadschild!\nDaar zie je er niet veel van!"
+  Initial_RoyalShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Dat is een koninklijk schild!
+      - control:
+          kind: pause
+          length: short
+      - text: " Een beter\nschild om te surfen bestaat niet!"
+  Initial_RoyalShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Dat is een koninklijk schild!
+      - control:
+          kind: pause
+          length: short
+      - text: " Een beter\nschild om te surfen bestaat niet!"
+  Initial_SpikeShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is een stalen Lizal-schild. Dankzij die\nstekel kun je de gekste trucjes uithalen!"
+  Initial_SpikeShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat is een stalen Lizal-schild. Dankzij die\nstekel kun je de gekste trucjes uithalen!"
+  Initial_SunShield:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Een zonneschild! Dat schild wil ik zo\ngraag hebben dat mijn verlangen de\nsneeuw kan doen smelten!"
+  Initial_SunShield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 19
+      - text: "..."
+      - control:
+          kind: pause
+          frames: 30
+      - text: " ..."
+      - control:
+          kind: pause
+          frames: 50
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Wat is dat op je rug?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Een zonneschild! Dat schild wil ik zo\ngraag hebben dat mijn verlangen de\nsneeuw kan doen smelten!"
+  LetsStart_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: Laten we dan maar meteen beginnen.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nKom maar mee."
+  LetsStart_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Dus... Wil je weten hoe het werkt?
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  LetsStart_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "O, dus je weet al wat je te wachten staat!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nMooi, dat bespaart mij weer werk."
+  LetsStart_04:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Oké, laat maar eens zien hoe goed je\nkunt surfen. Ben je er klaar voor? Dan\nkunnen we beginnen!"
+  NG_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 6
+      - text: Wat? Niet? Dat is jammer...
+      - control:
+          kind: pause
+          length: short
+      - text: " Eh, ik\nbedoel... Het is niet dat ik daarop aan\nhet wachten was, of zo..."
+  NoPlay_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "Hmm... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Vroeger had iedereen interesse\nin mijn sportieve prestaties, maar tijden\nveranderen natuurlijk..."
+  NotHadEnoughRupee:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 19
+      - text: "Je kunt het lesgeld niet betalen! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Kom\nmaar terug als je "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupees
+      - control:
+          kind: reset_colour
+      - text: " hebt."
+  Pouch_Check00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Het lijkt erop dat je weer plek hebt!
+      - control:
+          kind: pause
+          length: short
+      - text: " Hier\nis het schild dat ik heb beloofd!"
+  Pouch_Check01:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Ik wil je het speciale schild geven voor\nde geavanceerde baan, maar..."
+  Pouch_Check02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "Het lijkt erop dat je nog steeds geen\nplek hebt..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik zal het bewaren tot de\nvolgende keer dat je komt surfen!"
+  Pouch_Check03:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Nou, laten we teruggaan naar de hut."
+  Pouch_Check04:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Kom maar terug als je weer plek hebt!
+  Pouch_Check05:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Ik wil weleens zien hoe je surft op dat\nschild dat ik je heb gegeven..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Laat maar\neens zien wat je in huis hebt!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 15
+            - 14
+            - 16
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  RefusePay_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: "O, dat is jammer!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Zo vaak krijg je niet de\nkans om iets van een voormalige\nprofessional te leren..."
+  Stop_00:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "O, wat is er?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Stop_01:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "O... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Maar je weet dat je je rupees niet\nterugkrijgt als je nu stopt, hè?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Stop_02:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: Ik vind het nog steeds zonde...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Maar goed, ik hoop dat je nog een\nkeertje terugkomt!"
+  Stop_03:
+    attributes: Npc_IceVillage011
+    contents:
+      - text: "Oké, doe je best en laat me zien wat je\nin huis hebt!"
+  TalkForPay_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 25
+      - text: "Gefeliciteerd,"
+      - control:
+          kind: pause
+          length: short
+      - text: " je hebt zojuist je eerste\nhorde als atleet genomen:"
+      - control:
+          kind: pause
+          length: short
+      - text: " investeren in\nje eigen toekomst!"
+  TellRupee_Beginner:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Haha... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Je passie herinnert me aan\nmezelf toen ik nog jong was!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Maar ik ben een voormalig professional,\ndus je begrijpt wel dat ik dit niet gratis\nkan doen, toch?"
+  suremi_fire_shield1:
+    attributes: Npc_IceVillage011
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 0
+      - text: "Hé! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Waar ben je mee bezig?! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Hou\ndaarmee op!"

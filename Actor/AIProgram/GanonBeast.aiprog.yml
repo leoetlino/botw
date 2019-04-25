@@ -1,0 +1,1658 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_Anger: 105
+      Demo_FirstWeakPoint: 106
+      Demo_ForceEndPlayerSlow: 188
+      Demo_GetItem: 189
+      Demo_GrudgeRainDrop: 190
+      Demo_Idling: 191
+      Demo_Join: 192
+      Demo_PlayASForDemo: 193
+      Demo_PlayASForTimeline: 194
+      Demo_Reset: 195
+      Demo_ResetBoneCtrl: 196
+      Demo_SendSignal: 197
+      Demo_SetGetFlag: 198
+      Demo_TrigNullASPlay: 199
+      Demo_UpdateDataByGetDemo: 200
+      Demo_VisibleOff: 201
+      Demo_XLinkEventCreate: 202
+      Demo_XLinkEventFade: 203
+      Demo_XLinkEventKill: 204
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 ForkBeastGanonRoot, GroupName: ''}
+            ChildIdx: !obj
+              光壁管理: 121
+              姫様絶叫: 186
+              弱点管理: 168
+              接触怨念: 169
+              気流管理: 107
+              環境変化: 15
+              足元変化: 180
+              身体動作: 66
+              頭上防風: 185
+            BehaviorIdx: !obj {1721623982: 19, 295359800: 25, 2291369090: 11}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 GanonBeastReaction, GroupName: 通常}
+            ChildIdx: !obj {弱点ヒット: 58, 形態変化ダメージ: 19, 死亡: 57}
+            SInst: !obj {ASSlot: 0}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: レーザー発射, ClassName: !str32 WeakStateSelecter, GroupName: 初回}
+            ChildIdx: !obj {弱点モード: 59, 通常モード: 96}
+            SInst: !obj {IsAlwaysUpdate: false}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: レーザー発射, ClassName: !str32 SeqTwoAction, GroupName: 待機}
+            ChildIdx: !obj {先行動: 67, 後行動: 27}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 SeqTwoAction, GroupName: 基本歩き}
+            ChildIdx: !obj {先行動: 70, 後行動: 25}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: true, IsNoChangeable: false}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 Fork3AI, GroupName: 弱点モード}
+            ChildIdx: !obj {子０: 41, 子１: 144, 子２: 161}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 Fork3AI, GroupName: 待機}
+            ChildIdx: !obj {子０: 41, 子１: 144, 子２: 161}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 遠距離, ClassName: !str32 Fork2AI, GroupName: 基本回転}
+            ChildIdx: !obj {子０: 125, 子１: 145}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 遠距離, ClassName: !str32 GanonBeastMoveSelect, GroupName: 子１}
+            ChildIdx: !obj {待機: 85, 移動: 4}
+            SInst: !obj
+              Dist: 200.0
+              IsMoveFinishEnd: false
+              CentralPoint: !vec3 [-254.0, 155.0, 560.5]
+              FrontOffset: 70.0
+              WallDist: 434.0
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: 遠距離, ClassName: !str32 Fork2AI, GroupName: 先行動}
+            ChildIdx: !obj {子０: 124, 子１: 142}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 Fork2AI, GroupName: 帰還}
+            ChildIdx: !obj {子０: 125, 子１: 145}
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: 角度外, ClassName: !str32 TargetTargetPos, GroupName: 待機}
+            ChildIdx: !obj {行動: 35}
+            SInst: !obj {AddSpeed: 0.0, OnEnterOnly: false}
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: 角度差小, ClassName: !str32 Fork3AI, GroupName: ビーム攻撃}
+            ChildIdx: !obj {子０: 124, 子１: 143, 子２: 51}
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: 角度差大, ClassName: !str32 SeqTwoAction, GroupName: ビーム攻撃}
+            ChildIdx: !obj {先行動: 69, 後行動: 21}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_14: !list
+          objects:
+            Def: !obj {Name: 角度内, ClassName: !str32 Fork2AI, GroupName: 待機}
+            ChildIdx: !obj {子０: 124, 子１: 49}
+          lists: {}
+        AI_15: !list
+          objects:
+            Def: !obj {Name: 環境変化, ClassName: !str32 GanonBeastStairState, GroupName: Root}
+            ChildIdx: !obj {段階１: 181, 段階２: 182, 段階３: 92, 段階４: 93}
+          lists: {}
+        AI_16: !list
+          objects:
+            Def: !obj {Name: 近距離, ClassName: !str32 GanonBeastMoveSelect, GroupName: 回転}
+            ChildIdx: !obj {待機: 84, 移動: 4}
+            SInst: !obj
+              Dist: 200.0
+              IsMoveFinishEnd: false
+              CentralPoint: !vec3 [-254.0, 155.0, 560.5]
+              FrontOffset: 70.0
+              WallDist: 434.0
+          lists: {}
+        AI_17: !list
+          objects:
+            Def: !obj {Name: 近距離, ClassName: !str32 Fork2AI, GroupName: 子１}
+            ChildIdx: !obj {子０: 135, 子１: 155}
+          lists: {}
+        AI_18: !list
+          objects:
+            Def: !obj {Name: 近距離, ClassName: !str32 SeqTwoAction, GroupName: 先行動}
+            ChildIdx: !obj {先行動: 71, 後行動: 24}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_19: !list
+          objects:
+            Def: !obj {Name: 形態変化ダメージ, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 126, 子１: 141}
+          lists: {}
+        AI_20: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: ビーム攻撃}
+            ChildIdx: !obj {子０: 124, 子１: 146}
+          lists: {}
+        AI_21: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork3AI, GroupName: ビーム発射}
+            ChildIdx: !obj {子０: 124, 子１: 143, 子２: 51}
+          lists: {}
+        AI_22: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 SeqTwoAction, GroupName: レーザー初回}
+            ChildIdx: !obj {先行動: 68, 後行動: 23}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_23: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: レーザー初回発射}
+            ChildIdx: !obj {子０: 124, 子１: 146}
+          lists: {}
+        AI_24: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 TargetPredictRotSpdTargetPos,
+              GroupName: レーザー前回転}
+            ChildIdx: !obj {行動: 37}
+            SInst: !obj {AddSpeed: 400.0, OnEnterOnly: true}
+          lists: {}
+        AI_25: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: 移動}
+            ChildIdx: !obj {子０: 135, 子１: 155}
+          lists: {}
+        AI_26: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 GanonBeastSufferChanger, GroupName: 子１}
+            ChildIdx: !obj {弱点露出: 60, 無敵モード: 187, 通常: 95}
+            SInst: !obj
+              WeakPoint1Time: 750
+              WeakPoint2Time: 750
+              WeakPoint3Time: 750
+              WeakPoint4Time: -1
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text050
+              CloseOption: 3
+              Timer: 90
+              labelName2: Shout_Zelda_Text051
+              labelName3: Shout_Zelda_Text052
+          lists: {}
+        AI_27: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 SeqTwoAction, GroupName: 実ビーム攻撃}
+            ChildIdx: !obj {先行動: 68, 後行動: 20}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_28: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: 弱点露出}
+            ChildIdx: !obj {子０: 127, 子１: 147}
+          lists: {}
+        AI_29: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: 初回}
+            ChildIdx: !obj {子０: 42, 子１: 46}
+          lists: {}
+        AI_30: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork2AI, GroupName: 初回ビーム攻撃}
+            ChildIdx: !obj {子０: 124, 子１: 146}
+          lists: {}
+        AI_31: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Fork3AI, GroupName: 初弱点露出デモ}
+            ChildIdx: !obj {子０: 140, 子１: 160, 子２: 164}
+          lists: {}
+        AI_32: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 SeqTwoAction, GroupName: 中行動}
+            ChildIdx: !obj {先行動: 81, 後行動: 30}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_33: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 TargetTargetPos, GroupName: 復帰}
+            ChildIdx: !obj {行動: 36}
+            SInst: !obj {AddSpeed: 0.0, OnEnterOnly: false}
+          lists: {}
+        AI_34: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 SeqTwoAction, GroupName: 復帰_0}
+            ChildIdx: !obj {先行動: 67, 後行動: 27}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_35: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 TargetRangeSelect, GroupName: 角度外}
+            ChildIdx: !obj {近距離: 16, 遠距離: 7}
+            SInst: !obj {IsXZOnly: true, IsSelectEveryFrame: false, FarDist: 50.0,
+              WeaponIdx: -1}
+          lists: {}
+        AI_36: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 SeqTwoAction, GroupName: 後行動}
+            ChildIdx: !obj {先行動: 68, 後行動: 23}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_37: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 Fork2AI, GroupName: 後行動_0}
+            ChildIdx: !obj {子０: 125, 子１: 145}
+          lists: {}
+        AI_38: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 ViewWait, GroupName: 弱点壁際}
+            ChildIdx: !obj {回転: 10, 待機: 86}
+            SInst: !obj {TurnStartAngle: 0.174533, CheckOnce: true}
+          lists: {}
+        AI_39: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 Fork2AI, GroupName: 先行動}
+            ChildIdx: !obj {子０: 125, 子１: 145}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_40: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 Fork2AI, GroupName: 待機}
+            ChildIdx: !obj {子０: 125, 子１: 145}
+          lists: {}
+        AI_41: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SeqTwoAction, GroupName: 移動}
+            ChildIdx: !obj {先行動: 72, 後行動: 110}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: true, IsNoChangeable: false}
+          lists: {}
+        AI_42: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GanonBeastWait, GroupName: 後行動}
+            ChildIdx: !obj {レーザー発射: 2, 弱点露出: 61, 待機: 88, 復帰: 104}
+          lists: {}
+        AI_43: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 KeepBackSelect, GroupName: 待機_0}
+            ChildIdx: !obj {角度内: 14, 角度外: 11}
+            SInst: !obj
+              BackAngle: 0.872665
+              KeepTime: 80
+              NodeName: Neck
+              BaseAxis: -1
+              LocalOffset: !vec3 [0.0, 0.0, 0.0]
+              XZOnly: true
+          lists: {}
+        AI_44: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GanonBeastWait, GroupName: 二回目以降}
+            ChildIdx: !obj {レーザー発射: 3, 弱点露出: 61, 待機: 88, 復帰: 104}
+          lists: {}
+        AI_45: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SeqTwoAction, GroupName: 歩き}
+            ChildIdx: !obj {先行動: 83, 後行動: 120}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_46: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 SeqTwoAction, GroupName: 弱点制御初回}
+            ChildIdx: !obj {先行動: 73, 後行動: 26}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_47: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 GanonBeastSufferChanger, GroupName: 弱点制御二回目以降}
+            ChildIdx: !obj {弱点露出: 60, 無敵モード: 187, 通常: 95}
+            SInst: !obj
+              WeakPoint1Time: 750
+              WeakPoint2Time: 750
+              WeakPoint3Time: 750
+              WeakPoint4Time: -1
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text050
+              CloseOption: 3
+              Timer: 90
+              labelName2: Shout_Zelda_Text051
+              labelName3: Shout_Zelda_Text052
+          lists: {}
+        AI_48: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 FirstSelect, GroupName: 待機}
+            ChildIdx: !obj {二回目以降: 100, 初回: 63}
+            SInst: !obj {ResetFromDemo: false}
+          lists: {}
+        AI_49: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 TargetRangeSelect, GroupName: 待機_0}
+            ChildIdx: !obj {近距離: 17, 遠距離: 8}
+            SInst: !obj {IsXZOnly: true, IsSelectEveryFrame: false, FarDist: 350.0,
+              WeaponIdx: -1}
+          lists: {}
+        AI_50: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 SeqTwoAction, GroupName: 段階３}
+            ChildIdx: !obj {先行動: 170, 後行動: 108}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_51: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 SeqTwoAction, GroupName: ビーム攻撃}
+            ChildIdx: !obj {先行動: 176, 後行動: 117}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_52: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 SeqTwoAction, GroupName: 初回ビーム攻撃}
+            ChildIdx: !obj {先行動: 173, 後行動: 114}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 20}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_53: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 SeqTwoAction, GroupName: 先行動}
+            ChildIdx: !obj {先行動: 172, 後行動: 112}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_54: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 WeakStateSelecter, GroupName: 段階４}
+            ChildIdx: !obj {弱点モード: 166, 通常モード: 184}
+            SInst: !obj {IsAlwaysUpdate: true}
+          lists: {}
+        AI_55: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 SeqTwoAction, GroupName: 二回目ビーム攻撃}
+            ChildIdx: !obj {先行動: 173, 後行動: 114}
+            BehaviorIdx: !obj {1721623982: 8, 295359800: 4}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_56: !list
+          objects:
+            Def: !obj {Name: 子３, ClassName: !str32 SeqTwoAction, GroupName: 段階４}
+            ChildIdx: !obj {先行動: 171, 後行動: 109}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_57: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 SeqTwoAction, GroupName: リアクション}
+            ChildIdx: !obj {先行動: 75, 後行動: 113}
+            BehaviorIdx: !obj {1721623982: 14, 295359800: 16}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_58: !list
+          objects:
+            Def: !obj {Name: 弱点ヒット, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 123, 子１: 141}
+          lists: {}
+        AI_59: !list
+          objects:
+            Def: !obj {Name: 弱点モード, ClassName: !str32 GanonBeastMoveSelect, GroupName: レーザー発射}
+            ChildIdx: !obj {待機: 87, 移動: 5}
+            SInst: !obj
+              Dist: 200.0
+              IsMoveFinishEnd: true
+              CentralPoint: !vec3 [-254.0, 155.0, 560.5]
+              FrontOffset: 70.0
+              WallDist: 434.0
+          lists: {}
+        AI_60: !list
+          objects:
+            Def: !obj {Name: 弱点露出, ClassName: !str32 Fork3AI, GroupName: 子１}
+            ChildIdx: !obj {子０: 130, 子１: 150, 子２: 162}
+          lists: {}
+        AI_61: !list
+          objects:
+            Def: !obj {Name: 弱点露出, ClassName: !str32 Fork2AI, GroupName: 露出アニメ}
+            ChildIdx: !obj {子０: 129, 子１: 149}
+          lists: {}
+        AI_62: !list
+          objects:
+            Def: !obj {Name: 弱点露出, ClassName: !str32 Fork2AI, GroupName: 露出アニメ瀕死Ver}
+            ChildIdx: !obj {子０: 132, 子１: 149}
+            BehaviorIdx: !obj {1721623982: 2}
+          lists: {}
+        AI_63: !list
+          objects:
+            Def: !obj {Name: 初回, ClassName: !str32 SeqThreeAction, GroupName: 子１}
+            ChildIdx: !obj {中行動: 183, 先行動: 74, 後行動: 111}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_64: !list
+          objects:
+            Def: !obj {Name: 初回, ClassName: !str32 SeqThreeAction, GroupName: 初回通常}
+            ChildIdx: !obj {中行動: 94, 先行動: 76, 後行動: 29}
+            BehaviorIdx: !obj {1721623982: 21}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_65: !list
+          objects:
+            Def: !obj {Name: 初弱点露出デモ, ClassName: !str32 SeqTwoAction, GroupName: デモ用}
+            ChildIdx: !obj {先行動: 78, 後行動: 31}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_66: !list
+          objects:
+            Def: !obj {Name: 身体動作, ClassName: !str32 GanonBeastRoot, GroupName: Root}
+            ChildIdx: !obj
+              リアクション: 1
+              初弱点露出デモ: 65
+              待機: 90
+              怒り: 98
+              怒りデモ: 99
+              瀕死: 102
+            SInst: !obj
+              GrudeRainObject: GanonBeastDamageField
+              GrudeInterval3: 240
+              GrudeInterval4: 180
+              GrudeInterval5: 120
+              GrudeCreateNum: 10
+              GrudePlayerDist: 20.0
+              GrudeRandRange: 9.0
+              GrudeCenterOffset: 5.0
+              InitWeakPointASName: InitWeakPoint
+              WeakPointASSlot: 0
+              GrudeRainObject2: GanonBeastDamageFieldHigh
+          lists: {}
+        AI_67: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 TargetRangeSelect, GroupName: チャージ}
+            ChildIdx: !obj {近距離: 18, 遠距離: 9}
+            SInst: !obj {IsXZOnly: true, IsSelectEveryFrame: false, FarDist: 50.0,
+              WeaponIdx: -1}
+          lists: {}
+        AI_68: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SubsAngleSelect, GroupName: ビーム攻撃}
+            ChildIdx: !obj {角度差大: 13, 角度差小: 12}
+            SInst: !obj {SubsAngle: 0.349066, CheckOnce: true, YRotOnly: true}
+          lists: {}
+        AI_69: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 TargetPredictRotSpdTargetPos,
+              GroupName: 位置合わせ}
+            ChildIdx: !obj {行動: 39}
+            SInst: !obj {AddSpeed: 400.0, OnEnterOnly: true}
+          lists: {}
+        AI_70: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: 移動}
+            ChildIdx: !obj {子０: 45, 子１: 159, 子２: 161}
+          lists: {}
+        AI_71: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 GanonBeastMoveSelect, GroupName: 近距離}
+            ChildIdx: !obj {待機: 89, 移動: 6}
+            SInst: !obj
+              Dist: 200.0
+              IsMoveFinishEnd: false
+              CentralPoint: !vec3 [-254.0, 155.0, 560.5]
+              FrontOffset: 70.0
+              WallDist: 434.0
+          lists: {}
+        AI_72: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 子０_0}
+            ChildIdx: !obj {子０: 133, 子１: 153}
+          lists: {}
+        AI_73: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SeqTwoAction, GroupName: 子１}
+            ChildIdx: !obj {先行動: 174, 後行動: 28}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_74: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 子１_0}
+            ChildIdx: !obj {子０: 134, 子１: 154}
+          lists: {}
+        AI_75: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: 死亡}
+            ChildIdx: !obj {子０: 128, 子１: 148, 子２: 53}
+            BehaviorIdx: !obj {1721623982: 10}
+          lists: {}
+        AI_76: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: 初回}
+            ChildIdx: !obj {子０: 124, 子１: 152, 子２: 163}
+          lists: {}
+        AI_77: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: 初回ビーム攻撃}
+            ChildIdx: !obj {子０: 124, 子１: 143, 子２: 52}
+          lists: {}
+        AI_78: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 初弱点露出デモ}
+            ChildIdx: !obj {子０: 131, 子１: 151}
+          lists: {}
+        AI_79: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SeqTwoAction, GroupName: 中行動}
+            ChildIdx: !obj {先行動: 77, 後行動: 30}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_80: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 175, 後行動: 115}
+            BehaviorIdx: !obj {1721623982: 23}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_81: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: 二回目ビーム攻撃}
+            ChildIdx: !obj {子０: 124, 子１: 143, 子２: 55}
+          lists: {}
+        AI_82: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 復帰_0}
+            ChildIdx: !obj {子０: 138, 子１: 157}
+          lists: {}
+        AI_83: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 歩き}
+            ChildIdx: !obj {子０: 139, 子１: 158}
+          lists: {}
+        AI_84: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 TargetPredictRotSpdTargetPos, GroupName: 基本回転}
+            ChildIdx: !obj {行動: 40}
+            SInst: !obj {AddSpeed: 0.0, OnEnterOnly: false}
+          lists: {}
+        AI_85: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Fork2AI, GroupName: 基本停止}
+            ChildIdx: !obj {子０: 135, 子１: 155}
+          lists: {}
+        AI_86: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Fork3AI, GroupName: 帰還移動}
+            ChildIdx: !obj {子０: 41, 子１: 144, 子２: 161}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 0}
+          lists: {}
+        AI_87: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 TargetAbsolutePos, GroupName: 弱点モード}
+            ChildIdx: !obj {行動: 38}
+            SInst: !obj {TargetPos: !vec3 [-254.0, 155.0, 560.5], OnEnterOnly: false}
+          lists: {}
+        AI_88: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 WeakStateSelecter, GroupName: 待機}
+            ChildIdx: !obj {弱点モード: 167, 通常モード: 97}
+            SInst: !obj {IsAlwaysUpdate: false}
+          lists: {}
+        AI_89: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Fork3AI, GroupName: 待機_0}
+            ChildIdx: !obj {子０: 135, 子１: 155, 子２: 165}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_90: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 FirstSelect, GroupName: 通常}
+            ChildIdx: !obj {二回目以降: 101, 初回: 64}
+            SInst: !obj {ResetFromDemo: true}
+          lists: {}
+        AI_91: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Fork2AI, GroupName: 瀕死待機}
+            ChildIdx: !obj {子０: 43, 子１: 48}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        AI_92: !list
+          objects:
+            Def: !obj {Name: 段階３, ClassName: !str32 Fork2AI, GroupName: 段階変化}
+            ChildIdx: !obj {子０: 136, 子１: 50}
+            BehaviorIdx: !obj {1721623982: 1}
+          lists: {}
+        AI_93: !list
+          objects:
+            Def: !obj {Name: 段階４, ClassName: !str32 Fork4AI, GroupName: 段階変化}
+            ChildIdx: !obj {子０: 137, 子１: 156, 子２: 54, 子３: 56}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 5, 2291369090: 6, 4287935508: 13}
+          lists: {}
+        AI_94: !list
+          objects:
+            Def: !obj {Name: 中行動, ClassName: !str32 SeqTwoAction, GroupName: 初回}
+            ChildIdx: !obj {先行動: 79, 後行動: 32}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_95: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 SeqTwoWeakPointOnFirstDo, GroupName: 子１}
+            ChildIdx: !obj {先行動: 80, 後行動: 116}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_96: !list
+          objects:
+            Def: !obj {Name: 通常モード, ClassName: !str32 SeqTwoAction, GroupName: 初回レーザー発射}
+            ChildIdx: !obj {先行動: 67, 後行動: 22}
+            BehaviorIdx: !obj {1721623982: 4}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: true}
+          lists: {}
+        AI_97: !list
+          objects:
+            Def: !obj {Name: 通常モード, ClassName: !str32 KeepBackSelect, GroupName: 待機}
+            ChildIdx: !obj {角度内: 14, 角度外: 11}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj
+              BackAngle: 0.872665
+              KeepTime: 2400
+              NodeName: Neck
+              BaseAxis: -1
+              LocalOffset: !vec3 [0.0, 0.0, 0.0]
+              XZOnly: true
+          lists: {}
+        AI_98: !list
+          objects:
+            Def: !obj {Name: 怒り, ClassName: !str32 AddDemoCall, GroupName: 通常}
+            ChildIdx: !obj {行動: 122}
+            SInst: !obj {OnlyOne: false, IsBroadCastOnlyOne: false, EntryPoint: Anger,
+              DemoName: Demo715_0}
+          lists: {}
+        AI_99: !list
+          objects:
+            Def: !obj {Name: 怒りデモ, ClassName: !str32 SeqTwoAction, GroupName: デモ用}
+            ChildIdx: !obj {先行動: 177, 後行動: 118}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_100: !list
+          objects:
+            Def: !obj {Name: 二回目以降, ClassName: !str32 SeqTwoAction, GroupName: 子１}
+            ChildIdx: !obj {先行動: 178, 後行動: 119}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_101: !list
+          objects:
+            Def: !obj {Name: 二回目以降, ClassName: !str32 Fork2AI, GroupName: 待機}
+            ChildIdx: !obj {子０: 44, 子１: 47}
+          lists: {}
+        AI_102: !list
+          objects:
+            Def: !obj {Name: 瀕死, ClassName: !str32 GanonBeastDying, GroupName: 通常}
+            ChildIdx: !obj {レーザー発射: 3, 弱点露出: 62, 待機: 91, 復帰: 103}
+          lists: {}
+        AI_103: !list
+          objects:
+            Def: !obj {Name: 復帰, ClassName: !str32 SeqTwoAction, GroupName: 瀕死}
+            ChildIdx: !obj {先行動: 82, 後行動: 34}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_104: !list
+          objects:
+            Def: !obj {Name: 復帰, ClassName: !str32 SeqTwoAction, GroupName: 復帰アニメ}
+            ChildIdx: !obj {先行動: 179, 後行動: 33}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_105: !list
+          objects:
+            Def: !obj {Name: Demo_Anger, ClassName: !str32 SeqTwoAction, GroupName: ''}
+            ChildIdx: !obj {先行動: 177, 後行動: 118}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_106: !list
+          objects:
+            Def: !obj {Name: Demo_FirstWeakPoint, ClassName: !str32 SeqTwoAction,
+              GroupName: ''}
+            ChildIdx: !obj {先行動: 78, 後行動: 31}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 気流管理, ClassName: !str32 ForkGanonAscendingCreateManage,
+              GroupName: Root}
+            SInst: !obj {CreateGrudgeName: AscendingCurrent_GanonBeast, MaxNum: 8}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 DummyAction, GroupName: 演出}
+            BehaviorIdx: !obj {1721623982: 27, 295359800: 17}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 DummyAction, GroupName: 最終演出待ち}
+            BehaviorIdx: !obj {1721623982: 28, 295359800: 15}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 子０_0}
+            SInst: !obj {ASName: WalkEnd, IsIgnoreSame: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 DummyAction, GroupName: 子１_0}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 SetLinkTagBasic, GroupName: 子２}
+            SInst: !obj {IsOn: true}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 初回ビーム}
+            SInst: !obj {ASName: Shoot, IsIgnoreSame: false, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 ForkTimer, GroupName: 先行動}
+            SInst: !obj {WaitFrame: 550, WaitFrameRand: 0, IsChangeable: true, EndState: 0}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 通常ビーム}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {ASName: Shoot, IsIgnoreSame: false, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 TimeredASPlay, GroupName: 怒りデモ}
+            SInst: !obj
+              ASName: Wait
+              Time: 120
+              TimeRand: 0
+              PosReduceRatio: 0.0
+              AngReduceRatio: 0.0
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 DummyAction, GroupName: 二回目以降}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 ForkASPlay, GroupName: 歩きアニメ終わり}
+            SInst: !obj
+              ASName: WalkEnd
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 光壁管理, ClassName: !str32 ForkGanonBeastAppearHolyWall,
+              GroupName: Root}
+            SInst: !obj
+              ShowDist: 420.5
+              KeyName: Barrier
+              AppearDist: 434.0
+              EffectYOffset: 0.0
+              BasePos: !vec3 [-254.0, 155.0, 560.5]
+              UiDist: 430.0
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 怒り}
+            SInst: !obj {ASName: Turn, IsIgnoreSame: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GanonBeastDamageASPlay, GroupName: ダメージアニメ}
+            SInst: !obj
+              IsStateChange: false
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: false
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 DummyAction, GroupName: 怨念落とし}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkAnimDriveTurn, GroupName: 基本回転}
+            SInst: !obj {TargetBone: Root}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GanonBeastDamageASPlay, GroupName: 形態変化ダメージアニメ}
+            SInst: !obj
+              IsStateChange: true
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: false
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkGanonBeastWeakPointOn, GroupName: 後行動_0}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkASPlay, GroupName: 弱点ヒット}
+            SInst: !obj
+              ASName: Dead
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GanonBeastASPlayFromActiveWp, GroupName: 弱点露出}
+            BehaviorIdx: !obj {1721623982: 24}
+            SInst: !obj
+              ASName: Suffer
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkGanonBeastWeakPointOn, GroupName: 弱点露出_0}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 OnetimeStopASPlay, GroupName: 弱点露出開始}
+            SInst: !obj {ASName: SufferF, IsIgnoreSame: false, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GanonBeastASPlayFromActiveWp, GroupName: 弱点露出瀕死Ver}
+            SInst: !obj
+              ASName: Suffer
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkASPlay, GroupName: 先行動}
+            SInst: !obj
+              ASName: Walk
+              EndState: 0
+              ChangeableTiming: 2
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkTimer, GroupName: 先行動_0}
+            SInst: !obj {WaitFrame: 320, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkASPlay, GroupName: 待機}
+            SInst: !obj
+              ASName: Wait
+              EndState: 0
+              ChangeableTiming: 0
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkSetCustomWeather, GroupName: 段階３}
+            SInst: !obj {WeatherType: 3}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkSetCustomWeather, GroupName: 段階４}
+            SInst: !obj {WeatherType: 0}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 OnetimeStopASPlay, GroupName: 復帰}
+            SInst: !obj {ASName: Recover, IsIgnoreSame: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.05}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkASPlay, GroupName: 歩きアニメ}
+            SInst: !obj
+              ASName: Walk
+              EndState: 0
+              ChangeableTiming: 2
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkASPlay, GroupName: 悶えアニメ}
+            SInst: !obj
+              ASName: Suffer
+              EndState: 1
+              ChangeableTiming: 2
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkStop, GroupName: ダメージ停止}
+            SInst: !obj {PosReduceRatio: 0.0, AngReduceRatio: 0.0}
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 TimeredASPlay, GroupName: チャージ}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj
+              ASName: Wait
+              Time: 120
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkGanonBeastBeamShoot, GroupName: ビーム照射}
+            SInst: !obj
+              BeamRange: 300.0
+              MuzzleOffset: !vec3 [0.0, 0.0, 0.0]
+              BeamBoneName: Muzzle
+              BeamActorKey: GanonBeastBeam
+              BeamActorName: GanonBeastBeam
+              BeamDir: !vec3 [0.0, 0.0, 1.0]
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAnimDriveMove, GroupName: 移動}
+            SInst: !obj {TargetBone: Root}
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkASPlay, GroupName: 基本回転}
+            SInst: !obj
+              ASName: NormalTurn
+              EndState: 1
+              ChangeableTiming: 1
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 OnetimeStopASPlay, GroupName: 後行動}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {ASName: ShootEnd, IsIgnoreSame: true, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAITreeValWeakPointTimer, GroupName: 後行動_0}
+            SInst: !obj {Timer: 600, IsChangeable: true, EndState: 0}
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkStop, GroupName: 弱点ヒット}
+            SInst: !obj {PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkStop, GroupName: 弱点露出}
+            SInst: !obj {PosReduceRatio: 0.15, AngReduceRatio: 0.05}
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAITreeValWeakPointTimer, GroupName: 弱点露出_0}
+            SInst: !obj {Timer: 900, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkGanonBeastWeakPointOn, GroupName: 弱点露出開始}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: true, EndState: 0}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkASPlay, GroupName: 初回待機}
+            SInst: !obj
+              ASName: WaitThreat
+              EndState: 1
+              ChangeableTiming: 2
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimer, GroupName: 先行動}
+            SInst: !obj {WaitFrame: 390, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkWaitCloseGanonShoutMsgClose,
+              GroupName: 先行動_0}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkStop, GroupName: 待機_1}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {PosReduceRatio: 0.0, AngReduceRatio: 0.0}
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkSetCustomPallete, GroupName: 段階４}
+            SInst: !obj {PalleteType: 17}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkGanonBeastWeakPointOff, GroupName: 復帰}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimer, GroupName: 歩きタイマー}
+            SInst: !obj {WaitFrame: 120, WaitFrameRand: 240, IsChangeable: false,
+              EndState: 0}
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAnimDriveMove, GroupName: 歩き移動}
+            SInst: !obj {TargetBone: Root}
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkStop, GroupName: 悶え動作}
+            SInst: !obj {PosReduceRatio: 0.0, AngReduceRatio: 0.0}
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkSeqNoWeaponAttack, GroupName: 移動攻撃コリジョン}
+            SInst: !obj
+              IsImpulseLarge: false
+              AttackType: 0
+              ExcludeAtkName0: ''
+              ExcludeAtkName1: ''
+              AttackIntensity: 3
+              IsGuardPierce: true
+              IsForceGuardBreak: false
+              IsIniviciblePierce: false
+              IsHeavy: false
+              IsHammer: false
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkWaitCloseGanonShoutMsgClose,
+              GroupName: 弱点露出}
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkAnimDriveMove, GroupName: 初回待機}
+            SInst: !obj {TargetBone: Root}
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkTimer, GroupName: 初弱点露出デモタイマー}
+            SInst: !obj {WaitFrame: 120, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkTimer, GroupName: 待機}
+            SInst: !obj {WaitFrame: 120, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: 弱点モード, ClassName: !str32 DummyAction, GroupName: 子２}
+            BehaviorIdx: !obj {1721623982: 7}
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: 弱点モード, ClassName: !str32 StopASPlay, GroupName: 待機}
+            SInst: !obj {ASName: SufferWait, IsIgnoreSame: true, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_61: !list
+          objects:
+            Def: !obj {Name: 弱点管理, ClassName: !str32 ForkGanonBeastWeakPointCheck,
+              GroupName: Root}
+            SInst: !obj {ASSlot: 0, LastWeakCounter: 45.0, LastWeakSlowEndSafeTime: 0}
+          lists: {}
+        Action_62: !list
+          objects:
+            Def: !obj {Name: 接触怨念, ClassName: !str32 DamageField, GroupName: Root}
+            SInst: !obj
+              FieldType: 0
+              RigidSetName: 0
+              RigidBodyName: Field
+              IsChangeRigidWorldMode: false
+              IsUseCollisionInfo: true
+              CollisionInfoName: Body
+          lists: {}
+        Action_63: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 ForkTimer, GroupName: 演出待ち}
+            SInst: !obj {WaitFrame: 120, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_64: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 ForkTimer, GroupName: 最終演出待ち}
+            SInst: !obj {WaitFrame: 120, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_65: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 ForkNoSlowTimer, GroupName: 子２}
+            SInst: !obj {WaitFrame: 30, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_66: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 初回ビーム}
+            SInst: !obj {ASName: PreShoot, IsIgnoreSame: true, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_67: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 ForkTimer, GroupName: 初回弱点露出間}
+            SInst: !obj {WaitFrame: 420, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_68: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 ForkGanonBeastWeakPointOff, GroupName: 先行動}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_69: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 通常ビーム}
+            BehaviorIdx: !obj {1721623982: 0}
+            SInst: !obj {ASName: PreShoot, IsIgnoreSame: true, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_70: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 怒りデモ}
+            SInst: !obj {ASName: Turn, IsIgnoreSame: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_71: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 ForkGanonBeastWeakPointOn, GroupName: 二回目以降}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_72: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 OnetimeStopASPlay, GroupName: 復帰}
+            SInst: !obj {ASName: Recover, IsIgnoreSame: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.05}
+          lists: {}
+        Action_73: !list
+          objects:
+            Def: !obj {Name: 足元変化, ClassName: !str32 ForkFourFootActorLustGrass, GroupName: Root}
+            SInst: !obj
+              WorldOffset: !vec3 [0.0, -10.0, 5.0]
+              MaxRadius: 45.0
+              MinRadius: 15.0
+              Node1Name: Toe_1_FL
+              Node2Name: Toe_1_FR
+              Node3Name: Toe_1_BL
+              Node4Name: Toe_1_BR
+              RadSpd: 0.15
+          lists: {}
+        Action_74: !list
+          objects:
+            Def: !obj {Name: 段階１, ClassName: !str32 ForkSetCustomWeather, GroupName: 段階変化}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 18}
+            SInst: !obj {WeatherType: 0}
+          lists: {}
+        Action_75: !list
+          objects:
+            Def: !obj {Name: 段階２, ClassName: !str32 ForkSetCustomWeather, GroupName: 段階変化}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 26}
+            SInst: !obj {WeatherType: 3}
+          lists: {}
+        Action_76: !list
+          objects:
+            Def: !obj {Name: 中行動, ClassName: !str32 ForkGanonBeastWeakPointOn, GroupName: 子１}
+            SInst: !obj {TargetSlotIdx: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_77: !list
+          objects:
+            Def: !obj {Name: 通常モード, ClassName: !str32 DummyAction, GroupName: 子２}
+          lists: {}
+        Action_78: !list
+          objects:
+            Def: !obj {Name: 頭上防風, ClassName: !str32 ForkGanonBeastHeadBarrier, GroupName: Root}
+            SInst: !obj
+              BarrierRad: 60.0
+              BarrierFront: 30.0
+              BarrierBack: -40.0
+              BarrierHeight: 40.0
+              BarrierHeightMax: 100.0
+          lists: {}
+        Action_79: !list
+          objects:
+            Def: !obj {Name: 姫様絶叫, ClassName: !str32 ForkBeastGanonMessageDialogCtrl,
+              GroupName: Root}
+          lists: {}
+        Action_80: !list
+          objects:
+            Def: !obj {Name: 無敵モード, ClassName: !str32 DummyAction, GroupName: 移行待機}
+          lists: {}
+        Action_81: !list
+          objects:
+            Def: !obj {Name: Demo_ForceEndPlayerSlow, ClassName: !str32 ForceEndPlayerSlow,
+              GroupName: ''}
+          lists: {}
+        Action_82: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_83: !list
+          objects:
+            Def: !obj {Name: Demo_GrudgeRainDrop, ClassName: !str32 DemoBeastGanonGrudgeDrop,
+              GroupName: ''}
+            SInst: !obj {GrudeRainObject: GanonBeastDamageField}
+          lists: {}
+        Action_84: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 ASPlaySimpleAnmDriven,
+              GroupName: ''}
+            SInst: !obj {ASName: WaitInDemo, IsIgnoreSame: false, IsChangeable: false,
+              ResetTransBoneOnLeave: true}
+          lists: {}
+        Action_85: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_86: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_87: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_88: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_89: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_90: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_91: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_92: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_93: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_94: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_95: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_96: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_97: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 EnemyFrontNeckRotate}
+            SInst: !obj {IsUpdatePos: true, OffsetToTargetDirXZ: 6.0, FrontAngleXZ: 3.14159}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpDlgRestWpTimeR3}
+            SInst: !obj
+              labelName3: Shout_Zelda_Text042
+              labelName2: Shout_Zelda_Text041
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text040
+              CloseOption: 3
+              Timer: 120
+              Type: 1
+              RestTime: 180
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text091
+              CloseOption: 3
+              Timer: 120
+              DelayTimer: 190
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text100
+              CloseOption: 3
+              Timer: 120
+              DelayTimer: 1800
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 NeckBattleMode}
+          lists: {}
+        Behavior_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text101
+              CloseOption: 3
+              Timer: 180
+              DelayTimer: 3600
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text104
+              CloseOption: 3
+              Timer: 120
+              DelayTimer: 5400
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 BeastGanonLastBlowOffMes}
+            SInst: !obj
+              DistXZ: 200
+              SubsY: -1.0
+              FrontAngle: 1.39626
+              XZBaseNode: Head
+              labelName2: Shout_Zelda_Text111
+              labelName3: Shout_Zelda_Text112
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text110
+              CloseOption: 3
+              Timer: 160
+              DelayTimer: 0
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_8: !list
+          objects:
+            Def: !obj {ClassName: !str32 EnemyNeckRotateToOffsetAng}
+            SInst: !obj {AngleXZ: 0.122173, IsUpdatePos: false, OffsetToTargetDirXZ: 0.0}
+          lists: {}
+        Behavior_9: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitDlgStop}
+          lists: {}
+        Behavior_10: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetBoneControlNoSlow}
+          lists: {}
+        Behavior_11: !list
+          objects:
+            Def: !obj {ClassName: !str32 RumbleController}
+            SInst: !obj {ReduceDist: 9999.0}
+          lists: {}
+        Behavior_12: !list
+          objects:
+            Def: !obj {ClassName: !str32 NeckParamChange}
+            SInst: !obj
+              ULimit: -0.0174533
+              DLimit: -0.0174533
+              LLimit: -0.0174533
+              RLimit: -0.0174533
+              RotRatio: 0.06
+              RetRotRatio: -1.0
+              MinRotate: 0.000872665
+              MaxRotate: 0.0174533
+              OffsetLR: 0.0
+              OffsetUD: 0.0
+          lists: {}
+        Behavior_13: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text090
+              CloseOption: 3
+              Timer: 240
+              DelayTimer: 420
+              Once: true
+              Type: 1
+          lists: {}
+        Behavior_14: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitDlgStop}
+          lists: {}
+        Behavior_15: !list
+          objects:
+            Def: !obj {ClassName: !str32 BeastGanonBgmCtrl}
+            SInst: !obj {Level: 3}
+          lists: {}
+        Behavior_16: !list
+          objects:
+            Def: !obj {ClassName: !str32 BeastGanonBgmStop}
+          lists: {}
+        Behavior_17: !list
+          objects:
+            Def: !obj {ClassName: !str32 BeastGanonBgmCtrl}
+            SInst: !obj {Level: 2}
+          lists: {}
+        Behavior_18: !list
+          objects:
+            Def: !obj {ClassName: !str32 BeastGanonBgmCtrl}
+            SInst: !obj {Level: -1}
+          lists: {}
+        Behavior_19: !list
+          objects:
+            Def: !obj {ClassName: !str32 CreateBgm}
+            SInst: !obj {BgmName: cGanonBeast}
+          lists: {}
+        Behavior_20: !list
+          objects:
+            Def: !obj {ClassName: !str32 EnemyNeckRotateToOffsetAng}
+            SInst: !obj {AngleXZ: -0.122173, IsUpdatePos: false, OffsetToTargetDirXZ: 0.0}
+          lists: {}
+        Behavior_21: !list
+          objects:
+            Def: !obj {ClassName: !str32 GanonBeastFirstMessage}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text010
+              labelName2: Shout_Zelda_Text020
+              labelName3: Shout_Zelda_Text021
+              CloseOption: 3
+              DelayTimer: 300
+              Once: true
+              Type: 1
+              Interval: 30
+          lists: {}
+        Behavior_22: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenDlgRnd3}
+            SInst: !obj
+              labelName2: Shout_Zelda_Text061
+              labelName3: Shout_Zelda_Text062
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text060
+              CloseOption: 3
+              Timer: 200
+              DelayTimer: 90
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_23: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenDlgRnd3}
+            SInst: !obj
+              labelName2: Shout_Zelda_Text071
+              labelName3: Shout_Zelda_Text072
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text070
+              CloseOption: 3
+              Timer: 170
+              DelayTimer: 550
+              Once: false
+              Type: 1
+          lists: {}
+        Behavior_24: !list
+          objects:
+            Def: !obj {ClassName: !str32 BeastGanonWPPrincessShout}
+            SInst: !obj
+              labelName2: Shout_Zelda_Text035
+              labelName3: Shout_Zelda_Text036
+              labelName4: Shout_Zelda_Text033
+              labelName5: Shout_Zelda_Text034
+              labelName6: Shout_Zelda_Text032
+              labelName7: Shout_Zelda_Text030
+              labelName8: Shout_Zelda_Text037
+              labelName9: Shout_Zelda_Text038
+              labelName10: Shout_Zelda_Text039
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text031
+              CloseOption: 3
+              Timer: 180
+              DelayTimer: 0
+              Once: false
+              Type: 1
+              SingleIdx: 3
+          lists: {}
+        Behavior_25: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetAllOneDamageDCCallback}
+            SInst: !obj {Timing: 4}
+          lists: {}
+        Behavior_26: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text080
+              CloseOption: 3
+              Timer: 180
+              DelayTimer: 120
+              Once: true
+              Type: 1
+          lists: {}
+        Behavior_27: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text081
+              CloseOption: 3
+              Timer: 180
+              DelayTimer: 0
+              Once: true
+              Type: 1
+          lists: {}
+        Behavior_28: !list
+          objects:
+            Def: !obj {ClassName: !str32 SimpleAtvUnitOpenSimpleDialog}
+            SInst: !obj
+              mstxtName: ShoutMsg/Shout_Npc_Zelda
+              labelName: Shout_Zelda_Text082
+              CloseOption: 3
+              Timer: 180
+              DelayTimer: 0
+              Once: true
+              Type: 1
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

@@ -1,0 +1,804 @@
+Location: HatenoLabo
+Name: HatenoMini_BlueFire
+NotPostNote: false
+Orderer: Npc_AncientDoctor
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 2
+        MoveToAnchorASName: ''
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: ''
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: ''
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndDo
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Ready_TwnObj_AncientOven_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Ready_TwnObj_AncientOven_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: TwnObj_AncientOven_A_01
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: HatenoMini_BlueFire_Activated
+  UpdateStep: true
+- Actors:
+  - ConditionalTimelines:
+    - Condition: AncientLabo_AncientDoctor_MoveA1
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Meet_Npc_AncientDoctor_Hateno_AncientLabo_AncientDoctor_MoveA1_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Meet_Npc_AncientDoctor_Hateno_AncientLabo_AncientDoctor_MoveA1_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: DoAndDo
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 0
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_AncientDoctor_Hateno
+    UniqueName: ''
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 2
+        MoveToAnchorASName: ''
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: ''
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: ''
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 2
+      TriggerEvents:
+      - EvflEntry: Meet_TwnObj_AncientOven_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Meet_TwnObj_AncientOven_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: TwnObj_AncientOven_A_01
+    UniqueName: ''
+  - ConditionalTimelines:
+    - Condition: AncientLabo_AncientDoctor_MoveA1
+      Nodes:
+      - AIName: Sleep
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 5
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: false
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Sleep
+        WaitAnchorRainASName: Sleep
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 5
+        WaitTalkTurn: 1
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 9
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 5
+        WaitAnchorASName: Act_CheckBookshelf
+        WaitAnchorRainASName: Act_CheckBookshelf
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      - AIName: Action3
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 13
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 9
+        WaitAnchorASName: Act_CheckBookshelf
+        WaitAnchorRainASName: Act_CheckBookshelf
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      - AIName: Action4
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 17
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 13
+        WaitAnchorASName: Act_CheckBookshelf
+        WaitAnchorRainASName: Act_CheckBookshelf
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 21
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 17
+        WaitAnchorASName: Act_CheckBookshelf
+        WaitAnchorRainASName: Act_CheckBookshelf
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      - AIName: Sleep
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: false
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 21
+        WaitAnchorASName: Sleep
+        WaitAnchorRainASName: Sleep
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 5
+        WaitTalkTurn: 1
+      TriggerEvents:
+      - EvflEntry: Meet_Npc_AncientAssistant004_AncientLabo_AncientDoctor_MoveA1_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Meet_Npc_AncientAssistant004_AncientLabo_AncientDoctor_MoveA1_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: false
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Sleep
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 3
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientAssistant004
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 4514.81982421875
+      Y: 0.0
+      Z: -3159.719970703125
+    Name: Npc_AncientDoctor_Hateno
+    OffFlag: HatenoMini_BlueFire_Meet
+  MessageName: Meet
+  Name: Meet
+  NextFlag: HatenoMini_BlueFire_Meet
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: DoAndDo
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Carry_Npc_AncientDoctor_Hateno_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Carry_Npc_AncientDoctor_Hateno_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientDoctor_Hateno
+    UniqueName: ''
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 2
+        MoveToAnchorASName: ''
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: ''
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: ''
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 2
+      TriggerEvents:
+      - EvflEntry: Carry_TwnObj_AncientOven_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Carry_TwnObj_AncientOven_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: TwnObj_AncientOven_A_01
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: 4156.60009765625
+      Y: 0.0
+      Z: -3167.699951171875
+    OffFlag: HatenoMini_BlueFire_Carry
+  MessageName: Carry
+  Name: Carry
+  NextFlag: HatenoMini_BlueFire_Carry
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_AncientDoctor_Hateno_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_Npc_AncientDoctor_Hateno_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_AncientDoctor_Hateno
+    UniqueName: ''
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 2
+        MoveToAnchorASName: ''
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: ''
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 2
+      TriggerEvents:
+      - EvflEntry: Finish_TwnObj_AncientOven_A_01_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_TwnObj_AncientOven_A_01_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: TwnObj_AncientOven_A_01
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 4514.81982421875
+      Y: 0.0
+      Z: -3159.719970703125
+    Name: Npc_AncientDoctor_Hateno
+    OffFlag: HatenoMini_BlueFire_Finish
+  MessageName: Finish
+  Name: Finish
+  NextFlag: HatenoMini_BlueFire_Finish
+  UpdateStep: true
+Type: Mini

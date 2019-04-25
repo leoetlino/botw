@@ -1,0 +1,408 @@
+Location: ''
+Name: MiniGame_SmashGolf
+NotPostNote: true
+Orderer: ''
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_MiniGame_Golf_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Ready_Npc_MiniGame_Golf_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: false
+  Name: Ready
+  NextFlag: MiniGame_SmashGolf_Activated
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Game_Npc_MiniGame_Golf_EachFrame
+        IsPauseOtherActors: false
+        Trigger: EachFrame
+      - EvflEntry: Game_Npc_MiniGame_Golf_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: true
+  Name: Game
+  NextFlag: MiniGame_SmashGolf_Game
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Warning_Npc_MiniGame_Golf_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: true
+  Name: Warning
+  NextFlag: MiniGame_SmashGolf_Warning
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: ForceStop_Npc_MiniGame_Golf_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: true
+  Name: ForceStop
+  NextFlag: MiniGame_SmashGolf_ForceStop
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: MoveBall_Npc_MiniGame_Golf_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: true
+  Name: MoveBall
+  NextFlag: MiniGame_SmashGolf_MoveBall
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action2
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: OB_Npc_MiniGame_Golf_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: true
+  Name: OB
+  NextFlag: MiniGame_SmashGolf_OB
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_MiniGame_Golf_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Golf
+    UniqueName: ''
+  AttentionOff: true
+  Name: Finish
+  NextFlag: MiniGame_SmashGolf_Finish
+  UpdateStep: false
+Type: Sub

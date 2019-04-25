@@ -1,0 +1,876 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 92
+      Demo_Idling: 93
+      Demo_Join: 94
+      Demo_OpenGetDemo: 95
+      Demo_PlayASForDemo: 96
+      Demo_PlayASForTimeline: 97
+      Demo_Reset: 98
+      Demo_ResetBoneCtrl: 99
+      Demo_SendSignal: 100
+      Demo_SetGetFlag: 101
+      Demo_TrigNullASPlay: 102
+      Demo_UpdateDataByGetDemo: 103
+      Demo_VisibleOff: 104
+      Demo_XLinkEventCreate: 105
+      Demo_XLinkEventFade: 106
+      Demo_XLinkEventKill: 107
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 79, 持ち運びボックス内: 67, 通常: 23}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ダメージ逃走, ClassName: !str32 BirdEscape, GroupName: 水中行動}
+            ChildIdx: !obj {逃走: 82, 逃走前: 89, 逃走終了: 85}
+            SInst: !obj {ForceEndTimer: 450, IsUseEscapeBefore: true, IsUseEscapeEnd: true}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 PreyReaction, GroupName: Root_0}
+            ChildIdx: !obj
+              ダメージ: 40
+              凍結: 80
+              怨念: 45
+              死亡: 10
+              気絶: 48
+              消滅: 12
+              溶岩: 90
+              炎上: 46
+              痺れ: 91
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 感電死, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 28, 停止: 77}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 空中死亡, ClassName: !str32 InWaterSelect, GroupName: 倒れ中}
+            ChildIdx: !obj {水上: 70, 水中: 71}
+            SInst: !obj {InWaterDepth: 0.0, IsCheckEveryFrame: false, IsForceChange: true,
+              OutWaterDepth: -1.0}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: 空中死亡, ClassName: !str32 InWaterSelect, GroupName: 倒れ中_0}
+            ChildIdx: !obj {水上: 14, 水中: 16}
+            SInst: !obj {InWaterDepth: 0.0, IsCheckEveryFrame: false, IsForceChange: true,
+              OutWaterDepth: -1.0}
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: 空中死亡, ClassName: !str32 InWaterSelect, GroupName: 倒れ中_1}
+            ChildIdx: !obj {水上: 15, 水中: 17}
+            SInst: !obj {InWaterDepth: 0.0, IsCheckEveryFrame: false, IsForceChange: true,
+              OutWaterDepth: -1.0}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SeqTwoAction, GroupName: 水中}
+            ChildIdx: !obj {先行動: 20, 後行動: 51}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SeqTwoAction, GroupName: 水中_0}
+            ChildIdx: !obj {先行動: 21, 後行動: 51}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 Fork2AI, GroupName: 先行動}
+            ChildIdx: !obj {子０: 54, 子１: 59}
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 PreyChemicalDeadReaction, GroupName: リアクション}
+            ChildIdx: !obj {凍死: 32, 感電死: 3, 死亡: 11, 焼死: 13}
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 PreyDeadCauseSelector, GroupName: 死亡}
+            ChildIdx: !obj {落下: 35, 通常: 24}
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 PreyDead, GroupName: リアクション}
+            ChildIdx: !obj {倒れ中: 30, 停止: 78}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: 焼死, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 29, 停止: 77}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_14: !list
+          objects:
+            Def: !obj {Name: 水上, ClassName: !str32 Fork2AI, GroupName: 空中死亡_0}
+            ChildIdx: !obj {子０: 52, 子１: 9}
+          lists: {}
+        AI_15: !list
+          objects:
+            Def: !obj {Name: 水上, ClassName: !str32 Fork2AI, GroupName: 空中死亡_1}
+            ChildIdx: !obj {子０: 53, 子１: 9}
+          lists: {}
+        AI_16: !list
+          objects:
+            Def: !obj {Name: 水中, ClassName: !str32 Fork2AI, GroupName: 空中死亡_0}
+            ChildIdx: !obj {子０: 7, 子１: 60}
+          lists: {}
+        AI_17: !list
+          objects:
+            Def: !obj {Name: 水中, ClassName: !str32 Fork2AI, GroupName: 空中死亡_1}
+            ChildIdx: !obj {子０: 8, 子１: 61}
+          lists: {}
+        AI_18: !list
+          objects:
+            Def: !obj {Name: 水中行動, ClassName: !str32 PreyNormal, GroupName: 通常}
+            ChildIdx: !obj
+              ふり向き: 41
+              ターゲット通知: 39
+              ダメージ逃走: 1
+              ロケーター待機: 42
+              威嚇: 43
+              徘徊: 37
+              戦闘: 72
+              気づき: 47
+              注目: 74
+              興味対象発見: 50
+              逃走: 33
+            SInst: !obj
+              IsUseEscapeState: true
+              IsPositiveAttacker: false
+              IsSearchTarget: true
+              IsEmitForceEscapeSignal: true
+              IsReceivedForceEscapeSignal: true
+              IsCheckSandStorm: false
+              ChangeBattleStateRadius: 0.0
+              CounterAttackRadius: 0.0
+              CounterAttackRate: 0.0
+              AddCautionLevelVal: 520.0
+              AutoReduceCautionLevelVal: 1.0
+              LimitOverReduceCautionLevelVal: 1000.0
+              AwnRangeScaleWhenAttention: 1.5
+              TargetLostTime: 70.0
+              AllowRoarRadius: 0.0
+              EscapeWaterFlowLimit: 0.4
+              NewFoodAddTime: 0.0
+          lists: {}
+        AI_19: !list
+          objects:
+            Def: !obj {Name: 接地, ClassName: !str32 BirdEscape, GroupName: 通常行動}
+            ChildIdx: !obj {逃走: 82, 逃走前: 87, 逃走終了: 84}
+            SInst: !obj {ForceEndTimer: 450, IsUseEscapeBefore: true, IsUseEscapeEnd: true}
+          lists: {}
+        AI_20: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 通常死亡}
+            ChildIdx: !obj {子０: 56, 子１: 63}
+          lists: {}
+        AI_21: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 通常死亡_0}
+            ChildIdx: !obj {子０: 55, 子１: 62}
+          lists: {}
+        AI_22: !list
+          objects:
+            Def: !obj {Name: 滝接触, ClassName: !str32 BirdEscape, GroupName: 通常}
+            ChildIdx: !obj {逃走: 83, 逃走前: 34, 逃走終了: 86}
+            SInst: !obj {ForceEndTimer: 450, IsUseEscapeBefore: true, IsUseEscapeEnd: true}
+          lists: {}
+        AI_23: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 DuckRoot, GroupName: BaseAI}
+            ChildIdx: !obj
+              スクリプト用: 38
+              リアクション: 2
+              上機嫌: 69
+              所持: 68
+              水中行動: 18
+              滝接触: 22
+              落下: 36
+              通常行動: 25
+              騎乗中: 49
+            SInst: !obj
+              InWaterDepth: 0.0
+              IsCheckFreeFall: true
+              IsCheckStuckConsiderY: true
+              IsUseWeakForcePushOutside: true
+              IsEnableEscapeForceEndCheck: false
+              EscapeForceEndTime: 600.0
+              AfterEscapeForceEndState: 0
+          lists: {}
+        AI_24: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 29, 停止: 77}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_25: !list
+          objects:
+            Def: !obj {Name: 通常行動, ClassName: !str32 GroundHitSelect, GroupName: Root_0}
+            ChildIdx: !obj {接地: 19, 通常: 75}
+            SInst: !obj {IsActionEndEnd: false, IsEnterCheck: true}
+          lists: {}
+        AI_26: !list
+          objects:
+            Def: !obj {Name: 通常死亡, ClassName: !str32 SeqTwoAction, GroupName: 倒れ中_0}
+            ChildIdx: !obj {先行動: 20, 後行動: 51}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_27: !list
+          objects:
+            Def: !obj {Name: 通常死亡, ClassName: !str32 SeqTwoAction, GroupName: 倒れ中_1}
+            ChildIdx: !obj {先行動: 21, 後行動: 51}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_28: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 BirdDead, GroupName: 感電死}
+            ChildIdx: !obj {空中死亡: 6, 通常死亡: 27}
+            SInst: !obj {GravityScale: 1.0}
+          lists: {}
+        AI_29: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 BirdDead, GroupName: 死亡_0}
+            ChildIdx: !obj {空中死亡: 4, 通常死亡: 76}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {GravityScale: 0.5}
+          lists: {}
+        AI_30: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 Fork3AI, GroupName: 消滅}
+            ChildIdx: !obj {子０: 57, 子１: 64, 子２: 66}
+          lists: {}
+        AI_31: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 BirdDead, GroupName: 凍死}
+            ChildIdx: !obj {空中死亡: 5, 通常死亡: 26}
+            SInst: !obj {GravityScale: 1.0}
+          lists: {}
+        AI_32: !list
+          objects:
+            Def: !obj {Name: 凍死, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 31, 停止: 77}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_33: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 BirdEscape, GroupName: 水中行動}
+            ChildIdx: !obj {逃走: 82, 逃走前: 89, 逃走終了: 85}
+            SInst: !obj {ForceEndTimer: 450, IsUseEscapeBefore: true, IsUseEscapeEnd: true}
+          lists: {}
+        AI_34: !list
+          objects:
+            Def: !obj {Name: 逃走前, ClassName: !str32 Fork2AI, GroupName: 滝接触}
+            ChildIdx: !obj {子０: 58, 子１: 65}
+          lists: {}
+        AI_35: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 29, 停止: 77}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_36: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 BirdEscape, GroupName: 通常}
+            ChildIdx: !obj {逃走: 81, 逃走前: 88, 逃走終了: 84}
+            SInst: !obj {ForceEndTimer: 450, IsUseEscapeBefore: false, IsUseEscapeEnd: true}
+          lists: {}
+        AI_37: !list
+          objects:
+            Def: !obj {Name: 徘徊, ClassName: !str32 AnimalRoamCheckWater, GroupName: 水中行動}
+            ChildIdx: !obj {待機: 73, 移動: 44}
+            SInst: !obj
+              WaterLevelLimitLower: 0.58
+              WaterLevelLimitUpper: 10000.0
+              LimitRadius: 20.0
+              ChangeWaitRate: 0.7
+              FinishChangeCount: -1
+              IsSendGoalPos: true
+              FramesStuckOnTerrainAction: 30.0
+              CheckValidStartPos: false
+              CheckLOS: false
+              SearchNextPathRadius: -1.0
+              RadiusLimit: 7.0
+              ForwardDirDistCoefficient: 0.8
+              DirRandomMinRatio: 0.4
+              DirRangeAngle: 6.28319
+              RejectDistRatio: 0.3
+              ContinueAddSearchAngle: 1.0472
+              ContinueReduceDistRatio: 0.85
+              ContinueReduceRejectDistRatio: 0.9
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: スクリプト用, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: ターゲット通知, ClassName: !str32 DummyAction, GroupName: 水中行動}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: ダメージ, ClassName: !str32 WaitTimer, GroupName: リアクション}
+            SInst: !obj {WaitFrame: 0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: ふり向き, ClassName: !str32 SwimTurn, GroupName: 水中行動}
+            SInst: !obj
+              ASName: SwimTurn
+              FinRotate: 0.0174533
+              PosReduceRatio: 0.5
+              RotSpeed: 0.15708
+              RotRatio: 0.1
+              InWaterDepth: 0.0
+              FloatDepth: 0.07
+              FloatRadius: 0.03
+              FloatCycleTime: 80.0
+              ChangeDepthSpeed: 0.025
+              IsCheckWaterFall: false
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: ロケーター待機, ClassName: !str32 Hover, GroupName: 水中行動}
+            SInst: !obj
+              ASName: Wait
+              Time: 0
+              TimeRand: 0
+              PosReduceRatio: 0.0
+              AngReduceRatio: 0.0
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 威嚇, ClassName: !str32 DummyAction, GroupName: 水中行動}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 SwimMove, GroupName: 徘徊}
+            SInst: !obj
+              ASName: SwimMove
+              Speed: 0.04
+              RotSpeed: 0.139626
+              FinRadius: 0.8
+              FinRotate: 3.14159
+              BaseRotRatio: 0.12
+              WeaponIdx: -1
+              InWaterDepth: 0.0
+              FloatDepth: 0.085
+              FloatRadius: 0.04
+              FloatCycleTime: 50.0
+              ChangeDepthSpeed: 0.025
+              IsCheckWaterFall: false
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 怨念, ClassName: !str32 Delete, GroupName: リアクション}
+            SInst: !obj {DeleteType: 4}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 炎上, ClassName: !str32 WaitTimer, GroupName: リアクション}
+            SInst: !obj {WaitFrame: 0}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 気づき, ClassName: !str32 Hover, GroupName: 水中行動}
+            SInst: !obj
+              ASName: FloatWait
+              Time: 1
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 気絶, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 騎乗中, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 興味対象発見, ClassName: !str32 DummyAction, GroupName: 水中行動}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 HuntingDead, GroupName: 通常死亡}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {OffsetBoneName: '', IsUseOffsetY: false, ExtraOffset: !vec3 [
+                0.0, 0.0, 0.0], InWaterDepth: 0.0}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalFreeze, GroupName: 空中死亡_0}
+            SInst: !obj
+              PauseDelayFrames: 0.0
+              ASName: ''
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalElectricParalysis, GroupName: 空中死亡_1}
+            SInst: !obj
+              PauseDelayFrames: 100000.0
+              ASName: Electric
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkTimer, GroupName: 子１}
+            SInst: !obj {WaitFrame: 5, WaitFrameRand: 0, IsChangeable: false, EndState: 2}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalElectricParalysis, GroupName: 先行動_0}
+            SInst: !obj
+              PauseDelayFrames: 100000.0
+              ASName: Electric
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalFreeze, GroupName: 通常死亡}
+            SInst: !obj
+              PauseDelayFrames: 0.0
+              ASName: ''
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Vanish, GroupName: 倒れ中}
+            SInst: !obj
+              DieType: 3
+              NoDrop: true
+              ASName: ''
+              Time: 21
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 OnetimeHoverASPlay, GroupName: 逃走前}
+            SInst: !obj {ASName: BeforeFly, IsIgnoreSameAS: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkWaitGroundHit, GroupName: 子１}
+            SInst: !obj {InWaterDepth: 0.0, IsChangeable: false}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkFreeMoving, GroupName: 水中}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkFreeMoving, GroupName: 水中_0}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimerForceResetCondition, GroupName: 先行動_0}
+            SInst: !obj
+              ResetCondition: 4
+              WaitFrame: 60
+              WaitFrameRand: 0
+              IsChangeable: false
+              EndState: 0
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimerForceResetCondition, GroupName: 通常死亡}
+            SInst: !obj
+              ResetCondition: 3
+              WaitFrame: 60
+              WaitFrameRand: 0
+              IsChangeable: false
+              EndState: 0
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAlwaysSetModelEffect, GroupName: 倒れ中}
+            SInst: !obj {Timer: 21}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 LookAtTarget, GroupName: 逃走前}
+            SInst: !obj
+              ASKeyName: ''
+              RotSpd: 0.436332
+              FinRotate: -0.0174533
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.5
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkOnEnterCharCtrlInvalid, GroupName: 倒れ中}
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 上機嫌, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 水上, ClassName: !str32 FlyingBirdDie, GroupName: 空中死亡}
+            SInst: !obj
+              IsChangeStateFallOnce: true
+              EnableHitGroundCheckTimer: 20.0
+              FallAS: Dead_Air
+              OnGroundAS: Dead_Air_End
+              IsCheckFallASFinished: false
+              IsIgnoreSameAS4Fall: false
+              IsIgnoreSameAS4OnGround: false
+              HitImpactForceSmallSwordS: 0.35
+              HitImpactForceSmallSwordL: 0.6
+              HitImpactForceLargeSwordS: 0.35
+              HitImpactForceLargeSwordL: 0.6
+              HitImpactForceSpearS: 0.5
+              HitImpactForceSpearL: 1.0
+              RiseSpeed: 0.1
+              LastSpeedRatio: 1.0
+              PosReduceRatioOnGround: 0.2
+              RotReduceRatioOnGround: 0.2
+              PosReduceRatio: 0.75
+              RotReduceRatio: 0.5
+              IsControlRotation: false
+              IsSetBackLastState: true
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 水中, ClassName: !str32 WaterFloatWait, GroupName: 空中死亡}
+            SInst: !obj
+              Time: 0
+              TimeRand: 0
+              ASName: Dead
+              IsIgnoreSameAS: true
+              IsEndWhenASFinished: true
+              PosReduceRatio: 0.15
+              AngleReduceRatio: 0.3
+              InWaterDepth: 0.0
+              FloatDepth: 0.07
+              FloatRadius: 0.03
+              FloatCycleTime: 80.0
+              ChangeDepthSpeed: 0.025
+              IsCheckWaterFall: false
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 戦闘, ClassName: !str32 DummyAction, GroupName: 水中行動}
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 WaterFloatWaitEx, GroupName: 徘徊}
+            SInst: !obj
+              AdditionalPosReduceRatio: 0.96
+              AdditionalAngleReduceRatio: 0.5
+              AdditionalVelocityMax: 0.06
+              WaterEffectSpeedRate: 0.0
+              Time: 0
+              TimeRand: 0
+              ASName: FloatWait
+              IsIgnoreSameAS: false
+              IsEndWhenASFinished: true
+              PosReduceRatio: 0.0
+              AngleReduceRatio: 0.0
+              InWaterDepth: 0.0
+              FloatDepth: 0.07
+              FloatRadius: 0.03
+              FloatCycleTime: 80.0
+              ChangeDepthSpeed: 0.025
+              IsCheckWaterFall: false
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: 注目, ClassName: !str32 DummyAction, GroupName: 水中行動}
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 StopASPlay, GroupName: 通常行動}
+            SInst: !obj {ASName: Wait, IsIgnoreSame: true, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 通常死亡, ClassName: !str32 HuntingDead, GroupName: 倒れ中}
+            SInst: !obj {OffsetBoneName: '', IsUseOffsetY: false, ExtraOffset: !vec3 [
+                0.0, 0.0, 0.0], InWaterDepth: 0.0}
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 停止, ClassName: !str32 Delete, GroupName: 死亡_0}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 停止, ClassName: !str32 Delete, GroupName: 消滅}
+            SInst: !obj {DeleteType: 2}
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 AnimalFreeze, GroupName: リアクション}
+            SInst: !obj
+              PauseDelayFrames: 0.0
+              ASName: ''
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 BirdEscape, GroupName: 先行動}
+            SInst: !obj
+              MoveSpeedMax: 0.4
+              MoveSpeedMin: 0.35
+              TurnSpeed: 0.0872665
+              InterpolateFrameForMaxSpeed: 15.0
+              TargetEscapeWidthMax: 60.0
+              TargetEscapeWidthMin: 50.0
+              TargetHeightMax: 50.0
+              TargetHeightMin: 40.0
+              TargetTurnAngle: 1.39626
+              ContinueEscapeDistanceXZ: 50.0
+              AdditionalWidth: 20.0
+              TargetUpperAngle: 0.733038
+              StartReduceHeightRate: 0.45
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 BirdEscape, GroupName: 先行動_1}
+            SInst: !obj
+              MoveSpeedMax: 0.4
+              MoveSpeedMin: 0.35
+              TurnSpeed: 0.0872665
+              InterpolateFrameForMaxSpeed: 15.0
+              TargetEscapeWidthMax: 60.0
+              TargetEscapeWidthMin: 50.0
+              TargetHeightMax: 50.0
+              TargetHeightMin: 40.0
+              TargetTurnAngle: 1.39626
+              ContinueEscapeDistanceXZ: 50.0
+              AdditionalWidth: 20.0
+              TargetUpperAngle: 0.733038
+              StartReduceHeightRate: 0.45
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 BirdEscape, GroupName: 滝接触}
+            SInst: !obj
+              MoveSpeedMax: 0.4
+              MoveSpeedMin: 0.35
+              TurnSpeed: 0.0698132
+              InterpolateFrameForMaxSpeed: 15.0
+              TargetEscapeWidthMax: 60.0
+              TargetEscapeWidthMin: 50.0
+              TargetHeightMax: 50.0
+              TargetHeightMin: 40.0
+              TargetTurnAngle: 0.436332
+              ContinueEscapeDistanceXZ: 50.0
+              AdditionalWidth: 20.0
+              TargetUpperAngle: 0.733038
+              StartReduceHeightRate: 0.45
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: 逃走終了, ClassName: !str32 FadeoutDelete, GroupName: 先行動}
+            SInst: !obj {FadeoutTime: 0, DeleteType: 0}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: 逃走終了, ClassName: !str32 FadeoutDelete, GroupName: 先行動_0}
+            SInst: !obj {FadeoutTime: 0, DeleteType: 0}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: 逃走終了, ClassName: !str32 FadeoutDelete, GroupName: 滝接触}
+            SInst: !obj {FadeoutTime: 0, DeleteType: 0}
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: 逃走前, ClassName: !str32 OnetimeHoverASPlay, GroupName: 接地_0}
+            SInst: !obj {ASName: BeforeFly, IsIgnoreSameAS: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: 逃走前, ClassName: !str32 DummyAction, GroupName: 先行動_0}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: 逃走前, ClassName: !str32 WaterFloatWaitEx, GroupName: 先行動_2}
+            SInst: !obj
+              AdditionalPosReduceRatio: 0.5
+              AdditionalAngleReduceRatio: 0.5
+              AdditionalVelocityMax: 0.08
+              WaterEffectSpeedRate: 0.0
+              Time: 0
+              TimeRand: 0
+              ASName: BeforeFly
+              IsIgnoreSameAS: false
+              IsEndWhenASFinished: true
+              PosReduceRatio: 0.0
+              AngleReduceRatio: 0.0
+              InWaterDepth: 0.0
+              FloatDepth: 0.07
+              FloatRadius: 0.03
+              FloatCycleTime: 80.0
+              ChangeDepthSpeed: 0.025
+              IsCheckWaterFall: false
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: 溶岩, ClassName: !str32 Delete, GroupName: リアクション}
+            SInst: !obj {DeleteType: 4}
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: 痺れ, ClassName: !str32 AnimalElectricParalysis, GroupName: リアクション}
+            SInst: !obj
+              PauseDelayFrames: 100000.0
+              ASName: Electric
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 DummyAction, GroupName: ''}
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_61: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_62: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_63: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_64: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_65: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_66: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_67: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_68: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_69: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 EmitInterest}
+            SInst: !obj {Level: 1, IsTargetNPC: true}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 NoSensorHoldNoise}
+            SInst: !obj {NoiseValue: 1.0, IsShock: false}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

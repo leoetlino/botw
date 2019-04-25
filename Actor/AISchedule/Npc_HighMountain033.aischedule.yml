@@ -1,0 +1,95 @@
+ConditionalTimelines:
+- Condition: Rito_BrosRock_Finish
+  Nodes:
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 8, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Run, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Sleep, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 1}
+  - {AIName: Action4, CanBeAwaken: 'True', Emotion: Normal, EndTime: 21, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Act_Song_Together, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Run, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 8, WaitAnchorASName: Wait, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 0, WaitTalkTurn: 3}
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Run, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 21, WaitAnchorASName: Sleep, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 1}
+  TriggerEvents:
+  - {EvflEntry: Rito_BrosRock_Finish_Talk, IsPauseOtherActors: false, Trigger: Talk}
+  - EvflEntry: Rito_BrosRock_Finish_NearActorsTalk
+    EvflEntryNear: Rito_BrosRock_Finish_NearActorsNear
+    EvflEntryTalk: Rito_BrosRock_Finish_NearActorsTalk
+    IsPauseOtherActors: true
+    IsPauseOtherActorsNear: false
+    IsPauseOtherActorsTalk: true
+    Parameters:
+      Actors:
+      - {Action: Action4, Actor: Npc_HighMountain031}
+      - {Action: '', Actor: Npc_HighMountain032}
+      - {Action: '', Actor: Npc_HighMountain034}
+      - {Action: '', Actor: Npc_HighMountain035}
+    Trigger: NearActors
+DefaultTimeline:
+  Nodes:
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 8, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Sleep, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 1}
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 21, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 8, WaitAnchorASName: Rest, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 2,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 3, WaitTalkTurn: 1}
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 21, WaitAnchorASName: Sleep, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 1}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+DisplayDistanceMode: None

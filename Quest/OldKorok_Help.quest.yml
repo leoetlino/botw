@@ -1,0 +1,271 @@
+Location: MapArea_WestHateru
+Name: OldKorok_Help
+NotPostNote: false
+Orderer: Npc_OldKorok_Help
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Sorrow
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Walk
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_OldKorok_Help_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Ready_Npc_OldKorok_Help_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 15.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_OldKorok_Help
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: OldKorok_Help_Activated
+  UpdateStep: true
+- Actors:
+  - ConditionalTimelines:
+    - Condition: OldKorok_Help_KorokFruit
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Pleasure
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Walk
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Maracus_Npc_OldKorok_Help_OldKorok_Help_KorokFruit_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 15.0
+          FrontOnly: false
+        Trigger: Near
+    DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Sorrow
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Walk
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Maracus_Npc_OldKorok_Help_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Maracus_Npc_OldKorok_Help_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 15.0
+          FrontOnly: false
+        Trigger: Near
+      - EvflEntry: Maracus_Npc_OldKorok_Help_StepStart
+        IsPauseOtherActors: false
+        Trigger: StepStart
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_OldKorok_Help
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 2069.451904296875
+      Y: 0.0
+      Z: 1422.2449951171875
+    Name: Npc_OldKorok_Help
+    OffFlag: ''
+  MessageName: Maracus
+  Name: Maracus
+  NextFlag: OldKorok_Help_Maracus
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Sorrow
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Walk
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 1
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_OldKorok_Help_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_Npc_OldKorok_Help_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 15.0
+          FrontOnly: false
+        Trigger: Near
+      - EvflEntry: Finish_Npc_OldKorok_Help_StepStart
+        IsPauseOtherActors: false
+        Trigger: StepStart
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_OldKorok_Help
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 2069.451904296875
+      Y: 0.0
+      Z: 1422.2449951171875
+    Name: Npc_OldKorok_Help
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: OldKorok_Help_Finish
+  UpdateStep: true
+Type: Mini

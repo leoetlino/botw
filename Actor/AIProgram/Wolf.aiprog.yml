@@ -1,0 +1,1631 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 146
+      Demo_Idling: 147
+      Demo_Join: 148
+      Demo_OpenGetDemo: 149
+      Demo_PlayASForDemo: 150
+      Demo_PlayASForTimeline: 151
+      Demo_Reset: 152
+      Demo_ResetBoneCtrl: 153
+      Demo_SendSignal: 154
+      Demo_SetGetFlag: 155
+      Demo_TrigNullASPlay: 156
+      Demo_UpdateDataByGetDemo: 157
+      Demo_VisibleOff: 158
+      Demo_XLinkEventCreate: 159
+      Demo_XLinkEventFade: 160
+      Demo_XLinkEventKill: 161
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 135, 持ち運びボックス内: 116, 通常: 54}
+            BehaviorIdx: !obj {1721623982: 9}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ターゲット通知, ClassName: !str32 SeqTwoAction, GroupName: 通常行動}
+            ChildIdx: !obj {先行動: 123, 後行動: 89}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: ダメージ逃走, ClassName: !str32 AnimalEscapeAfterDamage, GroupName: 通常行動}
+            ChildIdx: !obj
+              ダメージ後: 73
+              地形嵌り: 50
+              最後の手段: 29
+              逃走: 137
+              逃走前: 138
+            BehaviorIdx: !obj {1721623982: 6, 295359800: 7}
+            SInst: !obj
+              ContinueDistance: 100.0
+              ShouldEscapeDistance: 30.0
+              ShouldEscapeDistanceRand: 10.0
+              PenaltyScale: 1.1
+              NavMeshRadiusScale: 1.5
+              FramesStuckOnTerrainAction: 30.0
+              NumTimesAllowStuck: 5
+              IsSendGoalPos: false
+              IsUseBeforeAction: true
+              IsDynamicallyOffsetNavChar: true
+              SearchNextPathRadius: 20.0
+              RadiusLimit: 100.0
+              ForwardDirDistCoefficient: 0.85
+              DirRandomMinRatio: 0.95
+              DirRangeAngle: 3.49066
+              RejectDistRatio: 0.5
+              ContinueAddSearchAngle: 1.0472
+              ContinueReduceDistRatio: 0.85
+              ContinueReduceRejectDistRatio: 0.9
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: ふり向き, ClassName: !str32 RandomSelectTwoAction, GroupName: ふり向き}
+            ChildIdx: !obj {行動Ａ: 97, 行動Ｂ: 100}
+            SInst: !obj {TransitionRateToA: 0, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: ふり向き, ClassName: !str32 PreyLookAtTarget, GroupName: 通常行動}
+            ChildIdx: !obj {ふり向き: 3, 警戒: 88, 連続ふり向き: 144}
+            SInst: !obj {LimitAngle: 1.39626, IsUpdateViewPos: false}
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 PreyReaction, GroupName: Root_0}
+            ChildIdx: !obj
+              ダメージ: 72
+              凍結: 136
+              怨念: 80
+              死亡: 34
+              気絶: 85
+              消滅: 36
+              溶岩: 142
+              炎上: 81
+              痺れ: 145
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: 威嚇, ClassName: !str32 AnimalAttackOtherTarget, GroupName: 通常行動}
+            ChildIdx: !obj {待機: 49, 戦闘行動: 46, 攻撃後: 94}
+            BehaviorIdx: !obj {1721623982: 13}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 AnimalFollowTarget, GroupName: 興味対象発見}
+            ChildIdx: !obj {うろうろする: 69, 追いかける(近い): 132, 追いかける(遠い): 131}
+            SInst: !obj
+              UseLocalOffsetType: 1
+              DistanceSuccessEnd: 0.6
+              DistanceMovingToward: 0.0
+              DistanceRequestingPath: 8.0
+              DistanceGivingUp: 100.0
+              DistanceThresholdCry: 0.0
+              DistanceCheckAvoidance: -1.0
+              TargetVelocitySuccessEnd: 0.02
+              UpdateTargetPosFrames: 60.0
+              UpdateTargetPosFramesNear: 15.0
+              SuccessEndDelays: 0.0
+              SelfPositionOffsetLocal: !vec3 [0.0, 0.0, 0.0]
+              SideDistance: 0.0
+              TargetVelocityDistanceSec: 0.0
+              IsAvoidNavMeshActor: true
+              IsTargetPosEqualToLeaderPos: true
+              CanIgnorePlayer: false
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 TargetActorDistanceSelect, GroupName: 通常行動}
+            ChildIdx: !obj {内側: 140, 外側: 82}
+            SInst: !obj {BoundaryDistance: 11.0, OverlapDistance: 2.0, IsUpdateTarget: true}
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: 外側, ClassName: !str32 MoveAroundTarget, GroupName: 通常行動}
+            ChildIdx: !obj {移動: 76}
+            SInst: !obj
+              StartRange: 15.0
+              EndRange: 7.5
+              ChangeRangeRate: -0.05
+              TurnTimeBase: 90
+              TurnTimeRand: 60
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: 崖である, ClassName: !str32 AnimalBattleMoveLeave, GroupName: 離脱}
+            ChildIdx: !obj {旋回: 127, 移動: 78}
+            SInst: !obj {CheckForwardDist: 1.0}
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: 崖でない, ClassName: !str32 MoveAroundTarget, GroupName: 離脱}
+            ChildIdx: !obj {移動: 78}
+            SInst: !obj
+              StartRange: 15.0
+              EndRange: 15.0
+              ChangeRangeRate: 0.0
+              TurnTimeBase: 100
+              TurnTimeRand: 60
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: 感電死, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 58, 停止: 133}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: 興味対象発見, ClassName: !str32 HorseGoToEatAI, GroupName: 通常行動}
+            ChildIdx: !obj {移動: 7, 食べる: 119}
+            SInst: !obj {TimeoutFrame: 1200}
+          lists: {}
+        AI_14: !list
+          objects:
+            Def: !obj {Name: 空中, ClassName: !str32 InWaterSelect, GroupName: 倒れ中}
+            ChildIdx: !obj {水上: 38, 水中: 120}
+            SInst: !obj {InWaterDepth: 1.0, IsCheckEveryFrame: false, IsForceChange: true,
+              OutWaterDepth: 0.0}
+          lists: {}
+        AI_15: !list
+          objects:
+            Def: !obj {Name: 空中, ClassName: !str32 InWaterSelect, GroupName: 倒れ中_0}
+            ChildIdx: !obj {水上: 39, 水中: 120}
+            SInst: !obj {InWaterDepth: 1.0, IsCheckEveryFrame: false, IsForceChange: true,
+              OutWaterDepth: 0.0}
+          lists: {}
+        AI_16: !list
+          objects:
+            Def: !obj {Name: 空中, ClassName: !str32 InWaterSelect, GroupName: 倒れ中_1}
+            ChildIdx: !obj {水上: 40, 水中: 120}
+            SInst: !obj {InWaterDepth: 1.0, IsCheckEveryFrame: false, IsForceChange: true,
+              OutWaterDepth: 0.0}
+          lists: {}
+        AI_17: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 AnimalPreAttack, GroupName: 攻撃前行動}
+            ChildIdx: !obj {対象を向く: 48, 距離を取る: 87}
+            SInst: !obj {KeepDistCheckLength: 4.0, BackCliffCheckLength: 5.0, ForceEndTime: 60}
+          lists: {}
+        AI_18: !list
+          objects:
+            Def: !obj {Name: 攻撃, ClassName: !str32 AnimalRushAttack, GroupName: 行動Ａ}
+            ChildIdx: !obj {突進: 64}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 4}
+            SInst: !obj {AttackPosOffsetLength: 5.0, UpdateTargetPosTime: -1}
+          lists: {}
+        AI_19: !list
+          objects:
+            Def: !obj {Name: 攻撃ハズレ後, ClassName: !str32 SeqTwoAction, GroupName: 行動Ａ}
+            ChildIdx: !obj {先行動: 124, 後行動: 90}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_20: !list
+          objects:
+            Def: !obj {Name: 攻撃前, ClassName: !str32 SeqTwoAction, GroupName: 行動Ａ}
+            ChildIdx: !obj {先行動: 125, 後行動: 17}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_21: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 SeqAnimalAttack, GroupName: 行動Ｂ}
+            ChildIdx: !obj {攻撃: 18, 攻撃ハズレ後: 19, 攻撃ヒット後: 93, 攻撃前: 20}
+            SInst: !obj {IsUseAfterAttackState: true}
+          lists: {}
+        AI_22: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 SeqAnimalAttack, GroupName: 先行動}
+            ChildIdx: !obj {攻撃: 18, 攻撃ハズレ後: 19, 攻撃ヒット後: 93, 攻撃前: 20}
+            SInst: !obj {IsUseAfterAttackState: true}
+          lists: {}
+        AI_23: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 TargetDistanceSelect, GroupName: 通常行動}
+            ChildIdx: !obj {内側: 65, 外側: 9}
+            SInst: !obj {BoundaryDistance: 11.0, OverlapDistance: 2.0, IsUpdateTarget: true}
+          lists: {}
+        AI_24: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 CliffCheckSelect, GroupName: 離脱}
+            ChildIdx: !obj {崖である: 10, 崖でない: 11}
+            SInst: !obj {CheckDist: 5.0, CheckAngle: 0.0, IsSelectFirstTime: false}
+          lists: {}
+        AI_25: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 AnimalBattleAggressive, GroupName: 威嚇}
+            ChildIdx: !obj {カウンター攻撃: 70, ダメージ後: 74, 戦闘攻撃: 44, 戦闘準備: 47}
+            BehaviorIdx: !obj {1721623982: 10}
+            SInst: !obj
+              ForceAttackRange: 8.5
+              ForceAttackTimer: 60
+              CounterAttackRange: -1.0
+              CounterAttackTimer: 0
+              AttackAngle: 3.14159
+              RetFrmGrdAtkTimer: 20
+              RetFrmGrdAtkPrcTimer: 30
+              RetFrmDmgAtkTimer: -1
+              GlobalNoAtkTime: 80
+              GlobalNoAtkTimeRnd: 16
+              AttackIntervalIntensity: 1.0
+              DisplayCheckRadius: 0.8
+              IsUpdateNoticeState: true
+              IsCheckLineReachable: false
+          lists: {}
+        AI_26: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 SeqRandomRepeat, GroupName: 先行動}
+            ChildIdx: !obj {行動: 21}
+            SInst: !obj {MinActionNum: 2, MaxActionNum: 3, IsEndChangeable: false}
+          lists: {}
+        AI_27: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 MoveAroundTarget, GroupName: 通常行動}
+            ChildIdx: !obj {移動: 8}
+            SInst: !obj
+              StartRange: 15.0
+              EndRange: 7.5
+              ChangeRangeRate: -0.05
+              TurnTimeBase: 90
+              TurnTimeRand: 60
+          lists: {}
+        AI_28: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 MoveAroundTarget, GroupName: 離脱}
+            ChildIdx: !obj {移動: 78}
+            SInst: !obj
+              StartRange: 15.0
+              EndRange: 15.0
+              ChangeRangeRate: 0.0
+              TurnTimeBase: 100
+              TurnTimeRand: 60
+          lists: {}
+        AI_29: !list
+          objects:
+            Def: !obj {Name: 最後の手段, ClassName: !str32 SeqTwoAction, GroupName: ダメージ逃走}
+            ChildIdx: !obj {先行動: 126, 後行動: 91}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_30: !list
+          objects:
+            Def: !obj {Name: 最後の手段, ClassName: !str32 SeqTwoAction, GroupName: 逃走}
+            ChildIdx: !obj {先行動: 126, 後行動: 91}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_31: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 PreyRoot, GroupName: 通常}
+            ChildIdx: !obj
+              スクリプト用: 71
+              リアクション: 5
+              上機嫌: 118
+              所持: 117
+              水中行動: 121
+              落下: 143
+              通常行動: 56
+              騎乗中: 86
+            SInst: !obj
+              InWaterDepth: 1.0
+              IsCheckFreeFall: true
+              IsCheckStuckConsiderY: false
+              IsUseWeakForcePushOutside: false
+              IsEnableEscapeForceEndCheck: true
+              EscapeForceEndTime: 600.0
+              AfterEscapeForceEndState: 0
+          lists: {}
+        AI_32: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 Fork2AI, GroupName: 水上}
+            ChildIdx: !obj {子０: 102, 子１: 109}
+          lists: {}
+        AI_33: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 Fork2AI, GroupName: 水上_1}
+            ChildIdx: !obj {子０: 102, 子１: 109}
+          lists: {}
+        AI_34: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 PreyChemicalDeadReaction, GroupName: リアクション}
+            ChildIdx: !obj {凍死: 62, 感電死: 12, 死亡: 35, 焼死: 37}
+            BehaviorIdx: !obj {1721623982: 1}
+          lists: {}
+        AI_35: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 PreyDeadCauseSelector, GroupName: 死亡}
+            ChildIdx: !obj {落下: 66, 通常: 55}
+          lists: {}
+        AI_36: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 PreyDead, GroupName: リアクション}
+            ChildIdx: !obj {倒れ中: 60, 停止: 134}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_37: !list
+          objects:
+            Def: !obj {Name: 焼死, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 59, 停止: 133}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_38: !list
+          objects:
+            Def: !obj {Name: 水上, ClassName: !str32 Fork2AI, GroupName: 空中}
+            ChildIdx: !obj {子０: 103, 子１: 110}
+          lists: {}
+        AI_39: !list
+          objects:
+            Def: !obj {Name: 水上, ClassName: !str32 Fork2AI, GroupName: 空中_0}
+            ChildIdx: !obj {子０: 104, 子１: 32}
+          lists: {}
+        AI_40: !list
+          objects:
+            Def: !obj {Name: 水上, ClassName: !str32 Fork2AI, GroupName: 空中_1}
+            ChildIdx: !obj {子０: 105, 子１: 33}
+          lists: {}
+        AI_41: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 感電死}
+            ChildIdx: !obj {子０: 107, 子１: 112}
+          lists: {}
+        AI_42: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 凍死}
+            ChildIdx: !obj {子０: 106, 子１: 111}
+          lists: {}
+        AI_43: !list
+          objects:
+            Def: !obj {Name: 戦闘, ClassName: !str32 AnimalBattleAggressive, GroupName: 通常行動_0}
+            ChildIdx: !obj {カウンター攻撃: 70, ダメージ後: 74, 戦闘攻撃: 45, 戦闘準備: 47}
+            BehaviorIdx: !obj {1721623982: 10, 295359800: 13}
+            SInst: !obj
+              ForceAttackRange: 8.5
+              ForceAttackTimer: 60
+              CounterAttackRange: -1.0
+              CounterAttackTimer: 0
+              AttackAngle: 3.14159
+              RetFrmGrdAtkTimer: 20
+              RetFrmGrdAtkPrcTimer: 30
+              RetFrmDmgAtkTimer: -1
+              GlobalNoAtkTime: 80
+              GlobalNoAtkTimeRnd: 16
+              AttackIntervalIntensity: 1.0
+              DisplayCheckRadius: 0.8
+              IsUpdateNoticeState: true
+              IsCheckLineReachable: false
+          lists: {}
+        AI_44: !list
+          objects:
+            Def: !obj {Name: 戦闘攻撃, ClassName: !str32 SeqAnimalAttack, GroupName: 行動Ｂ_0}
+            ChildIdx: !obj {攻撃: 18, 攻撃ハズレ後: 19, 攻撃ヒット後: 93, 攻撃前: 20}
+            SInst: !obj {IsUseAfterAttackState: true}
+          lists: {}
+        AI_45: !list
+          objects:
+            Def: !obj {Name: 戦闘攻撃, ClassName: !str32 RandomSelectTwoAction, GroupName: 戦闘}
+            ChildIdx: !obj {行動Ａ: 22, 行動Ｂ: 26}
+            SInst: !obj {TransitionRateToA: 70, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_46: !list
+          objects:
+            Def: !obj {Name: 戦闘行動, ClassName: !str32 RandomSelectTwoAction, GroupName: 威嚇}
+            ChildIdx: !obj {行動Ａ: 98, 行動Ｂ: 25}
+            SInst: !obj {TransitionRateToA: 0, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_47: !list
+          objects:
+            Def: !obj {Name: 戦闘準備, ClassName: !str32 AnimalRangeKeepMove, GroupName: 戦闘}
+            ChildIdx: !obj {接近: 122, 通常行動: 57, 離脱: 67}
+            SInst: !obj
+              CloseStartDist: 25.0
+              CloseEndDist: 20.0
+              LeaveStartDist: 5.0
+              LeaveEndDist: 11.0
+              BattleEndDist: 100.0
+              BattleEndTimerMin: 150
+              BattleEndTimerMax: 200
+          lists: {}
+        AI_48: !list
+          objects:
+            Def: !obj {Name: 対象を向く, ClassName: !str32 SeqTimeredAction, GroupName: 攻撃前行動}
+            ChildIdx: !obj {行動: 96}
+            SInst: !obj {ActionTime: 20}
+          lists: {}
+        AI_49: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 SeqRandomRepeat, GroupName: 威嚇}
+            ChildIdx: !obj {行動: 95}
+            SInst: !obj {MinActionNum: 1, MaxActionNum: 0, IsEndChangeable: false}
+          lists: {}
+        AI_50: !list
+          objects:
+            Def: !obj {Name: 地形嵌り, ClassName: !str32 LOSFurthestHitPointFinder, GroupName: ダメージ逃走}
+            ChildIdx: !obj {行動A: 99, 行動B: 101}
+            SInst: !obj {CheckDistance: 10.0, OnlyCheckBehind: true, MaxNumCheck: 8,
+              UseActionB: false}
+          lists: {}
+        AI_51: !list
+          objects:
+            Def: !obj {Name: 地形嵌り, ClassName: !str32 LOSFurthestHitPointFinder, GroupName: 逃走}
+            ChildIdx: !obj {行動A: 99, 行動B: 101}
+            SInst: !obj {CheckDistance: 10.0, OnlyCheckBehind: true, MaxNumCheck: 8,
+              UseActionB: false}
+          lists: {}
+        AI_52: !list
+          objects:
+            Def: !obj {Name: 地上, ClassName: !str32 SeqTwoAction, GroupName: 倒れ中_0}
+            ChildIdx: !obj {先行動: 42, 後行動: 92}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_53: !list
+          objects:
+            Def: !obj {Name: 地上, ClassName: !str32 SeqTwoAction, GroupName: 倒れ中_1}
+            ChildIdx: !obj {先行動: 41, 後行動: 92}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_54: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 Fork2AI, GroupName: BaseAI}
+            ChildIdx: !obj {子０: 31, 子１: 113}
+          lists: {}
+        AI_55: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 59, 停止: 133}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_56: !list
+          objects:
+            Def: !obj {Name: 通常行動, ClassName: !str32 PreyNormal, GroupName: Root_0}
+            ChildIdx: !obj
+              ふり向き: 4
+              ターゲット通知: 1
+              ダメージ逃走: 2
+              ロケーター待機: 75
+              威嚇: 6
+              徘徊: 68
+              戦闘: 43
+              気づき: 84
+              注目: 130
+              興味対象発見: 13
+              逃走: 63
+            SInst: !obj
+              IsUseEscapeState: true
+              IsPositiveAttacker: true
+              IsSearchTarget: true
+              IsEmitForceEscapeSignal: true
+              IsReceivedForceEscapeSignal: true
+              IsCheckSandStorm: false
+              ChangeBattleStateRadius: 60.0
+              CounterAttackRadius: 60.0
+              CounterAttackRate: 1.0
+              AddCautionLevelVal: 450.0
+              AutoReduceCautionLevelVal: 1.0
+              LimitOverReduceCautionLevelVal: 1000.0
+              AwnRangeScaleWhenAttention: 1.1
+              TargetLostTime: 60.0
+              AllowRoarRadius: 22.0
+              EscapeWaterFlowLimit: -1.0
+              NewFoodAddTime: 0.0
+          lists: {}
+        AI_57: !list
+          objects:
+            Def: !obj {Name: 通常行動, ClassName: !str32 RandomSelectTwoAction, GroupName: 戦闘準備}
+            ChildIdx: !obj {行動Ａ: 23, 行動Ｂ: 27}
+            BehaviorIdx: !obj {1721623982: 12}
+            SInst: !obj {TransitionRateToA: 100, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_58: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 ColGroundHitSelect, GroupName: 感電死}
+            ChildIdx: !obj {地上: 53, 空中: 16}
+            SInst: !obj {IsCheckEachFrame: true}
+          lists: {}
+        AI_59: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 ColGroundHitSelect, GroupName: 死亡_0}
+            ChildIdx: !obj {地上: 129, 空中: 14}
+            SInst: !obj {IsCheckEachFrame: false}
+          lists: {}
+        AI_60: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 Fork3AI, GroupName: 消滅}
+            ChildIdx: !obj {子０: 108, 子１: 114, 子２: 115}
+          lists: {}
+        AI_61: !list
+          objects:
+            Def: !obj {Name: 倒れ中, ClassName: !str32 ColGroundHitSelect, GroupName: 凍死}
+            ChildIdx: !obj {地上: 52, 空中: 15}
+            SInst: !obj {IsCheckEachFrame: true}
+          lists: {}
+        AI_62: !list
+          objects:
+            Def: !obj {Name: 凍死, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 61, 停止: 133}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_63: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 AnimalEscapeAI, GroupName: 通常行動}
+            ChildIdx: !obj {地形嵌り: 51, 最後の手段: 30, 逃走: 137, 逃走前: 139}
+            BehaviorIdx: !obj {1721623982: 6, 295359800: 7}
+            SInst: !obj
+              ContinueDistance: 100.0
+              ShouldEscapeDistance: 30.0
+              ShouldEscapeDistanceRand: 10.0
+              PenaltyScale: 1.0
+              NavMeshRadiusScale: 1.5
+              FramesStuckOnTerrainAction: 30.0
+              NumTimesAllowStuck: 5
+              IsSendGoalPos: false
+              IsUseBeforeAction: true
+              IsDynamicallyOffsetNavChar: true
+              SearchNextPathRadius: 20.0
+              RadiusLimit: 100.0
+              ForwardDirDistCoefficient: 0.85
+              DirRandomMinRatio: 0.95
+              DirRangeAngle: 3.49066
+              RejectDistRatio: 0.5
+              ContinueAddSearchAngle: 1.0472
+              ContinueReduceDistRatio: 0.85
+              ContinueReduceRejectDistRatio: 0.9
+          lists: {}
+        AI_64: !list
+          objects:
+            Def: !obj {Name: 突進, ClassName: !str32 TargetDistanceSelect, GroupName: 攻撃}
+            ChildIdx: !obj {内側: 141, 外側: 83}
+            SInst: !obj {BoundaryDistance: 11.0, OverlapDistance: 1.0, IsUpdateTarget: true}
+          lists: {}
+        AI_65: !list
+          objects:
+            Def: !obj {Name: 内側, ClassName: !str32 MoveAroundTarget, GroupName: 通常行動}
+            ChildIdx: !obj {移動: 77}
+            SInst: !obj
+              StartRange: 8.5
+              EndRange: 7.5
+              ChangeRangeRate: -0.03
+              TurnTimeBase: 90
+              TurnTimeRand: 60
+          lists: {}
+        AI_66: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 PreyDead, GroupName: 死亡}
+            ChildIdx: !obj {倒れ中: 59, 停止: 133}
+            SInst: !obj {IsEmitForceEscapeSignal: true, SendRadius: 30.0}
+          lists: {}
+        AI_67: !list
+          objects:
+            Def: !obj {Name: 離脱, ClassName: !str32 RandomSelectTwoAction, GroupName: 戦闘準備}
+            ChildIdx: !obj {行動Ａ: 24, 行動Ｂ: 28}
+            SInst: !obj {TransitionRateToA: 100, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_68: !list
+          objects:
+            Def: !obj {Name: 徘徊, ClassName: !str32 AnimalRoam, GroupName: 通常行動_0}
+            ChildIdx: !obj {待機: 128, 移動: 79}
+            SInst: !obj
+              LimitRadius: 15.0
+              ChangeWaitRate: 0.7
+              FinishChangeCount: -1
+              IsSendGoalPos: false
+              FramesStuckOnTerrainAction: 30.0
+              CheckValidStartPos: false
+              CheckLOS: false
+              SearchNextPathRadius: -1.0
+              RadiusLimit: 15.0
+              ForwardDirDistCoefficient: 0.6
+              DirRandomMinRatio: 0.55
+              DirRangeAngle: 4.18879
+              RejectDistRatio: 0.45
+              ContinueAddSearchAngle: 1.0472
+              ContinueReduceDistRatio: 0.9
+              ContinueReduceRejectDistRatio: 0.95
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: うろうろする, ClassName: !str32 AnimalStop, GroupName: 移動}
+            SInst: !obj
+              IsFixAxisY: true
+              UseGearType: 1
+              SmoothStopFrames: 20.0
+              SmoothStopFramesGear3: 0.0
+              MinFramesGear1: 12.0
+              IsCourbetteEnabled: false
+              IsLight: false
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: カウンター攻撃, ClassName: !str32 PlayASForAnimalUnit, GroupName: 戦闘}
+            SInst: !obj
+              ASKeyName: ''
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 4
+              SelectNextGear: 1
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: スクリプト用, ClassName: !str32 HorseMoveToTargetAction, GroupName: 子０}
+            SInst: !obj
+              IsCancelRequestedPathFirst: false
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 1
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              AutoStopAndTurnMode: 0
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: true
+              GoalDistanceTolerance: 0.0
+              WaitUntilPathSucceeded: false
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: ダメージ, ClassName: !str32 TimeredASPlay, GroupName: リアクション}
+            SInst: !obj
+              ASName: Damage
+              Time: 2
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: ダメージ後, ClassName: !str32 PlayASForAnimalUnit, GroupName: ダメージ逃走}
+            SInst: !obj
+              ASKeyName: Damage
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: true
+              SelectNextGearType: 2
+              SelectNextGear: 2
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: ダメージ後, ClassName: !str32 AnimalTurn, GroupName: 戦闘}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 3.14159
+              ASKeyName: Damage
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: true
+              SelectNextGearType: 4
+              SelectNextGear: 1
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: ロケーター待機, ClassName: !str32 Hover, GroupName: 通常行動}
+            SInst: !obj
+              ASName: LocationWait
+              Time: 0
+              TimeRand: 0
+              PosReduceRatio: 0.85
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 AnimalMove, GroupName: 外側}
+            SInst: !obj
+              FinRadius: 1.0
+              WeaponIdx: -1
+              MinUseGear: 2
+              MaxUseGear: 2
+              UseGearType: 3
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: -1.0
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 AnimalMove, GroupName: 内側}
+            SInst: !obj
+              FinRadius: 1.0
+              WeaponIdx: -1
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 3
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: -1.0
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 AnimalMove, GroupName: 離脱}
+            SInst: !obj
+              FinRadius: 1.0
+              WeaponIdx: -1
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 4
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: true
+              GoalDistanceTolerance: -1.0
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 HorseMoveToTargetAction, GroupName: 徘徊_0}
+            SInst: !obj
+              IsCancelRequestedPathFirst: false
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 1
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              AutoStopAndTurnMode: 0
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: true
+              GoalDistanceTolerance: 3.25
+              WaitUntilPathSucceeded: false
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: 怨念, ClassName: !str32 Delete, GroupName: リアクション}
+            SInst: !obj {DeleteType: 4}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: 炎上, ClassName: !str32 TimeredASPlay, GroupName: リアクション}
+            SInst: !obj
+              ASName: Damage
+              Time: 2
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: 外側, ClassName: !str32 AnimalMove, GroupName: 移動}
+            SInst: !obj
+              FinRadius: 1.0
+              WeaponIdx: -1
+              MinUseGear: 2
+              MaxUseGear: 2
+              UseGearType: 3
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: -1.0
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: 外側, ClassName: !str32 AnimalMove, GroupName: 突進}
+            SInst: !obj
+              FinRadius: 1.0
+              WeaponIdx: -1
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 5
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: 1.0
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: 気づき, ClassName: !str32 PlayASForAnimalUnit, GroupName: 通常行動}
+            SInst: !obj
+              ASKeyName: Notice
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: 気絶, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: 騎乗中, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: 距離を取る, ClassName: !str32 AnimalPlayASAndKeepOnGround,
+              GroupName: 攻撃前行動}
+            SInst: !obj
+              DownImpulseScale: 2.0
+              IsUseDownImpulse: false
+              ASKeyName: BackStep
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: 警戒, ClassName: !str32 PlayASForAnimalUnit, GroupName: ふり向き}
+            SInst: !obj
+              ASKeyName: Hearing_End
+              AllowChangeableFrame: 0
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 PlayASForAnimalUnit, GroupName: ターゲット通知}
+            SInst: !obj
+              ASKeyName: Howling
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: true
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 AnimalPlayASAndKeepOnGround, GroupName: 後行動}
+            SInst: !obj
+              DownImpulseScale: 2.0
+              IsUseDownImpulse: false
+              ASKeyName: BackStep
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 FadeoutDelete, GroupName: 最後の手段}
+            SInst: !obj {FadeoutTime: 0, DeleteType: 0}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 HuntingDead, GroupName: 死亡}
+            SInst: !obj {OffsetBoneName: '', IsUseOffsetY: false, ExtraOffset: !vec3 [
+                0.0, 0.0, 0.0], InWaterDepth: 1.0}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 攻撃ヒット後, ClassName: !str32 AnimalPlayASAndKeepOnGround,
+              GroupName: 行動Ａ}
+            SInst: !obj
+              DownImpulseScale: 2.0
+              IsUseDownImpulse: false
+              ASKeyName: Hit_BackStep
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 攻撃後, ClassName: !str32 AnimalPlayASAndKeepOnGround, GroupName: 威嚇}
+            SInst: !obj
+              DownImpulseScale: 2.0
+              IsUseDownImpulse: false
+              ASKeyName: Hit_BackStep
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 AnimalStop, GroupName: 後行動}
+            SInst: !obj
+              IsFixAxisY: true
+              UseGearType: 1
+              SmoothStopFrames: 45.0
+              SmoothStopFramesGear3: 0.0
+              MinFramesGear1: 12.0
+              IsCourbetteEnabled: false
+              IsLight: false
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 LookAtTarget, GroupName: 対象を向く}
+            SInst: !obj
+              ASKeyName: Roar
+              RotSpd: 0.20944
+              FinRotate: -0.0174533
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.5
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 AnimalTurn, GroupName: ふり向き}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 1.39626
+              ASKeyName: Hearing
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 LookAtTarget, GroupName: 威嚇}
+            SInst: !obj
+              ASKeyName: RoarLoop
+              RotSpd: 0.20944
+              FinRotate: 0.0
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.22
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 行動A, ClassName: !str32 AnimalTurn, GroupName: 地形嵌り}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: 0.261799
+              RotateAngleMax: 3.14159
+              ASKeyName: Turn_Escape
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 2
+              SelectNextGear: 2
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 PlayASForAnimalUnit, GroupName: ふり向き}
+            SInst: !obj
+              ASKeyName: Notice
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: true
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 行動B, ClassName: !str32 HorseMoveToTargetAction, GroupName: 地形嵌り}
+            BehaviorIdx: !obj {1721623982: 8, 295359800: 5}
+            SInst: !obj
+              IsCancelRequestedPathFirst: false
+              MinUseGear: 2
+              MaxUseGear: 2
+              UseGearType: 2
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: true
+              AutoStopAndTurnMode: 0
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: 7.0
+              WaitUntilPathSucceeded: false
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkTimer, GroupName: 子１_0}
+            SInst: !obj {WaitFrame: 10, WaitFrameRand: 0, IsChangeable: false, EndState: 2}
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 HuntingDead, GroupName: 水上}
+            SInst: !obj {OffsetBoneName: '', IsUseOffsetY: false, ExtraOffset: !vec3 [
+                0.0, 0.0, 0.0], InWaterDepth: 1.0}
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalFreeze, GroupName: 水上_0}
+            SInst: !obj
+              PauseDelayFrames: 0.0
+              ASName: ''
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: false
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalElectricParalysis, GroupName: 水上_1}
+            SInst: !obj
+              PauseDelayFrames: 10.0
+              ASName: Damage
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: false
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalFreeze, GroupName: 先行動}
+            SInst: !obj
+              PauseDelayFrames: 0.0
+              ASName: ''
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: false
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnimalElectricParalysis, GroupName: 先行動_0}
+            SInst: !obj
+              PauseDelayFrames: 10.0
+              ASName: Damage
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: false
+              PosReduceRatio: 0.05
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Vanish, GroupName: 倒れ中}
+            SInst: !obj
+              DieType: 3
+              NoDrop: true
+              ASName: ''
+              Time: 21
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkWaitGroundHit, GroupName: 子１_0}
+            SInst: !obj {InWaterDepth: 1.0, IsChangeable: false}
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkWaitGroundHit, GroupName: 水上_0}
+            SInst: !obj {InWaterDepth: 1.0, IsChangeable: false}
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimerForceResetCondition, GroupName: 先行動}
+            SInst: !obj
+              ResetCondition: 3
+              WaitFrame: 60
+              WaitFrameRand: 0
+              IsChangeable: false
+              EndState: 0
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimerForceResetCondition, GroupName: 先行動_0}
+            SInst: !obj
+              ResetCondition: 4
+              WaitFrame: 60
+              WaitFrameRand: 0
+              IsChangeable: false
+              EndState: 0
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 AddNoUseTerritoryCounter, GroupName: 通常}
+            SInst: !obj {Counter: 1000, CamDist: 50.0}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAlwaysSetModelEffect, GroupName: 倒れ中}
+            SInst: !obj {Timer: 21}
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkOnEnterCharCtrlInvalid, GroupName: 倒れ中}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: 上機嫌, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: 食べる, ClassName: !str32 AnimalEatAction, GroupName: 興味対象発見}
+            SInst: !obj {MinFramesPlayWaitAS: 0.0}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: 水中, ClassName: !str32 WaterFloatWait, GroupName: 空中}
+            SInst: !obj
+              Time: 1
+              TimeRand: 0
+              ASName: Dead
+              IsIgnoreSameAS: true
+              IsEndWhenASFinished: true
+              PosReduceRatio: 0.5
+              AngleReduceRatio: 0.3
+              InWaterDepth: 1.0
+              FloatDepth: 0.2
+              FloatRadius: 0.1
+              FloatCycleTime: 30.0
+              ChangeDepthSpeed: -1.0
+              IsCheckWaterFall: false
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: 水中行動, ClassName: !str32 FadeoutDelete, GroupName: 通常}
+            SInst: !obj {FadeoutTime: 0, DeleteType: 0}
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: 接近, ClassName: !str32 HorseMoveToTargetAction, GroupName: 戦闘準備}
+            SInst: !obj
+              IsCancelRequestedPathFirst: true
+              MinUseGear: 2
+              MaxUseGear: 2
+              UseGearType: 3
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              AutoStopAndTurnMode: 0
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: 6.0
+              WaitUntilPathSucceeded: false
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 AnimalTurn, GroupName: ターゲット通知}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 3.14159
+              ASKeyName: Turn_Notice
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 AnimalTurn, GroupName: 後行動}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 3.14159
+              ASKeyName: Turn_Attack
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 AnimalTurn, GroupName: 攻撃前行動}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 3.14159
+              ASKeyName: Turn_Attack
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 AnimalMoveStraightTimed, GroupName: 最後の手段}
+            SInst: !obj
+              FramesUntilFinish: 30
+              IsFinishOnLOSCheckFail: true
+              LOSCheckTimeAhead: 30.0
+              UseDesiredMoveDir: true
+              MinUseGear: 2
+              MaxUseGear: 2
+              UseGearType: 2
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: 旋回, ClassName: !str32 AnimalTurn, GroupName: 崖である}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 2.79253
+              ASKeyName: Turn_Notice
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 4
+              SelectNextGear: 1
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 AnimalStop, GroupName: 徘徊_0}
+            SInst: !obj
+              IsFixAxisY: true
+              UseGearType: 1
+              SmoothStopFrames: 45.0
+              SmoothStopFramesGear3: 0.0
+              MinFramesGear1: 12.0
+              IsCourbetteEnabled: false
+              IsLight: false
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: 地上, ClassName: !str32 HuntingDead, GroupName: 倒れ中}
+            SInst: !obj {OffsetBoneName: '', IsUseOffsetY: false, ExtraOffset: !vec3 [
+                0.0, 0.0, 0.0], InWaterDepth: 1.0}
+          lists: {}
+        Action_61: !list
+          objects:
+            Def: !obj {Name: 注目, ClassName: !str32 AnimalTurn, GroupName: 通常行動}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 3.14159
+              ASKeyName: Look
+              AllowChangeableFrame: 0
+              IsIgnoreSameAS: true
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_62: !list
+          objects:
+            Def: !obj {Name: 追いかける(遠い), ClassName: !str32 HorseMoveToTargetAction,
+              GroupName: 移動}
+            SInst: !obj
+              IsCancelRequestedPathFirst: false
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 1
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              AutoStopAndTurnMode: 0
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: true
+              GoalDistanceTolerance: 8.0
+              WaitUntilPathSucceeded: false
+          lists: {}
+        Action_63: !list
+          objects:
+            Def: !obj {Name: 追いかける(近い), ClassName: !str32 HorseFollow, GroupName: 移動}
+            SInst: !obj
+              UseGearType: 1
+              WaitDistanceToLeader: 0.0
+              Gear1DistanceToLeader: 10000.0
+              Gear2DistanceToLeader: 10000.0
+              Gear3DistanceToLeader: 10000.0
+              DistanceFactorAtGearDown: 0.9
+              WaitDistanceIncreaseDistance: 0.0
+              WaitDistanceIncreasePerFrame: 0.0
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: true
+              AutoStopAndTurnDistance: -1.0
+              IsEndAtAutoStop: false
+              UseMinRadius: true
+              DesiredDirAngleDeltaSecMax: 0.0
+              IsAvoidNavMeshActor: true
+              IsTargetPosEqualToLeaderPos: true
+              NavMeshCharacterRadiusScale: 1.0
+          lists: {}
+        Action_64: !list
+          objects:
+            Def: !obj {Name: 停止, ClassName: !str32 Delete, GroupName: 死亡_0}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_65: !list
+          objects:
+            Def: !obj {Name: 停止, ClassName: !str32 Delete, GroupName: 消滅}
+            SInst: !obj {DeleteType: 2}
+          lists: {}
+        Action_66: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_67: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 AnimalFreeze, GroupName: リアクション}
+            SInst: !obj
+              PauseDelayFrames: 0.0
+              ASName: ''
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_68: !list
+          objects:
+            Def: !obj {Name: 逃走, ClassName: !str32 HorseMoveToTargetAction, GroupName: 逃走}
+            BehaviorIdx: !obj {1721623982: 8, 295359800: 5}
+            SInst: !obj
+              IsCancelRequestedPathFirst: false
+              MinUseGear: 2
+              MaxUseGear: 2
+              UseGearType: 2
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: true
+              AutoStopAndTurnMode: 0
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: 7.0
+              WaitUntilPathSucceeded: false
+          lists: {}
+        Action_69: !list
+          objects:
+            Def: !obj {Name: 逃走前, ClassName: !str32 AnimalTurn, GroupName: ダメージ逃走}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: 0.261799
+              RotateAngleMax: 3.14159
+              ASKeyName: Turn_Escape
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 2
+              SelectNextGear: 2
+          lists: {}
+        Action_70: !list
+          objects:
+            Def: !obj {Name: 逃走前, ClassName: !str32 AnimalTurn, GroupName: 逃走}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: 0.261799
+              RotateAngleMax: 3.14159
+              ASKeyName: Turn_Escape
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 2
+              SelectNextGear: 2
+          lists: {}
+        Action_71: !list
+          objects:
+            Def: !obj {Name: 内側, ClassName: !str32 AnimalMove, GroupName: 移動}
+            SInst: !obj
+              FinRadius: 1.0
+              WeaponIdx: -1
+              MinUseGear: 1
+              MaxUseGear: 1
+              UseGearType: 3
+              CanUseHorseGearInput: false
+              IsAutoGearDownEnabled: false
+              MinGearAtAutoGearDown: 1
+              HasToDecelerateNearGoal: false
+              GoalDistanceTolerance: -1.0
+          lists: {}
+        Action_72: !list
+          objects:
+            Def: !obj {Name: 内側, ClassName: !str32 AnimalPlayASAndKeepOnGround, GroupName: 突進}
+            SInst: !obj
+              DownImpulseScale: 2.0
+              IsUseDownImpulse: false
+              ASKeyName: Attack
+              AllowChangeableFrame: 0
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_73: !list
+          objects:
+            Def: !obj {Name: 溶岩, ClassName: !str32 Delete, GroupName: リアクション}
+            SInst: !obj {DeleteType: 4}
+          lists: {}
+        Action_74: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 PlayASForAnimalUnit, GroupName: 子０}
+            SInst: !obj
+              ASKeyName: Free_Fall
+              AllowChangeableFrame: 0
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_75: !list
+          objects:
+            Def: !obj {Name: 連続ふり向き, ClassName: !str32 AnimalTurn, GroupName: ふり向き}
+            SInst: !obj
+              AnimPlayRate: 1.0
+              FinishAngleRange: -0.0174533
+              RotateAngleMax: 3.14159
+              ASKeyName: Hearing
+              AllowChangeableFrame: -1
+              IsIgnoreSameAS: false
+              SelectNextGearType: 0
+              SelectNextGear: -1
+          lists: {}
+        Action_76: !list
+          objects:
+            Def: !obj {Name: 痺れ, ClassName: !str32 AnimalElectricParalysis, GroupName: リアクション}
+            SInst: !obj
+              PauseDelayFrames: 10.0
+              ASName: Damage
+              ThrowOffAttackRigidBodyName: ''
+              CanRiddenWhenLeave: true
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_77: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_78: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 DummyAction, GroupName: ''}
+          lists: {}
+        Action_79: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_80: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_81: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_82: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_83: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_84: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_85: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_86: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_87: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_88: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_89: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_90: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_91: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_92: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 EmitInterest}
+            SInst: !obj {Level: 1, IsTargetNPC: true}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 NoSensorHoldNoise}
+            SInst: !obj {NoiseValue: 1.0, IsShock: false}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 EnemyNeckRotate}
+            SInst: !obj {IsUpdatePos: true, OffsetToTargetDirXZ: 0.0}
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 AnimalAttack}
+            SInst: !obj {AtkRigidName: AtkBody, IsUseASEventAtCollision: true}
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetIgnoreSmallHitDCCallBack}
+            SInst: !obj {IsAffectPopPool: false, Timing: 4}
+          lists: {}
+        Behavior_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 10.0
+              Level: 1
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: false
+              IsGuardianLayer: false
+              IsImpulseLayer: false
+              IsFireLayer: false
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: true
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 AnimalUnitIgnoreStickXLimit}
+          lists: {}
+        Behavior_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 ReduceUpwardVelocity}
+            SInst: !obj {ImpulseScale: 0.5, MinDownImpulse: 0.0}
+          lists: {}
+        Behavior_8: !list
+          objects:
+            Def: !obj {ClassName: !str32 CutGrass}
+            SInst: !obj {CutRange: 1.0, IsCallEffect: true, Intensity: 1.8}
+          lists: {}
+        Behavior_9: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 10.0
+              Level: 3
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: false
+              IsGuardianLayer: false
+              IsImpulseLayer: false
+              IsFireLayer: false
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: true
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_10: !list
+          objects:
+            Def: !obj {ClassName: !str32 BattleTensionUp}
+            SInst: !obj {EnemyLevel: 0, ReduceTime: 15}
+          lists: {}
+        Behavior_11: !list
+          objects:
+            Def: !obj {ClassName: !str32 AnimalAttack}
+            SInst: !obj {AtkRigidName: Atk, IsUseASEventAtCollision: true}
+          lists: {}
+        Behavior_12: !list
+          objects:
+            Def: !obj {ClassName: !str32 AnimalNeckRotate}
+            SInst: !obj {LimitAngleLR: 2.35619, RotRate: 0.5, ResetRotRate: 0.5, IsUseParentRotOffset: true}
+          lists: {}
+        Behavior_13: !list
+          objects:
+            Def: !obj {ClassName: !str32 ReduceUpwardVelocity}
+            SInst: !obj {ImpulseScale: 0.5, MinDownImpulse: 0.0}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

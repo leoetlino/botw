@@ -1,0 +1,2187 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 209
+      Demo_Idling: 210
+      Demo_Join: 211
+      Demo_OpenGetDemo: 212
+      Demo_PlayASForDemo: 213
+      Demo_PlayASForTimeline: 214
+      Demo_Reset: 215
+      Demo_ResetBoneCtrl: 216
+      Demo_SendSignal: 217
+      Demo_SetGetFlag: 218
+      Demo_TrigNullASPlay: 219
+      Demo_UpdateDataByGetDemo: 220
+      Demo_VisibleOff: 221
+      Demo_XLinkEventCreate: 222
+      Demo_XLinkEventFade: 223
+      Demo_XLinkEventKill: 224
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 189, 持ち運びボックス内: 164, 通常: 74}
+            BehaviorIdx: !obj {1721623982: 2}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ケミカル復帰, ClassName: !str32 Fork4AI, GroupName: 戦闘準備}
+            ChildIdx: !obj {子０: 133, 子１: 147, 子２: 155, 子３: 161}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 134, 子１: 148}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: ショック, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: ナビメッシュ無し, ClassName: !str32 EnemyBattleWithAreaCheck,
+              GroupName: 威嚇}
+            ChildIdx: !obj {戦闘攻撃: 59, 戦闘準備: 61}
+            SInst: !obj
+              AttackVMin: -2.0
+              AttackVMax: 2.0
+              AttackFar: 0.5
+              WeaponIdx: 0
+              AttackAngle: 0.261799
+              RetFrmGrdAtkTimer: 20
+              RetFrmGrdAtkPrcTimer: 30
+              RetFrmDmgAtkTimer: -1
+              GlobalNoAtkTime: 80
+              GlobalNoAtkTimeRnd: 16
+              AttackIntervalIntensity: 1.0
+              DisplayCheckRadius: 0.8
+              IsUpdateNoticeState: true
+              IsCheckLineReachable: false
+          lists: {}
+        AI_5: !list
+          objects:
+            Def: !obj {Name: ふっとび, ClassName: !str32 Fork2AI, GroupName: 基本挙動}
+            ChildIdx: !obj {子０: 135, 子１: 148}
+          lists: {}
+        AI_6: !list
+          objects:
+            Def: !obj {Name: ふっとび, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_7: !list
+          objects:
+            Def: !obj {Name: プレイヤー発見, ClassName: !str32 TargetBeatCheck, GroupName: 通常}
+            ChildIdx: !obj {撃破: 31, 未撃破: 83}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 10, 2291369090: 3, 4287935508: 16}
+          lists: {}
+        AI_8: !list
+          objects:
+            Def: !obj {Name: リアクション, ClassName: !str32 MiniGolemReaction, GroupName: Root}
+            ChildIdx: !obj
+              ふっとび: 5
+              ガード: 95
+              ガードブレイク: 96
+              ショック: 2
+              ジャストガード: 97
+              凍結: 191
+              大落下: 66
+              小ダメージ: 167
+              崩れ落ち: 203
+              弾かれ: 68
+              死亡: 48
+              炎上: 13
+              痺れ: 85
+              突風: 194
+              落下: 205
+              超ショック: 71
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj {JustGuardTimesMin: 3, JustGuardTimesMax: 5, SmallDamageCancelTimes: 0,
+              InComboSmallDamageNoCancel: false}
+          lists: {}
+        AI_9: !list
+          objects:
+            Def: !obj {Name: レンジ内, ClassName: !str32 RandomSelectTwoAction, GroupName: 先行動失敗}
+            ChildIdx: !obj {行動Ａ: 41, 行動Ｂ: 42}
+            SInst: !obj {TransitionRateToA: 50, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_10: !list
+          objects:
+            Def: !obj {Name: 以上, ClassName: !str32 Fork2AI, GroupName: 起き上がり凍結}
+            ChildIdx: !obj {子０: 137, 子１: 149}
+          lists: {}
+        AI_11: !list
+          objects:
+            Def: !obj {Name: 威嚇, ClassName: !str32 EnemyBattleWithAreaCheck, GroupName: 到達不能}
+            ChildIdx: !obj {戦闘攻撃: 59, 戦闘準備: 61}
+            SInst: !obj
+              AttackVMin: -2.0
+              AttackVMax: 2.0
+              AttackFar: 0.5
+              WeaponIdx: 0
+              AttackAngle: 0.261799
+              RetFrmGrdAtkTimer: 20
+              RetFrmGrdAtkPrcTimer: 30
+              RetFrmDmgAtkTimer: -1
+              GlobalNoAtkTime: 80
+              GlobalNoAtkTimeRnd: 16
+              AttackIntervalIntensity: 1.0
+              DisplayCheckRadius: 0.8
+              IsUpdateNoticeState: true
+              IsCheckLineReachable: false
+          lists: {}
+        AI_12: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 RangeLineReachSelectTwoAction,
+              GroupName: 速攻}
+            ChildIdx: !obj {近距離: 27, 遠距離: 14}
+            SInst: !obj
+              FarDist: 0.0
+              BaseDist: 0.0
+              WeaponIdx: 0
+              IsSelectEveryFrame: false
+              IsRangeXZ: false
+          lists: {}
+        AI_13: !list
+          objects:
+            Def: !obj {Name: 炎上, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 44, 子１: 154}
+          lists: {}
+        AI_14: !list
+          objects:
+            Def: !obj {Name: 遠距離, ClassName: !str32 SeqIfElseAction, GroupName: 近接戦闘攻撃}
+            ChildIdx: !obj {先行動: 174, 先行動失敗: 57, 後行動: 36}
+            SInst: !obj {FailType: 2}
+          lists: {}
+        AI_15: !list
+          objects:
+            Def: !obj {Name: 遠方追跡, ClassName: !str32 NavMoveNearTarget, GroupName: 音気づき}
+            ChildIdx: !obj {ジャンプ: 99, 直進: 183, 移動: 113, 見まわす: 32}
+            SInst: !obj
+              TargetVMax: 5.0
+              TargetVMin: -5.0
+              ReachTargetArea: 2.0
+              RepathTime: 30.0
+              WeaponIdx: -1
+              TooFarDist: 100.0
+              UseCharacterRadius: false
+              VibrateCheckTime: -1
+              RotVibrateCheckTime: -1
+              IsLastLineReachCheck: true
+          lists: {}
+        AI_16: !list
+          objects:
+            Def: !obj {Name: 遠方追跡, ClassName: !str32 NavMoveTarget, GroupName: 音追跡}
+            ChildIdx: !obj {ジャンプ: 98, 直進: 180, 移動: 111, 見まわす: 32}
+            SInst: !obj
+              ReachTargetArea: 2.0
+              RepathTime: 30.0
+              WeaponIdx: -1
+              TooFarDist: 100.0
+              UseCharacterRadius: false
+              VibrateCheckTime: -1
+              RotVibrateCheckTime: -1
+              IsLastLineReachCheck: true
+          lists: {}
+        AI_17: !list
+          objects:
+            Def: !obj {Name: 音気づき, ClassName: !str32 EnemyNoticeSound, GroupName: 通常}
+            ChildIdx: !obj {気づき: 120, 行動: 39}
+            BehaviorIdx: !obj {1721623982: 3}
+          lists: {}
+        AI_18: !list
+          objects:
+            Def: !obj {Name: 角度差小, ClassName: !str32 RandomSelectTwoAction, GroupName: 両腕近距離攻撃}
+            ChildIdx: !obj {行動Ａ: 41, 行動Ｂ: 42}
+            SInst: !obj {TransitionRateToA: 50, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_19: !list
+          objects:
+            Def: !obj {Name: 角度差大, ClassName: !str32 Fork3AI, GroupName: 両腕近距離攻撃}
+            ChildIdx: !obj {子０: 138, 子１: 46, 子２: 158}
+          lists: {}
+        AI_20: !list
+          objects:
+            Def: !obj {Name: 危険回避, ClassName: !str32 EnemyChaseTargetAndAction, GroupName: 通常}
+            ChildIdx: !obj
+              アクション: 89
+              ジャンプ: 98
+              回転: 116
+              直進: 182
+              移動: 112
+              見まわす: 32
+            SInst: !obj
+              RepathTime: 60
+              LostDist: 12.0
+              LostSpeed: 999.0
+              LostAng: 3.14159
+              WeaponIdx: -1
+              ReachTargetArea: 2.0
+              TurnStartAng: 1.0472
+          lists: {}
+        AI_21: !list
+          objects:
+            Def: !obj {Name: 気づき, ClassName: !str32 GolemChemicalResetSelect, GroupName: 通常}
+            ChildIdx: !obj {ケミカル復帰: 1, 通常: 76}
+          lists: {}
+        AI_22: !list
+          objects:
+            Def: !obj {Name: 気配気づき, ClassName: !str32 GolemNoticeWorry, GroupName: 通常}
+            ChildIdx: !obj {回転: 116, 待機: 176, 見まわす: 33}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 3, 2291369090: 16}
+            SInst: !obj {TurnStartAngle: 0.261799}
+          lists: {}
+        AI_23: !list
+          objects:
+            Def: !obj {Name: 起き上がり凍結, ClassName: !str32 SelfXRotSelector, GroupName: ふっとび}
+            ChildIdx: !obj {以上: 10, 未満: 204}
+            SInst: !obj {Angle: 1.309}
+          lists: {}
+        AI_24: !list
+          objects:
+            Def: !obj {Name: 起き上がる, ClassName: !str32 Fork3AI, GroupName: 初期待機}
+            ChildIdx: !obj {子０: 140, 子１: 47, 子２: 157}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 3}
+          lists: {}
+        AI_25: !list
+          objects:
+            Def: !obj {Name: 逆さまリアクション, ClassName: !str32 MiniGolemReaction, GroupName: 通常}
+            ChildIdx: !obj
+              ふっとび: 6
+              ガード: 95
+              ガードブレイク: 96
+              ショック: 3
+              ジャストガード: 97
+              凍結: 191
+              大落下: 67
+              小ダメージ: 54
+              崩れ落ち: 82
+              弾かれ: 69
+              死亡: 48
+              炎上: 13
+              痺れ: 85
+              突風: 80
+              落下: 84
+              超ショック: 72
+            SInst: !obj {JustGuardTimesMin: 3, JustGuardTimesMax: 5, SmallDamageCancelTimes: 0,
+              InComboSmallDamageNoCancel: false}
+          lists: {}
+        AI_26: !list
+          objects:
+            Def: !obj {Name: 脅威感知, ClassName: !str32 TurnForLookingAround, GroupName: 通常}
+            ChildIdx: !obj {回転: 117, 待機: 177}
+            BehaviorIdx: !obj {1721623982: 5, 295359800: 3}
+            SInst: !obj {Angle: 0.523599}
+          lists: {}
+        AI_27: !list
+          objects:
+            Def: !obj {Name: 近距離, ClassName: !str32 SubsAngleSelect, GroupName: 近接戦闘攻撃}
+            ChildIdx: !obj {角度差大: 19, 角度差小: 18}
+            SInst: !obj {SubsAngle: 0.261799, CheckOnce: true, YRotOnly: true}
+          lists: {}
+        AI_28: !list
+          objects:
+            Def: !obj {Name: 近場追跡, ClassName: !str32 NavMoveNearTarget, GroupName: 音気づき}
+            ChildIdx: !obj {ジャンプ: 99, 直進: 183, 移動: 113, 見まわす: 32}
+            SInst: !obj
+              TargetVMax: 5.0
+              TargetVMin: -5.0
+              ReachTargetArea: 2.0
+              RepathTime: 30.0
+              WeaponIdx: -1
+              TooFarDist: 100.0
+              UseCharacterRadius: false
+              VibrateCheckTime: -1
+              RotVibrateCheckTime: -1
+              IsLastLineReachCheck: true
+          lists: {}
+        AI_29: !list
+          objects:
+            Def: !obj {Name: 近場追跡, ClassName: !str32 NavMoveTarget, GroupName: 音追跡}
+            ChildIdx: !obj {ジャンプ: 98, 直進: 180, 移動: 111, 見まわす: 32}
+            SInst: !obj
+              ReachTargetArea: 2.0
+              RepathTime: 30.0
+              WeaponIdx: -1
+              TooFarDist: 100.0
+              UseCharacterRadius: false
+              VibrateCheckTime: -1
+              RotVibrateCheckTime: -1
+              IsLastLineReachCheck: true
+          lists: {}
+        AI_30: !list
+          objects:
+            Def: !obj {Name: 近接湧出, ClassName: !str32 EnemyCalledAppear, GroupName: 通常}
+            ChildIdx: !obj {出現: 166}
+            BehaviorIdx: !obj {1721623982: 16, 295359800: 1}
+          lists: {}
+        AI_31: !list
+          objects:
+            Def: !obj {Name: 撃破, ClassName: !str32 SeqTwoAction, GroupName: プレイヤー発見}
+            ChildIdx: !obj {先行動: 172, 後行動: 129}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_32: !list
+          objects:
+            Def: !obj {Name: 見まわす, ClassName: !str32 TurnForLookingAround, GroupName: 基本挙動}
+            ChildIdx: !obj {回転: 117, 待機: 177}
+            SInst: !obj {Angle: 0.523599}
+          lists: {}
+        AI_33: !list
+          objects:
+            Def: !obj {Name: 見まわす, ClassName: !str32 TurnForLookingAround, GroupName: 気配気づき}
+            ChildIdx: !obj {回転: 117, 待機: 177}
+            BehaviorIdx: !obj {1721623982: 5, 295359800: 3, 2291369090: 8, 4287935508: 16}
+            SInst: !obj {Angle: 0.523599}
+          lists: {}
+        AI_34: !list
+          objects:
+            Def: !obj {Name: 見失い, ClassName: !str32 TurnForLookingAround, GroupName: 通常}
+            ChildIdx: !obj {回転: 117, 待機: 177}
+            BehaviorIdx: !obj {1721623982: 3, 295359800: 5, 2291369090: 16}
+            SInst: !obj {Angle: 0.523599}
+          lists: {}
+        AI_35: !list
+          objects:
+            Def: !obj {Name: 呼ばれ, ClassName: !str32 EnemyCalledAppear, GroupName: Root}
+            ChildIdx: !obj {出現: 166}
+            BehaviorIdx: !obj {1721623982: 16, 295359800: 1}
+          lists: {}
+        AI_36: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 RandomSelectTwoAction, GroupName: 接近攻撃}
+            ChildIdx: !obj {行動Ａ: 41, 行動Ｂ: 42}
+            SInst: !obj {TransitionRateToA: 50, CorrectRateToA: 0, CorrectRateToB: 0}
+          lists: {}
+        AI_37: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 MiniGolemSleep, GroupName: 徘徊待機}
+            ChildIdx: !obj {待機: 178, 横になる: 115, 睡眠: 56, 起き上がる: 24}
+            BehaviorIdx: !obj {1721623982: 12}
+            SInst: !obj {IsAwakenByHearing: true, IsWaitAfterAwaken: true, AwakeDelayTime: 10.0}
+          lists: {}
+        AI_38: !list
+          objects:
+            Def: !obj {Name: 攻撃反応, ClassName: !str32 ViewWait, GroupName: 通常}
+            ChildIdx: !obj {回転: 116, 待機: 176}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 3, 2291369090: 16}
+            SInst: !obj {TurnStartAngle: 0.261799, CheckOnce: false}
+          lists: {}
+        AI_39: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 ChaseSound, GroupName: 音気づき}
+            ChildIdx: !obj
+              回転: 116
+              直線追跡: 185
+              見まわす: 32
+              近場追跡: 28
+              遠方追跡: 15
+            SInst: !obj
+              NearDist: 8.0
+              TargetUpdateIntervalMin: 5
+              TargetUpdateIntervalMax: 20
+              TurnDir: 0.261799
+              UseViewPointSimpleOffset: true
+          lists: {}
+        AI_40: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 ChaseSound, GroupName: 行動中仲間発見}
+            ChildIdx: !obj
+              回転: 116
+              直線追跡: 186
+              見まわす: 32
+              近場追跡: 29
+              遠方追跡: 16
+            SInst: !obj
+              NearDist: 8.0
+              TargetUpdateIntervalMin: 5
+              TargetUpdateIntervalMax: 20
+              TurnDir: 0.261799
+              UseViewPointSimpleOffset: true
+          lists: {}
+        AI_41: !list
+          objects:
+            Def: !obj {Name: 行動Ａ, ClassName: !str32 Fork4AI, GroupName: 戦闘攻撃}
+            ChildIdx: !obj {子０: 136, 子１: 45, 子２: 156, 子３: 162}
+          lists: {}
+        AI_42: !list
+          objects:
+            Def: !obj {Name: 行動Ｂ, ClassName: !str32 Fork3AI, GroupName: 戦闘攻撃}
+            ChildIdx: !obj {子０: 138, 子１: 46, 子２: 158}
+          lists: {}
+        AI_43: !list
+          objects:
+            Def: !obj {Name: 行動中仲間発見, ClassName: !str32 EnemyNoticeSound, GroupName: 通常}
+            ChildIdx: !obj {気づき: 121, 行動: 40}
+            BehaviorIdx: !obj {1721623982: 4, 295359800: 3, 2291369090: 16}
+          lists: {}
+        AI_44: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 SeqTwoAction, GroupName: 炎上}
+            ChildIdx: !obj {先行動: 171, 後行動: 128}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_45: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 EnemyChemicalSelect, GroupName: 右パンチ}
+            ChildIdx: !obj {アイス: 86, エレキ: 92, ノーマル: 101, ファイア: 104}
+            SInst: !obj {IsCheckActive: true, ChmObjName: ArmR}
+          lists: {}
+        AI_46: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 EnemyChemicalSelect, GroupName: 左パンチ}
+            ChildIdx: !obj {アイス: 87, エレキ: 93, ノーマル: 102, ファイア: 105}
+            SInst: !obj {IsCheckActive: true, ChmObjName: ArmL}
+          lists: {}
+        AI_47: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 EnemyChemicalSelect, GroupName: 初期待機起き上がる}
+            ChildIdx: !obj {アイス: 88, エレキ: 94, ノーマル: 103, ファイア: 106}
+            SInst: !obj {IsCheckActive: false, ChmObjName: ''}
+          lists: {}
+        AI_48: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 DieSelectBombPlus, GroupName: 基本挙動}
+            ChildIdx: !obj
+              凍結砕き: 192
+              死亡: 163
+              消滅: 55
+              溺死: 187
+              濡死: 195
+              爆死: 196
+              自然死: 50
+              落下死: 208
+              被暗殺: 197
+              被特効: 198
+          lists: {}
+        AI_49: !list
+          objects:
+            Def: !obj {Name: 死亡生成, ClassName: !str32 SeqTwoAction, GroupName: 通常}
+            ChildIdx: !obj {先行動: 173, 後行動: 130}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_50: !list
+          objects:
+            Def: !obj {Name: 自然死, ClassName: !str32 Fork2AI, GroupName: 死亡}
+            ChildIdx: !obj {子０: 139, 子１: 150}
+          lists: {}
+        AI_51: !list
+          objects:
+            Def: !obj {Name: 初期状態, ClassName: !str32 MiniGolemSleep, GroupName: 待機}
+            ChildIdx: !obj {待機: 178, 横になる: 115, 睡眠: 56, 起き上がる: 24}
+            BehaviorIdx: !obj {1721623982: 12}
+            SInst: !obj {IsAwakenByHearing: true, IsWaitAfterAwaken: true, AwakeDelayTime: 10.0}
+          lists: {}
+        AI_52: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 MiniGolemLifted, GroupName: Root}
+            ChildIdx: !obj
+              所持: 53
+              投擲: 193
+              着地: 70
+              落下: 206
+              設置: 170
+            BehaviorIdx: !obj {1721623982: 11}
+          lists: {}
+        AI_53: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 AddCarried, GroupName: 所持}
+            ChildIdx: !obj {持ち上げられ中: 165, 行動: 132}
+            SInst: !obj {IsRecoverCharCtrlAxis: false, FailDistance: -1.0, IsUseConstraint: true,
+              HoldOnXLinkKey: HoldOn}
+          lists: {}
+        AI_54: !list
+          objects:
+            Def: !obj {Name: 小ダメージ, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_55: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 Fork3AI, GroupName: 死亡}
+            ChildIdx: !obj {子０: 142, 子１: 152, 子２: 160}
+          lists: {}
+        AI_56: !list
+          objects:
+            Def: !obj {Name: 睡眠, ClassName: !str32 GolemSleepTypeSelect, GroupName: 初期待機}
+            ChildIdx: !obj {うつ伏せA: 90, うつ伏せB: 91, 仰向けA: 125, 仰向けB: 126}
+            BehaviorIdx: !obj {1721623982: 5}
+          lists: {}
+        AI_57: !list
+          objects:
+            Def: !obj {Name: 先行動失敗, ClassName: !str32 RangeAttackSelect, GroupName: 接近攻撃}
+            ChildIdx: !obj {レンジ内: 9, レンジ外: 108}
+            SInst: !obj {RangeDist: 1.0, WeaponIdx: 0, IsIgnoreSmallHit: true}
+          lists: {}
+        AI_58: !list
+          objects:
+            Def: !obj {Name: 戦闘, ClassName: !str32 EnemyBattle, GroupName: 通常}
+            ChildIdx: !obj {戦闘攻撃: 60, 戦闘準備: 62}
+            SInst: !obj
+              AttackAngle: 0.261799
+              RetFrmGrdAtkTimer: 0
+              RetFrmGrdAtkPrcTimer: 0
+              RetFrmDmgAtkTimer: 0
+              GlobalNoAtkTime: 90
+              GlobalNoAtkTimeRnd: 0
+              AttackIntervalIntensity: 1.0
+              DisplayCheckRadius: 0.8
+              IsUpdateNoticeState: true
+              IsCheckLineReachable: false
+          lists: {}
+        AI_59: !list
+          objects:
+            Def: !obj {Name: 戦闘攻撃, ClassName: !str32 SubsAngleSelect, GroupName: ナビメッシュ無し}
+            ChildIdx: !obj {角度差大: 19, 角度差小: 18}
+            SInst: !obj {SubsAngle: 0.261799, CheckOnce: true, YRotOnly: true}
+          lists: {}
+        AI_60: !list
+          objects:
+            Def: !obj {Name: 戦闘攻撃, ClassName: !str32 RangeLineReachSelectTwoAction,
+              GroupName: 両腕戦闘}
+            ChildIdx: !obj {近距離: 27, 遠距離: 14}
+            SInst: !obj
+              FarDist: 0.0
+              BaseDist: 0.0
+              WeaponIdx: 0
+              IsSelectEveryFrame: false
+              IsRangeXZ: false
+          lists: {}
+        AI_61: !list
+          objects:
+            Def: !obj {Name: 戦闘準備, ClassName: !str32 ViewWait, GroupName: ナビメッシュ無し}
+            ChildIdx: !obj {回転: 118, 待機: 179}
+            SInst: !obj {TurnStartAngle: 0.261799, CheckOnce: false}
+          lists: {}
+        AI_62: !list
+          objects:
+            Def: !obj {Name: 戦闘準備, ClassName: !str32 GolemChemicalResetSelect, GroupName: 近接戦闘}
+            ChildIdx: !obj {ケミカル復帰: 1, 通常: 77}
+          lists: {}
+        AI_63: !list
+          objects:
+            Def: !obj {Name: 速攻, ClassName: !str32 ViewMove, GroupName: 剣装備}
+            ChildIdx: !obj {回転: 119, 移動: 12}
+            SInst: !obj {TurnStartAngle: 0.785398, CheckOnce: true}
+          lists: {}
+        AI_64: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 ViewWait, GroupName: 戦闘準備}
+            ChildIdx: !obj {回転: 118, 待機: 179}
+            SInst: !obj {TurnStartAngle: 0.261799, CheckOnce: false}
+          lists: {}
+        AI_65: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 EnterFromResetSelect, GroupName: 通常}
+            ChildIdx: !obj {初期状態: 51, 通常: 78}
+          lists: {}
+        AI_66: !list
+          objects:
+            Def: !obj {Name: 大落下, ClassName: !str32 BlownOff, GroupName: リアクション}
+            ChildIdx: !obj
+              ふっとび: 107
+              凍結: 190
+              水死: 168
+              起き上がり: 122
+              起き上がり凍結: 23
+            SInst: !obj {DrownDepth: 1.4, IsForceGetUp: false, IsIceBreak: false}
+          lists: {}
+        AI_67: !list
+          objects:
+            Def: !obj {Name: 大落下, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_68: !list
+          objects:
+            Def: !obj {Name: 弾かれ, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 143, 子１: 148}
+          lists: {}
+        AI_69: !list
+          objects:
+            Def: !obj {Name: 弾かれ, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_70: !list
+          objects:
+            Def: !obj {Name: 着地, ClassName: !str32 Fork2AI, GroupName: 所持}
+            ChildIdx: !obj {子０: 139, 子１: 150}
+          lists: {}
+        AI_71: !list
+          objects:
+            Def: !obj {Name: 超ショック, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 144, 子１: 148}
+          lists: {}
+        AI_72: !list
+          objects:
+            Def: !obj {Name: 超ショック, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_73: !list
+          objects:
+            Def: !obj {Name: 追跡, ClassName: !str32 NavMoveNearTarget, GroupName: 近接戦闘}
+            ChildIdx: !obj {ジャンプ: 99, 直進: 181, 移動: 110, 見まわす: 32}
+            SInst: !obj
+              TargetVMax: 5.0
+              TargetVMin: -5.0
+              ReachTargetArea: 2.0
+              RepathTime: 30.0
+              WeaponIdx: -1
+              TooFarDist: 100.0
+              UseCharacterRadius: true
+              VibrateCheckTime: -1
+              RotVibrateCheckTime: -1
+              IsLastLineReachCheck: true
+          lists: {}
+        AI_74: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 MiniGolemRoot, GroupName: BaseAI}
+            ChildIdx: !obj
+              リアクション: 8
+              呼ばれ: 35
+              奈落: 81
+              所持: 52
+              死亡生成: 49
+              水中: 169
+              落下: 207
+              近接湧出: 30
+              逆さま: 124
+              逆さまリアクション: 25
+              通常: 75
+              騎乗: 123
+            SInst: !obj
+              LiftDeadTime: 150
+              UpperArmL_PartsKey: ''
+              LowerArmL_PartsKey: ''
+              UpperArmR_PartsKey: ''
+              LowerArmR_PartsKey: ''
+              ChemicalFieldKey: ExpandChemical
+              BodyDeactiveAS: ChemDeactiveShaderBody
+              ArmRDeactiveAS: ''
+              ArmLDeactiveAS: ''
+              BodyActiveAS: ChemActiveShaderBody
+              ArmRActiveAS: ''
+              ArmLActiveAS: ''
+              BodyMimicAS: WaitShader
+              ArmRMimicAS: ''
+              ArmLMimicAS: ''
+              ShaderASTargetBone: 1
+              BodyShaderSeqBank: 0
+              ArmRShaderSeqBank: 1
+              ArmLShaderSeqBank: 2
+              InWaterDepth: 100.0
+              OutOfWaterOffset: 0.2
+              SpreadDist: 8.0
+              SmallSpreadDist: 3.0
+              FortressTag: EnemyFortressMgr
+              FallHeight: -1.0
+              IgnoreHell: false
+          lists: {}
+        AI_75: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 LandHumEnemyNormal, GroupName: Root}
+            ChildIdx: !obj
+              プレイヤー発見: 7
+              不審者発見: 200
+              不調仲間発見: 201
+              危険回避: 20
+              待機: 65
+              怒り: 188
+              攻撃反応: 38
+              気配気づき: 22
+              浮遊物発見: 202
+              脅威感知: 26
+              行動中仲間発見: 43
+              見失い: 34
+              諦め: 79
+              音気づき: 17
+            SInst: !obj
+              TerrorIgnoreDist: 0.0
+              ExplosivesSearchDist: 0.0
+              ExplosivesSearchSpeed: 999.0
+              ExplosivesSearchAng: 3.14159
+              WeaponIdx: 0
+              TerritoryArea: 60.0
+              NpcTerritoryArea: 60.0
+              NoPlayerTerritoryArea: 30.0
+              SpreadDist: 8.0
+              EnlargeAwnRatio: 2.5
+              NoticeTerrorLevel: 0.0
+              SpeadDist2: 0.0
+              HomePosRadius: 1.0
+              SoundLostTimer: 200
+              NoActionReactTimeMin: 30
+              NoActionReactTimeMax: 45
+              IsMindDoubtTarget: true
+              FortressTag: EnemyFortressMgr
+              SubsTerritoryArea: 20.0
+              LostExtinguishFireDist: 5.0
+              ShortRangeTerritoryArea: 30.0
+              CloseRangeTerritoryArea: 12.0
+              PressBreakObject: 3.0
+              TerritoryHeight: -1.0
+          lists: {}
+        AI_76: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 EnemyNotice, GroupName: 気づき}
+            ChildIdx: !obj {ターン: 100, 追跡: 73}
+            SInst: !obj {TurnStartAngle: 1.0472}
+          lists: {}
+        AI_77: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 DistanceKeepMove, GroupName: 戦闘準備}
+            ChildIdx: !obj {待機: 64, 後退: 131, 近づき: 127}
+            SInst: !obj
+              StartBackDistOffset: -1.5
+              WeaponIdx: -1
+              BaseDist: 3.0
+              StartCloseDistOffset: 5.0
+              OutDistOffset: 30.0
+              IsCheckLineReachableForClose: true
+          lists: {}
+        AI_78: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 SeqTwoAction, GroupName: 待機}
+            ChildIdx: !obj {先行動: 175, 後行動: 37}
+            BehaviorIdx: !obj {1721623982: 5, 295359800: 3}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+        AI_79: !list
+          objects:
+            Def: !obj {Name: 諦め, ClassName: !str32 NavMoveTarget, GroupName: 通常}
+            ChildIdx: !obj {ジャンプ: 99, 直進: 184, 移動: 114, 見まわす: 32}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj
+              ReachTargetArea: 2.0
+              RepathTime: 30.0
+              WeaponIdx: -1
+              TooFarDist: 200.0
+              UseCharacterRadius: false
+              VibrateCheckTime: -1
+              RotVibrateCheckTime: -1
+              IsLastLineReachCheck: true
+          lists: {}
+        AI_80: !list
+          objects:
+            Def: !obj {Name: 突風, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_81: !list
+          objects:
+            Def: !obj {Name: 奈落, ClassName: !str32 Fork2AI, GroupName: 通常}
+            ChildIdx: !obj {子０: 145, 子１: 153}
+          lists: {}
+        AI_82: !list
+          objects:
+            Def: !obj {Name: 崩れ落ち, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_83: !list
+          objects:
+            Def: !obj {Name: 未撃破, ClassName: !str32 GolemFindPlayer, GroupName: プレイヤー発見}
+            ChildIdx: !obj
+              ナビメッシュ無し: 4
+              不意討ち: 199
+              威嚇: 11
+              威嚇帰還: 109
+              戦闘: 58
+              気づき: 21
+              速攻: 63
+            SInst: !obj
+              SearchExplosiveDist: 10.0
+              SurpriseAttackPer: 0
+              SurpriseAttackRange: 5.0
+              AttackRange: 2.0
+              AttackVMin: -2.0
+              AttackVMax: 2.0
+              SwiftAttackVMin: -4.0
+              SwiftAttackVMax: 4.0
+              WeaponIdx: 0
+              LostTimer: 30
+              SurpriseAttackTime: 180
+              SurpriseAttackTimeRand: 60
+              RerouteTimeMin: 60
+              RerouteTimeMax: 120
+              RestreintTime: -1
+              RetTiredFromTime: 7
+              RestreintTiredDist: 40.0
+              ForceFirstAttackDist: 0.0
+              RetForceFirstAttackDist: 0.0
+              PathTooLongDist: 200.0
+              NoSearchFromTiredDist: 0.0
+          lists: {}
+        AI_84: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 Fork3AI, GroupName: 逆さまリアクション}
+            ChildIdx: !obj {子０: 141, 子１: 151, 子２: 159}
+          lists: {}
+        AI_85: !list
+          objects:
+            Def: !obj {Name: 痺れ, ClassName: !str32 Fork2AI, GroupName: リアクション}
+            ChildIdx: !obj {子０: 146, 子１: 154}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: アイス, ClassName: !str32 ForkEmitChmFieldByContact, GroupName: 右パンチケミカル放射}
+            SInst: !obj
+              RigidBodyName: BgSensor_Arm_2_R
+              EmitIntervalTime: -1
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 2
+              CutGrassType: 1
+              ActorPowerScale: 0.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: アイス, ClassName: !str32 ForkEmitChmFieldByContact, GroupName: 左パンチケミカル放射}
+            SInst: !obj
+              RigidBodyName: BgSensor_Arm_2_L
+              EmitIntervalTime: -1
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 2
+              CutGrassType: 1
+              ActorPowerScale: 0.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: アイス, ClassName: !str32 ForkOnLeaveGolemChemReset, GroupName: 初期待機起き上がる}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: アクション, ClassName: !str32 Kick, GroupName: 危険回避}
+            SInst: !obj
+              Power: 0.5
+              UpRate: 0.4
+              DirAngle: 0.0
+              CanKickArea: 2.2
+              RotSpeed: 0.523599
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: うつ伏せA, ClassName: !str32 StopASPlay, GroupName: 睡眠}
+            SInst: !obj {ASName: SleepBackA, IsIgnoreSame: true, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: うつ伏せB, ClassName: !str32 StopASPlay, GroupName: 睡眠}
+            SInst: !obj {ASName: SleepBackB, IsIgnoreSame: true, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: エレキ, ClassName: !str32 ForkEmitChmFieldByContact, GroupName: 右パンチケミカル放射}
+            SInst: !obj
+              RigidBodyName: BgSensor_Arm_2_R
+              EmitIntervalTime: -1
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 2
+              CutGrassType: 1
+              ActorPowerScale: 0.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: エレキ, ClassName: !str32 ForkEmitChmFieldByContact, GroupName: 左パンチケミカル放射}
+            SInst: !obj
+              RigidBodyName: BgSensor_Arm_2_L
+              EmitIntervalTime: -1
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 2
+              CutGrassType: 1
+              ActorPowerScale: 0.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: エレキ, ClassName: !str32 DummyAction, GroupName: 初期待機起き上がる}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: ガード, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: ガードブレイク, ClassName: !str32 GuardBreak, GroupName: リアクション}
+            SInst: !obj
+              HitImpactForce: 0.5
+              VelReduce: 0.5
+              KnockBackTime: 3
+              DropIdx: 1
+              WeaponVel: 0.4
+              WeaponVelY: 0.25
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: ジャストガード, ClassName: !str32 DummyAction, GroupName: リアクション}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: ジャンプ, ClassName: !str32 NavMeshJump, GroupName: ナビ歩行}
+            SInst: !obj
+              MaxSpeed: 0.3
+              JumpHeight: 1.0
+              JumpGravity: 0.0
+              PosReduceRatioOnGround: 0.2
+              RotReduceRatioOnGround: 0.2
+              InWaterDepth: -1.0
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: ジャンプ, ClassName: !str32 NavMeshJump, GroupName: 基本挙動}
+            SInst: !obj
+              MaxSpeed: 0.3
+              JumpHeight: 1.0
+              JumpGravity: 0.0
+              PosReduceRatioOnGround: 0.2
+              RotReduceRatioOnGround: 0.2
+              InWaterDepth: -1.0
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: ターン, ClassName: !str32 Turn, GroupName: 基本挙動}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: ノーマル, ClassName: !str32 DummyAction, GroupName: 右パンチケミカル放射}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: ノーマル, ClassName: !str32 DummyAction, GroupName: 左パンチケミカル放射}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: ノーマル, ClassName: !str32 DummyAction, GroupName: 初期待機起き上がる}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: ファイア, ClassName: !str32 ForkEmitChmFieldByContact, GroupName: 右パンチケミカル放射}
+            SInst: !obj
+              RigidBodyName: BgSensor_Arm_2_R
+              EmitIntervalTime: -1
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 2
+              CutGrassType: 1
+              ActorPowerScale: 0.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: ファイア, ClassName: !str32 ForkEmitChmFieldByContact, GroupName: 左パンチケミカル放射}
+            SInst: !obj
+              RigidBodyName: BgSensor_Arm_2_L
+              EmitIntervalTime: -1
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 2
+              CutGrassType: 1
+              ActorPowerScale: 0.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: ファイア, ClassName: !str32 ForkGolemMaterialASPlay, GroupName: 初期待機起き上がる}
+            SInst: !obj {ASName: ChemActiveShaderBody, TargetPartType: 0}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: ふっとび, ClassName: !str32 LandRagdoll, GroupName: 大落下}
+            SInst: !obj
+              ASName: BlownOff
+              Time: 60
+              PosBaseRagdollRbName: Ragdoll_Spine_1
+              DownBackCtrlOffset: !vec3 [0.0, 0.0, 0.0]
+              DownFrontCtrlOffset: !vec3 [0.0, 0.0, 0.0]
+              WeaponDropSpeedXZ: 0.3
+              WeaponDropSpeedY: 0.5
+              InWaterDownTime: 30
+              IsWaitAS: false
+              ForceFinishTime: -1
+              StableASName: DownWait
+              IsItemDrop: true
+              OnGroundDownTime: 30
+              GetUpGroundAngle: 0.785398
+              ForceEndWaterDepth: -1.0
+              IsCheckVibrate: true
+              StartUpdateFriction: -1
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: レンジ外, ClassName: !str32 TimeredASPlay, GroupName: 先行動失敗}
+            SInst: !obj
+              ASName: BattleWait
+              Time: 10
+              TimeRand: 0
+              PosReduceRatio: 0.1
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: 威嚇帰還, ClassName: !str32 DummyAction, GroupName: 対象通常}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GiantNavMeshWalk, GroupName: ナビ戦闘走行}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              AccRatio: 0.1
+              IsCheckCliff: true
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GiantNavMeshWalk, GroupName: ナビ歩行}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              AccRatio: 0.1
+              IsCheckCliff: true
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 NavMeshRun, GroupName: 危険回避}
+            SInst: !obj
+              Speed: 0.15
+              RotSpd: 0.0523599
+              FinRadius: 0.2
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              AccRatio: 0.1
+              IsCheckCliff: true
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 GiantNavMeshWalk, GroupName: 探索歩行}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              AccRatio: 0.1
+              IsCheckCliff: true
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 NavMeshRun, GroupName: 諦め}
+            SInst: !obj
+              Speed: 0.15
+              RotSpd: 0.0261799
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              AccRatio: 0.1
+              IsCheckCliff: true
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: 横になる, ClassName: !str32 OnetimeStopASPlay, GroupName: 初期待機}
+            SInst: !obj {ASName: Lie, IsIgnoreSame: false, PosReduceRatio: 0.1, AngReduceRatio: 0.45}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 Turn, GroupName: 基本挙動}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 Turn, GroupName: 見まわす}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 Turn, GroupName: 戦闘回転}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: 回転, ClassName: !str32 Turn, GroupName: 速攻}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.261799
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: 気づき, ClassName: !str32 Turn, GroupName: 音気づき}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: 気づき, ClassName: !str32 Turn, GroupName: 行動中仲間発見}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: 起き上がり, ClassName: !str32 GetUp, GroupName: やられ}
+            SInst: !obj {RotRatio: 0.18, ASName: DownRecover, RootOffset: !vec3 [
+                0.0, 0.0, 0.0]}
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: 騎乗, ClassName: !str32 DummyAction, GroupName: Root}
+            BehaviorIdx: !obj {1721623982: 1}
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: 逆さま, ClassName: !str32 StopASPlay, GroupName: 通常}
+            SInst: !obj {ASName: Lifted, IsIgnoreSame: true, PosReduceRatio: 0.15,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: 仰向けA, ClassName: !str32 StopASPlay, GroupName: 睡眠}
+            SInst: !obj {ASName: SleepForwardA, IsIgnoreSame: true, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: 仰向けB, ClassName: !str32 StopASPlay, GroupName: 睡眠}
+            SInst: !obj {ASName: SleepForwardB, IsIgnoreSame: true, PosReduceRatio: 0.0,
+              AngReduceRatio: 0.0}
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: 近づき, ClassName: !str32 GiantBattleCloseWalk, GroupName: 戦闘準備}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 3.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 OnetimeChangeableASPlay, GroupName: 炎上}
+            SInst: !obj {ASName: BurnEnd, IsIgnoreSame: false, PosReduceRatio: 0.15,
+              AngReduceRatio: 1.0}
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Wait, GroupName: 撃破}
+            SInst: !obj {Time: 30, TimeRand: 30, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Delete, GroupName: 死亡生成}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: 後退, ClassName: !str32 BackWalk, GroupName: 戦闘準備}
+            SInst: !obj
+              Speed: 0.1
+              RotSpd: 0.0174533
+              RotAddRatio: 0.18
+              Time: 30
+              FinishDist: 3.0
+              WeaponIdx: -1
+              DecelRatio: 0.1
+              IsCliffCheck: true
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: 行動, ClassName: !str32 NullASPlay, GroupName: 所持}
+            SInst: !obj {ASName: Lifted, IsIgnoreSame: false, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 PunchAttack, GroupName: ケミカル復帰}
+            SInst: !obj
+              ASName: ChemicalRecover
+              AtkBodyName1: AtkBody
+              AtkBodyName2: AtkArmR
+              AtkBodyName3: AtkArmL
+              AttackIntensity: 3
+              IsGuardPierce: true
+              IsForceGuardBreak: true
+              IsIniviciblePierce: false
+              IsImpulseLarge: true
+              IsHeavy: false
+              IsHammer: false
+              PosReduceRatio: 0.1
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Shock, GroupName: ショック}
+            SInst: !obj
+              HitImpactForce: 0.2
+              VelReduce: 0.8
+              KnockBackTime: 10
+              WeaponIdx: -1
+              WeaponDropSpeedXZ: 0.3
+              WeaponDropSpeedY: 0.5
+              ASName: LargeDamage
+              ASSlot: 0
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 AnmDamage, GroupName: ふっとび}
+            SInst: !obj
+              AS: LargeDamage
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.18
+              HitImpactForceSmallSwordL: 0.24
+              HitImpactForceLargeSwordS: 0.3
+              HitImpactForceLargeSwordL: 0.42
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GiantPunchAttack, GroupName: 右パンチ}
+            SInst: !obj
+              CoBodyName: BgSensor_Arm_2_R
+              ASName: NoWeaponAttackR
+              AtkBodyName1: AtkArmR
+              AtkBodyName2: ''
+              AtkBodyName3: ''
+              AttackIntensity: 3
+              IsGuardPierce: false
+              IsForceGuardBreak: false
+              IsIniviciblePierce: false
+              IsImpulseLarge: false
+              IsHeavy: false
+              IsHammer: false
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForceRagdollOffFreeze, GroupName: 起き上がり凍結}
+            SInst: !obj {IsChangeInAir: false, TransBoneKey: Root, PosReduceRatio: 1.0,
+              AngReduceRatio: 1.0}
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 GiantPunchAttack, GroupName: 左パンチ}
+            SInst: !obj
+              CoBodyName: BgSensor_Arm_2_L
+              ASName: NoWeaponAttackL
+              AtkBodyName1: AtkArmL
+              AtkBodyName2: AtkArmL2
+              AtkBodyName3: ''
+              AttackIntensity: 3
+              IsGuardPierce: false
+              IsForceGuardBreak: false
+              IsIniviciblePierce: false
+              IsImpulseLarge: false
+              IsHeavy: false
+              IsHammer: false
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Delete, GroupName: 自然死}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 OnetimeStopASPlay, GroupName: 初期待機起き上がる}
+            SInst: !obj {ASName: GetUp, IsIgnoreSame: true, PosReduceRatio: 0.0, AngReduceRatio: 1.0}
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ForkKnockBackNoRot, GroupName: 小ダメージ}
+            SInst: !obj
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.18
+              HitImpactForceSmallSwordL: 0.24
+              HitImpactForceLargeSwordS: 0.3
+              HitImpactForceLargeSwordL: 0.42
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_56: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Vanish, GroupName: 消滅}
+            SInst: !obj
+              DieType: 3
+              NoDrop: true
+              ASName: ''
+              Time: 21
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_57: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Shock, GroupName: 弾かれ}
+            SInst: !obj
+              HitImpactForce: 0.2
+              VelReduce: 0.8
+              KnockBackTime: 10
+              WeaponIdx: -1
+              WeaponDropSpeedXZ: 0.3
+              WeaponDropSpeedY: 0.5
+              ASName: LargeDamage
+              ASSlot: 0
+          lists: {}
+        Action_58: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Shock, GroupName: 超ショック}
+            SInst: !obj
+              HitImpactForce: 0.5
+              VelReduce: 0.5
+              KnockBackTime: 3
+              WeaponIdx: 0
+              WeaponDropSpeedXZ: 0.3
+              WeaponDropSpeedY: 0.5
+              ASName: LargeDamage
+              ASSlot: 0
+          lists: {}
+        Action_59: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 Vanish, GroupName: 奈落}
+            SInst: !obj
+              DieType: 0
+              NoDrop: true
+              ASName: ''
+              Time: 0
+              TimeRand: 0
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.05
+          lists: {}
+        Action_60: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 ElectricParalysis, GroupName: 痺れ_0}
+            SInst: !obj {ASName: Electric, PosReduceRatio: 0.85, AngReduceRatio: 0.45}
+          lists: {}
+        Action_61: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 DummyAction, GroupName: ケミカル復帰}
+          lists: {}
+        Action_62: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAllowReactionLift, GroupName: もちあげて}
+          lists: {}
+        Action_63: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAlwaysRotDownGr, GroupName: 起き上がり凍結}
+            SInst: !obj {GroundRotAngle: 0.10472}
+          lists: {}
+        Action_64: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkEmitExpandChemicalField, GroupName: 自然死}
+            SInst: !obj
+              PartsKey: ExpandChemical
+              Scale: 3.0
+              AttackPower: 0
+              AttackIntensity: 0
+              IsUseAtCollision: false
+              AttackType: 3
+              CutGrassType: 1
+              ActorPowerScale: 1.0
+              XLinkKey: ''
+              AtTarget: -1
+              AtDirType: ''
+          lists: {}
+        Action_65: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimer, GroupName: 小ダメージ}
+            SInst: !obj {WaitFrame: 16, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_66: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAlwaysSetModelEffect, GroupName: 消滅}
+            SInst: !obj {Timer: 21}
+          lists: {}
+        Action_67: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 Delete, GroupName: 奈落}
+            SInst: !obj {DeleteType: 2}
+          lists: {}
+        Action_68: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkAlwaysForceGetUp, GroupName: 保険起き上がり}
+            SInst: !obj {RotRatio: 0.33, RotSpdMin: 0.0872665, RotSpdMax: 0.279253,
+              IsUseCRBOffsetUnit: true}
+          lists: {}
+        Action_69: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkASTrgGolemChemicalReset, GroupName: ケミカル復帰}
+          lists: {}
+        Action_70: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkDisableContactForAttack, GroupName: 右パンチ}
+            SInst: !obj
+              RigidBodyName0: RigidBody_Arm_2_R
+              RigidBodyName1: ''
+              RigidBodyName2: ''
+              RigidBodyName3: ''
+              RigidBodyName4: ''
+              RecoverDelayTimeMin: 10
+          lists: {}
+        Action_71: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkAlwaysForceGetUp, GroupName: 起き上がる}
+            SInst: !obj {RotRatio: 0.33, RotSpdMin: 0.0872665, RotSpdMax: 0.279253,
+              IsUseCRBOffsetUnit: false}
+          lists: {}
+        Action_72: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkDisableContactForAttack, GroupName: 左パンチ}
+            SInst: !obj
+              RigidBodyName0: RigidBody_Arm_2_L
+              RigidBodyName1: ''
+              RigidBodyName2: ''
+              RigidBodyName3: ''
+              RigidBodyName4: ''
+              RecoverDelayTimeMin: 10
+          lists: {}
+        Action_73: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkASPlay, GroupName: 小ダメージ}
+            SInst: !obj
+              ASName: Lifted
+              EndState: 0
+              ChangeableTiming: 0
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_74: !list
+          objects:
+            Def: !obj {Name: 子２, ClassName: !str32 ForkOnEnterCharCtrlInvalid, GroupName: 消滅}
+          lists: {}
+        Action_75: !list
+          objects:
+            Def: !obj {Name: 子３, ClassName: !str32 ForkDisableContactOnAtHitPlayer,
+              GroupName: ケミカル復帰}
+            SInst: !obj
+              RigidBodyName0: RigidBody_Spine_1
+              RigidBodyName1: RigidBody_Arm_1_R
+              RigidBodyName2: RigidBody_Arm_2_R
+              RigidBodyName3: RigidBody_Arm_1_L
+              RigidBodyName4: RigidBody_Arm_2_L
+              RecoverDelayTimeMin: 10
+          lists: {}
+        Action_76: !list
+          objects:
+            Def: !obj {Name: 子３, ClassName: !str32 ForkBoneControlFrontGround, GroupName: 右パンチ}
+            SInst: !obj {TargetOffset: !vec3 [0.0, 0.0, 8.0]}
+          lists: {}
+        Action_77: !list
+          objects:
+            Def: !obj {Name: 死亡, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_78: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_79: !list
+          objects:
+            Def: !obj {Name: 持ち上げられ中, ClassName: !str32 NullASPlay, GroupName: 所持}
+            SInst: !obj {ASName: Lifted, IsIgnoreSame: false, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_80: !list
+          objects:
+            Def: !obj {Name: 出現, ClassName: !str32 Appear, GroupName: 呼ばれ}
+            SInst: !obj {PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_81: !list
+          objects:
+            Def: !obj {Name: 小ダメージ, ClassName: !str32 SmallDamage, GroupName: 基本挙動}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj
+              VelReduce: 0.72
+              HitImpactForceSmallSwordS: 0.18
+              HitImpactForceSmallSwordL: 0.24
+              HitImpactForceLargeSwordS: 0.3
+              HitImpactForceLargeSwordL: 0.42
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_82: !list
+          objects:
+            Def: !obj {Name: 水死, ClassName: !str32 DrowningDeath, GroupName: やられ}
+            SInst: !obj {PosBaseRagdollRbName: Ragdoll_Spine_1}
+          lists: {}
+        Action_83: !list
+          objects:
+            Def: !obj {Name: 水中, ClassName: !str32 DrowningDeath, GroupName: Root}
+            BehaviorIdx: !obj {1721623982: 1}
+            SInst: !obj {PosBaseRagdollRbName: Ragdoll_Spine_1}
+          lists: {}
+        Action_84: !list
+          objects:
+            Def: !obj {Name: 設置, ClassName: !str32 PutFromParent, GroupName: 所持}
+            SInst: !obj {Timer: 3, HoldOffXLinkKey: HoldOff}
+          lists: {}
+        Action_85: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 BurnDamage, GroupName: 炎上}
+            SInst: !obj
+              ASName: Burn
+              Time: 60
+              TimeRand: 15
+              PosReduceRatio: 0.15
+              AngReduceRatio: 1.0
+          lists: {}
+        Action_86: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Turn, GroupName: 撃破}
+            SInst: !obj
+              RotSpd: 0.0872665
+              FinRotate: 0.0349066
+              IsFollowGround: false
+              PosReduceRatio: 0.7
+              BaseRotRatio: 0.16
+              IsChangeable: true
+              RotMinSpeedRatio: 0.1
+          lists: {}
+        Action_87: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 LandRagdoll, GroupName: 死亡生成}
+            SInst: !obj
+              ASName: Die
+              Time: 30
+              PosBaseRagdollRbName: Ragdoll_Spine_1
+              DownBackCtrlOffset: !vec3 [0.0, 0.0, 0.0]
+              DownFrontCtrlOffset: !vec3 [0.0, 0.0, 0.0]
+              WeaponDropSpeedXZ: 0.0
+              WeaponDropSpeedY: 0.0
+              InWaterDownTime: 16
+              IsWaitAS: true
+              ForceFinishTime: -1
+              StableASName: ''
+              IsItemDrop: true
+              OnGroundDownTime: 30
+              GetUpGroundAngle: 0.785398
+              ForceEndWaterDepth: -1.0
+              IsCheckVibrate: true
+              StartUpdateFriction: -1
+          lists: {}
+        Action_88: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 NoAtTackleMove, GroupName: 接近攻撃}
+            SInst: !obj
+              AS: Run
+              Speed: 0.15
+              RotSpd: 0.0261799
+              FailAngle: 0.785398
+              BaseRotRatio: 0.14
+              FinRadius: 0.0
+              WeaponIdx: 0
+          lists: {}
+        Action_89: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Wait, GroupName: 徘徊待機}
+            SInst: !obj {Time: 30, TimeRand: 30, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_90: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 TimeredASPlay, GroupName: 警戒待機}
+            SInst: !obj
+              ASName: BattleWait
+              Time: 60
+              TimeRand: 30
+              PosReduceRatio: 0.1
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_91: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Wait, GroupName: 見まわす}
+            SInst: !obj {Time: 30, TimeRand: 30, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_92: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 Wait, GroupName: 初期待機}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj {Time: 0, TimeRand: 0, PosReduceRatio: 0.15, AngReduceRatio: 0.45}
+          lists: {}
+        Action_93: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 StopASPlay, GroupName: 戦闘待機}
+            SInst: !obj {ASName: BattleWait, IsIgnoreSame: true, PosReduceRatio: 0.1,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_94: !list
+          objects:
+            Def: !obj {Name: 直進, ClassName: !str32 GiantEnemyWalk, GroupName: ナビ歩行}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+              FollowGround: false
+              WallHitLimitTime: 20
+              MoveAngCliffLimitTime: 10
+              AccRatio: 0.1
+              IgnoreLastCurve: false
+              IgnoreDecelerationFrontCliff: false
+              IgnoreMoveDirCoHit: false
+              JumpUpSpeedReduceRatio: 1.0
+          lists: {}
+        Action_95: !list
+          objects:
+            Def: !obj {Name: 直進, ClassName: !str32 GiantBattleCloseMove, GroupName: プレイヤー追跡直進走行}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+          lists: {}
+        Action_96: !list
+          objects:
+            Def: !obj {Name: 直進, ClassName: !str32 Run, GroupName: 危険回避}
+            SInst: !obj
+              Speed: 0.15
+              RotSpd: 0.0523599
+              FinRadius: 0.2
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+              FollowGround: false
+              WallHitLimitTime: 20
+              MoveAngCliffLimitTime: 10
+              AccRatio: 0.1
+              IgnoreLastCurve: false
+              IgnoreDecelerationFrontCliff: false
+              IgnoreMoveDirCoHit: false
+              JumpUpSpeedReduceRatio: 1.0
+          lists: {}
+        Action_97: !list
+          objects:
+            Def: !obj {Name: 直進, ClassName: !str32 GiantEnemyWalk, GroupName: 直進歩行}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+              FollowGround: false
+              WallHitLimitTime: 20
+              MoveAngCliffLimitTime: 10
+              AccRatio: 0.1
+              IgnoreLastCurve: false
+              IgnoreDecelerationFrontCliff: false
+              IgnoreMoveDirCoHit: false
+              JumpUpSpeedReduceRatio: 1.0
+          lists: {}
+        Action_98: !list
+          objects:
+            Def: !obj {Name: 直進, ClassName: !str32 Run, GroupName: 諦め}
+            SInst: !obj
+              Speed: 0.15
+              RotSpd: 0.0261799
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+              FollowGround: false
+              WallHitLimitTime: 20
+              MoveAngCliffLimitTime: 10
+              AccRatio: 0.1
+              IgnoreLastCurve: false
+              IgnoreDecelerationFrontCliff: false
+              IgnoreMoveDirCoHit: false
+              JumpUpSpeedReduceRatio: 1.0
+          lists: {}
+        Action_99: !list
+          objects:
+            Def: !obj {Name: 直線追跡, ClassName: !str32 GiantEnemyWalk, GroupName: 音気づき}
+            SInst: !obj
+              VibrationPower: 0.2
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 2.0
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+              FollowGround: false
+              WallHitLimitTime: 20
+              MoveAngCliffLimitTime: 10
+              AccRatio: 0.1
+              IgnoreLastCurve: false
+              IgnoreDecelerationFrontCliff: false
+              IgnoreMoveDirCoHit: false
+              JumpUpSpeedReduceRatio: 1.0
+          lists: {}
+        Action_100: !list
+          objects:
+            Def: !obj {Name: 直線追跡, ClassName: !str32 BattleWalk, GroupName: 音追跡}
+            SInst: !obj
+              Speed: 0.08
+              RotSpd: 0.0523599
+              FinRadius: 0.2
+              FinRotate: 3.14159
+              WeaponIdx: -1
+              BaseRotRatio: 0.14
+              FollowGround: false
+              WallHitLimitTime: 20
+              MoveAngCliffLimitTime: 10
+              AccRatio: 0.1
+              IgnoreLastCurve: false
+              IgnoreDecelerationFrontCliff: false
+              IgnoreMoveDirCoHit: false
+              JumpUpSpeedReduceRatio: 1.0
+          lists: {}
+        Action_101: !list
+          objects:
+            Def: !obj {Name: 溺死, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_102: !list
+          objects:
+            Def: !obj {Name: 怒り, ClassName: !str32 Wait, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj {Time: 30, TimeRand: 30, PosReduceRatio: 0.1, AngReduceRatio: 0.45}
+          lists: {}
+        Action_103: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_104: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 RagdollFreeze, GroupName: ふっとび}
+            SInst: !obj
+              DownFrontCtrlOffset: !vec3 [0.0, 0.0, 0.0]
+              DownBackCtrlOffset: !vec3 [0.0, 0.0, 0.0]
+              IsChangeInAir: false
+              TransBoneKey: Root
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_105: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 Freeze, GroupName: リアクション}
+            SInst: !obj {IsChangeInAir: false, TransBoneKey: Root, PosReduceRatio: 0.85,
+              AngReduceRatio: 0.45}
+          lists: {}
+        Action_106: !list
+          objects:
+            Def: !obj {Name: 凍結砕き, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_107: !list
+          objects:
+            Def: !obj {Name: 投擲, ClassName: !str32 Thrown, GroupName: 所持}
+            BehaviorIdx: !obj {1721623982: 3}
+            SInst: !obj
+              AS: Lifted
+              RotSpd: !vec3 [0.0, 0.0, 0.0]
+              ReactionLevel: -1
+              IsForceOnly: false
+              IsOnImpact: true
+              ThrownKey: ''
+          lists: {}
+        Action_108: !list
+          objects:
+            Def: !obj {Name: 突風, ClassName: !str32 SmallDamage, GroupName: リアクション}
+            SInst: !obj
+              VelReduce: 0.6
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.7
+              HitImpactForceLargeSwordL: 0.7
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_109: !list
+          objects:
+            Def: !obj {Name: 濡死, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_110: !list
+          objects:
+            Def: !obj {Name: 爆死, ClassName: !str32 EnemyRigidBodySpinDie, GroupName: 死亡}
+            SInst: !obj
+              Speed: 0.5
+              RiseSpeed: 0.4
+              ASName: Lifted
+              RotSpeed: 0.349066
+              IsFinishedByBgHit: true
+          lists: {}
+        Action_111: !list
+          objects:
+            Def: !obj {Name: 被暗殺, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_112: !list
+          objects:
+            Def: !obj {Name: 被特効, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_113: !list
+          objects:
+            Def: !obj {Name: 不意討ち, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_114: !list
+          objects:
+            Def: !obj {Name: 不審者発見, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_115: !list
+          objects:
+            Def: !obj {Name: 不調仲間発見, ClassName: !str32 DummyAction, GroupName: 通常}
+            BehaviorIdx: !obj {1721623982: 4}
+          lists: {}
+        Action_116: !list
+          objects:
+            Def: !obj {Name: 浮遊物発見, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_117: !list
+          objects:
+            Def: !obj {Name: 崩れ落ち, ClassName: !str32 SmallDamage, GroupName: リアクション}
+            SInst: !obj
+              VelReduce: 0.6
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.7
+              HitImpactForceLargeSwordL: 0.7
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_118: !list
+          objects:
+            Def: !obj {Name: 未満, ClassName: !str32 ForceGetUpFreeze, GroupName: 起き上がり凍結}
+            SInst: !obj
+              ASName: Wait
+              IsChangeInAir: false
+              TransBoneKey: Root
+              PosReduceRatio: 0.15
+              AngReduceRatio: 0.45
+          lists: {}
+        Action_119: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 SmallDamage, GroupName: リアクション}
+            SInst: !obj
+              VelReduce: 0.6
+              HitImpactForceSmallSwordS: 0.086
+              HitImpactForceSmallSwordL: 0.12
+              HitImpactForceLargeSwordS: 0.7
+              HitImpactForceLargeSwordL: 0.7
+              HitImpactForceSpearS: 0.42
+              HitImpactForceSpearL: 2.28
+              HighSpeedY: -1.0
+              VelReduceY: 0.0
+          lists: {}
+        Action_120: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 Fall, GroupName: 所持}
+            BehaviorIdx: !obj {1721623982: 13}
+            SInst: !obj {ASName: Lifted, InWaterDepth: -1.0}
+          lists: {}
+        Action_121: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_122: !list
+          objects:
+            Def: !obj {Name: 落下死, ClassName: !str32 Delete, GroupName: 死亡}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_123: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_124: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 DummyAction, GroupName: ''}
+          lists: {}
+        Action_125: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_126: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_127: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_128: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_129: !list
+          objects:
+            Def: !obj {Name: Demo_Reset, ClassName: !str32 DemoEnemyReset, GroupName: ''}
+          lists: {}
+        Action_130: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_131: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_132: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_133: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_134: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_135: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_136: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_137: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_138: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 BossBgm}
+            SInst: !obj {BossType: 1}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 BossBgmDamaged}
+            SInst: !obj {DieType: 0}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 CreateBgm}
+            SInst: !obj {BgmName: cGolem}
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 25.0
+              Level: 3
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: true
+              IsGuardianLayer: false
+              IsImpulseLayer: false
+              IsFireLayer: false
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: false
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 ActorFlagSetterAttensionNotice}
+            SInst: !obj {Mode: 0, SetValue: true}
+          lists: {}
+        Behavior_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 ActorFlagSetterAttensionNotice}
+            SInst: !obj {Mode: 2, SetValue: false}
+          lists: {}
+        Behavior_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetIgnoreSmallHitDCCallBack}
+            SInst: !obj {IsAffectPopPool: false, Timing: 4}
+          lists: {}
+        Behavior_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 BossBgmDamaged}
+            SInst: !obj {DieType: 1}
+          lists: {}
+        Behavior_8: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetEnableResetToInitialState}
+          lists: {}
+        Behavior_9: !list
+          objects:
+            Def: !obj {ClassName: !str32 DisableBoneController}
+          lists: {}
+        Behavior_10: !list
+          objects:
+            Def: !obj {ClassName: !str32 BattleTensionUp}
+            SInst: !obj {EnemyLevel: 0, ReduceTime: 15}
+          lists: {}
+        Behavior_11: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetAttension}
+            SInst: !obj {AttKey: LockOn, SetState: 0}
+          lists: {}
+        Behavior_12: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetAcceptOnlyBombDCCallback}
+            SInst: !obj {IsThroughEffectiveDamage: true, IsThroughDieAttribute: true,
+              Timing: 4}
+          lists: {}
+        Behavior_13: !list
+          objects:
+            Def: !obj {ClassName: !str32 OnStateXLinkCreate}
+            SInst: !obj {Key: '', IsEndKill: false, IsEndFade: false, EndKey: LandBody}
+          lists: {}
+        Behavior_14: !list
+          objects:
+            Def: !obj {ClassName: !str32 SealNoticePlayerSound}
+          lists: {}
+        Behavior_15: !list
+          objects:
+            Def: !obj {ClassName: !str32 ForceDispLifeGage}
+            SInst: !obj {IsOnlyPlayer: true}
+          lists: {}
+        Behavior_16: !list
+          objects:
+            Def: !obj {ClassName: !str32 OffOcculutionCulling}
+          lists: {}
+        Behavior_17: !list
+          objects:
+            Def: !obj {ClassName: !str32 SetIgnoreGustDCCallback}
+            SInst: !obj {Timing: 6}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsSuccessEndLastDemoAction}
+          lists: {}

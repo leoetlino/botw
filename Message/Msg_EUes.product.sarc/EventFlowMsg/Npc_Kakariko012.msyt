@@ -1,0 +1,761 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0008":
+    attributes: ""
+    contents:
+      - text: Hasta luego
+  "0011":
+    attributes: ""
+    contents:
+      - text: Quiero venderte algo
+  "0012":
+    attributes: ""
+    contents:
+      - text: ¿Colección Dania?
+  "1000":
+    attributes: ""
+    contents:
+      - text: ¡Compro!
+  "1001":
+    attributes: ""
+    contents:
+      - text: He cambiado de idea
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sí
+  "5501":
+    attributes: ""
+    contents:
+      - text: "No"
+  "5503":
+    attributes: ""
+    contents:
+      - text: He cambiado de idea
+  "5508":
+    attributes: ""
+    contents:
+      - text: Lo vendo todo
+  ClerkAsk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Solo pido "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Un precio\nasequible, ¿verdad?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: ¿Qué me quieres vender?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Por esto puedo darte "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ";\n¿hay trato?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: ¡Da gusto hacer negocios contigo!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: ¡Bien! Justo lo que quería.
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "He de admitir que le había\nechado el ojo antes..."
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "¡Nunca pensé que podría conseguir\nalgo de este tipo!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Qué pena, ya me había hecho ilusiones..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Compro lo que sea! Si vendes\nalgo, que no te dé reparo decírmelo."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Estoy dispuesta a comprarte\ncualquier cosa."
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Si quieres deshacerte de alguna cosa,\n¡aprovecha para vendérmela!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "¿Alguna cosa más? Hoy me siento\ncon ganas de comprar."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿Y qué cantidad me vendes?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Así que me vendes "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", ¿eh?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n¿Te parece bien si te doy "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "\na cambio?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "No me interesa, lo siento."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "¿De verdad? "
+      - control:
+          kind: pause
+          length: long
+      - text: "Pero si es lo que llevas\npuesto ahora mismo..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Me temo que\nno hay trato, chico."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Pues serán
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ",\n¿te parece?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "¿Todo? Vaya... El total serían\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupias"
+      - control:
+          kind: reset_colour
+      - text: ", si estás de acuerdo."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "El total asciende a "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ".\n¿Te parece bien?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Vaya...
+      - control:
+          kind: pause
+          length: longer
+      - text: " ¿No te gusta?"
+  FirstTalk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Bienvenido a la sastrería\n«Moda al cuadrado»!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Tenemos a la venta exclusivas prendas\nde la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: colección Dania
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "La "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: túnica de sigilo
+      - control:
+          kind: reset_colour
+      - text: " que ves ahí\nes mi recomendación especial."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Pero si lo que te interesa es vender,\nsolo tienes que avisarme."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  FirstTalk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Bienvenido a la sastrería\n«Moda al cuadrado»!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Vas por ahí tan despelotado que tienes\npinta de ser un tipo raro, pero supongo\nque un cliente es un cliente. En fin...\nTenemos a la venta exclusivas prendas\nde la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: colección Dania
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Incluso alguien tan poco interesado\nen la ropa como tú encontrará algo\nde su agrado.\nLa "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: túnica de sigilo
+      - control:
+          kind: reset_colour
+      - text: " que ves ahí\nes mi recomendación especial."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Pero si lo que te interesa es vender,\nsolo tienes que avisarme."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Near00:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: ¿Compras algo?
+  Near01:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Mi ropa es genial.
+  Near02:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: ¡Hola!
+  Talk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: ¡Vuelve cuando quieras!
+  Talk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Todos los artículos que ves expuestos\nforman parte de la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "colección especial\nDania"
+      - control:
+          kind: reset_colour
+      - text: ".\nEcha un vistazo con calma."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk06:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "¡Un momento! No es algo que ocurra\na menudo, pero... nos hemos quedado\nsin existencias.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Así que no sé qué pinto todavía\nen la tienda."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Al fin podré irme de vacaciones!\nSeguro que Lasli o la abuela se\naniman a venir conmigo."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk07:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Sí, la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: colección Dania
+      - control:
+          kind: reset_colour
+      - text: ", que se llama así\nporque se compone de prendas que\nyo misma he seleccionado, obviamente.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Te explico: todo lo que ves aquí lleva\nmi sello de calidad."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Cada artículo tiene elementos únicos,\nasí que procura fijarte bien en todos\nlos detalles."
+  Talk08:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Gracias! Estoy segura de que te sentará\ncomo un guante."
+  Talk14:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "¿Qué ocurre? ¿Necesitas algo más?\n¡Estaré encantada de ayudarte!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk17:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Muchas gracias! Has hecho\nuna buena compra, créeme."
+  Talk19:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "¿Adónde debería ir de vacaciones? Quizás pueda\nir en busca del estanque de los enamorados..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk20:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "La aldea es tan pequeña que no suelo\ntener la oportunidad de ver cosas del\nexterior...\n¡Pásate a verme cuando quieras librarte\nde alguna cosa!"
+  Talk24:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¿A que es una chulada? Se trata de\nuna edición limitada exclusiva de\nnuestro establecimiento.\nCuando te pongas eso, tus pisadas\napenas sonarán. ¡Te vendrá de perlas\npara cazar! Y para otras cosas...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Lo malo es que te dejará la defensa por los suelos.
+      - control:
+          kind: text_size
+          percent: 100
+  Talk25:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bienvenido a nuestra humilde\nsastrería, «Moda al cuadrado»."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Te recomiendo que le eches un vistazo\na la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: túnica de sigilo
+      - control:
+          kind: reset_colour
+      - text: ". ¡Es un artículo\nde lo más especial!\nCon esta prenda, tus pisadas serán\ncompletamente silenciosas. ¡Viene\nde perlas para cazar!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Lo malo es que la defensa se ve algo reducida...
+      - control:
+          kind: text_size
+          percent: 100
+  Talk26:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Muchas gracias! Me aseguraré de\nconseguir más para la próxima vez."
+  Talk27:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Muchas gracias! Espero que\nle saques partido."
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: ¡Para quieto!

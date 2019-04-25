@@ -1,0 +1,110 @@
+ConditionalTimelines:
+- Condition: HatenoNPC020_StolenLestenArea
+  Nodes:
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 5, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Sleep, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Sleep, WaitAnchorRainASName: Sleep, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 2}
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 21, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 6,
+    MoveEquipment: Hold, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 2,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 5, WaitAnchorASName: Wait, WaitAnchorRainASName: Wait, WaitEquipment: Hold,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 3}
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 21, WaitAnchorASName: Sleep, WaitAnchorRainASName: Sleep, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 2}
+  TriggerEvents:
+  - {EvflEntry: Meeting, IsPauseOtherActors: true, Trigger: Talk}
+  - EvflEntry: Talk
+    EvflEntryNear: NearActorsNear
+    EvflEntryTalk: Talk
+    IsPauseOtherActors: true
+    IsPauseOtherActorsNear: false
+    IsPauseOtherActorsTalk: true
+    Parameters:
+      Actors:
+      - {Action: Action1, Actor: Npc_HatenoVillage020}
+    Trigger: NearActors
+  - EvflEntry: Near
+    IsPauseOtherActors: false
+    Parameters: {Distance: 10.0, FrontOnly: false}
+    Trigger: Near
+DefaultTimeline:
+  Nodes:
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 5, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Sleep, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Sleep, WaitAnchorRainASName: Sleep, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 2}
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 21, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 3,
+    MoveEquipment: Hold, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 5, WaitAnchorASName: Wait, WaitAnchorRainASName: Wait, WaitEquipment: Hold,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 0, WaitTalkTurn: 3}
+  - {AIName: Sleep, CanBeAwaken: 'False', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: false, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: NotAndNot, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 21, WaitAnchorASName: Sleep, WaitAnchorRainASName: Sleep, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndNot, WaitPosture: 0,
+    WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3,
+    WaitReactionType: 2, WaitTalkTurn: 2}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+  - EvflEntry: Meeting
+    EvflEntryNear: NearActorsNear
+    EvflEntryTalk: Meeting
+    IsPauseOtherActors: true
+    IsPauseOtherActorsNear: false
+    IsPauseOtherActorsTalk: true
+    Parameters:
+      Actors:
+      - {Action: Action1, Actor: Npc_HatenoVillage020}
+    Trigger: NearActors
+  - EvflEntry: Near
+    IsPauseOtherActors: false
+    Parameters: {Distance: 10.0, FrontOnly: false}
+    Trigger: Near
+DisplayDistanceMode: None

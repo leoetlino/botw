@@ -1,0 +1,172 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects: {}
+  lists:
+    damage_param: !list
+      objects:
+        DamageType: !obj {Key: Basic}
+        DamageRate: !obj
+          Sword: 10.0
+          LargeSword: 10.0
+          Spear: 10.0
+          Arrow: 10.0
+          Bomb: 10.0
+          Body: 10.0
+          Ancient: 10.0
+          ShockWave: 10.0
+          Impulse: 10.0
+          GanonBeam: 1.0
+        ReactionTable: !obj
+          Sword-Small: !str32 即死
+          Sword-Middle: !str32 即死
+          Sword-Large: !str32 即死
+          Sword-Huge: !str32 即死
+          LargeSword-Small: !str32 即死
+          LargeSword-Middle: !str32 即死
+          LargeSword-Large: !str32 即死
+          LargeSword-Huge: !str32 即死
+          Spear-Small: !str32 即死
+          Spear-Middle: !str32 即死
+          Spear-Large: !str32 即死
+          Spear-Huge: !str32 即死
+          Arrow-Small: !str32 即死
+          Arrow-Middle: !str32 即死
+          Arrow-Large: !str32 即死
+          Arrow-Huge: !str32 即死
+          Bomb-Small: !str32 即死
+          Bomb-Middle: !str32 即死
+          Bomb-Large: !str32 即死
+          Bomb-Huge: !str32 即死
+          Body-Small: !str32 即死
+          Body-Middle: !str32 即死
+          Body-Large: !str32 即死
+          Body-Huge: !str32 即死
+          Ancient-Small: !str32 即死
+          Ancient-Middle: !str32 即死
+          Ancient-Large: !str32 即死
+          Ancient-Huge: !str32 即死
+          ShockWave-Small: !str32 即死
+          ShockWave-Middle: !str32 即死
+          ShockWave-Large: !str32 即死
+          ShockWave-Huge: !str32 即死
+          Impulse-Small: !str32 即死
+          Impulse-Middle: !str32 即死
+          Impulse-Large: !str32 即死
+          Impulse-Huge: !str32 即死
+          GanonBeam-Small: !str32 即死
+          GanonBeam-Middle: !str32 即死
+          GanonBeam-Large: !str32 即死
+          GanonBeam-Huge: !str32 即死
+        Parameters: !obj
+          Breakable: false
+          HammerAffect: false
+          WeakBreakerAffect: false
+          ChemicalAttackAffect: true
+          SpAffectRatio: 1.0
+          SpAffectDamage: 0
+          VanishAffect: true
+          IsCriticalBlowOff: true
+          IsAcceptAtkImpulse: true
+          IsCommonCalcImpuleDamage: false
+          IsHeavyBreak: false
+          ImpulseThresholdLv0: 9000.0
+          ImpulseDamageLv0: 4.0
+          ImpulseThresholdLv1: 10000.0
+          ImpulseDamageLv1: 8.0
+          ImpulseThresholdLv2: 100000.0
+          ImpulseDamageLv2: 12.0
+          ImpulseThresholdLv3: 200000.0
+          ImpulseDamageLv3: 100.0
+          ImpulseThresholdLv4: !!float 1e+06
+          FallDamageStartHeight: 10000.0
+          FallDamageMin: 0
+          FallDamagePerMeter: 0.0
+          FallDamageHighStart: -1.0
+          FallDamageHighPerMeter: 0
+          FallDamageNoWaterDepth: -1.0
+          WeakPointBone: Head
+          WeakPointCalcArea: 4.0
+          WeakPointCalcOffset: !vec3 [0.0, 1.0, 0.0]
+          WeakPointArea: 1.7
+          WeakPointOffset: !vec3 [0.0, 0.0, 0.0]
+          WeakPointRatio: 2.0
+          WeakPointNoUIFlag: false
+          WeakPointBone2: ''
+          WeakPointCalcArea2: 0.0
+          WeakPointCalcOffset2: !vec3 [0.0, 0.0, 0.0]
+          WeakPointArea2: 0.0
+          WeakPointOffset2: !vec3 [0.0, 0.0, 0.0]
+          WeakPointRatio2: 1.0
+          WeakPointNoUIFlag2: false
+          SillentKillMultRatio: 1.0
+          SillentKillAddDamage: 0
+          IsDeadBurnout: false
+          IsMetamorBurnout: false
+          IsMatamorFromTg: true
+          Burnable: true
+          BurnDamage: 999999
+          BurnDamage2: -1
+          BurnDamage3: -1
+          BurnDamage4: -1
+          BurnDamage5: -1
+          BurnTime: 30
+          BurnDamageInterval: 60
+          BurnContinuousDamage: 0
+          BurnCritical: false
+          ProofBurnAtSmallDamage: false
+          IsDeadIce: false
+          IsMetamorIce: false
+          Iceable: true
+          IceDamage: 999999
+          IceTime: 900
+          IceBreakableByAtk: true
+          IceBreakDamageRatio: 3.0
+          IceCritical: false
+          ProofIceAtSmallDamage: false
+          IsDeadElectric: false
+          IsMetamorElectric: false
+          Electricable: true
+          ElectricDamage: 999999
+          ElectricTime: 60
+          ElecCancelableByAtk: false
+          ProofElecAtSmallDamage: false
+          WetAffect: false
+          LightningAffect: true
+          LightningDamage: 999999
+          GerudoHeroAffect: true
+          GerudoHeroDamage: 150
+          GerudoHeroTime: 300
+          GustAffect: true
+          DrownHeight: -1.0
+          DrownDamage: 0
+          ColdWaterFrozenTime: -1
+          ColdWaterAffect: false
+          ColdWaterDamage: 5
+          ColdWaterDamageInterval: 60
+          ColdWaterDamageStartDepth: 0.0
+          ColdWaterDamageIntervalDeep: -1
+          ColdWaterDamageDeepDepth: -1.0
+          HotWaterBoiledTime: -1
+          HotWaterHealAffect: false
+          HotWaterHeal: 0
+          HotWaterHealInterval: -1
+          HotWaterHealStartDepth: 0.0
+          HotWaterHealIntervalDeep: -1
+          HotWaterHealDeepDepth: -1.0
+          HotWaterChemCrit: false
+          PoisonBogAffect: true
+          PoisonBogDamage: 5
+          PoisonBogDamageInterval: 60
+          LavaAffect: true
+          LavaDamage: 999999
+          LavaDamageInterval: -1
+          LavaDeepDepth: -1.0
+          LavaDeepDamage: 999999
+          CurseAffect: false
+          CurseDamage: 30
+          CurseInterval: 60
+          CurseContinuousDamage: 5
+          HeavySnowColdTime: -1
+      lists: {}

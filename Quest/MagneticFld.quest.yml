@@ -1,0 +1,139 @@
+Location: Gerudo
+Name: MagneticFld
+NotPostNote: false
+Orderer: Npc_oasis009
+StepDependencyFlags:
+- DependencyFlag: Open_Dungeon063
+  DependencyFlagType: bool
+  NextFlag: MagneticFld_Finish
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: DoAndDo
+        MovePosture: 0
+        MoveReactionType: 3
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: DoAndDo
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 3
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_oasis009_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Ready_Npc_oasis009_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_oasis009
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: MagneticFld_Activated
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Hold
+        MoveGreetingType: DoAndDo
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: DoAndDo
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_oasis009_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_oasis009
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: -3916.1669921875
+      Y: 0.0
+      Z: 2877.339111328125
+    Name: Npc_oasis009
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: MagneticFld_Finish
+  UpdateStep: true
+Type: Sub

@@ -1,0 +1,631 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "I'll buy."
+  "0001":
+    attributes: ""
+    contents:
+      - text: "I'll sell."
+  "0002":
+    attributes: ""
+    contents:
+      - text: Quit
+  "5500":
+    attributes: ""
+    contents:
+      - text: Yes.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: "I'd like to buy."
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "I'll take 'em all!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: All of them.
+  Com_Talk_00:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: What will ya sell me?
+  Com_Talk_01:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "You're gonna sell me that?\nIt'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ", OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Thank you!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAre you gonna sell me anything else?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Thank you!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nI'll take anything you don't need off\nyour hands!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: You make me so happy!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nI'll keep buying stuff from you if\nyou bring it to me!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Thank you very much!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDid you need anything else?"
+  Com_Talk_04:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Oh, that's too bad."
+  Com_Talk_05:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "I'll buy anything!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "I'll buy anything off ya!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Don't hesitate to sell me stuff!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "I'll buy a lot of different things from ya!"
+  Com_Talk_10:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "You want that, then?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Thank you!
+  Com_Talk_11b:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Thanks for your business!
+  Com_Talk_11c:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thank you! You're helping me out a \nbunch!"
+  Com_Talk_11d:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Thank youuu!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "That's what you're selling?\nHow many? "
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "So that's..."
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them.\nI'd say "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees "
+      - control:
+          kind: reset_colour
+      - text: is a fair price. OK?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "I can't take that off your hands."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "I can't buy something you're wearing!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nTake it off, and then sell it to me!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Only one?
+      - control:
+          kind: pause
+          length: short
+      - text: " That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "All of them? OK... That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: "\nrupees"
+      - control:
+          kind: reset_colour
+      - text: ", I think. Agreed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Every last one, eh? That'll be\na total of "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ", OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "It'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Is that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - text: How many would ya like?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "So that's..."
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " in total. That'll\nbe "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Sound good?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: "Oh, you've changed your mind?\nWhat a shame."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "You don't have enough rupees!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nCome back later!"
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: You have so much stuff!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nOrganize your stuff, make some room,\nand then come back!"
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Only one? That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near00:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - text: Affordable and delicious!
+  Near01:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - text: You stop that!
+  talk00:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Heeey! Welcome!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nYou're a new face!"
+  talk01:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Come again!\nI'll be waiting!"
+  talk02:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Thanks for your business!
+  talk03:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Fresh fish! Just recently caught!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nTake a look!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk04:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "If you want something, just let me know\nby standing in front of it and selecting it!"
+  talk05:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "You need more?\nI'll be sure to get some \nmore for next time!"
+  talk07:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Heeey! Welcome!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nThanks for coming by on such a\nrainy day!"
+  talk08:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Heeey! Welcome!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nI just got fresh stuff in this morning!"
+  talk09:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Heeey! Welcome!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nKnow what sounds good on such a hot\nday? Some fish! What do you think?"
+  talk10:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Heeey! Welcome!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nYou here to buy something for dinner?"
+  talk11:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Heeey! Welcome!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGot a case of the midnight munchies?"
+  talk12:
+    attributes: Npc_SouthernVillage005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Sorry, but I don't have anything left\nto sell today.\n\nI can still buy stuff from you, though.\nYou interested?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

@@ -1,0 +1,652 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Wie...?!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ähm... Teleportiert?
+  "0002":
+    attributes: ""
+    contents:
+      - text: Hab dran gedacht!
+  "0003":
+    attributes: ""
+    contents:
+      - text: "Hab's vergessen..."
+  "0004":
+    attributes: ""
+    contents:
+      - text: Woher weißt du das?
+  "0005":
+    attributes: ""
+    contents:
+      - text: Alles klar!
+  "1002":
+    attributes: ""
+    contents:
+      - text: Hilfst du mir?
+  "1003":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "1004":
+    attributes: ""
+    contents:
+      - text: Ja!
+  Clear1_00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: An Selbstvertrauen mangelt es dir nicht!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDabei hast du erst eines der Zeichen der\nBewährung errungen, oder?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Clear2_00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Das wollte ich hören!
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDu hast schon zwei Schreine bewältigt,\nnicht wahr?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Clear3_00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Selbstvertrauen scheinst du zu haben,\nund du besitzt ja auch schon drei\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 3
+                  - 2
+                  - 2
+                  - 0
+      - text: "Zeichen der Bewährung, oder?\nAber was ist mit dem letzten...?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nHast du Schwierigkeiten, es zu finden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Du lässt dich von einem Alterchen wie\nmir abhängen? Bist nicht der Schnellste,\nwas?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  FirstTalk01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 8
+            - 205
+      - text: Ho ho ho...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nIn meinem Alter hat man den ein oder\nanderen Trick aufgeschnappt."
+  FirstTalk02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: Ho ho ho...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Teleportation?
+      - control:
+          kind: pause
+          length: short
+      - text: " So was brauch ich nicht!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJungspunde wie dich hänge ich allemal\nab."
+  FirstTalk03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Ich dachte schon, du kommst gar nicht\nmehr. Hast du etwa vergessen, dass du\ndich einfach teleportieren lassen kannst?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  FirstTalk05:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "Öffne die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Karte
+      - control:
+          kind: reset_colour
+      - text: " auf deinem "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Shiekah-Stein
+      - control:
+          kind: reset_colour
+      - text: "\nund wähle die blaue Markierung eines\nTurms oder Schreins aus.\nWenn du einen solchen Ort erst einmal\nauf der "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Karte
+      - control:
+          kind: reset_colour
+      - text: " hast, kannst du jederzeit\nim Handumdrehen dorthin."
+      - control:
+          kind: pause
+          length: long
+      - text: " Merk dir das!"
+  FirstTalk06:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Ich hab dir von hier oben aus zugesehen,\nwie du die Schreine gesucht hast."
+  FirstTalk07:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "Wenn man irgendetwas sucht, ist es stets\ndas Beste, sich "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "von einem hohen Ort aus\numzusehen"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: long
+      - text: " Das erwähnte ich, oder?\nDas hier ist der ideale Ausguck, um die\nübrigen Schreine zu finden."
+  FirstTalk08:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Nun denn...\n\n\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: "Ich habe dich hierhin gerufen, weil das\nhier der ideale Ausguck ist, um die\nübrigen Schreine zu finden."
+  FirstTalk09:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Nun dann...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nWeißt du, wie man das "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Fernglas
+      - control:
+          kind: reset_colour
+      - text: " des\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Shiekah-Steins
+      - control:
+          kind: reset_colour
+      - text: " verwendet?\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Von hier kann man alle Schreine sehen.\nWenn du einen entdeckst, markiere ihn!"
+  FirstTalk10:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: "Hast du schon gemerkt, dass dein\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Shiekah-Stein
+      - control:
+          kind: reset_colour
+      - text: " über eine "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Fernglas
+      - control:
+          kind: reset_colour
+      - text: "-\nFunktion verfügt?\nSuche mithilfe des "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Fernglases
+      - control:
+          kind: reset_colour
+      - text: " die\nSchreine und markiere sie!"
+  FirstTalk11:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Markierungen kannst du auch direkt auf\nder "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Karte "
+      - control:
+          kind: reset_colour
+      - text: hinzufügen oder entfernen.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Wenn du bestimmte Orte im Auge\nbehalten willst, ist das sehr praktisch."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk12:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: "Ho ho ho...\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Das ist Altersweisheit...
+      - control:
+          kind: pause
+          length: long
+      - text: " Die Jahre hier\ndraußen in der Wildnis haben mich das\nein oder andere gelehrt."
+  FirstTalk13:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Ich hab's doch gesagt, in meinem Alter\nschnappt man den ein oder anderen Trick\nauf."
+      - control:
+          kind: pause
+          length: long
+      - text: " Das kannst du glauben oder nicht."
+  FirstTalk14:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Dann los, nun sieh dich schon um!"
+  GoodBye01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 8
+            - 205
+      - text: Ho ho ho...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nWenn du das "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Parasegel
+      - control:
+          kind: reset_colour
+      - text: " haben möchtest,\nsolltest du dich ins Zeug legen."
+  GoodBye02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: Ho ho ho...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNur noch zwei Zeichen der Bewährung,\ndann hast du dir das Parasegel verdient."
+  GoodBye03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: Ho ho ho...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNur noch ein Zeichen der Bewährung,\ndann ist das Parasegel dein."
+  Kotsu00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - text: Ich kann dir einen Tipp geben...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Neu gelernte Aktionen kannst du\njederzeit auf dem Pausenbildschirm\nnachsehen."
+  Kotsu01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Bei der Suche nach den Schreinen hilft\ndir das "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Fernglas
+      - control:
+          kind: reset_colour
+      - text: " des "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Shiekah-Steins
+      - control:
+          kind: reset_colour
+      - text: "."
+  Kotsu02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 11
+            - 205
+      - text: Wie oft soll ich dir das noch sagen?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWenn es hart auf hart kommt, kannst du\ndich nicht auf andere verlassen.\nAlle Aktionen kannst du auf dem\nPausenbildschirm nachsehen."
+  NakedPlayer:
+    attributes: ""
+    contents:
+      - text: Warum bist du nackt?
+  Near00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: animation
+          name: CustomLaugh
+      - text: Ho ho ho...
+  Near01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Noch einer...
+  Near02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Noch zwei...
+  Near03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Noch drei...
+  Talk00:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Hast du die Schreine entdeckt?
+      - control:
+          kind: choice
+          choice_labels:
+            - 1002
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk01:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: Sag mal...
+      - control:
+          kind: pause
+          length: long
+      - text: " Wie lange willst du eigentlich\nnoch so herumlaufen?"
+  Talk02:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Die Sonne geht bald unter.
+  Talk03:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Nachts ist es totenstill auf dem Plateau.
+  Talk05:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Kommst du mit der Erkundung der\nSchreine voran?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1004
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk06:
+    attributes: Npc_King_Vagrant006
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Nun?
+      - control:
+          kind: pause
+          length: long
+      - text: " Kommst du mit der Erkundung\nder Schreine voran?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1004
+            - 1003
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: Was machst du da?!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: Was ist?
+  TerrorExplosion:
+    attributes: ""
+    contents:
+      - text: Guaah!
+  TerrorFire:
+    attributes: ""
+    contents:
+      - text: Heiß!
+  TerrorImpulse:
+    attributes: ""
+    contents:
+      - text: Huch!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: He! Hör auf!

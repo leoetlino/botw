@@ -1,0 +1,3029 @@
+---
+group_count: 83
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: Нужны фотографии
+  "0002":
+    attributes: ""
+    contents:
+      - text: Локатор...
+  "0003":
+    attributes: ""
+    contents:
+      - text: Профессор?
+  "0004":
+    attributes: ""
+    contents:
+      - text: Спасибо
+  "0005":
+    attributes: ""
+    contents:
+      - text: Кто ты?
+  "0006":
+    attributes: ""
+    contents:
+      - text: Пока
+  "0007":
+    attributes: ""
+    contents:
+      - text: Откуда ты знаешь?
+  "0008":
+    attributes: ""
+    contents:
+      - text: Фотографии...
+  "0009":
+    attributes: ""
+    contents:
+      - text: Вовсе нет
+  "0010":
+    attributes: ""
+    contents:
+      - text: Камень шиика...
+  "0011":
+    attributes: ""
+    contents:
+      - text: Исследования...
+  "0012":
+    attributes: ""
+    contents:
+      - text: Как это?
+  "0013":
+    attributes: ""
+    contents:
+      - text: Сейчас...
+  "0014":
+    attributes: ""
+    contents:
+      - text: Нет
+  "0015":
+    attributes: ""
+    contents:
+      - text: Еще нет
+  "0016":
+    attributes: ""
+    contents:
+      - text: Да
+  "0017":
+    attributes: ""
+    contents:
+      - text: "Спасибо, не надо"
+  "0018":
+    attributes: ""
+    contents:
+      - text: Нужны
+  "0019":
+    attributes: ""
+    contents:
+      - text: Не нужны
+  "0020":
+    attributes: ""
+    contents:
+      - text: Да
+  "0021":
+    attributes: ""
+    contents:
+      - text: Нет
+  "5500":
+    attributes: ""
+    contents:
+      - text: Идет!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5502":
+    attributes: ""
+    contents:
+      - text: Беру!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5504":
+    attributes: ""
+    contents:
+      - text: Хочу кое-что купить
+  "5505":
+    attributes: ""
+    contents:
+      - text: Я кое-что продаю
+  "5506":
+    attributes: ""
+    contents:
+      - text: Пока
+  "5507":
+    attributes: ""
+    contents:
+      - text: Все!
+  Com_Talk_00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Вот "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографии
+      - control:
+          kind: reset_colour
+      - text: ", которые\nты можешь загрузить."
+  Com_Talk_06:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Выбирай, что хочешь загрузить."
+  Com_Talk_10:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "С тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Большое спасибо!
+  Com_Talk_30:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Значит, хочешь купить\n"
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " фотографию"
+            - " фотографий"
+            - " фотографии"
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nС тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Сколько\nфотографий возьмешь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_34:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это тебе\nобойдется в "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: Ой-ой!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: Телебомба...
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Эй!
+  near00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Хм...
+  talk00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты, наверное, еще никогда не\nвидел так много книг сразу?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Тут мы храним всю литературу по\nдревней цивилизации..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Сколько\nздесь книг?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Трудно сказать..."
+  talk01:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Ой!
+      - control:
+          kind: pause
+          length: short
+      - text: " Прошу прощения!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ же не представился!"
+  talk02:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Значит, ты побывал у госпожи Импы..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Тогда давай посмотрим твой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Камень\nшиика"
+      - control:
+          kind: reset_colour
+      - text: " и попробуем восстановить\nбазовые руны."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Но сначала позволь рассказать про\nнаши исследования и достижения."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Потом я еще покажу тебе,\nкак у нас тут все устроено."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "..."
+  talk03:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Меня зовут Симин.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: А ты ведь...
+      - control:
+          kind: pause
+          length: short
+      - text: " Линк, верно?"
+      - control:
+          kind: single_choice
+          label: 7
+  talk04:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Госпожа Импа рассказала.
+  talk05:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Хорошо.
+      - control:
+          kind: pause
+          length: short
+      - text: " Сначала открой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: карту
+      - control:
+          kind: reset_colour
+      - text: "\nи перейди к "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атласу Хайрула
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Затем открой раздел "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: «Материалы»
+      - control:
+          kind: reset_colour
+      - text: ",\nотыщи "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографию жаромора
+      - control:
+          kind: reset_colour
+      - text: "\nи выбери «Искать объект»."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Так ты настроишь "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатор+
+      - control:
+          kind: reset_colour
+      - text: "\nна поиск "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жароморов
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk06:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Кое-какие данные "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "атласа\nХайрула"
+      - control:
+          kind: reset_colour
+      - text: " восстановлены!"
+  talk07:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Профессор
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Профессор
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " У нас\nтут настоящий "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камень шиика
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: single_choice
+          label: 3
+  talk08:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 12
+      - text: "Точно, я же не представил\nтебе "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: профессора
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk09:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Понял.
+      - control:
+          kind: pause
+          length: short
+      - text: " Значит, сам съем..."
+  talk10:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Наш "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: профессор
+      - control:
+          kind: reset_colour
+      - text: " — глава "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Хатенского\nинститута"
+      - control:
+          kind: reset_colour
+      - text: ", величайший специалист\nпо древним технологиям..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Госпожа Пура.
+  talk100:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Прошу прощения, но у тебя\nнедостаточно рупий."
+  talk101:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: У тебя денег не хватает.
+  talk102:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Нет денег — нет снимков.
+      - control:
+          kind: pause
+          length: short
+      - text: " Бесплатно\nбыло только в первый раз."
+  talk103:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: У тебя не хватает рупий...
+      - control:
+          kind: pause
+          length: short
+      - text: " И у нас их\nне хватает, так что никаких скидок."
+  talk104:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Это фотография...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nНет, сам все увидишь."
+  talk11:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Я восхищаюсь госпожой Пурой\nи ее достижениями."
+      - control:
+          kind: pause
+          length: short
+      - text: " Мне повезло\nбыть ее ассистентом."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Кстати, Линк, тебе нужно\nкое-что знать."
+      - control:
+          kind: pause
+          length: short
+      - text: " Видишь ли..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "Профессор "
+      - control:
+          kind: reset_colour
+      - text: "выглядит как\nмаленькая девочка, но..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Н-нет, пожалуй, я не должен\nрассказывать."
+      - control:
+          kind: pause
+          length: short
+      - text: " Пусть она сама\nтебе все объяснит."
+  talk12:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Доброе утро.
+  talk13:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Здравствуй.
+  talk14:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Приветствую.
+  talk15:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Приветствую.
+  talk16:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Ну ладно...
+  talk17:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камень шиика
+      - control:
+          kind: reset_colour
+      - text: " — многофункциональное\nустройство, которое изобрели "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: шиика
+      - control:
+          kind: reset_colour
+      - text: ",\nчтобы обеспечить безопасность мира."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Руны Камня шиика
+      - control:
+          kind: reset_colour
+      - text: " тоже были\nразработаны нашими предками."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Линк, я в любом случае очень рад,\nчто теперь это устройство у тебя!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если бы оно попало не в те руки,\nбоюсь представить, к чему это\nмогло бы привести."
+  talk18:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Чем могу помочь?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 5
+                - 50
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 77
+                - 105
+                - 110
+                - 105
+                - 95
+                - 67
+                - 97
+                - 109
+                - 101
+                - 114
+                - 97
+                - 66
+                - 111
+                - 121
+                - 95
+                - 67
+                - 104
+                - 97
+                - 116
+                - 10
+                - 0
+                - 11
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk19:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Еще вопросы?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 5
+                - 50
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 77
+                - 105
+                - 110
+                - 105
+                - 95
+                - 67
+                - 97
+                - 109
+                - 101
+                - 114
+                - 97
+                - 66
+                - 111
+                - 121
+                - 95
+                - 67
+                - 104
+                - 97
+                - 116
+                - 10
+                - 0
+                - 11
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk20:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Больше ничего...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, странно: кажется, отсутствуют\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: базовые руны
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Интересно, почему\nих нет."
+  talk21:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Ты имеешь в виду изучение древней\nистории?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Это главным образом анализ\nи применение технологий тех времен."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Мы, ученые шиика, хотим разобраться\nв функциях и устройстве святилищ\nи Великих Чудищ."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Причем как с геополитической, так\nи с инженерной точки зрения, что\nдаст нам возможность..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Ой, извини, ты, наверное,\nне понимаешь, о чем я?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Сейчас проще объясню.
+      - control:
+          kind: pause
+          length: short
+      - text: " Дай подумать."
+  talk22:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Изучение древней истории...
+  talk23:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Мы пытаемся понять, как не допустить\nпостоянного перерождения "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Бедствия
+      - control:
+          kind: reset_colour
+      - text: ",\nто есть "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Ганона
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А также как использовать мудрость\nпредков, улучшить их технологии\nи передать эти знания потомкам."
+  talk24:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Она предупредила, что придет\nюноша с "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камнем шиика
+      - control:
+          kind: reset_colour
+      - text: ", и попросила\nоказать ему всяческую поддержку."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Сказала, что он наша надежда,\nпробудившаяся от долгого "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Сна\nЖизни"
+      - control:
+          kind: reset_colour
+      - text: ", и что его зовут Линк."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Ой, я же забыл сказать!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Прошу прощения...
+  talk25:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Но мы можем перезагрузить их\nс помощью нашего "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминала
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Только для этого потребуется\nразрешение "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: госпожи Импы
+      - control:
+          kind: reset_colour
+      - text: " из\nдеревни Какарико..."
+  talk26:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Я бы с удовольствием восстановил\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: базовые руны
+      - control:
+          kind: reset_colour
+      - text: " твоего "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камня шиика
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Но для этого требуется разрешение\nстарейшины шиика — "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: госпожи Импы
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Она живет в деревне Какарико\nк западу отсюда."
+      - control:
+          kind: pause
+          length: short
+      - text: " Сходи сначала\nк ней, пожалуйста."
+  talk27:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Если что, я небольшой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: отчет
+      - control:
+          kind: reset_colour
+      - text: "\nнакатал — он на столе."
+      - control:
+          kind: pause
+          length: short
+      - text: " Прочти,\nкогда будет время."
+  talk28:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Кстати, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "отчет "
+      - control:
+          kind: reset_colour
+      - text: "о том, как работает\nлокатор+, лежит на столе."
+      - control:
+          kind: pause
+          length: short
+      - text: " Прочти,\nкогда будет время."
+  talk29:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 11
+      - text: Спасибо.
+  talk30:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Теперь у тебя есть "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатор+
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЭто очень полезная функция."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Согласно справочной литературе,\nс его помощью можно находить\nобъекты по "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографиям
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Конечно, я сам не пробовал, но\nв теории должно работать."
+      - control:
+          kind: pause
+          length: short
+      - text: " Пока\nсам не проверишь, не узнаешь."
+  talk31:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Если хочешь искать, например,\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жароморы
+      - control:
+          kind: reset_colour
+      - text: ", тебе нужно сначала\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: сфотографировать
+      - control:
+          kind: reset_colour
+      - text: " хотя бы один."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Затем надо открыть "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: "\nи зарегистрировать снимок\nв "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локаторе+
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "После этого "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "локатор+ "
+      - control:
+          kind: reset_colour
+      - text: "начнет\nреагировать на "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жароморы
+      - control:
+          kind: reset_colour
+      - text: "\nи приведет тебя прямо к ним!"
+  talk32:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "А, ты принес "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жароморы
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk33:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Ну так что, тебе понравилось\nиспользовать "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатор+
+      - control:
+          kind: reset_colour
+      - text: " вместе\nс "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атласом Хайрула
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если захочешь снова настроить\nего на поиск "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: святилищ
+      - control:
+          kind: reset_colour
+      - text: ", открой\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: карту
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Затем выбери "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: «Локатор»
+      - control:
+          kind: reset_colour
+      - text: "\nи "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: «Святилища испытаний»
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 19
+      - text: "Кстати, я тут еще кое-что вспомнил."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСкажи, когда будет время, ладно?"
+  talk34:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, дай подумать..."
+  talk35:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, кажется, у тебя нет с собой\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: трех
+      - control:
+          kind: reset_colour
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жароморов
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Объяснить еще\nраз, как их искать?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 17
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk36:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Ага, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "жаромор "
+      - control:
+          kind: reset_colour
+      - text: ты сфотографировал.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСпасибо."
+  talk37:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Дашь мне "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "три "
+      - control:
+          kind: reset_colour
+      - text: штуки?
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 14
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk38:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Вот, возьми..."
+  talk39:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Не хочешь?
+      - control:
+          kind: pause
+          length: short
+      - text: " Ну ладно."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Если передумаешь, дай знать."
+  talk40:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Понял.
+      - control:
+          kind: pause
+          length: short
+      - text: " Сейчас все сделаем..."
+  talk41:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_00
+      - text: "В следующий раз будешь платить\nза использование "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминала
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Мы тут занимаемся наукой,\nа не благотворительностью."
+  talk42:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Хочешь починить свой Камень шиика?
+      - control:
+          kind: single_choice
+          label: 5
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я Симин, ассистент госпожи Пуры."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nМы с ней изучаем древние технологии."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если у тебя возникнут какие-либо\nвопросы, я всегда к твоим услугам."
+  talk43:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Линк
+      - control:
+          kind: reset_colour
+      - text: ", у меня для тебя\nхорошая новость..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я могу увеличить количество\nобъектов, доступных для поиска\nс помощью "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатора+
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk44:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Вообще-то я не разрешаю кому попало\nпользоваться моим "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминальчиком
+      - control:
+          kind: reset_colour
+      - text: "\nбесплатно."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "С другой стороны, очень хочется\nузнать, что произойдет, так что на\nэтот раз сделаю исключение."
+  talk45:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Вот такие дела.
+      - control:
+          kind: pause
+          length: short
+      - text: " Теперь,\nпожалуйста, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камень шиика
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk46:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ну ладно...
+  talk47:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Линк, ты не мог бы вставить\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камень шиика
+      - control:
+          kind: reset_colour
+      - text: " в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминал
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk48:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 19
+      - text: Хм.
+      - control:
+          kind: pause
+          length: short
+      - text: " Я хотел дать тебе в знак\nблагодарности три чудо-трюфеля,\nно у тебя их и так много."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Как поступим?
+      - control:
+          kind: pause
+          length: short
+      - text: " Нужны они тебе?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk49:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Не забывай про денежки!♪
+  talk50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Понятно.
+      - control:
+          kind: pause
+          length: short
+      - text: " Тогда продолжим..."
+  talk51:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: animation
+          name: CustomGreeting
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Щелк!
+  talk52:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Отлично!
+  talk53:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Тогда сначала съешь или продай\nте, что у тебя есть, и возвращайся."
+  talk54:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Ты хоть удивись для приличия.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЛадно, давай я все объясню..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Я тут исследовал, исследовал\nи наисследовал, что на "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминале
+      - control:
+          kind: reset_colour
+      - text: "\nхранятся кое-какие "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: фотографии
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Их можно извлечь и добавить\nв "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: ", понимаешь?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "C помощью "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "локатора+ "
+      - control:
+          kind: reset_colour
+      - text: "ты легко\nсможешь искать объекты по этим\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: фотографиям
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: single_choice
+          label: 12
+  talk55:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Так, кажется, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: "\nеще не заполнен."
+  talk56:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: С начальником спорить нельзя.
+  talk57:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Включаем "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминал
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk58:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: За институтом вроде растет один.
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Сфотографируй "
+      - control:
+          kind: reset_colour
+      - text: его и покажи мне.
+  talk59:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Странное у тебя чувство юмора...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСпустись — тогда и поговорим."
+  talk60:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Ты понимаешь, что, если свалишься,\nто все тут переломаешь?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Спускайся."
+  talk61:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Данные загружены\nв "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Будь "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: осторожен
+      - control:
+          kind: reset_colour
+      - text: ": если заменишь\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографии
+      - control:
+          kind: reset_colour
+      - text: " с "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминала
+      - control:
+          kind: reset_colour
+      - text: " своими,\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: восстановить их не получится
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk62:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Идет?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk63:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Ну раз уже мы начали с "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: жароморов
+      - control:
+          kind: reset_colour
+      - text: ",\nна них и продолжим тренироваться:\nпринеси мне, пожалуйста, "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: три
+      - control:
+          kind: reset_colour
+      - text: " штуки."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "В "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Местарском лесу
+      - control:
+          kind: reset_colour
+      - text: " к северу отсюда\nих должно быть много."
+      - control:
+          kind: pause
+          length: short
+      - text: " Используй\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатор+
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk64:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Линк, ты собрал все "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографии
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Великолепно!
+      - control:
+          kind: pause
+          length: short
+      - text: " Потрясающая\nфотоколлекция!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "По-моему, ты заслуживаешь награду."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПравда, в бюджете нашего института\nнет статьи «Подарки»..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "А может, тогда..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Слушай, я тут в одной книге кое-что\nнашел..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Все равно не могу это себе\nоставить, так что держи."
+  talk65:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ну а недостающие фотографии ты\nможешь добавить с помощью своего\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотоаппарата
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Или тоже воспользоваться\nнашим "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминалом
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk66:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Ты можешь загрузить новые\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографии
+      - control:
+          kind: reset_colour
+      - text: " в любое время..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nза небольшую сумму."
+  talk67:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Я?
+      - control:
+          kind: pause
+          length: short
+      - text: " И ты только сейчас\nэто спрашиваешь?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Я просто...
+      - control:
+          kind: pause
+          length: short
+      - text: " В общем,\nесли хочешь знать..."
+  talk68:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Меня зовут Симин.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я всегда мечтал стать ученым,\nи мне повезло: я попал в этот\nинститут."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Единственное, о чем жалею, —\nнаука совершенно не оставляет\nвремени на личную жизнь."
+  talk69:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Отговорки это все!♪
+  talk70:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Может и так.
+      - control:
+          kind: pause
+          length: short
+      - text: " Или я просто\nплохо пытаюсь."
+      - control:
+          kind: pause
+          length: short
+      - text: " О-хо-хо..."
+  talk71:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Опять отговорки!♪
+  talk72:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Затем открой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: " и настрой\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "локатор+ "
+      - control:
+          kind: reset_colour
+      - text: "на "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографию жаромора
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Тогда "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "локатор+ "
+      - control:
+          kind: reset_colour
+      - text: "будет предупреждать\nтебя, если ты окажешься недалеко от\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жаромора
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk73:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "А если у тебя с собой есть другой\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жаромор
+      - control:
+          kind: reset_colour
+      - text: ", можешь положить его на\nземлю и сфотографировать."
+  talk74:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Ты "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: сфотографировал жаромор
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 15
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk75:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Так, покажи..."
+  talk76:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Теперь открой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: "\nи настрой "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатор+
+      - control:
+          kind: reset_colour
+      - text: " на "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографию
+      - control:
+          kind: reset_colour
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жаромора
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " И тогда..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Тогда "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатор+
+      - control:
+          kind: reset_colour
+      - text: " будет предупреждать\nтебя, если ты окажешься недалеко от\nэтого гриба!"
+  talk77:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты не мог бы "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: сфотографировать
+      - control:
+          kind: reset_colour
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: жаромор
+      - control:
+          kind: reset_colour
+      - text: ", который растет "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: за
+      - control:
+          kind: reset_colour
+      - text: "\nинститутом?"
+  talk78:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, что-то я не вижу\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографии жаромора
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk79:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Хм...
+      - control:
+          kind: pause
+          length: short
+      - text: " А у тебя на поясе,\nслучайно, не Камень..."
+  talk80:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: animation
+          name: SurpriseS_01
+      - text: "Да, это он — настоящий\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Камень шиика
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Вот это да!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Стыдно признаться, но я никогда\nне видел его своими глазами."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Покажи, пожалуйста,\nкакие "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "руны "
+      - control:
+          kind: reset_colour
+      - text: на нем есть.
+  talk81:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Телебомбы
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " хм..."
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Стазис
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " ага..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Магнезис
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " так..."
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Крионис
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Что\nеще?"
+  talk82:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Учитывая свободное место\nв "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атласе Хайрула
+      - control:
+          kind: reset_colour
+      - text: ", ты получишь\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_SelectPictureBookVacancy
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " фотографию"
+            - " фотографий"
+            - " фотографии"
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk83:
+    attributes: NPC_DRCVoice
+    contents:
+      - control:
+          kind: animation
+          name: Activate
+      - text: Атлас Хайрула обновлен.
+  talk84:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Линк, так здорово, что ты\nсобрал все "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: фотографии
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "К сожалению, мне больше нечего\nтебе предложить."
+      - control:
+          kind: pause
+          length: short
+      - text: " Но ты можешь\nнавещать нас в любое время!"
+  talk85:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Хм, я думал, что смогу добавить\nфотографии, но, кажется..."
+      - control:
+          kind: pause
+          length: short
+      - text: " не\nсмогу."
+  talk86:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Может быть, какие-то опции пока\nнедоступны?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Как же их открыть?.."
+  talk87:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Хм, согласно моим исследованиям,\nдолжна быть возможность добавить\nбольше фотографий..."
+  talk88:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Чем могу помочь?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 2
+                - 0
+                - 8
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk89:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Эх, Линк..."
+  talk90:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Локатор
+      - control:
+          kind: reset_colour
+      - text: " был улучшен до "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатора+
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 6
+      - text: "Теперь ты можешь "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "настроить "
+      - control:
+          kind: reset_colour
+      - text: "его\nна "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "фотографию "
+      - control:
+          kind: reset_colour
+      - text: "объекта в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "атласе\nХайрула"
+      - control:
+          kind: reset_colour
+      - text: " для поиска этого объекта."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Фотографии "
+      - control:
+          kind: reset_colour
+      - text: "для "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атласа Хайрула
+      - control:
+          kind: reset_colour
+      - text: " ты\nможешь делать сам или получить на\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминале
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Поиск объектов по фотографиям\nздорово облегчит тебе путешествие."
+  talk91:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Объяснить еще раз?
+      - control:
+          kind: choice
+          choice_labels:
+            - 17
+            - 20
+          selected_index: 1
+          cancel_index: 2
+          unknown: 6
+  talk92:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Хорошо.
+      - control:
+          kind: pause
+          length: short
+      - text: " Тогда вставь\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Камень шиика "
+      - control:
+          kind: reset_colour
+      - text: "в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: терминал
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk93:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Чем еще могу помочь?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 2
+                - 0
+                - 8
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk94:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Фотографии с фотоаппарата\nпопадают в "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: альбом
+      - control:
+          kind: reset_colour
+      - text: " на "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Камне\nшиика"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если на фотографии животное,\nмонстр, материал, оружие, сундук\nили рудоносная порода..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Она автоматически добавляется\nв "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: атлас Хайрула
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Все, что есть в"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: " атласе Хайрула"
+      - control:
+          kind: reset_colour
+      - text: ",\nты можешь искать с помощью\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: локатора+
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Фотографируй все подряд —\nэто облегчит тебе путешествие."
+  talk95:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ты уже все купил, но можешь\nвзглянуть, какие категории были."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПосмотришь сейчас?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 21
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk96:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Этих больше нет.
+  talk97:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Эти закончились.
+  talk98:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Линк, ты ведь уже купил все\nфотографии из этого раздела."
+  talk99:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Ты уже купил все снимки\nиз этой категории."

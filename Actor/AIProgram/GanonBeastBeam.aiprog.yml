@@ -1,0 +1,48 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj {Demo_Idling: 3}
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 SimpleLineBeam, GroupName: ''}
+            ChildIdx: !obj {待機: 2, 攻撃: 1}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 攻撃, ClassName: !str32 GanonBeastBeamMove, GroupName: Root}
+            SInst: !obj
+              RestActor: AscendingCurrent_GanonBeastBeam
+              RestDistLimit: 125.0
+              RestDistMinLimit: 125.0
+              RestDistInterval: 1.0
+              RestDistTime: 600
+              RestDistTimeAdd: 15
+              RestNumMax: 1
+              IsGuarantee: false
+              Type: 1
+              IsGuardPierces: true
+              IsSetAtIgnoreObstacle: false
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: Root}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

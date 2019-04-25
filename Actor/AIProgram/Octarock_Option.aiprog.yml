@@ -1,0 +1,85 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj {Demo_Idling: 11}
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 8, 持ち運びボックス内: 3, 通常: 2}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 Lifted, GroupName: 通常}
+            ChildIdx: !obj {待機: 6, 所持: 4, 投擲: 9, 設置: 5}
+            SInst: !obj {IsGetItem: false}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 OctarockOptionRoot, GroupName: BaseAI}
+            ChildIdx: !obj {所持: 1, 投擲生成: 10, 通常: 7}
+            SInst: !obj {IsBreakable: true, IsMimicry: false}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 InCarryBox, GroupName: Root}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 Carried, GroupName: 所持}
+            SInst: !obj
+              IsCreateItem: false
+              IsRecoverCharCtrlAxis: true
+              IsUseConstraint: false
+              FailDistance: -1.0
+              IsOnBaseLink: false
+              BindType: 0
+              IsChangeable: false
+              HoldOnXLinkKey: HoldOn
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 設置, ClassName: !str32 PutFromParent, GroupName: 所持}
+            SInst: !obj {Timer: 3, HoldOffXLinkKey: HoldOff}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: 所持}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 Delete, GroupName: 通常}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 投擲, ClassName: !str32 Delete, GroupName: 所持}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 投擲生成, ClassName: !str32 Delete, GroupName: 後行動}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

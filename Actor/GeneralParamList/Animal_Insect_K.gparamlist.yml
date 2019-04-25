@@ -1,0 +1,48 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    System: !obj {SameGroupActorName: !str64 Item_InsectGet_K, IsGetItemSelf: false}
+    General: !obj
+      Speed: 1.0
+      Life: 1
+      IsLifeInfinite: false
+      ElectricalDischarge: 1.0
+      IsBurnOutBorn: true
+      BurnOutBornName: !str64 
+      IsBurnOutBornIdent: false
+      ChangeDropTableName: ''
+    Liftable: !obj
+      LiftType: !str32 
+      ThrownMass: 10
+      ThrownRotSpd: !vec3 [0.0, 0.0, 0.0]
+      LiftPosOffset: !vec3 [0.0, -0.1, 0.0]
+      LiftRotOffset: !vec3 [0.0, 0.0, 0.0]
+      LiftRotFrame: 10
+      AddLiftRotOffsetList: ''
+      ChaseLiftRotOffset: true
+      LiftCenterOffset: !vec3 [0.0, 0.0, 0.0]
+      PutPosOffset: !vec3 [0.0, 0.0, 0.5]
+      PutRotOffset: !vec3 [0.0, 0.0, 0.0]
+      PutRotFrame: 10
+      AddPutRotOffsetList: ''
+      IsUpdateOffsetEachFrame: false
+      IsUse2MassConstraintMode: true
+      IsSetChemicalParent: true
+      DisableFreezeLift: false
+      DisableBurnLift: false
+      ThrowReactionLevel: -1
+    Item: !obj
+      PlayerUseItem: false
+      SellingPrice: 8
+      BuyingPrice: 32
+      CreatingPrice: -1
+      StainColor: -1
+      SaleRevivalCount: -1
+      UseIconActorName: !str64 Item_InsectGet_K
+    CureItem: !obj {HitPointRecover: 4, EffectType: !str32 AttackUp, EffectLevel: 2,
+      EffectiveTime: 900}
+    Insect: !obj {FireResistanceLevel: 0}
+    PictureBook: !obj {LiveSpot1: -1, LiveSpot2: -1, SpecialDrop: -1}
+  lists: {}

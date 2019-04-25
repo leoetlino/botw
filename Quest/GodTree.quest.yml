@@ -1,0 +1,142 @@
+Location: Cokiri
+Name: GodTree
+NotPostNote: false
+Orderer: Npc_Kokiri010
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 3
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Dance
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 3
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_Kokiri010_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 5.0
+          FrontOnly: false
+        Trigger: Near
+      - EvflEntry: Ready_Npc_Kokiri010_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_Kokiri010
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: GodTree_Activated
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'True'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 3
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Dance
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 3
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_Kokiri010_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_Npc_Kokiri010_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 35.0
+          FrontOnly: true
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_Kokiri010
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 248.36830139160156
+      Y: 0.0
+      Z: -1977.3399658203125
+    Name: Npc_Kokiri010
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: GodTree_Finish
+  UpdateStep: true
+Type: Sub

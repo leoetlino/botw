@@ -1,0 +1,552 @@
+Location: Kakariko
+Name: CarryingBlueFireEXMini
+NotPostNote: false
+Orderer: Npc_Kakariko001
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Sorrow
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Sad_Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: CarryingBlueFireEXMini_Activated
+  UpdateStep: true
+- Actors:
+  - ConditionalTimelines:
+    - Condition: AncientLabo_AncientAssistant001_First
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Study
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Permit_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Permit_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Sorrow
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Sad_Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Permit_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Permit_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 3774.971923828125
+      Y: 0.0
+      Z: 2126.04296875
+    Name: Npc_AncientDoctor
+    OffFlag: CarryingBlueFireEXMini_Permit
+  MessageName: Permit
+  Name: Permit
+  NextFlag: CarryingBlueFireEXMini_Permit
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Study
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Carry_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Carry_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: true
+    InstanceName: ''
+    Location:
+      X: 3445.662109375
+      Y: 0.0
+      Z: 1982.2989501953125
+    Name: TwnObj_AncientReactor_A_01
+    OffFlag: CarryingBlueFireEXMini_Carry
+  MessageName: Carry
+  Name: Carry
+  NextFlag: CarryingBlueFireEXMini_Carry
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Study
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Fired_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Fired_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: true
+    InstanceName: ''
+    Location:
+      X: 3782.325927734375
+      Y: 0.0
+      Z: 2125.068115234375
+    Name: TwnObj_AncientCivilLabo_B_01
+    OffFlag: CarryingBlueFireEXMini_Fired
+  MessageName: Fired
+  Name: Fired
+  NextFlag: CarryingBlueFireEXMini_Fired
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Study
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Camera_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Camera_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: Auto
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  CameraTargets:
+  - Npc_AncientDoctor
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 3774.971923828125
+      Y: 0.0
+      Z: 2126.04296875
+    Name: Npc_AncientDoctor
+    OffFlag: CarryingBlueFireEXMini_Camera
+  MessageName: Camera
+  Name: Camera
+  NextFlag: CarryingBlueFireEXMini_Camera
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Study
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Repaired_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Repaired_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 1772.7099609375
+      Y: 0.0
+      Z: 984.3099975585938
+    Name: Npc_Kakariko001
+    OffFlag: CarryingBlueFireEXMini_Finish
+  MessageName: Repaired
+  Name: Repaired
+  NextFlag: CarryingBlueFireEXMini_Repaired
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Wait
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 0
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Walk
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Study
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 0
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_AncientDoctor_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Finish_Npc_AncientDoctor_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_AncientDoctor
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: ''
+    Location:
+      X: 1772.7099609375
+      Y: 0.0
+      Z: 984.3099975585938
+    Name: Npc_Kakariko001
+    OffFlag: CarryingBlueFireEXMini_Finish
+  MessageName: Finish
+  Name: Finish
+  NextFlag: CarryingBlueFireEXMini_Finish
+  UpdateStep: true
+Type: Main

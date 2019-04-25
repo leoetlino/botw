@@ -1,0 +1,759 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Kaufst du was?
+  "0001":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "0005":
+    attributes: ""
+    contents:
+      - text: Kaufst du an?
+  "5500":
+    attributes: ""
+    contents:
+      - text: Hand drauf!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Lieber doch nicht.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Noch mal zurück.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Viel! Gib mir alles!
+  "5508":
+    attributes: ""
+    contents:
+      - text: "Alles, was ich habe."
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: Und?
+      - control:
+          kind: pause
+          length: short
+      - text: " Was soll ich dir abkaufen?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Hm... "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nkostet "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "... Was sagst du?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Sarq-sarq!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWar das alles?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Dank-Dank!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHihi! So sagt man das in eurer\nSprache, oder?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Sarq-sarq!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nGuuut! Guuut!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Schööön! Schööön!\nSarq-sarq!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Lass dir ruhig Zeit.
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Ich kaufe alles an!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Wenn du was verkaufen willst, sag\nBescheid!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Ich kaufe so viel an, wie du willst!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Du hast noch mehr, oder?\nVerkaufen! Verkaufen!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nWie viel davon möchtest du verkaufen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Das wäre mir zusammen\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: " wert."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: Was ist denn das für ein Ding?
+      - control:
+          kind: pause
+          length: long
+      - text: " Was ich\nnicht kenne, kaufe ich auch nicht."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Willst du, dass ich dir das persönlich\nausziehe?"
+      - control:
+          kind: pause
+          length: long
+      - text: " Tut mir leid, aber du bist mir\nzu jung."
+      - control:
+          kind: pause
+          length: short
+      - text: " Kein Interesse!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Gut... Dafür geb ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Für diese Menge würde ich dir\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: " geben."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "kostet\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Lass dir ruhig Zeit.
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: Frisch gejagt!
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Die Kleider stehen dir!
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guuute Tak!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hihi! So sagt man das in eurer\nSprache, oder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Bei uns sagt man „Savaaq“.
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Komm bald wieder!
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Meine kleine Schwester hat in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-Stadt
+      - control:
+          kind: reset_colour
+      - text: " eine Metzgerei."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Sie ist in der ganzen Welt rumgekommen\nund spricht eure Sprache ziemlich gut."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Sie ist ein lustiges Mädchen, also schau\ndoch mal bei ihr vorbei, wenn du in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-Stadt
+      - control:
+          kind: reset_colour
+      - text: " bist.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "Das heißt, als Vooi werden sie dich wohl\nnicht in die Stadt lassen..."
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Oh... "
+      - control:
+          kind: pause
+          length: long
+      - text: Vielleicht.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nZeig mal, was du so auf Lager hast."
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ich muss wohl langsam mal wieder\nauf die Jagd gehen, um genug\nNachschub zu haben..."
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Danke, Scheff!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hihi! So sagt man das in eurer\nSprache, oder?"
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Hm? "
+      - control:
+          kind: pause
+          length: short
+      - text: "Ob ich einen verdächtigen\nKaufmann gesehen habe?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Verdächtig... "
+      - control:
+          kind: pause
+          length: longer
+      - text: Verdächtig...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nMal überlegen..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "Hm... Nein, da kann ich dir nicht helfen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ich bin die ganze Zeit nur hier, und man\nsieht den Leuten ja nicht an, ob sie\nKaufleute sind oder nicht.\nEs sind aber sicherlich ein paar Kaufleute\naus Hyrule hier in der Gegend. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Frag doch\nam besten direkt bei denen nach."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Meine kleine Schwester hat in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-Stadt
+      - control:
+          kind: reset_colour
+      - text: " eine Metzgerei."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Sie ist in der ganzen Welt rumgekommen\nund spricht eure Sprache ziemlich gut."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Sie ist ein lustiges Mädchen, also schau\ndoch mal bei ihr vorbei, wenn du in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-Stadt
+      - control:
+          kind: reset_colour
+      - text: " bist."
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guuute Apent!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hihi! So sagt man das in eurer\nSprache, oder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Bei uns sagt man „Sav'saaba“."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: Du bist im Weg!
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guuute Morken!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hihi! So sagt man das in eurer\nSprache, oder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Bei uns sagt man „Savotta“.
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Viel kommen!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hihi! So sagt man das in eurer\nSprache, oder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Bei uns sagt man „Vasaaq“.
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Sarq-sarq. Iss, und du bekommst deine\nKraft zurück!"
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Dank-Dank!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSarq-sarq!"
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Ich muss jagen gehen...
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Viele Dank für dein Einkauuuf!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hihi! So sagt man das in eurer\nSprache, oder?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

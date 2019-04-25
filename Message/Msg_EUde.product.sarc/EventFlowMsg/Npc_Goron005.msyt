@@ -1,0 +1,837 @@
+---
+group_count: 47
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ich möchte kaufen.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ich möchte verkaufen.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Was ist das hier?
+  "0003":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Einverstanden!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Lieber nicht.
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Hab's mir überlegt..."
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles!
+  Attention00:
+    attributes: Npc_Goron005
+    contents:
+      - text: Kletter da nicht rauf...
+  Attention01:
+    attributes: Npc_Goron005
+    contents:
+      - text: Bleib unten...
+  Attention02:
+    attributes: Npc_Goron005
+    contents:
+      - text: W-wa...
+  Attention03:
+    attributes: Npc_Goron005
+    contents:
+      - text: He! Nicht da rumklettern!
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 6
+      - text: Was möchtest du verkaufen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "gebe ich dir dafür.\nSind wir im Geschäft?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Besten Dank, Freund!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Danke!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Alles klaaar!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ein guter Handel, was?"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: Das ist schlecht.
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Möchtest du noch etwas verkaufen?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Verkauf mir doch noch was!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Lass mal sehen, was du verkaufen willst!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ich kaufe fast alles, was du mir anbietest!"
+  Com_Talk_11:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Danke, Freund!"
+  Com_Talk_11b:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Alles ausverkauft!
+  Com_Talk_11c:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ich sehe zu, dass ich mein Lager wieder\nauffülle."
+  Com_Talk_11d:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Lecker!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nWie viel von deinem Vorrat willst du\ndenn loswerden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Aber gerne doch! Insgesamt kämen wir\ndann auf "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: ". Was sagst du\ndazu?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: So etwas kann ich leider nicht kaufen.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Ich kann dir doch nicht die Kleider vom\nLeib kaufen. Erst ausziehen, bitte!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Mehr nicht?
+      - control:
+          kind: pause
+          length: short
+      - text: " Gut, dann gibt das\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: " auf die Hand!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Alle? Ganz ehrlich?
+      - control:
+          kind: pause
+          length: short
+      - text: " Na dann..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch geb dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: dafür!
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nfür nur "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: "!\nDa kannst du nicht Nein sagen, oder?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "Gut, also, wenn du mir "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " gibst, dann\ngeb ich dir... "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: ". Ja?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Das ist schlecht.
+  near00:
+    attributes: Npc_Goron005
+    contents:
+      - text: Gegrilltes gefällig?
+  talk00:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Morgen, Freund!"
+  talk01:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Tag, Freund!"
+  talk02:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "'n Abend, Freund!"
+  talk03:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hi!
+  talk04:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Kann ich dir helfen, Freund?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk05:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Oh! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Endlich mal wieder ein Kunde!\nKaum zu glauben!"
+  talk07:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ich hoffe, du kommst bald wieder,\nFreund!"
+  talk13:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Wie du siehst, verkaufen wir hier\nGegrilltes!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Eigentlich essen wir Goronen nur Steine,\naber für Touristen brutzeln wir auch ein\nwenig."
+  talk14:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Nicht schon wieder!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNicht schon WIEDER!"
+  talk15:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ja, iss nur fleißig, dann bekommst du\nbald auch so einen Luxuskörper wie\nwir Goronen!"
+  talk16:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: He-
+      - control:
+          kind: pause
+          length: short
+      - text: he-
+      - control:
+          kind: pause
+          length: short
+      - text: he-
+      - control:
+          kind: pause
+          length: longer
+      - text: heee!
+  talk17:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Könntest du bitte davon absehen, da\nhochzusteigen?"
+  talk18:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Ich bitte dich...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nKomm einfach runter."
+  talk19:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Sag mal...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHast du keine Erziehung genossen?"
+  talk20:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Wenn du etwas von mir willst,\ndann komm erst da runter..."
+  talk21:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hier in Goronia ist es einfach zu heiß.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nMan braucht die Sachen bloß auf den\nBoden zu legen, um sie zu braten!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Als die Leute das herausgefunden haben,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nkam niemand mehr zu uns."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Also kauf wenigstens du schön viel!
+  talk22:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Hier brutzeln die Sachen schon, wenn\nman sie nur auf den Boden legt. Danke,\ndass du trotzdem lieber bei uns kaufst!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Es gibt nicht mehr viele, die eine gute\nTouristenabzo... äh, einen guten Grill\nzu schätzen wissen!"
+  talk23:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Gut!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch erkläre es dir gerne so oft du willst."
+  talk24:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Willkommen bei "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Muskelfleisch
+      - control:
+          kind: reset_colour
+      - text: ", dem\nGrill mit dem heißen Stein!"
+  talk25:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Sonst noch einen Wunsch?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk26:
+    attributes: Npc_Goron005
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: In letzter Zeit regnen gar keine
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Lavabrocken
+      - control:
+          kind: reset_colour
+      - text: " mehr herunter..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Die haben uns oft die Steaks zerhauen!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nBin ich froh, dass das jetzt nicht mehr\npassiert!"

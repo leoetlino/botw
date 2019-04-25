@@ -1,0 +1,836 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Show me the goods.
+  "0002":
+    attributes: ""
+    contents:
+      - text: Something like that.
+  "0003":
+    attributes: ""
+    contents:
+      - text: Not really.
+  "0006":
+    attributes: ""
+    contents:
+      - text: "I'm looking to sell..."
+  "0007":
+    attributes: ""
+    contents:
+      - text: Good-bye.
+  "5500":
+    attributes: ""
+    contents:
+      - text: "I'll sell."
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: "I'll buy."
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5508":
+    attributes: ""
+    contents:
+      - text: "I'll sell them all."
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: "OK! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Let me see!
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Hrm...how many "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: rupees
+      - control:
+          kind: reset_colour
+      - text: " can I offer?\nI think..."
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: reset_colour
+      - text: "! Deal?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Thank you!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Yeah!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Good!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Great!
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: Understood!
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "I'll buy anything!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Please show me!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: How about in your pouch?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Don't make a mistake when choosing!"
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: "So what'll it be?"
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Sorry... "
+      - control:
+          kind: pause
+          length: short
+      - text: "I'm all sold out of that at the\nmoment..."
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Oh...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nLooks like you're out of rupees."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Hrm. Your inventory is full...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nMake some room in your inventory, and\nthen come back and see me!"
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "You're interested in that, then?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: My darling!
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "I'm sure it will look good on you!"
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "I'll be so happy if you like it!"
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Thank you! "
+      - control:
+          kind: pause
+          length: short
+      - text: You have a discerning eye!
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - text: Here ya go!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: How many will you sell me?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5501
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "That's worth a "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: rupee
+      - control:
+          kind: reset_colour
+      - text: " or two.\nLet's say..."
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "I'm sorry. "
+      - control:
+          kind: pause
+          length: short
+      - text: "I can't buy that from you."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 20
+      - text: "Nooo! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Take off the clothing that \nyou are wearing!"
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - text: "Just one, then?"
+      - control:
+          kind: pause
+          length: short
+      - text: " In that case,\nI think "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees "
+      - control:
+          kind: reset_colour
+      - text: is a fair price!
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "I'll buy all of that for "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 10
+      - text: "Yeah! "
+      - control:
+          kind: pause
+          length: longer
+      - text: All sold out!
+      - control:
+          kind: pause
+          length: longer
+      - text: " I'm always so happy\nwhen I sell everything!"
+  Com_Talk_37:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 12
+      - text: "Sorry... "
+      - control:
+          kind: pause
+          length: short
+      - text: "I've got nothing left to sell today."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nI can show you what I'll have soon, if\nyou like..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - text: ♪
+  talk00:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hey! "
+      - control:
+          kind: pause
+          length: short
+      - text: Good morning!
+  talk01:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hey!
+  talk02:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hey! "
+      - control:
+          kind: pause
+          length: short
+      - text: Good evening!
+  talk03:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hey!
+  talk04:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Do you want to take a look at my\nrare-armor collection? It's incredible!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk07:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Huh, what?!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nOh, nice to meet you!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "I'm Granté,"
+      - control:
+          kind: pause
+          length: short
+      - text: " a dashing, novice researcher\nof ancient civilizations! I've still got a lot\nto learn, though...\nThat's why my father told me to go out\nand see the world!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Are you also making your way\nthrough the world?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk08:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Oh! "
+      - control:
+          kind: pause
+          length: short
+      - text: "You too, huh?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nI'm beside myself with glee!"
+  talk09:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Oh! "
+      - control:
+          kind: pause
+          length: short
+      - text: "That's heartbreaking to hear!"
+  talk10:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Anyway, you must have come a very long\nway to get here!\n\nHey! How about, as a reward, I let you\nbuy my ultra-rare armor at a decent\nprice? Sound like a good deal?\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "I'm sure you'll find a good use for it on\nyour journey!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk11:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Something else? Maybe the armor?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk13:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "OK! "
+      - control:
+          kind: pause
+          length: short
+      - text: I only have this right now!
+  talk14:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: I hope to meet you again!
+      - control:
+          kind: pause
+          length: longer
+      - text: " See ya!"
+  talk15:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 33
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "*snore...snore* "
+      - control:
+          kind: pause
+          length: short
+      - text: Mama...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nThe "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Skull Lake
+      - control:
+          kind: reset_colour
+      - text: " is scaaaawy."
+      - control:
+          kind: text_size
+          percent: 100
+  talk16:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 33
+      - text: Donny
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "... "
+      - control:
+          kind: pause
+          length: short
+      - text: "That tickles! "
+      - control:
+          kind: pause
+          length: longer
+      - text: Hummm...
+      - control:
+          kind: text_size
+          percent: 100
+  talk17:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 33
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "*snore...snore* "
+      - control:
+          kind: pause
+          length: short
+      - text: Daddy...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nGive me a break with the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: blue flame
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: text_size
+          percent: 100
+  talk18:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 33
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "*snore...snore* Daddy..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nCan't I light the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: blue flame
+      - control:
+          kind: reset_colour
+      - text: " with an "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: arrow
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: pause
+          length: short
+      - text: Hmmm...
+      - control:
+          kind: text_size
+          percent: 100
+  talk19:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hi! It's great to see you! Except...\n\n\nI'm going off to sleepy land now..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nUntil next time!"
+  talk20:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Now I sleep!\nGo and talk to Kapson."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHe'll put you up for the night."
+  talk21:
+    attributes: Npc_AncientAssistant003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Also...
+  talk22:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "I'm looking to get a set of rare armor\nin stock soon!"
+      - control:
+          kind: pause
+          length: short
+      - text: " It's called...umm...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "climb "
+      - control:
+          kind: reset_colour
+      - text: something or other...
+  talk23:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "A complete set of rare gear,"
+      - control:
+          kind: pause
+          length: short
+      - text: " called\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: barbarian
+      - control:
+          kind: reset_colour
+      - text: "...something or other."
+  talk24:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: I got a complete set of this rare gear.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIt's "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: rubber
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: something-something.

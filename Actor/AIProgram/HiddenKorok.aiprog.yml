@@ -1,0 +1,493 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_BecomeSpeaker: 13
+      Demo_ChangeEmotion: 14
+      Demo_ChangeEquipState: 15
+      Demo_ChangePosture: 16
+      Demo_ChangePostureWithAS: 17
+      Demo_ChangeScheduleAnchor: 18
+      Demo_ForbidSettingInstEventFlag: 19
+      Demo_GetItem: 20
+      Demo_GiveReward: 21
+      Demo_HiddenKorokAppear: 22
+      Demo_Idling: 23
+      Demo_Join: 24
+      Demo_LookAtObject: 25
+      Demo_LookAtObjectSearchAwn: 26
+      Demo_LookAtTheFront: 27
+      Demo_OffMaterialVisibility: 28
+      Demo_OnMaterialVisibility: 29
+      Demo_OnWaitRevival: 30
+      Demo_OpenGetDemo: 31
+      Demo_OpenMessageDialog: 32
+      Demo_OpenMessageDialogTrig: 33
+      Demo_PlayASForDemo: 34
+      Demo_PlayASForTimeline: 35
+      Demo_ResetBoneCtrl: 36
+      Demo_SendSignal: 37
+      Demo_SetGetFlag: 38
+      Demo_SetInstEventFlag: 39
+      Demo_SetWanderPathIndex: 40
+      Demo_StartTurnToPlayer: 41
+      Demo_Talk: 42
+      Demo_TalkASync: 43
+      Demo_TalkNoCloseDialog: 44
+      Demo_TalkNoMessageStepper: 45
+      Demo_TalkToPlayer: 46
+      Demo_TrigNullASPlay: 47
+      Demo_TurnAndLookAtObjectNow: 48
+      Demo_TurnAndLookToObject: 49
+      Demo_TurnAndLookToObjectNow: 50
+      Demo_TurnToObjectGreeting: 51
+      Demo_TurnToPosition: 52
+      Demo_UpdateDataByGetDemo: 53
+      Demo_VisibleOff: 54
+      Demo_WarpToAnchor: 55
+      Demo_WarpToScheduleAnchor: 56
+      Demo_XLinkEventCreate: 57
+      Demo_XLinkEventFade: 58
+      Demo_XLinkEventKill: 59
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 HiddenKorokRoot, GroupName: ''}
+            ChildIdx: !obj {ひるむ: 4, 振り向く: 1, 未出現: 3, 遁走: 2}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj {PainTalkHitSpeed: 1.0, PainTalkDistance: 30.0}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 振り向く, ClassName: !str32 NPCAttentionAI, GroupName: Root}
+            ChildIdx: !obj {振り向く: 7, 注目: 9}
+            SInst: !obj {ReleaseDistance: 0.0, DurationTime: -1, IsUseSight: false,
+              TurnAngleDiff: 0.785398}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 遁走, ClassName: !str32 InvisibleKorokRailMove, GroupName: Root}
+            ChildIdx: !obj {レールに向かう: 5, 停止: 11, 停止点移動: 12, 移動: 6}
+            SInst: !obj {IsIgnoreNoWaitStopPoint: true, OnRailDistance: 2.0, FarDistance: 6.0}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 未出現, ClassName: !str32 NPCAttentionAI, GroupName: Root}
+            ChildIdx: !obj {振り向く: 8, 注目: 10}
+            SInst: !obj {ReleaseDistance: 0.0, DurationTime: -1, IsUseSight: false,
+              TurnAngleDiff: 0.785398}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: ひるむ, ClassName: !str32 NPCWaitOneTimeAction, GroupName: Root}
+            SInst: !obj {ASName: GuardHit, IsIgnoreSameKey: true}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: レールに向かう, ClassName: !str32 InvisibleKorokMove, GroupName: 遁走}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 InvisibleKorokMove, GroupName: 遁走}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 振り向く, ClassName: !str32 NPCTurnAction, GroupName: 振り向く}
+            SInst: !obj {TurnFrame: 8, ASName: Wait, IsIgnoreSameKey: false}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 振り向く, ClassName: !str32 NPCTurnAction, GroupName: 未出現}
+            SInst: !obj {TurnFrame: 8, ASName: Wait_NoSound, IsIgnoreSameKey: false}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 注目, ClassName: !str32 NPCWaitAction, GroupName: 振り向く}
+            SInst: !obj {ASName: Wait, IsIgnoreSameKey: false}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 注目, ClassName: !str32 NPCWaitAction, GroupName: 未出現}
+            SInst: !obj {ASName: Wait_NoSound, IsIgnoreSameKey: false}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 停止, ClassName: !str32 InvisibleKorokWait, GroupName: 遁走}
+            SInst: !obj {SpeedDecreRate: 0.99}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 停止点移動, ClassName: !str32 InvisibleKorokMove, GroupName: 遁走}
+            BehaviorIdx: !obj {1721623982: 0}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: Demo_BecomeSpeaker, ClassName: !str32 BecomeSpeaker,
+              GroupName: ''}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Demo_ChangeEmotion, ClassName: !str32 ChangeEmotion,
+              GroupName: ''}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_ChangeEquipState, ClassName: !str32 ChangeWeaponEquipState,
+              GroupName: ''}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_ChangePosture, ClassName: !str32 ChangePosture,
+              GroupName: ''}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_ChangePostureWithAS, ClassName: !str32 ChangePostureWithAS,
+              GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_ChangeScheduleAnchor, ClassName: !str32 ChangeScheduleAnchor,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_ForbidSettingInstEventFlag, ClassName: !str32 ForbidSettingInstEventFlag,
+              GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_GiveReward, ClassName: !str32 NPCGiveReward, GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_HiddenKorokAppear, ClassName: !str32 HiddenKorokAppear,
+              GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_LookAtObject, ClassName: !str32 LookAtObject, GroupName: ''}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_LookAtObjectSearchAwn, ClassName: !str32 LookAtObjectSeachAwareness,
+              GroupName: ''}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_LookAtTheFront, ClassName: !str32 LookAtTheFront,
+              GroupName: ''}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: Demo_OffMaterialVisibility, ClassName: !str32 SetMaterialVisible,
+              GroupName: ''}
+            SInst: !obj {IsVisible: false}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: Demo_OnMaterialVisibility, ClassName: !str32 SetMaterialVisible,
+              GroupName: ''}
+            SInst: !obj {IsVisible: true}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: Demo_OnWaitRevival, ClassName: !str32 EventOnWaitRevivalAction,
+              GroupName: ''}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: Demo_OpenMessageDialog, ClassName: !str32 OpenMessageDialog,
+              GroupName: ''}
+          lists: {}
+        Action_29: !list
+          objects:
+            Def: !obj {Name: Demo_OpenMessageDialogTrig, ClassName: !str32 OpenMessageDialogTrig,
+              GroupName: ''}
+          lists: {}
+        Action_30: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_31: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_32: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_33: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_34: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_35: !list
+          objects:
+            Def: !obj {Name: Demo_SetInstEventFlag, ClassName: !str32 SetInstEventFlag,
+              GroupName: ''}
+          lists: {}
+        Action_36: !list
+          objects:
+            Def: !obj {Name: Demo_SetWanderPathIndex, ClassName: !str32 SetWanderPathIndex,
+              GroupName: ''}
+          lists: {}
+        Action_37: !list
+          objects:
+            Def: !obj {Name: Demo_StartTurnToPlayer, ClassName: !str32 NPCStartTurnToPlayer,
+              GroupName: ''}
+          lists: {}
+        Action_38: !list
+          objects:
+            Def: !obj {Name: Demo_Talk, ClassName: !str32 NPCTalk, GroupName: ''}
+            SInst: !obj {IsRemainOpeningDialog: 0, MinTalkTime: 30}
+          lists: {}
+        Action_39: !list
+          objects:
+            Def: !obj {Name: Demo_TalkASync, ClassName: !str32 NPCTalkASyncAction,
+              GroupName: ''}
+          lists: {}
+        Action_40: !list
+          objects:
+            Def: !obj {Name: Demo_TalkNoCloseDialog, ClassName: !str32 NPCTalk, GroupName: ''}
+            SInst: !obj {IsRemainOpeningDialog: 1, MinTalkTime: 30}
+          lists: {}
+        Action_41: !list
+          objects:
+            Def: !obj {Name: Demo_TalkNoMessageStepper, ClassName: !str32 NPCTalkNoMessageStepperAction,
+              GroupName: ''}
+          lists: {}
+        Action_42: !list
+          objects:
+            Def: !obj {Name: Demo_TalkToPlayer, ClassName: !str32 NPCTalkToPlayerAction,
+              GroupName: ''}
+          lists: {}
+        Action_43: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_44: !list
+          objects:
+            Def: !obj {Name: Demo_TurnAndLookAtObjectNow, ClassName: !str32 TurnAndLookAtToObjectNow,
+              GroupName: ''}
+          lists: {}
+        Action_45: !list
+          objects:
+            Def: !obj {Name: Demo_TurnAndLookToObject, ClassName: !str32 TurnAndLookToObject,
+              GroupName: ''}
+          lists: {}
+        Action_46: !list
+          objects:
+            Def: !obj {Name: Demo_TurnAndLookToObjectNow, ClassName: !str32 TurnAndLookAtToObjectNow,
+              GroupName: ''}
+          lists: {}
+        Action_47: !list
+          objects:
+            Def: !obj {Name: Demo_TurnToObjectGreeting, ClassName: !str32 NPCTurnToObjectGreeting,
+              GroupName: ''}
+          lists: {}
+        Action_48: !list
+          objects:
+            Def: !obj {Name: Demo_TurnToPosition, ClassName: !str32 NPCTurnToPosition,
+              GroupName: ''}
+          lists: {}
+        Action_49: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_50: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_51: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToAnchor, ClassName: !str32 WarpToAnchor, GroupName: ''}
+          lists: {}
+        Action_52: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToScheduleAnchor, ClassName: !str32 WarpToScheduleAnchor,
+              GroupName: ''}
+          lists: {}
+        Action_53: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_54: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_55: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 FootstepChanger}
+            SInst: !obj {FootstepKey: NpcFootStepInvisible, ChangeDuration: -1}
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 InterestNeckControl}
+            SInst: !obj {IgnorePlayerByTimePass: true}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 InterestNeckControl}
+            SInst: !obj {IgnorePlayerByTimePass: false}
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 FootstepChanger}
+            SInst: !obj {FootstepKey: NPCLandWeak, ChangeDuration: -1}
+          lists: {}
+        Behavior_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 DisableContactLayer}
+            SInst: !obj {LayerNameToDisable: EntityPlayer, IgnoreContactPoint: false}
+          lists: {}
+        Behavior_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 CharacterControllerFormChange}
+            SInst: !obj {EnterState: 2, IsRestoreWhenLeave: true}
+          lists: {}
+        Behavior_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 ForceFallCliffEdgeChanger}
+            SInst: !obj {State: true}
+          lists: {}
+        Behavior_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 NavMeshNonAvoidPlayer}
+          lists: {}
+        Behavior_8: !list
+          objects:
+            Def: !obj {ClassName: !str32 NPCTerrorNeckControl}
+            SInst: !obj {IsUpdatePos: true, OffsetToTargetDirXZ: 0.0}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists:
+        Query_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckActorAction}
+          lists: {}
+        Query_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckActorAction13}
+          lists: {}
+        Query_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckActorAction14_2}
+          lists: {}
+        Query_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckDistanceFromPlayer}
+          lists: {}
+        Query_4: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckOwnedHorseFamiliarity}
+          lists: {}
+        Query_5: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckRankOfEnemyAttackedNPC}
+          lists: {}
+        Query_6: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckReceiveTerrorLevel}
+          lists: {}
+        Query_7: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckResultOfNPCConflict}
+          lists: {}
+        Query_8: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckTerrorLevel}
+          lists: {}
+        Query_9: !list
+          objects:
+            Def: !obj {ClassName: !str32 CheckTypeOfWildHorseAssociated}
+          lists: {}
+        Query_10: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsArriveAnchorForRain}
+          lists: {}
+        Query_11: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsAwakened}
+          lists: {}
+        Query_12: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsHorseFamiliarityPassedAlready}
+          lists: {}
+        Query_13: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsNeedEquipWeapon}
+          lists: {}
+        Query_14: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsOnInstEventFlag}
+          lists: {}
+        Query_15: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsOwnedHorseAssociated}
+          lists: {}
+        Query_16: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsRideHorse}
+          lists: {}
+        Query_17: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsTerrorDisappeared}
+          lists: {}
+        Query_18: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsWaitRevival}
+          lists: {}
+        Query_19: !list
+          objects:
+            Def: !obj {ClassName: !str32 IsWeaponDrawn}
+          lists: {}

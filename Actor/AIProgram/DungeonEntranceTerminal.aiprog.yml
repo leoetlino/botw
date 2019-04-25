@@ -1,0 +1,225 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_DungeonArrive: 14
+      Demo_GetItem: 15
+      Demo_Idling: 16
+      Demo_Join: 17
+      Demo_OnWaitRevival: 18
+      Demo_OpenGetDemo: 19
+      Demo_PlayASForDemo: 20
+      Demo_PlayASForDemoPreMove: 21
+      Demo_PlayASForTimeline: 22
+      Demo_ResetBoneCtrl: 23
+      Demo_SendSignal: 24
+      Demo_SetGetFlag: 25
+      Demo_TrigNullASPlay: 26
+      Demo_UpdateDataByGetDemo: 27
+      Demo_VisibleOff: 28
+      Demo_WarpToPos: 29
+      Demo_XLinkEventCreate: 30
+      Demo_XLinkEventFade: 31
+      Demo_XLinkEventKill: 32
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 13, 持ち運びボックス内: 12, 通常: 3}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: オン, ClassName: !str32 SwitchDistance, GroupName: 待機_0}
+            ChildIdx: !obj {オフ: 4, オフ待機: 6, オン: 7, オン待機: 8}
+            SInst: !obj {OnDis: 10.0, OffsetDis: 2.0, ChangeSeq: false}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 LinkTagCheck, GroupName: 通常}
+            ChildIdx: !obj {オフ: 5, オン: 1}
+            SInst: !obj {IsNotConnectOn: false, SignalType: 0, SetEnableJobTimerTiming: 0,
+              IsCheckChildEnd: false}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 WarpActivateTerminal, GroupName: BaseAI}
+            ChildIdx: !obj {再起動準備: 11, 待機: 2, 起動: 9, 起動後待機: 10}
+            SInst: !obj {IsAbleToReboot: false, DoLimitAngle: 0.523599, IsCheckLimit: false,
+              IsRejectMsgForRemains: false}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: オフ, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: PlayerFarAway, IsIgnoreSame: true, TargetIdx: 0,
+              SeqBankIdx: 0}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: オフ, ClassName: !str32 NullASPlay, GroupName: 待機_0}
+            SInst: !obj {ASName: OffWait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: オフ待機, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: OffWait, IsIgnoreSame: true, TargetIdx: 0, SeqBankIdx: 0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: オン, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: PlayerCloseIn, IsIgnoreSame: true, TargetIdx: 0,
+              SeqBankIdx: 0}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: オン待機, ClassName: !str32 NullASPlay, GroupName: 待機}
+            SInst: !obj {ASName: PlayerCloseInWait, IsIgnoreSame: true, TargetIdx: 0,
+              SeqBankIdx: 0}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 起動, ClassName: !str32 On, GroupName: 通常}
+            SInst: !obj
+              LinkTagType: 0
+              OnWaitRevival: false
+              ASName: ''
+              IsIgnoreSame: true
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 起動後待機, ClassName: !str32 NullASPlay, GroupName: 通常}
+            SInst: !obj {ASName: ActivatedWait, IsIgnoreSame: true, TargetIdx: 0,
+              SeqBankIdx: 0}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 再起動準備, ClassName: !str32 Off, GroupName: 通常}
+            SInst: !obj
+              LinkTagType: 0
+              OffWaitRevival: false
+              ASName: ''
+              IsIgnoreSame: true
+              TargetIdx: 0
+              SeqBankIdx: 0
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 InCarryBox, GroupName: Root}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Demo_DungeonArrive, ClassName: !str32 Move2HomePos, GroupName: ''}
+            SInst: !obj
+              IsVibration: false
+              VibPower: 1.0
+              VibRange: 100.0
+              VibPattern: 0
+              VibDirection: !vec3 [0.0, 0.0, 0.0]
+              IsReturn: true
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_OnWaitRevival, ClassName: !str32 EventOnWaitRevivalAction,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemoPreMove, ClassName: !str32 PlayASForDemoPreMove,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToPos, ClassName: !str32 WarpToPos, GroupName: ''}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_27: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_28: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

@@ -1,0 +1,803 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0007":
+    attributes: ""
+    contents:
+      - text: "Nee, bedankt."
+  "0008":
+    attributes: ""
+    contents:
+      - text: Andere kleur?
+  "0009":
+    attributes: ""
+    contents:
+      - text: Koop iets van me.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Welk product?
+  Com_Talk_01:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Daar geef ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Sarqsarq.
+      - control:
+          kind: pause
+          length: short
+      - text: " Wilde je nog iets verkopen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Je kunt me alles verkopen!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Geen probleem. Ik koop er zoveel als je\nkwijt wilt."
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Ik ben blij met wat je me hebt verkocht.\nSarqsarq!"
+  Com_Talk_04:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Natuurlijk, geen probleem..."
+  Com_Talk_05:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Zal ik nog iets van je kopen?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Sarqsarq.
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Sarqsarq voor de geweldige spullen die\nik van je heb gekocht!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ik heb nog nooit zulke mooie spullen\ngezien. Sarqsarq!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: reset_colour
+      - text: Hoeveel wil je er verkopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " verkopen, en ik wil je er\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor geven. Hebben we\neen deal?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Het spijt me, maar dat kan ik niet van je\nkopen."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Het spijt me, maar ik koop geen kleding\ndie je aanhebt."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Als je me er eentje verkoopt, geef ik je er\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor. Is dat oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ik koop ze allemaal van je en geef je er\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "voor. Het waren er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ",\ntoch?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: reset_colour
+      - text: "Dat is dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Is dat oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Ik snap het. Soms twijfel je nou eenmaal\naan een aankoop."
+  Npc_oasis015_003:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Het is lekker koel vanavond, vind je ook\nniet?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik krijg gelijk zin om iets te gaan drinken\nin de kroeg."
+  Npc_oasis015_004:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Sarqsarq voor je interesse in onze\nkoopwaar!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dat "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: gerudo-topje
+      - control:
+          kind: reset_colour
+      - text: " staat je supergoed!\nZou je er eentje willen in een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "andere\nkleur"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_006:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Weet je dat dan niet? "
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Je kleding een\nander kleurtje geven is momenteel een\nenorme trend onder dames!\nJe kunt je kleding verven in de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Levant
+      - control:
+          kind: reset_colour
+      - text: " in Hateno!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Die plaats ligt hier heel ver vandaan, dus\nhelaas kunnen we er niet zo vaak\nnaartoe."
+  Npc_oasis015_007:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "Het is me vandaag een potje warm, vind\nje niet?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Op dit soort dagen wil ik altijd iets\nijskouds gaan drinken in de kroeg."
+  Npc_oasis015_008:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Met plezier!
+  Npc_oasis015_009:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: Verder nog iets?
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_010:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: Verder nog iets?
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_011:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 25
+            - 205
+      - text: Savotta!
+  Npc_oasis015_012:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 26
+            - 205
+      - text: Savaaq!
+  Npc_oasis015_013:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 27
+            - 205
+      - text: "Sav'saaba!"
+  Npc_oasis015_014:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Jeetje, dat staat je echt goed. Wil je ook\neens een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: andere kleur
+      - control:
+          kind: reset_colour
+      - text: " proberen? Je\nmoet het kopen!"
+  Npc_oasis015_015:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: "Het is nu in om een outfit samen te\nstellen met "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: meerdere kleuren
+      - control:
+          kind: reset_colour
+      - text: ". Waarom\nkoop je niet nog een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo-topje
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_016:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Al onze "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: dameskleding
+      - control:
+          kind: reset_colour
+      - text: " is uitverkocht."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je al veel kleren hebt, kun je\noverwegen om kleding in "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "verschillende\nkleuren"
+      - control:
+          kind: reset_colour
+      - text: " aan te schaffen."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_017:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Naboris
+      - control:
+          kind: reset_colour
+      - text: " is plotseling zo mak als een\nlammetje. Ik vraag me af wat er is\ngebeurd...\nMaar het lijkt erop dat we nu weer meer\nklanten krijgen, dus er is werk aan de\nwinkel voor me!\nWat dacht je van een outfit in een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "andere\nkleur"
+      - control:
+          kind: reset_colour
+      - text: ", nu je er toch bent?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_018:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Naboris
+      - control:
+          kind: reset_colour
+      - text: " is plotseling zo mak als een\nlammetje. Ik vraag me af wat er is\ngebeurd...\nMaar het lijkt erop dat we nu weer meer\nklanten krijgen, dus ik moet snel de\nvoorraad aanvullen.\nAls het mogelijk is, probeer ik outfits in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: verschillende kleuren
+      - control:
+          kind: reset_colour
+      - text: " in te slaan."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_019:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: Vasaaq!
+  Npc_oasis015_Near01:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: Hallo! Hier moet je zijn!
+  Talk_01:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Sarqsarq.
+  Talk_02:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik raad je aan om alle kleding van een\nbepaalde collectie gelijktijdig te dragen."
+  Talk_07:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Modebewuste vrouwen combineren ook\nweleens kleding uit dezelfde collectie in\nmeerdere kleuren."
+  Talk_08:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Je kunt de kleur altijd veranderen in iets\nunieks, dus het is niet erg dat je een\naantal dezelfde kledingstukken hebt."
+  Talk_09:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ah, die doorgang is niet voor klanten."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Als je lid bent, gebruik dan de achterdeur."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk_10:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik hoop dat we nog vaker zaken kunnen\ndoen."

@@ -1,0 +1,133 @@
+Location: Gerudo
+Name: KnightDoll
+NotPostNote: false
+Orderer: Npc_oasis027
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: DoAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 2
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: 0
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_ReadBook
+        WaitAnchorRainASName: Rest
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: DoAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 2
+        WaitRainReactionType: 3
+        WaitRainTalkTurn: 1
+        WaitReactionType: 2
+        WaitTalkTurn: 2
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_oasis027_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+      - EvflEntry: Ready_Npc_oasis027_Near
+        IsPauseOtherActors: false
+        Parameters:
+          Distance: 10.0
+          FrontOnly: false
+        Trigger: Near
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_oasis027
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: KnightDoll_Activated
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: Meeting
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: Run_Rain
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 30
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_ReadBook
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Hold
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_oasis027_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_oasis027
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: -2715.5
+      Y: 0.0
+      Z: 2838.5
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: KnightDoll_Finish
+  UpdateStep: true
+Type: Sub

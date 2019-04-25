@@ -1,0 +1,121 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj {Demo_Idling: 7}
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 RemainsWaterChaseBulletRoot,
+              GroupName: ''}
+            ChildIdx: !obj
+              ダメージ: 1
+              待機: 3
+              復活: 6
+              消滅: 2
+              爆発: 5
+              通常: 4
+            SInst: !obj
+              AtkMinDamage: 1
+              CheckPower: 10.0
+              HighDamageAddSpd: 2.0
+              LowDamageAddSpd: 0.666667
+              ShootAddSpd: 1.66667
+              ResetASName: Reset
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: ダメージ, ClassName: !str32 RemainsWaterChaseBulletFall,
+              GroupName: Root}
+            SInst: !obj {EndTimer: 90.0, InWaterDepth: 3.0, SetVelocity: 0.0666667,
+              SetVelocityFromWeapon: 0.533333}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 Delete, GroupName: Root}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 RemainsWaterBulletWait, GroupName: Root}
+            SInst: !obj
+              MaxChaseAngle: 0.0872665
+              MaxSpeed: 1.38889
+              ChaseRate: 0.25
+              MaxRotSpd: 0.0
+              MinRotSpd: 0.0
+              SignASName: ''
+              SignASFrame: 120
+              EndTimer: -1.0
+              IgnroeWater: true
+              IgnoreGravity: true
+              UseParentRevDirRot: true
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 RemainsWaterExplodeBulletMove,
+              GroupName: 通常}
+            SInst: !obj
+              MaxSpeed: 1.11111
+              CloseRadius: 1.0
+              ChaseAngleMulRate: 1.0
+              FarRadius: 12.0
+              ChaseRotSpdRate: 0.14
+              ChaseSpdRate: 0.3
+              MaxRotSpd: 12.5664
+              MinRotSpd: 6.28319
+              SignASName: Sign
+              SignASFrame: 120
+              EndTimer: 360.0
+              IgnroeWater: false
+              IgnoreGravity: false
+              UseParentRevDirRot: false
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 爆発, ClassName: !str32 RemainsWaterBulletExplode, GroupName: Root}
+            SInst: !obj
+              MaxDamage: 4
+              MinDamage: 4
+              SizeUpTime: 5
+              ExplodeTime: 8
+              UseDefaultEffect: false
+              IsDelete: false
+              IsDamageGuarantee: true
+              AttackIntensity: 3
+              IsVanish: true
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 復活, ClassName: !str32 RemainsWaterBulletRevive, GroupName: Root}
+            SInst: !obj
+              XLinkKey: Appear
+              MaxChaseAngle: 0.0872665
+              MaxSpeed: 1.38889
+              ChaseRate: 0.25
+              MaxRotSpd: 0.0
+              MinRotSpd: 0.0
+              SignASName: ''
+              SignASFrame: 120
+              EndTimer: 30.0
+              IgnroeWater: true
+              IgnoreGravity: true
+              UseParentRevDirRot: true
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 DummyAction, GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

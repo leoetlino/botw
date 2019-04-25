@@ -1,0 +1,282 @@
+Location: ''
+Name: MiniGame_Crosscountry
+NotPostNote: true
+Orderer: ''
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Run
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 0
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Act_Lookfar
+        WaitAnchorRainASName: ''
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: RunGear2
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Ready_Npc_MiniGame_Crosscountry_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Crosscountry
+    UniqueName: ''
+  AttentionOff: false
+  Name: Ready
+  NextFlag: MiniGame_Crosscountry_Activated
+  UpdateStep: false
+- Actors:
+  - ConditionalTimelines:
+    - Condition: MiniGame_Crosscountry_Goal
+      Nodes:
+      - AIName: Action3
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 3
+        MoveToAnchorASName: RunGear2
+        MoveToAnchorRainASName: RunGear2
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Game_Npc_MiniGame_Crosscountry_EachFrame
+        IsPauseOtherActors: false
+        Trigger: EachFrame
+    DefaultTimeline:
+      Nodes:
+      - AIName: Wander
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 1
+        MoveToAnchorASName: RunGear2
+        MoveToAnchorRainASName: RunGear2
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: 0
+        ReturnMoveTimeAfterTalk: 0
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: Wait
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: RunGear2
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 1
+      TriggerEvents:
+      - EvflEntry: Game_Npc_MiniGame_Crosscountry_EachFrame
+        IsPauseOtherActors: false
+        Trigger: EachFrame
+      - EvflEntry: Game_Npc_MiniGame_Crosscountry_StepStart
+        IsPauseOtherActors: false
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Crosscountry
+    UniqueName: ''
+  AttentionOff: true
+  Name: Game
+  NextFlag: MiniGame_Crosscountry_Game
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action10
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 3
+        MoveToAnchorASName: RunGear2
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: ''
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: Wait
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: ForceStop_Npc_MiniGame_Crosscountry_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Crosscountry
+    UniqueName: ''
+  AttentionOff: true
+  Name: ForceStop
+  NextFlag: MiniGame_Crosscountry_ForceStop
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: Action1
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 2
+        MoveTalkTurn: 3
+        MoveToAnchorASName: Walk
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: Turn
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: Turn
+        ReactionToApproachWaitASName: Wait
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: Wait
+        WaitAnchorRainASName: ''
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: RunGear2
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 2
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_MiniGame_Crosscountry_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_MiniGame_Crosscountry
+    UniqueName: ''
+  AttentionOff: true
+  Name: Finish
+  NextFlag: MiniGame_Crosscountry_Finish
+  UpdateStep: false
+Type: Sub

@@ -1,0 +1,37 @@
+Location: MacusePeninsula
+Name: MacuseIseki
+NotPostNote: false
+Orderer: NPC_SystemTextBoard
+StepDependencyFlags:
+- DependencyFlag: Open_Dungeon109
+  DependencyFlagType: bool
+  NextFlag: MacuseIseki_Finish
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Ready_FldObj_SignboardStone_Macuse_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: FldObj_SignboardStone_Macuse
+    UniqueName: Macuse
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: MacuseIseki_Activated
+  UpdateStep: true
+- AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: 4548.7998046875
+      Y: 0.0
+      Z: -2149.0
+    OffFlag: MacuseIseki_Finish
+  MessageName: Finish
+  Name: Finish
+  NextFlag: MacuseIseki_Finish
+  UpdateStep: true
+Type: Sub

@@ -1,0 +1,103 @@
+Location: Cohorint
+Name: NakedIsland
+NotPostNote: false
+Orderer: NPC_GodVoice
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_NakedIslandPriest
+    UniqueName: ''
+  AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: NakedIsland_Activated
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_NakedIslandPriest
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: 4728.60009765625
+      Y: 0.0
+      Z: 3770.60009765625
+    OffFlag: ''
+  MessageName: OnceRetire
+  Name: OnceRetire
+  NextFlag: NakedIsland_OnceRetire
+  UpdateStep: true
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Naked_Npc_NakedIslandPriest_EachFrame
+        IsPauseOtherActors: false
+        Trigger: EachFrame
+    DisableClipping: true
+    DisplayDistanceMode: None
+    Name: Npc_NakedIslandPriest
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: 4728.60009765625
+      Y: 0.0
+      Z: 3770.60009765625
+    OffFlag: ''
+  MessageName: OnceRetire
+  Name: Naked
+  NextFlag: NakedIsland_Naked
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Warning_Npc_NakedIslandPriest_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_NakedIslandPriest
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: 4728.60009765625
+      Y: 0.0
+      Z: 3770.60009765625
+    OffFlag: ''
+  MessageName: OnceRetire
+  Name: Warning
+  NextFlag: NakedIsland_Warning
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Finish_Npc_NakedIslandPriest_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_NakedIslandPriest
+    UniqueName: ''
+  AttentionOff: false
+  IndicatorLocations:
+  - Location:
+      X: 4728.60009765625
+      Y: 0.0
+      Z: 3770.60009765625
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: NakedIsland_Finish
+  UpdateStep: true
+Type: Sub

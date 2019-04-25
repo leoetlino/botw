@@ -1,0 +1,1680 @@
+---
+group_count: 53
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Compro.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Vendo.
+  "0002":
+    attributes: ""
+    contents:
+      - text: A presto!
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sì.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Compro.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Non importa.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Compro tutto.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  Atacked00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 32
+      - text: "Il mio asinello... "
+      - control:
+          kind: pause
+          length: long
+      - text: sta bene?
+  Atacked01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "Meglio starsene tranquilli, in momenti\ncome questi..."
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Che cosa mi vendi?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Mi vendi\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nTi darò "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Grazie!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHai altro da vendermi?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Molte grazie!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Grazie davvero!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Beh, molte grazie!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Oh, che peccato..."
+  Com_Talk_05:
+    attributes: Npc_Road_015
+    contents:
+      - text: Comprerò tutto quello che vuoi!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Io compro tutto, non mi faccio problemi."
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Che ne dici di vendermi qualcosa?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Se mi fai un buon prezzo, compro!"
+  Com_Talk_06:
+    attributes: Npc_Road_015
+    contents:
+      - text: Cosa vuoi comprare?
+  Com_Talk_07:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Oh, mi spiace... "
+      - control:
+          kind: pause
+          length: short
+      - text: Non ne ho più...
+  Com_Talk_08:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Non hai "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: rupie
+      - control:
+          kind: reset_colour
+      - text: " a sufficienza."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSarà per la prossima volta."
+  Com_Talk_09:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: La tua borsa è piena zeppa!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nLascia qualcosa, oppure vendi degli\noggetti per liberare un po' di spazio."
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - text: "Vuoi comprare\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Mille grazie!
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Grazie di cuore!
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Moltissime grazie!
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Ti ringrazio!
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Pesce e frutta fresca direttamente\ndal "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nScegli con calma."
+  Com_Talk_13:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nE quante unità?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " e chiudiamo l'affare.\nChe dici?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Spiacente, non posso comprare..."
+  Com_Talk_16:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Forse prima di vendermi i tuoi vestiti\nfaresti meglio a toglierteli di dosso..."
+  Com_Talk_20:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Con un tempaccio del genere devo\nsfoderare i miei prodotti più rari!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAd esempio, la pregiata "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: lumaca vivax
+      - control:
+          kind: reset_colour
+      - text: "!"
+  Com_Talk_30:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nper un totale di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: ""
+    contents:
+      - text: "Vuoi "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nQuante unità?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: ""
+    contents:
+      - text: "Solo "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFacciamo "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Se vuoi\nche ti venda l'intera scorta di "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unità,\ndevi darmi "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". D'accordo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Vuoi\nche io ti compri tutte e "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " le unità?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nPosso darti "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". D'accordo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Scorte esaurite!
+      - control:
+          kind: pause
+          length: long
+      - text: " Grazie mille per\ni tuoi generosi acquisti!"
+  Com_Talk_37:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Non ho altro da venderti!
+      - control:
+          kind: pause
+          length: long
+      - text: " Grazie per\naver comprato così tanto!\n\nVuoi dare comunque un'occhiata\nalla lista degli articoli?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: ""
+    contents:
+      - text: "Un'unità di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: pause
+          length: short
+      - text: "Ti costerà "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: " Un affare, no?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Failed00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 18
+      - text: "Fiuuu... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Per un attimo ho pensato che\nfosse davvero la fine..."
+  Failed01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 44
+      - text: "Ahi... "
+      - control:
+          kind: pause
+          length: long
+      - text: È stato doloroso...
+  GoodBye00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Arrivederci!
+  Guardian00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "Non possiamo fare nulla contro\nun "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: guardiano
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Anzi, sì: scappare!"
+  MSG_Firo_00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Accorrete, amici!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAmmirate questi fantastici prodotti\ndel "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: "!\nAccorrete numerosi!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nE no, mostri, non sto parlando con voi!"
+  MSG_Firo_00_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Avanti, signore e signori!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDate un'occhiata agli speciali prodotti\ndel "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: "!"
+  MSG_Firo_01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Andando in giro a vendere i prodotti\nspeciali del "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " sono\ndiventato bravo a dare indicazioni.\nStai a sentire:"
+      - control:
+          kind: pause
+          length: short
+      - text: " se procedi verso ovest,\narriverai al "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: lago Hylia
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " e in zona\ntroverai anche la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: selva Finras
+      - control:
+          kind: reset_colour
+      - text: ".\nEd è tutto!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ecco il consiglio che\nvolevo darti."
+  MSG_Firo_01_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Procedi verso ovest e arriverai al\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: lago Hylia
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Nei paraggi troverai\nanche la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: selva Finras
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nMa ora basta con i consigli."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nParliamo di affari..."
+  MSG_Firo_02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Il "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: ", il luogo dove mi\nprocuro i prodotti da vendere, è davvero\nun posto tranquillo.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Pensa che conservano ancora la vecchia\ntradizione di giocare alla sala della\nfortuna."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ah, che nostalgia..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nMa ora basta chiacchiere!"
+      - control:
+          kind: pause
+          length: long
+      - text: " È tempo\ndi fare affari!"
+  MSG_Firo_02_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Il "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: " è un posticino\nmodesto ma, a suo modo, bellissimo."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "La gente di lì si diverte col gioco\ntradizionale della sala della fortuna!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSembra quasi che il tempo si sia fermato."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nBasta chiacchiere, ora."
+      - control:
+          kind: pause
+          length: long
+      - text: " Io e te abbiamo\ndegli affari da portare a termine!"
+  MSG_Firo_03:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Accorrete
+      - control:
+          kind: pause
+          length: short
+      - text: " e date un'occhiata a questi\narticoli speciali del "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: ".\n\nForza, non siate timidi!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nVenite a provare il pesce e la frutta\nfresca dalle regioni del sud!"
+  MSG_Firo_03_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Avanti, avanti!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nPesce e frutta freschi dalle terre del sud!"
+  MSG_Firo_04:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Sai, al "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " oltre a fare\nscorta dei prodotti migliori,"
+      - control:
+          kind: pause
+          length: short
+      - text: " tento\nanche la fortuna.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: È il gioco tradizionale del villaggio!
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDovresti provare anche tu!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nOh,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma basta perderci in chiacchiere..."
+  MSG_Firo_04_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Al villaggio si può anche tentare\nla fortuna!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Prova anche tu!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Mmm...
+      - control:
+          kind: pause
+          length: short
+      - text: " Sto divagando, vero?"
+  Near00:
+    attributes: Npc_Road_015
+    contents:
+      - text: Vappesca casa del pesce!
+  Near01:
+    attributes: Npc_Road_015
+    contents:
+      - text: "Venite, buttatevi a pesce!"
+  Near02:
+    attributes: Npc_Road_015
+    contents:
+      - text: "Pesce di sera, bel tempo..."
+  Near03:
+    attributes: Npc_Road_015
+    contents:
+      - text: Frutta fresca a Vappesca!
+  Near04:
+    attributes: Npc_Road_015
+    contents:
+      - text: Anche sotto la pioggia...
+  Rest_00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Il pesce e la frutta che mi procuro al\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "villaggio Vappesca "
+      - control:
+          kind: reset_colour
+      - text: "sono così buoni che\na volte non resisto e me li mangio io!"
+  Rest_01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Credevo che oggi avrebbe fatto bello,\nma..."
+      - control:
+          kind: pause
+          length: short
+      - text: " invece si è messo a piovere.\nMagari ne approfitto per riposare un po'!"
+  Rest_02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "A me la pioggia non dà fastidio,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ma\nil mio asinello proprio non la sopporta!"
+  RetMSG_Firo_00:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: Passo molto tempo in giro
+      - control:
+          kind: pause
+          length: short
+      - text: " per vendere\ni prodotti speciali che prendo al\n"
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: ".\nPer cui so bene che la strada che porta\nallo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "stallaggio dell'altopiano "
+      - control:
+          kind: reset_colour
+      - text: "pullula di\nmostri."
+      - control:
+          kind: pause
+          length: short
+      - text: " Infatti la faccio sempre di corsa!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ma ora
+      - control:
+          kind: pause
+          length: short
+      - text: " bando alle ciance..."
+  RetMSG_Firo_00_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "La strada che va verso nord e porta allo\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "stallaggio dell'altopiano "
+      - control:
+          kind: reset_colour
+      - text: "pullula di mostri.\nIo la faccio sempre di corsa!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ma ora
+      - control:
+          kind: pause
+          length: short
+      - text: " basta chiacchierare..."
+  RetMSG_Firo_01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Passo ogni giorno a viaggiare in lungo\ne in largo per vendere i prodotti speciali\nche mi procuro al"
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: "Sai, una volta mi sono trovato nella\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "foresta di Firone "
+      - control:
+          kind: reset_colour
+      - text: "senza mappa e mi sono\nperso..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Stavo per mettermi a piangere!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ma ora
+      - control:
+          kind: pause
+          length: short
+      - text: " basta parlare di me..."
+  RetMSG_Firo_01_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: "Quella volta che mi sono addentrato\nnella "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: foresta di Firone
+      - control:
+          kind: reset_colour
+      - text: " senza mappa e\nmi sono perso..."
+      - control:
+          kind: pause
+          length: short
+      - text: " mi veniva da piangere."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ma... "
+      - control:
+          kind: pause
+          length: short
+      - text: ora basta parlare di me...
+  RetMSG_Firo_02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Accorrete tutti!
+      - control:
+          kind: pause
+          length: short
+      - text: " E anche voi, amici\ndello "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: stallaggio del lago
+      - control:
+          kind: reset_colour
+      - text: ", venite\na dare un'occhiata!\nPesce e frutta fresca direttamente dal\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Solo qui da me!"
+  RetMSG_Firo_02_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Pesce e frutta fresca direttamente\ndal "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Venite a vedere!"
+  RetMSG_Firo_03:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "In groppa al mio fido asinello ci sono\ni migliori pesci e la frutta più fresca\ndel "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "E ci sono anche tutte le rupie che\nmi hanno lasciato decine e decine\ndi clienti super soddisfatti!"
+  RetMSG_Firo_03_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Se mai perdessi il mio fido asinello...\nsarebbe una vera tragedia."
+  RetMSG_Firo_04:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Al "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio Vappesca
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " ho preso tutto il\npesce e la frutta che mi servivano e ho\nfatto un salto alla sala della fortuna!\nOra è tempo di andare a vendere un po'\ndi merce"
+      - control:
+          kind: pause
+          length: short
+      - text: " allo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "stallaggio dell'altopiano"
+      - control:
+          kind: reset_colour
+      - text: "."
+  RetMSG_Firo_04_1:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Ho fatto scorta di prodotti e ho pure\ntentato la fortuna..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ora è meglio se\ninizio il mio solito giro di vendite."
+  SavedLv1_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: "Mi hai salvato la vita! "
+      - control:
+          kind: pause
+          length: short
+      - text: "E anche\nquella del mio asinello!"
+  SavedLv1_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: E tu? Stai bene?
+  SavedLv2_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: Fiuuu...
+      - control:
+          kind: pause
+          length: short
+      - text: " per il rotto della cuffia!"
+  SavedLv2_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 18
+      - text: "Salvo all'ultimo momento!"
+  SavedLv3_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 19
+      - text: Tu stai bene?
+      - control:
+          kind: pause
+          length: long
+      - text: " Non sei ferito?"
+  SavedLv3_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Sei veramente
+      - control:
+          kind: pause
+          length: short
+      - text: " incredibile!"
+  Talk01:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bene, bene! "
+      - control:
+          kind: pause
+          length: long
+      - text: "Ho così tante cose da\nvendere, in groppa al mio asinello!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nDai pure un'occhiata con calma!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_Road_015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ti serve qualcos'altro?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Thanks00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Ecco, tieni. Un piccolo ringraziamento."

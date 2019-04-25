@@ -1,0 +1,54 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    Attack: !obj
+      Power: 50
+      Impulse: 1000
+      ImpulseLarge: 0
+      Range: 0.0
+      GuardBreakPower: 0
+      SpHitActor: Enemy_Ganon,Enemy_SiteBoss_Sword,Enemy_SiteBoss_Lsword,Enemy_SiteBoss_Spear,Enemy_SiteBoss_Bow,Enemy_SiteBoss_Sword_Castle,Enemy_SiteBoss_Lsword_Castle,Enemy_SiteBoss_Spear_Castle,Enemy_SiteBoss_Bow_Castle,Enemy_Guardian_Mini_Baby,Enemy_Guardian_Mini_Junior,Enemy_Guardian_Mini_Middle,Enemy_Guardian_Mini_Senior,Enemy_Guardian_Mini_Baby_Dark,Enemy_Guardian_Mini_Junior_Dark,Enemy_Guardian_Mini_Middle_Dark,Enemy_Guardian_Mini_Senior_Dark,Enemy_Guardian_Mini_Junior_Wipe
+      SpHitTag: EffectiveAncientArrow,TeamGuardian
+      SpHitRatio: 1.5
+      SpWeakHitActor: ''
+      PowerForPlayer: -1
+    Liftable: !obj
+      LiftType: !str32 
+      ThrownMass: 10
+      ThrownRotSpd: !vec3 [0.0, 0.0, 0.0]
+      LiftPosOffset: !vec3 [0.0, 0.0, 0.0]
+      LiftRotOffset: !vec3 [0.0, 0.0, 0.0]
+      LiftRotFrame: 10
+      AddLiftRotOffsetList: ''
+      ChaseLiftRotOffset: false
+      LiftCenterOffset: !vec3 [0.0, 0.0, 0.0]
+      PutPosOffset: !vec3 [0.0, 0.0, 0.5]
+      PutRotOffset: !vec3 [0.0, 0.0, 0.0]
+      PutRotFrame: 10
+      AddPutRotOffsetList: ''
+      IsUpdateOffsetEachFrame: false
+      IsUse2MassConstraintMode: true
+      IsSetChemicalParent: true
+      DisableFreezeLift: false
+      DisableBurnLift: false
+      ThrowReactionLevel: -1
+    Item: !obj
+      PlayerUseItem: false
+      SellingPrice: -1
+      BuyingPrice: 100
+      CreatingPrice: 90
+      StainColor: -1
+      SaleRevivalCount: -1
+      UseIconActorName: !str64 
+    Arrow: !obj
+      ArrowNum: 1
+      DeleteTime: -1
+      DeleteTimeWithChemical: 0
+      EnemyShootNumForDelete: 0
+      ArrowDeletePer: 0
+      ExtraDamage: 20
+    Bullet: !obj {NoHitParent: true, IsLimitCount: false}
+    PictureBook: !obj {LiveSpot1: -1, LiveSpot2: -1, SpecialDrop: -1}
+  lists: {}

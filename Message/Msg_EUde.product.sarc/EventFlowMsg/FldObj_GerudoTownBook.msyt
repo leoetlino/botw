@@ -1,0 +1,398 @@
+---
+group_count: 13
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "Ja, bitte!"
+  "0001":
+    attributes: ""
+    contents:
+      - text: "Nein, danke."
+  "0004":
+    attributes: ""
+    contents:
+      - text: Effektvoll kochen
+  "0005":
+    attributes: ""
+    contents:
+      - text: Heilsame Zutaten
+  "0006":
+    attributes: ""
+    contents:
+      - text: Feen in der Küche
+  "0007":
+    attributes: ""
+    contents:
+      - text: Weglegen
+  "0008":
+    attributes: ""
+    contents:
+      - text: Gaumenschmaus
+  "0009":
+    attributes: ""
+    contents:
+      - text: Monströse Essenzen
+  "0010":
+    attributes: ""
+    contents:
+      - text: Gastronomie-Tipps
+  "0011":
+    attributes: ""
+    contents:
+      - text: Weglegen
+  talk00:
+    attributes: FldObj_GerudoTownBook
+    contents:
+      - text: "Es liegt so weit oben, dass du es nicht\nlesen kannst..."
+  talk01:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Dieses Buch wurde von einem Meister-\nkoch namens Ra-Tahm verfasst. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Leider\nweilt er nicht mehr unter uns."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Erzähl es nicht rum, aber..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Er war ein Vooi,\nin den sich unsere Lehrerin einst verliebt hat..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "Wenn das Buch zu hoch für dich liegt,\nkann ich dir daraus vorlesen."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk02:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "„Gourmet-Geheimnisse“ von Ra-Tahm.\nBand 2."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 10
+            - 11
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk03:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Hahaha, ich seh schon – unsere\nGerudo-Möbel sind einfach eine\nNummer zu groß für dich."
+  talk04:
+    attributes: FldObj_GerudoTownBook2
+    contents:
+      - control:
+          kind: raw
+          one:
+            two:
+              field_1: 0
+      - text: "Den meisten Zutaten wohnt ein\nbesonderer Effekt inne."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Zutaten mit dem Wort "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Frost "
+      - control:
+          kind: reset_colour
+      - text: "im Namen\nerhöhen die Resistenz gegen Hitze."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Und Zutaten mit einem "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Maxi
+      - control:
+          kind: reset_colour
+      - text: " im Namen\nerhöhen die Gesundheit über das\ngewöhnliche Maß hinaus.\nEs warten noch viele weitere Effekte\ndarauf, entdeckt zu werden."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Werden Zutaten mit dem gleichen Effekt\nin einem Gericht kombiniert, erhöhen\nsich Wirksamkeit und Dauer des Effekts.\nEin Wort der Warnung: Die Kombination\nunterschiedlicher Effekte kann dazu füh-\nren, dass sie sich gegenseitig aufheben.\nMeine Wenigkeit hat schon immer einen\naktiven Lebensstil gepflegt und ist daher\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Spurt-Zutaten "
+      - control:
+          kind: reset_colour
+      - text: äußerst zugetan.
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk05:
+    attributes: FldObj_GerudoTownBook2
+    contents:
+      - control:
+          kind: raw
+          one:
+            two:
+              field_1: 0
+      - text: "Durch Kombinieren von "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Insekten
+      - control:
+          kind: reset_colour
+      - text: " oder\nÄhnlichem und "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Monstermaterialien "
+      - control:
+          kind: reset_colour
+      - text: "kann\nein Kenner sogar Medizin herstellen.\nMedizin wird wie normale Gerichte im\nKochtopf gebraut. Je wertvoller die\nZutaten, umso effektiver die Medizin.\nWerden "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: Eicheln
+      - control:
+          kind: reset_colour
+      - text: " oder "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Vogelnüsse "
+      - control:
+          kind: reset_colour
+      - text: "hin-\nzugefügt, erhält die Medizin zusätzlich\neinen heilenden Effekt.\nIch für meinen Teil akzeptiere weder\nFliegen in der Suppe, noch sonstige\nInsekten in meinen Gerichten.\nAlle, die ähnliche Gefühle hegen,\nmögen beruhigt sein: Viele Gerichte\nhaben ähnliche Effekte wie Medizin."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk06:
+    attributes: FldObj_GerudoTownBook2
+    contents:
+      - control:
+          kind: raw
+          one:
+            two:
+              field_1: 0
+      - text: "Es heißt, dass Feen tatsächlich\nexistieren, sich aber nur demjenigen\nmit einem reinen Herzen offenbaren.\nTheorien zufolge gibt es spezielle\nGerichte, die nur mit der Hilfe einer\nFee zubereitet werden können...\nMein Herz ist so makellos rein wie jedes\nmeiner Kochutensilien, daher erwarte ich\nnun täglich die Ankunft einer Fee."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk07:
+    attributes: FldObj_GerudoTownBook2
+    contents:
+      - control:
+          kind: raw
+          one:
+            two:
+              field_1: 0
+      - text: "„Gourmet-Geheimnisse“ von Ra-Tahm.\nBand 1."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  talk08:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Wer die kulinarischen Künste ausübt,\ndem wird über Kurz oder Lang ein\nwahrer Gaumenschmaus gelingen.\nIn einem solchen Fall erhöhen sich\nsowohl Wirksamkeit als auch die Dauer\ndes Effekts eines Gerichts.\nEs ist allgemein bekannt, dass ein\nGericht schmackhafter wird, je mehr\nZutaten verwendet werden.\nDoch es halten sich Gerüchte, dass\ndas geheimnisvolle Licht des Blutmondes\nden Erfolg garantiert.\nNun, da mir bereits in den frühen Abend-\nstunden die Augen zufallen, habe ich den\nBlutmond nie zu Gesicht bekommen."
+      - control:
+          kind: choice
+          choice_labels:
+            - 9
+            - 10
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk09:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 4
+                  - 4
+                  - 0
+      - text: "Monster-Essenz "
+      - control:
+          kind: reset_colour
+      - text: "zeichnet sich dadurch\naus, dass sie den Effekt eines Gerichts\nverstärkt, dem sie hinzugefügt wird.\nNur ein Fläschchen "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 4
+                  - 4
+                  - 0
+      - text: Monster-Essenz
+      - control:
+          kind: reset_colour
+      - text: "\nerhöht bereits Wirksamkeit sowie Dauer\ndes Effekts eines Gerichts.\nDoch Vorsicht – diese Zutat macht das\nErgebnis kulinarischer Bemühungen in\nhöchstem Maße unvorhersehbar.\nVerstärkt sich manchmal der Effekt über\nalle Maßen, bleibt er zu anderen Zeiten\nhinter den Erwartungen zurück.\nSelbst ein Meisterkoch wie ich, Ra-Tahm,\nverlässt sich gelegentlich auf das Glück,\nwenn ihn die Kunst im Stich lässt."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 10
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk10:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Behalten Sie Ihre kulinarischen\nKöstlichkeiten nicht für sich, sondern\nlassen Sie die Welt daran teilhaben!\nGanz nüchtern gesprochen zeitigt ein\nfertiges Gericht einen höheren finanzi-\nellen Erfolg als der Verkauf der Zutaten.\nUnd je mehr Zutaten verwendet wurden,\numso mehr werden Liebhaber des guten\nGeschmacks dafür ausgeben wollen.\nWoher ich in diesen Dingen bewandert\nbin? Nun, einem... guten Freund von mir\ngelang es so, zu Reichtum zu kommen.\nMir dagegen geht es selbstverständlich\nausschließlich um die Kunst."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk11:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ra-Tahm war eine einzigartige Persön-\nlichkeit. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Wann immer ich eines seiner\nWerke lese, lerne ich etwas Neues."
+  talk12:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Von Ra-Tahm gibt es so viele berühmte\nZitate..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Seine Werke sind höchst\ninspirierend."
+  talk13:
+    attributes: Npc_OasisStudent_C
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Was?
+      - control:
+          kind: pause
+          length: short
+      - text: " Das Buch interessiert dich nicht?"

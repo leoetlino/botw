@@ -1,0 +1,1377 @@
+---
+group_count: 67
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ja klar!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Nö. Wo?
+  "0004":
+    attributes: ""
+    contents:
+      - text: Taburasa vielleicht?
+  "0005":
+    attributes: ""
+    contents:
+      - text: Hmmm...
+  "0007":
+    attributes: ""
+    contents:
+      - text: Ich möchte verkaufen.
+  "0008":
+    attributes: ""
+    contents:
+      - text: Hallo!
+  "0009":
+    attributes: ""
+    contents:
+      - text: Wiedersehen.
+  "0011":
+    attributes: ""
+    contents:
+      - text: Stimmt!
+  "0012":
+    attributes: ""
+    contents:
+      - text: Ich weiß von nichts.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Jawohl.
+  "5501":
+    attributes: ""
+    contents:
+      - text: "Nein, danke."
+  "5502":
+    attributes: ""
+    contents:
+      - text: Nehme ich.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Doch nicht.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alle!
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles!
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: Roger.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWas möchtest du denn loswerden?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: " kann ich dir dafür geben.\nIn Ordnung?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Danke!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nWillst du sonst noch was loswerden?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Danke! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Hast du sonst noch was\nfür mich?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Vielen Dank! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Soll ich dir sonst noch\nwas abkaufen?"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Alles klar! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Hast du sonst noch etwas\nzu verkaufen?"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: Alles klar.
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "Ich kaufe alles! Na ja, fast alles!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Bei mir kannst du verkaufen, was du\nnicht mehr brauchst!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Zeig mir, was du verkaufen willst."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Lass dir nur Zeit.
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDas möchtest du verkaufen?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nUnd wie viel davon?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Zusammen käme ich da auf\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Rubin
+            - Rubine
+            - Rubin
+      - control:
+          kind: reset_colour
+      - text: ". Einverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: So etwas kann ich leider nicht ankaufen.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Zieh die Sachen, die du mir verkaufen\nwillst, doch erst einmal aus."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Dafür kann ich dir "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "\nanbieten."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: Gleich alles?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Gut... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Für "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: "\nkommen wir ins Geschäft!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: Gleich alles?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Gut... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Für "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " Rubine"
+      - control:
+          kind: reset_colour
+      - text: "\nnehme ich die ganze Ladung."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "kostet\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ". Gutes Angebot, oder?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: Was ist dir da ins Auge gesprungen?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAh, "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWie viele davon willst du mitnehmen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - text: "Insgesamt ergibt das "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubine"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: ".\nEinverstanden?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - text: "Du willst doch nicht?\nNa, dann nicht."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Oh, du hast nicht genug Rubine."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: Aber du hast ja gar keinen Platz dafür.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDa musst du wohl zuerst etwas verkaufen\noder wegschmeißen."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Mehr brauchst du nicht?
+      - control:
+          kind: pause
+          length: short
+      - text: " Der Einzelpreis\nliegt bei "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " Rubin"
+            - " Rubinen"
+            - " Rubin"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Hach...
+  near01:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Willkommen!
+  near02:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Ah...
+  near03:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Nicht da raufklettern!
+  near04:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Bleib unten!
+  near05:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Runter mit dir!
+  talk00:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Vielleicht sollte ich auf dem Weg nach\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Taburasa
+      - control:
+          kind: reset_colour
+      - text: " ein paar Waren für den Laden\nsammeln..."
+  talk01:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Dann sieh ihn dir später mal an.
+  talk02:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Er hat das Dorf in große Schwierigkeiten\ngebracht."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Aber mal etwas ganz anderes...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Meine Mutter drängt mich jeden Tag\ndazu, im Laden auszuhelfen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: Ich kann es langsam nicht mehr hören.
+  talk03:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Ich habe keine Lust, im Laden\nauszuhelfen."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich will meinen eigenen\nLaden aufmachen, wo ich der Chef bin!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 16
+      - text: "Aber an welchem Ort würde es sich\nlohnen, einen Laden zu eröffnen..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk04:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Ich habe keine Lust, im Laden\nauszuhelfen."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ich will meinen eigenen\nLaden aufmachen, wo ich der Chef bin!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Aber an welchem Ort würde es sich\nlohnen, einen Laden zu eröffnen..."
+  talk05:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Ich dachte, als Reisender wärst du\nvielleicht irgendwo vorbeigekommen, wo\nnoch ein Laden gebraucht wird.\nSag mir Bescheid, wenn du so einen Ort\nentdeckst."
+  talk06:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Setz dich erst mal in aller Ruhe hin,\ndann erzähle ich dir was."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Nur keine Hektik.
+  talk07:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Gut...
+      - control:
+          kind: pause
+          length: short
+      - text: " Dann steht es fest!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nIch versuche dort mein Glück!"
+  talk08:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ist er dir auch aufgefallen?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDer Titan "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Vah Medoh
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk09:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Es ist ja schön, dass "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Medoh "
+      - control:
+          kind: reset_colour
+      - text: "sich\nberuhigt hat. Aber das war nicht mein\neinziges Problem!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Meine Mutter liegt mir permanent in\nden Ohren, ich müsse den Laden\nübernehmen."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ich hab's so satt!"
+  talk10:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guten Morgen!
+  talk11:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guten Tag!
+  talk12:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guten Abend!
+  talk14:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 4
+      - text: Hach...
+  talk15:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Der Titan "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Vah Medoh
+      - control:
+          kind: reset_colour
+      - text: ", meine Mutter...\nIch hab das alles satt!"
+  talk16:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ich hab das Gelaber meiner Mutter\nso satt..."
+  talk17:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Solange "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Medoh
+      - control:
+          kind: reset_colour
+      - text: " den Himmel unsicher\nmacht, werde ich wohl zu Fuß gehen\nmüssen..."
+  talk18:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Ist dir nicht etwas kalt in dem Aufzug?
+  talk19:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Also...
+      - control:
+          kind: pause
+          length: short
+      - text: " Nichts gegen dich persönlich,\naber willst du dir nicht was anziehen?"
+  talk20:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 3
+      - text: Willkommen!
+      - control:
+          kind: pause
+          length: short
+      - text: " Kann ich dir helfen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk22:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Oh, hallo! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Wir haben uns eine Weile\nnicht gesehen!"
+  talk23:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Ich bin's, Peda!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Auf dem Weg vom Dorf der Orni hierher\nbin ich auf einige seltsame Typen\ngestoßen, aber jetzt bin ich hier!\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Taburasa
+      - control:
+          kind: reset_colour
+      - text: " ist wirklich schön!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nVor allem, weil ich da ganz, ganz\nweit weg von meiner Mutter bin...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "Es ist toll, dass ich endlich selbst Waren\nanschaffen und verkaufen kann!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Mein Krämerladen steht jedenfalls zu\ndeinen Diensten!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Am besten kaufst du\ngleich was, zur Feier des Tages!"
+  talk24:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Man sieht sich!
+  talk25:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Die Firma dankt!
+  talk26:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Da muss ich für Nachschub sorgen!
+  talk27:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oje, das ist ausverkauft..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch werde versuchen, möglichst bald\nmehr davon heranzuschaffen."
+  talk29:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guten Morgen!
+  talk30:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guten Tag!
+  talk31:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Guten Abend!
+  talk32:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ich schaffe das schon irgendwie!
+  talk33:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Danke für deinen Rat!
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nIch hoffe, du kommst später einmal\nbei mir vorbei!"
+  talk34:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Taburasa
+      - control:
+          kind: reset_colour
+      - text: "? "
+      - control:
+          kind: pause
+          length: longer
+      - text: Was ist das?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIch bin ganz Ohr!"
+  talk35:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Verstehe...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nDort wird also dringend noch ein\nKrämerladen gebraucht.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Akkala
+      - control:
+          kind: reset_colour
+      - text: "... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Puh! Das ist schon ein\nganzes Stückchen weit weg!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Aber für einen eigenen Laden würde ich auch\nans Ende der Welt gehen..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  talk39:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Einen Laden zu führen ist schwieriger,\nals ich dachte."
+      - control:
+          kind: pause
+          length: short
+      - text: " Meine Mutter hat schon\nwas drauf."
+  talk40:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Es ist nicht mehr lang hin...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Dumsda und Pauda werden Hochzeit\nhalten, nicht wahr?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk41:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Ich freue mich für die beiden!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ich hoffe, dieser Anlass bringt ganz viele\nLeute nach "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Taburasa
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk42:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Was?! "
+      - control:
+          kind: pause
+          length: short
+      - text: Das wusstest du noch nicht?
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Frag die beiden direkt, wenn du es mir\nnicht glaubst!"
+  talk43:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Es ist zwar ein elendiger Stress, sich um\ndie Waren kümmern zu müssen, aber es\nist schön, zu verkaufen, was ICH will!"
+  talk44:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Das war eine tolle Hochzeit!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dumsda war ganz würdevoll und ernst,\nPauda war bildschön..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Sie sind wirklich\nein tolles Paar!\nOb meine Eltern wohl auch irgendwann\nmal so gewesen sind?"
+  talk45:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ach ja, Dumsda wollte glaube ich mit dir\nsprechen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Er ist sicher bei Pauda, also geh doch\nmal zu ihm."
+  talk46:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Es ist schön zu sehen, dass beim\nHochzeitsfest alles glattgelaufen ist!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Pauda war wirklich prächtig anzusehen!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Wenn ich eines Tages auch so eine\nschöne Braut nach Hause führe, wäre\nich wunschlos glücklich...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Aber genug geplaudert! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Jetzt muss ich\nmich wieder um meinen Laden kümmern."
+  talk47:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Wie geht es dir?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nBei mir ist alles beim Alten!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Ach ja... Du bist doch viel auf Reisen,\noder?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Falls du irgendetwas brauchst,"
+      - control:
+          kind: pause
+          length: short
+      - text: " schau\ndich doch mal bei mir um."
+  talk48:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Bei mir ist der Kunde König...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nAber das da ist trotzdem nicht\ndein Thron."
+  talk49:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Komm doch da herunter, bitte..."
+  talk50:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Bitte trampel doch nicht auf den\nAuslagen herum, ja?"
+  talk51:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Komm doch bitte da herunter.\nWie sieht denn das aus..."

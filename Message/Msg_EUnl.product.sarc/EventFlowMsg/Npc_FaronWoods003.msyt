@@ -1,0 +1,115 @@
+---
+group_count: 7
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Ik heb er eentje.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Ik heb er geen.
+  near00:
+    attributes: Npc_FaronWoods003
+    contents:
+      - text: Regen...
+  near01:
+    attributes: Npc_FaronWoods003
+    contents:
+      - text: "Eng, hè?"
+  talk00:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Hé, "
+      - control:
+          kind: pause
+          length: short
+      - text: "heb je een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: kaart
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk01:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Welke vreemde kwast gaat er nou zonder\nkaart op reis?"
+  talk02:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Zie je de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tweelingberg "
+      - control:
+          kind: reset_colour
+      - text: "ten noorden van\nhier op je kaart?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Blijkbaar was dat vroeger maar één berg.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Volgens de legende heeft een drakengod\nde berg in tweeën gespleten om een\ndoorgang te creëren.\nIk heb zelfs gehoord dat er laatst een\nschaduw van een groot beest is gezien\nin het "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Floria-meer
+      - control:
+          kind: reset_colour
+      - text: ".\nMaar ik vraag me af of dat waar is..."
+  talk03:
+    attributes: Npc_FaronWoods003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Onweer is eng, hè..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Heb je het gehoord?
+      - control:
+          kind: pause
+          length: short
+      - text: " Het gedonder\nschijnt de toorn van de drakengod te\nzijn.\nIk vraag me echter af of hij wel echt\nbestaat."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik heb hem in ieder geval nog\nnooit gezien."

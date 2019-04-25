@@ -1,0 +1,1380 @@
+---
+group_count: 67
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Видел
+  "0001":
+    attributes: ""
+    contents:
+      - text: "Нет, не видел"
+  "0004":
+    attributes: ""
+    contents:
+      - text: В Новой Деревне!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Хм...
+  "0007":
+    attributes: ""
+    contents:
+      - text: Я кое-что продаю
+  "0008":
+    attributes: ""
+    contents:
+      - text: Привет!
+  "0009":
+    attributes: ""
+    contents:
+      - text: Пока!
+  "0011":
+    attributes: ""
+    contents:
+      - text: Отлично!
+  "0012":
+    attributes: ""
+    contents:
+      - text: "Нет, не слышал"
+  "5500":
+    attributes: ""
+    contents:
+      - text: Идет!
+  "5501":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5502":
+    attributes: ""
+    contents:
+      - text: Беру!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Я передумал
+  "5507":
+    attributes: ""
+    contents:
+      - text: Беру все
+  "5508":
+    attributes: ""
+    contents:
+      - text: Продаю все
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: "Показывай, что хочешь продать."
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nПредлагаю "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Спасибо!
+      - control:
+          kind: pause
+          length: short
+      - text: " Давай еще!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Благодарю!
+      - control:
+          kind: pause
+          length: short
+      - text: " Что-нибудь еще?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Большое спасибо!
+      - control:
+          kind: pause
+          length: short
+      - text: " Еще что-то?"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Отлично!
+      - control:
+          kind: pause
+          length: short
+      - text: " Хочешь продать\nеще что-нибудь?"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: Понятно.
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Можешь предлагать что угодно.
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Я буду рад любым предложениям.
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Показывай, что у тебя есть."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Не торопись, времени много."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nСколько?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", значит?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: Это я покупать не буду.
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Когда продаешь одежду,\nснимай ее с себя."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Как насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Тогда\nс тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Все, то есть "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Могу\nпредложить "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупию"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nКак насчет "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупии"
+            - " рупий"
+            - " рупий"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСколько возьмешь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", да?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Тогда с тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - text: Передумал? Жаль.
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Эй, у тебя денег не хватает!"
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Эй, ты больше не унесешь!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСначала продай что есть."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "С тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " рупия"
+            - " рупий"
+            - " рупии"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Эх...
+  near01:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Привет!
+  near02:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Эй...
+  near03:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Сойди со стола...
+  near04:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: "Слезь, пожалуйста!"
+  near05:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Спускайся...
+  talk00:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "А по пути соберу что-нибудь на\nпродажу — надо ведь с чего-то\nначинать."
+  talk01:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Что, вообще в небо не смотришь?"
+  talk02:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Из-за этой штуки в деревне\nтворится черт знает что..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Да еще мама каждый день твердит,\nчто я должен помогать ей по лавке."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: Как же мне все это надоело...
+  talk03:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: Не хочу я ей помогать!
+      - control:
+          kind: pause
+          length: short
+      - text: " Я хочу открыть\nсвой магазин и продавать в нем то, что\nсам решу."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 16
+      - text: Только вот где его открыть?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nГде-нибудь подальше от мамы..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk04:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: Не хочу я ей помогать!
+      - control:
+          kind: pause
+          length: short
+      - text: " Я хочу открыть\nсвой магазин и продавать в нем то, что\nсам решу."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: Только вот где его открыть?
+      - control:
+          kind: pause
+          length: short
+      - text: "\nГде-нибудь подальше от мамы..."
+  talk05:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: У тебя тоже нет идей?
+      - control:
+          kind: pause
+          length: short
+      - text: " Слушай, ты,\nкажется, много путешествуешь..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Если найдешь место, где мог бы\nпригодиться магазин, дай мне\nзнать, пожалуйста."
+  talk06:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Привет.
+      - control:
+          kind: pause
+          length: short
+      - text: " Пообщаться\nхочешь?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ну пойдем."
+  talk07:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Решено!
+      - control:
+          kind: pause
+          length: short
+      - text: " Я отправляюсь туда!"
+  talk08:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Чудище Ва-Медо
+      - control:
+          kind: reset_colour
+      - text: " уже видел?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk09:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Хорошо, что "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Медо
+      - control:
+          kind: reset_colour
+      - text: " угомонилась,\nно это не решает мою проблему..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Мама твердит, что я должен\nпомогать ей по лавке."
+  talk10:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Доброе утро.
+  talk11:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Привет.
+  talk12:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Приветствую.
+  talk14:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 4
+      - text: Эх...
+  talk15:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Даже не знаю, кто меня больше\nраздражает: "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Чудище Ва-Медо
+      - control:
+          kind: reset_colour
+      - text: "\nили мама..."
+  talk16:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Как же мне надоело\nмамино ворчание..."
+  talk17:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Жаль, что "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Медо
+      - control:
+          kind: reset_colour
+      - text: " кружит над деревней."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПридется какое-то время идти пешком."
+  talk18:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Зря ты так ходишь — простынешь.
+  talk19:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "Может, оденешься?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Тут тебе не пляж..."
+  talk20:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 3
+      - text: Добро пожаловать!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЧем могу помочь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk22:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Привет!
+      - control:
+          kind: pause
+          length: short
+      - text: " Рад тебя видеть!"
+  talk23:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Я тебя сразу не узнал!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nНу как поживаешь?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я, как видишь, добрался сюда живым\nи здоровым, хотя встретил по пути\nпару бандитов..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Хорошо, что бандиты\nне умеют летать!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Новая Деревня — классное место.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПрежде всего потому, что мама не\nзудит."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "А еще я могу продавать то, что\nхочу — это просто здорово!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "В общем, я к твоим услугам."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nПриходи в любое время."
+  talk24:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Пока!
+  talk25:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Всегда к твоим услугам!
+  talk26:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Я еще достану!
+  talk27:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Больше нет, но я еще закажу."
+  talk29:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Доброе утро.
+  talk30:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Привет.
+  talk31:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Приветствую.
+  talk32:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Я к твоим услугам.
+  talk33:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Спасибо за совет!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Надеюсь,\nты меня там навестишь!"
+  talk34:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Что еще за "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Новая Деревня
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nРассказывай!"
+  talk35:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Значит, им нужен тот, кто\nразбирается в торговле..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Хм, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Аккала
+      - control:
+          kind: reset_colour
+      - text: " далеко..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Это хорошо."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: У меня наконец будет свой магазин...
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  talk39:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Знаешь, торговля не такая уж простая\nштука."
+      - control:
+          kind: pause
+          length: short
+      - text: " Теперь я понимаю, почему мама\nвсегда просила помочь."
+  talk40:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ты слышал, что у нас тут свадьба\nнамечается?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Топорда женится на\nГерде."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk41:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Я тоже за них очень рад!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Надеюсь, на свадьбе будет много\nгостей..."
+      - control:
+          kind: pause
+          length: short
+      - text: " и они раскупят весь мой\nтовар."
+  talk42:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Не слышал?!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ничего себе.
+      - control:
+          kind: pause
+          length: short
+      - text: " Ну ты хотя\nбы с ними поговори..."
+  talk43:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Знаешь, торговать непросто,\nзато у меня собственное дело."
+  talk44:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Классная была свадьба!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Топорда хорошо держался, ну а про\nГерду и говорить нечего."
+      - control:
+          kind: pause
+          length: short
+      - text: " Они отлично\nсмотрелись вместе."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Интересно, какая свадьба\nбыла у моих родителей?.."
+  talk45:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Топорда хотел с тобой\nо чем-то поговорить."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Он вон там с Гердой стоит.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nУзнай, что он хотел, ладно?"
+  talk46:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Я рад, что свадьба прошла как надо."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nГерда смотрелась просто потрясающе."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Ха-ха!
+      - control:
+          kind: pause
+          length: short
+      - text: " Надеюсь, когда-нибудь\nи я найду свою вторую половинку!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Ладно, не буду отвлекать тебя\nболтовней."
+      - control:
+          kind: pause
+          length: short
+      - text: " Да и мне есть чем\nзаняться!"
+  talk47:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Как поживаешь?
+      - control:
+          kind: pause
+          length: short
+      - text: " У меня все как\nобычно, то есть замечательно."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Ты, как я вижу, все путешествуешь."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Приходи в любое время.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nЯ всегда рад тебе помочь."
+  talk48:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Слезь, пожалуйста."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ты хороший\nпарень, но так вести себя нельзя."
+  talk49:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Пожалуйста, слезь со стола."
+  talk50:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Ты не мог бы слезть со стола?
+  talk51:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Не ходи по прилавку.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nСлезь, пожалуйста."

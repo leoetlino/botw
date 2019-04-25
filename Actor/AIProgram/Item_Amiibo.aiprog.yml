@@ -1,0 +1,164 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 6
+      Demo_Idling: 7
+      Demo_Join: 8
+      Demo_OpenGetDemo: 9
+      Demo_PlayASForDemo: 10
+      Demo_PlayASForTimeline: 11
+      Demo_ResetBoneCtrl: 12
+      Demo_SendSignal: 13
+      Demo_SetGetFlag: 14
+      Demo_TrigNullASPlay: 15
+      Demo_UpdateDataByGetDemo: 16
+      Demo_VisibleOff: 17
+      Demo_XLinkEventCreate: 18
+      Demo_XLinkEventFade: 19
+      Demo_XLinkEventKill: 20
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 ItemAmiiboRoot, GroupName: ''}
+            ChildIdx: !obj {ウルフリンク検出: 1, エポナ対応対象のリンク検出: 2, ドロップテーブルからアクタ生成: 3}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: ウルフリンク検出, ClassName: !str32 WolfLinkAmiibo, GroupName: Root}
+            ChildIdx: !obj {ワープ: 4, 登録: 5}
+            SInst: !obj {AreaThreshold: 900.0, AreaSearchRadius: 40.0, AreaSearchCharacterRadius: 2}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: エポナ対応対象のリンク検出, ClassName: !str32 CreateEpona, GroupName: Root}
+            SInst: !obj {AreaThreshold: 900.0, AreaSearchRadius: 40.0, AreaSearchCharacterRadius: 2,
+              CreateStartRate: 0.2}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: ドロップテーブルからアクタ生成, ClassName: !str32 ItemAmiiboSelectDropTable,
+              GroupName: Root}
+            SInst: !obj
+              TableCommon: Item_Amiibo_DropTable_000
+              TableGanondorf: Item_Amiibo_DropTable_001
+              TableToonLink: Item_Amiibo_DropTable_002
+              TableSheik: Item_Amiibo_DropTable_003
+              TableLink: Item_Amiibo_DropTable_004
+              TableZelda: Item_Amiibo_DropTable_005
+              TableWolfLink: Item_Amiibo_DropTable_006
+              TableGuardian: Item_Amiibo_DropTable_016
+              TableBokoblin: Item_Amiibo_DropTable_017
+              TableCross_Ganondorf: Item_Amiibo_DropTable_001
+              TableCross_ToonLink: Item_Amiibo_DropTable_002
+              TableCross_Sheik: Item_Amiibo_DropTable_003
+              TableCross_Link: Item_Amiibo_DropTable_007
+              TableCross_Zelda: Item_Amiibo_DropTable_020
+              TableKing_WolfLink: Item_Amiibo_DropTable_006
+              TableKing_Link_Bow: Item_Amiibo_DropTable_008
+              TableKing_Link_Horse: Item_Amiibo_DropTable_009
+              TableKing_Zelda_Doctor: Item_Amiibo_DropTable_010
+              TableKing_Guardian: Item_Amiibo_DropTable_016
+              TableKing_Bokoblin: Item_Amiibo_DropTable_017
+              TableKing30th_Link_Ocarina: Item_Amiibo_DropTable_018
+              TableKing30th_Link_Majora: Item_Amiibo_DropTable_019
+              TableKing30th_Link_Takt: Item_Amiibo_DropTable_002
+              TableKing30th_Zelda_Takt: Item_Amiibo_DropTable_023
+              TableKing30th_Link_Twilight: Item_Amiibo_DropTable_007
+              TableKing30th_Link_Skyward: Item_Amiibo_DropTable_021
+              TableKing30th_Link_Dot: Item_Amiibo_DropTable_022
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: ワープ, ClassName: !str32 WolfLinkAmiiboWarp, GroupName: ウルフリンク検出}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 登録, ClassName: !str32 WolfLinkAmiiboRegister, GroupName: ウルフリンク検出}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

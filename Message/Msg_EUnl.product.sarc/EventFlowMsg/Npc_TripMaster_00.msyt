@@ -1,0 +1,1838 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Kopen!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Verkopen!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Laat maar...
+  "1000":
+    attributes: ""
+    contents:
+      - text: Ruilen!
+  "1001":
+    attributes: ""
+    contents:
+      - text: Stoppen.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kopen.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar...
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  ClearTerrorEnemy:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 16
+            - 205
+      - text: Oef...
+  ClearTerrorGuardian:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 16
+            - 205
+      - text: Dat was eng...
+  Com_Talk_00:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Wat wil je verkopen?
+  Com_Talk_01:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Wat denk je van "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Duizendmaal dank! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Heb je verder nog\niets dat je wilt verkopen?"
+  Com_Talk_02b:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Dank je!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wil je nog iets verkopen?"
+  Com_Talk_02c:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Heel erg bedankt!
+      - control:
+          kind: pause
+          length: short
+      - text: " Heb je nog iets voor\nme?"
+  Com_Talk_02d:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Dank je!
+      - control:
+          kind: pause
+          length: short
+      - text: " Heb je nog iets voor me?"
+  Com_Talk_04:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: "O, nee..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Dat is jammer!"
+  Com_Talk_05:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Ik koop alles!
+  Com_Talk_05b:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Je kunt me bijna alles verkopen!
+  Com_Talk_05c:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Ik koop alles wat je kwijt wilt!
+  Com_Talk_05d:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Verkoop me alles wat je hebt!
+  Com_Talk_06:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: Ik kan alles aanbevelen!
+  Com_Talk_07:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: "O, het spijt me..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Dat heb ik op het\nmoment niet..."
+  Com_Talk_08:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 14
+      - text: Uh... Je hebt niet genoeg rupees...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nScheer je weg!"
+  Com_Talk_09:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 16
+      - text: "O, je kunt niets meer dragen!"
+      - control:
+          kind: pause
+          length: long
+      - text: " Maak eerst\neen beetje ruimte vrij en kom dan terug!"
+  Com_Talk_10:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: Is dat wat je wilt kopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Enorm bedankt!
+  Com_Talk_11b:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Dank je!
+  Com_Talk_11c:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Ontzettend bedankt!
+  Com_Talk_11d:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Dank je voor alles!
+  Com_Talk_12:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Ik weet zeker dat er ook iets voor jou\ntussen zit. Kijk maar even rustig rond."
+  Com_Talk_13:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: Hoeveel wil je er kwijt?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " verkopen? Daar geef ik je\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: voor. Oké?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: Dat kan ik helaas niet kopen. Sorry...
+  Com_Talk_16:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Misschien moet je die kleren eerst\nuitdoen."
+  Com_Talk_30:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: Hoeveel wil je er?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_31:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "? Dat is dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - control:
+          kind: reset_colour
+      - text: ".\nKlinkt dat goed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_32:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Je wilt er maar eentje? Dat is dan\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - control:
+          kind: reset_colour
+      - text: ". Oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_33:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Je wilt er maar eentje kwijt? Dat is dan\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - control:
+          kind: reset_colour
+      - text: ". Oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 20
+      - text: "Je wilt ze allemaal kopen? Het zijn er\n"
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", dus dat kost je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Wat\nzeg je ervan?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 20
+      - text: "Je wilt ze allemaal kwijt? Het zijn er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ",\ndus daar kan ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor\ngeven. Wat zeg je ervan?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Alles is vandaag uitverkocht!
+      - control:
+          kind: pause
+          length: short
+      - text: " Bedankt\nvoor al je aankopen!"
+  Com_Talk_37:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Alles is uitverkocht vandaag! Bedankt\nvoor je aankopen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Wil je zien welke spullen ik ga bestellen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_talk_17:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Hartelijk bedankt. Je bent echt een\ngoede klant!"
+  Com_talk_18:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Dit is zelfs effectief tegen "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Wachters
+      - control:
+          kind: reset_colour
+      - text: "!\nGeweldig, hè?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Het werkt blijkbaar het best als je het\noog van een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Wachter
+      - control:
+          kind: reset_colour
+      - text: " ermee raakt."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik heb het gekregen van een oude kerel \ndie "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Robbie
+      - control:
+          kind: reset_colour
+      - text: " heet."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Hem vind je in het "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Akkala-instituut
+      - control:
+          kind: reset_colour
+      - text: ", heel\nver ten noorden van het Zora-paleis."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 12
+      - text: "Hij is wat je noemt een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "verstrooide\nprofessor"
+      - control:
+          kind: reset_colour
+      - text: ". Eng, hè?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Maar als je op zoek bent naar sterke \nwapens en dergelijke, moet je bij hem\nzijn!"
+  Com_talk_19:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "O, vergeef me mijn bemoeizucht, maar...\nje hebt Robbie ontmoet?!"
+  Com_talk_20:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ik wil je dit "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: cadeau
+      - control:
+          kind: reset_colour
+      - text: " geven als teken van\nmijn waardering!"
+  Near:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: "Joehoe, kom eens hier!"
+  TerrorAnimal:
+    attributes: ""
+    contents:
+      - text: Ga weg!
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: Hou op!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: Wow!
+  TerrorEnemy:
+    attributes: ""
+    contents:
+      - text: Hé!
+  TerrorExplosion:
+    attributes: ""
+    contents:
+      - text: Aaah!
+  TerrorFire:
+    attributes: ""
+    contents:
+      - text: Ik ben bang voor vuur!
+  TerrorGuardian:
+    attributes: ""
+    contents:
+      - text: Help!
+  TerrorHorse:
+    attributes: ""
+    contents:
+      - text: Brrr!
+  TerrorImpulse:
+    attributes: ""
+    contents:
+      - text: Ohhh!
+  TerrorInsect:
+    attributes: ""
+    contents:
+      - text: Ik haat bijen!
+  TerrorLightning:
+    attributes: ""
+    contents:
+      - text: Ai!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Wat doe je nou?!
+  talk_00:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Hallo! Jou heb ik hier nog niet eerder\ngezien! Aangenaam!"
+  talk_01:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "O, dat valt me tegen..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik hoop je snel\nweer te zien..."
+  talk_02:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Ik hoop je snel weer te mogen\nbegroeten!"
+  talk_03:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Hé, wij hebben elkaar eerder gezien!"
+  talk_04:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Ah, daar ben je weer! Ik ben altijd blij\nje weer te zien!"
+  talk_05:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: O! Je hebt een...
+      - control:
+          kind: pause
+          length: long
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: zwaardneushoornkever
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ik ben gek op "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: zwaardneushoornkevers
+      - control:
+          kind: reset_colour
+      - text: "!\nZou je hem aan mij willen geven?"
+  talk_06:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Wauw! Is dat een...
+      - control:
+          kind: pause
+          length: long
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: harnaskever
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ik hou van "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: harnaskevers
+      - control:
+          kind: reset_colour
+      - text: "! Ik neem hem\ngraag van je over, als je wilt..."
+  talk_07:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Maar natuurlijk niet voor niets! Wil je\nruilen voor een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: beschermend drankje
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_08:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Je krijgt uiteraard ook iets van mij! Wat\ndenk je van "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: wild met rijst
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_09:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Huh?
+      - control:
+          kind: pause
+          length: long
+      - text: " W-wat heb je daar?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "D-dat is een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: krachtkever
+      - control:
+          kind: reset_colour
+      - text: "! Die zijn\nheel zeldzaam!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Zou je die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "krachtkever "
+      - control:
+          kind: reset_colour
+      - text: "alsjeblieft aan\nmij willen geven?!"
+  talk_10:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Ik zal je als dank uiteraard iets geven!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWat denk je van een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: sprintdrankje
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: reset_colour
+      - text: "Als je er een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "sprintkikker "
+      - control:
+          kind: reset_colour
+      - text: "aan toevoegt\nen goed roert, krijg je het speciale\ndrankje van Beedle!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_11:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Hallo! Welkom...
+      - control:
+          kind: pause
+          length: longer
+  talk_12:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 1
+      - text: "... ... ..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: animation
+          name: CustomBadThink
+      - text: "Dat meen je niet... Zo jong en dan al\nzo gierig. Ik had je wel iets vrijgeviger\ningeschat...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Nou ja, is niet erg. Ik kan mensen\nblijkbaar slecht inschatten..."
+  talk_13:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "Wauw! Ontzettend bedankt! Ik wist dat je\nme niet zou teleurstellen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ik zal deze kever al mijn liefde geven en\neen goede vriend voor hem zijn!"
+  talk_14:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "O, "
+      - control:
+          kind: pause
+          length: short
+      - text: "je kunt niks meer dragen. Ik ben bang\ndat we dan nog even moeten wachten."
+  talk_15:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 1
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: "Echt? Maar dit is toch een geweldig\naanbod..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Ik snap het niet..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 1
+      - text: "... ..."
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: animation
+          name: CustomBadThink
+      - text: "Misschien kan ik binnensluipen als hij in de stal\nligt te slapen..."
+      - control:
+          kind: pause
+          length: long
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Nee, ik huur gewoon een of andere schurk in. Ik\nwil mijn handen er niet aan vuilmaken..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: animation
+          name: CustomBadThink
+      - text: "Hmmm... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Lastig, lastig..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "... ... ..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "O, sorry. Mijn gedachten dwaalden even\naf..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Als je je bedenkt, weet je me te\nvinden!"
+  talk_16:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomBigHappy
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Wauw! Heel erg bedankt!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Deze zie je niet vaak! Ik weet zeker dat\nde zaken vandaag heel goed lopen!"
+  talk_17:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: animation
+          name: CustomUrge
+      - text: "Zo, waar ben je naar op zoek? Of wil je\niets verkopen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk_18:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Wauw! Bedankt voor je klandizie! En ik\nben echt helemaal in mijn nopjes met de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: kever
+      - control:
+          kind: reset_colour
+      - text: " die je me eerder hebt gegeven!"
+  talk_19:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 20
+      - text: "O, dus je wilt me die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: krachtkever
+      - control:
+          kind: reset_colour
+      - text: "\ngeven?!"
+  talk_20:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 20
+      - text: "Ja, ja! Dus je wilt me die\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "zwaardneushoornkever "
+      - control:
+          kind: reset_colour
+      - text: geven?!
+  talk_21:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Aha! Dus je wilt me die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: harnaskever
+      - control:
+          kind: reset_colour
+      - text: "\ngeven?!"
+  talk_22:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Je krijgt er uiteraard ook iets voor terug!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nWat denk je van een MAX-drankje?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: reset_colour
+      - text: "Als je er een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "hartjeshagedis "
+      - control:
+          kind: reset_colour
+      - text: "aan\ntoevoegt en goed roert, krijg je het\nspeciale drankje van Beedle!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_23:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "In ruil daarvoor krijg je van mij dan een\n"
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: energiegevend drankje
+      - control:
+          kind: reset_colour
+      - text: ". Lijkt je dat wat?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: reset_colour
+      - text: "Als je er een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "krachtkrab "
+      - control:
+          kind: reset_colour
+      - text: "aan toevoegt\nen goed roert, krijg je het speciale\ndrankje van Beedle!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_24:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Als je nog niet overtuigd bent, heb ik een\ngeweldig aanbod voor je: "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: feeënwater
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - control:
+          kind: reset_colour
+      - text: "Als je er een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "fee "
+      - control:
+          kind: reset_colour
+      - text: "aan toevoegt en goed\nroert, krijg je het speciale drankje van\nBeedle!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_25:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Goed...
+  talk_26:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "O, je bent er weer. Ben je iets vergeten?"
+  talk_27:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 20
+      - text: Wauw! Bedankt voor...
+      - control:
+          kind: pause
+          length: longer
+  talk_28:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: O! Bedankt voor je bez-...
+      - control:
+          kind: pause
+          length: longer
+  talk_29:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Hé! Hoe gaat h-...
+      - control:
+          kind: pause
+          length: longer
+  talk_30:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 3
+      - text: "Hallo, welkom! Ik ben je nog steeds heel\nerg dankbaar voor de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: kever
+      - control:
+          kind: reset_colour
+      - text: " die je me\neerder hebt gegeven."
+  talk_31:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Kom morgen maar terug als je er nog\neentje vindt! Vandaag moet ik al mijn\naandacht aan dit kereltje geven..."
+  talk_32:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "Jippie! Dat maakt me blij! Je hebt het\nhart op de juiste plek!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ik zal onvoorwaardelijk van deze "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: kever
+      - control:
+          kind: reset_colour
+      - text: "\nhouden en een goede vriend voor hem\nzijn!"
+  talk_33:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomBigHappy
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Jippie! Dank je! Dit is geweldig!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "Deze zijn heel moeilijk te vinden. Als dat\ngeen goed teken is..."
+  talk_34:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Maar natuurlijk niet gratis! Wil je ruilen\nvoor een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: groenteomelet
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_35:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Je krijgt uiteraard ook iets van mij!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wat\ndenk je van een "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: krachtgevend drankje
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_36:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Enorm bedankt!
+      - control:
+          kind: pause
+          length: short
+      - text: " Heb je verder nog iets\nnodig?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk_37:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Ik ben "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Beedle
+      - control:
+          kind: reset_colour
+      - text: ", en je kunt me herkennen\naan deze "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: kevervormige
+      - control:
+          kind: reset_colour
+      - text: " rugzak!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "Hoewel we in gevaarlijke tijden leven,\nga ik nog iedere dag op pad voor mijn\nklanten.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Mijn assortiment is speciaal afgestemd\nop de behoeften van reizigers. En dat\nalles natuurlijk voor een zacht prijsje!\nIk verkoop ook speciale insecten, en als\nje om "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: rupees
+      - control:
+          kind: reset_colour
+      - text: " verlegen zit, koop ik\nmet plezier alles wat je kwijt wilt."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Voor "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: edelstenen
+      - control:
+          kind: reset_colour
+      - text: " en dergelijke betaal ik\nje gegarandeerd een leuke prijs."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: animation
+          name: CustomUrge
+      - text: "Dus, hoe kan ik je van dienst zijn?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8

@@ -1,0 +1,1291 @@
+---
+group_count: 67
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "Ja, natuurlijk!"
+  "0001":
+    attributes: ""
+    contents:
+      - text: Nee. Waar was het?
+  "0004":
+    attributes: ""
+    contents:
+      - text: Ken je Tarrey?
+  "0005":
+    attributes: ""
+    contents:
+      - text: Hmmm...
+  "0007":
+    attributes: ""
+    contents:
+      - text: Ik wil wat verkopen.
+  "0008":
+    attributes: ""
+    contents:
+      - text: Hallo!
+  "0009":
+    attributes: ""
+    contents:
+      - text: Tot ziens!
+  "0011":
+    attributes: ""
+    contents:
+      - text: Dat klopt!
+  "0012":
+    attributes: ""
+    contents:
+      - text: Ik weet het niet...
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: "Nee, dank je."
+  "5502":
+    attributes: ""
+    contents:
+      - text: Kopen.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Dan niet.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Alles kopen.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - text: Oké.
+      - control:
+          kind: pause
+          length: short
+      - text: " Welke wil je verkopen?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Daar heb ik "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: voor over.
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Bedankt!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Wil je nog iets anders\nverkopen?"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Bedankt! "
+      - control:
+          kind: pause
+          length: short
+      - text: Wil je de rest ook verkopen?
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Dankjewel!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wil je nog iets anders\nverkopen?"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Goed! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Is er nog iets anders dat je wilt\nverkopen?"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - text: Snap ik!
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: Ik koop alles!
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Verkoop me alles!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Laat maar eens zien wat je hebt.
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Je wilt me iets verkopen? Oké!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Hoeveel wil je er daarvan verkopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " verkopen? Daar geef ik\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor, oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: Dat kan ik niet kopen...
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Je moet je kleren eerst uitdoen voordat\nje ze kunt verkopen!"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Voor die ene kan ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "\ngeven."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "Je koopt meteen alles? Het zijn er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ",\ndus dan kom je uit op "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Meteen alles? Oké, voor "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "\nkoop ik de "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " die je hebt."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Dit kost je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - control:
+          kind: reset_colour
+      - text: Hoeveel wil je er daarvan kopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - text: "Om er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " te kunnen kopen heb je\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " nodig. Gaat dat lukken?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - text: Wil je stoppen?
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Oei... "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Het lijkt erop dat je niet genoeg\nrupees hebt."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Je hebt geen plek meer voor nieuwe\nspullen!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Als er iets is dat je kwijt wilt, kan\nik het misschien van je kopen..."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Eentje is genoeg? Per stuk kost dat\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - " rupee"
+      - control:
+          kind: reset_colour
+      - text: ", oké?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  near00:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Ach...
+  near01:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Welkom!
+  near02:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Ah...
+  near03:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Klim daar niet op...
+  near04:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Klim daar niet op!
+  near05:
+    attributes: Npc_HighMountain010
+    contents:
+      - text: Kom eraf!
+  talk00:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Misschien kan ik op weg naar "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tarrey "
+      - control:
+          kind: reset_colour
+      - text: "wat\nvoorwerpen verzamelen om in de winkel\nte verkopen..."
+  talk01:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Dan kun je later nog eens komen kijken...
+  talk02:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Door dat ding is het hele dorp in paniek.
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Maar dat is niet alles...
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Mijn moeder doet ook enorm vervelend.\nVan haar moet ik elke dag in de winkel\nhelpen.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 0
+      - text: Ik kan er niet meer tegen...
+  talk03:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Ik heb geen zin om in een winkel te\n'helpen'. Ik wil een eigen winkel openen\nom mijn eigen waren te verkopen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 16
+      - text: "Ik vraag me af waar ik dat zou kunnen\ndoen..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Heb jij misschien een suggestie?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk04:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Ik heb geen zin om in een winkel te\n'helpen'. Ik wil een eigen winkel openen\nom mijn eigen waren te verkopen."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Ik vraag me af waar ik dat zou kunnen\ndoen..."
+  talk05:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "Jammer, ik dacht dat zo'n wereldreiziger\nals jij me vast wel een mooie tip kon\ngeven.\nKun je het me laten weten als je later\nnog een mooie locatie tegenkomt?"
+  talk06:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Rustig aan, er is geen haast.\nGa eerst maar eens zitten."
+  talk07:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Oké!
+      - control:
+          kind: pause
+          length: short
+      - text: " Je hebt me overtuigd!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ik ga!"
+  talk08:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Heb je 'm gezien?"
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Vah Medoh
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk09:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ik ben blij dat "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Medoh "
+      - control:
+          kind: reset_colour
+      - text: "is gekalmeerd,\nmaar dat was niet mijn enige probleem!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Mijn moeder heeft me verteld dat ze wil\ndat ik later de winkel overneem..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Alsof\nik daarop zit te wachten!"
+  talk10:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedemorgen!
+  talk11:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hallo!
+  talk12:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedenavond!
+  talk14:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 4
+      - text: Ach...
+  talk15:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik ben "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Vah Medoh "
+      - control:
+          kind: reset_colour
+      - text: "beu... en mijn moeder\nook..."
+  talk16:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ik ben mijn moeder beu...
+  talk17:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Maar nu "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Medoh
+      - control:
+          kind: reset_colour
+      - text: " hier rondvliegt, moet ik\nmaar eens op weg gaan."
+  talk18:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: Zeg...
+      - control:
+          kind: pause
+          length: short
+      - text: " Heb jij het niet koud?"
+  talk19:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "Vat dit niet persoonlijk op, maar\nmisschien is het verstandig om kleren\naan te doen?"
+  talk20:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 3
+      - text: Welkom!
+      - control:
+          kind: pause
+          length: short
+      - text: " Kan ik je helpen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk22:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: Hé!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Dat is alweer een tijdje geleden!"
+  talk23:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Ik ben het... Fyson!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Op de weg hiernaartoe werd ik wel door\neen paar schooiers lastiggevallen, maar\nhet is me toch gelukt om hier te komen.\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tarrey "
+      - control:
+          kind: reset_colour
+      - text: is echt geweldig!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Vooral omdat\nmijn moeder te ver weg is om me lastig\nte vallen...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "En het is echt geweldig om zelf waren\nte bestellen en te verkopen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Kom zelf eens kijken, je bent van harte\nwelkom!"
+  talk24:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Tot ziens!
+  talk25:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: Bedankt voor je aankopen!
+  talk26:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Ik zal ervoor zorgen dat mijn waren voor\nje volgende bezoek weer aangevuld zijn!"
+  talk27:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Oei. Dat product is uitverkocht...
+      - control:
+          kind: pause
+          length: short
+      - text: "\nIk zal er meteen van bijbestellen."
+  talk29:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedemorgen!
+  talk30:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hallo!
+  talk31:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Goedenavond!
+  talk32:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ik help je wel!
+  talk33:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: Bedankt voor de tip!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ik hoop dat je ook\neen keer op bezoek zult komen."
+  talk34:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Tarrey
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Wat? "
+      - control:
+          kind: pause
+          length: short
+      - text: Vertel!
+  talk35:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: O!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Dus je hebt iemand nodig om een\nwinkel voor je te runnen?\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Maar "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Akkala "
+      - control:
+          kind: reset_colour
+      - text: "is wel een beetje uit de\nrichting, denk je niet?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Hoewel me dat niet veel uitmaakt als ik daar m'n\neigen winkel kan openen..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  talk39:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Het hebben van een winkel is moeilijker\ndan ik had verwacht."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ik kan nog heel wat\nvan mijn moeder leren..."
+  talk40:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hé, gaan Hudson en Rhondson niet\nbinnenkort trouwen?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk41:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Ik ben zo blij voor ze!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "En ik hoop dat er veel mensen naar\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Tarrey "
+      - control:
+          kind: reset_colour
+      - text: komen voor het feest.
+  talk42:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Wat!
+      - control:
+          kind: pause
+          length: short
+      - text: " Wist je dat nog niet?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Vraag het ze zelf maar!
+  talk43:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Het is best lastig om producten te\nbestellen en te verkopen, maar ik word\ner steeds beter in!"
+  talk44:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Wat een geweldige bruiloft!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hudson is een toffe kerel en Rhondson is\nzo charmant."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ze passen perfect bij\nelkaar!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik vraag me af "
+      - control:
+          kind: pause
+          length: short
+      - text: "of mijn ouders vroeger ook\nzo'n leuk koppel waren."
+  talk45:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "O ja, heb je gehoord dat Hudson je wil\nspreken?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Je vindt hem vast bij Rhondson.
+  talk46:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ik ben zo blij dat de bruiloft zo goed is\nverlopen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "Ik hoop dat ik op een dag een bruid vind\ndie net zo mooi is als zij!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "En nu is het tijd om terug naar mijn\nwinkel te gaan, want ik kan mijn klanten\nniet laten wachten."
+  talk47:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Hoe gaat het met jou?
+      - control:
+          kind: pause
+          length: short
+      - text: " Met mij gaat het\ngoed!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Zeg, ben jij toevallig een reiziger?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Kom gerust naar mij toe als je iets nodig\nhebt!"
+  talk48:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Het maakt me niet uit of je een klant bent\nof niet,"
+      - control:
+          kind: pause
+          length: short
+      - text: " je kunt niet zomaar daarop gaan\nstaan!"
+  talk49:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Kom daar eens van af...
+  talk50:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Zou je zo vriendelijk willen zijn om daar\nniet op te gaan staan..."
+  talk51:
+    attributes: Npc_HighMountain010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "De andere klanten hebben last van je,\ndus kom daar eens van af!"

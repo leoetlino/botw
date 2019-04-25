@@ -1,0 +1,170 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 12
+      Demo_Idling: 13
+      Demo_Join: 14
+      Demo_OpenGetDemo: 15
+      Demo_PlayASForDemo: 16
+      Demo_PlayASForTimeline: 17
+      Demo_ResetBoneCtrl: 18
+      Demo_SendSignal: 19
+      Demo_SetGetFlag: 20
+      Demo_TrigNullASPlay: 21
+      Demo_UpdateDataByGetDemo: 22
+      Demo_VisibleOff: 23
+      Demo_WarpToPos: 24
+      Demo_XLinkEventCreate: 25
+      Demo_XLinkEventFade: 26
+      Demo_XLinkEventKill: 27
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 10, 持ち運びボックス内: 5, 通常: 3}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 刺さる, ClassName: !str32 MetalObjectBuried, GroupName: 通常}
+            ChildIdx: !obj {地上: 2, 地中: 8}
+            SInst: !obj
+              PullOutSpeed: 0.266667
+              IsIgnoreResistanceArea: true
+              CheckGroundRadiusScale: 0.6
+              IsCheckGrabYPosFix: true
+              IsCheckSelfY: true
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 地上, ClassName: !str32 MetalObjectFixed, GroupName: 刺さる}
+            ChildIdx: !obj {固定中: 4, 通常: 9}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 SiteBossSwordIronPileRoot, GroupName: BaseAI}
+            ChildIdx: !obj {刺さる: 1, 待機: 7, 消滅: 6, 落下: 11}
+            SInst: !obj {FallWaitCount: 0.0, FallSpeed: 8.0, SlopeRate: 0.0872665}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 固定中, ClassName: !str32 DummyAction, GroupName: 地上}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 InCarryBox, GroupName: Root}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 消滅, ClassName: !str32 SystemSleep, GroupName: 通常}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 地中, ClassName: !str32 DummyAction, GroupName: 刺さる}
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 DummyAction, GroupName: 地上}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 落下, ClassName: !str32 DummyAction, GroupName: 通常}
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToPos, ClassName: !str32 WarpToPos, GroupName: ''}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

@@ -1,0 +1,1554 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects: {}
+  lists:
+    ParamSet: !list
+      objects:
+        1258832850: !obj
+          use_rigid_body_set_num: 4
+          use_ragdoll: true
+          use_cloth: false
+          use_support_bone: false
+          use_character_controller: true
+          use_contact_info: true
+          use_edge_rigid_body_num: 0
+          use_system_group_handler: true
+        Ragdoll: !obj {ragdoll_setup_file_path: !str256 Enemy_Giant_Bone/Enemy_Giant_Bone.hkrg}
+      lists:
+        RigidContactInfo: !list
+          objects:
+            3387849585: !obj {contact_point_info_num: 6, collision_info_num: 5}
+            ContactPointInfo_0: !obj {name: !str32 Tgt, type: !str32 NPCSensor, num: 30}
+            ContactPointInfo_1: !obj {name: !str32 EnemyAttack, type: !str32 EnemyAttack,
+              num: 32}
+            ContactPointInfo_2: !obj {name: !str32 Body, type: !str32 Body, num: 32}
+            ContactPointInfo_3: !obj {name: !str32 BgSensor, type: !str32 HitToGround,
+              num: 128}
+            ContactPointInfo_4: !obj {name: !str32 CharacterController, type: !str32 Body,
+              num: 32}
+            ContactPointInfo_5: !obj {name: !str32 DynamicBody, type: !str32 Body,
+              num: 1}
+            CollisionInfo_0: !obj {name: !str32 Search, type: !str32 SightCommon}
+            CollisionInfo_1: !obj {name: !str32 Tgt, type: !str32 NPCSensor}
+            CollisionInfo_2: !obj {name: !str32 EnemyAttack, type: !str32 EnemyAttack}
+            CollisionInfo_3: !obj {name: !str32 Body, type: !str32 CoHit}
+            CollisionInfo_4: !obj {name: !str32 BgSensor, type: !str32 HitToGround}
+          lists: {}
+        RigidBodySet: !list
+          objects: {}
+          lists:
+            RigidBodySet_0: !list
+              objects:
+                4288596824: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
+                  num: 13}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 Body
+                      mass: 80000.0
+                      inertia: !vec3 [45803.0, 227413.0, 227413.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 20.7806
+                      toi: false
+                      center_of_mass: !vec3 [2.0, -1.5, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [2.0, -1.5, 0.0]
+                      bounding_extents: !vec3 [6.2, 2.2, 2.2]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Body
+                      collision_info: !str32 Body
+                      bone: !str64 Spine_1
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Spine_1
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, -1.5, 0.0]
+                      translate_1: !vec3 [4.0, -1.5, 0.0]
+                      radius: 1.1
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                882113641: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyHead
+                      mass: 80000.0
+                      inertia: !vec3 [32000.0, 32000.0, 32000.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 4.18879
+                      toi: false
+                      center_of_mass: !vec3 [-0.5, 1.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-0.5, 1.0, 0.0]
+                      bounding_extents: !vec3 [2.0, 2.0, 2.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Body
+                      collision_info: !str32 Body
+                      bone: !str64 Head
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Head
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [-0.5, 1.0, 0.0]
+                      radius: 1.0
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                2912595411: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyArmR
+                      mass: 80000.0
+                      inertia: !vec3 [24623.4, 186291.0, 186190.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 10.1897
+                      toi: false
+                      center_of_mass: !vec3 [-2.0, 0.0, 0.05]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-2.0, 0.0, 0.05]
+                      bounding_extents: !vec3 [5.6, 1.6, 1.7]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 BgSensor
+                      collision_info: !str32 BgSensor
+                      bone: !str64 Arm_2_R
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Arm_2_R
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [-4.0, 0.0, 0.1]
+                      radius: 0.8
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3667762501: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyArmL
+                      mass: 80000.0
+                      inertia: !vec3 [24927.2, 186544.0, 186140.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 10.1972
+                      toi: false
+                      center_of_mass: !vec3 [2.0, 0.0, 0.1]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [2.0, 0.0, 0.1]
+                      bounding_extents: !vec3 [5.6, 1.6, 1.8]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 BgSensor
+                      collision_info: !str32 BgSensor
+                      bone: !str64 Arm_2_L
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Arm_2_L
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [4.0, 0.0, 0.2]
+                      radius: 0.8
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                1157171430: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyLegL
+                      mass: 80000.0
+                      inertia: !vec3 [9384.64, 37077.0, 37076.9]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 1.7017
+                      toi: false
+                      center_of_mass: !vec3 [0.75, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.75, 0.0, 0.0]
+                      bounding_extents: !vec3 [2.5, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 DynamicBody
+                      bone: !str64 Leg_2_L
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Leg_2_L
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [1.5, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                872298608: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyLegR
+                      mass: 80000.0
+                      inertia: !vec3 [9384.64, 37077.0, 37076.9]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 1.7017
+                      toi: false
+                      center_of_mass: !vec3 [-0.75, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-0.75, 0.0, 0.0]
+                      bounding_extents: !vec3 [2.5, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Body
+                      bone: !str64 Leg_2_R
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Leg_2_R
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [-1.5, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                2868341194: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyUpperArmR
+                      mass: 80000.0
+                      inertia: !vec3 [24623.4, 186291.0, 186190.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 10.1897
+                      toi: false
+                      center_of_mass: !vec3 [-1.0, 0.0, 0.05]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-1.0, 0.0, 0.05]
+                      bounding_extents: !vec3 [5.6, 1.6, 1.7]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 DynamicBody
+                      bone: !str64 Arm_1_R
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Arm_1_R
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [1.0, 0.0, 0.0]
+                      translate_1: !vec3 [-3.0, 0.0, 0.1]
+                      radius: 0.8
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3723516252: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyUpperArmL
+                      mass: 80000.0
+                      inertia: !vec3 [24623.4, 186291.0, 186190.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 10.1897
+                      toi: false
+                      center_of_mass: !vec3 [1.0, 0.0, 0.05]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.0, 0.0, 0.05]
+                      bounding_extents: !vec3 [5.6, 1.6, 1.7]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 DynamicBody
+                      bone: !str64 Arm_1_L
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Arm_1_L
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [-1.0, 0.0, 0.0]
+                      translate_1: !vec3 [3.0, 0.0, 0.1]
+                      radius: 0.8
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                1297040589: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodySpine2
+                      mass: 80000.0
+                      inertia: !vec3 [285262.0, 285262.0, 131178.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 62.7544
+                      toi: false
+                      center_of_mass: !vec3 [1.2, -0.5, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.2, -0.5, 0.0]
+                      bounding_extents: !vec3 [3.8, 3.8, 6.8]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Body
+                      collision_info: !str32 Body
+                      bone: !str64 Spine_2
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Spine_2
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [1.2, -0.5, 1.5]
+                      translate_1: !vec3 [1.2, -0.5, -1.5]
+                      radius: 1.9
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                977826907: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyWaist
+                      mass: 80000.0
+                      inertia: !vec3 [285262.0, 285262.0, 131178.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 62.7544
+                      toi: false
+                      center_of_mass: !vec3 [1.5, -0.5, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.5, -0.5, 0.0]
+                      bounding_extents: !vec3 [3.8, 3.8, 6.8]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Body
+                      collision_info: !str32 Body
+                      bone: !str64 Waist
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Waist
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [1.5, -0.5, 1.5]
+                      translate_1: !vec3 [1.5, -0.5, -1.5]
+                      radius: 1.9
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3229717793: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyRib1
+                      mass: 80000.0
+                      inertia: !vec3 [271604.0, 185863.0, 117848.0]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 25.3692
+                      toi: false
+                      center_of_mass: !vec3 [-1.4661, 0.68742, -0.218479]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-1.45215, 0.506096, -0.096295]
+                      bounding_extents: !vec3 [2.29088, 4.97295, 5.77762]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 DynamicBody
+                      bone: !str64 Spine_2
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Spine_2
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 10
+                      vertex_0: !vec3 [-1.5, -0.9, 2.8]
+                      vertex_1: !vec3 [-1.0, -1.0, -3.0]
+                      vertex_2: !vec3 [-2.4, 0.2, 2.5]
+                      vertex_3: !vec3 [-2.6, -1.0, -2.1]
+                      vertex_4: !vec3 [-0.3, 2.5, -3.0]
+                      vertex_5: !vec3 [-0.6, 2.5, 2.4]
+                      vertex_6: !vec3 [-1.6, 2.5, 2.4]
+                      vertex_7: !vec3 [-1.6, 2.5, -2.4]
+                      vertex_8: !vec3 [-0.9, 3.0, 0.0]
+                      vertex_9: !vec3 [-2.0, -2.0, 0.0]
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3079054775: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyRib2
+                      mass: 80000.0
+                      inertia: !vec3 [109609.0, 82920.9, 58501.3]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 7.89793
+                      toi: false
+                      center_of_mass: !vec3 [-0.329517, 1.40376, 1.84368]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-0.398932, 1.00758, 1.39185]
+                      bounding_extents: !vec3 [2.18937, 3.76793, 4.31057]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 DynamicBody
+                      bone: !str64 Spine_2
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Spine_2
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 7
+                      vertex_0: !vec3 [-1.5, 0.5, 3.25]
+                      vertex_1: !vec3 [0.1, -0.9, 2.95]
+                      vertex_2: !vec3 [-0.85, 2.5, 2.2]
+                      vertex_3: !vec3 [0.7, 1.5, 2.95]
+                      vertex_4: !vec3 [-1.1, 2.9, -0.45]
+                      vertex_5: !vec3 [0.4, 2.75, -0.8]
+                      vertex_6: !vec3 [-0.3, 1.0, 3.55]
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                781186061: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BodyRib3
+                      mass: 80000.0
+                      inertia: !vec3 [109791.0, 66298.9, 60634.4]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 6.4898
+                      toi: false
+                      center_of_mass: !vec3 [0.191724, 1.11433, -1.88728]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.175359, 1.14442, -1.58269]
+                      bounding_extents: !vec3 [1.74087, 3.87103, 4.3041]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 DynamicBody
+                      bone: !str64 Spine_2
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 Giant
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: true
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Spine_2
+                      magne_mass_scaling_factor: 2.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 7
+                      vertex_0: !vec3 [0.7, 3.1, 0.6]
+                      vertex_1: !vec3 [1.05, -0.55, -2.95]
+                      vertex_2: !vec3 [-0.05, 2.2, 0.4]
+                      vertex_3: !vec3 [-0.7, 2.0, -2.5]
+                      vertex_4: !vec3 [0.55, 1.75, -2.85]
+                      vertex_5: !vec3 [0.0, 0.0, -3.75]
+                      vertex_6: !vec3 [-0.2, -0.8, -2.25]
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+            RigidBodySet_1: !list
+              objects:
+                4288596824: !obj {set_name: !str32 EntitySensor, type: !str32 from_shape_type,
+                  num: 2}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BgHandR
+                      mass: 1.0
+                      inertia: !vec3 [0.9, 0.9, 0.9]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: 12000.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: false
+                      center_of_mass: !vec3 [-1.5, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-1.5, 0.0, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 BgSensor
+                      collision_info: !str32 BgSensor
+                      bone: !str64 Wrist_R
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      contact_mask: !u 1637631
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 HitAll
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: false
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Wrist_R
+                      magne_mass_scaling_factor: 1.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [-1.5, 0.0, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                882113641: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 BgHandL
+                      mass: 1.0
+                      inertia: !vec3 [0.9, 0.9, 0.9]
+                      linear_damping: 0.0
+                      angular_damping: 0.05
+                      max_impulse: 12000.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: false
+                      center_of_mass: !vec3 [1.5, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.5, 0.0, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 BgSensor
+                      collision_info: !str32 BgSensor
+                      bone: !str64 Wrist_L
+                      water_buoyancy_scale: 1.0
+                      water_flow_effective_rate: 1.0
+                      layer: !str32 EntityNPC
+                      contact_mask: !u 1637631
+                      no_hit_ground: false
+                      no_hit_water: false
+                      groundhit: !str32 HitAll
+                      use_ground_hit_type_mask: false
+                      no_char_standing_on: false
+                      navmesh: !str32 NOT_USE
+                      navmesh_sub_material: !str32 
+                      link_matrix: Wrist_L
+                      magne_mass_scaling_factor: 1.0
+                      always_character_mass_scaling: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [1.5, 0.0, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+            RigidBodySet_2: !list
+              objects:
+                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
+                  num: 17}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtBody
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 20.7806
+                      toi: true
+                      center_of_mass: !vec3 [2.0, -1.5, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [2.0, -1.5, 0.0]
+                      bounding_extents: !vec3 [6.2, 2.2, 2.2]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorEnemy
+                      link_entity_set: Body
+                      link_entity_body: Body
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, -1.5, 0.0]
+                      translate_1: !vec3 [4.0, -1.5, 0.0]
+                      radius: 1.1
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                882113641: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtHead
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: true
+                      center_of_mass: !vec3 [0.0, 0.62, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.62, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Head
+                      layer: !str32 SensorEnemy
+                      link_matrix: Head
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.62, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                2912595411: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtArmR
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 9.1847
+                      toi: true
+                      center_of_mass: !vec3 [-1.75, 0.0, 0.05]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-1.75, 0.0, 0.05]
+                      bounding_extents: !vec3 [5.1, 1.6, 1.7]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Arm_2_R
+                      layer: !str32 SensorEnemy
+                      link_matrix: Arm_2_R
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [-3.5, 0.0, 0.1]
+                      radius: 0.8
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3667762501: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtArmL
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 9.19331
+                      toi: true
+                      center_of_mass: !vec3 [1.75, 0.0, 0.1]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.75, 0.0, 0.1]
+                      bounding_extents: !vec3 [5.1, 1.6, 1.8]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Arm_2_L
+                      layer: !str32 SensorEnemy
+                      link_matrix: Arm_2_L
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [3.5, 0.0, 0.2]
+                      radius: 0.8
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                1157171430: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtLegL
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 1.7017
+                      toi: true
+                      center_of_mass: !vec3 [0.75, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.75, 0.0, 0.0]
+                      bounding_extents: !vec3 [2.5, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Leg_2_L
+                      layer: !str32 SensorEnemy
+                      link_matrix: Leg_2_L
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [1.5, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                872298608: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtLegR
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 1.7017
+                      toi: true
+                      center_of_mass: !vec3 [-0.75, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-0.75, 0.0, 0.0]
+                      bounding_extents: !vec3 [2.5, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Leg_2_R
+                      layer: !str32 SensorEnemy
+                      link_matrix: Leg_2_R
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      translate_1: !vec3 [-1.5, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                2868341194: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtUpperArmR
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 10.1897
+                      toi: true
+                      center_of_mass: !vec3 [-1.0, 0.0, 0.05]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-1.0, 0.0, 0.05]
+                      bounding_extents: !vec3 [5.6, 1.6, 1.7]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Arm_1_R
+                      layer: !str32 SensorEnemy
+                      link_matrix: Arm_1_R
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [1.0, 0.0, 0.0]
+                      translate_1: !vec3 [-3.0, 0.0, 0.1]
+                      radius: 0.8
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3723516252: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtUpperArmL
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 10.1897
+                      toi: true
+                      center_of_mass: !vec3 [1.0, 0.0, 0.05]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.0, 0.0, 0.05]
+                      bounding_extents: !vec3 [5.6, 1.6, 1.7]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Arm_1_L
+                      layer: !str32 SensorEnemy
+                      link_matrix: Arm_1_L
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [-1.0, 0.0, 0.0]
+                      translate_1: !vec3 [3.0, 0.0, 0.1]
+                      radius: 0.8
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                1297040589: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 HookPosA
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 0.523599
+                      toi: false
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [1.0, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 HookBase_1
+                      layer: !str32 SensorEnemy
+                      link_matrix: HookBase_1
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                977826907: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 HookPosB
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 0.523599
+                      toi: false
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [1.0, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 HookBase_2
+                      layer: !str32 SensorEnemy
+                      link_matrix: HookBase_2
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3229717793: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 HookPosC
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 0.523599
+                      toi: false
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [1.0, 1.0, 1.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 HookBase_3
+                      layer: !str32 SensorEnemy
+                      link_matrix: HookBase_3
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 0.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3079054775: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtSpine2
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 62.7544
+                      toi: true
+                      center_of_mass: !vec3 [1.2, -0.5, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.2, -0.5, 0.0]
+                      bounding_extents: !vec3 [3.8, 3.8, 6.8]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorEnemy
+                      link_entity_set: Body
+                      link_entity_body: BodySpine2
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [1.2, -0.5, 1.5]
+                      translate_1: !vec3 [1.2, -0.5, -1.5]
+                      radius: 1.9
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                781186061: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtWaist
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 62.7544
+                      toi: true
+                      center_of_mass: !vec3 [1.5, -0.5, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [1.5, -0.5, 0.0]
+                      bounding_extents: !vec3 [3.8, 3.8, 6.8]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorEnemy
+                      link_entity_set: Body
+                      link_entity_body: BodyWaist
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 capsule
+                      translate_0: !vec3 [1.5, -0.5, 1.5]
+                      translate_1: !vec3 [1.5, -0.5, -1.5]
+                      radius: 1.9
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                1502135451: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtRib1
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 25.3692
+                      toi: true
+                      center_of_mass: !vec3 [-1.4661, 0.68742, -0.218479]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-1.45215, 0.506096, -0.096295]
+                      bounding_extents: !vec3 [2.29088, 4.97295, 5.77762]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorEnemy
+                      link_entity_set: Body
+                      link_entity_body: BodyRib1
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 10
+                      vertex_0: !vec3 [-1.5, -0.9, 2.8]
+                      vertex_1: !vec3 [-1.0, -1.0, -3.0]
+                      vertex_2: !vec3 [-2.4, 0.2, 2.5]
+                      vertex_3: !vec3 [-2.6, -1.0, -2.1]
+                      vertex_4: !vec3 [-0.3, 2.5, -3.0]
+                      vertex_5: !vec3 [-0.6, 2.5, 2.4]
+                      vertex_6: !vec3 [-1.6, 2.5, 2.4]
+                      vertex_7: !vec3 [-1.6, 2.5, -2.4]
+                      vertex_8: !vec3 [-0.9, 3.0, 0.0]
+                      vertex_9: !vec3 [-2.0, -2.0, 0.0]
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3354153272: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtRib2
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 7.89793
+                      toi: true
+                      center_of_mass: !vec3 [-0.329517, 1.40376, 1.84368]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-0.398932, 1.00758, 1.39185]
+                      bounding_extents: !vec3 [2.18937, 3.76793, 4.31057]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorEnemy
+                      link_entity_set: Body
+                      link_entity_body: BodyRib2
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 7
+                      vertex_0: !vec3 [-1.5, 0.5, 3.25]
+                      vertex_1: !vec3 [0.1, -0.9, 2.95]
+                      vertex_2: !vec3 [-0.85, 2.5, 2.2]
+                      vertex_3: !vec3 [0.7, 1.5, 2.95]
+                      vertex_4: !vec3 [-1.1, 2.9, -0.45]
+                      vertex_5: !vec3 [0.4, 2.75, -0.8]
+                      vertex_6: !vec3 [-0.3, 1.0, 3.55]
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                2968215982: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtRib3
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 6.4898
+                      toi: true
+                      center_of_mass: !vec3 [0.191724, 1.11433, -1.88728]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.175359, 1.14442, -1.58269]
+                      bounding_extents: !vec3 [1.74087, 3.87103, 4.3041]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorEnemy
+                      link_entity_set: Body
+                      link_entity_body: BodyRib3
+                      use_entity_shape: true
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 polytope
+                      vertex_num: 7
+                      vertex_0: !vec3 [0.7, 3.1, 0.6]
+                      vertex_1: !vec3 [1.05, -0.55, -2.95]
+                      vertex_2: !vec3 [-0.05, 2.2, 0.4]
+                      vertex_3: !vec3 [-0.7, 2.0, -2.5]
+                      vertex_4: !vec3 [0.55, 1.75, -2.85]
+                      vertex_5: !vec3 [0.0, 0.0, -3.75]
+                      vertex_6: !vec3 [-0.2, -0.8, -2.25]
+                      material: !str32 Bone
+                      sub_material: !str32 Bone
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                702689300: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 TgtEye
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 4.18879
+                      toi: true
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [2.0, 2.0, 2.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 Tgt
+                      collision_info: !str32 Tgt
+                      bone: !str64 Eyeball
+                      layer: !str32 SensorEnemy
+                      link_matrix: Eyeball
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 1.0
+                      material: !str32 CharControl
+                      sub_material: !str32 CharControl
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+            RigidBodySet_3: !list
+              objects:
+                4288596824: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
+                  num: 5}
+              lists:
+                RigidBody_0: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 AtkEnemyHandR
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: true
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 EnemyAttack
+                      collision_info: !str32 EnemyAttack
+                      bone: !str64 Weapon_R
+                      layer: !str32 SensorAttackCommon
+                      link_matrix: Weapon_R
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                882113641: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 AtkEnemyHip
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 113.097
+                      toi: true
+                      center_of_mass: !vec3 [-3.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [-3.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [6.0, 6.0, 6.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 EnemyAttack
+                      collision_info: !str32 EnemyAttack
+                      bone: !str64 Spine_1
+                      layer: !str32 SensorAttackCommon
+                      link_matrix: Spine_1
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [-3.0, 0.0, 0.0]
+                      radius: 3.0
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                2912595411: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 AtkEnemyLegL
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: true
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 EnemyAttack
+                      collision_info: !str32 EnemyAttack
+                      bone: !str64 Toe_L
+                      layer: !str32 SensorAttackCommon
+                      link_matrix: Toe_L
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                3667762501: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 AtkEnemyLegR
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: true
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 EnemyAttack
+                      collision_info: !str32 EnemyAttack
+                      bone: !str64 Toe_R
+                      layer: !str32 SensorAttackCommon
+                      link_matrix: Toe_R
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+                1157171430: !list
+                  objects:
+                    948250248: !obj
+                      rigid_body_name: !str64 AtkEnemyHandL
+                      max_impulse: -1.0
+                      col_impulse_scale: 1.0
+                      ignore_normal_for_impulse: false
+                      volume: 14.1372
+                      toi: true
+                      center_of_mass: !vec3 [0.0, 0.0, 0.0]
+                      max_linear_velocity: 200.0
+                      bounding_center: !vec3 [0.0, 0.0, 0.0]
+                      bounding_extents: !vec3 [3.0, 3.0, 3.0]
+                      max_angular_velocity_rad: 198.968
+                      motion_type: !str32 Keyframed
+                      contact_point_info: !str32 EnemyAttack
+                      collision_info: !str32 EnemyAttack
+                      bone: !str64 Weapon_L
+                      layer: !str32 SensorAttackCommon
+                      link_matrix: Weapon_L
+                      link_entity_set: ''
+                      link_entity_body: ''
+                      use_entity_shape: false
+                      shape_num: 1
+                    ShapeParam_0: !obj
+                      shape_type: !str32 sphere
+                      translate_0: !vec3 [0.0, 0.0, 0.0]
+                      radius: 1.5
+                      material: !str32 Undefined
+                      sub_material: !str32 Undefined
+                      wall_code: !str32 None
+                      floor_code: !str32 None
+                  lists: {}
+        CharacterController: !list
+          objects:
+            2311816730: !obj
+              use_nav_mesh_character: true
+              nav_mesh_character_radius: 3.2
+              nav_mesh_character_height: 10.0
+              nav_mesh_character_avoidance_priority: 0
+              nav_mesh_character_max_speed: 16.8
+              nav_mesh_character_max_acceleration: 40.0
+              nav_mesh_character_max_angular_velocity: 180.0
+              nav_mesh_character_type: !str32 PoorSwimmer
+              enable_water_effect: false
+              water_effective_height: 1.0
+              water_buoyancy_scale: 1.0
+              water_flow_effective_rate: 0.0
+              water_attn_effective_rate: 0.0
+              mass: 2025.0
+              initial_state: !str32 Default
+              layer: !str32 EntityNPC_NoHitPlayer
+              groundhit: !str32 Giant
+              initial_form: !str32 Standing
+              max_force: 540.0
+              max_force_scale_NPC: 1.0
+              magne_mass_scaling_factor: 1.0
+              max_impulse: -1.0
+              form_num: 2
+              height_enable_hitting_wall: 0.5
+              enable_force_fall_cliff_edge: false
+              contact_point_info: !str32 CharacterController
+              collision_info: !str32 Body
+          lists:
+            Form_0: !list
+              objects:
+                FormHeader: !obj {volume: 260.527, shape_num: 1, form_type: !str32 Standing}
+                ShapeParam_0: !obj {shape_type: !str32 character_prism, translate_0: !vec3 [
+                    2.0, 10.0, 11.0], translate_1: !vec3 [0.0, 0.0, 0.0], radius: 3.2}
+              lists: {}
+            Form_1: !list
+              objects:
+                FormHeader: !obj {volume: 407.486, shape_num: 1, form_type: !str32 Crouching}
+                ShapeParam_0: !obj {shape_type: !str32 capsule, translate_0: !vec3 [
+                    0.0, 3.2, -1.6], translate_1: !vec3 [0.0, 3.2, -10.0], radius: 3.2}
+              lists: {}

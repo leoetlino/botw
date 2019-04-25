@@ -1,0 +1,806 @@
+---
+group_count: 67
+atr1_unknown: 0
+entries:
+  "0000":
+    contents:
+      - text: Да
+  "0001":
+    contents:
+      - text: "Нет, не буду"
+  "0003":
+    contents:
+      - text: Нет
+  "0004":
+    contents:
+      - text: Капсулу сердца
+  "0005":
+    contents:
+      - text: Капсулу энергии
+  "0009":
+    contents:
+      - text: Я лучше пойду...
+  "0010":
+    contents:
+      - text: Сменим тип капсул
+  "0011":
+    contents:
+      - text: Да
+  "0012":
+    contents:
+      - text: Нет
+  "0013":
+    contents:
+      - text: Объясни еще раз
+  "0015":
+    contents:
+      - text: Я лучше пойду...
+  "0017":
+    contents:
+      - text: Отдай мне капсулу
+  "0018":
+    contents:
+      - text: Дай сердце
+  "0019":
+    contents:
+      - text: Дай энергию
+  "0020":
+    contents:
+      - text: Ничего не надо
+  "0024":
+    contents:
+      - text: "..."
+  "0025":
+    contents:
+      - text: Ты говоришь!
+  "0026":
+    contents:
+      - text: Купи мои капсулы
+  "0027":
+    contents:
+      - text: Продай мне капсулы
+  near00:
+    contents:
+      - text: "..."
+  talk01:
+    contents:
+      - text: "Боишься, значит..."
+  talk04:
+    contents:
+      - text: "Да-а, много с тобой не наторгуешь.\nСложный клиент попался..."
+  talk05:
+    contents:
+      - text: "Э нет, у тебя денег мало. Хочешь\nвыкупить капсулу — выкладывай\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 120 рупий
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk16:
+    contents:
+      - text: Ну и иди...
+  talk17:
+    contents:
+      - text: "А, это ты..."
+  talk18:
+    contents:
+      - text: "Ну слушай, непонятливый ты наш..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ты мне даешь "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу сердца
+      - control:
+          kind: reset_colour
+      - text: " или\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: энергии
+      - control:
+          kind: reset_colour
+      - text: ", а я тебе — "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 100 рупий
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Потом можешь выкупить у меня\nкапсулу, но уже за "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 120 рупий
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Выходит, что за "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 рупий
+      - control:
+          kind: reset_colour
+      - text: " ты можешь\nобменивать у меня капсулы одного\nтипа на капсулы другого типа."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я вижу, ты без ума от этой идеи.\nНу что, будешь менять или как?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 13
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk20:
+    contents:
+      - text: "Значит, я тебе "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу сердца
+      - control:
+          kind: reset_colour
+      - text: ",\nа ты мне "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 120 рупий
+      - control:
+          kind: reset_colour
+      - text: ", верно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk21:
+    contents:
+      - text: "Значит, ты мне "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу сердца
+      - control:
+          kind: reset_colour
+      - text: ",\nа я тебе "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 100 рупий
+      - control:
+          kind: reset_colour
+      - text: ", верно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk22:
+    contents:
+      - text: "Значит, я тебе "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу энергии
+      - control:
+          kind: reset_colour
+      - text: ",\nа ты мне "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 120 рупий
+      - control:
+          kind: reset_colour
+      - text: ", верно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk23:
+    contents:
+      - text: "Значит, ты мне "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу энергии
+      - control:
+          kind: reset_colour
+      - text: ",\nа я тебе "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 100 рупий
+      - control:
+          kind: reset_colour
+      - text: ", верно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk26:
+    contents:
+      - text: "Всего у меня "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: NpcDemonStatue_UtuwaSum
+      - control:
+          kind: reset_colour
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " твоя капсула"
+            - " твоих капсул"
+            - " твоих капсулы"
+      - text: ".\nЧто будем делать?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 26
+            - 27
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk31:
+    contents:
+      - text: "Будешь менять "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "капсулы "
+      - control:
+          kind: reset_colour
+      - text: или как?
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 13
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk32:
+    contents:
+      - text: "Значит, не слышишь? А на вопрос-то\nответил! Шутник нашелся... Так просто\nты от меня не отделаешься."
+  talk33:
+    contents:
+      - text: "У меня есть еще "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: NpcDemonStatue_UtuwaSum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " твоя капсула"
+            - " твоих капсул"
+            - " твоих капсулы"
+      - control:
+          kind: reset_colour
+      - text: ".\nКупишь еще одну "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу сердца
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 10
+            - 15
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk34:
+    contents:
+      - text: "Хочешь продать мне еще\nодну "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу сердца
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 10
+            - 15
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk35:
+    contents:
+      - text: "У меня есть еще "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: NpcDemonStatue_UtuwaSum
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " твоя капсула"
+            - " твоих капсул"
+            - " твоих капсулы"
+      - control:
+          kind: reset_colour
+      - text: ".\nКупишь еще одну "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу энергии
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 10
+            - 15
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk36:
+    contents:
+      - text: "Хочешь продать мне еще\nодну "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу энергии
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 10
+            - 15
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk37:
+    contents:
+      - text: "Все, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулы сердца
+      - control:
+          kind: reset_colour
+      - text: " у тебя кончились."
+  talk38:
+    contents:
+      - text: "Все, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулы энергии
+      - control:
+          kind: reset_colour
+      - text: "\nу тебя кончились."
+  talk39:
+    contents:
+      - text: "Все, больше ты не можешь\nбрать "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулы сердца
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk40:
+    contents:
+      - text: "Все, больше ты не можешь\nбрать "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулы энергии
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk41:
+    contents:
+      - text: "Слушай, дружище, если ты продашь\nмне "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу сердца
+      - control:
+          kind: reset_colour
+      - text: ", то сразу копыта\nотбросишь."
+  talk42:
+    contents:
+      - text: "Слушай, дружище, если ты продашь\nмне "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: капсулу энергии
+      - control:
+          kind: reset_colour
+      - text: ", то даже на ногах\nстоять не сможешь."
+  talk43:
+    contents:
+      - text: "Дружище, нельзя же быть таким\nжадным: "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "сердец "
+      - control:
+          kind: reset_colour
+      - text: "у тебя и так уже\nпредостаточно."
+  talk44:
+    contents:
+      - text: "Дружище, нельзя же быть таким\nжадным: "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "энергии "
+      - control:
+          kind: reset_colour
+      - text: "у тебя и так уже\nпредостаточно."
+  talk45:
+    contents:
+      - text: По рукам!
+  talk47:
+    contents:
+      - text: "Так-с, у меня сейчас нет ни одной\nтвоей капсулы, значит, ты хочешь\nмне их продать, верно?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk52:
+    contents:
+      - text: Хе! Ну хоть кто-то мне еще молится!
+      - control:
+          kind: single_choice
+          label: 25
+  talk53:
+    contents:
+      - text: "Хм, ты что, меня слышишь?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk54:
+    contents:
+      - text: "Вот так сюрприз. А чего тебе\nнадо? О чем меня молишь?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Хочешь долго жить? Или, может,\nсказочно разбогатеть? Всем вам\nнужно одно и то же..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "В общем, ты обратился по адресу."
+  talk57:
+    contents:
+      - text: "Опять молиться пришел? Всем вам\nнужно одно и то же — долгую жизнь,\nденег побольше..."
+  talk58:
+    contents:
+      - text: Ну чего тебе? Не намолился еще?
+      - control:
+          kind: choice
+          choice_labels:
+            - 17
+            - 24
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk59:
+    contents:
+      - text: Хе-хе!
+  talk65:
+    contents:
+      - text: "Кое-что я еще все-таки умею:\nзабрал у тебя "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "капсулу "
+      - control:
+          kind: reset_colour
+      - text: "и даже\nшрама не оставил."
+  talk68:
+    contents:
+      - text: Какую капсулу хочешь продать?
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk69:
+    contents:
+      - text: Какую капсулу хочешь выкупить?
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 9
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk77:
+    contents:
+      - text: "Я раньше был богом, между прочим."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Приторговывал жизнью и силами\nи неплохо на этом зарабатывал..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Пока не узнала "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: богиня Хайлия
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Вот за это она и превратила меня\nв каменного идола. Наказала, так\nсказать."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Местные называют меня рогатым\nистуканом. Никакого уважения..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Даже птичий помет с меня не убирают!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я тебе авторитетно заявляю: таким\nотношением ничего не исправишь."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Поэтому я готов дальше\nторговать жизнью и силами."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Просто ждал того, кто меня услышит.\nИ дождался! Молодец, что пришел."
+  talk78:
+    contents:
+      - text: "Так, сейчас стой и не дергайся."
+  talk80:
+    contents:
+      - text: "Хе-хе! Похоже, ничего не выйдет:\nты до сих пор не получил ни одной\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: капсулы сердца
+      - control:
+          kind: reset_colour
+      - text: " или "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: энергии
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Нет, так дела не делаются."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Сходи к какой-нибудь статуе\nБогини и попроси у нее капсулы,\nа потом приходи ко мне."
+  talk82:
+    contents:
+      - text: Хе-хе!
+  talk84:
+    contents:
+      - text: "Ух какие мы грозные!\nТы обиделся, что ли?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Расслабься. Я заинтересован\nв длительном сотрудничестве\nи не хочу тебя обманывать."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: Какую капсулу хочешь взять?
+  talk85:
+    contents:
+      - text: "Ах да, ты же не знаешь."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я уже говорил, что когда-то\nторговал жизнью и силами.\nНюанс в следующем..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Я могу превращать капсулы "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: сердца
+      - control:
+          kind: reset_colour
+      - text: "\nв капсулы "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: энергии
+      - control:
+          kind: reset_colour
+      - text: ", и наоборот. За\nнебольшую плату, конечно."
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+            - 20
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk86:
+    contents:
+      - text: Какую капсулу хочешь получить?
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+            - 20
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk87:
+    contents:
+      - text: Ладно. Только не шевелись.
+  talk88:
+    contents:
+      - text: "Что ты так недоверчиво смотришь?\nБудь спокоен: я тебя не обижу."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Давай так: теперь ты знаешь, на что\nя способен, а я знаю, что ты надежный\nклиент."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Отныне ты можешь продавать мне\nсвои капсулы — я буду брать их по\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 100 рупий
+      - control:
+          kind: reset_colour
+      - text: " за штуку."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "А вот чтобы выкупить у меня капсулу,\nтебе придется выложить "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 120 рупий
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Как ты уже понял, капсулы можешь\nзаказывать любые: я их превращаю\nтуда-сюда как захочу."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "В общем, молись мне почаще. Пока."
+  talk89:
+    contents:
+      - text: "Ну что, поторгуем?"

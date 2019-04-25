@@ -1,0 +1,29 @@
+Location: HopesPlateau
+Name: FirstTower
+NotPostNote: false
+Orderer: NPC_GodVoice
+StepDependencyFlags:
+- DependencyFlag: IsPlayed_Demo164_0
+  DependencyFlagType: bool
+  NextFlag: FirstTower_Finish
+Steps:
+- AttentionOff: false
+  MessageName: Desc
+  Name: Ready
+  NextFlag: FirstTower_Activated
+  UpdateStep: true
+- AttentionOff: false
+  IndicatorActors:
+  - HasFar: false
+    InstanceName: TowerTerminal07_Before
+    Location:
+      X: -560.0349731445312
+      Y: 0.0
+      Z: 1694.863037109375
+    Name: FldObj_DownloadTerminal_A_01
+    OffFlag: ''
+  MessageName: Finish
+  Name: Finish
+  NextFlag: FirstTower_Finish
+  UpdateStep: true
+Type: Main

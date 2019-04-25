@@ -1,0 +1,34 @@
+ConditionalTimelines:
+- Condition: Clear_RemainsElectric
+  Nodes:
+  - {AIName: Action2, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'True',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'True', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: 0, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Act_SitSofa_Drink_Wait, WaitAnchorRainASName: Wait,
+    WaitEquipment: Hold, WaitForScheduleMoveASName: Wait, WaitGreetingType: NotAndDo,
+    WaitPosture: 3, WaitRainEquipment: Invisible, WaitRainPosture: 0, WaitRainReactionType: 0,
+    WaitRainTalkTurn: 3, WaitReactionType: 3, WaitTalkTurn: 1}
+  TriggerEvents:
+  - {EvflEntry: Electric_Relic_Finished_Talk, IsPauseOtherActors: true, Trigger: Talk}
+DefaultTimeline:
+  Nodes:
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Sorrow, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Invisible, MoveGreetingType: NotAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 3, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: -1, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Act_Wander_Wait, WaitAnchorRainASName: Wait, WaitEquipment: Invisible,
+    WaitForScheduleMoveASName: '', WaitGreetingType: NotAndDo, WaitPosture: 0, WaitRainEquipment: Invisible,
+    WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3, WaitReactionType: 0,
+    WaitTalkTurn: 3}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+DisplayDistanceMode: None

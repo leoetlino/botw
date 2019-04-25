@@ -1,0 +1,726 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0008":
+    attributes: ""
+    contents:
+      - text: Tot ziens.
+  "0011":
+    attributes: ""
+    contents:
+      - text: Ik wil iets verkopen.
+  "0012":
+    attributes: ""
+    contents:
+      - text: Claree-collectie?
+  "1000":
+    attributes: ""
+    contents:
+      - text: Ik koop dit!
+  "1001":
+    attributes: ""
+    contents:
+      - text: Laat maar.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Ja.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Nee.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Laat maar zitten.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Alles verkopen.
+  ClerkAsk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Dit kost je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Is dat goed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Wat wil je verkopen?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hier kan ik je "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " voor geven,\ngoed?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "Bedankt! Man, wat een vangst!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Jee! Dit wilde ik hebben!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Bof ik even! Hier had ik al een oogje op!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Nooit gedacht dat ik zoiets zou kunnen\nkopen! Verrassend, hoor! Bedankt!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Oké... dat wilde ik eigenlijk wel hebben...
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ik koop alles wat kan worden gekocht,\ndus aarzel niet!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Ik koop heel veel van je!
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Als je iets kwijt wilt, kun je het nu aan\nmij verkopen."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Had je nog iets voor me? Ik koop alles\ndat je kwijt wilt!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Hoeveel wil je er verkopen?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je wilt er "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " aan me verkopen? Dan lijkt\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " me een mooi bedrag. Doe\nje het daarvoor?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Nee... daar ben ik helemaal niet in\ngeïnteresseerd."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: Echt?
+      - control:
+          kind: pause
+          length: long
+      - text: " Dat is de kleding die je op dit\nmoment draagt. Nee, dank je..."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Eentje? Dat maakt dan "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ".\nWat zeg je ervan?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je wilt ze allemaal kwijt? Daar geef ik je\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: voor. Oké?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "Dat? Dat kost "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - " rupee"
+            - " rupees"
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". Wat een\nkoopje!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "O, jammer... Was het toch niet wat je\nzocht?"
+  FirstTalk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Welkom! Dit is de Tweelingboetiek! Wij\nverkopen exclusief kleding uit de\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree-collectie
+      - control:
+          kind: reset_colour
+      - text: "!\nMomenteel kan ik vooral die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: ninja-outfit
+      - control:
+          kind: reset_colour
+      - text: "\nvan harte aanbevelen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "We kopen ook alles waar je vanaf wilt,\ndus als je zover bent, kun je met mij\nkomen praten."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  FirstTalk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Welkom! Dit is de Tweelingboetiek!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ik ga er even vanuit dat je een viespeuk\nbent, aangezien je hier naakt komt\nbinnenlopen, maar goed...\nWij verkopen exclusief speciale kleding\nuit de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree-collectie
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Zelfs iemand als jij, die het dragen van\nkleding heeft afgezworen, kan iets\nvinden wat bevalt!\nIk kan momenteel vooral die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: ninja-outfit
+      - control:
+          kind: reset_colour
+      - text: "\nvan harte aanbevelen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "We kopen ook alles waar je vanaf wilt,\ndus als je zover bent, kun je met mij\nkomen praten."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Near00:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Geïnteresseerd in kleding?
+  Near01:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: We hebben goede spullen.
+  Near02:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Goedenavond!
+  Talk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Kom gerust nog eens terug!
+  Talk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Alle kleding die je ziet, maakt deel uit van\nde speciale "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree-collectie
+      - control:
+          kind: reset_colour
+      - text: ". Neem rustig\nde tijd voor een kijkje."
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk06:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Wacht eens! We hebben onze hele\nvoorraad verkocht!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Betekent dat... dat ik niet meer hoef te\nwerken?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ik ga op vakantie! En Lasli en\nmijn oma mogen ook mee!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk07:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "De "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree-collectie
+      - control:
+          kind: reset_colour
+      - text: " is een collectie die is\nsamengesteld door mij, "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree
+      - control:
+          kind: reset_colour
+      - text: ". Logisch!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "En omdat ik de collectie heb\nsamengesteld, kan ik alles in de collectie\naanraden!\nElk kledingstuk heeft zijn eigen unieke\neigenschappen, dus geef je ogen goed\nde kost!"
+  Talk08:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Bedankt! Volgens mij zal dit je heel goed\nstaan!"
+  Talk14:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Heb je nog iets nodig? Je mag me ook\nalles vragen!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk17:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Bedankt! Dat was echt een goede koop!\nGeloof me!"
+  Talk19:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Waar zal ik naartoe gaan als ik hier eenmaal weg\nben? Misschien ga ik op zoek naar de\nliefdesvijver..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk20:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Ik kom nooit buiten het dorp, dus ik ben\naltijd geïnteresseerd in spullen van ver.\nKom dus vooral langs als je iets kwijt wilt."
+  Talk24:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Mooi hè? Dat is een gelimiteerde uitgave\nvan de Sheikah-outfit."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je die draagt, worden je voetstappen\nbijna geluidloos. Heel handig tijdens het\njagen en sluipen.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Maar deze kleding biedt wel minder bescherming...
+      - control:
+          kind: text_size
+          percent: 100
+  Talk25:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Welkom! Dit is de Tweelingboetiek!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Momenteel kan ik vooral die "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: ninja-outfit
+      - control:
+          kind: reset_colour
+      - text: "\nvan harte aanbevelen!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Als je die draagt, worden je voetstappen\nbijna geluidloos. Heel handig tijdens het\njagen en sluipen.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Maar deze kleding biedt wel minder bescherming...
+      - control:
+          kind: text_size
+          percent: 100
+  Talk26:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Bedankt! Ik zal de voorraad weer voor je\naanvullen!"
+  Talk27:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Bedankt! Wees er zuinig op!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Hou op!

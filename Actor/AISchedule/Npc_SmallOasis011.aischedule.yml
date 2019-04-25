@@ -1,0 +1,58 @@
+ConditionalTimelines:
+- Condition: Drag_Hero_Activated
+  Nodes:
+  - {AIName: Wander, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: DoAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 0, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Act_Wander_Wait, WaitAnchorRainASName: Wait, WaitEquipment: Hold,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: DoAndNot, WaitPosture: 0, WaitRainEquipment: Invisible,
+    WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3, WaitReactionType: 0,
+    WaitTalkTurn: 3}
+  TriggerEvents:
+  - EvflEntry: Near
+    IsPauseOtherActors: false
+    Parameters: {Distance: 10.0, FrontOnly: false}
+    Trigger: Near
+  - {EvflEntry: Drag_Hero_Activated_Talk, IsPauseOtherActors: true, Trigger: Talk}
+- Condition: IsPlayed_Demo125_0
+  Nodes:
+  - {AIName: Wander, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: DoAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 0, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Act_Wander_Wait, WaitAnchorRainASName: Wait, WaitEquipment: Hold,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: DoAndNot, WaitPosture: 0, WaitRainEquipment: Invisible,
+    WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3, WaitReactionType: 0,
+    WaitTalkTurn: 3}
+  TriggerEvents:
+  - {EvflEntry: Electric_Relic_Finished_Talk, IsPauseOtherActors: true, Trigger: Talk}
+DefaultTimeline:
+  Nodes:
+  - {AIName: Action1, CanBeAwaken: 'True', Emotion: Normal, EndTime: 24, IsAlignmentWaitPosition: 'False',
+    IsEnableMoveNext: true, IsInheritWaitASToTalk: 'False', IsRainAlignmentWaitPosition: 'False',
+    IsRainInheritWaitASToTalk: 'False', MeetingASName: Meeting, MeetingReactionType: 1,
+    MoveEquipment: Hold, MoveGreetingType: DoAndDo, MovePosture: 0, MoveReactionType: 0,
+    MoveTalkTurn: 0, MoveToAnchorASName: Walk, MoveToAnchorRainASName: Run_Rain, RainEmotion: Normal,
+    ReactionToApproach: None, ReactionToApproachDist: 5, ReactionToApproachRain: None,
+    ReactionToApproachTurnASName: Turn, ReactionToApproachWaitASName: Wait, ReturnActionRainTimeAfterTalk: -1,
+    ReturnActionTimeAfterTalk: -1, ReturnMoveTimeAfterTalk: 60, SleepOnBed: 'True',
+    StartTime: 0, WaitAnchorASName: Wait, WaitAnchorRainASName: Wait, WaitEquipment: Hold,
+    WaitForScheduleMoveASName: Wait, WaitGreetingType: DoAndNot, WaitPosture: 0, WaitRainEquipment: Invisible,
+    WaitRainPosture: 0, WaitRainReactionType: 0, WaitRainTalkTurn: 3, WaitReactionType: 0,
+    WaitTalkTurn: 3}
+  TriggerEvents:
+  - {EvflEntry: Talk, IsPauseOtherActors: true, Trigger: Talk}
+  - EvflEntry: Near
+    IsPauseOtherActors: false
+    Parameters: {Distance: 10.0, FrontOnly: false}
+    Trigger: Near
+DisplayDistanceMode: None

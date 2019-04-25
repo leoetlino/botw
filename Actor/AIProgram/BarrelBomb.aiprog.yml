@@ -1,0 +1,272 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    DemoAIActionIdx: !obj
+      Demo_GetItem: 16
+      Demo_Idling: 17
+      Demo_Join: 18
+      Demo_OpenGetDemo: 19
+      Demo_PlayASForDemo: 20
+      Demo_PlayASForTimeline: 21
+      Demo_ResetBoneCtrl: 22
+      Demo_SendSignal: 23
+      Demo_SetGetFlag: 24
+      Demo_TrigNullASPlay: 25
+      Demo_UpdateDataByGetDemo: 26
+      Demo_VisibleOff: 27
+      Demo_WarpToPos: 28
+      Demo_XLinkEventCreate: 29
+      Demo_XLinkEventFade: 30
+      Demo_XLinkEventKill: 31
+  lists:
+    AI: !list
+      objects: {}
+      lists:
+        AI_0: !list
+          objects:
+            Def: !obj {Name: Root, ClassName: !str32 BasicStatusRoot, GroupName: ''}
+            ChildIdx: !obj {凍結: 13, 持ち運びボックス内: 8, 通常: 3}
+          lists: {}
+        AI_1: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 Lifted, GroupName: AI}
+            ChildIdx: !obj {待機: 11, 所持: 9, 投擲: 14, 設置: 10}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj {IsGetItem: false}
+          lists: {}
+        AI_2: !list
+          objects:
+            Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: 爆発}
+            ChildIdx: !obj {子０: 6, 子１: 7}
+          lists: {}
+        AI_3: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 BarrelBomb, GroupName: BaseAI}
+            ChildIdx: !obj {所持: 1, 投擲生成: 15, 爆発: 4, 通常: 12}
+          lists: {}
+        AI_4: !list
+          objects:
+            Def: !obj {Name: 爆発, ClassName: !str32 SeqTwoAction, GroupName: AI}
+            ChildIdx: !obj {先行動: 2, 後行動: 5}
+            BehaviorIdx: !obj {1721623982: 1, 295359800: 0, 2291369090: 3}
+            SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
+          lists: {}
+    Action: !list
+      objects: {}
+      lists:
+        Action_0: !list
+          objects:
+            Def: !obj {Name: 後行動, ClassName: !str32 Delete, GroupName: 爆発}
+            SInst: !obj {DeleteType: 0}
+          lists: {}
+        Action_1: !list
+          objects:
+            Def: !obj {Name: 子０, ClassName: !str32 BombExplode, GroupName: 先行動}
+            SInst: !obj {SizeUpTime: 3, ExplodeTime: 5, ShockPower: 500.0, UseDefaultEffect: true}
+          lists: {}
+        Action_2: !list
+          objects:
+            Def: !obj {Name: 子１, ClassName: !str32 ForkTimer, GroupName: 先行動}
+            SInst: !obj {WaitFrame: 16, WaitFrameRand: 0, IsChangeable: false, EndState: 0}
+          lists: {}
+        Action_3: !list
+          objects:
+            Def: !obj {Name: 持ち運びボックス内, ClassName: !str32 InCarryBox, GroupName: Root}
+          lists: {}
+        Action_4: !list
+          objects:
+            Def: !obj {Name: 所持, ClassName: !str32 Carried, GroupName: Action}
+            SInst: !obj
+              IsCreateItem: false
+              IsRecoverCharCtrlAxis: true
+              IsUseConstraint: true
+              FailDistance: -1.0
+              IsOnBaseLink: false
+              BindType: 0
+              IsChangeable: false
+              HoldOnXLinkKey: HoldOn
+          lists: {}
+        Action_5: !list
+          objects:
+            Def: !obj {Name: 設置, ClassName: !str32 PutFromParent, GroupName: 所持_0}
+            SInst: !obj {Timer: 3, HoldOffXLinkKey: HoldOff}
+          lists: {}
+        Action_6: !list
+          objects:
+            Def: !obj {Name: 待機, ClassName: !str32 DummyAction, GroupName: Action}
+          lists: {}
+        Action_7: !list
+          objects:
+            Def: !obj {Name: 通常, ClassName: !str32 ForkASPlay, GroupName: AI}
+            BehaviorIdx: !obj {1721623982: 2}
+            SInst: !obj
+              ASName: 'Null'
+              EndState: 2
+              ChangeableTiming: 0
+              IsIgnoreSame: true
+              SeqBank: 0
+              TargetBone: 0
+              FirstRandomRatio: 0.0
+          lists: {}
+        Action_8: !list
+          objects:
+            Def: !obj {Name: 凍結, ClassName: !str32 FreezedInIce, GroupName: BaseAI}
+          lists: {}
+        Action_9: !list
+          objects:
+            Def: !obj {Name: 投擲, ClassName: !str32 Thrown, GroupName: Action}
+            SInst: !obj
+              AS: ''
+              RotSpd: !vec3 [0.0, 0.0, 0.0]
+              ReactionLevel: -1
+              IsForceOnly: false
+              IsOnImpact: true
+              ThrownKey: ''
+          lists: {}
+        Action_10: !list
+          objects:
+            Def: !obj {Name: 投擲生成, ClassName: !str32 IgnitedThrown, GroupName: 通常}
+            SInst: !obj
+              AS: ''
+              IsScaling: true
+              IsFinishedByOneHit: false
+              IsFadeIn: false
+              IsAbleGuard: true
+              IsForceOnly: true
+              ReactionLevel: -1
+              DamageScale: 1.0
+              FinishWaterDepth: -1.0
+          lists: {}
+        Action_11: !list
+          objects:
+            Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
+          lists: {}
+        Action_12: !list
+          objects:
+            Def: !obj {Name: Demo_Idling, ClassName: !str32 IdleAction, GroupName: ''}
+          lists: {}
+        Action_13: !list
+          objects:
+            Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
+          lists: {}
+        Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_16: !list
+          objects:
+            Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
+              GroupName: ''}
+            SInst: !obj {AnimeDrivenSettings: 1}
+          lists: {}
+        Action_17: !list
+          objects:
+            Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
+              GroupName: ''}
+          lists: {}
+        Action_18: !list
+          objects:
+            Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
+              GroupName: ''}
+          lists: {}
+        Action_19: !list
+          objects:
+            Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
+          lists: {}
+        Action_20: !list
+          objects:
+            Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
+              GroupName: ''}
+          lists: {}
+        Action_21: !list
+          objects:
+            Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
+              GroupName: ''}
+          lists: {}
+        Action_22: !list
+          objects:
+            Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
+          lists: {}
+        Action_23: !list
+          objects:
+            Def: !obj {Name: Demo_WarpToPos, ClassName: !str32 WarpToPos, GroupName: ''}
+          lists: {}
+        Action_24: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
+              GroupName: ''}
+          lists: {}
+        Action_25: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
+              GroupName: ''}
+          lists: {}
+        Action_26: !list
+          objects:
+            Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
+              GroupName: ''}
+          lists: {}
+    Behavior: !list
+      objects: {}
+      lists:
+        Behavior_0: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 1.0
+              Level: 2
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: false
+              IsGuardianLayer: false
+              IsImpulseLayer: true
+              IsFireLayer: true
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: false
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_1: !list
+          objects:
+            Def: !obj {ClassName: !str32 TriggerNoise}
+            SInst: !obj {SensorRadius: 40.0, NoiseValue: 5.0, IsShock: true}
+          lists: {}
+        Behavior_2: !list
+          objects:
+            Def: !obj {ClassName: !str32 TerrorBehavior}
+            SInst: !obj
+              Radius: 1.0
+              Level: 1
+              OffsetSpeedRatio: 0.0
+              IsPlayerLayer: false
+              IsNpcLayer: false
+              IsEnemyLayer: false
+              IsGuardianLayer: false
+              IsImpulseLayer: false
+              IsFireLayer: false
+              IsInsectLayer: false
+              IsHorseLayer: false
+              IsAnimalLayer: false
+              IsWolfLinkLayer: false
+              IsIceLayer: false
+              IsElectricLayer: false
+          lists: {}
+        Behavior_3: !list
+          objects:
+            Def: !obj {ClassName: !str32 OffOcculutionCulling}
+          lists: {}
+    Query: !list
+      objects: {}
+      lists: {}

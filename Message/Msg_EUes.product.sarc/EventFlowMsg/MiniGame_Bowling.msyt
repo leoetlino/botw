@@ -1,0 +1,985 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: ¡Me apunto!
+  "0001":
+    attributes: ""
+    contents:
+      - text: ¿Cómo se juega?
+  "0002":
+    attributes: ""
+    contents:
+      - text: No me interesa
+  "0003":
+    attributes: ""
+    contents:
+      - text: Explícamelo otra vez
+  "0004":
+    attributes: ""
+    contents:
+      - text: "No"
+  "0005":
+    attributes: ""
+    contents:
+      - text: ¡Vale!
+  "0006":
+    attributes: ""
+    contents:
+      - text: Paso
+  "0007":
+    attributes: ""
+    contents:
+      - text: Quiero abandonar
+  "0008":
+    attributes: ""
+    contents:
+      - text: No importa
+  "0009":
+    attributes: ""
+    contents:
+      - text: ¡Abandono!
+  "0010":
+    attributes: ""
+    contents:
+      - text: Continúo
+  "0011":
+    attributes: ""
+    contents:
+      - text: La bola de nieve...
+  "0012":
+    attributes: ""
+    contents:
+      - text: ¡De acuerdo!
+  Initial:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "¡Hola, jovenzuelo!\n¿Qué haces en este lugar perdido\nen mitad de las montañas?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nBueno, por mí, encantado, porque\npor estos lares no se ve ni un alma, y me\npaso el día más aburrido que una ostra."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Para celebrar tu visita, ¿te hace una\npartidilla de un juego que me\nhe inventado?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Se llama "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: bolos de nieve
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Initial_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: ¡Jovenzuelo!
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Te han entrado ganas\nde jugar a los "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: bolos de nieve
+      - control:
+          kind: reset_colour
+      - text: "?\nSerás bienvenido siempre que quieras."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  about_snowbowl_03:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "¡Venga,"
+      - control:
+          kind: pause
+          length: short
+      - text: " vamos allá otra vez!"
+  about_snowbowl_04:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Bien... ¡suerte!
+  area_out_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 3
+      - text: "¡Quieto ahí, joven!"
+      - control:
+          kind: pause
+          length: long
+      - text: " ¿Adónde vas?\n¡Que aún no ha terminado la partida!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  area_out_01:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ay, vaya..."
+      - control:
+          kind: pause
+          length: long
+      - text: " ¡Perdón!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nEspera un momento..."
+  area_out_02:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ah, jovenzuelo. Estos caminos tan\nescarpados tienen su intríngulis, ¿eh?"
+  area_out_03:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Será mejor que te vuelvas.
+  area_out_04:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 14
+      - text: ¡Qué poca finura!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Los "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: bolos de nieve
+      - control:
+          kind: reset_colour
+      - text: " son un deporte\nde caballeros."
+      - control:
+          kind: pause
+          length: short
+      - text: " Moléstate en seguir\nlas reglas, ¿vale?"
+  ask_again:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Es un gusto cuando te las apañas\npara tumbar todos los bolos! Bien,\n¿te animas a probar suerte, jovenzuelo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 3
+            - 4
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  ask_payment:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "¡Así me gusta! Pero no te pienses que\nte va a salir gratis, ¿eh?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Tienes que aflojar "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupias
+      - control:
+          kind: reset_colour
+      - text: " de nada.\n¿Qué me dices?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  break_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: ¿Eh?
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Qué querías?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 7
+            - 8
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  break_01:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: ¿Que quieres abandonar?
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡Qué poca\nresistencia, hijo! No parecías\ntan enclenque..."
+  break_02:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Puedes abandonar la partida a la mitad,"
+      - control:
+          kind: pause
+          length: long
+      - text: "\npero no te voy a devolver el dinero, ¿eh?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 9
+            - 10
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  end:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 16
+      - text: Pues nada...
+      - control:
+          kind: pause
+          length: short
+      - text: " Si cambias de opinión,\nme avisas."
+  explanation_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Jo, jo, veo que te pica la curiosidad.\nBueno, pues te explico."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Para empezar, debes saber que al pie\nde la colina hay 10 pilares o «bolos»."
+  explanation_01:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Haz rodar la bola de nieve desde\nlo alto de la colina e intenta tumbar\ntantos bolos como puedas."
+  explanation_02:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "La bola de nieve irá dando tumbos hacia\nabajo, pero en cuanto llegue al pie de la\ncolina, derribará todo bolo que haya."
+  game_start:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Perfecto,"
+      - control:
+          kind: pause
+          length: short
+      - text: " puedes utilizar esta bola\nde nieve mismamente."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Te advierto de que puedes lanzar dos\nbolas de nieve, y después se acabó lo\nque se daba, ¿estamos?\nPonte a ello cuando quieras, jovenzuelo;\na ver si consigues tumbar esos bolos.\n¡Mucha suerte!"
+  game_start_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Gracias, jovenzuelo!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nEspera a que lo prepare todo..."
+  game_start_01:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¡Si tumbas todos los bolos de un\nsolo golpe, consigues un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: pleno
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nEs una jugada muy profesional.\nSi necesitas dos intentos para tumbar\nlos bolos, consigues un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: semipleno
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nEs menos profesional, pero no está mal."
+  prize_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Observa los bolos
+      - control:
+          kind: pause
+          length: short
+      - text: " e intenta predecir\nla trayectoria que seguirá la bola.\n¡Es un truco esencial!"
+  prize_01:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "Vaya, "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Es una pena, pero no\nte desanimes. ¡Vuelve a probar suerte\ncuando quieras!"
+  prize_02:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Hum, "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "No hay premio estipulado para esa\ncantidad,"
+      - control:
+          kind: pause
+          length: short
+      - text: " pero toma esto y anímate\na intentarlo de nuevo, jovenzuelo."
+  prize_03:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "¡Uy, qué poco te ha faltado!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: ¡Te corresponde este premio!
+  prize_04:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 11
+      - text: "¡Eres un as, jovenzuelo! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Me siento\ngeneroso, así que te vas a llevar\nuna herramienta muy especial."
+  prize_05:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Creo que lo que hace es soltar aire\nmuy frío o algo así."
+  prize_06:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Como yo no soy guerrero ni me dedico\na pelear por ahí, nunca la he utilizado."
+  prize_07:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Pero espera, llevas demasiados trastos\nencima. ¡No puedo cargarte con tanto!\nLlévate esto a cambio."
+  prize_08:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: ¡No has dejado ni uno en pie!
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡Aquí\ntienes el premio que te corresponde\npor semejante hazaña,"
+      - control:
+          kind: pause
+          length: short
+      - text: " campeón!"
+  prize_09:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 11
+      - text: "¡Lo has bordado, jovenzuelo!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nTen, esto es como premio."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Al fin y al cabo, ¡algo así no\nse ve todos los días!"
+  refuse:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "A ver, vamos a contar..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Uy, uy, uy,\nte faltan rupias."
+  restart:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿Quieres jugar otra vez?
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 4
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  restart_end:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Ya veo...
+      - control:
+          kind: pause
+          length: short
+      - text: " Bueno, yo no me voy a mover\nde aquí; ¡puedes volver siempre que\nquieras!"
+  result_00:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 16
+      - text: "Sumado a tu primer lanzamiento,\nllevas un total de "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - bolo
+            - bolos
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNo te veo yo muy puesto, jovenzuelo."
+  result_01:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "Sumando los de tu primer lanzamiento,\nhas derribado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - bolo
+            - bolos
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " en total, pero..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¡hay que mejorar esa puntería!"
+  result_02:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Contando también los de tu primer tiro,\n¡has derribado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: " en total!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNo está nada, pero que nada mal."
+  result_03:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Sumando los de tu primer lanzamiento,\n¡has tumbado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: " en total!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¡Qué poquito te ha faltado!"
+  result_04:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 11
+      - text: "Junto con tu primer lanzamiento,\n¡sumas "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: " derribados en total!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Y, como era tu segundo lanzamiento,\nhas conseguido un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: semipleno
+      - control:
+          kind: reset_colour
+      - text: ".\n¡Eres un fiera!"
+  result_05:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 16
+      - text: ¿Eh? ¿
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - bolo
+            - bolos
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¿En serio que sabes jugar a esto?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Venga, a ver si lo mejoras con\nel segundo lanzamiento."
+  result_06:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 16
+      - text: "Has derribado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: ", pero..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nte falla la puntería, jovenzuelo."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ánimo, que seguro que en el segundo\nlanzamiento lo haces mejor."
+  result_07:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "¡Has derribado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nNo se te da nada mal esto."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Si mantienes la buena racha, puede\nque consigas un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: semipleno
+      - control:
+          kind: reset_colour
+      - text: " en\nel siguiente lanzamiento."
+  result_08:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "¡Has derribado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¡Por qué poquito!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Venga, esfuérzate\nmás en el segundo lanzamiento."
+  result_09:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 11
+      - text: "¡Atiza! ¡Has derribado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNum
+      - text: " bolos"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¡Eso es un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: pleno
+      - control:
+          kind: reset_colour
+      - text: " en toda regla!"
+  result_10:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Respira hondo y... ¡a por el segundo\nlanzamiento!"
+  result_11:
+    attributes: Npc_Bowling
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "¡Has tumbado "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: MiniGame_Bowling_BreakPinNumSecond
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - bolo
+            - bolos
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "!"

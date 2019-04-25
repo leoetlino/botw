@@ -1,0 +1,2226 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Compro!
+  "0001":
+    attributes: ""
+    contents:
+      - text: Vendo!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Non voglio niente.
+  "1000":
+    attributes: ""
+    contents:
+      - text: Scambio!
+  "1001":
+    attributes: ""
+    contents:
+      - text: "No, grazie."
+  "5500":
+    attributes: ""
+    contents:
+      - text: Sì.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Ho cambiato idea.
+  "5502":
+    attributes: ""
+    contents:
+      - text: Compro.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Non importa.
+  "5507":
+    attributes: ""
+    contents:
+      - text: Compro tutto.
+  "5508":
+    attributes: ""
+    contents:
+      - text: Vendo tutto.
+  ClearTerrorEnemy:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 16
+            - 205
+      - text: Fiuuu...
+  ClearTerrorGuardian:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 16
+            - 205
+      - text: Che paura...
+  Com_Talk_00:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Che cosa vuoi vendere?
+  Com_Talk_01:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nbene bene.\nChe ne dici di "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - rupia
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Grazie!
+      - control:
+          kind: pause
+          length: short
+      - text: " Vuoi vendermi qualcos'altro?"
+  Com_Talk_02b:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Grazie per aver fatto affari con me!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nVuoi vendermi qualcos'altro?"
+  Com_Talk_02c:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Grazie mille!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHai altro per me?"
+  Com_Talk_02d:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: È bello fare affari con te!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHai altro per me?"
+  Com_Talk_04:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: No no no!
+      - control:
+          kind: pause
+          length: long
+      - text: " Nooo!"
+  Com_Talk_05:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Compro diii tuttooo!
+  Com_Talk_05b:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Non essere timido, vendimi qualcosa!"
+  Com_Talk_05c:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Porta, porta, che io compro!"
+  Com_Talk_05d:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Puoi vendermi diii tutto!
+  Com_Talk_06:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: Ti consiglio tuttooo!
+  Com_Talk_07:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: Oh! Che disdetta...
+      - control:
+          kind: pause
+          length: long
+      - text: " di questo articolo\nho finito le scorte."
+  Com_Talk_08:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 14
+      - text: "Oh! Non hai abbastanza "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: rupie
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nallora vattene e non farti più vedere!"
+  Com_Talk_09:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 16
+      - text: "Oh! Ma la tua "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "borsa "
+      - control:
+          kind: reset_colour
+      - text: sembra piena.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nLibera un po' di spazio e torna!"
+  Com_Talk_10:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Vuoi comprare\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Grazie, sei un ottimo cliente!"
+  Com_Talk_11b:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: Che bello commerciare!
+  Com_Talk_11c:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Grazie milleee!
+  Com_Talk_11d:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Sei proprio un commerciante nato!
+  Com_Talk_12:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Ho sicuramente qualcosa di utilissimo\nper te!"
+  Com_Talk_13:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "...\nE in che quantità me ne vendi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Se ne moltiplichiamo il prezzo per "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "\notteniamo "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - rupia
+      - control:
+          kind: reset_colour
+      - text: ". Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Temo di non poter acquistare\nquest'articolo. Mi dispiace."
+  Com_Talk_16:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "Forse dovresti prima toglierti di\ndosso ciò che vuoi vendermi."
+  Com_Talk_30:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "...\nE in che quantità ne compri?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_31:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Se moltiplichiamo il prezzo per "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "\notteniamo "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - rupia
+      - control:
+          kind: reset_colour
+      - text: ". Va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_32:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Quindi solo\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nIl prezzo è "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - rupia
+      - control:
+          kind: reset_colour
+      - text: ". Affare fatto?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_33:
+    attributes: Npc_TripMaster_00
+    contents:
+      - text: "Quindi solo\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nFacciamo "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - rupia
+      - control:
+          kind: reset_colour
+      - text: ". Affare fatto?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 20
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNe ho "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "... il che fa "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ".\nTi va bene?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: " "
+  Com_Talk_35:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 20
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nNe hai "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "... Ti offro "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupie
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ".\nAffare fatto?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: " "
+  Com_Talk_36:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Tutto esaurito per oggi! "
+      - control:
+          kind: pause
+          length: short
+      - text: "Grazie per i tuoi\nnumerosi acquisti e grazie per aver\nfatto affari con me!"
+  Com_Talk_37:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Grazie a te, per oggi ho esaurito\nle scorte! Grazie per aver fatto affari\ncon me!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Vuoi dare un'occhiata agli articoli\nche sono in arrivo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_talk_17:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Ehi!
+      - control:
+          kind: pause
+          length: short
+      - text: " Grazie mille!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSei davvero un ottimo cliente!"
+      - control:
+          kind: pause
+          length: long
+  Com_talk_18:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Funziona pure contro i "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: guardiani
+      - control:
+          kind: reset_colour
+      - text: "!\nÈ davvero incredibile!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Mi hanno detto che per avere il massimo\neffetto bisogna cercare di colpire\nl'occhio dei "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: guardiani
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Me l'ha data uno strambo vecchietto\ndi nome "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Rovely
+      - control:
+          kind: reset_colour
+      - text: ".\n\nLui si trova al "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: centro di ricerca di Akkala
+      - control:
+          kind: reset_colour
+      - text: "\nmolto più a nord del "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: villaggio degli Zora
+      - control:
+          kind: reset_colour
+      - text: ".\n\nQuel signore crea anche vestiti e tante\naltre strane armi.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 12
+      - text: "Insomma è il classico "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: scienziato pazzo
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nFa un po' paura"
+      - control:
+          kind: pause
+          length: short
+      - text: " a dire il vero!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Ma se ti serve qualche arma potente,\ncredo sia l'uomo giusto!"
+  Com_talk_19:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Oh! Hai già incontrato Rovely?\nAh, scusa se sono un ficcanaso!"
+  Com_talk_20:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Voglio mostrarti tutta la mia gratitudine\ncon questo "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: regalo
+      - control:
+          kind: reset_colour
+      - text: "!"
+  Near:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 24
+            - 205
+      - text: Venghino signori!
+  TerrorAnimal:
+    attributes: ""
+    contents:
+      - text: Non ti avvicinare!
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: Piantala!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: Uaaah!
+  TerrorEnemy:
+    attributes: ""
+    contents:
+      - text: Nooo!
+  TerrorExplosion:
+    attributes: ""
+    contents:
+      - text: Argh!
+  TerrorFire:
+    attributes: ""
+    contents:
+      - text: Non voglio ustionarmi!
+  TerrorGuardian:
+    attributes: ""
+    contents:
+      - text: Uaaah!
+  TerrorHorse:
+    attributes: ""
+    contents:
+      - text: Oh-oh!
+  TerrorImpulse:
+    attributes: ""
+    contents:
+      - text: Oooh!
+  TerrorInsect:
+    attributes: ""
+    contents:
+      - text: Odio le api!
+  TerrorLightning:
+    attributes: ""
+    contents:
+      - text: Aaaaah!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Aaah!
+  talk_00:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Ehilà! Non credo di averti mai visto\nprima d'ora."
+      - control:
+          kind: pause
+          length: long
+      - text: " Piacere di conoscerti!"
+      - control:
+          kind: pause
+          length: long
+  talk_01:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Oh! Che disdetta...
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSpero di rivederti presto."
+  talk_02:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Grazie della tua visita!\nSpero di rivederti presto!"
+  talk_03:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Oh, chi si rivede!"
+  talk_04:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Ciao di nuovo!\nMi fa sempre piacere rivederti!"
+  talk_05:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Oh! Ma tu hai uno...
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 1
+                  - 1
+                  - 0
+      - text: scarabeo spadaccino
+      - control:
+          kind: reset_colour
+      - text: "!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Io adoro quegli insetti!\nTi dispiacerebbe darmelo?"
+  talk_06:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Incredibile! Guarda cosa c'è nella tua\nborsa..."
+      - control:
+          kind: pause
+          length: long
+      - text: " uno "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 1
+                  - 1
+                  - 0
+      - text: scarabeo corazzato
+      - control:
+          kind: reset_colour
+      - text: "!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Io adoro questi insetti!\nTe lo prendo volentieri!"
+  talk_07:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ovviamente non lo voglio in regalo!\nChe ne dici di scambiarlo per\ndella "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: pozione scorzadura
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_08:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "E ovviamente ti do qualcosa in cambio!\nChe ne dici di un po' di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "riso con\nselvaggina"
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_09:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Eh?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nMa che cos'è questo?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "Non ci posso credere, uno\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 1
+                  - 1
+                  - 0
+      - text: scarabeo aitante
+      - control:
+          kind: reset_colour
+      - text: "!\nÈ una specie rarissima!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Ti prego! Ti va di darmelo?
+  talk_10:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Per ringraziarti del favore, ti do qualcosa\nin cambio!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Che ne dici di una "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: pozione sprint
+      - control:
+          kind: reset_colour
+      - text: "?\nÈ una mia pozione speciale\na base di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: rana lesta
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_11:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Ehilà!
+      - control:
+          kind: pause
+          length: short
+      - text: " Salve...?"
+      - control:
+          kind: pause
+          length: longer
+  talk_12:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 1
+      - text: "... ... ... ..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: animation
+          name: CustomBadThink
+      - text: "Oh, ma sei molto più taccagno di quello\nche sembri. Ti credevo una persona\ngenerosa..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Va bene, va bene lo stesso.\nA quanto pare devo rivalutare\ni miei metri di giudizio..."
+      - control:
+          kind: pause
+          length: long
+  talk_13:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "Uauuu! Grazie mille!\nSei proprio una persona meravigliosa,\nnon ne avevo dubbi.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Non ti preoccupare, tratterò con cura\nquesto "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "scarabeo "
+      - control:
+          kind: reset_colour
+      - text: che mi hai dato!
+  talk_14:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Oh... ...
+      - control:
+          kind: pause
+          length: short
+      - text: " La tua "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "borsa "
+      - control:
+          kind: reset_colour
+      - text: "è piena.\nÈ un vero peccato, ma dovremo\nrimandare lo scambio a tempi migliori."
+  talk_15:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 1
+      - text: "... ... ..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: "Davvero?! Ma se è uno scambio\nvantaggiosissimo per te!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n\nNon capisco quello che ti passa per\nla testa..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Che idea ti sarai fatto...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 1
+      - text: "... ... ..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: animation
+          name: CustomBadThink
+      - text: "Forse devo prenderglielo di soppiatto mentre\ndorme nello stallaggio... ..."
+      - control:
+          kind: pause
+          length: long
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "No, meglio ingaggiare qualche furfante,\nnon vorrei sporcarmi le mani per questa cosa... ..."
+      - control:
+          kind: pause
+          length: long
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: animation
+          name: CustomBadThink
+      - text: Borbott... ...
+      - control:
+          kind: pause
+          length: long
+      - text: " Borborbott... ..."
+      - control:
+          kind: pause
+          length: long
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "... ... ... ..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Oh, sei ancora qui?\nNo, no, niente... ..."
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSe cambi idea, dimmelo però."
+  talk_16:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomBigHappy
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Sììì! Grazie!!!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Sai, non se ne vedono quasi mai in\ngiro! Di sicuro avrò una giornata\nfortunata per i miei affari!"
+  talk_17:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: animation
+          name: CustomUrge
+      - text: "Allora, cosa cerchi?\nOppure vuoi vendermi qualcosa?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk_18:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Bene! È bello averti come cliente.
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSei stato gentilissimo a darmi quello\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: scarabeo
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: long
+  talk_19:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 20
+      - text: Oh!
+      - control:
+          kind: pause
+          length: short
+      - text: " Allora mi dai quello\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 1
+                  - 1
+                  - 0
+      - text: scarabeo aitante
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: pause
+          length: long
+  talk_20:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 20
+      - text: Benissimo!
+      - control:
+          kind: pause
+          length: short
+      - text: " Allora mi dai quello\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 1
+                  - 1
+                  - 0
+      - text: scarabeo spadaccino
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: pause
+          length: long
+  talk_21:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: Uauauau!
+      - control:
+          kind: pause
+          length: short
+      - text: " Allora vuoi darmi quello\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 1
+                  - 1
+                  - 0
+      - text: scarabeo corazzato
+      - control:
+          kind: reset_colour
+      - text: "?!"
+      - control:
+          kind: pause
+          length: long
+  talk_22:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Mica gratis! Che ne dici se ti do\nuna "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: pozione vivax
+      - control:
+          kind: reset_colour
+      - text: " in cambio?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "È una mia pozione speciale ottenuta\ndalla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: lucertola vivax
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_23:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Non posso accettare un rifiuto!\nChe ne dici di una "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: pozione levafatica
+      - control:
+          kind: reset_colour
+      - text: "?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "È una mia pozione speciale basata\nsulle proprietà del "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: granchio podista
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_24:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "E se sei ancora titubante, so io come\nconvincerti! Lo vuoi scambiare per un\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tonico fatato
+      - control:
+          kind: reset_colour
+      - text: "?\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Questa pozione speciale di Terry si\nprepara con un infuso a base di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: fata
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_25:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Allora... facciamo un altro affare...
+      - control:
+          kind: pause
+          length: long
+  talk_26:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "Oh! Di nuovo tu.\nForse hai dimenticato di comprare\nqualcosa?"
+  talk_27:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 20
+      - text: Uau!
+      - control:
+          kind: pause
+          length: short
+      - text: " Grazie per gli acquis...?"
+      - control:
+          kind: pause
+          length: longer
+  talk_28:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Oh!
+      - control:
+          kind: pause
+          length: short
+      - text: " Grazie per essere venuto...?"
+      - control:
+          kind: pause
+          length: longer
+  talk_29:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Ehi!
+      - control:
+          kind: pause
+          length: short
+      - text: " Come va ogg...?"
+      - control:
+          kind: pause
+          length: longer
+  talk_30:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: raw
+          one:
+            one:
+              field_1: 4
+              field_2: 1061997773
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 3
+      - text: "Ehi, ehi! Benvenuto!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSai, ti sono ancora molto riconoscente\nper quello "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: scarabeo
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: long
+  talk_31:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Se ne trovi un altro, torna da me domani!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nPer oggi voglio concentrare tutte le mie\namorevoli attenzioni su questo piccolino."
+  talk_32:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "Uhuuu! Che felicità!\nSei proprio una persona di buon cuore!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Tratterò questo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: scarabeo
+      - control:
+          kind: reset_colour
+      - text: " con amorevole\ncura!"
+  talk_33:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: animation
+          name: CustomBigHappy
+      - control:
+          kind: text_size
+          percent: 125
+      - text: Sììì! Che bello! Sono felicissimo!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "Questo è rarissimo!\nOggi è proprio la mia giornata\nfortunata!"
+  talk_34:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "Ma non a titolo gratuito!\nChe ne dici di scambiarlo per\nun'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: omelette di verdure
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_35:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "E ovviamente ti do qualcosa in cambio!\nChe ne dici di un po' di\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 2
+                  - 2
+                  - 0
+      - text: pozione rinforzante
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_36:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: Grazie per il supporto!
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHai bisogno di qualcos'altro?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  talk_37:
+    attributes: Npc_TripMaster_00
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Mi chiamo "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Terry
+      - control:
+          kind: reset_colour
+      - text: ", mi riconosci dal mio\nenorme zaino che mi fa sembrare uno\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: scarabeo
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "La mia missione è girare per le strade\ndel mondo, nonostante i tempi duri,\nper servire i miei clienti!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Vendo un sacco di insetti speciali e\noggetti indispensabili per ogni\nviandante... e a prezzi modici!\nE se sei a corto di "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: rupie
+      - control:
+          kind: reset_colour
+      - text: ", sono lieto di\ncomprare tutto quello che non ti serve!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Le "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "gemme "
+      - control:
+          kind: reset_colour
+      - text: "e altri preziosi si vendono\nsempre bene, perciò, se ne trovi, vendili\na me e ti pagherò profumatamente!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - control:
+          kind: animation
+          name: CustomUrge
+      - text: "Allora, facciamo affari?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
