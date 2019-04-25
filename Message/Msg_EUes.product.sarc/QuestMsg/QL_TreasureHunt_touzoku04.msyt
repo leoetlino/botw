@@ -4,7 +4,14 @@ atr1_unknown: 0
 entries:
   QL_TreasureHunt_touzoku04_Desc:
     contents:
-      - text: "La familia real de Hyrule poseía una\ncolección de atuendos de gran relevancia\nhistórica, pero desaparecieron a manos\nde un forajido llamado Nambod.\n\nParte de los objetos que robó componían\nun atuendo espectral. En los alrededores\nde la caballeriza de Hyrule puede encontrarse\nun diario que señala dónde están las partes\nde dicho atuendo..."
+      - text: "La familia real de Hyrule poseía una\ncolección de atuendos de gran relevancia\nhistórica, pero desaparecieron a manos\nde un forajido llamado Nambod.\n\nParte de los objetos que robó componían\nun atuendo espectral. En los alrededores\nde la "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: caballeriza de Hyrule
+      - control:
+          kind: reset_colour
+      - text: " puede encontrarse\nun diario que señala dónde están las partes\nde dicho atuendo..."
   QL_TreasureHunt_touzoku04_Finish:
     contents:
       - text: "Has encontrado los cofres enterrados\nen el coliseo, en el altar ceremonial\ny en el cuartel de Hyrule.\n\n¡Ya tienes el "
@@ -20,9 +27,35 @@ entries:
       - text: "Extra: El tesoro espectral"
   QL_TreasureHunt_touzoku04_Step01:
     contents:
-      - text: "«He desperdigado las distintas piezas de la\narmadura de los temibles espectros del pasado\npor la llanura de Hyrule. La primera se esconde\nen el campo de batalla donde los más valientes\nponían a prueba su destreza. La segunda se\noculta en el lugar ceremonial donde se rendía\nhomenaje a la guardia real hyliana. La última\nse encuentra en las ruinas donde se reunían\nlos soldados hylianos.»\nEl diario de Nambod indica la ubicación de\ncada prenda. Aún debes encontrar "
+      - text: "«He desperdigado las distintas piezas de la\narmadura de los temibles espectros del pasado\npor la llanura de Hyrule. La primera se esconde\nen "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "el campo de batalla donde los más valientes\nponían a prueba su destreza"
+      - control:
+          kind: reset_colour
+      - text: ". La segunda se\noculta en "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "el lugar ceremonial donde se rendía\nhomenaje a la guardia real hyliana"
+      - control:
+          kind: reset_colour
+      - text: ". La última\nse encuentra en "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "las ruinas donde se reunían\nlos soldados hylianos"
+      - control:
+          kind: reset_colour
+      - text: ".»\nEl diario de Nambod indica la ubicación de\ncada prenda. Aún debes encontrar "
+      - control:
+          kind: set_colour
+          colour: red
       - control:
           kind: variable
           variable_kind: 2
           name: TreasureHunt_touzoku04_RemainingBox
+      - control:
+          kind: reset_colour
       - text: "."

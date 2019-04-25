@@ -16,8 +16,9 @@ param_root: !list
       Demo_SetEndProc: 10
       Demo_SetStartProc: 11
       Demo_StartDucking: 12
-      Demo_StopDucking: 13
-      Demo_VisibleOff: 14
+      Demo_StopAllDemoSound: 13
+      Demo_StopDucking: 14
+      Demo_VisibleOff: 15
   lists:
     AI: !list
       objects: {}
@@ -90,10 +91,15 @@ param_root: !list
           lists: {}
         Action_13: !list
           objects:
-            Def: !obj {Name: Demo_StopDucking, ClassName: !str32 SceneSoundStopDuckingAction,
+            Def: !obj {Name: Demo_StopAllDemoSound, ClassName: !str32 StopAllDemoSoundAction,
               GroupName: ''}
           lists: {}
         Action_14: !list
+          objects:
+            Def: !obj {Name: Demo_StopDucking, ClassName: !str32 SceneSoundStopDuckingAction,
+              GroupName: ''}
+          lists: {}
+        Action_15: !list
           objects:
             Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
           lists: {}

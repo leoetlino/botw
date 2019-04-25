@@ -2,16 +2,27 @@
 version: 0
 type: xml
 param_root: !list
-  objects:
-    CommonParams: !obj {UseIK: false}
+  objects: {}
   lists:
     Elements: !list
       objects: {}
       lists:
         Element0: !list
           objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 86, Child1: 1}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 NonAnimal, Value1: !str64 default}
+                  lists: {}
+        Element1: !list
+          objects:
             Parameters: !obj {TypeIndex: 47, JudgeOnce: true}
-            Children: !obj {Child0: 1, Child1: 1, Child2: 38}
+            Children: !obj {Child0: 2, Child1: 2, Child2: 39}
           lists:
             Extend: !list
               objects: {}
@@ -21,18 +32,18 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 Fall, Value1: !str64 Jump,
                       Value2: !str64 default}
                   lists: {}
-        Element1: !list
+        Element2: !list
           objects:
             Parameters: !obj {TypeIndex: 15, NoSync: false, JudgeOnce: true}
             Children: !obj
-              Child0: 2
-              Child1: 7
-              Child2: 12
-              Child3: 17
-              Child4: 18
-              Child5: 23
-              Child6: 28
-              Child7: 33
+              Child0: 3
+              Child1: 8
+              Child2: 13
+              Child3: 18
+              Child4: 19
+              Child5: 24
+              Child6: 29
+              Child7: 34
           lists:
             Extend: !list
               objects: {}
@@ -48,10 +59,10 @@ param_root: !list
                     Range6: !obj {Start: 112.5, End: 157.5}
                     Range7: !obj {Start: 157.5, End: 202.5}
                   lists: {}
-        Element2: !list
+        Element3: !list
           objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 3, Child1: 3, Child2: 6}
+            Children: !obj {Child0: 4, Child1: 4, Child2: 7}
           lists:
             Extend: !list
               objects: {}
@@ -61,10 +72,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 default}
                   lists: {}
-        Element3: !list
+        Element4: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 4, Child1: 5}
+            Children: !obj {Child0: 5, Child1: 6}
           lists:
             Extend: !list
               objects: {}
@@ -78,37 +89,9 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element4: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
-              Morph: 4.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 30.0, Rate: 0.75}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 42.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
-                      Value: !str32 ''}
-                  lists: {}
         Element5: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -136,7 +119,7 @@ param_root: !list
                   lists: {}
         Element6: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -164,37 +147,7 @@ param_root: !list
                   lists: {}
         Element7: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 8, Child1: 8, Child2: 11}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element8: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 9, Child1: 10}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element9: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -220,9 +173,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
                       Value: !str32 ''}
                   lists: {}
+        Element8: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 9, Child1: 9, Child2: 12}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element9: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 10, Child1: 11}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element10: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -250,7 +233,7 @@ param_root: !list
                   lists: {}
         Element11: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -278,37 +261,7 @@ param_root: !list
                   lists: {}
         Element12: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 13, Child1: 13, Child2: 16}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element13: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 14, Child1: 15}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element14: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -334,9 +287,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
                       Value: !str32 ''}
                   lists: {}
+        Element13: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 14, Child1: 14, Child2: 17}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element14: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 15, Child1: 16}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element15: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -364,7 +347,7 @@ param_root: !list
                   lists: {}
         Element16: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -392,6 +375,34 @@ param_root: !list
                   lists: {}
         Element17: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
+              Morph: 4.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 30.0, Rate: 0.75}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 42.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element18: !list
+          objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_F,
               Morph: 4.0}
           lists:
@@ -418,10 +429,10 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 37.0,
                       Value: !str32 ''}
                   lists: {}
-        Element18: !list
+        Element19: !list
           objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 19, Child1: 19, Child2: 22}
+            Children: !obj {Child0: 20, Child1: 20, Child2: 23}
           lists:
             Extend: !list
               objects: {}
@@ -431,10 +442,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 default}
                   lists: {}
-        Element19: !list
+        Element20: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 20, Child1: 21}
+            Children: !obj {Child0: 21, Child1: 22}
           lists:
             Extend: !list
               objects: {}
@@ -448,37 +459,9 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element20: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
-              Morph: 4.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 30.0, Rate: 0.75}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 26.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
-                      Value: !str32 ''}
-                  lists: {}
         Element21: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -506,7 +489,7 @@ param_root: !list
                   lists: {}
         Element22: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -534,37 +517,7 @@ param_root: !list
                   lists: {}
         Element23: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 24, Child1: 24, Child2: 27}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element24: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 25, Child1: 26}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element25: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -590,9 +543,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
                       Value: !str32 ''}
                   lists: {}
+        Element24: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 25, Child1: 25, Child2: 28}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element25: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 26, Child1: 27}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element26: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -620,7 +603,7 @@ param_root: !list
                   lists: {}
         Element27: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -648,37 +631,7 @@ param_root: !list
                   lists: {}
         Element28: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 29, Child1: 29, Child2: 32}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element29: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 30, Child1: 31}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element30: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -704,9 +657,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
                       Value: !str32 ''}
                   lists: {}
+        Element29: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 30, Child1: 30, Child2: 33}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element30: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 31, Child1: 32}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element31: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -734,7 +717,7 @@ param_root: !list
                   lists: {}
         Element32: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -762,8 +745,36 @@ param_root: !list
                   lists: {}
         Element33: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
+              Morph: 4.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 30.0, Rate: 0.75}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 26.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element34: !list
+          objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 34, Child1: 34, Child2: 37}
+            Children: !obj {Child0: 35, Child1: 35, Child2: 38}
           lists:
             Extend: !list
               objects: {}
@@ -773,10 +784,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 default}
                   lists: {}
-        Element34: !list
+        Element35: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 35, Child1: 36}
+            Children: !obj {Child0: 36, Child1: 37}
           lists:
             Extend: !list
               objects: {}
@@ -790,37 +801,9 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element35: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
-              Morph: 4.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 12.0, Rate: 0.95}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 53.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 33.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 39.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 34.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 36.0,
-                      Value: !str32 ''}
-                  lists: {}
         Element36: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -848,7 +831,7 @@ param_root: !list
                   lists: {}
         Element37: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B_ForLarge,
               Morph: 4.0}
           lists:
             Extend: !list
@@ -876,16 +859,44 @@ param_root: !list
                   lists: {}
         Element38: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
+              Morph: 4.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0, Rate: 0.95}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 53.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 33.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 39.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 34.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 36.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element39: !list
+          objects:
             Parameters: !obj {TypeIndex: 15, NoSync: false, JudgeOnce: true}
             Children: !obj
-              Child0: 39
-              Child1: 44
-              Child2: 49
-              Child3: 54
-              Child4: 65
-              Child5: 70
-              Child6: 75
-              Child7: 80
+              Child0: 40
+              Child1: 45
+              Child2: 50
+              Child3: 55
+              Child4: 66
+              Child5: 71
+              Child6: 76
+              Child7: 81
           lists:
             Extend: !list
               objects: {}
@@ -901,10 +912,10 @@ param_root: !list
                     Range6: !obj {Start: 112.5, End: 157.5}
                     Range7: !obj {Start: 157.5, End: 202.5}
                   lists: {}
-        Element39: !list
+        Element40: !list
           objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 40, Child1: 40, Child2: 43}
+            Children: !obj {Child0: 41, Child1: 41, Child2: 44}
           lists:
             Extend: !list
               objects: {}
@@ -914,10 +925,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 default}
                   lists: {}
-        Element40: !list
+        Element41: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 41, Child1: 42}
+            Children: !obj {Child0: 42, Child1: 43}
           lists:
             Extend: !list
               objects: {}
@@ -931,7 +942,7 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element41: !list
+        Element42: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
               Morph: 6.0}
@@ -941,35 +952,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 42.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
-                      Value: !str32 ''}
-                  lists: {}
-        Element42: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135_ForLarge,
-              Morph: 6.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -989,7 +972,7 @@ param_root: !list
                   lists: {}
         Element43: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135_ForLarge,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -997,7 +980,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1017,37 +1000,7 @@ param_root: !list
                   lists: {}
         Element44: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 45, Child1: 45, Child2: 48}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element45: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 46, Child1: 47}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element46: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R135,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1055,7 +1008,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1073,9 +1026,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
                       Value: !str32 ''}
                   lists: {}
+        Element45: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 46, Child1: 46, Child2: 49}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element46: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 47, Child1: 48}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element47: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1083,7 +1066,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1103,7 +1086,7 @@ param_root: !list
                   lists: {}
         Element48: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90_ForLarge,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1111,7 +1094,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1131,36 +1114,7 @@ param_root: !list
                   lists: {}
         Element49: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 50, Child1: 53}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 default}
-                  lists: {}
-        Element50: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 51, Child1: 52}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element51: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R90,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1168,7 +1122,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1186,9 +1140,38 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
                       Value: !str32 ''}
                   lists: {}
+        Element50: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 51, Child1: 54}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 default}
+                  lists: {}
+        Element51: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 52, Child1: 53}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element52: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1196,7 +1179,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1216,7 +1199,7 @@ param_root: !list
                   lists: {}
         Element53: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45_ForLarge,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1224,7 +1207,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1244,8 +1227,36 @@ param_root: !list
                   lists: {}
         Element54: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 10.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 42.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element55: !list
+          objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 55, Child1: 56, Child2: 57, Child3: 64}
+            Children: !obj {Child0: 56, Child1: 57, Child2: 58, Child3: 65}
           lists:
             Extend: !list
               objects: {}
@@ -1255,7 +1266,7 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 Bear, Value3: !str64 default}
                   lists: {}
-        Element55: !list
+        Element56: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_F_ForLarge,
               Morph: 6.0}
@@ -1283,7 +1294,7 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 37.0,
                       Value: !str32 ''}
                   lists: {}
-        Element56: !list
+        Element57: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_F_ForLynel,
               Morph: 6.0}
@@ -1296,10 +1307,10 @@ param_root: !list
                     Event0: !obj {TypeIndex: 4, Frame: 32.0, Value: ''}
                     Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
                   lists: {}
-        Element57: !list
+        Element58: !list
           objects:
             Parameters: !obj {TypeIndex: 15, NoSync: false, JudgeOnce: true}
-            Children: !obj {Child0: 58, Child1: 61}
+            Children: !obj {Child0: 59, Child1: 62}
           lists:
             Extend: !list
               objects: {}
@@ -1309,10 +1320,10 @@ param_root: !list
                     Range0: !obj {Start: -67.5, End: 0.0}
                     Range1: !obj {Start: 0.0, End: 67.5}
                   lists: {}
-        Element58: !list
+        Element59: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 59, Child1: 60}
+            Children: !obj {Child0: 60, Child1: 61}
           lists:
             Extend: !list
               objects: {}
@@ -1326,7 +1337,7 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element59: !list
+        Element60: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45,
               Morph: 6.0}
@@ -1336,35 +1347,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 42.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
-                      Value: !str32 ''}
-                  lists: {}
-        Element60: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45_ForLarge,
-              Morph: 6.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1384,8 +1367,36 @@ param_root: !list
                   lists: {}
         Element61: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_R45_ForLarge,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 10.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 42.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 26.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element62: !list
+          objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 62, Child1: 63}
+            Children: !obj {Child0: 63, Child1: 64}
           lists:
             Extend: !list
               objects: {}
@@ -1399,7 +1410,7 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element62: !list
+        Element63: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
               Morph: 6.0}
@@ -1409,34 +1420,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 26.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
-                      Value: !str32 ''}
-                  lists: {}
-        Element63: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45_ForLarge}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1455,6 +1439,33 @@ param_root: !list
                       Value: !str32 ''}
                   lists: {}
         Element64: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45_ForLarge}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 10.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 26.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element65: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_F,
               Morph: 6.0}
@@ -1482,10 +1493,10 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 37.0,
                       Value: !str32 ''}
                   lists: {}
-        Element65: !list
+        Element66: !list
           objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 66, Child1: 66, Child2: 69}
+            Children: !obj {Child0: 67, Child1: 67, Child2: 70}
           lists:
             Extend: !list
               objects: {}
@@ -1495,10 +1506,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 default}
                   lists: {}
-        Element66: !list
+        Element67: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 67, Child1: 68}
+            Children: !obj {Child0: 68, Child1: 69}
           lists:
             Extend: !list
               objects: {}
@@ -1512,7 +1523,7 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element67: !list
+        Element68: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
               Morph: 6.0}
@@ -1522,34 +1533,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 26.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
-                      Value: !str32 ''}
-                  lists: {}
-        Element68: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45_ForLarge}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1569,15 +1553,14 @@ param_root: !list
                   lists: {}
         Element69: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
-              Morph: 6.0}
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45_ForLarge}
           lists:
             Extend: !list
               objects: {}
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1597,37 +1580,7 @@ param_root: !list
                   lists: {}
         Element70: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 71, Child1: 71, Child2: 74}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element71: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 72, Child1: 73}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element72: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L45,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1635,7 +1588,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1653,9 +1606,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
                       Value: !str32 ''}
                   lists: {}
+        Element71: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 72, Child1: 72, Child2: 75}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element72: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 73, Child1: 74}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element73: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1663,7 +1646,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1683,7 +1666,7 @@ param_root: !list
                   lists: {}
         Element74: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90_ForLarge,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1691,7 +1674,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1711,37 +1694,7 @@ param_root: !list
                   lists: {}
         Element75: !list
           objects:
-            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 76, Child1: 76, Child2: 79}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                StringArray: !list
-                  objects:
-                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
-                      Value2: !str64 default}
-                  lists: {}
-        Element76: !list
-          objects:
-            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 77, Child1: 78}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                Ranges: !list
-                  objects:
-                    Range0: !obj {Start: 0.0, End: 0.0}
-                    Range1: !obj {Start: 0.0, End: 0.0}
-                  lists: {}
-                BlenderBone: !list
-                  objects:
-                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
-                  lists: {}
-        Element77: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L90,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1749,7 +1702,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1767,9 +1720,39 @@ param_root: !list
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
                       Value: !str32 ''}
                   lists: {}
+        Element76: !list
+          objects:
+            Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
+            Children: !obj {Child0: 77, Child1: 77, Child2: 80}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
+                      Value2: !str64 default}
+                  lists: {}
+        Element77: !list
+          objects:
+            Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
+            Children: !obj {Child0: 78, Child1: 79}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: 0.0, End: 0.0}
+                    Range1: !obj {Start: 0.0, End: 0.0}
+                  lists: {}
+                BlenderBone: !list
+                  objects:
+                    BlenderBone0: !obj {Value0: !str32 Skl_Root}
+                  lists: {}
         Element78: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135_ForLarge,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1777,7 +1760,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1797,7 +1780,7 @@ param_root: !list
                   lists: {}
         Element79: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135_ForLarge,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1805,7 +1788,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1825,8 +1808,36 @@ param_root: !list
                   lists: {}
         Element80: !list
           objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_L135,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 10.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 55.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 26.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 42.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element81: !list
+          objects:
             Parameters: !obj {TypeIndex: 50, JudgeOnce: true}
-            Children: !obj {Child0: 81, Child1: 81, Child2: 84}
+            Children: !obj {Child0: 82, Child1: 82, Child2: 85}
           lists:
             Extend: !list
               objects: {}
@@ -1836,10 +1847,10 @@ param_root: !list
                     StringArray0: !obj {Value0: !str64 LargeHorse, Value1: !str64 Lynel,
                       Value2: !str64 default}
                   lists: {}
-        Element81: !list
+        Element82: !list
           objects:
             Parameters: !obj {TypeIndex: 5, JudgeOnce: false, InputLimit: -1.0}
-            Children: !obj {Child0: 82, Child1: 83}
+            Children: !obj {Child0: 83, Child1: 84}
           lists:
             Extend: !list
               objects: {}
@@ -1853,7 +1864,7 @@ param_root: !list
                   objects:
                     BlenderBone0: !obj {Value0: !str32 Skl_Root}
                   lists: {}
-        Element82: !list
+        Element83: !list
           objects:
             Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
               Morph: 6.0}
@@ -1863,35 +1874,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
-                  lists: {}
-                TriggerEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 4, Frame: 53.0, Value: ''}
-                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
-                  lists: {}
-                HoldEvents: !list
-                  objects:
-                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 33.0,
-                      Value: !str32 ''}
-                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 39.0,
-                      Value: !str32 ''}
-                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 34.0,
-                      Value: !str32 ''}
-                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 36.0,
-                      Value: !str32 ''}
-                  lists: {}
-        Element83: !list
-          objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B_ForLarge,
-              Morph: 6.0}
-          lists:
-            Extend: !list
-              objects: {}
-              lists:
-                FrameCtrl: !list
-                  objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1911,7 +1894,7 @@ param_root: !list
                   lists: {}
         Element84: !list
           objects:
-            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B_ForLarge,
               Morph: 6.0}
           lists:
             Extend: !list
@@ -1919,7 +1902,7 @@ param_root: !list
               lists:
                 FrameCtrl: !list
                   objects:
-                    FrameCtrl0: !obj {StartFrame: 10.0, Rate: 0.95}
+                    FrameCtrl0: !obj {StartFrame: 10.0}
                   lists: {}
                 TriggerEvents: !list
                   objects:
@@ -1936,4 +1919,520 @@ param_root: !list
                       Value: !str32 ''}
                     Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 36.0,
                       Value: !str32 ''}
+                  lists: {}
+        Element85: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Horse_Rideon_WaitHorse_Ed_B,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 10.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 53.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 33.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 39.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 34.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 36.0,
+                      Value: !str32 ''}
+                  lists: {}
+        Element86: !list
+          objects:
+            Parameters: !obj {TypeIndex: 47, JudgeOnce: true}
+            Children: !obj
+              Child0: 87
+              Child1: 87
+              Child2: 87
+              Child3: 87
+              Child4: 95
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj
+                      Value0: !str64 Fall
+                      Value1: !str64 Jump
+                      Value2: !str64 Step
+                      Value3: !str64 BackJump
+                      Value4: !str64 default
+                  lists: {}
+        Element87: !list
+          objects:
+            Parameters: !obj {TypeIndex: 15, NoSync: false, JudgeOnce: true}
+            Children: !obj
+              Child0: 88
+              Child1: 89
+              Child2: 90
+              Child3: 91
+              Child4: 92
+              Child5: 93
+              Child6: 94
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: -157.5, End: -112.5}
+                    Range1: !obj {Start: -112.5, End: -67.5}
+                    Range2: !obj {Start: -67.5, End: 0.0}
+                    Range3: !obj {Start: 0.0, End: 67.5}
+                    Range4: !obj {Start: 67.5, End: 112.5}
+                    Range5: !obj {Start: 112.5, End: 157.5}
+                    Range6: !obj {Start: 157.5, End: 202.5}
+                  lists: {}
+        Element88: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_R135,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element89: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_R90,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 16.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 3.0, Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element90: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_R45,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element91: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_L45,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element92: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_L90,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 3.0, Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 16.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element93: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_L135,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element94: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_B,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 12.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 32.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 33.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 39.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 35.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 35.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element95: !list
+          objects:
+            Parameters: !obj {TypeIndex: 15, NoSync: false, JudgeOnce: true}
+            Children: !obj
+              Child0: 96
+              Child1: 97
+              Child2: 98
+              Child3: 99
+              Child4: 100
+              Child5: 101
+              Child6: 102
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                Ranges: !list
+                  objects:
+                    Range0: !obj {Start: -157.5, End: -112.5}
+                    Range1: !obj {Start: -112.5, End: -67.5}
+                    Range2: !obj {Start: -67.5, End: 0.0}
+                    Range3: !obj {Start: 0.0, End: 67.5}
+                    Range4: !obj {Start: 67.5, End: 112.5}
+                    Range5: !obj {Start: 112.5, End: 157.5}
+                    Range6: !obj {Start: 157.5, End: 202.5}
+                  lists: {}
+        Element96: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_R135,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element97: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_R90,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 16.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 3.0, Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element98: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_R45,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element99: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_L45,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element100: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_L90,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 3.0, Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 16.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element101: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_L135,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 28.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 44.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 14.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 23.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
+                  lists: {}
+        Element102: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Motorcycle_Rideon_WaitMotorcycle_Ed_B,
+              Morph: 6.0}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                FrameCtrl: !list
+                  objects:
+                    FrameCtrl0: !obj {StartFrame: 10.0}
+                  lists: {}
+                TriggerEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 4, Frame: 32.0, Value: ''}
+                    Event1: !obj {TypeIndex: 7, Frame: -2.0, Value: VoiceRideonHorse}
+                  lists: {}
+                HoldEvents: !list
+                  objects:
+                    Event0: !obj {TypeIndex: 39, StartFrame: 0.0, EndFrame: 33.0,
+                      Value: !str32 ''}
+                    Event1: !obj {TypeIndex: 38, StartFrame: 0.0, EndFrame: 39.0,
+                      Value: !str32 ''}
+                    Event2: !obj {TypeIndex: 36, StartFrame: 0.0, EndFrame: 35.0,
+                      Value: !str32 ''}
+                    Event3: !obj {TypeIndex: 37, StartFrame: 0.0, EndFrame: 35.0,
+                      Value: !str32 ''}
+                    Event4: !obj {TypeIndex: 25, StartFrame: 0.0, EndFrame: -1.0,
+                      Value: !str32 OnlyLR}
                   lists: {}
