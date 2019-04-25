@@ -4,21 +4,21 @@ type: xml
 param_root: !list
   objects:
     DemoAIActionIdx: !obj
-      Demo_GetItem: 21
-      Demo_Idling: 22
-      Demo_Join: 23
-      Demo_OpenGetDemo: 24
-      Demo_PlayASForDemo: 25
-      Demo_PlayASForTimeline: 26
-      Demo_ResetBoneCtrl: 27
-      Demo_SendSignal: 28
-      Demo_SetGetFlag: 29
-      Demo_TrigNullASPlay: 30
-      Demo_UpdateDataByGetDemo: 31
-      Demo_VisibleOff: 32
-      Demo_XLinkEventCreate: 33
-      Demo_XLinkEventFade: 34
-      Demo_XLinkEventKill: 35
+      Demo_GetItem: 22
+      Demo_Idling: 23
+      Demo_Join: 24
+      Demo_OpenGetDemo: 25
+      Demo_PlayASForDemo: 26
+      Demo_PlayASForTimeline: 27
+      Demo_ResetBoneCtrl: 28
+      Demo_SendSignal: 29
+      Demo_SetGetFlag: 30
+      Demo_TrigNullASPlay: 31
+      Demo_UpdateDataByGetDemo: 32
+      Demo_VisibleOff: 33
+      Demo_XLinkEventCreate: 34
+      Demo_XLinkEventFade: 35
+      Demo_XLinkEventKill: 36
   lists:
     AI: !list
       objects: {}
@@ -26,18 +26,23 @@ param_root: !list
         AI_0: !list
           objects:
             Def: !obj {Name: Root, ClassName: !str32 MainFieldDungeonSelect, GroupName: ''}
-            ChildIdx: !obj {水の遺物: 4, 火の遺物: 1, 電気の遺物: 5, 風の遺物: 6}
+            ChildIdx: !obj
+              その他: 7
+              水の遺物: 4
+              火の遺物: 1
+              電気の遺物: 5
+              風の遺物: 6
           lists: {}
         AI_1: !list
           objects:
             Def: !obj {Name: 火の遺物, ClassName: !str32 DungeonRemainsFire, GroupName: Root}
-            ChildIdx: !obj {停止: 19, 移動: 7}
+            ChildIdx: !obj {停止: 20, 移動: 8}
             SInst: !obj {RailName: RemainsFireDefault}
           lists: {}
         AI_2: !list
           objects:
             Def: !obj {Name: 行動Ａ, ClassName: !str32 RailMoveRemainsBGCamera, GroupName: 電気の遺物}
-            ChildIdx: !obj {一時停止: 12, 停止: 18, 再稼働: 16, 移動: 10}
+            ChildIdx: !obj {一時停止: 13, 停止: 19, 再稼働: 17, 移動: 11}
             SInst: !obj
               DungeonName: RemainsElectric
               RailName: RemainsElectricDefault
@@ -51,7 +56,7 @@ param_root: !list
         AI_3: !list
           objects:
             Def: !obj {Name: 行動Ｂ, ClassName: !str32 RemainsElectricBGCamera, GroupName: 電気の遺物}
-            ChildIdx: !obj {一時停止: 13, 停止: 20, 再稼働: 14, 移動: 8}
+            ChildIdx: !obj {一時停止: 14, 停止: 21, 再稼働: 15, 移動: 9}
             SInst: !obj
               ParentActorName: DgnObj_IbutsuElectricLeg_A_01
               DungeonName: RemainsElectric
@@ -66,7 +71,7 @@ param_root: !list
         AI_4: !list
           objects:
             Def: !obj {Name: 水の遺物, ClassName: !str32 RailMoveRemainsBGCamera, GroupName: Root}
-            ChildIdx: !obj {一時停止: 12, 停止: 18, 再稼働: 15, 移動: 9}
+            ChildIdx: !obj {一時停止: 13, 停止: 19, 再稼働: 16, 移動: 10}
             SInst: !obj
               DungeonName: RemainsWater
               RailName: RemainsWaterDefault
@@ -86,7 +91,7 @@ param_root: !list
         AI_6: !list
           objects:
             Def: !obj {Name: 風の遺物, ClassName: !str32 RailMoveRemainsBGCamera, GroupName: Root}
-            ChildIdx: !obj {一時停止: 12, 停止: 18, 再稼働: 17, 移動: 11}
+            ChildIdx: !obj {一時停止: 13, 停止: 19, 再稼働: 18, 移動: 12}
             SInst: !obj
               DungeonName: RemainsWind
               RailName: RemainsWindDefault
@@ -102,9 +107,13 @@ param_root: !list
       lists:
         Action_0: !list
           objects:
-            Def: !obj {Name: 移動, ClassName: !str32 MoveKeyFramed, GroupName: 火の遺物}
+            Def: !obj {Name: その他, ClassName: !str32 DummyAction, GroupName: Root}
           lists: {}
         Action_1: !list
+          objects:
+            Def: !obj {Name: 移動, ClassName: !str32 MoveKeyFramed, GroupName: 火の遺物}
+          lists: {}
+        Action_2: !list
           objects:
             Def: !obj {Name: 移動, ClassName: !str32 FreeMoveByGuideBase, GroupName: 行動Ｂ}
             SInst: !obj
@@ -116,7 +125,7 @@ param_root: !list
               AngleAccRatio: 1.0
               IsTraceRailPointRotation: false
           lists: {}
-        Action_2: !list
+        Action_3: !list
           objects:
             Def: !obj {Name: 移動, ClassName: !str32 FreeMoveByGuideBase, GroupName: 水の遺物_0}
             SInst: !obj
@@ -128,7 +137,7 @@ param_root: !list
               AngleAccRatio: 0.1
               IsTraceRailPointRotation: false
           lists: {}
-        Action_3: !list
+        Action_4: !list
           objects:
             Def: !obj {Name: 移動, ClassName: !str32 FreeMoveByGuideBase, GroupName: 電気の遺物_0}
             SInst: !obj
@@ -140,7 +149,7 @@ param_root: !list
               AngleAccRatio: 0.05
               IsTraceRailPointRotation: false
           lists: {}
-        Action_4: !list
+        Action_5: !list
           objects:
             Def: !obj {Name: 移動, ClassName: !str32 FreeMoveByGuideBase, GroupName: 風の遺物_0}
             SInst: !obj
@@ -152,118 +161,118 @@ param_root: !list
               AngleAccRatio: 0.2
               IsTraceRailPointRotation: false
           lists: {}
-        Action_5: !list
+        Action_6: !list
           objects:
             Def: !obj {Name: 一時停止, ClassName: !str32 StopForLimitedTime, GroupName: Root}
             SInst: !obj {KeepActRotation: true, EnableStaticCompoundRotate: true,
               ASKeyName: '', IsSetEndByTime: false}
           lists: {}
-        Action_6: !list
+        Action_7: !list
           objects:
             Def: !obj {Name: 一時停止, ClassName: !str32 StopForLimitedTime, GroupName: 行動Ｂ}
             SInst: !obj {KeepActRotation: true, EnableStaticCompoundRotate: true,
               ASKeyName: '', IsSetEndByTime: false}
           lists: {}
-        Action_7: !list
+        Action_8: !list
           objects:
             Def: !obj {Name: 再稼働, ClassName: !str32 DummyAction, GroupName: 行動Ｂ}
           lists: {}
-        Action_8: !list
+        Action_9: !list
           objects:
             Def: !obj {Name: 再稼働, ClassName: !str32 DummyAction, GroupName: 水の遺物}
           lists: {}
-        Action_9: !list
+        Action_10: !list
           objects:
             Def: !obj {Name: 再稼働, ClassName: !str32 DummyAction, GroupName: 電気の遺物}
           lists: {}
-        Action_10: !list
+        Action_11: !list
           objects:
             Def: !obj {Name: 再稼働, ClassName: !str32 DummyAction, GroupName: 風の遺物}
           lists: {}
-        Action_11: !list
+        Action_12: !list
           objects:
             Def: !obj {Name: 停止, ClassName: !str32 StopForLimitedTime, GroupName: Root}
             SInst: !obj {KeepActRotation: true, EnableStaticCompoundRotate: false,
               ASKeyName: '', IsSetEndByTime: false}
           lists: {}
-        Action_12: !list
+        Action_13: !list
           objects:
             Def: !obj {Name: 停止, ClassName: !str32 MoveKeyFramed, GroupName: 火の遺物}
           lists: {}
-        Action_13: !list
+        Action_14: !list
           objects:
             Def: !obj {Name: 停止, ClassName: !str32 StopForLimitedTime, GroupName: 行動Ｂ}
             SInst: !obj {KeepActRotation: true, EnableStaticCompoundRotate: false,
               ASKeyName: '', IsSetEndByTime: false}
           lists: {}
-        Action_14: !list
+        Action_15: !list
           objects:
             Def: !obj {Name: Demo_GetItem, ClassName: !str32 DemoGetItem, GroupName: ''}
           lists: {}
-        Action_15: !list
+        Action_16: !list
           objects:
             Def: !obj {Name: Demo_Idling, ClassName: !str32 DummyAction, GroupName: ''}
           lists: {}
-        Action_16: !list
+        Action_17: !list
           objects:
             Def: !obj {Name: Demo_Join, ClassName: !str32 DummyTriggerAction, GroupName: ''}
           lists: {}
-        Action_17: !list
+        Action_18: !list
           objects:
             Def: !obj {Name: Demo_OpenGetDemo, ClassName: !str32 EventOpenGetDemo,
               GroupName: ''}
           lists: {}
-        Action_18: !list
+        Action_19: !list
           objects:
             Def: !obj {Name: Demo_PlayASForDemo, ClassName: !str32 PlayASForDemo,
               GroupName: ''}
             SInst: !obj {AnimeDrivenSettings: 1}
           lists: {}
-        Action_19: !list
+        Action_20: !list
           objects:
             Def: !obj {Name: Demo_PlayASForTimeline, ClassName: !str32 PlayASForTimeline,
               GroupName: ''}
             SInst: !obj {AnimeDrivenSettings: 1}
           lists: {}
-        Action_20: !list
+        Action_21: !list
           objects:
             Def: !obj {Name: Demo_ResetBoneCtrl, ClassName: !str32 DemoResetBoneCtrl,
               GroupName: ''}
           lists: {}
-        Action_21: !list
+        Action_22: !list
           objects:
             Def: !obj {Name: Demo_SendSignal, ClassName: !str32 SendSignalAction,
               GroupName: ''}
           lists: {}
-        Action_22: !list
+        Action_23: !list
           objects:
             Def: !obj {Name: Demo_SetGetFlag, ClassName: !str32 SetGetFlag, GroupName: ''}
           lists: {}
-        Action_23: !list
+        Action_24: !list
           objects:
             Def: !obj {Name: Demo_TrigNullASPlay, ClassName: !str32 EventTrigNullASPlay,
               GroupName: ''}
           lists: {}
-        Action_24: !list
+        Action_25: !list
           objects:
             Def: !obj {Name: Demo_UpdateDataByGetDemo, ClassName: !str32 UpdateDataByGetDemoAction,
               GroupName: ''}
           lists: {}
-        Action_25: !list
+        Action_26: !list
           objects:
             Def: !obj {Name: Demo_VisibleOff, ClassName: !str32 DemoVisibleOff, GroupName: ''}
           lists: {}
-        Action_26: !list
+        Action_27: !list
           objects:
             Def: !obj {Name: Demo_XLinkEventCreate, ClassName: !str32 XLinkEventCreateAction,
               GroupName: ''}
           lists: {}
-        Action_27: !list
+        Action_28: !list
           objects:
             Def: !obj {Name: Demo_XLinkEventFade, ClassName: !str32 XLinkEventFadeAction,
               GroupName: ''}
           lists: {}
-        Action_28: !list
+        Action_29: !list
           objects:
             Def: !obj {Name: Demo_XLinkEventKill, ClassName: !str32 XLinkEventKillAction,
               GroupName: ''}
