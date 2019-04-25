@@ -1,0 +1,96 @@
+AocVersion: 1
+Location: ''
+Name: MiniGame100enemy
+NotPostNote: true
+Orderer: ''
+QuestDependencyFlag: 100enemy_Finish
+QuestDependencyFlagType: bool
+StepDependencyFlags: []
+Steps:
+- Actors:
+  - DefaultTimeline:
+      Nodes:
+      - AIName: ''
+        CanBeAwaken: 'True'
+        Emotion: Normal
+        EndTime: 24
+        IsAlignmentWaitPosition: 'False'
+        IsEnableMoveNext: true
+        IsInheritWaitASToTalk: 'False'
+        IsRainAlignmentWaitPosition: 'False'
+        IsRainInheritWaitASToTalk: 'False'
+        MeetingASName: ''
+        MeetingReactionType: 1
+        MoveEquipment: Invisible
+        MoveGreetingType: NotAndNot
+        MovePosture: 0
+        MoveReactionType: 0
+        MoveTalkTurn: 3
+        MoveToAnchorASName: ''
+        MoveToAnchorRainASName: ''
+        RainEmotion: Normal
+        ReactionToApproach: None
+        ReactionToApproachDist: 5
+        ReactionToApproachRain: None
+        ReactionToApproachTurnASName: ''
+        ReactionToApproachWaitASName: ''
+        ReturnActionRainTimeAfterTalk: -1
+        ReturnActionTimeAfterTalk: -1
+        ReturnMoveTimeAfterTalk: 60
+        SleepOnBed: 'True'
+        StartTime: 0
+        WaitAnchorASName: ''
+        WaitAnchorRainASName: ''
+        WaitEquipment: Invisible
+        WaitForScheduleMoveASName: ''
+        WaitGreetingType: NotAndNot
+        WaitPosture: 0
+        WaitRainEquipment: Invisible
+        WaitRainPosture: 0
+        WaitRainReactionType: 0
+        WaitRainTalkTurn: 3
+        WaitReactionType: 0
+        WaitTalkTurn: 3
+      TriggerEvents:
+      - EvflEntry: Deku_Talk
+        IsPauseOtherActors: true
+        Trigger: Talk
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: TwnObj_Village_Korok_DekuTree_A_01
+    UniqueName: ''
+  AttentionOff: false
+  Name: Ready
+  NextFlag: MiniGame100enemy_Activated
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Battle_EachFrame
+        IsPauseOtherActors: false
+        Trigger: EachFrame
+    DisableClipping: true
+    DisplayDistanceMode: Auto
+    Name: Npc_100enemy_MiniGame
+    UniqueName: ''
+  AttentionOff: false
+  Name: Battle
+  NextFlag: MiniGame100enemy_Battle
+  UpdateStep: false
+- Actors:
+  - DefaultTimeline:
+      Nodes: []
+      TriggerEvents:
+      - EvflEntry: Finish_StepStart
+        IsPauseOtherActors: true
+        Trigger: StepStart
+    DisableClipping: false
+    DisplayDistanceMode: None
+    Name: Npc_100enemy_MiniGame
+    UniqueName: ''
+  AttentionOff: false
+  Name: Finish
+  NextFlag: MiniGame100enemy_Finish
+  UpdateStep: false
+Type: Sub

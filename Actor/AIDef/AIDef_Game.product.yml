@@ -75,6 +75,83 @@ AIs:
   AddViewTargetPos:
     DynamicParamChild: true
     childs: [行動]
+  AirOctaBoardBurn:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: IsFinishedByFailAction, Type: Bool}
+    - {Name: IsEndChangeable, Type: Bool}
+    - {Name: IsNoChangeable, Type: Bool}
+    childs: [先行動, 後行動]
+  AirOctaBurnReaction:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: DisconnectTime, Type: Float}
+    - {Name: DisconnectRandTime, Type: Float}
+    - {Name: SingleBurnTime, Type: Float}
+    - {Name: ChangeRandTime, Type: Float}
+    childs: [先行動, 後行動]
+  AirOctaFlyUp:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: TargetDistance, Type: Float}
+    StaticInstParams:
+    - {Name: FlyUpDuration, Type: Float}
+    childs: [終了, 開始]
+  AirOctaReaction:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: JustGuardTimesMin, Type: Int}
+    - {Name: JustGuardTimesMax, Type: Int}
+    - {Name: SmallDamageCancelTimes, Type: Int}
+    - {Name: InComboSmallDamageNoCancel, Type: Bool}
+    childs: [ふっとび, ガード, ガードブレイク, ショック, ジャストガード, 凍結, 大落下, 小ダメージ, 崩れ落ち, 弾かれ, 死亡, 炎上,
+      痺れ, 突風, 落下, 超ショック]
+  AirOctaRoot:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    childs: [子０, 子１]
+  AirOctaState:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    - {Name: CreateDeadConditionType, Type: Int, Value: -1}
+    - {Name: ForceSealSilentKillCount, Type: Int, Value: 0}
+    - {Name: IsTrgChangeUnderWaterState, Type: Bool, Value: false}
+    MapUnitInstParams:
+    - {Name: EquipItem1, Type: String, Value: Default}
+    - {Name: EquipItem2, Type: String, Value: Default}
+    - {Name: EquipItem3, Type: String, Value: Default}
+    - {Name: EquipItem4, Type: String, Value: Default}
+    - {Name: RideHorseName, Type: String, Value: ''}
+    - {Name: ArrowName, Type: String, Value: NormalArrow}
+    - {Name: DropTable, Type: String, Value: Normal}
+    - {Name: IsNearCreate, Type: Bool, Value: false}
+    - {Name: DropActor, Type: String, Value: ''}
+    - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
+    - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
+    StaticInstParams:
+    - {Name: RopeGravityFactor, Type: Float}
+    - {Name: BalloonMassRatio, Type: Float}
+    - {Name: WindForceScale, Type: Float}
+    - {Name: InWaterDepth, Type: Float}
+    - {Name: OutOfWaterOffset, Type: Float}
+    - {Name: SpreadDist, Type: Float}
+    - {Name: SmallSpreadDist, Type: Float}
+    - {Name: FortressTag, Type: String}
+    - {Name: FallHeight, Type: Float}
+    - {Name: IgnoreHell, Type: Bool}
+    childs: [オクタの数が減った, プレイヤが板に乗った, リアクション, 上昇, 呼ばれ, 奈落, 待機, 所持, 板切断, 板燃焼, 死亡生成, 水中,
+      滝死亡, 発見, 落下, 近接湧出, 逃げる, 通常, 騎乗]
+  AirOctaWait:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    DynamicInstParams:
+    - {Name: IsSameChange, Type: Bool}
+    childs: [水上, 通常]
   AlertCreationNestOnTree:
     MapUnitInstParams:
     - {Name: InitMotionStatus, Type: Int, Value: 0}
@@ -365,6 +442,11 @@ AIs:
     - {Name: Dist, Type: Float}
     - {Name: TeraDist, Type: Float}
     childs: [湧出, 湧出準備]
+  ArmorSearchKorokRoot:
+    StaticInstParams:
+    - {Name: SearchKorokDis, Type: Float}
+    - {Name: SearchRefreshFrame, Type: Float}
+    childs: [未発見, 発見]
   AroundEnemyCheckSelect:
     DynamicParamChild: true
     StaticInstParams:
@@ -553,6 +635,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ChangeModeLifeRatio, Type: Float}
     - {Name: RockBallDamage, Type: Int}
@@ -594,6 +677,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: IronBallNum, Type: Int}
     - {Name: BattleAvoidNum, Type: Int}
@@ -689,6 +773,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: SheathOffset, Type: Vec3}
     - {Name: PodModelUnitIdx, Type: Int}
@@ -734,6 +819,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: RememberKey, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -916,6 +1002,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ASName, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -1262,6 +1349,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: IsElementNoHit, Type: Bool}
     - {Name: IsElectricWater, Type: Bool}
@@ -1357,6 +1445,16 @@ AIs:
     - {Name: IsInvalidBreakJudge, Type: Bool}
     - {Name: DebugScale, Type: Float}
     childs: [オフ, オン]
+  ChmVolRateCheckBlankOk:
+    MapUnitInstParams:
+    - {Name: FreezeTarget, Type: Int, Value: 0}
+    - {Name: IceBreakScale, Type: Float, Value: 0.800000011920929}
+    StaticInstParams:
+    - {Name: VolTh, Type: Float}
+    - {Name: DebugDraw, Type: Bool}
+    - {Name: IsInvalidBreakJudge, Type: Bool}
+    - {Name: DebugScale, Type: Float}
+    childs: [オフ, オン]
   ChuchuDieSelect:
     childs: [ケミカル放射, 凍死, 凍特効死, 凍結砕き, 感電死, 死亡, 消滅, 溺死, 濡死, 焼死, 焼特効死, 自然死, 落下死, 被暗殺,
       被特効]
@@ -1402,6 +1500,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: SubAS, Type: String}
     - {Name: SubASSlot, Type: Int}
@@ -2656,6 +2755,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: InWaterDepth, Type: Float}
     - {Name: OutOfWaterOffset, Type: Float}
@@ -3299,6 +3399,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: WeakPointNode0, Type: String}
     - {Name: WeakPointNode1, Type: String}
@@ -3898,6 +3999,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ClimbFinishTime, Type: Int}
     - {Name: StandContactHeight, Type: Float}
@@ -4421,6 +4523,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: NeckRotRatio, Type: Float}
     - {Name: JustGuardNumForBreak, Type: Int}
@@ -6049,6 +6152,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: RoarFlameActorName, Type: String}
     - {Name: RoarFlamePartsKey, Type: String}
@@ -6116,6 +6220,10 @@ AIs:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
     childs: [マスクだった, マスクではなかった]
+  MasterSwordBase100EnemyRoot:
+    StaticInstParams:
+    - {Name: KillAttentionWaitFrame, Type: Float}
+    childs: [アテンションなし待機, 待機, 起動]
   MasterSwordRoot:
     AITreeVariables:
     - {Name: MagicCreateUnit, Type: AITreeVariablePointer}
@@ -6380,6 +6488,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: LiftDeadTime, Type: Int}
     - {Name: UpperArmL_PartsKey, Type: String}
@@ -7019,6 +7128,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ItemName, Type: String}
     - {Name: ConnectRigidBodyName, Type: String}
@@ -7731,6 +7841,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: RememberKey, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -8036,6 +8147,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: SandOffset, Type: Float}
     - {Name: WeakPointDamageRate, Type: Float}
@@ -8134,6 +8246,12 @@ AIs:
     - {Name: IsEndChangeable, Type: Bool}
     - {Name: IsNoChangeable, Type: Bool}
     childs: [中行動, 先行動, 後行動]
+  SeqOctarockWigReaction:
+    StaticInstParams:
+    - {Name: IsFinishedByFailAction, Type: Bool}
+    - {Name: IsEndChangeable, Type: Bool}
+    - {Name: IsNoChangeable, Type: Bool}
+    childs: [中行動, 先行動, 後行動]
   SeqPredictOctarockAttack:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -8175,6 +8293,14 @@ AIs:
     StaticInstParams:
     - {Name: ActionTime, Type: Int}
     childs: [行動]
+  SeqTimeredPlusRandomTwoAction:
+    StaticInstParams:
+    - {Name: FirstActionRandMax, Type: Int}
+    - {Name: SecondActionRandMax, Type: Int}
+    - {Name: FirstActionTime, Type: Int}
+    - {Name: SecondActionTime, Type: Int}
+    - {Name: AllActionTime, Type: Int}
+    childs: [先行動, 後行動]
   SeqTimeredTwoAction:
     DynamicParamChild: true
     StaticInstParams:
@@ -9206,6 +9332,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: InWaterDepth, Type: Float}
     - {Name: OutOfWaterOffset, Type: Float}
@@ -9419,6 +9546,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: ASName, Type: String}
     - {Name: InWaterDepth, Type: Float}
@@ -9828,6 +9956,8 @@ AIs:
     - {Name: useBaseRatioTiming, Type: Int}
     - {Name: BaseTemperature, Type: Float}
     childs: [行動Ａ, 行動Ｂ]
+  TerminalEnduranceWarpRoot:
+    childs: [Off待機, On待機, 起動]
   TimeControlTagRoot:
     MapUnitInstParams:
     - {Name: StartTime, Type: Int, Value: 0}
@@ -10419,6 +10549,7 @@ AIs:
     - {Name: DropActor, Type: String, Value: ''}
     - {Name: SharpWeaponJudgeType, Type: Int, Value: 0}
     - {Name: LevelSensorMode, Type: Int, Value: 0}
+    - {Name: DisableRankUpForHardMode, Type: Bool, Value: false}
     StaticInstParams:
     - {Name: MagicTargetIdx, Type: Int}
     - {Name: StartASName, Type: String}
@@ -10701,6 +10832,37 @@ Actions:
     - {Name: DirectTime, Type: Int}
     - {Name: PassTime, Type: Int}
     - {Name: ActReset, Type: Bool}
+  AirOctaFloat:
+    AITreeVariables:
+    - {Name: AirOctaDataMgr, Type: AITreeVariablePointer}
+    StaticInstParams:
+    - {Name: Amplitude, Type: Float}
+    - {Name: GoalDistance, Type: Float}
+    - {Name: GoalInSuccessEnd, Type: Bool}
+  AirOctaMgr:
+    MapUnitInstParams:
+    - {Name: MoveDis, Type: Float, Value: 5.0}
+    - {Name: ReactHorn, Type: Bool, Value: true}
+    StaticInstParams:
+    - {Name: LeaveDistance, Type: Float}
+    - {Name: LeaveDownY, Type: Float}
+    - {Name: onGraundEscapeDist, Type: Float}
+    - {Name: PlayerLostTime, Type: Float}
+  AirOctaNoticeTurn:
+    DynamicInstParams:
+    - {Name: TargetPos, Type: Vec3}
+    StaticInstParams:
+    - {Name: NoDoubleNoticeTime, Type: Int}
+    - {Name: AngSpd, Type: Float}
+    - {Name: ASName, Type: String}
+    - {Name: IsJumpType, Type: Bool}
+    - {Name: IsChangeable, Type: Bool}
+  AirOctaReactionKorog:
+    StaticInstParams:
+    - {Name: Speed, Type: Float}
+    - {Name: AS, Type: String}
+    - {Name: EndState, Type: Int}
+  AirOctaWoodBridge: ''
   AirWallAction:
     MapUnitInstParams:
     - {Name: Shape, Type: String, Value: Sphere}
@@ -12893,6 +13055,15 @@ Actions:
     - {Name: EmotionType, Type: String}
     - {Name: IsOnlyFace, Type: Bool}
     TriggerAction: true
+  ChangeEnvForEnduranceDungeon:
+    MapUnitInstParams:
+    - {Name: Weather, Type: Int, Value: -1}
+    - {Name: TemperatureDirectDay, Type: Float, Value: 99999.8984375}
+    - {Name: TemperatureDirectNight, Type: Float, Value: 99999.8984375}
+    - {Name: IgnitedLevel, Type: Int, Value: 0}
+    - {Name: WeatherEff, Type: Int, Value: -1}
+    - {Name: PaletteSel, Type: Int, Value: -1}
+    - {Name: TimeForSkyEnv, Type: Int, Value: 10}
   ChangeMiniMapScale:
     DynamicInstParams:
     - {Name: ScaleLevel, Type: Int}
@@ -13256,6 +13427,7 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: IsChangeable, Type: Bool}
   DemoVisibleOff: ''
+  DemoVisibleOn: {TriggerAction: true}
   DemoVoiceTrigger:
     DynamicInstParams:
     - {Name: Label, Type: String}
@@ -13342,6 +13514,7 @@ Actions:
     - {Name: UpDir, Type: Vec3}
     - {Name: RotSpeed, Type: Float}
     - {Name: RotMax, Type: Float}
+  DisableAutoSavePausing: {TriggerAction: true}
   DisappearDeathCounter: ''
   DisappearNumDungeonClearSeal: {TriggerAction: true}
   DisappearNumKorokNuts: {TriggerAction: true}
@@ -14769,6 +14942,7 @@ Actions:
     - {Name: PinColorIdx, Type: Int}
     TriggerAction: true
   ForceMasterSwordFakeMode: {TriggerAction: true}
+  ForceOpenMainScreen: {TriggerAction: true}
   ForceRagdollOffFreeze:
     AITreeVariables:
     - {Name: CRBOffsetUnit, Type: AITreeVariablePointer}
@@ -16871,6 +17045,14 @@ Actions:
     StaticInstParams:
     - {Name: Time, Type: Int}
     - {Name: KeepTime, Type: Int}
+  GroupAllowEmitAction:
+    DynamicInstParams:
+    - {Name: GroupName, Type: String}
+    TriggerAction: true
+  GroupDisallowEmitAction:
+    DynamicInstParams:
+    - {Name: GroupName, Type: String}
+    TriggerAction: true
   Guard:
     StaticInstParams:
     - {Name: RotSubsAngRate, Type: Float}
@@ -19222,6 +19404,7 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: TargetIdx, Type: Int}
     - {Name: SeqBankIdx, Type: Int}
+  ObjBoardWoodTriangle01: ''
   ObservationPointAction:
     MapUnitInstParams:
     - {Name: PointName, Type: String, Value: default}
@@ -19394,9 +19577,28 @@ Actions:
     - {Name: SubMstxt, Type: String}
     StaticInstParams:
     - {Name: Mstxt, Type: String}
+  OpenDungeonSmallTitleSetLabel:
+    DynamicInstParams:
+    - {Name: SubMstxt, Type: String}
+    - {Name: LabelName, Type: String}
+    StaticInstParams:
+    - {Name: Mstxt, Type: String}
   OpenDungeonTitle:
     DynamicInstParams:
     - {Name: SubMstxt, Type: String}
+    StaticInstParams:
+    - {Name: Mstxt, Type: String}
+  OpenDungeonTitleSetLabel:
+    DynamicInstParams:
+    - {Name: SubMstxt, Type: String}
+    - {Name: LabelName, Type: String}
+    StaticInstParams:
+    - {Name: Mstxt, Type: String}
+  OpenEnduranceFloorNumber:
+    DynamicInstParams:
+    - {Name: SubMstxt, Type: String}
+    - {Name: LabelName, Type: String}
+    - {Name: GameDataIntFloorNum, Type: String}
     StaticInstParams:
     - {Name: Mstxt, Type: String}
   OpenGetDemoDialog:
@@ -19845,6 +20047,8 @@ Actions:
     - {Name: SteppingFoot, Type: String}
     - {Name: Speed, Type: String}
     TriggerAction: true
+  PlayerEquipHaveMasterSword: ''
+  PlayerEquipNearMasterSword: {TriggerAction: true}
   PlayerEventStartWait: ''
   PlayerFall:
     StaticInstParams:
@@ -20175,6 +20379,7 @@ Actions:
     - {Name: DecSpdDist, Type: Float}
     - {Name: DecStickValue, Type: Float}
     - {Name: ForceTurnDist, Type: Float}
+  PlayerReleaseMasterSowrd: {TriggerAction: true}
   PlayerRemainsBlow:
     StaticInstParams:
     - {Name: InitSpeed, Type: Float}
@@ -20800,6 +21005,7 @@ Actions:
     - {Name: IsCheckCreateParent, Type: Bool}
     - {Name: IsCheckBulletAttacker, Type: Bool}
     - {Name: IsCheckBulletHolder, Type: Bool}
+  ReviveEnemies: {TriggerAction: true}
   RideHorse:
     DynamicInstParams:
     - {Name: TargetActor, Type: Actor}
@@ -21167,6 +21373,7 @@ Actions:
     DynamicInstParams:
     - {Name: ASName, Type: String}
     TriggerAction: true
+  SetPlayerDrawingSword: {TriggerAction: true}
   SetPlayerStateToUnequipAndWait: {TriggerAction: true}
   SetQuestStepAction:
     DynamicInstParams:
@@ -23333,12 +23540,19 @@ Actions:
     DynamicInstParams:
     - {Name: UniqueName, Type: String}
     - {Name: AnchorName, Type: String}
+  WarpPlayerToAnchorGimmickReset:
+    MapUnitInstParams:
+    - {Name: AnchorName, Type: String, Value: StartPos}
+    - {Name: AnchorUniqueName, Type: String, Value: default}
+    StaticInstParams:
+    - {Name: WaitFrameAfterReset, Type: Float}
   WarpPlayerToDestination:
     DynamicInstParams:
     - {Name: DestinationX, Type: Float}
     - {Name: DestinationY, Type: Float}
     - {Name: DestinationZ, Type: Float}
     - {Name: DirectionY, Type: Float}
+  WarpPlayerToReferenceAnchor: ''
   WarpToActor:
     DynamicInstParams:
     - {Name: ActorName, Type: String}
@@ -23716,6 +23930,10 @@ Actions:
     - {Name: ELinkKey, Type: String}
     - {Name: SLinkKey, Type: String}
     - {Name: IsTargetDemoSLinkUser, Type: Bool}
+    TriggerAction: true
+  XLinkEventEnable:
+    DynamicInstParams:
+    - {Name: IsEnable, Type: Bool}
     TriggerAction: true
   XLinkEventFadeAction:
     DynamicInstParams:
@@ -24961,6 +25179,7 @@ Querys:
     - {Name: IncludePorchMainMat, Type: Bool}
     - {Name: IncludePorchSubMat, Type: Bool}
   CanMarkMapPin: ''
+  Check100EnemyActiveTiming: ''
   CheckActorAction:
     DynamicInstParams:
     - {Name: ActionName, Type: String}
@@ -25090,6 +25309,7 @@ Querys:
   CheckMapArea:
     DynamicInstParams:
     - {Name: MapAreaName, Type: String}
+  CheckMasterSwordState: ''
   CheckMaterialValue: ''
   CheckMiniGameTime:
     DynamicInstParams:
@@ -25253,8 +25473,10 @@ Querys:
   IsArrow: {SystemQuery: true}
   IsAwakened: ''
   IsBow: {SystemQuery: true}
+  IsCurrentAocFieldStage: ''
   IsCurrentCDungeonStage: ''
   IsCurrentMainFieldDungeonStage: ''
+  IsCurrentMainFieldStage: ''
   IsEquipedDyedArmor: ''
   IsEquippedEnableDye: ''
   IsEquippedWithLowerBody: ''

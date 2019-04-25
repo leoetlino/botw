@@ -1,0 +1,34 @@
+!io
+version: 0
+type: xml
+param_root: !list
+  objects:
+    CommonParams: !obj {RandomRateMin: 0.7, RandomRateMax: 1.3}
+  lists:
+    Elements: !list
+      objects: {}
+      lists:
+        Element0: !list
+          objects:
+            Parameters: !obj {TypeIndex: 7, JudgeOnce: true}
+            Children: !obj {Child0: 1, Child1: 2}
+          lists:
+            Extend: !list
+              objects: {}
+              lists:
+                StringArray: !list
+                  objects:
+                    StringArray0: !obj {Value0: !str64 '', Value1: !str64 ''}
+                  lists: {}
+                BitIndex: !list
+                  objects:
+                    BitIndex0: !obj {TypeIndex: 40}
+                  lists: {}
+        Element1: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Fire_Low}
+          lists: {}
+        Element2: !list
+          objects:
+            Parameters: !obj {TypeIndex: 67, FileName: !str64 Fire_High}
+          lists: {}
