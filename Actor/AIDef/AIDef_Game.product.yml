@@ -1618,6 +1618,10 @@ AIs:
     StaticInstParams:
     - {Name: IsCheckEachFrame, Type: Bool}
     childs: [地上, 空中]
+  CollaborationShootingStarRoot:
+    AITreeVariables:
+    - {Name: CollaboShootingStarId, Type: String, Value: default}
+    childs: [光の柱を出す, 飛んでいく]
   CommonPickedItem:
     AITreeVariables:
     - {Name: GetNumLeft, Type: Int, Value: 0}
@@ -7744,7 +7748,7 @@ AIs:
     childs: [1st, 2nd, 3rd, Idle]
   RemainsFireDroneNormal:
     AITreeVariables:
-    - {Name: TargetSpeed, Type: Float, Value: 0.0}
+    - {Name: TargetSpeed, Type: Float, Value: -1.0}
     MapUnitInstParams:
     - {Name: LightLength, Type: Float, Value: 25.0}
     - {Name: LightRadius, Type: Float, Value: 8.0}
@@ -12732,6 +12736,7 @@ Actions:
     - {Name: speedMax, Type: Float}
     - {Name: HandlingRateCoefficient, Type: Float}
     - {Name: HandlingRateReturnSpeed, Type: Float}
+    - {Name: sideOffsetCusNoInput, Type: Float}
     - {Name: BowFlag, Type: Bool}
   CameraHorseLockOnEmpty:
     StaticInstParams:
@@ -13212,6 +13217,27 @@ Actions:
   CloseClockTime: {TriggerAction: true}
   CloseItemMenu: {TriggerAction: true}
   ClosePouchAddStockNum: ''
+  CollaboShootingStarAreaTag:
+    MapUnitInstParams:
+    - {Name: collaboSSFalloutFlagName, Type: String, Value: ''}
+  CollaboShootingStarBrightTower:
+    AITreeVariables:
+    - {Name: CollaboShootingStarId, Type: String, Value: default}
+  CollaboShootingStartFlying:
+    AITreeVariables:
+    - {Name: CollaboShootingStarId, Type: String, Value: default}
+    StaticInstParams:
+    - {Name: InitialVelocityMax, Type: Float}
+    - {Name: InitialVelocityMin, Type: Float}
+    - {Name: LookSuccessRate, Type: Float}
+  CollaborationShootingStarAnchor:
+    MapUnitInstParams:
+    - {Name: CollaboShootingStarStartHour, Type: Int, Value: 0}
+    - {Name: CollaboShootingStarEndHour, Type: Int, Value: 0}
+    - {Name: collaboSSFalloutFlagName, Type: String, Value: ''}
+    - {Name: collaboSSOpenFlagName, Type: String, Value: ''}
+    - {Name: CollaboShootingStarDirection, Type: Int, Value: 0}
+    - {Name: collaboSSQuestFlag, Type: String, Value: ''}
   ControlBombEffect: ''
   ControllerRumble:
     DynamicInstParams:
@@ -20821,7 +20847,7 @@ Actions:
   RemainsElectricWeakPointWait: ''
   RemainsFireDroneRailMove:
     AITreeVariables:
-    - {Name: TargetSpeed, Type: Float, Value: 0.0}
+    - {Name: TargetSpeed, Type: Float, Value: -1.0}
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
     StaticInstParams:
@@ -22508,6 +22534,7 @@ Actions:
     - {Name: IsIgnoreSame, Type: Bool}
     - {Name: PosReduceRatio, Type: Float}
     - {Name: AngReduceRatio, Type: Float}
+  StopAllDemoSoundAction: ''
   StopCliffTongueAttack:
     DynamicInstParams:
     - {Name: TargetPos, Type: Vec3}
@@ -25302,6 +25329,7 @@ Querys:
   CheckItemShopPorchVacancy: ''
   CheckItemShopSelect: ''
   CheckItemShopSelectBuy: ''
+  CheckJustBeforeEventCancel: ''
   CheckLastDamageAttacker:
     DynamicInstParams:
     - {Name: Name, Type: String}
@@ -25427,6 +25455,13 @@ Querys:
   ComparePlayerOriginalHeart:
     DynamicInstParams:
     - {Name: Threshold, Type: Int}
+  CountFlag4:
+    DynamicInstParams:
+    - {Name: GameDataFlagNo0, Type: String}
+    - {Name: GameDataFlagNo1, Type: String}
+    - {Name: GameDataFlagNo2, Type: String}
+    - {Name: GameDataFlagNo3, Type: String}
+    - {Name: GameDataFlagNo4, Type: String}
   DummyQuery: ''
   EnemyDieCheck: ''
   EnemyRestLifeRate:
