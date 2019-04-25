@@ -1,0 +1,639 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Achète-moi un truc!
+  "0001":
+    attributes: ""
+    contents:
+      - text: À plus tard!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Tu achètes un truc?
+  "5500":
+    attributes: ""
+    contents:
+      - text: OK!
+  "5501":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Finalement, non."
+  "5507":
+    attributes: ""
+    contents:
+      - text: "J'achète tout."
+  "5508":
+    attributes: ""
+    contents:
+      - text: Je vends tout.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "Qu'est-ce que tu veux me vendre?"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nJe t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Saksak! C'est une bonne affaire!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "LE MERCI! Héhé, c'est bien comme ça\nque vous dites, vous les Hyliens, non?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Parfait! Saksak!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Ravie d'avoir fait affaire avec toi!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: Comme tu veux...
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "Je suis d'humeur à acheter!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Si tu as des choses à vendre,\nça pourrait m'intéresser!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "J'achète tout ce que tu as à vendre."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: Tu as autre chose?
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nça peut toujours servir! Combien\ntu peux m'en vendre?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Pour "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " exemplaires... Ça nous\nfait un total de "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "C'est quoi, cette chose?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Désolée,\nmais je n'achète jamais d'article\nque j'arrive pas à identifier."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "Tu crois que je vais te l'arracher,\npeut-être?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Bien essayé,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais tu\nn'es pas vraiment mon genre."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJe t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "D'accord. Je te prends le tout pour\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ". Ça t'intéresse?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\ncoûte "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Prends tout le temps qu'il te faut."
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: "Tout est bon, tout est frais."
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Jolie tenue...
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "BONNE LA JOURNÉE!\n\n\nC'est bien comme ça que vous dites,\nchez vous, pas vrai?\n\nEn Gerudo, on dit « savaak »."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: Reviens quand tu veux!
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ma petite sœur tient l'étal de boucherie\nde la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: cité Gerudo
+      - control:
+          kind: reset_colour
+      - text: ".\n\nElle a beaucoup voyagé, elle parle ta\nlangue plutôt bien.\n\nEt jolie comme elle est, je suis sûre\nqu'elle te plairait!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "Mais tu ne pourras pas aller vérifier,\non n'accepte pas les voïs dans la cité."
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "D'accord, montre-moi ce que tu as."
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Les stocks diminuent sérieusement,\nil va falloir que j'aille chasser un peu\npour me réapprovisionner!"
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "LE MERCI À TOI!\n\n\nC'est bien comme ça que vous dites,\nnon?"
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Un marchand à l'air louche, tu dis?\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "L'air louche... "
+      - control:
+          kind: pause
+          length: longer
+      - text: "l'air louche..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nC'est un peu vague, tout ça...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "Bah, j'en sais rien, moi. Je ne sais même\npas à quoi on reconnaît les marchands\ndes autres peuples.\nAh si, sauf les marchands Hyliens qui\nsont dans le coin. Tu pourrais peut-être\naller leur poser la question."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ma petite sœur tient l'étal de boucherie\nde la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: cité Gerudo
+      - control:
+          kind: reset_colour
+      - text: ".\n\nElle a beaucoup voyagé, elle parle ta\nlangue plutôt bien.\n\nEn plus, elle est jolie comme un cœur,\nun peu comme toi."
+      - control:
+          kind: pause
+          length: short
+      - text: " Passe-lui le bonjour\nsi tu la vois."
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "BON LE SOIR!\n\n\nC'est bien comme ça que vous dites,\nchez vous, pas vrai?\n\nEn Gerudo, on dit « savasaaba »."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: "Tu gênes, là."
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "BON LE JOUR!\n\n\nC'est bien comme ça que vous dites,\nchez vous, pas vrai?\n\nEn Gerudo, on dit « savotta »."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "BIEN LA VENUE!\n\n\nC'est bien comme ça que vous dites,\nchez vous, pas vrai?\n\nEn Gerudo, on dit « vaasaak »."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Saksak! Avec ça, tu retrouveras\ntes forces en un instant!"
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: LE MERCI...! Saksak!
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Va falloir aller à la chasse.
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "LE MERCI DE BEAUCOUP!\n\n\nC'est bien comme ça qu'on dit\nchez vous, pas vrai?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

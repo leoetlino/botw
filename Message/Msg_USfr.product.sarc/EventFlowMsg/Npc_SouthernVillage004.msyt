@@ -1,0 +1,340 @@
+---
+group_count: 19
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "Non, jamais."
+  "0001":
+    attributes: ""
+    contents:
+      - text: Oui!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Oui.
+  "0003":
+    attributes: ""
+    contents:
+      - text: Non.
+  "0004":
+    attributes: ""
+    contents:
+      - text: Oui!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Pas encore.
+  "0006":
+    attributes: ""
+    contents:
+      - text: "T'amuser?"
+  "0007":
+    attributes: ""
+    contents:
+      - text: Et ton travail?
+  "0008":
+    attributes: ""
+    contents:
+      - text: Ça rapporte?
+  Near00:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - text: Quelle averse!
+  Near01:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - text: "J'ai sommeil..."
+  Near02:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - text: Zzz... Zzz...
+  talk00:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Salut étranger,"
+      - control:
+          kind: pause
+          length: short
+      - text: " tu visites notre village?"
+  talk01:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "As-tu déjà pris la mer sur un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: radeau
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk02:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 34
+      - text: "J'ai eu une longue journée, je vais me\ncoucher."
+      - control:
+          kind: pause
+          length: short
+      - text: " Tu ferais bien d'aller dormir\ntoi aussi!"
+  talk03:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Alors, laisse-moi te donner quelques\nconseils."
+      - control:
+          kind: pause
+          length: short
+      - text: " En mer, tu dois savoir te\nservir du "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: vent
+      - control:
+          kind: reset_colour
+      - text: ".\nNous autres marins avons appris à le\ndomestiquer pour en faire notre allié.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: "Mais il parait qu'avec un "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 4
+                  - 0
+                  - 0
+      - text: éventail Korogu
+      - control:
+          kind: reset_colour
+      - text: ",\nn'importe qui peut le contrôler librement."
+  talk04:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 4
+            - 23
+      - text: Vraiment?
+      - control:
+          kind: pause
+          length: short
+      - text: " Je ne l'aurais pas cru, à voir\nta démarche.\n\nOn ne s'aventure pas en mer sans un\nminimum d'expérience. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Le vent ne fait\npas de cadeau aux bleus, crois-moi!"
+  talk05:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 17
+      - text: "Je te déconseille de prendre la mer\nquand y'a un coup d'vent.\n\nÀ cause du vent, ton radeau serait très\ndifficile à manœuvrer."
+      - control:
+          kind: pause
+          length: short
+      - text: " C'est un coup à\nfinir avec les poissons!"
+  talk08:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Il a l'air bon, ce poisson, hein?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJe l'ai pêché moi-même dans le coin!\n\nSi t'en veux, t'as qu'à te servir. Il y en\na trop de toute façon, je pourrai jamais\ntout manger moi-même."
+  talk09:
+    attributes: NPC_GodVoice
+    contents:
+      - text: "Ces poissons grillés sont appétissants...\nJe me demande s'ils ont été pêchés dans\nles environs."
+  talk10:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Dis, tu aimes le poisson?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk11:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "On pêche vraiment du bon poisson, par\nici. Une fois qu'on en a mangé, je crois\nqu'on ne peut plus l'oublier.\nJe peux t'en donner autant que tu veux,\nalors n'hésite pas à goûter!"
+  talk12:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Alors? T'as goûté mon poisson?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk13:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "N'attends pas trop, il est meilleur quand\nil est bien frais!"
+  talk14:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "C'était bon, hein?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ce poisson, c'est la\nfierté du village!"
+  talk15:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: "Franchement, il a pas l'air délicieux,\nce poisson?"
+      - control:
+          kind: pause
+          length: short
+      - text: " C'est moi qui l'ai pêché!"
+  talk16:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Quel sale temps!
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n\nUn jour pareil, j'ai juste envie d'aller\nm'amuser chez Kabara..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk17:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Ouais, Kabara propose un jeu dans\nlequel on parie de l'argent. "
+      - control:
+          kind: pause
+          length: short
+      - text: "Va le voir\nsi ça t'intéresse, c'est juste à côté."
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk18:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 13
+      - text: "Quand il pleut, il n'y a pas moyen\nd'aller pêcher en mer, alors c'est dur\npour les affaires."
+  talk19:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bah, ça dépend de la chance que t'as."
+  talk20:
+    attributes: Npc_SouthernVillage004
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 33
+      - text: Zzz...

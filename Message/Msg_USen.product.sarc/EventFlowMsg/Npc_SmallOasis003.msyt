@@ -1,0 +1,603 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: I want to buy.
+  "0001":
+    attributes: ""
+    contents:
+      - text: I want to sell.
+  "0006":
+    attributes: ""
+    contents:
+      - text: Good-bye.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Yes.
+  "5501":
+    attributes: ""
+    contents:
+      - text: No.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5508":
+    attributes: ""
+    contents:
+      - text: All of them.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: So... What do you want to sell?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "Let's say..."
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". \nIs that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: Sarqso...
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: Sarqso.
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: Sarqso.
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 22
+            - 205
+      - text: Sarqso.
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Please, let's do this quickly..."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Well?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Still deciding?
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Are you almost done now?
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Maybe we could start to wrap this up...
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "How many of that? "
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "That's "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " of them, then?\nThat'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ", OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "We don't stock that item."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: Please take it off.
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: "One will be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: So...
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ", then? \nHow about "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees "
+      - control:
+          kind: reset_colour
+      - text: for them?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: reset_colour
+      - text: "That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nWill that be OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "...Well then."
+  Near001:
+    attributes: Npc_SmallOasis003
+    contents:
+      - text: "..."
+  Talk_01:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: Oh...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: "Oops, sorry... Vasaaq."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_03:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "I'm busy right now. Please only speak to\nme if you need something."
+  Talk_06:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: "I only sell arrows. They're on the counter\nto your left. If you're looking for\nsomething else, try "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo Town
+      - control:
+          kind: reset_colour
+      - text: "."
+  Talk_09:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: "Sarqso. I look forward to your\nfuture patronage."
+  Talk_10:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: "Sarqso. I really appreciate your\nbusiness."
+  Talk_12:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Did you need something else?
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_13:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: "...Come back soon."
+  Talk_14:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: Oh...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nVasaaq. Those clothes..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\nThey look quite good on you..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_15:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: Oh...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n\nSorry."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Did you need something?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_16:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: Those clothes...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nThey look really good on you...\n\nAnyway, can I help?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 0
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_17:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: Sarqso.
+  Talk_18:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: I look forward to our future dealings.
+  Talk_19:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 24
+      - text: "I only have what's out on the counter.\nIf the counter's empty, I'm sold out.\n\nIf you want to buy more than one arrow\nat a time, you should go to "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo Town
+      - control:
+          kind: reset_colour
+      - text: "."
+  Talk_20:
+    attributes: Npc_SmallOasis003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oh, right..."
+      - control:
+          kind: pause
+          length: long
+      - text: " Voe aren't allowed in\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Gerudo Town
+      - control:
+          kind: reset_colour
+      - text: "."

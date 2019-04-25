@@ -1,0 +1,663 @@
+---
+group_count: 59
+atr1_unknown: 4
+entries:
+  "0008":
+    attributes: ""
+    contents:
+      - text: Bye.
+  "0011":
+    attributes: ""
+    contents:
+      - text: I wanna sell.
+  "0012":
+    attributes: ""
+    contents:
+      - text: Claree Collection?
+  "1000":
+    attributes: ""
+    contents:
+      - text: "I'll take it!"
+  "1001":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5500":
+    attributes: ""
+    contents:
+      - text: OK.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5503":
+    attributes: ""
+    contents:
+      - text: Never mind.
+  "5508":
+    attributes: ""
+    contents:
+      - text: All of them.
+  ClerkAsk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "So...that'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: PlacedItemPrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nA real steal, isn't it?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1000
+            - 1001
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: What would you like to sell?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Hmm... That'll net you...\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Deal?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "Yay, I'm sooo thrilled!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nWhat a great haul!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Yay! I've been wanting this!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "How lucky am I?\nI was eyeing that!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "I never thought I could buy such a thing!\nI'm still in shock! Thanks a bunch!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: Hmm... I had my eye on that...
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "I'll buy anything that can be bought!\nDon't hold back. Just sell, sell, sell!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "I'll buy a lot from you—just wait and see!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "If you don't need something, why not\nuse this opportunity to sell it?"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Do you have anything else?\nI'll buy everything you have, if you want!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: reset_colour
+      - text: How many would you like to sell?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "So "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: "..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " That's "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nDo we have a deal?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Oh... I'm sorry, but I'm not interested in\nthat sort of thing."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Wait, but...isn't that what you're wearing\nright now?!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Um... I don't think I can buy\nthat from you right this moment..."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Just one?
+      - control:
+          kind: pause
+          length: short
+      - text: " That'll be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nSound good?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "All of them? In that case...the grand total\nwould be "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ". Is that OK?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Hmm... That
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: " "
+      - control:
+          kind: reset_colour
+      - text: "will cost ya "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: " rupees"
+      - control:
+          kind: reset_colour
+      - text: ".\nWhat a steal!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Oh...that's a shame."
+      - control:
+          kind: pause
+          length: longer
+      - text: " What's wrong?\nYou don't like it?"
+  FirstTalk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Welcome to Enchanted,\nmy high-end boutique!\n\nWe exclusively stock the special\ngarments of the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree Collection
+      - control:
+          kind: reset_colour
+      - text: "!\n\nIn fact, that "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "stealth chest guard "
+      - control:
+          kind: reset_colour
+      - text: "over\nthere is highly recommended!\n\nOh, and we also buy anything you\ndon't need, so just talk to me when\nyou're ready!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  FirstTalk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Welcome to Enchanted,\nmy high-end boutique!\n\nThe fact that you showed up out of\nnowhere—and stark naked, no less—\nmeans you're likely a total creep.\nBut that's no business of mine! Anyhoo...\nHere, we exclusively stock the special\ngarments of the "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree Collection
+      - control:
+          kind: reset_colour
+      - text: "!\nI'm certain even someone like you,\nwho has given up on clothes altogether,\nwill find something you like here!\nIn fact, that "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "stealth chest guard "
+      - control:
+          kind: reset_colour
+      - text: "over\nthere is highly recommended!\n\nOh, and we also buy anything you\ndon't need, so just talk to me when\nyou're ready!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Near00:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Need some new clothes?
+  Near01:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Our clothes are the tops!
+  Near02:
+    attributes: Npc_Kakariko012
+    contents:
+      - text: Good evening!
+  Talk00:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Come back anytime!
+  Talk01:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Everything here is part of the specially\ncurated "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree
+      - control:
+          kind: reset_colour
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Collection
+      - control:
+          kind: reset_colour
+      - text: ". Please,\ntake your time looking around!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk06:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "Hold on a minute! "
+      - control:
+          kind: pause
+          length: longer
+      - text: "It seems we've\nsold out our entire stock!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "So... I guess that means...\nI don't have to work anymore!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Heh! Maybe I'll take a vacation!\nOoh, yeah! I'll bring Lasli or my\ngranny along too!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk07:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "The "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Claree Collection
+      - control:
+          kind: reset_colour
+      - text: "! As in a high-end\ncollection curated by me, Claree.\nBUT OF COURSE.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "I've personally selected each and every\nitem in here using my flawless fashion\nsense.\nIt's all HIGHLY recommended.\nEach item has its own unique features\nand abilities, so take a good look!"
+  Talk08:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Thanks! That'll look great on you!\nReally!"
+  Talk14:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "Do you need something else?\nGo on—ask me anything!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 11
+            - 12
+            - 8
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk17:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Thanks! You've made a great purchase!\nReally!"
+  Talk19:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Once I get out of here, where should I go?\nHmm, maybe I'll try to find that pond...\nThe one that promises love..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk20:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Being stuck in this tiny town, I get pretty\nexcited about stuff from the outside...\n\nI'm always happy to take a look at what\nyou've collected, so come back if you\never want to sell anything!"
+  Talk24:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Isn't that lovely? It's a limited-edition\nEnchanted exclusive!\n\nWhile you wear it, your footsteps are\nnearly soundless, so it's perfect for\nhunting and stuff.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Oh, but it offers very little defense. Small price\nfor the extra stealth..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk25:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Welcome to Enchanted,\nmy high-end boutique!\n\nBy the by, that "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: stealth chest guard
+      - control:
+          kind: reset_colour
+      - text: "\nover there is highly recommended.\n\nWhile you wear it, your footsteps are\nnearly soundless, so it's perfect for\nhunting and stuff!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Oh, but it offers very little defense. Small price\nfor the extra stealth..."
+      - control:
+          kind: text_size
+          percent: 100
+  Talk26:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "Thanks! I'll be sure to stock up for ya!"
+  Talk27:
+    attributes: Npc_Kakariko012
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Thanks! Take good care of it!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Stop that!

@@ -1,0 +1,910 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: ¡Te vendo algo!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Hasta luego
+  "5500":
+    attributes: ""
+    contents:
+      - text: ¡Sí!
+  "5501":
+    attributes: ""
+    contents:
+      - text: "No"
+  "5502":
+    attributes: ""
+    contents:
+      - text: ¡Compro!
+  "5503":
+    attributes: ""
+    contents:
+      - text: Es igual
+  "5507":
+    attributes: ""
+    contents:
+      - text: Las compro todas
+  "5508":
+    attributes: ""
+    contents:
+      - text: Las vendo todas
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿Qué me quieres vender?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Puedo darte "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " por\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ", ¿estás\nde acuerdo?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Sahku, sahku.\nYa tengo tus rupias..."
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: ¡Sahku!
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Sahku.
+      - control:
+          kind: pause
+          length: long
+      - text: " A mi hija le va a encantar.\n¡Gracias!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Sahku. Esto es dificilísimo de conseguir.\n¡Parece que es mi día de suerte!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Claro, no tengo prisa."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿Ya está?
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "¡Anda, enséñame qué más tienes!\nNo pierdes nada."
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Parece que tienes más cosas que\nle gustarían a mi hija."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "Nunca me canso de comprar cosas\nforáneas. ¡Podría comprarte todo\nlo que traes!"
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "En la ciudadela está prohibido regatear.\nSi necesitas rupias, deberás vender\ngemas o algún otro objeto."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Ay, pero no tienes ni un huequito...\nAvísame cuando hayas organizado\nla alforja."
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\n¿Cuántas unidades?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Bien, entonces quieres "
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unidades.\nEso sería... "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿trato?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Me temo que no compro cosas\nde ese tipo."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Puede que para los hylianos sea normal\nvender lo que se lleva puesto, pero eso\nno está bien visto en la ciudadela."
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ", ¿sí?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¿Cuántas unidades vas a querer?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Bien, "
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - Será
+            - Serán
+            - ""
+      - text: " "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿sí?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: ¿De verdad?
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Todas?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Pues eso\nserá un total de "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: "\n¿Te parece?"
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Por "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " puedo ofrecerte "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: "\n¿Te parece?"
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿te parece bien?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¿Cuántas unidades van a ser?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - text: "Por "
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unidades, serían\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿qué dices?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "¿Has cambiado de parecer?\nQué pena..."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "En la ciudadela está prohibido regatear.\nSi necesitas rupias, tendrás que vender\ngemas o algún otro objeto."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "Vas demasiado cargada...\nVuelve cuando hayas hecho hueco."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Por eso son "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near001:
+    attributes: Npc_oasis045
+    contents:
+      - text: ¡Fruta de temporada!
+  Near002:
+    attributes: Npc_oasis045
+    contents:
+      - text: Ya no me queda nada...
+  Talk_01:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: "¡Wasaaq! Toda la fruta que vendo\nes fresca y deliciosa; ¡una alegría\npara el paladar!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: ¡Wasaaq!
+      - control:
+          kind: pause
+          length: longer
+      - text: " El desierto suele agotar\nla energía por completo, ¡pero con\nmi fruta la recuperarás de golpe!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_03:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "A mi hija le encanta el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pay de frutas
+      - control:
+          kind: reset_colour
+      - text: ",\nasí que trato de preparar uno de vez\nen cuando.\nTengo fruta de sobra, aunque no es\ntan fácil conseguir "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: trigo de Tabanta
+      - control:
+          kind: reset_colour
+      - text: ",\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: azúcar de caña
+      - control:
+          kind: reset_colour
+      - text: " o "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 2
+                  - 1
+                  - 1
+                  - 0
+      - text: mantequilla de cabra
+      - control:
+          kind: reset_colour
+      - text: "...\nPor eso no puedo hacerlo tan a\nmenudo como quisiera."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Pero si tienes todos los ingredientes\nnecesarios, ¡deberías animarte!"
+  Talk_05:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: No te preocupes.
+  Talk_06:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "¡Sahku, sahku!"
+  Talk_07:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "¡Sahku, sahku!\nSupongo que tendré que reponer\nla mercancía en cuanto pueda."
+  Talk_09:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Me encanta echarles un vistazo a\nlas cosas que tienen las forasteras."
+  Talk_11:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: "¡Wasaaq! Toda la fruta que vendo\nes fresca y apetitosa; ¡una delicia\npara el paladar!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: "Huele bien, ¿verdad?\nEsta fruta está en su punto."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_13:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "El aroma alrededor del puesto es\ndelicioso, ¿verdad?"
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡La fruta que\ntenía estaba en su punto!\nTan rica y madura que aunque ya la\nvendí toda, su delicioso aroma\nsigue en el aire."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_14:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: "Están en su punto, sabes. Seguro que\nsu sabor es perfecto."
+  Talk_15:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: Sahku.
+      - control:
+          kind: pause
+          length: short
+      - text: " Fue una muy buena compra,\n¿no lo crees?"
+  Talk_16:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - text: Sahku.
+      - control:
+          kind: pause
+          length: long
+      - text: " ¡Vuelve pronto!"
+  Talk_17:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Oh, ¿ya se agotaron?\nTendré que traer más para ti."
+  Talk_18:
+    attributes: Npc_oasis045
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¿Ya te enteraste de la buena noticia?\n¡"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "Naboris "
+      - control:
+          kind: reset_colour
+      - text: por fin se ha calmado!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Y, según dicen, ¡la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: matriarca
+      - control:
+          kind: reset_colour
+      - text: " y Morselia\njugaron un papel importante en todo\neste asunto!\nYo siempre trato de alimentar a Morselia\ncon fruta de mi puesto cada vez que\npuedo.\n¡Y esta es la oportunidad perfecta\npara hacerme publicidad!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "\"Puesto de fruta de Velooru.\n¡El favorito de Morselia!\"."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n¡Ja, ja, ja! ¿Qué te parece?\nHasta se antoja comer aquí, ¿verdad?\nEs importante establecer y cuidar\nla marca."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 2
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

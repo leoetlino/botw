@@ -1,0 +1,914 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: 拿近衛之劍交換
+  "0001":
+    attributes: ""
+    contents:
+      - text: 拿近衛雙手劍交換
+  "0002":
+    attributes: ""
+    contents:
+      - text: 拿近衛之槍交換
+  "0003":
+    attributes: ""
+    contents:
+      - text: 拿近衛之弓交換
+  "0004":
+    attributes: ""
+    contents:
+      - text: 拿近衛盾交換
+  "0005":
+    attributes: ""
+    contents:
+      - text: 不換
+  "0006":
+    attributes: ""
+    contents:
+      - text: 我想聽
+  "0007":
+    attributes: ""
+    contents:
+      - text: 不用麻煩了
+  "0008":
+    attributes: ""
+    contents:
+      - text: 用鼓隆式！
+  "0009":
+    attributes: ""
+    contents:
+      - text: 用利特式！
+  "0010":
+    attributes: ""
+    contents:
+      - text: 用卓拉式！
+  "0011":
+    attributes: ""
+    contents:
+      - text: 用其他的方式！
+  "0012":
+    attributes: ""
+    contents:
+      - text: 用格魯德式！
+  "0013":
+    attributes: ""
+    contents:
+      - text: 用希卡式！
+  "0014":
+    attributes: ""
+    contents:
+      - text: 用自己的方式！
+  talk_00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "從這裡往北走，會看到一座城堡，你有去過嗎？\n據說那是在100年前毀滅的海拉魯城堡……\n那邊能拿到不少寶物，像是過去的武器之類的，\n所以我之前有時會去尋寶。\n其中好像有套名為"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 近衛系列
+      - control:
+          kind: reset_colour
+      - text: "的超強武器，\n在武器收藏家之間可是赫赫有名呢。\n我雖然也想瞧一眼那種武器……"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 16
+      - text: "但自從那裡冒出一陣怪霧以來，\n最近怪物跟機械怪物的活動越來越頻繁……"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "現在潛入那邊實在太危險了，\n如果愛惜生命的話，最好別靠近那邊。"
+  talk_01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "海拉魯城堡……肯定還有\n數不盡的未知寶物在等人挖掘吧。"
+  talk_hint00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 20
+      - text: "什麼？你打算入侵城堡？\n我是知道不少方式……想聽嗎？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_hint01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 入侵城堡的方式……想聽嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_hint02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "不過因為很危險，我勸你還是別靠近那邊。\n真要去的話，就做好萬全的準備吧。"
+  talk_hintGerudo:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "格魯德式呀，\n充滿勇氣又對技巧有自信的話就選這個。\n雖然那些叫守護者的機械怪物\n總是在城堡周遭走來走去，\n但只要不怕被光束瞄準，\n就能從城邑騎馬一口氣衝過去！"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "\n雖說光是在險路上奔馳就很難了，\n但如果對射箭技術也有自信，\n也能試著瞄準守護者的眼睛，\n停下它們的動作喔。"
+  talk_hintGoron:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "鼓隆式呀，\n對毅力跟體魄有自信的話就選這個。\n方法簡單明瞭！\n就是從正面直接突破城堡的正門。\n訣竅就是多帶些能回復體力或能量的食物。"
+  talk_hintRito:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "利特式呀，\n有能力在空中滑行的話就選這個。\n先從東方或西方離開這片平原，\n繞到城堡北方的山上，\n再從那裡飛向城堡。\n越過護城河後，應該就能著陸了。"
+  talk_hintSelect00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 從各種族的擅長領域下手你覺得如何？
+  talk_hintSelect01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 其他的話……
+  talk_hintSelect02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要聽其他的嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 6
+            - 7
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_hintSelect03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 鼓隆？利特？卓拉？還是……？
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 10
+            - 11
+          selected_index: 0
+          cancel_index: 4
+          unknown: 10
+  talk_hintSelect04:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 格魯德？希卡？還是……？
+      - control:
+          kind: choice
+          choice_labels:
+            - 12
+            - 13
+            - 14
+          selected_index: 0
+          cancel_index: 3
+          unknown: 8
+  talk_hintSelf:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "哦……\n你這麼有自信的話，\n乾脆選擇一邊橫掃守護者，\n一邊勇往直前的勇者式如何？"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 8
+            - 205
+      - text: "……開玩笑的，\n"
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 1
+      - text: 你可千萬別做這種傻事喔。
+  talk_hintShiekah:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "希卡式呀，\n我就是用這種方式入侵城堡的。\n在遠方仔細觀察，\n再從敵人較少的後門潛入。"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "我就把我發現的入口告訴你吧。\n第一個是東坑道！\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "先走過城堡東邊的芬薩橋，\n會看到城堡在你的左手邊。\n接著爬上山丘，\n仔細一看就能在城堡的山腰處找到坑道入口。\n要是晚上，因為夜光石會發光，更容易找到。"
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "第二個是北方的船塢！\n城堡西邊的小島有座棧橋，\n從那裡搭乘木筏繞到北側，就能抵達了。\n我知道的入口就是這些囉。"
+  talk_hintZora:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "卓拉式呀，\n有能力攀登瀑布的話就選這個。\n城堡周遭被護城河圍起，\n想游泳過去還挺困難的。\n但有幾處尚未乾涸的瀑布，\n應該能從那裡一口氣攀登瀑布到上頭去。"
+  talk_notSell:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 12
+      - text: "唉……沒辦法……\n雖然可惜，也只能放棄了……"
+  talk_sellDiamond:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 10
+      - text: "這樣我就收集完整套近衛系列的武器了！\n真的很謝謝你！\n要是你能再拿近衛系列的武器過來，\n我就用紅寶石跟你交換！\n雖然每一種都有了，\n但我還沒收藏過癮呢！"
+  talk_sellDone:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "真的嗎！？\n謝謝你！！"
+  talk_sellPorchFull:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "你好像拿不動更多東西了，\n整理好袋子再過來吧。"
+  talk_sellWeaponBow00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 你那把弓……
+  talk_sellWeaponBow01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換紅寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponBow02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換藍寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponBow03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換黃玉？
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponBow04:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 鑽石と
+      - control:
+          kind: raw
+          zero:
+            zero:
+              field_1: 12
+              field_2: 4
+              field_3: 8
+      - text: こうかん交換しない？
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponLSword00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 你那把大劍……
+  talk_sellWeaponLSword01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換紅寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponLSword02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換藍寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponLSword03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換黃玉？
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponLSword04:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 鑽石と
+      - control:
+          kind: raw
+          zero:
+            zero:
+              field_1: 12
+              field_2: 4
+              field_3: 8
+      - text: こうかん交換しない？
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponShield00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 你那面盾牌……
+  talk_sellWeaponShield01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換紅寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponShield02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換藍寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponShield03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換黃玉？
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponShield04:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 鑽石と
+      - control:
+          kind: raw
+          zero:
+            zero:
+              field_1: 12
+              field_2: 4
+              field_3: 8
+      - text: こうかん交換しない？
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSpear00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 你那把槍……
+  talk_sellWeaponSpear01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換紅寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSpear02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換藍寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSpear03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換黃玉？
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSpear04:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 鑽石と
+      - control:
+          kind: raw
+          zero:
+            zero:
+              field_1: 12
+              field_2: 4
+              field_3: 8
+      - text: こうかん交換しない？
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSword00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 你那把劍……
+  talk_sellWeaponSword01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換紅寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSword02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換藍寶石？
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSword03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 要不要跟我換黃玉？
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_sellWeaponSword04:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 鑽石と
+      - control:
+          kind: raw
+          zero:
+            zero:
+              field_1: 12
+              field_2: 4
+              field_3: 8
+      - text: こうかん交換しない？
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 5
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk_showWeapon00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 18
+      - text: ……這……
+      - control:
+          kind: pause
+          length: long
+      - text: "\n"
+      - control:
+          kind: pause
+          frames: 30
+      - text: ……真是驚人……
+  talk_showWeapon01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "謝謝你讓我看了那麼棒的東西，\n我改天也再去找找看吧。"
+  talk_showWeapon02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 這是謝禮。
+  talk_showWeaponBow:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "等、等一下！\n能讓我看看你拿到的那把弓嗎！？"
+  talk_showWeaponLSword:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "等、等一下！\n能讓我看看你拿到的那把大劍嗎！？"
+  talk_showWeaponShield:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "等、等一下！\n能讓我看看你拿到的那面盾牌嗎！？"
+  talk_showWeaponSpear:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "等、等一下！\n能讓我看看你拿到的那把槍嗎！？"
+  talk_showWeaponSword:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 20
+      - text: "等、等一下！\n能讓我看看你拿到的那把劍嗎！？"
+  talk_sleep00:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 14
+      - text: "幹嘛！居然在旅館吵醒正在睡覺的女生，\n你腦子在想啥！？稍微替別人想一下啦！"
+  talk_sleep01:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 14
+      - text: "就說了我想睡覺！\n快走啦！"
+  talk_sleep02:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - text: "幹嘛！居然在旅館吵醒正在睡覺的女生……\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 21
+      - text: "而且還沒穿衣服！？\n"
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 14
+      - text: 你這變態！別靠近我！！
+  talk_sleep03:
+    attributes: Npc_RiverSideHatago002
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 8
+            - 14
+      - text: "半夜別裸體跟人搭話啦！\n真是變態！！"

@@ -1,0 +1,954 @@
+---
+group_count: 17
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: "Sí, quiero uno"
+  "0001":
+    attributes: ""
+    contents:
+      - text: "No, no quiero nada"
+  "0002":
+    attributes: ""
+    contents:
+      - text: ¿Qué es eso?
+  "0003":
+    attributes: ""
+    contents:
+      - text: No tengo tiempo
+  Talk001:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "¡Buenas, amigo!"
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Estás aquí para\npracticar el "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: deslizamiento con escudo
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk002:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "¿Te interesa el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: escudo de madera
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nEs un escudo decente. Dejémoslo ahí."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¿Quieres comprarlo por "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 30 rupias
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk003:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "¿Quieres un "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: escudo de soldado
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¡Es un escudo digno de profesionales!"
+      - control:
+          kind: pause
+          length: long
+      - text: "\nSoldados y deslizadores, claro.\n¿Quieres uno por "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 100 rupias
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk004:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Veo que tienes buen gusto.
+      - control:
+          kind: pause
+          length: short
+      - text: "\nEl "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: escudo de caballero
+      - control:
+          kind: reset_colour
+      - text: " es robusto y se\ndesliza como un chuchu sobre hielo.\n¿Quieres uno por "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 300 rupias
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk005:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "¡Buenas, amigo!"
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Vuelves para deslizarte\nun poco más? ¡Adelante, lánzate!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Ya vendí todos los escudos...\n¡incluido el mío!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Hum... Tal vez podría ir a buscar alguno\npor las ruinas."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "O quizás sea más rápido que me acerque\na un "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: "monstruo mientras duerme y le robe\nel suyo... Ay, qué miedo..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk006:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 19
+      - text: ¡Pero si es mi nuevo amigo!
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¿Quieres comprar un flamante escudo?"
+  Talk007:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 9
+      - text: "Bueno, no te preocupes.\n¡La próxima vez será!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Si no consigo vender nada, la hermandad\nse quedará sin fondos..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk008:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "¡Estupendo! Pruébalo para deslizarte por\nahí y así apreciarás mejor su calidad."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: set_colour
+          colour: grey
+      - text: Buf...
+      - control:
+          kind: pause
+          length: short
+      - text: " Con este dinero, la hermandad\npodrá sobrevivir un día más..."
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+  Talk009:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: Vaya...
+      - control:
+          kind: pause
+          length: long
+      - text: " Ya eres casi como un miembro\nmás de los Destrozaescudos.\n¡Tú tampoco tienes "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: rupias
+      - control:
+          kind: reset_colour
+      - text: "!"
+  Talk010:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 12
+      - text: Tenemos un problema...
+      - control:
+          kind: pause
+          length: long
+      - text: " Igual no te\nhas dado cuenta, pero parece que\ntu "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: alforja
+      - control:
+          kind: reset_colour
+      - text: " está llena."
+  Talk011:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 22
+      - text: "¡Eh, amigo! ¡Déjate de bromas!"
+  Talk012:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: Puf...
+      - control:
+          kind: pause
+          length: long
+      - text: " Eso fue muy peligroso."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: set_colour
+          colour: grey
+      - text: "Si me quedo sin escudos para vender,\nla hermandad estará acabada."
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+  Talk013:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "¡Gracias, eres un buen amigo!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nY ahora, además, serás un experto\nen deslizamiento con escudo.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Por cierto,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿has oído hablar de\nla legendaria "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Selmie
+      - control:
+          kind: reset_colour
+      - text: ", que fue campeona\ndel mundo tropecientas veces seguidas?\nCuando "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Selmie
+      - control:
+          kind: reset_colour
+      - text: " se deslizaba con\nsu escudo, nadie podía adelantarla.\n¡Ni los orni volando!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Dicen que todos los que la veían\ndeslizarse entraban como en trance..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Desgraciadamente, se retiró muy joven,\nasí que nunca pude verla competir."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¡Pero todavía sigue por ahí!\nHe oído que tiene una cabaña en una\nzona tranquila de la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: cordillera de Hebra
+      - control:
+          kind: reset_colour
+      - text: ",\nal noroeste de aquí.\nSi de verdad quieres aprender\na deslizarte con escudo como\nun profesional, deberías visitarla.\n"
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: set_colour
+          colour: grey
+      - text: "Ahora que lo pienso, los últimos que intentaron\nllegar tuvieron problemas por el camino..."
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+  Talk014:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "¡Se nota que sabes reconocer\nun escudo de calidad!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Este de\naquí no se rompe tan fácilmente.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Y hablando de escudos irrompibles,\n¿conoces el legendario "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: escudo hyliano
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: long
+      - text: "\n¡Está claro que su fama lo precede!\nSe dice que fue fabricado por orden de\nla familia real y que su resistencia es\nperfecta para deslizarse.\nEs casi imposible de encontrar hoy en\ndía,"
+      - control:
+          kind: pause
+          length: long
+      - text: " pero dicen que aún queda uno\nen el "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: castillo de Hyrule
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: set_colour
+          colour: grey
+      - text: "Y ahí se quedará, porque ninguno de los que\nfueron a buscarlo regresaron..."
+      - control:
+          kind: reset_colour
+      - control:
+          kind: text_size
+          percent: 100
+  Talk015:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Deslizarse cuesta abajo hacia el noroeste\nes pan comido. ¡Es una ruta apta incluso\npara novatos!\n¡Vamos, "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: deslízate
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - control:
+          kind: text_size
+          percent: 80
+      - text: ¿Dónde voy a encontrar yo más escudos?
+      - control:
+          kind: pause
+          length: long
+      - text: "\nPodría buscar de nuevo por las ruinas,\na ver si alguien dejó otro por ahí...\nO, como última opción, acercarme a un "
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: "monstruo\nmientras duerme y robarle su escudo. Ay, espero\nque no llegue a eso..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk016:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "¡Buenas, amigo!"
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Vuelves para probar\nel "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: deslizamiento con escudo
+      - control:
+          kind: reset_colour
+      - text: " otra vez?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Si no traes tu propio escudo de casa,\npor aquí tenemos algunos a la venta.\n¡Solo lo digo por si te interesa!\n"
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Como no vendamos alguno pronto,\nnuestra hermandad se quedará sin fondos."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n¿Y qué será de nosotros dos?"
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk017:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Deslizarse cuesta abajo hacia el noroeste\nes superfácil. ¡Por ahí puede bajar un\nnovato cualquiera!\n¡Vamos!"
+      - control:
+          kind: pause
+          length: short
+      - text: " No te lo pienses. ¡Agarra el\nescudo y lánzate sin dudar!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: ¡Y no dejes de comprar escudos!
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk018:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "No te preocupes, ¡yo te lo explicaré\ntodo!"
+      - control:
+          kind: pause
+          length: long
+      - text: " ¡Ya verás lo fácil que es!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Soy miembro de la famosa hermandad de\ndeslizadores: ¡los Destrozaescudos!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Bueno, en realidad Fien y yo somos\nlos únicos miembros de la hermandad..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Yo me encargo de captar a gente\ninteresada en el apasionante mundo\ndel "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: deslizamiento con escudo
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "No sé si te has fijado, pero la inclinación\ny las vistas de esta colina la convierten\nen el lugar ideal para "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: deslizarse
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Si no tienes tu propio escudo,\ntenemos algunos a la venta,\n¡por si te interesa!\n"
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Si no vendemos alguno pronto, nuestra hermandad\nse quedará sin fondos."
+      - control:
+          kind: pause
+          length: short
+      - text: " ¿Qué será de nosotros?"
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk_20:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 19
+      - text: "¡Buenas, mi nuevo amigo!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Siento que\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Fien
+      - control:
+          kind: reset_colour
+      - text: " te haya obligado a subir."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 10
+      - text: "Somos miembros de la famosa\nhermandad de "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "deslizamiento con\nescudo"
+      - control:
+          kind: reset_colour
+      - text: ": ¡los Destrozaescudos!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Bueno, en realidad Fien y yo somos\nlos únicos miembros..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "¿Has probado el "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "deslizamiento con\nescudo"
+      - control:
+          kind: reset_colour
+      - text: " alguna vez? ¡La emoción que\nse siente no se puede explicar!\n¡Hay que vivirlo!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Si no tienes escudo propio, tenemos\nalgunos a la venta."
+      - control:
+          kind: pause
+          length: long
+      - text: " ¡Yo solo lo digo\npor si te interesa!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Y porque como no consigamos vender alguno,\nla hermandad se quedará sin fondos..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk_21:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "¡Eh, regresaste!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 11
+      - text: "¡Espero que vengas a "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "deslizarte\ncon el escudo"
+      - control:
+          kind: reset_colour
+      - text: "! No hay experiencia\nmás emocionante en esta vida.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Si no tienes escudo propio, tenemos\nalgunos a la venta."
+      - control:
+          kind: pause
+          length: long
+      - text: " Solo lo digo\npor si te interesa, ¿eh?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Y porque como no consigamos vender alguno,\nla hermandad se quedará sin fondos..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  Talk_22:
+    attributes: NPC_Lanayru001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "¡Eh, regresaste!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¿Sabes qué te convendría practicar más?\n¡El "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: deslizamiento con escudo
+      - control:
+          kind: reset_colour
+      - text: "!\nEs emocionante, ¡y muy divertido!\n"
+      - control:
+          kind: set_colour
+          colour: grey
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Y yo que me quedé sin escudos\ny no puedo disfrutarlo..."
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: reset_colour
+  near_00:
+    attributes: NPC_Lanayru001
+    contents:
+      - text: Tengo que vender algo...

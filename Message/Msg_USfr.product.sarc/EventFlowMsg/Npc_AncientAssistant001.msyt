@@ -1,0 +1,3088 @@
+---
+group_count: 83
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: Je veux des photos!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Comment on relie?
+  "0003":
+    attributes: ""
+    contents:
+      - text: Chef?
+  "0004":
+    attributes: ""
+    contents:
+      - text: Merci.
+  "0005":
+    attributes: ""
+    contents:
+      - text: Tu fais quoi?
+  "0006":
+    attributes: ""
+    contents:
+      - text: Au revoir!
+  "0007":
+    attributes: ""
+    contents:
+      - text: Comment tu sais ça?
+  "0008":
+    attributes: ""
+    contents:
+      - text: Les photos...?
+  "0009":
+    attributes: ""
+    contents:
+      - text: Pas du tout.
+  "0010":
+    attributes: ""
+    contents:
+      - text: La tablette Sheikah?
+  "0011":
+    attributes: ""
+    contents:
+      - text: Tes recherches...
+  "0012":
+    attributes: ""
+    contents:
+      - text: Faciliter?
+  "0013":
+    attributes: ""
+    contents:
+      - text: "D'accord."
+  "0014":
+    attributes: ""
+    contents:
+      - text: Pas question.
+  "0015":
+    attributes: ""
+    contents:
+      - text: Pas encore.
+  "0016":
+    attributes: ""
+    contents:
+      - text: Oui.
+  "0017":
+    attributes: ""
+    contents:
+      - text: Non.
+  "0018":
+    attributes: ""
+    contents:
+      - text: Oui!
+  "0019":
+    attributes: ""
+    contents:
+      - text: "Pas besoin, merci."
+  "0020":
+    attributes: ""
+    contents:
+      - text: "Oui, s'il te plaît."
+  "0021":
+    attributes: ""
+    contents:
+      - text: Non merci.
+  "5500":
+    attributes: ""
+    contents:
+      - text: Oui.
+  "5501":
+    attributes: ""
+    contents:
+      - text: Non.
+  "5502":
+    attributes: ""
+    contents:
+      - text: "J'achète!"
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Non, merci."
+  "5504":
+    attributes: ""
+    contents:
+      - text: Acheter.
+  "5505":
+    attributes: ""
+    contents:
+      - text: Vendre.
+  "5506":
+    attributes: ""
+    contents:
+      - text: Annuler.
+  "5507":
+    attributes: ""
+    contents:
+      - text: "J'achète tout."
+  Com_Talk_00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Voilà les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: " que tu peux\najouter pour le moment."
+  Com_Talk_06:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Que souhaites-tu acheter?
+  Com_Talk_10:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Tu souhaites donc acheter\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nCela te coûtera "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Merci!
+  Com_Talk_30:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "\nen "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " exemplaire"
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - ""
+            - s
+            - ""
+      - text: ", c'est bien ça?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nÇa fera "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nCombien veux-tu en acheter?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_34:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Tu veux tout acheter...?
+      - control:
+          kind: pause
+          length: short
+      - text: " Cela te coûtera\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ". Es-tu sûr de toi?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  TerrorArrow:
+    attributes: ""
+    contents:
+      - text: Ouaaah!
+  TerrorBomb:
+    attributes: ""
+    contents:
+      - text: Une... Une bombe?!
+  TerrorSword:
+    attributes: ""
+    contents:
+      - text: Mais...?!
+  near00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Hmm...
+  talk00:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "J'imagine que tu n'avais encore jamais\nvu autant de livres réunis au même\nendroit, je me trompe?\nNous avons rassemblé ici tous les\ndocuments que nous avons pu trouver\nconcernant les civilisations antiques.\nMoi-même, je ne saurais pas te dire\ncombien nous avons d'ouvrages!"
+  talk01:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Oh, mais!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Où sont mes manières!\nPardonne-moi, j'ai complètement\noublié de me présenter!"
+  talk02:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Ainsi, tu as rencontré dame Impa.\nBien bien bien, voyons voir ta\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJe vais essayer d'en restaurer les\nmodules de base.\n\nMais tout d'abord, je dois t'expliquer\ndeux-trois petites choses."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ce sera\npeut-être un peu long.\nPar exemple, le genre de recherches\nqu'on effectue ici. Les résultats qu'on\na obtenus. "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Notre histoire... Nos progrès.\nEt ensuite, tu auras droit à une visite\nguidée du laboratoire antique d'Elimith."
+  talk03:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je m'appelle Canel.\n\n\nEt toi..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n\nTu t'appelles Link, c'est ça?"
+      - control:
+          kind: single_choice
+          label: 7
+  talk04:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Dame Impa m'a parlé de toi."
+  talk05:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je vois. Dans ce cas, tu vas peut-être\ntrouver que je vais un peu vite en\naffaire, mais...\nVeux-tu bien ouvrir ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie\nd'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: " depuis la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: carte
+      - control:
+          kind: reset_colour
+      - text: "?\n\nJ'aimerais que tu sélectionnes la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "photographie "
+      - control:
+          kind: reset_colour
+      - text: "du "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: "\ndans la catégorie « Matériaux ».\nSélectionne ensuite « Rechercher »,\npuis « Rechercher cet élément ».\n\nTon "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: " sera alors en\nmesure de te guider vers les zones où\npoussent des "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: champis piment
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk06:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 1
+      - text: "C'est comme si l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: "\nretrouvait la mémoire!"
+  talk07:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 11
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Chef
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Écoutez, "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: chef
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " C'est la tablette\nSheikah!!! La vraie!"
+      - control:
+          kind: single_choice
+          label: 3
+  talk08:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 12
+      - text: Ah là là...
+      - control:
+          kind: pause
+          length: short
+      - text: " Quel étourdi... Je ne t'ai même\npas présenté notre "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: chef de laboratoire
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk09:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Je comprends.
+      - control:
+          kind: pause
+          length: longer
+      - text: " Dans ce cas, je m'en\nservirai pour la soupe de ce soir."
+  talk10:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "La "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: chef
+      - control:
+          kind: reset_colour
+      - text: " de ce "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: laboratoire antique
+      - control:
+          kind: reset_colour
+      - text: ",\nc'est elle, là-bas... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Dame Pru'ha.\n\nC'est la plus expérimentée de notre\npetite équipe."
+  talk100:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Désolé,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais tu ne possèdes pas\nsuffisamment de rubis..."
+  talk101:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Comme c'est fâcheux..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Tu ne sembles\npas avoir assez de rubis."
+  talk102:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Tu n'as pas assez de rubis..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Seule\nla première transaction était gratuite.\nDésolé..."
+  talk103:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Tu n'as pas assez."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Nous sommes un peu\nà court de moyens... J'espère que tu\ncomprends..."
+  talk104:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Cette femme sur la photo dans\nl'enveloppe..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " C'est..."
+  talk11:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "En tant que chercheur, j'estime avoir de\nla chance d'être l'assistant d'une telle\nsommité de la science.\nIl faut que tu saches une chose,"
+      - control:
+          kind: pause
+          length: short
+      - text: " Link.\nDame Pru'ha a l'air d'une petite fille,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\ncomme ça, mais...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Hem hem,"
+      - control:
+          kind: pause
+          length: short
+      - text: " peut-être que je ne devrais\npas parler de choses qui ne me\nconcernent pas.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Si tu veux en savoir plus, tu ferais mieux\nd'aller discuter avec elle directement."
+  talk12:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Bonjour.
+  talk13:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Bonjour!
+  talk14:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Bonsoir!
+  talk15:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Oui?
+  talk16:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Très bien. Dans ce cas, je retourne\nà mes occupations."
+  talk17:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "C'est un appareil universel qui a été\ndéveloppé par nos ancêtres, et ce, afin\nd'instaurer la paix dans le monde. "
+      - control:
+          kind: pause
+          length: short
+      - text: "\nSes "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: modules
+      - control:
+          kind: reset_colour
+      - text: " ont aussi été créés par"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nle "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: clan Sheikah
+      - control:
+          kind: reset_colour
+      - text: ".\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Je dois t'avouer que je suis soulagé de\nsavoir qu'elle est en ta possession!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\nQui sait ce qu'il serait advenu de nous\nsi elle était tombée entre de mauvaises\nmains..."
+  talk18:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "En quoi puis-je t'aider?"
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 5
+                - 50
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 77
+                - 105
+                - 110
+                - 105
+                - 95
+                - 67
+                - 97
+                - 109
+                - 101
+                - 114
+                - 97
+                - 66
+                - 111
+                - 121
+                - 95
+                - 67
+                - 104
+                - 97
+                - 116
+                - 10
+                - 0
+                - 11
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk19:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: Je peux te renseigner sur autre chose?
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 5
+                - 50
+                - 72
+                - 97
+                - 116
+                - 101
+                - 110
+                - 111
+                - 77
+                - 105
+                - 110
+                - 105
+                - 95
+                - 67
+                - 97
+                - 109
+                - 101
+                - 114
+                - 97
+                - 66
+                - 111
+                - 121
+                - 95
+                - 67
+                - 104
+                - 97
+                - 116
+                - 10
+                - 0
+                - 11
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk20:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "C'est tout ce qu'il y a comme modules?"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nHmm..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Étrange...\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "J'ai l'impression qu'il te manque\nles "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: modules
+      - control:
+          kind: reset_colour
+      - text: " de base.\n\nIl y a certainement une explication\nà ce phénomène..."
+  talk21:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Eh bien, les recherches menées par les\nSheikahs sur les civilisations antiques...\n\n... consistent en l'étude et l'analyse\nconcrète"
+      - control:
+          kind: pause
+          length: short
+      - text: " des sciences antiques qui\nnous viennent d'une époque mythique.\nNous tentons d'anatomiser"
+      - control:
+          kind: pause
+          length: short
+      - text: " les créatures\ndivines"
+      - control:
+          kind: pause
+          length: short
+      - text: " et les sanctuaires"
+      - control:
+          kind: pause
+          length: short
+      - text: " d'un point de\nvue géopolitique"
+      - control:
+          kind: pause
+          length: short
+      - text: " et structurel...\n... afin de les restaurer"
+      - control:
+          kind: pause
+          length: short
+      - text: " au moyen de\ntechniques de pointe,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais aussi de\nprocéder à une modernisation atomi...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Ah!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Désolé,"
+      - control:
+          kind: pause
+          length: short
+      - text: " c'est peut-être un peu\ndifficile à comprendre?\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je vais essayer de reformuler...\nLes recherches que nous menons..."
+  talk22:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Les recherches que nous\nmenons..."
+  talk23:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "... consistent à trouver le moyen le plus\nefficace de sceller "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Ganon
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " à chaque fois\nque survient le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Fléau
+      - control:
+          kind: reset_colour
+      - text: "...\n... en utilisant les connaissances de nos\nancêtres,"
+      - control:
+          kind: pause
+          length: short
+      - text: " améliorées par nos soins."
+  talk24:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "On nous a dit d'aider le jeune garçon"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nqui se présenterait à nous avec la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - text: ".\nSon nom serait Link,"
+      - control:
+          kind: pause
+          length: short
+      - text: " et il serait l'espoir\nde notre monde,"
+      - control:
+          kind: pause
+          length: short
+      - text: " celui qui s'éveillerait\ndu "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: sommeil de la Renaissance
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Ah!
+      - control:
+          kind: pause
+          length: short
+      - text: " Mais j'ai omis un détail de la plus\nhaute importance!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Enfin, cela ne te concerne pas vraiment\ndirectement..."
+  talk25:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Il est possible de réactiver
+      - control:
+          kind: pause
+          length: short
+      - text: " les "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: modules
+      - control:
+          kind: reset_colour
+      - text: "\nen utilisant la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: " qui se trouve\njuste là...\nMais il nous faut d'abord l'autorisation\nde dame "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Impa
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " qui vit au village de\nCocorico..."
+  talk26:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "J'aimerais vraiment pouvoir réactiver\nles "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: modules de base
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " de\nla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - text: "...\nMais pour cela, il me faut l'autorisation\nde dame "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: Impa
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " la plus haute autorité du\nclan Sheikah.\nElle vit au village de Cocorico, à l'ouest\nd'ici."
+      - control:
+          kind: pause
+          length: short
+      - text: " Tu devrais aller lui en parler."
+  talk27:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je t'ai préparé un petit "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "mode d'emploi"
+      - control:
+          kind: reset_colour
+      - text: "\nassez bien fourni sur le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "détecteur\nSheikah +"
+      - control:
+          kind: reset_colour
+      - text: ".\nTu le trouveras sur mon bureau."
+      - control:
+          kind: pause
+          length: short
+      - text: " Je te\nconseille vivement de le parcourir."
+  talk28:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je t'ai préparé un petit "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "mode d'emploi"
+      - control:
+          kind: reset_colour
+      - text: "\ndu détecteur Sheikah +.\nIl est sur mon bureau.\nJettes-y un œil quand tu auras\nun moment."
+  talk29:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 11
+      - text: Merci beaucoup!
+  talk30:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 0
+      - text: "Tu as obtenu le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nEnfin! Tu comprendras vite à quel point\nil peut être pratique.\nD'après nos documents,"
+      - control:
+          kind: pause
+          length: short
+      - text: " il est capable de\ndétecter les éléments dont tu possèdes\nune "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographie
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Je pourrais t'expliquer comment l'utiliser,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nmais je crois que rien ne vaut la pratique.\n\nAlors, nous allons procéder à une petite\nexpérience!"
+  talk31:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Si tu veux trouver des "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: champis piment
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies-en un
+      - control:
+          kind: reset_colour
+      - text: ", puis règle ton\ndétecteur dessus.\nTu pourras ensuite repérer tous ceux des\nenvirons avec ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: "!"
+  talk32:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Tu m'as ramené des "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: champis piment
+      - control:
+          kind: reset_colour
+      - text: "?"
+  talk33:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Alors?
+      - control:
+          kind: pause
+          length: short
+      - text: " Que penses-tu du "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "détecteur\nSheikah +"
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: " maintenant qu'il est relié\nà ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopédie
+      - control:
+          kind: reset_colour
+      - text: "?\nSi tu veux le régler à nouveau sur les\nsanctuaires, ouvre le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur
+      - control:
+          kind: reset_colour
+      - text: " depuis\nla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: carte
+      - control:
+          kind: reset_colour
+      - text: " et sélectionne « "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Sanctuaires
+      - control:
+          kind: reset_colour
+      - text: " ».\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 19
+      - text: Au fait...
+      - control:
+          kind: pause
+          length: short
+      - text: " J'aimerais te parler d'autre\nchose...\n\nViens me voir quand tu auras le temps\nd'en discuter."
+  talk34:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Voyons voir ça...
+  talk35:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hmm?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Tu n'as pas l'air d'avoir les "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: trois
+      - control:
+          kind: reset_colour
+      - text: "\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: champis piment
+      - control:
+          kind: reset_colour
+      - text: " que je t'ai demandés...\n\nVeux-tu que je te réexplique comment\nutiliser ton détecteur?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 17
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk36:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 11
+      - text: "Parfait! Tu as pris une bonne photo\nde ce "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Merci!"
+  talk37:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Veux-tu bien me donner les "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "trois "
+      - control:
+          kind: reset_colour
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "champis\npiment"
+      - control:
+          kind: reset_colour
+      - text: " que tu as en ta possession?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 14
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk38:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Très bien, voilà ta récompense..."
+  talk39:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "Je vois... Comme c'est dommage.\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Reviens me parler si tu changes d'avis."
+  talk40:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Compris.
+      - control:
+          kind: pause
+          length: longer
+      - text: " Alors..."
+  talk41:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_00
+      - text: "La prochaine fois que tu voudras\nte servir de ma petite "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: ",\nil va falloir payer!"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nOn n'est pas bénévoles, je te signale,\nalors merci d'avance de participer au\nfinancement du labo!"
+  talk42:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Link, excuse-moi de t'avoir fait\nattendre."
+      - control:
+          kind: pause
+          length: longer
+      - text: " Tu es venu faire réparer\nta "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - text: ", n'est-ce pas?"
+      - control:
+          kind: single_choice
+          label: 5
+      - text: "\nJe m'appelle Canel, et je travaille ici,\nau laboratoire antique d'Elimith."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nJe suis l'assistant de dame Pru'ha.\nSi tu as besoin d'un renseignement,\nou de quoi que ce soit, n'hésite pas\nà t'adresser à moi."
+  talk43:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Héhé... "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Link
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je dispose d'informations\nqui doivent absolument parvenir à tes\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: oreilles
+      - control:
+          kind: reset_colour
+      - text: "!\nIl m'est possible d'augmenter la quantité\nd'éléments"
+      - control:
+          kind: pause
+          length: short
+      - text: " que ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: "\npeut chercher! Et tout de suite!"
+  talk44:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "J'aime pas trop laisser n'importe qui"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nse servir de mon adorable "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: "\ngratuitement...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Mais j'ai tellement envie de savoir ce\nque ça va donner que t'as pas besoin\nde payer! ♪\nC'est seulement pour cette fois, hein!"
+  talk45:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Bon, si nous sommes d'accord..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Veux-tu\nbien apposer ta "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "tablette Sheikah "
+      - control:
+          kind: reset_colour
+      - text: "sur la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk46:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Très bien. Alors...
+  talk47:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 1
+      - text: "Link... "
+      - control:
+          kind: pause
+          length: short
+      - text: "Pourrais-tu essayer de placer la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " sur la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 6
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk48:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 19
+      - text: Hmm?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je voulais te donner 3 truffes\nmax pour te remercier,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais on dirait\nbien que tu ne peux pas en avoir plus.\nQu'est-ce qu'on fait?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Tu les veux\nou pas?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 18
+            - 19
+          selected_index: 0
+          cancel_index: 2
+          unknown: 6
+  talk49:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: Les sous sont pour moi! ♪
+  talk50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Très bien.
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je continue..."
+  talk51:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: animation
+          name: CustomGreeting
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: Tchaka!
+  talk52:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Oh!
+      - control:
+          kind: pause
+          length: short
+      - text: " C'est..."
+      - control:
+          kind: pause
+          length: short
+      - text: " C'est incroyable!"
+  talk53:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Dans ce cas, vends quelques truffes max\npour faire de la place dans ta sacoche,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\net reviens me voir."
+  talk54:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "...\n\n\nEh bien..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Cela risque d'être difficile\nà croire, mais..."
+      - control:
+          kind: pause
+          length: longer
+      - text: " je vais t'expliquer.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Nos recherches ont démontré que la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: " que tu vois là"
+      - control:
+          kind: pause
+          length: short
+      - text: " cachait des\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: " du passé!\nIl t'est possible de les en extraire"
+      - control:
+          kind: pause
+          length: short
+      - text: " et de\nles ajouter à ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: ".\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Voilà qui devrait grandement faciliter tes\nrecherches avec le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: single_choice
+          label: 12
+  talk55:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: Très bien...
+      - control:
+          kind: pause
+          length: longer
+      - text: " Ah! Ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie\nd'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: " me semble encore incomplète..."
+  talk56:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ça en a tout l'air..."
+  talk57:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Dans ce cas, va donc activer\nla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: "."
+  talk58:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Il y a un "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " derrière\nle laboratoire.\n\nVa donc en faire une photographie avec\nton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: appareil photo
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: ", et reviens me voir\nquand ce sera fait."
+  talk59:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Oh, mais...?!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Veux-tu bien descendre\nde là tout de suite?!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je refuse de parler\naux mal élevés!"
+  talk60:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "On ne t'a jamais appris que c'est\ndangereux, ce que tu fais?"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Descends\nde là immédiatement!"
+  talk61:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "Ah, "
+      - control:
+          kind: pause
+          length: short
+      - text: "on dirait que les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: "\nde la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "pierre guide "
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: "ont été définitivement\ndéplacées vers l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: "...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "... alors "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: réfléchis-y à deux fois
+      - control:
+          kind: reset_colour
+      - text: " avant de\nles "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: remplacer
+      - control:
+          kind: reset_colour
+      - text: " par tes propres photos."
+  talk62:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: Ça te va?
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk63:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "J'ai l'impression que le moment est\nplutôt bien choisi pour te demander\nune faveur!\nMaintenant que tu possèdes la\nphotographie d'un "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: ","
+      - control:
+          kind: pause
+          length: short
+      - text: "\nveux-tu bien m'en amener "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: trois
+      - control:
+          kind: reset_colour
+      - text: "?\nTu devrais pouvoir en trouver dans la\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: forêt Prexet
+      - control:
+          kind: reset_colour
+      - text: ", juste au nord d'ici..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\nN'oublie pas de te servir du "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "détecteur\nSheikah +"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: pause
+          length: short
+      - text: " D'accord?"
+  talk64:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Link!
+      - control:
+          kind: pause
+          length: longer
+      - text: " Tu as trouvé les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: "\nde toute l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: "!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "C'est merveilleux!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je dirais même que\nc'est super!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ta collection est complète!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "J'aimerais pouvoir t'offrir un cadeau pour\nfêter cet événement,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais le laboratoire\nsouffre de restrictions budgétaires...\n"
+      - control:
+          kind: text_size
+          percent: 80
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Oh...
+      - control:
+          kind: pause
+          length: short
+      - text: " Mais peut-être que ça, ça pourrait lui plaire..."
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Je ne sais pas si tu vas aimer,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais tiens,\nprends ça.\n\nC'était coincé dans ce livre..."
+      - control:
+          kind: pause
+          length: short
+      - text: " auquel\nje n'ai normalement même pas le droit\nde toucher."
+  talk65:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Bien... "
+      - control:
+          kind: pause
+          length: short
+      - text: "pour la suite, utilise l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "appareil\nphoto"
+      - control:
+          kind: reset_colour
+      - text: ", "
+      - control:
+          kind: pause
+          length: short
+      - text: "ou la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: " juste là..."
+  talk66:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "En échange d'une modeste contribution,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nje t'offrirai volontiers des "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: "\npour ton encyclopédie."
+  talk67:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: Moi?!
+      - control:
+          kind: pause
+          length: short
+      - text: " Euh, mais...\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Je suis loin d'être quelqu'un\nd'intéressant,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais puisque\ntu me le demandes..."
+  talk68:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je m'appelle Canel.\n\n\nJ'ai toujours voulu devenir chercheur,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\net j'ai eu la chance de pouvoir venir\ntravailler ici en tant qu'assistant.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Mon seul regret, c'est d'être resté trop\nconcentré sur mes recherches et de\nn'avoir jamais pu me mettre en couple."
+  talk69:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "C'est ça, cherche-toi des excuses! ♪"
+  talk70:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "J'imagine que je n'y mets pas assez\ndu mien..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Hem..."
+  talk71:
+    attributes: Npc_AncientDoctor
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Et c'est reparti...! ♪"
+  talk72:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Ensuite, ouvre l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: "\net enregistre ta "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographie
+      - control:
+          kind: reset_colour
+      - text: " du "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "champi\npiment"
+      - control:
+          kind: reset_colour
+      - text: "...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Tu verras,"
+      - control:
+          kind: pause
+          length: short
+      - text: " le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: "\ndétectera tous les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: champis piment
+      - control:
+          kind: reset_colour
+      - text: "\nà proximité!"
+  talk73:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Si tu ramasses le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: " sans\nfaire exprès,"
+      - control:
+          kind: pause
+          length: short
+      - text: " tu peux toujours le poser\nailleurs et prendre une photo après."
+  talk74:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Tu as réussi à prendre une "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographie
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: "\ndu "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 15
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk75:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Très bien, voyons ça..."
+  talk76:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Bien, maintenant,"
+      - control:
+          kind: pause
+          length: short
+      - text: " ouvre l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie\nd'Hyrule"
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " et règle le détecteur sur le\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "Ainsi, le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: " pourra\nrechercher tous les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: champis piment
+      - control:
+          kind: reset_colour
+      - text: "\nà proximité!"
+  talk77:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Pourrais-tu commencer par prendre en\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photo
+      - control:
+          kind: reset_colour
+      - control:
+          kind: pause
+          length: short
+      - text: " le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            dynamic:
+              - 0
+              - len: 4
+                field_2:
+                  - 1
+                  - 0
+                  - 0
+                  - 0
+      - text: champi piment
+      - control:
+          kind: reset_colour
+      - text: " qui pousse\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: derrière
+      - control:
+          kind: reset_colour
+      - text: " le laboratoire?"
+  talk78:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hmm?
+      - control:
+          kind: pause
+          length: longer
+      - text: " Je ne vois pas de photographie"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nde champi piment..."
+  talk79:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Hmm?\n\n\nAh..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Ce...! C'est...!"
+      - control:
+          kind: pause
+          length: longer
+      - text: " À ta ceinture!\nC'est..."
+      - control:
+          kind: pause
+          length: short
+      - text: " la ta... la tablette..."
+  talk80:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - control:
+          kind: animation
+          name: SurpriseS_01
+      - text: "Mais oui, aucun doute possible!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nC'est la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - text: "!!!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Cela te semblera sûrement grotesque,\nmais c'est la première fois que je la vois!\n\nSi tu peux me dire quels "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: modules
+      - control:
+          kind: reset_colour
+      - text: " y sont\ninstallés, cela m'aidera grandement dans\nmes recherches!"
+  talk81:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Cinetis
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: " "
+      - control:
+          kind: text_size
+          percent: 80
+      - text: Hohoho...
+      - control:
+          kind: text_size
+          percent: 100
+      - control:
+          kind: pause
+          length: longer
+      - text: " Le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Polaris
+      - control:
+          kind: reset_colour
+      - text: "... "
+      - control:
+          kind: pause
+          length: short
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Oh, oui!"
+      - control:
+          kind: text_size
+          percent: 100
+      - text: "\nLes "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: bombes à distance
+      - control:
+          kind: reset_colour
+      - text: " et le "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Cryonis
+      - control:
+          kind: reset_colour
+      - text: "...\n"
+      - control:
+          kind: text_size
+          percent: 80
+      - text: "Et quoi d'autre, quoi d'autre?"
+      - control:
+          kind: text_size
+          percent: 100
+  talk82:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Étant donné le nombre de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: "\nmanquantes dans ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie\nd'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: ", tu peux en ajouter "
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_SelectPictureBookVacancy
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk83:
+    attributes: NPC_DRCVoice
+    contents:
+      - control:
+          kind: animation
+          name: Activate
+      - text: "L'encyclopédie a été mise à jour."
+  talk84:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Link, tu as illustré l'encyclopédie entière,\ntu as donc toutes les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: "!\n\nJe ne peux donc rien t'offrir que tu n'aies\npas déjà..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Mais tu seras toujours le\nbienvenu pour une visite de courtoisie."
+  talk85:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Tiens?\n\n\nMoi qui pensais que tu pouvais ajouter\nplus de photographies..."
+      - control:
+          kind: pause
+          length: short
+      - text: " On dirait que\nc'est impossible pour le moment."
+  talk86:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Il y a peut-être une option cachée...
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nComment régler ce problème?"
+  talk87:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: Hmm...
+      - control:
+          kind: pause
+          length: short
+      - text: " D'après mes recherches,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nil est possible d'ajouter plus de\nphotographies..."
+  talk88:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "En quoi puis-je t'aider?"
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 2
+                - 0
+                - 8
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk89:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: Exactement!
+      - control:
+          kind: pause
+          length: short
+      - text: " Cela devrait grandement\nt'aider..."
+  talk90:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "En fait, tout a changé depuis que le\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah
+      - control:
+          kind: reset_colour
+      - text: " a été amélioré.\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 6
+      - text: "Il t'est désormais possible de le "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: relier
+      - control:
+          kind: reset_colour
+      - text: "\nà l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: ".\n\nAinsi, tu pourras t'en servir pour qu'il\ncherche les objets dont tu possèdes\nles "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: ".\n"
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Et si tu extrais celles qu'a conservées\nla "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: ", tu pourras les ajouter\nà ton "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: encyclopédie
+      - control:
+          kind: reset_colour
+      - text: "...\n... et ainsi élargir le champ de recherche\ndu "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur
+      - control:
+          kind: reset_colour
+      - text: "! Cela devrait te permettre\nde trouver tout ce dont tu as besoin!"
+  talk91:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 1
+      - text: "Souhaites-tu que je répète\nmes explications?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 17
+            - 20
+          selected_index: 1
+          cancel_index: 2
+          unknown: 6
+  talk92:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Bien, bien..."
+      - control:
+          kind: pause
+          length: short
+      - text: " Alors, si tu le veux bien,\nplace donc la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: tablette Sheikah
+      - control:
+          kind: reset_colour
+      - text: " sur la\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: pierre guide
+      - control:
+          kind: reset_colour
+      - text: "..."
+  talk93:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Tu as besoin d'autre chose?"
+      - control:
+          kind: raw
+          one:
+            eight:
+              unknown_1: []
+              field_1:
+                - 1
+                - 0
+                - 2
+                - 0
+                - 8
+                - 0
+                - 6
+              field_2:
+                - 0
+                - 0
+                - 0
+                - 3
+  talk94:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 6
+            - 0
+      - text: "Les "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographies
+      - control:
+          kind: reset_colour
+      - text: " que tu prends avec\nl'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: appareil photo
+      - control:
+          kind: reset_colour
+      - text: " sont conservées dans\nl'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: album
+      - control:
+          kind: reset_colour
+      - text: ".\nDe plus, s'il s'agit d'une "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photographie
+      - control:
+          kind: reset_colour
+      - text: "\nd'animal,"
+      - control:
+          kind: pause
+          length: short
+      - text: " de matériau,"
+      - control:
+          kind: pause
+          length: short
+      - text: " d'arme,"
+      - control:
+          kind: pause
+          length: short
+      - text: " de trésor"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nou de monstre...\n... elle sera aussi automatiquement\nrangée dans l'"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: "encyclopédie d'Hyrule"
+      - control:
+          kind: reset_colour
+      - text: ".\n\nCela te permettra d'en faire des objets\nde recherche du "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: détecteur Sheikah +
+      - control:
+          kind: reset_colour
+      - text: ".\n\nJe te conseille vivement de prendre tout\nce que tu découvres en photographie,"
+      - control:
+          kind: pause
+          length: short
+      - text: "\ncela te sera sûrement utile!"
+  talk95:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Tu ne peux plus ajouter de "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: photos
+      - control:
+          kind: reset_colour
+      - text: ",\nmais tu peux toujours regarder si tu\nle souhaites."
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 21
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  talk96:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Désolé,"
+      - control:
+          kind: pause
+          length: short
+      - text: " mais on dirait bien que tu\nne peux pas ajouter davantage de\nphotographies de ce type."
+  talk97:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Tu possèdes toutes les photographies\nde ce type..."
+  talk98:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: Link...
+      - control:
+          kind: pause
+          length: short
+      - text: " On dirait bien qu'il n'y a plus\nde photographie de ce type..."
+  talk99:
+    attributes: Npc_AncientAssistant001
+    contents:
+      - text: "Je crois bien que la pierre guide ne\ndétient aucune autre photographie de\nce type."
+      - control:
+          kind: pause
+          length: short
+      - text: " Tu m'en vois désolé..."

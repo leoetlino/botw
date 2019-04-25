@@ -1,0 +1,169 @@
+---
+group_count: 11
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Dame una normal
+  "0001":
+    attributes: ""
+    contents:
+      - text: Quiero la blanda
+  "0002":
+    attributes: ""
+    contents:
+      - text: Hasta la mañana
+  "0003":
+    attributes: ""
+    contents:
+      - text: Hasta el mediodía
+  "0004":
+    attributes: ""
+    contents:
+      - text: Hasta la noche
+  "0005":
+    attributes: ""
+    contents:
+      - text: Cambié de idea
+  "0007":
+    attributes: ""
+    contents:
+      - text: No me quedaré
+  Near00:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - text: ¡Bienvenidooo!
+  Talk01:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: ¡Bienvenido!
+      - control:
+          kind: pause
+          length: long
+      - text: " ¿Te quedarás a descansar?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Debes de estar cansado tras\nel largo viaje."
+  Talk02:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Perfecto.
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡A descansar!"
+  Talk03:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: No pasa nada.
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡Otra vez será!"
+  Talk04:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Me temo que no tienes suficientes\nrupias para quedarte."
+  Talk05:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Espero que hayas descansado\na gusto."
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\nPor cierto, nuestros huéspedes tienen\nderecho a usar la "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "balsa "
+      - control:
+          kind: reset_colour
+      - text: "que está en el\nmuelle."
+      - control:
+          kind: pause
+          length: short
+      - text: " ¡Vuelve pronto!"
+  Talk06:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: ¿Hasta cuándo deseas descansar?
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk07:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Una cama normal te sale en "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rupias
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nPero si quieres dormir como un bebé,\nte puedo dar una cama blanda por "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: "40"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8

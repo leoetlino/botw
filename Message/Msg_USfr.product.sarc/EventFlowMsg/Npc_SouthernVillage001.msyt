@@ -1,0 +1,167 @@
+---
+group_count: 11
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Un lit normal.
+  "0001":
+    attributes: ""
+    contents:
+      - text: Un lit moelleux!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Au petit matin.
+  "0003":
+    attributes: ""
+    contents:
+      - text: Pas avant midi.
+  "0004":
+    attributes: ""
+    contents:
+      - text: À la nuit tombée.
+  "0005":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis..."
+  "0007":
+    attributes: ""
+    contents:
+      - text: "Rien, merci."
+  Near00:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - text: Bienvenue!
+  Talk01:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 2
+      - text: Bienvenue!
+      - control:
+          kind: pause
+          length: long
+      - text: " Tu cherches\nun endroit où dormir?\n\nTu dois être fatigué de ton voyage."
+  Talk02:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: "Entendu,"
+      - control:
+          kind: pause
+          length: short
+      - text: " repose-toi bien!"
+  Talk03:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: Comme tu veux.
+      - control:
+          kind: pause
+          length: short
+      - text: " Reviens une autre fois!"
+  Talk04:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "Tu n'as pas assez de rubis, on dirait..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nReviens une autre fois."
+  Talk05:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 4
+      - text: Tu as bien dormi?
+      - control:
+          kind: pause
+          length: short
+      - text: "\n\n\nAu fait, un "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: radeau
+      - control:
+          kind: reset_colour
+      - text: " est à la disposition\ndes clients de l'auberge."
+      - control:
+          kind: pause
+          length: short
+      - text: " Il est près\ndes quais, si ça t'intéresse.\nReviens quand tu veux!"
+  Talk06:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: Quand dois-je te réveiller?
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+            - 4
+            - 5
+          selected_index: 0
+          cancel_index: 3
+          unknown: 10
+  Talk07:
+    attributes: Npc_SouthernVillage001
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "C'est "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 20 rubis
+      - control:
+          kind: reset_colour
+      - text: " pour un lit normal"
+      - control:
+          kind: pause
+          length: short
+      - text: "\net "
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 40 rubis
+      - control:
+          kind: reset_colour
+      - text: " pour un lit moelleux."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8

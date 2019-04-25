@@ -1,0 +1,779 @@
+---
+group_count: 37
+atr1_unknown: 4
+entries:
+  "0007":
+    attributes: ""
+    contents:
+      - text: 不用了
+  "0008":
+    attributes: ""
+    contents:
+      - text: 不同顏色？
+  "0009":
+    attributes: ""
+    contents:
+      - text: 請收購東西
+  "5500":
+    attributes: ""
+    contents:
+      - text: 好
+  "5501":
+    attributes: ""
+    contents:
+      - text: 不好
+  "5503":
+    attributes: ""
+    contents:
+      - text: 還是算了
+  "5508":
+    attributes: ""
+    contents:
+      - text: 全賣了
+  Com_Talk_00:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 請問要賣什麼東西呢～？
+  Com_Talk_01:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "對吧？\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比～
+      - control:
+          kind: reset_colour
+      - text: 可以嗎？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 薩庫薩庫～
+      - control:
+          kind: pause
+          length: short
+      - text: "\n還有什麼其他的嗎～？"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 薩庫薩庫～
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "謝謝妳讓我們收購到好東西，\n薩庫薩庫～"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "謝謝妳讓我們收購到好東西，\n薩庫薩庫～"
+  Com_Talk_04:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "當然，\n那樣也沒關係喔～"
+  Com_Talk_05:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "那麼……\n希望我收購其他東西嗎～？"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: 有什麼想賣的請儘管說～
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "不管有多少，\n我們都樂意收購喔～"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: "要是還有其他想賣的，\n千萬別客氣～"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "對吧～？\n要賣幾個呢～？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "，\n總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 喔～
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "抱歉，\n我們無法收購那東西～"
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 9
+            - 0
+      - text: "抱歉，\n我們無法收購穿在身上的服裝～"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - text: 1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 喔～
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "全賣的話，\n那我總共用"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 收購喔～
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_60:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "的話，\n是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 16
+          name: Shop_SelectItemPrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 喔～
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_61:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "我覺得這樣也沒什麼不好～\n畢竟猶豫不決也是購物的樂趣之一呢～"
+  Npc_oasis015_003:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "今天也變得很冷呢～\n這種寒冷的夜晚，真想到酒館喝一杯呀～"
+  Npc_oasis015_004:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: "感謝惠顧，薩庫薩庫～\n那件"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 淑女服
+      - control:
+          kind: reset_colour
+      - text: "非常適合妳呢～\n為了染成"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 不同顏色
+      - control:
+          kind: reset_colour
+      - text: ，再多買一件如何呀～？
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_006:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: 妳不曉得嗎～？
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "現在在芭伊之間，\n可是非常流行更換服裝的顏色喔～\n在哈特諾村有間叫"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 珂奇屋
+      - control:
+          kind: reset_colour
+      - text: "的店，\n可以將服裝染色呢～\n不過離這裡有點遠，\n我們幾乎沒機會去就是了～"
+  Npc_oasis015_007:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: "今天也很熱呢～\n\n這種日子，真想到酒館\n大口喝杯冰涼飲料呢～"
+  Npc_oasis015_008:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 非常樂意～！
+  Npc_oasis015_009:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: 其他還有什麼需要嗎～？
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_010:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 4
+      - text: 其他還有什麼需要嗎～？
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_011:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 25
+            - 205
+      - text: 薩伯塔！
+  Npc_oasis015_012:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 26
+            - 205
+      - text: 薩芭庫！
+  Npc_oasis015_013:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 27
+            - 205
+      - text: 薩芭薩芭！
+  Npc_oasis015_014:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "話說回來，這件真的很適合妳呢～\n為了染成"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 不同顏色
+      - control:
+          kind: reset_colour
+      - text: 再買一件！這是絕對要的呀～
+  Npc_oasis015_015:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: 幫服裝染成
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 不同顏色
+      - control:
+          kind: reset_colour
+      - text: "，穿出自己的風格\n可是現今的潮流呢～\n再多買一件"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 淑女服
+      - control:
+          kind: reset_colour
+      - text: 如何呀～
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_016:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 2
+      - text: 現在
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 淑女服
+      - control:
+          kind: reset_colour
+      - text: "已經全都賣完了～\n\n要是客人有很多件服裝，\n我覺得湊齊"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 不同顏色
+      - control:
+          kind: reset_colour
+      - text: 的同樣款式也不錯喔～
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_017:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 娜波力斯
+      - control:
+          kind: reset_colour
+      - text: "整個平靜下來了，\n是發生了什麼事呀？\n\n不過，這下子感覺客人也會變多，\n我也得加油才行！\n客人妳也是，既然都來了，\n為了染成"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 不同顏色
+      - control:
+          kind: reset_colour
+      - text: ，再多買一件如何呀？
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_018:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 娜波力斯
+      - control:
+          kind: reset_colour
+      - text: "整個平靜下來了，\n是發生了什麼事呀？\n\n不過，這下子感覺客人也會變多，\n我們也得趕快進些新服裝才行呢～\n可以的話，我比較想直接多進幾件\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 不同顏色
+      - control:
+          kind: reset_colour
+      - text: 的服裝就是了～
+      - control:
+          kind: choice
+          choice_labels:
+            - 8
+            - 9
+            - 7
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Npc_oasis015_019:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 1
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: 芭薩庫！
+  Npc_oasis015_Near01:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 28
+            - 205
+      - text: 客人，這邊這邊。
+  Talk_01:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 薩庫薩庫～
+  Talk_02:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "服裝還是最推薦\n以同一系列成套穿搭喔～"
+  Talk_07:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "穿著同一系列，但是不同顏色的服裝，\n這也是時尚芭伊的穿衣術喔～"
+  Talk_08:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "顏色有多種選擇可以更換，\n所以同樣的服裝有再多件也沒關係喔～"
+  Talk_09:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "啊～客人，\n從那裡是進不去的啦～\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: text_size
+          percent: 80
+      - text: ……如果是會員的話，請走後門喔。
+      - control:
+          kind: text_size
+          percent: 100
+  Talk_10:
+    attributes: Npc_oasis015
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: 今後也請多多關照～

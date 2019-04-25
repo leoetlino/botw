@@ -1,0 +1,933 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Je dois bien en avoir.
+  "0001":
+    attributes: ""
+    contents:
+      - text: "Non, désolé."
+  "0002":
+    attributes: ""
+    contents:
+      - text: Laisse-moi voir...
+  "0003":
+    attributes: ""
+    contents:
+      - text: "Non, rien."
+  "0004":
+    attributes: ""
+    contents:
+      - text: Je veux acheter!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Je veux vendre!
+  "0006":
+    attributes: ""
+    contents:
+      - text: Au revoir!
+  "5500":
+    attributes: ""
+    contents:
+      - text: "D'accord."
+  "5501":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5502":
+    attributes: ""
+    contents:
+      - text: "J'achète!"
+  "5503":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5507":
+    attributes: ""
+    contents:
+      - text: "J'achète tout."
+  "5508":
+    attributes: ""
+    contents:
+      - text: Je vends tout.
+  Axe00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: "Hé, ho!"
+      - control:
+          kind: pause
+          length: short
+      - text: " Je peux savoir où tu as\nl'intention d'aller avec ma hache?"
+  Axe01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Haha, c'est bon, tu peux la garder."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nExcuse-moi de t'avoir interpellé\ncomme ça.\nC'est comme ça, à notre époque."
+      - control:
+          kind: pause
+          length: short
+      - text: " Quand\non laisse ses affaires par terre, faut pas\ns'étonner si quelqu'un les ramasse.\nDe toute façon, personne n'irait jamais\nlaisser traîner un objet auquel il tient\nvraiment, alors... ne te gêne pas!"
+  Axe02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Au fait, je ne me suis pas présenté!\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Je m'appelle Giroccho, je suis marchand\nitinérant."
+      - control:
+          kind: pause
+          length: short
+      - text: " Enchanté!\n\nC'est dans les bois que je ramasse mes\nmarchandises, d'habitude. Ou j'achète\ndes trucs aux voyageurs de passage.\nD'ailleurs, puisque je te tiens! Tu\nn'aurais pas des choses à me vendre,\npar hasard?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: " "
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 4
+            - 205
+      - text: "Alors, voyons ce que tu as à vendre."
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nSi je t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ", ça te va?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Parfait, merci!"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Tu me sauves, vraiment!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Merci!
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Très bien, à la prochaine fois!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "D'accord."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "Je serais ravi de t'acheter\nquelque chose."
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: Prends ton temps.
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Si tu cherches quelqu'un à qui vendre\ndes trucs, je suis ton homme!"
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "T'as quoi à me vendre?"
+  Com_Talk_06:
+    attributes: ""
+    contents:
+      - text: Y a-t-il quelque chose qui te tente?
+  Com_Talk_07:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Désolé, j'en ai plus!"
+  Com_Talk_08:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "T'as pas assez de rubis, on dirait."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nDésolé, mais j'ai pour principe de\nne jamais baisser mes prix."
+  Com_Talk_09:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "T'as plus de place dans ta sacoche!"
+      - control:
+          kind: pause
+          length: short
+      - text: "\nC'est un problème récurrent, chez les\nvoyageurs. Fais donc un peu de place!"
+  Com_Talk_10:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - text: "?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_11:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: Merci bien!
+  Com_Talk_11b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Très bien, merci!"
+  Com_Talk_11c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "D'accord, merci beaucoup."
+  Com_Talk_11d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Merci!
+  Com_Talk_12:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "J'ai de belles choses en stock!\nNe te gêne pas pour regarder!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nCombien veux-tu m'en vendre?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je t'achète les "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " pour "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ".\nÇa te convient?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Désolé, mais ça ne m'intéresse pas."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Si tu veux me vendre un vêtement,\nenlève-le d'abord."
+  Com_Talk_20:
+    attributes: ""
+    contents:
+      - text: "Tu cours toujours les chemins par\nun temps pareil?"
+      - control:
+          kind: pause
+          length: short
+      - text: " Ta motivation est\nimpressionnante!\n"
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "C'est quelque chose que je respecte, tu\nvois. Et pour t'exprimer mon admiration,\nje vais te montrer mon matériel."
+  Com_Talk_30:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Je te vends les "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " pour "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ".\nÇa te semble acceptable?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_31:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nc'est ça? Combien tu en veux?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Tu veux donc me vendre\n"
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nc'est ça? Je t'en offre "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: ""
+    contents:
+      - text: "Je te propose le tout pour la modique\nsomme de "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ". Ça te va?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: ""
+    contents:
+      - text: "Je te prends le tout pour "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ".\nAlors?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_36:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Et voilà, je n'ai plus rien!\nMerci à toi!"
+  Com_Talk_37:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Je n'ai plus rien à te proposer pour\naujourd'hui. Veux-tu quand même jeter\nun coup d'œil à ma sélection?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: ",\nc'est tout? Ça te coûtera "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Tiens, un voyageur! Salutations, l'ami.\nViens donc t'asseoir auprès du feu.\n\nMoi, c'est Giroccho, marchand itinérant!\n\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "On vit vraiment une drôle d'époque...\nSi je veux vendre des marchandises, je\ndois les trouver moi-même dans les bois.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ou alors, plus simple, je peux les\nracheter à des voyageurs...\n\nD'ailleurs, puisque je te tiens! Tu\nn'aurais pas des choses à me vendre,\npar hasard?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: " "
+  FirstTalk00_Rain:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Salutations! Tu voyages encore par ce\ntemps? Tu vas être trempé avant d'avoir\nle temps de dire ouf!\nJe m'appelle Giroccho, je suis marchand\nitinérant. Enchanté!\n\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 1
+      - text: "On vit vraiment une drôle d'époque...\nSi je veux vendre des marchandises, je\ndois les trouver moi-même dans les bois.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Ou alors, plus simple, je peux les\nracheter à des voyageurs...\n\nD'ailleurs, puisque je te tiens! Tu\nn'aurais pas des choses à me vendre,\npar hasard?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+      - text: " "
+  FirstTalk01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Bien, bien! Tu veux quelque chose?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  FirstTalk02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "À mon tour, maintenant...\nTu veux m'acheter quelque chose?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 3
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  GoodBye00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Merci de m'avoir consacré\nun peu de ton temps.\n\nIl y a des monstres partout, maintenant.\nMême les routes ne sont plus sûres.\nAlors, les forêts, n'en parlons pas!\nTu ferais bien d'être prudent, toi aussi!"
+  GoodBye01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "C'est ça, à la prochaine!"
+  Near00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: Qui est là?
+  Near01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 0
+            - 205
+      - text: "Oh, salut!"
+  Near02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - text: Zzzz...
+  Talk00:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Ah, c'est toi!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk01:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Besoin d'autre chose?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk02:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Déjà levé, à cette heure-ci?"
+  Talk03:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Tiens, comme on se retrouve!"
+  Talk04:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: Encore en promenade à cette heure-ci?
+  Talk05:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 2
+      - text: "Moi, quand il pleut, j'attends bien\ntranquillement que ça se passe."
+  Talk06:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 3
+            - 42
+      - text: "J'ai horreur de la foudre, presque autant\nque des monstres... "
+      - control:
+          kind: pause
+          length: long
+      - text: "Gentils petits éclairs,\nallez tomber ailleurs, vous voulez bien?"
+  Talk07:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 34
+      - text: "Oups, j'étais en train de m'assoupir."
+  Talk08:
+    attributes: Npc_FaronWoods007
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "Alors, qu'est-ce que ça sera?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 4
+            - 5
+            - 6
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8

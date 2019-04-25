@@ -1,0 +1,906 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0001":
+    attributes: ""
+    contents:
+      - text: Achète-moi un truc!
+  "0002":
+    attributes: ""
+    contents:
+      - text: Au revoir!
+  "0005":
+    attributes: ""
+    contents:
+      - text: Ton mari?
+  "5500":
+    attributes: ""
+    contents:
+      - text: "D'accord."
+  "5501":
+    attributes: ""
+    contents:
+      - text: "J'ai changé d'avis."
+  "5502":
+    attributes: ""
+    contents:
+      - text: "J'achète!"
+  "5503":
+    attributes: ""
+    contents:
+      - text: "Finalement, non."
+  "5507":
+    attributes: ""
+    contents:
+      - text: "J'achète tout!"
+  "5508":
+    attributes: ""
+    contents:
+      - text: Je vends tout.
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Si tu veux que je t'achète quelque\nchose, commence par me montrer\nla marchandise!"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nJe t'en donne "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: Saksak! Au plaisir de faire affaire!
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Saksak! Mon mari va être content,\nil adore ça!"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Saksak! J'en connais un qui va être ravi,\nà la maison!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "Depuis le temps que j'en rêvais!\nSaksak!"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Dommage, dommage..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nUne prochaine fois, peut-être."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Tu as d'autres choses à vendre?"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Je trouverai peut-être le cadeau idéal\npour la fête de mon mari!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: "Vends-moi tout ce que tu veux!\nJe trouverai peut-être quelque chose\nqui pourrait intéresser mon mari."
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "C'est tout? Je suis prête à t'acheter\nencore plein de choses, tu sais!"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nOu peut-être davantage?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Ça fait "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: " les "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: ".\nTu vends?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Ça, je ne risque pas de te l'acheter..."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 14
+            - 205
+      - text: "Tu crois vraiment que je vais t'acheter\nquelque chose si tu le portes sur toi?"
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "..."
+      - control:
+          kind: pause
+          length: short
+      - text: "\nÇa nous fait "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_34:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: Tout mon stock?
+      - control:
+          kind: pause
+          length: short
+      - text: " Alors, ça nous fait\n"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ". "
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Ah oui? Pourquoi pas! Je te prends le\ntout pour "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ". Il n'y a pas plus\nhonnête!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 1
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nC'est "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ", ça t'intéresse?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_51:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nJe t'en mets combien?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5507
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_52:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Je te fais les "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " pour "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: ".\nC'est plus qu'honnête!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Dommage, dommage..."
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nUne prochaine fois, peut-être."
+  Com_Talk_54:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "J'ai bien peur que tu n'aies pas assez..."
+  Com_Talk_55:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 10
+            - 205
+      - text: "Ta sacoche est pleine, on dirait. Tu vas\ndevoir jeter ou vendre quelque chose\navant."
+  Com_Talk_56:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 3
+              - field_1: 0
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 2
+              - field_1: 0
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: raw
+          two_hundred_one:
+            one_field:
+              - 4
+              - field_1: 0
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "?\nC'est tout? Ça fera "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " rubis"
+      - control:
+          kind: reset_colour
+      - text: "!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5502
+            - 5503
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Near001:
+    attributes: Npc_oasis044
+    contents:
+      - text: Produits ultra frais!
+  Near002:
+    attributes: Npc_oasis044
+    contents:
+      - text: "Ça suffit pour aujourd'hui."
+  Talk_01:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 27
+      - text: "Savotta.\n\n\nTu as mangé quelque chose, ce matin?\n\n\nLes autres peuples me semblent toujours\nminuscules! Comme mon mari, tiens. Tu\nes sûre que tu manges assez, au moins?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_02:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Je suis là si tu as besoin!
+  Talk_03:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Les Gerudos ne dorment pas beaucoup,\nmais les grands écarts de température du\ndésert mettent le corps à rude épreuve.\nAlors, si tu commences à te sentir faible,\nn'hésite pas à prendre un peu de repos."
+  Talk_05:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Saksak! Tu as acheté tout notre stock!\n\n\nC'est mon mari qui va être content!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_06:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: Saksak!
+  Talk_07:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Saksak! C'est mon mari qui\nva être content!"
+  Talk_09:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 29
+      - text: "Savasaaba.\n\n\nLa cité ne dort jamais. De jour comme\nde nuit, la boutique est ouverte!\n\nDu coup, je ne retrouve pas mon mari\ntrès souvent..."
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_11:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Savaak.\n\n\nPour bien manger, il faut commencer\npar bien choisir ses ingrédients.\n\nOu bien avoir la chance d'avoir un\nmari cordon-bleu, comme moi!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_12:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Qu'est-ce qu'il y a, tu attends que je\nte propose de goûter?"
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n\nDésolée, ce n'est pas dans la politique\nde la maison. Mais je te garantis que tu\npeux acheter en toute confiance!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_13:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Eh bien quoi, ça te surprend? Je suis\nmariée depuis peu de temps, c'est\nvrai, mais mariée quand même.\nD'ailleurs, je crois bien que toutes\nles vendeuses ici le sont.\n\nEn général, les vaïs mariées vivent à\nl'extérieur de la cité. Nous ne venons\nque pour gagner notre pitance.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Je ne vois pas mon mari très souvent,\nc'est vrai, mais... on ne vit pas que\nd'amour et d'eau fraîche.\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "Alors profites-en pour acheter et\nvendre autant que tu le souhaites,\nc'est l'occasion!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_14:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Saksak! C'est mon mari qui a ramassé\nça. Tu vas voir, c'est délicieux!"
+  Talk_15:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Saksak! Si tu veux te mettre tout de\nsuite aux fourneaux, tu peux utiliser\nces marmites, juste en face.\nIl faudra que tu allumes le feu\ntoi-même, par contre."
+  Talk_16:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 1
+            - 9
+      - text: "Saksak! Je vais devoir demander à\nmon mari de retourner en chercher..."
+  Talk_17:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Naboris
+      - control:
+          kind: reset_colour
+      - text: " s'est enfin calmée, non?\nIl était temps... Mais je savais que notre\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: chef
+      - control:
+          kind: reset_colour
+      - text: " finirait par trouver une solution.\nLes touristes vont pouvoir déferler dans\nla cité comme avant. Les rues vont de\nnouveau être pleines de vie!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Hmm... Par contre, je risque de passer\nencore moins de temps avec mon mari...\n\nCela dit, sans animation, la cité n'est que\nl'ombre d'elle-même. Je peux bien faire\nquelques sacrifices pour elle!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_18:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 28
+      - text: Savaak!
+      - control:
+          kind: pause
+          length: longer
+  Talk_19:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 27
+      - text: Savotta!
+      - control:
+          kind: pause
+          length: longer
+  Talk_20:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 29
+      - text: Savasaaba!
+      - control:
+          kind: pause
+          length: longer
+  Talk_21:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Naboris
+      - control:
+          kind: reset_colour
+      - text: " s'est enfin calmée, non?\nIl était temps... Mais je savais que notre\n"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: chef
+      - control:
+          kind: reset_colour
+      - text: " finirait par trouver une solution.\nLes touristes vont pouvoir déferler dans\nla cité comme avant. Les rues vont de\nnouveau être pleines de vie!\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 0
+      - text: "Hmm... Par contre, je risque de passer\nencore moins de temps avec mon mari... \n\nCela dit, plus la boutique tourne, plus\nj'ai d'occasions de le voir en allant me\nréapprovisionner en marchandises...\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "D'ailleurs, il va falloir que je remplace\nau plus vite tout ce que tu m'as acheté!"
+      - control:
+          kind: choice
+          choice_labels:
+            - 1
+            - 5
+            - 2
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Talk_22:
+    attributes: Npc_oasis044
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 30
+      - text: Vaasaak.
+      - control:
+          kind: pause
+          length: longer

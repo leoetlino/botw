@@ -1,0 +1,621 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: Quiero venderte algo
+  "0001":
+    attributes: ""
+    contents:
+      - text: Hasta la vista
+  "0005":
+    attributes: ""
+    contents:
+      - text: Cómprame algo
+  "5500":
+    attributes: ""
+    contents:
+      - text: ¡Sí!
+  "5501":
+    attributes: ""
+    contents:
+      - text: No...
+  "5503":
+    attributes: ""
+    contents:
+      - text: Déjalo
+  "5507":
+    attributes: ""
+    contents:
+      - text: Las compro todas
+  "5508":
+    attributes: ""
+    contents:
+      - text: Las vendo todas
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: ¿Qué te interesa venderme?
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: "Te doy "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: " a cambio\nsi no te parece mal."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: ¡Sahku! ¿Algo más?
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: ¡Vaya gracia!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Así es como dan las gracias\nen tu región, ¿verdad?"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "Sahku, sahku. ¡Un placer!"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "¡Genial! Sahku, sahku."
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Claro, tómate tu tiempo.\nNo tengo ninguna prisa."
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: "¡Qué emoción! ¡Te compraré\nlo que sea!"
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "Si te interesa venderme algo,\n¡dímelo cuanto antes!"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: Te compraré todo cuanto quieras vender.
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: ¿Eso era todo? ¡No puede ser!
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "¿Y exactamente cuántas unidades\nme quieres vender?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Pues "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " te salen por el módico\nprecio de "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "No sé muy bien qué es eso que intentas\nvenderme, pero no estoy interesada."
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: "No esperarás que te quite lo que llevas\npuesto, ¿no? Quizá esa sea costumbre\nen tu región, pero aquí no hacemos eso."
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Serán "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ", ¿qué dices?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: "Eso serán "
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: " unidades, así que\nte daré "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: ". ¿Trato hecho?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - text: "Serían "
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: " "
+      - control:
+          kind: localisation
+          localisation_kind: plural
+          options:
+            - rupia
+            - rupias
+            - ""
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: "Ciertas decisiones deben tomarse\ncon calma."
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: ¡Productos fresquísimos!
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: ¡Qué bien te queda!
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "¿¡Qué pasa, tú!?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Es el saludo tradicional de tu región,\n¿verdad? Me lo dijo un viajero hace\ntiempo.\nEn fin, por estos lares decimos \"sawook\"."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: ¡Vuelve cuando quieras!
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "La hija de mi hermana tiene\nuna carnicería en la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Ciudadela Gerudo
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ha viajado a lo largo y a lo ancho de\nHyrule, así que conoce perfectamente\nlas costumbres de todas las regiones.\nSeguro que le dará gusto poder\nhablar contigo si te pasas por allí."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "Aunque, ahora que lo pienso... Como\neres un voe, no te van a dejar entrar."
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: ¿Con qué me vas a sorprender?
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "Vaya, pues con eso me dejas sin más\nexistencias... Tendré que reponer\ncuanto antes."
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Gracias, jefazo!"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Así es como dan las gracias en\ntu región, ¿verdad?"
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "¿Que si he visto a algún mercader\nde aspecto sospechoso?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: "Sospechoso... "
+      - control:
+          kind: pause
+          length: longer
+      - text: "Déjame pensar... "
+      - control:
+          kind: pause
+          length: longer
+      - text: "\nMmm..."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "No sabría decirte... Me paso aquí todo\nel tiempo, y tampoco estoy muy segura\ndel aspecto que tiene un mercader.\nPero, si no recuerdo mal, había unos\nmercaderes hylianos por aquí cerca.\n¿Por qué no hablas con ellos?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "La hija de mi hermana tiene\nuna carnicería en la "
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: Ciudadela Gerudo
+      - control:
+          kind: reset_colour
+      - text: "."
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Ha viajado a lo largo y a lo ancho de\nHyrule, así que conoce perfectamente\nlas costumbres de todas las regiones.\nSeguro que le dará gusto poder\nhablar contigo si te pasas por allí."
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¡Qué bonita tarde!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Es el saludo habitual entre las gentes\nde tu región, ¿verdad? Alguien\nme lo contó una vez.\nEn fin, en nuestra tierra solemos\ndecir \"sawosaaba\" a estas horas\ndel día."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: ¡Quítate de ahí!
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¡Buenos días!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Así se dan los buenos días en tu\nregión, ¿verdad?"
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Por si no lo sabes, entre las gerudo\nusamos \"sawotta\" en esos casos."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¡Ya sabes dónde está la puerta!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Así se da la bienvenida en tu región,\n¿no? Estoy segura de que lo he\nescuchado alguna vez.\nPor si no lo sabes, aquí en el desierto\nrecibimos a los visitantes al grito de\n\"wasaaq\"."
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "¡Sahku, sahku! Si te comes eso,\nrecuperarás las fuerzas."
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "¡Genial, tipazo! Sahku."
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: Necesito más mercancía.
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: ¡Gracias por nada!
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: "Así es como se dan las gracias\npor tu región, ¿no?"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6

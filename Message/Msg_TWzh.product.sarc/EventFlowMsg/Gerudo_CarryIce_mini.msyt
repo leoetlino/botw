@@ -1,0 +1,431 @@
+---
+group_count: 17
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: 我要挑戰
+  "0001":
+    attributes: ""
+    contents:
+      - text: 先不要好了
+  "0002":
+    attributes: ""
+    contents:
+      - text: 我走了！
+  "0003":
+    attributes: ""
+    contents:
+      - text: 再搬一次
+  "0013":
+    attributes: ""
+    contents:
+      - text: 付錢
+  "0014":
+    attributes: ""
+    contents:
+      - text: 我想重來……
+  "0015":
+    attributes: ""
+    contents:
+      - text: 放棄
+  "0016":
+    attributes: ""
+    contents:
+      - text: 放棄
+  "0017":
+    attributes: ""
+    contents:
+      - text: 我會努力
+  "0018":
+    attributes: ""
+    contents:
+      - text: 放棄
+  NewText_00:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "哎呀，這次是在幫昂琪艾做事嗎？\n\n也好，只要能把冰送來，\n無論是誰都行。\n那麼……"
+      - control:
+          kind: pause
+          length: long
+      - text: 冰還沒送來嗎？
+  NewText_01:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "哎呀，抱歉老是麻煩妳……\n\n能幫我把搬來的冰，\n放在這裡嗎？"
+  NewText_02:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: 當然可以……
+      - control:
+          kind: pause
+          length: long
+      - text: "不過換一塊新的冰，\n得再付"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50盧比
+      - control:
+          kind: reset_colour
+      - text: 喔？
+      - control:
+          kind: choice
+          choice_labels:
+            - 13
+            - 18
+            - 17
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  NewText_09:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_01
+      - text: "哦哦！妳來得正好。\n能請妳幫忙把冰送去給芙洛絲小姐嗎？\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 0
+      - text: "雖說原本應該由我來送……\n\n但這一帶的怪物也變多了，\n我不能離開冰屋。\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: animation
+          name: Greeting_00
+      - text: "搬運之前，得先請妳代墊冰的費用，\n一共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50盧比
+      - control:
+          kind: reset_colour
+      - text: "。\n送達後，妳代墊的費用\n就能從芙洛絲小姐那裡支領。\n如果能在短時間內送達大塊的冰，\n芙洛絲小姐想必也會給妳額外的酬勞喔！"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  NewText_10:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Greeting_01
+      - text: "哦哦！妳願意幫我把冰送去給芙洛絲小姐嗎？\n\n冰的費用一共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50盧比
+      - control:
+          kind: reset_colour
+      - text: "，\n可能要麻煩妳先代墊……"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  NewText_26:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - text: 用
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_minute
+      - text: 分
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_s
+      - text: 秒
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_m
+      - control:
+          kind: reset_colour
+      - text: "就送達啦，\n妳也很熟練了呢。\n這是冰的費用……"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n還有這次的報酬，這個數字可以接受吧？\n話說回來，昂琪艾那傢伙\n找到一個挺優秀的臨時工呢。"
+  NewText_40:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 10
+            - 0
+      - text: 沒想到……
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n妳只用"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_minute
+      - text: 分
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_s
+      - text: 秒
+      - control:
+          kind: variable
+          variable_kind: 14
+          name: Gerudo_CarryIce_m
+      - control:
+          kind: reset_colour
+      - text: 就送達了！
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "比想像中還快，沒得挑剔！\n\n這些是冰的費用……"
+      - control:
+          kind: pause
+          length: short
+      - text: "\n我還要多付妳一些報酬。\n話說回來，昂琪艾那傢伙\n找到一個挺優秀的臨時工呢。"
+  NewText_41:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 怎麼了？
+      - control:
+          kind: pause
+          length: long
+      - text: "\n現在可不是拖拖拉拉的時候。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 2
+            - 14
+            - 15
+          selected_index: 0
+          cancel_index: 3
+          unknown: 8
+  NewText_43:
+    attributes: NPC_GodVoice
+    contents:
+      - text: 冰塊融化了。
+      - control:
+          kind: auto_advance
+          frames: 150
+  NewText_44:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 哦，
+      - control:
+          kind: pause
+          length: short
+      - text: "這才像話嘛！\n送達地點跟之前一樣……\n前往"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 格魯德小鎮
+      - control:
+          kind: reset_colour
+      - text: "的途中\n有個遺跡群，妳知道吧？\n芙洛絲小姐應該就在\n遺跡的出口……靠小鎮的地方等著。"
+  NewText_45:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - control:
+          kind: animation
+          name: Ease_01
+      - text: "我不會強人所難，不過……\n\n我這裡時常人手不足，\n隨時歡迎妳過來幫忙。"
+  NewText_46:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: 妳沒有
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50盧比
+      - control:
+          kind: reset_colour
+      - text: "嗎？\n這樣沒辦法把任務交給妳。"
+  NewText_47:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "妳的盧比不夠喔。\n這次要先放棄嗎？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 16
+            - 17
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  NewText_48:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 18
+      - text: 下次再麻煩妳。
+  NewText_49:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - text: "喂～！妳大幅偏離路線了！\n先回來一趟！"
+  NewText_50:
+    attributes: Npc_GerudoDesert003
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 2
+            - 6
+      - text: 接了工作還繞去別的地方？
+      - control:
+          kind: raw
+          zero:
+            four:
+              field_1: 0
+      - text: 真是的……
+      - control:
+          kind: pause
+          length: long
+      - text: "\n幸虧先跟妳收了冰的費用。"
+  Talk_000:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 2
+      - text: "可以的話還想請妳幫忙搬……\n能否再麻煩妳一次？\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 1
+      - text: "為了調製出好喝的雞尾酒，\n有多少冰都不嫌多……\n從昂琪艾那邊拿冰時，\n先幫我支付冰的費用"
+      - control:
+          kind: set_colour
+          colour: red
+      - text: 50盧比
+      - control:
+          kind: reset_colour
+      - text: 吧。
+      - control:
+          kind: choice
+          choice_labels:
+            - 3
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_001:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "謝謝妳……\n\n那麼我在這裡等著，\n請妳把冰送來。"
+  Talk_002:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 16
+      - text: "是嗎……真遺憾。\n\n如果妳還願意幫忙，\n再跟昂琪艾說一聲……"
+  Talk_003:
+    attributes: Npc_OasisMilk_E
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 2
+      - text: 方便的話，其實還想請妳搬更多過來，
+      - control:
+          kind: pause
+          length: short
+      - text: "\n但這個時間昂琪艾應該已經睡了……\n下次再麻煩妳囉。"

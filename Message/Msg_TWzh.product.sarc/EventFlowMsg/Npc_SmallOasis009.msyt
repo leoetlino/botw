@@ -1,0 +1,602 @@
+---
+group_count: 41
+atr1_unknown: 4
+entries:
+  "0000":
+    attributes: ""
+    contents:
+      - text: 請收購東西！
+  "0001":
+    attributes: ""
+    contents:
+      - text: 再見
+  "0005":
+    attributes: ""
+    contents:
+      - text: 那……請收購東西！
+  "5500":
+    attributes: ""
+    contents:
+      - text: 好
+  "5501":
+    attributes: ""
+    contents:
+      - text: 不好
+  "5503":
+    attributes: ""
+    contents:
+      - text: 還是算了
+  "5507":
+    attributes: ""
+    contents:
+      - text: 全買了
+  "5508":
+    attributes: ""
+    contents:
+      - text: 全賣了
+  Com_Talk_00:
+    attributes: ""
+    contents:
+      - control:
+          kind: raw
+          four:
+            three:
+              field_1: 0
+      - text: "……那麼，\n你希望我買下哪個呢？"
+  Com_Talk_01:
+    attributes: ""
+    contents:
+      - text: 嗯……
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "的話，\n是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，如何？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_02:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "薩庫薩庫，\n已經沒了嗎？"
+  Com_Talk_02b:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "謝謝惠顧。\n呵呵，這是你們國家的語言吧？"
+  Com_Talk_02c:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 7
+            - 205
+      - text: "薩庫薩庫。\n不錯～不錯～"
+  Com_Talk_02d:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 9
+            - 205
+      - text: "很好，很好，\n薩庫薩庫！"
+  Com_Talk_04:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: 哎，不用著急喔。
+  Com_Talk_05:
+    attributes: ""
+    contents:
+      - text: 我什麼都收購喔～！
+  Com_Talk_05b:
+    attributes: ""
+    contents:
+      - text: "有東西想賣的話，\n不用客氣，儘管跟我說！"
+  Com_Talk_05c:
+    attributes: ""
+    contents:
+      - text: 不管幾個我都收購！
+  Com_Talk_05d:
+    attributes: ""
+    contents:
+      - text: "來，該不會這樣就沒了吧？\n賣啊賣啊！"
+  Com_Talk_13:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "嗎，\n你希望我收購幾個？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5508
+            - 5503
+          selected_index: 0
+          cancel_index: 2
+          unknown: 8
+  Com_Talk_14:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "，\n這樣總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 吧。
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_15:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: 這是……什麼……？
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n不清楚的東西就不收購，這可是我的原則。"
+  Com_Talk_16:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 17
+            - 205
+      - text: 要我幫你脫？
+      - control:
+          kind: pause
+          length: longer
+      - text: "抱歉啊，\n像你這麼弱不禁風的小子，"
+      - control:
+          kind: pause
+          length: short
+      - text: 我可敬謝不敏。
+  Com_Talk_33:
+    attributes: Npc_Kakariko010
+    contents:
+      - text: 要賣1個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: 是吧？
+      - control:
+          kind: pause
+          length: short
+      - text: "\n這樣是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 喔。
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_35:
+    attributes: Npc_Kakariko010
+    contents:
+      - control:
+          kind: variable
+          variable_kind: 15
+          name: Shop_TradeItemNum
+      - text: 個
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 11
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "全賣了？\n可以啊，這樣總共是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: ，如何？
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_50:
+    attributes: ""
+    contents:
+      - control:
+          kind: set_colour
+          colour: blue
+      - control:
+          kind: variable
+          variable_kind: 12
+          name: Shop_SelectItemName
+      - control:
+          kind: reset_colour
+      - text: "的話，\n是"
+      - control:
+          kind: set_colour
+          colour: red
+      - control:
+          kind: variable
+          variable_kind: 18
+          name: ShopTradePrice
+      - text: 盧比
+      - control:
+          kind: reset_colour
+      - text: 喔。
+      - control:
+          kind: choice
+          choice_labels:
+            - 5500
+            - 5501
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Com_Talk_53:
+    attributes: ""
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 2
+            - 205
+      - text: 哎，不用著急喔。
+  Near001:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 1
+            - 205
+      - text: 剛獵到的喔～
+  Near002:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: 那件衣服很適合妳呢～
+  Talk_01:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "你好……\n\n呵呵，這是你們國家的語言吧？\n\n用我們國家的語言來說，\n就是『薩芭庫』喔。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_02:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: 隨時都歡迎你喔。
+  Talk_03:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "我有個乾妹\n在"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 格魯德小鎮
+      - control:
+          kind: reset_colour
+      - text: "當肉販。\n那傢伙在世界上到處旅行，\n所以也知道不少你們的語言喔。\n她是個挺可愛的女生，\n所以要是有經過"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 格魯德小鎮
+      - control:
+          kind: reset_colour
+      - text: "，就去看看她吧。\n"
+      - control:
+          kind: sound
+          unknown:
+            - 11
+            - 12
+      - text: "話雖這麼說，\n你畢竟是伯伊，進不去啊……"
+  Talk_05:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "喔，好啊。\n讓我看看你想賣的東西吧。"
+  Talk_06:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "賣完了啊……\n得再去狩獵才行……"
+  Talk_07:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "謝謝，大老闆。\n\n呵呵，這也是你們國家的語言吧？"
+  Talk_08:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 6
+      - text: "咦？\n你問有沒有看到奇怪的男性商人？\n"
+      - control:
+          kind: sound
+          unknown:
+            - 5
+            - 16
+      - text: 奇怪……
+      - control:
+          kind: pause
+          length: longer
+      - text: 奇怪……
+      - control:
+          kind: pause
+          length: longer
+      - text: "\n奇怪呀……\n"
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 12
+      - text: "啊～沒辦法，\n我不知道啊。\n畢竟我一直都在這裡，\n也不知道誰才是商人。\n應該也有海利亞人的商人吧，\n要不要問問看他們？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 5
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_09:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 4
+      - text: "我有個乾妹\n在"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 格魯德小鎮
+      - control:
+          kind: reset_colour
+      - text: "當肉販。\n那傢伙在世界上到處旅行，\n所以也知道不少你們的語言喔。\n她是個挺可愛的女生，\n所以要是有經過"
+      - control:
+          kind: set_colour
+          colour: blue
+      - text: 格魯德小鎮
+      - control:
+          kind: reset_colour
+      - text: ，就去看看她吧。
+  Talk_10:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "晚安……\n\n呵呵，這是你們國家的語言吧？\n\n用我們國家的語言來說，\n就是『薩芭薩芭』喔。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_12:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound2
+          unknown:
+            - 12
+            - 205
+      - text: 你妨礙到我做生意了。
+  Talk_15:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "早安……\n\n呵呵，這是你們國家的語言吧？\n\n用我們國家的語言來說，\n就是『薩伯塔』喔。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_17:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "歡迎光臨……\n\n呵呵，這是你們國家的語言吧？\n\n用我們國家的語言來說，\n就是『芭薩庫』喔。"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
+  Talk_18:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 0
+      - text: "薩庫薩庫！\n吃點這個，補充精力吧！"
+  Talk_19:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 7
+            - 9
+      - text: "謝謝！\n薩庫薩庫！"
+  Talk_21:
+    attributes: Npc_SmallOasis009
+    contents:
+      - text: 得去狩獵才行啊……
+  Talk_22:
+    attributes: Npc_SmallOasis009
+    contents:
+      - control:
+          kind: sound
+          unknown:
+            - 0
+            - 0
+      - text: "謝謝惠顧……\n\n呵呵，這是你們國家的語言吧？"
+      - control:
+          kind: choice
+          choice_labels:
+            - 0
+            - 1
+          selected_index: 0
+          cancel_index: 1
+          unknown: 6
