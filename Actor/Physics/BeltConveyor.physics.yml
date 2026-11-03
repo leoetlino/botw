@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 1
           use_ragdoll: false
           use_cloth: false
@@ -18,7 +18,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 1, collision_info_num: 1}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 1, collision_info_num: 1}
             ContactPointInfo_0: !obj {name: !str32 Contact_0, type: !str32 BeltConveyor,
               num: 128}
             CollisionInfo_0: !obj {name: !str32 Collision_0, type: !str32 BeltConveyor}
@@ -28,12 +28,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
                   num: 2}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Body
                       mass: 1.0
                       inertia: !vec3 [2.89163, 15.1028, 12.2712]
@@ -78,9 +78,9 @@ param_root: !list
                       wall_code: !str32 NoClimb
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Base
                       mass: 1.0
                       inertia: !vec3 [3.12, 15.4033, 12.5233]

@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 4
           use_ragdoll: false
           use_cloth: false
@@ -18,7 +18,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 1, collision_info_num: 1}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 1, collision_info_num: 1}
             ContactPointInfo_0: !obj {name: !str32 Attack, type: !str32 EnemyAttack,
               num: 128}
             CollisionInfo_0: !obj {name: !str32 Attack, type: !str32 EnemyAttack}
@@ -28,12 +28,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 BodyParts_00, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 BodyParts_00, type: !str32 from_resource,
                   num: 22, setup_file_path: !str256 DgnObj_IbutsuFire_A/DgnObj_IbutsuFireLeg_LegL_A_01.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Ankle_L
                       mass: 1.0
                       inertia: !vec3 [21.3682, 15.976, 16.7581]
@@ -65,9 +65,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_D_1_L
                       mass: 1.0
                       inertia: !vec3 [2.5621, 8.67108, 8.73402]
@@ -99,9 +99,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_D_2_L
                       mass: 1.0
                       inertia: !vec3 [4.77362, 10.552, 12.5561]
@@ -135,7 +135,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_E_1_L
                       mass: 1.0
                       inertia: !vec3 [2.55498, 8.67832, 8.7339]
@@ -169,7 +169,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_E_2_L
                       mass: 1.0
                       inertia: !vec3 [4.66981, 10.6536, 12.5585]
@@ -203,7 +203,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_F_1_L
                       mass: 1.0
                       inertia: !vec3 [2.55622, 8.67374, 8.73546]
@@ -237,7 +237,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_F_2_L
                       mass: 1.0
                       inertia: !vec3 [4.7736, 10.5519, 12.556]
@@ -271,7 +271,7 @@ param_root: !list
                   lists: {}
                 3723516252: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_10_L
                       mass: 1.0
                       inertia: !vec3 [6.93578, 9.21031, 5.25526]
@@ -305,7 +305,7 @@ param_root: !list
                   lists: {}
                 1297040589: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_11_L
                       mass: 1.0
                       inertia: !vec3 [6.55435, 8.68444, 4.94481]
@@ -339,7 +339,7 @@ param_root: !list
                   lists: {}
                 977826907: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_12_L
                       mass: 1.0
                       inertia: !vec3 [6.25495, 8.26263, 4.69214]
@@ -373,7 +373,7 @@ param_root: !list
                   lists: {}
                 3229717793: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_13_L
                       mass: 1.0
                       inertia: !vec3 [5.9697, 7.85973, 4.44999]
@@ -407,7 +407,7 @@ param_root: !list
                   lists: {}
                 3079054775: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_14_L
                       mass: 1.0
                       inertia: !vec3 [5.69205, 7.51651, 4.26495]
@@ -441,7 +441,7 @@ param_root: !list
                   lists: {}
                 781186061: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_15_L
                       mass: 1.0
                       inertia: !vec3 [5.71493, 7.35477, 4.08387]
@@ -475,7 +475,7 @@ param_root: !list
                   lists: {}
                 1502135451: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_1_L
                       mass: 1.0
                       inertia: !vec3 [10.7847, 13.7376, 8.92077]
@@ -509,7 +509,7 @@ param_root: !list
                   lists: {}
                 3354153272: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_2_L
                       mass: 1.0
                       inertia: !vec3 [11.4015, 14.4043, 8.97273]
@@ -543,7 +543,7 @@ param_root: !list
                   lists: {}
                 2968215982: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_3_L
                       mass: 1.0
                       inertia: !vec3 [10.4063, 13.1402, 8.16593]
@@ -577,7 +577,7 @@ param_root: !list
                   lists: {}
                 702689300: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_4_L
                       mass: 1.0
                       inertia: !vec3 [9.80708, 12.3447, 7.67765]
@@ -611,7 +611,7 @@ param_root: !list
                   lists: {}
                 1592066178: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_5_L
                       mass: 1.0
                       inertia: !vec3 [9.35692, 11.7858, 7.32889]
@@ -645,7 +645,7 @@ param_root: !list
                   lists: {}
                 3462012179: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_6_L
                       mass: 1.0
                       inertia: !vec3 [8.87885, 11.1707, 6.965]
@@ -679,7 +679,7 @@ param_root: !list
                   lists: {}
                 3109891461: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_7_L
                       mass: 1.0
                       inertia: !vec3 [8.52218, 10.9607, 6.79703]
@@ -713,7 +713,7 @@ param_root: !list
                   lists: {}
                 3953968866: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_8_L
                       mass: 1.0
                       inertia: !vec3 [8.35011, 10.2938, 6.42055]
@@ -747,7 +747,7 @@ param_root: !list
                   lists: {}
                 2628515444: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_9_L
                       mass: 1.0
                       inertia: !vec3 [7.27364, 9.62933, 5.48186]
@@ -781,12 +781,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 BodyParts_01, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 BodyParts_01, type: !str32 from_resource,
                   num: 22, setup_file_path: !str256 DgnObj_IbutsuFire_A/DgnObj_IbutsuFireLeg_ArmL_A_01.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_10_L
                       mass: 1.0
                       inertia: !vec3 [6.93578, 9.21031, 5.25526]
@@ -818,9 +818,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_11_L
                       mass: 1.0
                       inertia: !vec3 [6.55435, 8.68444, 4.94481]
@@ -852,9 +852,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_12_L
                       mass: 1.0
                       inertia: !vec3 [6.25495, 8.26263, 4.69214]
@@ -888,7 +888,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_13_L
                       mass: 1.0
                       inertia: !vec3 [5.96971, 7.85973, 4.45]
@@ -922,7 +922,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_14_L
                       mass: 1.0
                       inertia: !vec3 [5.69205, 7.5165, 4.26495]
@@ -956,7 +956,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_15_L
                       mass: 1.0
                       inertia: !vec3 [5.71494, 7.35478, 4.08388]
@@ -990,7 +990,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_1_L
                       mass: 1.0
                       inertia: !vec3 [10.7845, 13.7375, 8.92084]
@@ -1024,7 +1024,7 @@ param_root: !list
                   lists: {}
                 3723516252: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_2_L
                       mass: 1.0
                       inertia: !vec3 [11.4015, 14.4043, 8.97273]
@@ -1058,7 +1058,7 @@ param_root: !list
                   lists: {}
                 1297040589: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_3_L
                       mass: 1.0
                       inertia: !vec3 [10.4063, 13.1402, 8.16593]
@@ -1092,7 +1092,7 @@ param_root: !list
                   lists: {}
                 977826907: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_4_L
                       mass: 1.0
                       inertia: !vec3 [9.80708, 12.3447, 7.67765]
@@ -1126,7 +1126,7 @@ param_root: !list
                   lists: {}
                 3229717793: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_5_L
                       mass: 1.0
                       inertia: !vec3 [9.35692, 11.7858, 7.32889]
@@ -1160,7 +1160,7 @@ param_root: !list
                   lists: {}
                 3079054775: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_6_L
                       mass: 1.0
                       inertia: !vec3 [8.87885, 11.1707, 6.965]
@@ -1194,7 +1194,7 @@ param_root: !list
                   lists: {}
                 781186061: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_7_L
                       mass: 1.0
                       inertia: !vec3 [8.52218, 10.9607, 6.79703]
@@ -1228,7 +1228,7 @@ param_root: !list
                   lists: {}
                 1502135451: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_8_L
                       mass: 1.0
                       inertia: !vec3 [8.35011, 10.2938, 6.42055]
@@ -1262,7 +1262,7 @@ param_root: !list
                   lists: {}
                 3354153272: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_9_L
                       mass: 1.0
                       inertia: !vec3 [7.27364, 9.62933, 5.48186]
@@ -1296,7 +1296,7 @@ param_root: !list
                   lists: {}
                 2968215982: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_A_1_L
                       mass: 1.0
                       inertia: !vec3 [2.5621, 8.67108, 8.73402]
@@ -1330,7 +1330,7 @@ param_root: !list
                   lists: {}
                 702689300: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_A_2_L
                       mass: 1.0
                       inertia: !vec3 [4.77362, 10.552, 12.5561]
@@ -1364,7 +1364,7 @@ param_root: !list
                   lists: {}
                 1592066178: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_B_1_L
                       mass: 1.0
                       inertia: !vec3 [2.55498, 8.67832, 8.7339]
@@ -1398,7 +1398,7 @@ param_root: !list
                   lists: {}
                 3462012179: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_B_2_L
                       mass: 1.0
                       inertia: !vec3 [4.66981, 10.6536, 12.5585]
@@ -1432,7 +1432,7 @@ param_root: !list
                   lists: {}
                 3109891461: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_C_1_L
                       mass: 1.0
                       inertia: !vec3 [2.55622, 8.67374, 8.73546]
@@ -1466,7 +1466,7 @@ param_root: !list
                   lists: {}
                 3953968866: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_C_2_L
                       mass: 1.0
                       inertia: !vec3 [4.7736, 10.5519, 12.556]
@@ -1500,7 +1500,7 @@ param_root: !list
                   lists: {}
                 2628515444: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Wrist_L
                       mass: 1.0
                       inertia: !vec3 [21.3682, 15.976, 16.7581]
@@ -1534,12 +1534,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_2: !list
               objects:
-                4288596824: !obj {set_name: !str32 BodyParts_02, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 BodyParts_02, type: !str32 from_resource,
                   num: 22, setup_file_path: !str256 DgnObj_IbutsuFire_A/DgnObj_IbutsuFireLeg_LegR_A_01.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Ankle_R
                       mass: 1.0
                       inertia: !vec3 [21.3682, 15.976, 16.7581]
@@ -1571,9 +1571,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_D_1_R
                       mass: 1.0
                       inertia: !vec3 [2.56212, 8.67095, 8.73385]
@@ -1605,9 +1605,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_D_2_R
                       mass: 1.0
                       inertia: !vec3 [4.77362, 10.552, 12.5561]
@@ -1641,7 +1641,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_E_1_R
                       mass: 1.0
                       inertia: !vec3 [2.555, 8.67818, 8.73373]
@@ -1675,7 +1675,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_E_2_R
                       mass: 1.0
                       inertia: !vec3 [4.66979, 10.6536, 12.5585]
@@ -1709,7 +1709,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_F_1_R
                       mass: 1.0
                       inertia: !vec3 [2.56324, 8.67105, 8.73263]
@@ -1743,7 +1743,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_F_2_R
                       mass: 1.0
                       inertia: !vec3 [4.7736, 10.5519, 12.556]
@@ -1777,7 +1777,7 @@ param_root: !list
                   lists: {}
                 3723516252: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_10_R
                       mass: 1.0
                       inertia: !vec3 [6.93577, 9.21031, 5.25526]
@@ -1811,7 +1811,7 @@ param_root: !list
                   lists: {}
                 1297040589: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_11_R
                       mass: 1.0
                       inertia: !vec3 [6.55435, 8.68443, 4.94481]
@@ -1845,7 +1845,7 @@ param_root: !list
                   lists: {}
                 977826907: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_12_R
                       mass: 1.0
                       inertia: !vec3 [6.25495, 8.26262, 4.69214]
@@ -1879,7 +1879,7 @@ param_root: !list
                   lists: {}
                 3229717793: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_13_R
                       mass: 1.0
                       inertia: !vec3 [5.9697, 7.85973, 4.44999]
@@ -1913,7 +1913,7 @@ param_root: !list
                   lists: {}
                 3079054775: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_14_R
                       mass: 1.0
                       inertia: !vec3 [5.69205, 7.5165, 4.26495]
@@ -1947,7 +1947,7 @@ param_root: !list
                   lists: {}
                 781186061: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_15_R
                       mass: 1.0
                       inertia: !vec3 [5.71493, 7.35478, 4.08389]
@@ -1981,7 +1981,7 @@ param_root: !list
                   lists: {}
                 1502135451: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_1_R
                       mass: 1.0
                       inertia: !vec3 [10.7847, 13.7376, 8.92078]
@@ -2015,7 +2015,7 @@ param_root: !list
                   lists: {}
                 3354153272: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_2_R
                       mass: 1.0
                       inertia: !vec3 [11.4015, 14.4043, 8.97273]
@@ -2049,7 +2049,7 @@ param_root: !list
                   lists: {}
                 2968215982: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_3_R
                       mass: 1.0
                       inertia: !vec3 [10.4063, 13.1402, 8.16593]
@@ -2083,7 +2083,7 @@ param_root: !list
                   lists: {}
                 702689300: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_4_R
                       mass: 1.0
                       inertia: !vec3 [9.80708, 12.3447, 7.67765]
@@ -2117,7 +2117,7 @@ param_root: !list
                   lists: {}
                 1592066178: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_5_R
                       mass: 1.0
                       inertia: !vec3 [9.35692, 11.7858, 7.32889]
@@ -2151,7 +2151,7 @@ param_root: !list
                   lists: {}
                 3462012179: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_6_R
                       mass: 1.0
                       inertia: !vec3 [8.87885, 11.1707, 6.96499]
@@ -2185,7 +2185,7 @@ param_root: !list
                   lists: {}
                 3109891461: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_7_R
                       mass: 1.0
                       inertia: !vec3 [8.52217, 10.9607, 6.79703]
@@ -2219,7 +2219,7 @@ param_root: !list
                   lists: {}
                 3953968866: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_8_R
                       mass: 1.0
                       inertia: !vec3 [8.35011, 10.2938, 6.42055]
@@ -2253,7 +2253,7 @@ param_root: !list
                   lists: {}
                 2628515444: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_9_R
                       mass: 1.0
                       inertia: !vec3 [7.27364, 9.62932, 5.48186]
@@ -2287,12 +2287,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_3: !list
               objects:
-                4288596824: !obj {set_name: !str32 BodyParts_03, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 BodyParts_03, type: !str32 from_resource,
                   num: 22, setup_file_path: !str256 DgnObj_IbutsuFire_A/DgnObj_IbutsuFireLeg_ArmR_A_01.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_10_R
                       mass: 1.0
                       inertia: !vec3 [6.93577, 9.21031, 5.25526]
@@ -2324,9 +2324,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_11_R
                       mass: 1.0
                       inertia: !vec3 [6.55435, 8.68443, 4.94481]
@@ -2358,9 +2358,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_12_R
                       mass: 1.0
                       inertia: !vec3 [6.25495, 8.26263, 4.69214]
@@ -2394,7 +2394,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_13_R
                       mass: 1.0
                       inertia: !vec3 [5.9697, 7.85972, 4.44999]
@@ -2428,7 +2428,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_14_R
                       mass: 1.0
                       inertia: !vec3 [5.69205, 7.51651, 4.26495]
@@ -2462,7 +2462,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_15_R
                       mass: 1.0
                       inertia: !vec3 [5.71493, 7.35478, 4.08389]
@@ -2496,7 +2496,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_1_R
                       mass: 1.0
                       inertia: !vec3 [10.7847, 13.7376, 8.92078]
@@ -2530,7 +2530,7 @@ param_root: !list
                   lists: {}
                 3723516252: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_2_R
                       mass: 1.0
                       inertia: !vec3 [11.4015, 14.4043, 8.97273]
@@ -2564,7 +2564,7 @@ param_root: !list
                   lists: {}
                 1297040589: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_3_R
                       mass: 1.0
                       inertia: !vec3 [10.4063, 13.1402, 8.16593]
@@ -2598,7 +2598,7 @@ param_root: !list
                   lists: {}
                 977826907: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_4_R
                       mass: 1.0
                       inertia: !vec3 [9.80708, 12.3447, 7.67765]
@@ -2632,7 +2632,7 @@ param_root: !list
                   lists: {}
                 3229717793: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_5_R
                       mass: 1.0
                       inertia: !vec3 [9.35691, 11.7858, 7.32889]
@@ -2666,7 +2666,7 @@ param_root: !list
                   lists: {}
                 3079054775: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_6_R
                       mass: 1.0
                       inertia: !vec3 [8.87885, 11.1707, 6.96499]
@@ -2700,7 +2700,7 @@ param_root: !list
                   lists: {}
                 781186061: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_7_R
                       mass: 1.0
                       inertia: !vec3 [8.52217, 10.9607, 6.79703]
@@ -2734,7 +2734,7 @@ param_root: !list
                   lists: {}
                 1502135451: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_8_R
                       mass: 1.0
                       inertia: !vec3 [8.35012, 10.2938, 6.42055]
@@ -2768,7 +2768,7 @@ param_root: !list
                   lists: {}
                 3354153272: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_9_R
                       mass: 1.0
                       inertia: !vec3 [7.27364, 9.62933, 5.48186]
@@ -2802,7 +2802,7 @@ param_root: !list
                   lists: {}
                 2968215982: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_A_1_R
                       mass: 1.0
                       inertia: !vec3 [2.56212, 8.67094, 8.73384]
@@ -2836,7 +2836,7 @@ param_root: !list
                   lists: {}
                 702689300: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_A_2_R
                       mass: 1.0
                       inertia: !vec3 [4.83887, 10.3782, 12.4328]
@@ -2870,7 +2870,7 @@ param_root: !list
                   lists: {}
                 1592066178: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_B_1_R
                       mass: 1.0
                       inertia: !vec3 [2.555, 8.67818, 8.73373]
@@ -2904,7 +2904,7 @@ param_root: !list
                   lists: {}
                 3462012179: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_B_2_R
                       mass: 1.0
                       inertia: !vec3 [4.6698, 10.6536, 12.5585]
@@ -2938,7 +2938,7 @@ param_root: !list
                   lists: {}
                 3109891461: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_C_1_R
                       mass: 1.0
                       inertia: !vec3 [2.56324, 8.67105, 8.73263]
@@ -2972,7 +2972,7 @@ param_root: !list
                   lists: {}
                 3953968866: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Finger_C_2_R
                       mass: 1.0
                       inertia: !vec3 [4.7736, 10.5519, 12.556]
@@ -3006,7 +3006,7 @@ param_root: !list
                   lists: {}
                 2628515444: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Wrist_R
                       mass: 1.0
                       inertia: !vec3 [21.3685, 15.9764, 16.758]

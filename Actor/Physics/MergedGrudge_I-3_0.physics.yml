@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 1
           use_ragdoll: false
           use_cloth: false
@@ -21,12 +21,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_resource,
                   num: 4, setup_file_path: !str256 MergedGrudge_I-3_0/MergedGrudge_I-3_0.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Collision_EntityGround
                       mass: 1.0
                       inertia: !vec3 [464.46, 981.617, 525.548]
@@ -59,9 +59,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Fixed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Collision_EntityGround_Camera
                       mass: 1.0
                       inertia: !vec3 [464.741, 981.769, 526.107]
@@ -94,9 +94,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Fixed
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Collision_EntityGround_FilterArrow
                       mass: 1.0
                       inertia: !vec3 [60.6731, 196.453, 170.647]
@@ -131,7 +131,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Collision_EntityNoHit
                       mass: 1.0
                       inertia: !vec3 [597.424, 1253.92, 691.209]

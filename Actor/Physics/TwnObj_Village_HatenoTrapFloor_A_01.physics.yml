@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 2
           use_ragdoll: false
           use_cloth: false
@@ -18,7 +18,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 1, collision_info_num: 1}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 1, collision_info_num: 1}
             ContactPointInfo_0: !obj {name: !str32 Tgt, type: !str32 NPCSensor, num: 128}
             CollisionInfo_0: !obj {name: !str32 Tgt, type: !str32 NPCSensor}
           lists: {}
@@ -27,12 +27,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_resource,
                   num: 2, setup_file_path: !str256 TwnObj_Village_Hateno_A/TwnObj_Village_HatenoTrapFloor_A_01.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Col_Left_Floor
                       mass: 1.0
                       inertia: !vec3 [0.753334, 0.937501, 0.190834]
@@ -64,9 +64,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Col_Right_Floor
                       mass: 1.0
                       inertia: !vec3 [0.753335, 0.937501, 0.190834]
@@ -100,12 +100,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 Tgt, type: !str32 from_resource,
                   num: 2, setup_file_path: !str256 TwnObj_Village_Hateno_A/TwnObj_Village_HatenoTrapFloor_A_01.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Col_Left_Floor
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -125,9 +125,9 @@ param_root: !list
                       max_angular_velocity_rad: 198.968
                       motion_type: !str32 Keyframed
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Col_Right_Floor
                       max_impulse: -1.0
                       col_impulse_scale: 1.0

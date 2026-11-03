@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 4
           use_ragdoll: true
           use_cloth: true
@@ -19,7 +19,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 3, collision_info_num: 1}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 3, collision_info_num: 1}
             ContactPointInfo_0: !obj {name: !str32 Contact_0, type: !str32 NPCSensor,
               num: 128}
             ContactPointInfo_1: !obj {name: !str32 Beam, type: !str32 AttackCommon,
@@ -32,12 +32,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 MainRigidBody
                       mass: 1000.0
                       inertia: !vec3 [4618.45, 1835.05, 4618.45]
@@ -83,12 +83,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 Ragdoll, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Ragdoll, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Base
                       mass: 1.0
                       inertia: !vec3 [0.016, 0.016, 0.016]
@@ -131,12 +131,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_2: !list
               objects:
-                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
                   num: 10}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgtBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -168,9 +168,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgArm1L
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -202,9 +202,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgArm2L
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -238,7 +238,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgArm1R
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -272,7 +272,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgArm2R
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -306,7 +306,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgUpperBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -339,7 +339,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgHear
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -373,7 +373,7 @@ param_root: !list
                   lists: {}
                 3723516252: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgUnitA
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -407,7 +407,7 @@ param_root: !list
                   lists: {}
                 1297040589: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgUnitD
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -441,7 +441,7 @@ param_root: !list
                   lists: {}
                 977826907: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Eye_Tg
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -476,12 +476,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_3: !list
               objects:
-                4288596824: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Beam
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -514,7 +514,7 @@ param_root: !list
                   lists: {}
         CharacterController: !list
           objects:
-            2311816730: !obj
+            CharacterControllerParam: !obj
               use_nav_mesh_character: false
               nav_mesh_character_radius: 1.1
               nav_mesh_character_height: 7.0

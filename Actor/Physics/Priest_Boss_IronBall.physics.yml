@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 3
           use_ragdoll: false
           use_cloth: false
@@ -18,7 +18,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 2, collision_info_num: 2}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 2, collision_info_num: 2}
             ContactPointInfo_0: !obj {name: !str32 Body, type: !str32 Body, num: 32}
             ContactPointInfo_1: !obj {name: !str32 Tgt, type: !str32 NPCSensor, num: 16}
             CollisionInfo_0: !obj {name: !str32 Body, type: !str32 Body}
@@ -29,12 +29,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_resource,
                   num: 1, setup_file_path: !str256 Priest_Boss_IronBall/Priest_Boss_IronBall.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Collision_Priest_Boss_IronBall
                       mass: 1000.0
                       inertia: !vec3 [889.306, 889.307, 889.307]
@@ -72,12 +72,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgtBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -110,12 +110,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_2: !list
               objects:
-                4288596824: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
                   num: 2}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -144,9 +144,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBodyPlayer
                       max_impulse: -1.0
                       col_impulse_scale: 1.0

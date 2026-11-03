@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 1
           use_ragdoll: true
           use_cloth: true
@@ -20,7 +20,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 1, collision_info_num: 1}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 1, collision_info_num: 1}
             ContactPointInfo_0: !obj {name: !str32 TgtContact, type: !str32 HorseSensor,
               num: 16}
             CollisionInfo_0: !obj {name: !str32 TgtCollision, type: !str32 HorseSensor}
@@ -30,12 +30,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgtBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0

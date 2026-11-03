@@ -62,13 +62,13 @@ param_root: !list
           objects:
             Def: !obj {Name: プレイヤー発見, ClassName: !str32 TargetBeatCheck, GroupName: 水中隠れ}
             ChildIdx: !obj {撃破: 21, 未撃破: 69}
-            BehaviorIdx: !obj {1721623982: 10, 295359800: 12}
+            BehaviorIdx: !obj {Idx_0: 10, Idx_1: 12}
           lists: {}
         AI_7: !list
           objects:
             Def: !obj {Name: プレイヤー発見, ClassName: !str32 TargetBeatCheck, GroupName: 怒り}
             ChildIdx: !obj {撃破: 20, 未撃破: 68}
-            BehaviorIdx: !obj {1721623982: 1, 295359800: 10, 2291369090: 12}
+            BehaviorIdx: !obj {Idx_0: 1, Idx_1: 10, Idx_2: 12}
           lists: {}
         AI_8: !list
           objects:
@@ -90,7 +90,7 @@ param_root: !list
               突風: 63
               落下: 183
               超ショック: 163
-            BehaviorIdx: !obj {1721623982: 7, 295359800: 3}
+            BehaviorIdx: !obj {Idx_0: 7, Idx_1: 3}
             SInst: !obj
               IsWigBreackByGust: true
               JustGuardTimesMin: 3
@@ -102,7 +102,7 @@ param_root: !list
           objects:
             Def: !obj {Name: リロード, ClassName: !str32 CreateCarryActor, GroupName: 水中}
             ChildIdx: !obj {生成: 41, 生成中: 42}
-            BehaviorIdx: !obj {1721623982: 12}
+            BehaviorIdx: !obj {Idx_0: 12}
             SInst: !obj {ActorName: OctObj_Grass_01, CreatePriorityState: 0, Scale: 1.0}
           lists: {}
         AI_10: !list
@@ -115,7 +115,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 画面外攻撃, ClassName: !str32 SeqOctarockAttack, GroupName: 水中隠れ戦闘}
             ChildIdx: !obj {中行動: 161, 先行動: 144, 後行動: 95}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_12: !list
@@ -127,7 +127,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 画面外吐き出し攻撃, ClassName: !str32 SeqOctarockAttack, GroupName: 水中隠れ戦闘}
             ChildIdx: !obj {中行動: 162, 先行動: 144, 後行動: 95}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_14: !list
@@ -164,7 +164,7 @@ param_root: !list
               戦闘準備: 152
               画面外吐き出し攻撃: 13
               画面外攻撃: 11
-            BehaviorIdx: !obj {1721623982: 1}
+            BehaviorIdx: !obj {Idx_0: 1}
             SInst: !obj
               ShootActorKey: ShootActor
               VacuumPartsKey: Vacuum
@@ -194,7 +194,7 @@ param_root: !list
             Def: !obj {Name: 近接湧出, ClassName: !str32 AppearNearTargetOutOfScrnGnd,
               GroupName: 通常}
             ChildIdx: !obj {湧出: 181, 湧出準備: 182}
-            BehaviorIdx: !obj {1721623982: 0, 295359800: 3}
+            BehaviorIdx: !obj {Idx_0: 0, Idx_1: 3}
             SInst: !obj {Dist: 20.0, TeraDist: 1.0}
           lists: {}
         AI_20: !list
@@ -226,7 +226,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 CreateCarryActor, GroupName: 水中カツラ攻撃反応}
             ChildIdx: !obj {生成: 41, 生成中: 42}
-            BehaviorIdx: !obj {1721623982: 12}
+            BehaviorIdx: !obj {Idx_0: 12}
             SInst: !obj {ActorName: OctObj_Grass_01, CreatePriorityState: 0, Scale: 1.0}
           lists: {}
         AI_25: !list
@@ -348,7 +348,7 @@ param_root: !list
               隠れる: 77
               音気づき: 79
               飛び出す: 173
-            BehaviorIdx: !obj {1721623982: 6}
+            BehaviorIdx: !obj {Idx_0: 6}
             SInst: !obj
               IsSitDown: false
               IsHitGround: true
@@ -417,7 +417,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 戦闘攻撃, ClassName: !str32 SeqOctarockAttack, GroupName: 水中隠れ戦闘}
             ChildIdx: !obj {中行動: 161, 先行動: 144, 後行動: 95}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_47: !list
@@ -528,7 +528,7 @@ param_root: !list
               見失い: 88
               諦め: 58
               音気づき: 10
-            BehaviorIdx: !obj {1721623982: 0, 295359800: 7}
+            BehaviorIdx: !obj {Idx_0: 0, Idx_1: 7}
             SInst: !obj
               WeaponIdx: 0
               TerritoryArea: 100.0
@@ -555,20 +555,20 @@ param_root: !list
           objects:
             Def: !obj {Name: 諦め, ClassName: !str32 EnemyTired, GroupName: 水中}
             ChildIdx: !obj {帰還: 82, 見まわす: 86}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         AI_58: !list
           objects:
             Def: !obj {Name: 諦め, ClassName: !str32 SeqTwoAction, GroupName: 通常}
             ChildIdx: !obj {先行動: 149, 後行動: 100}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_59: !list
           objects:
             Def: !obj {Name: 吐き出し攻撃, ClassName: !str32 SeqOctarockAttack, GroupName: 水中隠れ戦闘}
             ChildIdx: !obj {中行動: 162, 先行動: 144, 後行動: 95}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_60: !list
@@ -581,7 +581,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 怒り, ClassName: !str32 SeqTwoAction, GroupName: 通常}
             ChildIdx: !obj {先行動: 149, 後行動: 100}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_62: !list
@@ -672,7 +672,7 @@ param_root: !list
         Action_2: !list
           objects:
             Def: !obj {Name: カツラ反応, ClassName: !str32 OnetimeHoverASPlay, GroupName: 待機}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: FlyWigBreak, IsIgnoreSameAS: false, PosReduceRatio: 0.85,
               AngReduceRatio: 0.45}
           lists: {}
@@ -699,7 +699,7 @@ param_root: !list
         Action_6: !list
           objects:
             Def: !obj {Name: プレイヤー気づき, ClassName: !str32 HoverNoticeTurn, GroupName: 待機}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj
               NoDoubleNoticeTime: 30
               AngSpd: 0.523599
@@ -734,7 +734,7 @@ param_root: !list
         Action_9: !list
           objects:
             Def: !obj {Name: 音気づき, ClassName: !str32 SwimTurn, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj
               ASName: WaterHideWait
               FinRotate: 0.0174533
@@ -751,7 +751,7 @@ param_root: !list
         Action_10: !list
           objects:
             Def: !obj {Name: 音気づき, ClassName: !str32 AnmDrivenHoverTurn, GroupName: 待機}
-            BehaviorIdx: !obj {1721623982: 13, 295359800: 2}
+            BehaviorIdx: !obj {Idx_0: 13, Idx_1: 2}
             SInst: !obj
               RotSpeed: 0.174533
               BaseRotRatio: 0.16
@@ -794,7 +794,7 @@ param_root: !list
         Action_13: !list
           objects:
             Def: !obj {Name: 気配気づき, ClassName: !str32 DummyAction, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_14: !list
           objects:
@@ -803,7 +803,7 @@ param_root: !list
         Action_15: !list
           objects:
             Def: !obj {Name: 脅威感知, ClassName: !str32 DummyAction, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_16: !list
           objects:
@@ -826,7 +826,7 @@ param_root: !list
         Action_17: !list
           objects:
             Def: !obj {Name: 見失い, ClassName: !str32 WaterFloatWait, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
             SInst: !obj
               Time: 30
               TimeRand: 30
@@ -850,7 +850,7 @@ param_root: !list
         Action_19: !list
           objects:
             Def: !obj {Name: 呼ばれ, ClassName: !str32 DummyAction, GroupName: 通常}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_20: !list
           objects:
@@ -861,7 +861,7 @@ param_root: !list
         Action_21: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 WaterUpDownAnmDrivenMove, GroupName: カツラ反応開始}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj
               InWaterDepth: 0.2
               TargetDepth: 0.35
@@ -898,7 +898,7 @@ param_root: !list
         Action_26: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 WaterUpDownAnmDrivenMove, GroupName: 水中隠れ撃破}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj
               InWaterDepth: 0.2
               TargetDepth: 2.5
@@ -960,12 +960,12 @@ param_root: !list
         Action_31: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 IceBroken, GroupName: 凍死}
-            BehaviorIdx: !obj {1721623982: 5}
+            BehaviorIdx: !obj {Idx_0: 5}
           lists: {}
         Action_32: !list
           objects:
             Def: !obj {Name: 行動中仲間発見, ClassName: !str32 SwimMove, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
             SInst: !obj
               ASName: SwimMove
               Speed: 0.2
@@ -1076,7 +1076,7 @@ param_root: !list
         Action_38: !list
           objects:
             Def: !obj {Name: 子０, ClassName: !str32 Freeze, GroupName: 凍死先行動}
-            BehaviorIdx: !obj {1721623982: 5}
+            BehaviorIdx: !obj {Idx_0: 5}
             SInst: !obj {IsChangeInAir: false, TransBoneKey: Root, PosReduceRatio: 0.15,
               AngReduceRatio: 0.45}
           lists: {}
@@ -1143,7 +1143,7 @@ param_root: !list
         Action_50: !list
           objects:
             Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: Root}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_51: !list
           objects:
@@ -1403,7 +1403,7 @@ param_root: !list
         Action_75: !list
           objects:
             Def: !obj {Name: 先行動, ClassName: !str32 WaterUpDownAnmDrivenMove, GroupName: 水中隠れ撃破}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj
               InWaterDepth: 0.2
               TargetDepth: 0.35
@@ -1509,7 +1509,7 @@ param_root: !list
         Action_83: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 WaterFloatWait, GroupName: 水中隠れ}
-            BehaviorIdx: !obj {1721623982: 11}
+            BehaviorIdx: !obj {Idx_0: 11}
             SInst: !obj
               Time: 0
               TimeRand: 30
@@ -1599,7 +1599,7 @@ param_root: !list
         Action_91: !list
           objects:
             Def: !obj {Name: 中行動, ClassName: !str32 HoverPredictVacuumShoot, GroupName: 水中隠れオクタ砲}
-            BehaviorIdx: !obj {1721623982: 13}
+            BehaviorIdx: !obj {Idx_0: 13}
             SInst: !obj
               ASName: WaterHideAttack
               PosReduceRatio: 0.7
@@ -1652,7 +1652,7 @@ param_root: !list
         Action_95: !list
           objects:
             Def: !obj {Name: 怒り, ClassName: !str32 WaterFloatWait, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
             SInst: !obj
               Time: 30
               TimeRand: 30
@@ -1675,7 +1675,7 @@ param_root: !list
         Action_97: !list
           objects:
             Def: !obj {Name: 凍結, ClassName: !str32 Freeze, GroupName: 隠れリアクション}
-            BehaviorIdx: !obj {1721623982: 5}
+            BehaviorIdx: !obj {Idx_0: 5}
             SInst: !obj {IsChangeInAir: false, TransBoneKey: Root, PosReduceRatio: 0.85,
               AngReduceRatio: 0.45}
           lists: {}
@@ -1727,7 +1727,7 @@ param_root: !list
         Action_106: !list
           objects:
             Def: !obj {Name: 不調仲間発見, ClassName: !str32 DummyAction, GroupName: 水中}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_107: !list
           objects:
@@ -1736,7 +1736,7 @@ param_root: !list
         Action_108: !list
           objects:
             Def: !obj {Name: 浮上, ClassName: !str32 LevelFlyRise, GroupName: 待機}
-            BehaviorIdx: !obj {1721623982: 11}
+            BehaviorIdx: !obj {Idx_0: 11}
             SInst: !obj
               Height: 5.0
               Speed: 0.0666667
@@ -1747,7 +1747,7 @@ param_root: !list
         Action_109: !list
           objects:
             Def: !obj {Name: 浮遊, ClassName: !str32 AnmDrivenHover, GroupName: 待機}
-            BehaviorIdx: !obj {1721623982: 13, 295359800: 11}
+            BehaviorIdx: !obj {Idx_0: 13, Idx_1: 11}
             SInst: !obj {RotReduceRatio: 0.45, ASName: FlyWait, MoveYLimit: 3.0, PosReduceRatio: 0.85}
           lists: {}
         Action_110: !list
@@ -1759,7 +1759,7 @@ param_root: !list
         Action_111: !list
           objects:
             Def: !obj {Name: 湧出, ClassName: !str32 Appear, GroupName: 近接湧出}
-            BehaviorIdx: !obj {1721623982: 8}
+            BehaviorIdx: !obj {Idx_0: 8}
             SInst: !obj {PosReduceRatio: 0.0, AngReduceRatio: 0.0}
           lists: {}
         Action_112: !list

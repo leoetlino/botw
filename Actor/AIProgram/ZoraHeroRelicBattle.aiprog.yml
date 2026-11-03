@@ -59,7 +59,7 @@ param_root: !list
           objects:
             Def: !obj {Name: Root, ClassName: !str32 ZoraHeroRelicBattleRoot, GroupName: ''}
             ChildIdx: !obj {騎乗中: 7, 騎乗待ち: 6}
-            BehaviorIdx: !obj {1721623982: 0, 295359800: 12}
+            BehaviorIdx: !obj {Idx_0: 0, Idx_1: 12}
           lists: {}
         AI_1: !list
           objects:
@@ -71,7 +71,7 @@ param_root: !list
           objects:
             Def: !obj {Name: エリア外待機, ClassName: !str32 ViewWait, GroupName: プレイヤを見る}
             ChildIdx: !obj {回転: 29, 待機: 42}
-            BehaviorIdx: !obj {1721623982: 3, 295359800: 17}
+            BehaviorIdx: !obj {Idx_0: 3, Idx_1: 17}
             SInst: !obj {TurnStartAngle: 0.0174533, CheckOnce: false}
           lists: {}
         AI_3: !list
@@ -125,13 +125,13 @@ param_root: !list
               滝つぼ待機: 18
               跳ねあげる: 43
               遺物に向かう: 27
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
           lists: {}
         AI_8: !list
           objects:
             Def: !obj {Name: 行動, ClassName: !str32 ViewWait, GroupName: 騎乗待ち}
             ChildIdx: !obj {回転: 29, 待機: 42}
-            BehaviorIdx: !obj {1721623982: 17}
+            BehaviorIdx: !obj {Idx_0: 17}
             SInst: !obj {TurnStartAngle: 0.0174533, CheckOnce: false}
           lists: {}
         AI_9: !list
@@ -172,13 +172,13 @@ param_root: !list
           objects:
             Def: !obj {Name: 先行動, ClassName: !str32 Fork2AI, GroupName: エリア外移動待機}
             ChildIdx: !obj {子０: 35, 子１: 38}
-            BehaviorIdx: !obj {1721623982: 3, 295359800: 17}
+            BehaviorIdx: !obj {Idx_0: 3, Idx_1: 17}
           lists: {}
         AI_14: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 ViewWait, GroupName: プレイヤ上空}
             ChildIdx: !obj {回転: 29, 待機: 42}
-            BehaviorIdx: !obj {1721623982: 3, 295359800: 17}
+            BehaviorIdx: !obj {Idx_0: 3, Idx_1: 17}
             SInst: !obj {TurnStartAngle: 0.0174533, CheckOnce: false}
           lists: {}
         AI_15: !list
@@ -207,7 +207,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 TargetPosRotFromMyPos, GroupName: 騎乗待ち}
             ChildIdx: !obj {行動: 8}
-            BehaviorIdx: !obj {1721623982: 17, 295359800: 3}
+            BehaviorIdx: !obj {Idx_0: 17, Idx_1: 3}
             SInst: !obj {Angle: !vec3 [0.0, 2.0944, 0.0], IsRandSign: true, MinDist: 1.0,
               OnEnterOnly: false}
           lists: {}
@@ -227,14 +227,14 @@ param_root: !list
         Action_0: !list
           objects:
             Def: !obj {Name: でてくる, ClassName: !str32 MoveByAnimeDriven, GroupName: 水中ワープ}
-            BehaviorIdx: !obj {1721623982: 17}
+            BehaviorIdx: !obj {Idx_0: 17}
             SInst: !obj {ASKeyName: Act_Sink_Ed, TargetBoneName: Root, IsChangeable: false,
               IsIgnoreSameAS: false}
           lists: {}
         Action_1: !list
           objects:
             Def: !obj {Name: プレイヤ発見, ClassName: !str32 WaterFloatWaitEx, GroupName: 騎乗待ち}
-            BehaviorIdx: !obj {1721623982: 17}
+            BehaviorIdx: !obj {Idx_0: 17}
             SInst: !obj
               AdditionalPosReduceRatio: 0.965
               AdditionalAngleReduceRatio: 0.5
@@ -257,7 +257,7 @@ param_root: !list
         Action_2: !list
           objects:
             Def: !obj {Name: もぐる, ClassName: !str32 MoveByAnimeDriven, GroupName: 水中ワープ}
-            BehaviorIdx: !obj {1721623982: 17}
+            BehaviorIdx: !obj {Idx_0: 17}
             SInst: !obj {ASKeyName: Act_Sink, TargetBoneName: Root, IsChangeable: false,
               IsIgnoreSameAS: false}
           lists: {}
@@ -284,7 +284,7 @@ param_root: !list
         Action_4: !list
           objects:
             Def: !obj {Name: レールに向かう, ClassName: !str32 NpcSwimMove, GroupName: 通常移動}
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
             SInst: !obj
               RotRadPerSec: 0.0872665
               ASName: Swim_Run
@@ -321,7 +321,7 @@ param_root: !list
         Action_6: !list
           objects:
             Def: !obj {Name: 移動, ClassName: !str32 NpcSwimMove, GroupName: 通常移動}
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
             SInst: !obj
               RotRadPerSec: 0.0872665
               ASName: Swim_Run
@@ -381,7 +381,7 @@ param_root: !list
         Action_10: !list
           objects:
             Def: !obj {Name: 近づき, ClassName: !str32 NpcSwimMove, GroupName: プレイヤ水中}
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
             SInst: !obj
               RotRadPerSec: 0.0872665
               ASName: Swim_Run
@@ -400,7 +400,7 @@ param_root: !list
         Action_11: !list
           objects:
             Def: !obj {Name: 近づき, ClassName: !str32 NpcSwimMove, GroupName: プレイヤ水中Walk}
-            BehaviorIdx: !obj {1721623982: 17}
+            BehaviorIdx: !obj {Idx_0: 17}
             SInst: !obj
               RotRadPerSec: 0.0872665
               ASName: Swim_Walk
@@ -419,7 +419,7 @@ param_root: !list
         Action_12: !list
           objects:
             Def: !obj {Name: 近づき, ClassName: !str32 NpcSwimNavMove, GroupName: プレイヤ水中遠方ナビ追跡}
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
             SInst: !obj
               ASName: Swim_Run
               UpdateTargetPosInterval: 10
@@ -458,7 +458,7 @@ param_root: !list
         Action_14: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 NpcSwimNavMove, GroupName: ナビ高速移動}
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
             SInst: !obj
               ASName: Swim_Run
               UpdateTargetPosInterval: 10
@@ -562,7 +562,7 @@ param_root: !list
         Action_24: !list
           objects:
             Def: !obj {Name: 停止, ClassName: !str32 WaterFloatWaitEx, GroupName: 遺物周遊}
-            BehaviorIdx: !obj {1721623982: 17}
+            BehaviorIdx: !obj {Idx_0: 17}
             SInst: !obj
               AdditionalPosReduceRatio: 0.965
               AdditionalAngleReduceRatio: 0.5
@@ -585,7 +585,7 @@ param_root: !list
         Action_25: !list
           objects:
             Def: !obj {Name: 停止点移動, ClassName: !str32 NpcSwimMove, GroupName: 通常移動}
-            BehaviorIdx: !obj {1721623982: 18}
+            BehaviorIdx: !obj {Idx_0: 18}
             SInst: !obj
               RotRadPerSec: 0.0872665
               ASName: Swim_Run

@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 2
           use_ragdoll: false
           use_cloth: false
@@ -18,7 +18,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 2, collision_info_num: 1}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 2, collision_info_num: 1}
             ContactPointInfo_0: !obj {name: !str32 Tgt, type: !str32 NPCSensor, num: 32}
             ContactPointInfo_1: !obj {name: !str32 Body, type: !str32 Body, num: 64}
             CollisionInfo_0: !obj {name: !str32 Tgt, type: !str32 NPCSensor}
@@ -28,12 +28,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
                   num: 4}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Body
                       mass: 900.0
                       inertia: !vec3 [98.7372, 177.475, 98.6058]
@@ -80,9 +80,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Body_Sub
                       mass: 900.0
                       inertia: !vec3 [60.1416, 119.893, 60.1434]
@@ -137,9 +137,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Barrier
                       mass: 1.0
                       inertia: !vec3 [1.15842, 2.29644, 1.14159]
@@ -253,7 +253,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Cutting
                       mass: 1.0
                       inertia: !vec3 [0.270833, 0.375, 0.270833]
@@ -298,12 +298,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 Chemical, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Chemical, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Chem_Fuel
                       max_impulse: -1.0
                       col_impulse_scale: 1.0

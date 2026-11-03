@@ -56,7 +56,7 @@ param_root: !list
               落馬終了待ち: 104
               非騎乗: 30
               騎乗: 14
-            BehaviorIdx: !obj {1721623982: 1, 295359800: 5}
+            BehaviorIdx: !obj {Idx_0: 1, Idx_1: 5}
             SInst: !obj {DistanceFall: 20.0, DistanceFallDie: 25.0}
           lists: {}
         AI_2: !list
@@ -75,7 +75,7 @@ param_root: !list
           objects:
             Def: !obj {Name: うろつく, ClassName: !str32 HorseWanderAI, GroupName: 非騎乗}
             ChildIdx: !obj {移動: 11, 移動(パスあり): 9, 移動(リーダーあり): 10}
-            BehaviorIdx: !obj {1721623982: 4, 295359800: 6}
+            BehaviorIdx: !obj {Idx_0: 4, Idx_1: 6}
           lists: {}
         AI_5: !list
           objects:
@@ -116,7 +116,7 @@ param_root: !list
           objects:
             Def: !obj {Name: プレイヤの場所へ移動, ClassName: !str32 HorseMoveToPlayer, GroupName: 非騎乗_0}
             ChildIdx: !obj {うろうろする: 32, 旋回: 69, 追いかける(近い): 85, 追いかける(遠い): 80}
-            BehaviorIdx: !obj {1721623982: 3}
+            BehaviorIdx: !obj {Idx_0: 3}
             SInst: !obj
               DistanceSuccessEndIfInterrupted: 20.0
               DistanceResetGearInput: 12.0
@@ -186,7 +186,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 移動, ClassName: !str32 HorseFollow, GroupName: 食べに行く}
             ChildIdx: !obj {うろうろする: 33, 追いかける(近い): 86, 追いかける(遠い): 81}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
             SInst: !obj
               DistanceSuccessEnd: 0.6
               DistanceMovingToward: 0.0
@@ -283,7 +283,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 追跡・並走, ClassName: !str32 HorseFollow, GroupName: 勝手に走る}
             ChildIdx: !obj {うろうろする: 34, 追いかける(近い): 88, 追いかける(遠い): 83}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               DistanceSuccessEnd: -1.0
               DistanceMovingToward: 0.0
@@ -392,7 +392,7 @@ param_root: !list
         Action_0: !list
           objects:
             Def: !obj {Name: うろうろする, ClassName: !str32 HorseWaitAndLookAtNPC, GroupName: ついていく_0}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               UseGearType: 0
               SmoothStopFrames: 10.0
@@ -567,13 +567,13 @@ param_root: !list
         Action_12: !list
           objects:
             Def: !obj {Name: 後攻撃(静止のまま), ClassName: !str32 HorseKickBackAction, GroupName: 非騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: KickBackWait, SucceedGear: -1}
           lists: {}
         Action_13: !list
           objects:
             Def: !obj {Name: 後攻撃, ClassName: !str32 HorseKickBackAction, GroupName: 非騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: KickBack, SucceedGear: 3}
           lists: {}
         Action_14: !list
@@ -626,7 +626,7 @@ param_root: !list
         Action_17: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 HorseWaitEx, GroupName: 逃走失敗後}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               KeepFrame: 60.0
               UseGearType: 0
@@ -693,7 +693,7 @@ param_root: !list
         Action_22: !list
           objects:
             Def: !obj {Name: 指定位置に移動, ClassName: !str32 HorseMoveToTargetAction, GroupName: 敵が騎乗}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               IsCancelRequestedPathFirst: false
               MinUseGear: 3
@@ -731,7 +731,7 @@ param_root: !list
         Action_25: !list
           objects:
             Def: !obj {Name: 指定方向を向く, ClassName: !str32 HorseTurnAction, GroupName: 敵が騎乗}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj {GoalDegToleranceAtEnter: 30.0, GoalDegTolerance: 15.0}
           lists: {}
         Action_26: !list
@@ -747,7 +747,7 @@ param_root: !list
         Action_28: !list
           objects:
             Def: !obj {Name: 従う, ClassName: !str32 HorseRiddenByPlayer, GroupName: 騎乗}
-            BehaviorIdx: !obj {1721623982: 2, 295359800: 4}
+            BehaviorIdx: !obj {Idx_0: 2, Idx_1: 4}
             SInst: !obj
               MaxAcceleration: 0.2
               SlideToCurveRatio: 0.022
@@ -805,7 +805,7 @@ param_root: !list
         Action_31: !list
           objects:
             Def: !obj {Name: 食べる, ClassName: !str32 HorseEatAction, GroupName: 食べに行く}
-            BehaviorIdx: !obj {1721623982: 6}
+            BehaviorIdx: !obj {Idx_0: 6}
             SInst: !obj
               TargetDirToStickX: 1.43
               TargetDistOffset: 1.7
@@ -863,13 +863,13 @@ param_root: !list
         Action_39: !list
           objects:
             Def: !obj {Name: 前攻撃(静止のまま), ClassName: !str32 HorseKickBackAction, GroupName: 非騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: AttackFront, SucceedGear: -1}
           lists: {}
         Action_40: !list
           objects:
             Def: !obj {Name: 前攻撃, ClassName: !str32 HorseKickBackAction, GroupName: 非騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: AttackFront, SucceedGear: 3}
           lists: {}
         Action_41: !list
@@ -917,7 +917,7 @@ param_root: !list
         Action_43: !list
           objects:
             Def: !obj {Name: 待機(静止), ClassName: !str32 HorseWaitEx, GroupName: 非騎乗_0}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               KeepFrame: 60.0
               UseGearType: 0
@@ -930,7 +930,7 @@ param_root: !list
         Action_44: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 HorseWaitAndLookAtNPC, GroupName: NPCが騎乗}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               UseGearType: 0
               SmoothStopFrames: 10.0
@@ -942,7 +942,7 @@ param_root: !list
         Action_45: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 HorseWaitEx, GroupName: うろうろする}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               KeepFrame: 60.0
               UseGearType: 0
@@ -967,7 +967,7 @@ param_root: !list
         Action_47: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 HorseWaitAction, GroupName: 敵が騎乗}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               UseGearType: 0
               SmoothStopFrames: 10.0
@@ -1174,7 +1174,7 @@ param_root: !list
         Action_58: !list
           objects:
             Def: !obj {Name: 通常, ClassName: !str32 HorseRandomMoveAction, GroupName: 勝手に走る}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj
               RadiusLimit: 20.0
               ForwardDirDistCoefficient: 0.9
@@ -1223,7 +1223,7 @@ param_root: !list
         Action_63: !list
           objects:
             Def: !obj {Name: 突進, ClassName: !str32 HorseFollow, GroupName: 敵が騎乗}
-            BehaviorIdx: !obj {1721623982: 2, 295359800: 4}
+            BehaviorIdx: !obj {Idx_0: 2, Idx_1: 4}
             SInst: !obj
               UseGearType: 0
               WaitDistanceToLeader: 0.0
@@ -1266,7 +1266,7 @@ param_root: !list
         Action_68: !list
           objects:
             Def: !obj {Name: 暴れる, ClassName: !str32 HorseRodeo, GroupName: 騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
           lists: {}
         Action_69: !list
           objects:
@@ -1280,19 +1280,19 @@ param_root: !list
         Action_71: !list
           objects:
             Def: !obj {Name: 落馬させる, ClassName: !str32 HorseKickBackAction, GroupName: 騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: Fall, SucceedGear: 3}
           lists: {}
         Action_72: !list
           objects:
             Def: !obj {Name: 落馬させる, ClassName: !str32 HorseKickBackAction, GroupName: 敵が騎乗}
-            BehaviorIdx: !obj {1721623982: 2}
+            BehaviorIdx: !obj {Idx_0: 2}
             SInst: !obj {ASName: Damage, SucceedGear: 3}
           lists: {}
         Action_73: !list
           objects:
             Def: !obj {Name: 落馬終了待ち, ClassName: !str32 HorseWaitThrowOffAction, GroupName: Root}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj {SucceedGear: -1, SetRideAttentionInvalid: true}
           lists: {}
         Action_74: !list

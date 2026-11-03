@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 5
           use_ragdoll: true
           use_cloth: false
@@ -19,7 +19,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 13, collision_info_num: 13}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 13, collision_info_num: 13}
             ContactPointInfo_0: !obj {name: !str32 Body, type: !str32 Body, num: 128}
             ContactPointInfo_1: !obj {name: !str32 Tgt, type: !str32 NPCSensor, num: 128}
             ContactPointInfo_2: !obj {name: !str32 Attack, type: !str32 EnemyAttack,
@@ -62,12 +62,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_resource,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_resource,
                   num: 10, setup_file_path: !str256 Enemy_Golem/Golem.hkrb}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_1_L
                       mass: 78118.0
                       inertia: !vec3 [695601.0, 695601.0, 695601.0]
@@ -101,9 +101,9 @@ param_root: !list
                       contact_point_info: !str32 CoBody
                       collision_info: !str32 CoBody
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_1_R
                       mass: 28311.4
                       inertia: !vec3 [140611.0, 140611.0, 140611.0]
@@ -137,9 +137,9 @@ param_root: !list
                       contact_point_info: !str32 CoBody
                       collision_info: !str32 CoBody
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_2_L
                       mass: 316274.0
                       inertia: !vec3 [5.51631e+06, 7.00693e+06, 6.86443e+06]
@@ -175,7 +175,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Arm_2_R
                       mass: 152193.0
                       inertia: !vec3 [2.2877e+06, 2.05235e+06, 1.93321e+06]
@@ -211,7 +211,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_1_L
                       mass: 4725.72
                       inertia: !vec3 [738.021, 738.021, 738.021]
@@ -245,7 +245,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_1_R
                       mass: 10932.0
                       inertia: !vec3 [3085.61, 3085.61, 3085.61]
@@ -279,7 +279,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_2_L
                       mass: 8166.93
                       inertia: !vec3 [1971.64, 1971.64, 1971.64]
@@ -313,7 +313,7 @@ param_root: !list
                   lists: {}
                 3723516252: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Leg_2_R
                       mass: 11329.4
                       inertia: !vec3 [3107.35, 3107.35, 3107.35]
@@ -347,7 +347,7 @@ param_root: !list
                   lists: {}
                 1297040589: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Spine_1
                       mass: 3.4626e+06
                       inertia: !vec3 [2.70624e+07, 2.50711e+07, 1.85617e+07]
@@ -383,7 +383,7 @@ param_root: !list
                   lists: {}
                 977826907: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 RigidBody_Waist
                       mass: 126366.0
                       inertia: !vec3 [172220.0, 151291.0, 88501.0]
@@ -419,12 +419,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 EntitySensor, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 EntitySensor, type: !str32 from_shape_type,
                   num: 2}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 BgSensor_Arm_2_L
                       mass: 1.0
                       inertia: !vec3 [2.5, 2.5, 2.5]
@@ -468,9 +468,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 BgSensor_Arm_2_R
                       mass: 1.0
                       inertia: !vec3 [2.5, 2.5, 2.5]
@@ -516,12 +516,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_2: !list
               objects:
-                4288596824: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Tgt, type: !str32 from_shape_type,
                   num: 3}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 TgtBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -553,9 +553,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ArmL
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -587,9 +587,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ArmR
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -623,12 +623,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_3: !list
               objects:
-                4288596824: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
                   num: 7}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -660,9 +660,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ArmR
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -693,9 +693,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ArmL
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -728,7 +728,7 @@ param_root: !list
                   lists: {}
                 3667762501: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkArmL2
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -761,7 +761,7 @@ param_root: !list
                   lists: {}
                 1157171430: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBodyR
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -795,7 +795,7 @@ param_root: !list
                   lists: {}
                 872298608: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBodyL
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -829,7 +829,7 @@ param_root: !list
                   lists: {}
                 2868341194: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBodyHead
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -863,12 +863,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_4: !list
               objects:
-                4288596824: !obj {set_name: !str32 Chemical, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Chemical, type: !str32 from_shape_type,
                   num: 3}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ChmBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -898,9 +898,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                882113641: !list
+                RigidBody_1: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ChmArmL
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -930,9 +930,9 @@ param_root: !list
                       wall_code: !str32 None
                       floor_code: !str32 None
                   lists: {}
-                2912595411: !list
+                RigidBody_2: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 ChmArmR
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -964,7 +964,7 @@ param_root: !list
                   lists: {}
         CharacterController: !list
           objects:
-            2311816730: !obj
+            CharacterControllerParam: !obj
               use_nav_mesh_character: true
               nav_mesh_character_radius: 3.0
               nav_mesh_character_height: 2.0

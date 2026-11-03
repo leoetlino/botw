@@ -6,7 +6,7 @@ param_root: !list
   lists:
     ParamSet: !list
       objects:
-        1258832850: !obj
+        ParamSetHeader: !obj
           use_rigid_body_set_num: 3
           use_ragdoll: false
           use_cloth: false
@@ -18,7 +18,7 @@ param_root: !list
       lists:
         RigidContactInfo: !list
           objects:
-            3387849585: !obj {contact_point_info_num: 2, collision_info_num: 0}
+            RigidContactInfoHeader: !obj {contact_point_info_num: 2, collision_info_num: 0}
             ContactPointInfo_0: !obj {name: !str32 Atk, type: !str32 EnemyAttack,
               num: 64}
             ContactPointInfo_1: !obj {name: !str32 Body, type: !str32 Body, num: 1}
@@ -28,12 +28,12 @@ param_root: !list
           lists:
             RigidBodySet_0: !list
               objects:
-                4288596824: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Body, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 Body
                       mass: 1.0
                       inertia: !vec3 [0.4, 0.4, 0.4]
@@ -77,12 +77,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_1: !list
               objects:
-                4288596824: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Atk, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 AtkBody
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
@@ -115,12 +115,12 @@ param_root: !list
                   lists: {}
             RigidBodySet_2: !list
               objects:
-                4288596824: !obj {set_name: !str32 Chemical, type: !str32 from_shape_type,
+                RigidBodySetHeader: !obj {set_name: !str32 Chemical, type: !str32 from_shape_type,
                   num: 1}
               lists:
                 RigidBody_0: !list
                   objects:
-                    948250248: !obj
+                    RigidBodyParam: !obj
                       rigid_body_name: !str64 MainChemical
                       max_impulse: -1.0
                       col_impulse_scale: 1.0
