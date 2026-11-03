@@ -33,14 +33,14 @@ param_root: !list
           objects:
             Def: !obj {Name: ガード開始, ClassName: !str32 SeqTwoAction, GroupName: 戦闘準備}
             ChildIdx: !obj {先行動: 150, 後行動: 90}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj {IsFinishedByFailAction: false, IsEndChangeable: false, IsNoChangeable: false}
           lists: {}
         AI_2: !list
           objects:
             Def: !obj {Name: ガード終了, ClassName: !str32 Fork3AI, GroupName: 戦闘準備}
             ChildIdx: !obj {子０: 100, 子１: 110, 子２: 117}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
           lists: {}
         AI_3: !list
           objects:
@@ -51,13 +51,13 @@ param_root: !list
           objects:
             Def: !obj {Name: ガード待機, ClassName: !str32 InvincibleHiddenOctarock, GroupName: 戦闘準備}
             ChildIdx: !obj {リアクション: 77, 待機: 161}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
           lists: {}
         AI_5: !list
           objects:
             Def: !obj {Name: カツラ反応, ClassName: !str32 CreateCarryActor, GroupName: 通常}
             ChildIdx: !obj {生成: 146, 生成中: 147}
-            BehaviorIdx: !obj {1721623982: 4}
+            BehaviorIdx: !obj {Idx_0: 4}
             SInst: !obj {ActorName: OctObj_Stone_01, CreatePriorityState: 0, Scale: 1.0}
           lists: {}
         AI_6: !list
@@ -109,7 +109,7 @@ param_root: !list
           objects:
             Def: !obj {Name: プレイヤー発見, ClassName: !str32 TargetBeatCheck, GroupName: 地上隠れ}
             ChildIdx: !obj {撃破: 22, 未撃破: 69}
-            BehaviorIdx: !obj {1721623982: 1, 295359800: 10}
+            BehaviorIdx: !obj {Idx_0: 1, 295359800: 10}
           lists: {}
         AI_14: !list
           objects:
@@ -131,7 +131,7 @@ param_root: !list
               突風: 176
               落下: 185
               超ショック: 168
-            BehaviorIdx: !obj {1721623982: 7}
+            BehaviorIdx: !obj {Idx_0: 7}
             SInst: !obj
               IsWigBreackByGust: false
               JustGuardTimesMin: 3
@@ -143,14 +143,14 @@ param_root: !list
           objects:
             Def: !obj {Name: リロード, ClassName: !str32 CreateCarryActor, GroupName: 通常}
             ChildIdx: !obj {生成: 146, 生成中: 148}
-            BehaviorIdx: !obj {1721623982: 8, 295359800: 9, 2291369090: 12, 4287935508: 4}
+            BehaviorIdx: !obj {Idx_0: 8, 295359800: 9, 2291369090: 12, 4287935508: 4}
             SInst: !obj {ActorName: OctObj_Stone_01, CreatePriorityState: 0, Scale: 1.0}
           lists: {}
         AI_16: !list
           objects:
             Def: !obj {Name: 隠れる, ClassName: !str32 ChildHaveSelect, GroupName: 通常}
             ChildIdx: !obj {子所持: 123, 非子所持: 64}
-            BehaviorIdx: !obj {1721623982: 8, 295359800: 9}
+            BehaviorIdx: !obj {Idx_0: 8, 295359800: 9}
             SInst: !obj {IsCheckEveryFrame: false}
           lists: {}
         AI_17: !list
@@ -194,7 +194,7 @@ param_root: !list
             Def: !obj {Name: 近接湧出, ClassName: !str32 AppearNearTargetOutOfScrnGnd,
               GroupName: 通常}
             ChildIdx: !obj {湧出: 183, 湧出準備: 184}
-            BehaviorIdx: !obj {1721623982: 0, 295359800: 3}
+            BehaviorIdx: !obj {Idx_0: 0, 295359800: 3}
             SInst: !obj {Dist: 20.0, TeraDist: 1.0}
           lists: {}
         AI_22: !list
@@ -379,7 +379,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 先行動, ClassName: !str32 Fork3AI, GroupName: アイテム変化}
             ChildIdx: !obj {子０: 98, 子１: 108, 子２: 116}
-            BehaviorIdx: !obj {1721623982: 14}
+            BehaviorIdx: !obj {Idx_0: 14}
           lists: {}
         AI_48: !list
           objects:
@@ -415,7 +415,7 @@ param_root: !list
           objects:
             Def: !obj {Name: 待機, ClassName: !str32 StoneOctarockWait, GroupName: 地上}
             ChildIdx: !obj {ガード待機: 4, ガード終了: 3, 通常: 58, 高速ガード開始: 97}
-            BehaviorIdx: !obj {1721623982: 11}
+            BehaviorIdx: !obj {Idx_0: 11}
             SInst: !obj {GuardEndTime: 20, NoticeTerrorLevel: 2}
           lists: {}
         AI_54: !list
@@ -482,7 +482,7 @@ param_root: !list
               隠れる: 16
               音気づき: 17
               飛び出す: 180
-            BehaviorIdx: !obj {1721623982: 6, 295359800: 8}
+            BehaviorIdx: !obj {Idx_0: 6, 295359800: 8}
             SInst: !obj
               IsSitDown: false
               IsHitGround: true
@@ -686,7 +686,7 @@ param_root: !list
         Action_7: !list
           objects:
             Def: !obj {Name: リアクション, ClassName: !str32 OnetimeStopASPlay, GroupName: ガード待機}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj {ASName: GuardShock, IsIgnoreSame: false, PosReduceRatio: 0.0,
               AngReduceRatio: 0.0}
           lists: {}
@@ -788,7 +788,7 @@ param_root: !list
         Action_18: !list
           objects:
             Def: !obj {Name: 見失い, ClassName: !str32 TimeredASPlay, GroupName: 通常}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj
               ASName: HideLookWait
               Time: 10
@@ -799,7 +799,7 @@ param_root: !list
         Action_19: !list
           objects:
             Def: !obj {Name: 呼ばれ, ClassName: !str32 DummyAction, GroupName: 通常}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_20: !list
           objects:
@@ -831,7 +831,7 @@ param_root: !list
         Action_24: !list
           objects:
             Def: !obj {Name: 後行動, ClassName: !str32 IceBroken, GroupName: 凍死}
-            BehaviorIdx: !obj {1721623982: 5}
+            BehaviorIdx: !obj {Idx_0: 5}
           lists: {}
         Action_25: !list
           objects:
@@ -858,7 +858,7 @@ param_root: !list
         Action_27: !list
           objects:
             Def: !obj {Name: 高速ガード開始, ClassName: !str32 OnetimeStopASPlay, GroupName: 発見行動}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj {ASName: HideLookGuardQuickStart, IsIgnoreSame: false, PosReduceRatio: 0.0,
               AngReduceRatio: 0.0}
           lists: {}
@@ -931,7 +931,7 @@ param_root: !list
         Action_34: !list
           objects:
             Def: !obj {Name: 子０, ClassName: !str32 Freeze, GroupName: 凍死先行動}
-            BehaviorIdx: !obj {1721623982: 5}
+            BehaviorIdx: !obj {Idx_0: 5}
             SInst: !obj {IsChangeInAir: false, TransBoneKey: Root, PosReduceRatio: 0.15,
               AngReduceRatio: 0.45}
           lists: {}
@@ -1140,7 +1140,7 @@ param_root: !list
         Action_58: !list
           objects:
             Def: !obj {Name: 所持, ClassName: !str32 DummyAction, GroupName: Root}
-            BehaviorIdx: !obj {1721623982: 0}
+            BehaviorIdx: !obj {Idx_0: 0}
           lists: {}
         Action_59: !list
           objects:
@@ -1210,7 +1210,7 @@ param_root: !list
         Action_68: !list
           objects:
             Def: !obj {Name: 水中, ClassName: !str32 DummyAction, GroupName: Root}
-            BehaviorIdx: !obj {1721623982: 6}
+            BehaviorIdx: !obj {Idx_0: 6}
           lists: {}
         Action_69: !list
           objects:
@@ -1319,7 +1319,7 @@ param_root: !list
         Action_76: !list
           objects:
             Def: !obj {Name: 生成, ClassName: !str32 OctarockReloadWig, GroupName: リロード}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj
               GrabIdx: 0
               ASName: ItemResetEnd
@@ -1330,7 +1330,7 @@ param_root: !list
         Action_77: !list
           objects:
             Def: !obj {Name: 生成中, ClassName: !str32 OnetimeStopASPlay, GroupName: カツラ攻撃反応}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj {ASName: HideLookEnd, IsIgnoreSame: false, PosReduceRatio: 0.0,
               AngReduceRatio: 0.0}
           lists: {}
@@ -1577,7 +1577,7 @@ param_root: !list
         Action_101: !list
           objects:
             Def: !obj {Name: 怒り, ClassName: !str32 TimeredASPlay, GroupName: 通常}
-            BehaviorIdx: !obj {1721623982: 9}
+            BehaviorIdx: !obj {Idx_0: 9}
             SInst: !obj
               ASName: HideLookWait
               Time: 10
@@ -1592,7 +1592,7 @@ param_root: !list
         Action_103: !list
           objects:
             Def: !obj {Name: 凍結, ClassName: !str32 Freeze, GroupName: 隠れリアクション}
-            BehaviorIdx: !obj {1721623982: 5}
+            BehaviorIdx: !obj {Idx_0: 5}
             SInst: !obj {IsChangeInAir: false, TransBoneKey: Root, PosReduceRatio: 0.85,
               AngReduceRatio: 0.45}
           lists: {}
@@ -1607,7 +1607,7 @@ param_root: !list
         Action_106: !list
           objects:
             Def: !obj {Name: 突風, ClassName: !str32 DamagedTurn, GroupName: 通常}
-            BehaviorIdx: !obj {1721623982: 8}
+            BehaviorIdx: !obj {Idx_0: 8}
             SInst: !obj {ASName: BlownWind, RotSpeed: 0.261799, RotRatio: 0.3, PosReduceRatio: 0.0}
           lists: {}
         Action_107: !list
@@ -1642,7 +1642,7 @@ param_root: !list
         Action_113: !list
           objects:
             Def: !obj {Name: 湧出, ClassName: !str32 Appear, GroupName: 近接湧出}
-            BehaviorIdx: !obj {1721623982: 8}
+            BehaviorIdx: !obj {Idx_0: 8}
             SInst: !obj {PosReduceRatio: 0.0, AngReduceRatio: 0.0}
           lists: {}
         Action_114: !list
